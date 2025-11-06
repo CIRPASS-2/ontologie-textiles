@@ -1,0 +1,8 @@
+﻿prefix xyz:  <http://sparql.xyz/facade-x/data/>
+prefix fx:   <http://sparql.xyz/facade-x/ns/>
+
+select * { service <x-sparql-anything:>
+  { fx:properties fx:location $_location; fx:csv.delimiter "\t"; fx:csv.headers true.
+    [] a fx:root; ?li [xyz:code ?code; xyz:name ?name; xyz:descr ?descr]
+  }
+}

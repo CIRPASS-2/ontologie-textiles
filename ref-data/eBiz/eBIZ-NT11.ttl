@@ -1,0 +1,67 @@
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/WRK>
+        rdf:type        skos:Concept;
+        skos:notation   "WRK";
+        skos:prefLabel  "to works" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/VEW>
+        rdf:type        skos:Concept;
+        skos:notation   "VEW";
+        skos:prefLabel  "to view" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/STO>
+        rdf:type        skos:Concept;
+        skos:notation   "STO";
+        skos:prefLabel  "to storage" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/SEL>
+        rdf:type        skos:Concept;
+        skos:notation   "SEL";
+        skos:prefLabel  "to sell" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/RJC>
+        rdf:type        skos:Concept;
+        skos:notation   "RJC";
+        skos:prefLabel  "return from rejection" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/NWK>
+        rdf:type        skos:Concept;
+        skos:notation   "NWK";
+        skos:prefLabel  "return non-worked" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/IST>
+        rdf:type        skos:Concept;
+        skos:notation   "IST";
+        skos:prefLabel  "in storage" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/FWK>
+        rdf:type        skos:Concept;
+        skos:notation   "FWK";
+        skos:prefLabel  "return from works" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/FVW>
+        rdf:type        skos:Concept;
+        skos:notation   "FVW";
+        skos:prefLabel  "return from view" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/FST>
+        rdf:type        skos:Concept;
+        skos:notation   "FST";
+        skos:prefLabel  "return from storage" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/FRW>
+        rdf:type        skos:Concept;
+        skos:notation   "FRW";
+        skos:prefLabel  "return from re-works" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport/FOC>
+        rdf:type        skos:Concept;
+        skos:notation   "FOC";
+        skos:prefLabel  "free of charge" .
+
+<https://w3id.org/eudpp/thesauri/inventory/reason/transport>
+        skos:member  <https://w3id.org/eudpp/thesauri/inventory/reason/transport/WRK> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/VEW> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/STO> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/SEL> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/RJC> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/NWK> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/IST> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/FWK> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/FVW> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/FST> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/FRW> , <https://w3id.org/eudpp/thesauri/inventory/reason/transport/FOC> .

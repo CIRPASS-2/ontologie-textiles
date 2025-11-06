@@ -1,0 +1,5 @@
+install.packages("httr")
+install.packages("jsonlite")
+install.packages("dplyr")
+install.packages("purrr")
+install.packages("stringr")

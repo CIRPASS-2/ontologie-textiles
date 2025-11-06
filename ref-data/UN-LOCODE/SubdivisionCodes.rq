@@ -1,0 +1,17 @@
+base     <https://w3id.org/eudpp/>
+prefix : <https://w3id.org/eudpp/ontology/>
+
+# ?a   ?b   ?c                     ?d
+# "AD","02","Canillo",             "Parish"
+# "AE","AZ","Abu Zaby [Abu Dhabi]","Emirate"
+# "AE","DU","Dubayy [Dubai]",      "Emirate"
+construct {
+  ?region a :Region; :country ?country; :name ?name; :type ?d
+} where {
+  bind(replace(?b," ","") as ?reg)
+  bind(concat(?a,"/",?reg) as ?code)
+  bind(iri(concat("country/",?a)) as ?country)
+  bind(iri(concat("country/",?code)) as ?region)
+  bind(replace(?c,".*\\[(.*)\\]","$1") as ?name)
+}
+

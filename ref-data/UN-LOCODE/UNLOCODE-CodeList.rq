@@ -1,0 +1,23 @@
+base        <https://w3id.org/eudpp/>
+prefix :    <https://w3id.org/eudpp/ontology/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# ?a ?b   ?c    ?d        ?e       ?f    ?g          ?h  ?i    ?j ?k
+#  ,"BG",     ,".BULGARIA",,,,,,,,
+#  ,"BG","AIO","Aitos"    ,"Aitos","02", "-----6--","RL","0901",, "4243N 02715E",
+#  ,"SN",     ,".SENEGAL",,,,,,,,
+#  ,"SN","TOU","Touba",    "Touba","DB ","--3-----","RL","0401",, "1451N 01553W",
+construct {
+  ?country1 a :Country; :name ?countryName.
+  ?location a :Location; :country ?country; :region ?region; :name ?e; :dateUpdated ?date
+} where {
+  bind(iri(concat("country/",?b)) as ?country)
+  bind(if(bound(?c),?UNDEF,?country) as ?country1) # country records have no ?c
+  bind(replace(?d,"^\\.","") as ?countryName)
+  bind(replace(?f," ","") as ?reg)
+  bind(iri(concat("country/",?b,"/",?reg)) as ?region) # optional
+  bind(concat(?b,"/",?c) as ?code)                     # so we subjugate location to country but not to region
+  bind(iri(concat("country/",?code)) as ?location)
+  bind(strdt(replace(?i,"(..)(..)","20$1-$2"),xsd:gYearMonth) as ?date)
+}
+
