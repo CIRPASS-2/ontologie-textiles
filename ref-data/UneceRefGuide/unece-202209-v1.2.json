@@ -1,0 +1,996 @@
+[
+  {
+    "section": "Sec. 4.1 Action",
+    "thesauri": [
+      {
+        "codelist_name": "Action Codes",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 1229",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred1229.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.2 Assurance Level",
+    "thesauri": [
+      {
+        "codelist_name": "Assurance Level",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCLnnn",
+        "url": [],
+        "items": [
+          {
+            "code_tag": "1",
+            "code_value": "Self-Declared",
+            "description": "A party states that they meet a standard, but do not provide evidence."
+          },
+          {
+            "code_tag": "2",
+            "code_value": "Self-Assessed",
+            "description": "A party assess their own performance demonstrating how they meet the standard."
+          },
+          {
+            "code_tag": "3",
+            "code_value": "Peer Reviewed",
+            "description": "A similar party to the one being assessed reviews compliance against the standard."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.3 Characteristic",
+    "thesauri": [
+      {
+        "codelist_name": "(Raw) Material",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T22",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T22.xml"
+        ]
+      },
+      {
+        "codelist_name": "Yarn",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T24",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T24.xml"
+        ]
+      },
+      {
+        "codelist_name": "Yarn (Ply)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T56",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T56.xml"
+        ]
+      },
+      {
+        "codelist_name": "Weave Type",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T17",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T17.xml"
+        ]
+      },
+      {
+        "codelist_name": "Garment attributes",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT41",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT41.xml"
+        ]
+      },
+      {
+        "codelist_name": "Apparel Section",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T48",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T48.xml"
+        ]
+      },
+      {
+        "codelist_name": "Additional attributes",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T44",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T44.xml"
+        ]
+      },
+      {
+        "codelist_name": "Fabric Technical Category (derived from eBIZ standard)",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCLnnn",
+        "url": [],
+        "items": [
+          {
+            "code_tag": "1",
+            "code_value": "Construction",
+            "description": "Construction details."
+          },
+          {
+            "code_tag": "2",
+            "code_value": "Colour Fastness",
+            "description": "Colour fastness details."
+          },
+          {
+            "code_tag": "3",
+            "code_value": "Dimension Stability",
+            "description": "Dimensional stability measures details."
+          },
+          {
+            "code_tag": "4",
+            "code_value": "Mechanical",
+            "description": "Mechanical properties measurements details."
+          },
+          {
+            "code_tag": "5",
+            "code_value": "Ecological",
+            "description": "Ecological details."
+          }
+        ]
+      },
+      {
+        "codelist_name": "Fabric Technical Characteristic Code Type (CFM)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T13",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T13.xml"
+        ]
+      },
+      {
+        "codelist_name": "Value Base System",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T423",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T423.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.4 Classification",
+    "thesauri": []
+  },
+  {
+    "section": "Sec. 4.4.1 Crop",
+    "thesauri": [
+      {
+        "codelist_name": "Indicative Crop Classification for the agricultural",
+        "agency": "https://www.fao.org/",
+        "codelist_code": "FAO 1.1: (World Programme for the census of Agriculture 2020)",
+        "url": [
+          "http://www.fao.org/3/i4913e/i4913e.pdf"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.4.2",
+    "thesauri": []
+  },
+  {
+    "section": "Sec. 4.4.3 Chemical",
+    "thesauri": [
+      {
+        "codelist_name": "Chemical Elements",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T49",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T49.xml"
+        ]
+      },
+      {
+        "codelist_name": "CAS numbers",
+        "agency": "https://www.cas.org/",
+        "codelist_code": "-",
+        "url": [
+          "https://www.cas.org/solutions/cas-custom-services/workflow-integration/api"
+        ]
+      },
+      {
+        "codelist_name": "Manufacturing Restricted Substance List",
+        "agency": "https://www.roadmaptozero.com/",
+        "codelist_code": "ZDHC MRSL 2.0",
+        "url": [
+          "https://mrsl.roadmaptozero.com/"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.4.4 Pesticides",
+    "thesauri": [
+      {
+        "codelist_name": "Pesticides by Hazard",
+        "agency": "https://www.who.int/",
+        "codelist_code": "WHO 2009",
+        "url": [
+          "https://apps.who.int/iris/rest/bitstreams/1278712/retrieve"
+        ]
+      },
+      {
+        "codelist_name": "Pesticides List: Classification",
+        "agency": "https://bettercotton.org/",
+        "codelist_code": "BCI 2009",
+        "url": [
+          "https://bettercotton.org/wp-content/uploads/2014/01/Guidance-Pesticides-List-Classification.xlsx"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.4.5 Product",
+    "thesauri": [
+      {
+        "codelist_name": "Harmonized System (HS) Codes Textiles and textiles articles",
+        "agency": "http://www.wcoomd.org/",
+        "codelist_code": "WCO 2017",
+        "url": [
+          "http://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2017-edition/hs-nomenclature-2017-edition.aspx"
+        ]
+      },
+      {
+        "codelist_name": "Harmonized System (HS) Codes Raw hides and skins, leather etc",
+        "agency": "http://www.wcoomd.org/",
+        "codelist_code": "WCO 2017",
+        "url": [
+          "http://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2017-edition/hs-nomenclature-2017-edition.aspx"
+        ]
+      },
+      {
+        "codelist_name": "Global Product Classification: Clothing (67), Footwear (63)",
+        "agency": "https://www.gs1.org/",
+        "codelist_code": "GS1 June 2020",
+        "url": [
+          "https://www.gs1.org/sites/default/files/docs/gpc/en_2019-06.zip"
+        ]
+      },
+      {
+        "codelist_name": "Product (Category)",
+        "agency": "https://textileexchange.org/",
+        "codelist_code": "Textile Exchange: ASR-213-V1.0",
+        "url": [
+          "https://textileexchange.org/wp-content/uploads/2020/09/ASR-213-V1.0-Materials-Processes-and-Products-Classification.pdf"
+        ]
+      },
+      {
+        "codelist_name": "Product (Details - Type/)",
+        "agency": "https://textileexchange.org/",
+        "codelist_code": "Textile Exchange: ASR-213-V1.0",
+        "url": [
+          "https://textileexchange.org/wp-content/uploads/2020/09/ASR-213-V1.0-Materials-Processes-and-Products-Classification.pdf"
+        ]
+      },
+      {
+        "codelist_name": "Products",
+        "agency": "https://www.globaltextilescheme.org/",
+        "codelist_code": "Global Textile Scheme 2021 (25% finished)",
+        "url": [
+          "https://www.globaltextilescheme.org/"
+        ]
+      },
+      {
+        "codelist_name": "Raw Material",
+        "agency": "https://textileexchange.org/",
+        "codelist_code": "Textile Exchange: ASR-213-V1.0",
+        "url": [
+          "https://textileexchange.org/wp-content/uploads/2020/09/ASR-213-V1.0-Materials-Processes-and-Products-Classification.pdf"
+        ]
+      },
+      {
+        "codelist_name": "Leather classification",
+        "agency": "https://europa.eu/",
+        "codelist_code": "European Union",
+        "url": [
+          "https://europa.eu/capacity4dev/file/14676/download?token=aYmVJ7hs"
+        ]
+      },
+      {
+        "codelist_name": "Fibre Types",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T19",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T19.xml"
+        ]
+      },
+      {
+        "codelist_name": "Yarn Category",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT31",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT31.xml"
+        ]
+      },
+      {
+        "codelist_name": "Yarn (kind)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T54",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T54.xml"
+        ]
+      },
+      {
+        "codelist_name": "Fabric Category",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT32",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT32.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.5 Colour",
+    "thesauri": [
+      {
+        "codelist_name": "Colour Light Source",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T59",
+        "url": [
+          "http://www.cross-tec.enea.it/eBIZ/imple/eBIZTCU-2018-1.asp?lingua=en&pag=6&modo=d&tabe=118&contestoscelto=TexWeave"
+        ]
+      },
+      {
+        "codelist_name": "Colour Type",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT26",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT26.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.6 Contact",
+    "thesauri": [
+      {
+        "codelist_name": "Contact Type",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 3129",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3139.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.7 Country",
+    "thesauri": [
+      {
+        "codelist_name": "Country Code",
+        "agency": [
+          "https://unece.org/trade/uncefact/mainstandards",
+          "https://www.iso.org/home.html"
+        ],
+        "codelist_code": "UNCL 3207",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3207.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.8 Date Time",
+    "thesauri": [
+      {
+        "codelist_name": "Date Time format",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 2379",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred2379.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.9 Document Status",
+    "thesauri": [
+      {
+        "codelist_name": "Document status",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 1373",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred1373.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.10 Document Type",
+    "thesauri": [
+      {
+        "codelist_name": "Document Names",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 1001",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred1001.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.11 Dye Material",
+    "thesauri": [
+      {
+        "codelist_name": "Dye Material",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T16",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T16.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.12 Fault",
+    "thesauri": [
+      {
+        "codelist_name": "Fabric Fault Category",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT13",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT13.xml"
+        ]
+      },
+      {
+        "codelist_name": "Fabric Fault Type",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T12",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T12.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.13 Gender",
+    "thesauri": [
+      {
+        "codelist_name": "Representation of human sexes",
+        "agency": [
+          "https://unece.org/trade/uncefact/mainstandards",
+          "https://www.iso.org/home.html"
+        ],
+        "codelist_code": "UNCL 3499",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3499.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.14 Inspection",
+    "thesauri": [
+      {
+        "codelist_name": "Inspection Type",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCLnnn",
+        "url": [],
+        "items": [
+          {
+            "code_tag": "1",
+            "code_value": "Organizational Inspection",
+            "description": "Inspection on organizational aspects."
+          },
+          {
+            "code_tag": "2",
+            "code_value": "Process Inspection",
+            "description": "Inspection on a process."
+          },
+          {
+            "code_tag": "3",
+            "code_value": "Product Batch Inspection",
+            "description": "Inspection on a product batch."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.15 Inventory",
+    "thesauri": [
+      {
+        "codelist_name": "Inventory Type",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 7491",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred7491.htm"
+        ]
+      },
+      {
+        "codelist_name": "Inventory Movement Reason",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 4499",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred4499.htm"
+        ]
+      },
+      {
+        "codelist_name": "Reason for Transportation",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT11",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT11.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.16 Language",
+    "thesauri": [
+      {
+        "codelist_name": "Language Name Code: (ISO 639-1)",
+        "agency": [
+          "https://unece.org/trade/uncefact/mainstandards",
+          "https://www.iso.org/home.html"
+        ],
+        "codelist_code": "UNCL 3453",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3453.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.17 Location",
+    "thesauri": [
+      {
+        "codelist_name": "Location Function Code",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 3227",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3227.htm"
+        ]
+      },
+      {
+        "codelist_name": "UN Location Code",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNECE Rec16",
+        "url": [
+          "https://unece.org/sites/default/files/2020-12/ECE-TRADE-459E.pdf",
+          "https://unece.org/cefact/codesfortrade/codes_index.html"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.18 Market",
+    "thesauri": [
+      {
+        "codelist_name": "Market Segment",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T422",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T422.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.19 Note Subject",
+    "thesauri": [
+      {
+        "codelist_name": "Note Subject",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 4451",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred4451.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.20 Package (logistic units)",
+    "thesauri": [
+      {
+        "codelist_name": "Package Type",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCEFACT Rec21",
+        "url": [
+          "http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec21/rec21rev2_rev_96trd211.pdf",
+          "https://unece.org/sites/default/files/2021-06/rec21_Rev12e_Annex-V-VI_2021.xls"
+        ]
+      },
+      {
+        "codelist_name": "Package Marking",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 7233",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred7233.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.21 Party",
+    "thesauri": [
+      {
+        "codelist_name": "Party Function (Role)",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 3035",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3035.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.22 Picture",
+    "thesauri": [
+      {
+        "codelist_name": "Resolution Type",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT71",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT71.xml"
+        ]
+      },
+      {
+        "codelist_name": "(picture) Intended Use Codes",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT72",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT72.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.23 Process",
+    "thesauri": [
+      {
+        "codelist_name": "Process (Description) Type",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 7187",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred7187.htm"
+        ]
+      },
+      {
+        "codelist_name": "Process (Textile) Type",
+        "agency": "https://textileexchange.org/",
+        "codelist_code": "Textile Exchange: ASR-213-V1.0",
+        "url": [
+          "https://textileexchange.org/wp-content/uploads/2020/09/ASR-213-V1.0-Materials-Processes-and-Products-Classification.pdf"
+        ]
+      },
+      {
+        "codelist_name": "Process (Raw Material)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T200",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T200.xml"
+        ]
+      },
+      {
+        "codelist_name": "Process (Yarn)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T201",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T201.xml"
+        ]
+      },
+      {
+        "codelist_name": "Process (Fabric)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T202",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T202.xml"
+        ]
+      },
+      {
+        "codelist_name": "Process (Knitting/Clothing)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T205",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T205.xml"
+        ]
+      },
+      {
+        "codelist_name": "Process (Dye/Print)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T15",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T15.xml"
+        ]
+      },
+      {
+        "codelist_name": "Process (Darning)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T20",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T20.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.24 Responsible Agency",
+    "thesauri": [
+      {
+        "codelist_name": "Code List Responsible Agency Code",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 3055",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred3055.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.25 Species",
+    "thesauri": [
+      {
+        "codelist_name": "Cites Endangered Species of Wild Fauna and Flora",
+        "agency": "https://cites.org/eng",
+        "codelist_code": "CITES: Index",
+        "url": [
+          "https://checklist.cites.org/#/downloads"
+        ]
+      },
+      {
+        "codelist_name": "Agricultural Species",
+        "agency": "https://european-union.europa.eu/select-language?destination=/node/1",
+        "codelist_code": "EU Database",
+        "url": [
+          "https://ec.europa.eu/food/plants/plant-reproductive-material/plant-variety-catalogues-databases-information-systems_en"
+        ]
+      },
+      {
+        "codelist_name": "Agricultural Produce (Plants)",
+        "agency": "https://www.eppo.int/",
+        "codelist_code": "EPPO Codes",
+        "url": [
+          "https://gd.eppo.int/gddesktop/"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.26 Status",
+    "thesauri": [
+      {
+        "codelist_name": "Trade and Transport Status Codes",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNECE Rec24",
+        "url": [
+          "http://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary09/cf_09_26E.pdf",
+          "http://www.unece.org/fileadmin/DAM/uncefact/recommendations/rec24/rec24_Rev6e_2017.xls"
+        ]
+      },
+      {
+        "codelist_name": "Status Codes: (For transport status, use UN/ECE Recommendation 24, see above)",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 4405",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred4405.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.27 Sustainability",
+    "thesauri": [
+      {
+        "codelist_name": "Sustainability Standards",
+        "agency": "https://intracen.org/",
+        "codelist_code": "ITC Standards Map",
+        "url": [
+          "https://www.standardsmap.org/en/identify"
+        ]
+      },
+      {
+        "codelist_name": "Sustainability Category: (Pillar)",
+        "agency": "https://intracen.org/",
+        "codelist_code": "ITC Standards Map",
+        "url": [
+          "https://www.standardsmap.org/en/identify"
+        ]
+      },
+      {
+        "codelist_name": "Sustainability Sub-Category (sub of pillar)",
+        "agency": "https://intracen.org/",
+        "codelist_code": "ITC Standards Map",
+        "url": [
+          "https://www.standardsmap.org/en/identify"
+        ]
+      },
+      {
+        "codelist_name": "Sustainability Criteria: (Criteria used by standard)",
+        "agency": "https://intracen.org/",
+        "codelist_code": "ITC Standards Map",
+        "url": [
+          "https://www.standardsmap.org/en/identify"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.28 Technology",
+    "thesauri": [
+      {
+        "codelist_name": "Yarn",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T261",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T261.xml"
+        ]
+      },
+      {
+        "codelist_name": "Fabric",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T262",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T262.xml"
+        ]
+      },
+      {
+        "codelist_name": "Printing (Fabric)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T264",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T264.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.29 Test",
+    "thesauri": [
+      {
+        "codelist_name": "Colour fastness test (Yarn)",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T57",
+        "url": [
+          "http://www.cross-tec.enea.it/eBIZ/imple/eBIZTCU-2018-1.asp?lingua=en&pag=6&modo=d&tabe=116&contestoscelto=TexWeave"
+        ]
+      },
+      {
+        "codelist_name": "Colour Test Types",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-NT38",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_NT38.xml"
+        ]
+      },
+      {
+        "codelist_name": "Fast Test Types",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T14",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T14.xml"
+        ]
+      },
+      {
+        "codelist_name": "Health Effects",
+        "agency": "https://www.oecd.org/",
+        "codelist_code": "OECD",
+        "url": [
+          "https://www.oecd-ilibrary.org/environment/oecd-guidelines-for-the-testing-of-chemicals-section-3-degradation-and-accumulation_2074577x"
+        ]
+      },
+      {
+        "codelist_name": "Effects on Biotic Systems",
+        "agency": "https://www.oecd.org/",
+        "codelist_code": "OECD",
+        "url": [
+          "https://global-standard.org/images/resource-library/documents/standard-and-manual/gots_version_6_0_en1.pdf"
+        ]
+      },
+      {
+        "codelist_name": "Environmental Fate and Behaviour",
+        "agency": "https://www.oecd.org/",
+        "codelist_code": "OECD",
+        "url": [
+          "https://www.oecd-ilibrary.org/environment/oecd-guidelines-for-the-testing-of-chemicals-section-3-degradation-and-accumulation_2074577x"
+        ]
+      },
+      {
+        "codelist_name": "Leather Chemical Tests",
+        "agency": "http://www.iso.org/",
+        "codelist_code": "ISO 20137:2017",
+        "url": [
+          "https://www.iso.org/obp/ui/#iso:std:iso:20137:ed-1:v1:en"
+        ]
+      },
+      {
+        "codelist_name": "Leather Tests",
+        "agency": [
+          "http://www.iso.org/",
+          "https://iultcs.org/",
+          "https://www.unido.org/"
+        ],
+        "codelist_code": "ISO Quality Standards: UILTCS standards",
+        "url": [
+          "https://open.unido.org/api/documents/4808305/download/ACCEPTABLE%20QUALITY%20STANDARDS%20IN%20THE%20LEATHER%20AND%20FOOTWEAR%20INDUSTRY.%20GENERAL%20STUDIES%20SERIES"
+        ]
+      },
+      {
+        "codelist_name": "Leather for apparel: (excluding furs)",
+        "agency": "http://www.iso.org/",
+        "codelist_code": "ISO 14931",
+        "url": [
+          "https://www.iso.org/standard/77275.html?browse=tc"
+        ]
+      },
+      {
+        "codelist_name": "Yarn Operation Parameters",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T281",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T281.xml"
+        ]
+      },
+      {
+        "codelist_name": "Yarn Quality Parameters",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T58",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T58.xml"
+        ]
+      },
+      {
+        "codelist_name": "Fabric Operation Parameters",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T282",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T282.xml"
+        ]
+      },
+      {
+        "codelist_name": "Print Parameter",
+        "agency": "https://ebiz-tcf.eu/",
+        "codelist_code": "eBIZ-T45",
+        "url": [
+          "http://www.cross-tec.enea.it/moda-ml/repository/codelist/v2018-1/gc_T45.xml"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.30 Transportation",
+    "thesauri": [
+      {
+        "codelist_name": "Transport Mode",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCEFACT Rec19",
+        "url": [
+          "http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec19/rec19.zip"
+        ]
+      },
+      {
+        "codelist_name": "Transport Means",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCEFACT Rec28",
+        "url": [
+          "http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec28/Rec28_Rev3e_2010.pdf",
+          "http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec28/Rec28_Rev4.2e_2018.xls"
+        ]
+      },
+      {
+        "codelist_name": "Transport Equipment",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCL 8053",
+        "url": [
+          "https://service.unece.org/trade/untdid/d22a/tred/tred8053.htm"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "Sec. 4.31 Unit of measure",
+    "thesauri": [
+      {
+        "codelist_name": "Unit of Measure",
+        "agency": "https://unece.org/trade/uncefact/mainstandards",
+        "codelist_code": "UNCEFACT Rec20",
+        "url": [
+          "https://unece.org/sites/default/files/2021-01/rec20_Rev16e-2020.xlsx"
+        ]
+      }
+    ]
+  }
+]
