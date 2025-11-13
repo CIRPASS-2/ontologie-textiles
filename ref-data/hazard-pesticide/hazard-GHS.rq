@@ -1,0 +1,19 @@
+base         <https://w3id.org/eudpp/>
+prefix xyz:  <http://sparql.xyz/facade-x/data/>
+prefix fx:   <http://sparql.xyz/facade-x/ns/>
+prefix dct:  <http://purl.org/dc/terms/>
+prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+construct {
+  ?thes skos:member ?item.
+  ?item a skos:Concept; skos:notation ?notation; skos:prefLabel ?label; dct:publisher ?org
+}
+where { service <x-sparql-anything:>
+  { fx:properties fx:location "hazard-GHS.tsv"; fx:csv.delimiter "\t"; fx:csv.headers true.
+    [] a fx:root; ?li [xyz:src ?src; xyz:category ?category; xyz:code ?code; xyz:notation ?notation; xyz:label ?label]
+  }
+  bind(iri(concat("thes/hazard/",?category)) as ?thes)
+  bind(iri(concat("thes/hazard/",?src,"/",?category,"/",?code)) as ?item)
+  bind(iri(concat("org/",?src)) as ?org)
+}
