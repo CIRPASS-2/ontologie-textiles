@@ -11,6 +11,7 @@ We parsed it out to extract all taxonomies.
     - [Source](#source)
     - [HTML Tidy](#html-tidy)
     - [Picking a Version](#picking-a-version)
+    - [Parsing the HTML](#parsing-the-html)
     - [Extacting and Counting Taxonomy Links](#extacting-and-counting-taxonomy-links)
     - [Automatically Processable Taxonomies](#automatically-processable-taxonomies)
     - [Diffing Links](#diffing-links)
