@@ -2,6 +2,7 @@ import json
 import re
 from typing import OrderedDict
 from bs4 import BeautifulSoup
+import argparse
 
 IS_TARGET = lambda section: section.text.startswith('4')
 
@@ -192,6 +193,11 @@ class Extractor(object):
 
 
 if __name__ == '__main__':
-    extractor = Extractor(fhtml="unece-202209-v1.2-tidy.htm")
+    argv = argparse.ArgumentParser(description='Parse the UneceRefGuide-v1.2')
+    argv.add_argument('--fhtml', type=str, default='unece-202209-v1.2-tidy.htm')
+    argv.add_argument('--out', type=str, default='unece-202209-v1.2.json')
+    args = argv.parse_args()
+
+    extractor = Extractor(args.fhtml)
     p = extractor.extract()
-    extractor.save(p, "unece-202209-v1.2.json")
+    extractor.save(p, args.out)
