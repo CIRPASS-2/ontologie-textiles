@@ -74,7 +74,7 @@ thes_Standard = data.frame(
 thes_Sector = simple_process(prefix = "thes/Sector/", path = "sectors")
   
 # Value chain
-thes_Value_Chain = simple_process(prefix = "thes/Value_Chain", path = "valueChain")
+thes_Value_Chain = simple_process(prefix = "thes/Value_Chain/", path = "valueChain")
 
 # Output  
 write.csv(rbind(
