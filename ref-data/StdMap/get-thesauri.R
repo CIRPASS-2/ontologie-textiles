@@ -64,7 +64,7 @@ thes_Sustainability = local({
 # Sustainability Standard
 # note the data source is still the same data/thes/StdMap, not data/thes/StdMap/Standard
 thes_Standard = data.frame(
-  thes_url = paste0("thes/Sustainabiliy/Standard/", urlfy(response$name)),
+  thes_url = paste0("thes/Sustainability/Standard/", urlfy(response$name)),
   name = response$name,
   parent = "thes/Sustainability/Standard",
   src = "data/thes/StdMap/Standard"
