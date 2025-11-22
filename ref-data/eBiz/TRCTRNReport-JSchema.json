@@ -1,0 +1,3160 @@
+ { "$schema":
+        "http://json-schema.org/draft-07/schema#", "$id": "urn:moda-ml:repository:schema:TRCTRNReport", "title":
+            "TRCTRNReport", "description": "TRCTRNReport", "definitions": { 
+         "TRCTRNReport_Type": { 
+             "description": "TRCTRNReport", 
+             "type": "object",
+            "properties": { 
+            
+                "@version": { "$ref": "#/definitions/version_Type" },
+                "@useProfile": { "$ref": "#/definitions/useProfile_Type" },
+                "@TRCReportFunction": { "$ref": "#/definitions/TRCReportFunction_Type" }, 
+                "TRCheader": { 
+             "$ref": "#/definitions/TRCheader_Type"  } 
+            ,
+                "TRCTRNReportbody": { 
+             "$ref": "#/definitions/TRCTRNReportbody_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["TRCheader" ,"TRCTRNReportbody" ]
+             } 
+            , "TRCheader_Type": { 
+             "description": "TRCheader", 
+             "type": "object",
+            "properties": { 
+            
+                "msgN": { 
+             "$ref": "#/definitions/msgN_Type"  } 
+            ,
+                "msgID": { 
+             "$ref": "#/definitions/msgID_Type"  } 
+            ,
+                "msgDate": { 
+             "$ref": "#/definitions/msgDate_Type"  } 
+            ,
+                "refDoc": { 
+             "items": {  "$ref": "#/definitions/refDoc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "senderParty": { 
+             "$ref": "#/definitions/senderParty_Type"  } 
+            ,
+                "receiverParty": { 
+             "$ref": "#/definitions/receiverParty_Type"  } 
+            ,
+                "thirdParty": { 
+             "items": {  "$ref": "#/definitions/thirdParty_Type"  }, "type": "array" 
+                , "maxItems": 5 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["msgN" ,"msgDate" ,"senderParty" ,"receiverParty" ]
+             } 
+            , "TRCTRNReportbody_Type": { 
+             "description": "TRCTRNReportbody", 
+             "type": "object",
+            "properties": { 
+            
+                "TRCProduct": { 
+             "items": {  "$ref": "#/definitions/TRCProduct_Type"  }, "type": "array" 
+                 } 
+            ,
+                "organisationDescriptor": { 
+             "$ref": "#/definitions/organisationDescriptor_Type"  } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "refDoc_Type": { 
+             "description": "refDoc", 
+             "type": "object",
+            "properties": { 
+            
+                "@docType": { "$ref": "#/definitions/docType_Type" }, 
+                "docID": { 
+             "items": {  "$ref": "#/definitions/docID_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "docDate": { 
+             "$ref": "#/definitions/docDate_Type"  } 
+            ,
+                "season": { 
+             "$ref": "#/definitions/season_Type"  } 
+            ,
+                "itemID": { 
+             "$ref": "#/definitions/itemID_Type"  } 
+            ,
+                "attachment": { 
+             "$ref": "#/definitions/attachment_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["docID" ,"@docType"]
+             } 
+            , "certificate_Type": { 
+             "description": "certificate", 
+             "type": "object",
+            "properties": { 
+            
+                "@docStatusCode": { "$ref": "#/definitions/docStatusCode_Type" },
+                "@docValidity": { "$ref": "#/definitions/docValidity_Type" }, 
+                "docID": { 
+             "$ref": "#/definitions/docID_Type"  } 
+            ,
+                "certificateID": { 
+             "$ref": "#/definitions/certificateID_Type"  } 
+            ,
+                "certificationStandardName": { 
+             "$ref": "#/definitions/certificationStandardName_Type"  } 
+            ,
+                "docDate": { 
+             "$ref": "#/definitions/docDate_Type"  } 
+            ,
+                "title": { 
+             "items": {  "$ref": "#/definitions/title_Type"  }, "type": "array" 
+                 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+            ,
+                "validityStart": { 
+             "$ref": "#/definitions/validityStart_Type"  } 
+            ,
+                "validityEnd": { 
+             "$ref": "#/definitions/validityEnd_Type"  } 
+            ,
+                "validityExtensionDate": { 
+             "$ref": "#/definitions/validityExtensionDate_Type"  } 
+            ,
+                "sustainabilityCharacteristicText": { 
+             "items": {  "$ref": "#/definitions/sustainabilityCharacteristicText_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "issuerParty": { 
+             "$ref": "#/definitions/issuerParty_Type"  } 
+            ,
+                "certifiedParty": { 
+             "$ref": "#/definitions/certifiedParty_Type"  } 
+            ,
+                "certifiedEntity": { 
+             "items": {  "$ref": "#/definitions/certifiedEntity_Type"  }, "type": "array" 
+                 } 
+            ,
+                "attachment": { 
+             "$ref": "#/definitions/attachment_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["docID" ,"certificateID" ,"certificationStandardName" ,"docDate" ,"issuerParty" ,"certifiedParty" ,"@docStatusCode","@docValidity"]
+             } 
+            , "externalRefDoc_Type": { 
+             "description": "externalRefDoc", 
+             "type": "object",
+            "properties": { 
+            
+                "docID": { 
+             "$ref": "#/definitions/docID_Type"  } 
+            ,
+                "docDate": { 
+             "$ref": "#/definitions/docDate_Type"  } 
+            ,
+                "title": { 
+             "items": {  "$ref": "#/definitions/title_Type"  }, "type": "array" 
+                 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+            ,
+                "validityStart": { 
+             "$ref": "#/definitions/validityStart_Type"  } 
+            ,
+                "validityEnd": { 
+             "$ref": "#/definitions/validityEnd_Type"  } 
+            ,
+                "documentType": { 
+             "$ref": "#/definitions/documentType_Type"  } 
+            ,
+                "issuerParty": { 
+             "$ref": "#/definitions/issuerParty_Type"  } 
+            ,
+                "signatureInformation": { 
+             "$ref": "#/definitions/signatureInformation_Type"  } 
+            ,
+                "attachment": { 
+             "$ref": "#/definitions/attachment_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["docID" ]
+             } 
+            , "senderParty_Type": { 
+             "description": "senderParty", 
+             "type": "object",
+            "properties": { 
+            
+                "@role": { "$ref": "#/definitions/role_Type" },
+                "@sender": { "$ref": "#/definitions/sender_Type" }, 
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["id" ]
+             } 
+            , "receiverParty_Type": { 
+             "description": "receiverParty", 
+             "type": "object",
+            "properties": { 
+            
+                "@role": { "$ref": "#/definitions/role_Type" },
+                "@sender": { "$ref": "#/definitions/sender_Type" }, 
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["id" ]
+             } 
+            , "thirdParty_Type": { 
+             "description": "thirdParty", 
+             "type": "object",
+            "properties": { 
+            
+                "@VAT": { "$ref": "#/definitions/VAT_Type" },
+                "@role": { "$ref": "#/definitions/role_Type" },
+                "@sender": { "$ref": "#/definitions/sender_Type" }, 
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["id" ,"@role"]
+             } 
+            , "TRCProduct_Type": { 
+             "description": "TRCProduct", 
+             "type": "object",
+            "properties": { 
+            
+                "@externaProviderIndicator": { "$ref": "#/definitions/externaProviderIndicator_Type" }, 
+                "ProductIdentification": { 
+             "$ref": "#/definitions/ProductIdentification_Type"  } 
+            ,
+                "billOfComponents": { 
+             "$ref": "#/definitions/billOfComponents_Type"  } 
+            ,
+                "productCompos": { 
+             "$ref": "#/definitions/productCompos_Type"  } 
+            ,
+                "processStepsList": { 
+             "$ref": "#/definitions/processStepsList_Type"  } 
+            ,
+                "productOrigin": { 
+             "items": {  "$ref": "#/definitions/productOrigin_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "customsStat": { 
+             "$ref": "#/definitions/customsStat_Type"  } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "PEFStudyDocument": { 
+             "items": {  "$ref": "#/definitions/PEFStudyDocument_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "assessmentStudyDocument": { 
+             "items": {  "$ref": "#/definitions/assessmentStudyDocument_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "productSustainabilityCharacteristics": { 
+             "items": {  "$ref": "#/definitions/productSustainabilityCharacteristics_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["ProductIdentification" ]
+             } 
+            , "organisationDescriptor_Type": { 
+             "description": "organisationDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "organisationAddress": { 
+             "$ref": "#/definitions/organisationAddress_Type"  } 
+            ,
+                "person": { 
+             "items": {  "$ref": "#/definitions/person_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "activityStatisticalCode": { 
+             "$ref": "#/definitions/activityStatisticalCode_Type"  } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "socialAndEthicalSpecificInformation": { 
+             "$ref": "#/definitions/socialAndEthicalSpecificInformation_Type"  } 
+            ,
+                "listOfFacilities": { 
+             "$ref": "#/definitions/listOfFacilities_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["id" ,"legalName" ,"organisationAddress" ,"person" ]
+             } 
+            , "selfAssertion_Type": { 
+             "description": "selfAssertion", 
+             "type": "object",
+            "properties": { 
+            
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@docStatusCode": { "$ref": "#/definitions/docStatusCode_Type" }, 
+                "sustainabilityCharacteristicText": { 
+             "items": {  "$ref": "#/definitions/sustainabilityCharacteristicText_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "assertionCategory": { 
+             "$ref": "#/definitions/assertionCategory_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "issuerParty": { 
+             "$ref": "#/definitions/issuerParty_Type"  } 
+            ,
+                "selfAssertionEntity": { 
+             "items": {  "$ref": "#/definitions/selfAssertionEntity_Type"  }, "type": "array" 
+                 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "validityStart": { 
+             "$ref": "#/definitions/validityStart_Type"  } 
+            ,
+                "validityEnd": { 
+             "$ref": "#/definitions/validityEnd_Type"  } 
+            ,
+                "validityExtensionDate": { 
+             "$ref": "#/definitions/validityExtensionDate_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["assertionCategory" ,"description" ,"issuerParty" ]
+             } 
+            , "attachment_Type": { 
+             "description": "attachment", 
+             "type": "object",
+            "properties": { 
+            
+                "@uid": { "$ref": "#/definitions/uid_Type" }, 
+                "fileName": { 
+             "$ref": "#/definitions/fileName_Type"  } 
+            ,
+                "binaryObject": { 
+             "$ref": "#/definitions/binaryObject_Type"  } 
+            ,
+                "externalReference": { 
+             "items": {  "$ref": "#/definitions/externalReference_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "hashFootprint": { 
+             "$ref": "#/definitions/hashFootprint_Type"  } 
+            ,
+                "blockChainReference": { 
+             "items": {  "$ref": "#/definitions/blockChainReference_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "issuerParty_Type": { 
+             "description": "issuerParty", 
+             "type": "object",
+            "properties": { 
+            
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+            ,
+                "issuerAccreditationInfo": { 
+             "$ref": "#/definitions/issuerAccreditationInfo_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "certifiedParty_Type": { 
+             "description": "certifiedParty", 
+             "type": "object",
+            "properties": { 
+            
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "certifiedEntity_Type": { 
+             "description": "certifiedEntity", 
+             "type": "object",
+            "properties": { 
+            
+                "entityID": { 
+             "items": {  "$ref": "#/definitions/entityID_Type"  }, "type": "array" 
+                , "maxItems": 3 } 
+            ,
+                "entityTypeCode": { 
+             "$ref": "#/definitions/entityTypeCode_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["entityID" ,"entityTypeCode" ]
+             } 
+            , "signatureInformation_Type": { 
+             "description": "signatureInformation", 
+             "type": "object",
+            "properties": { 
+            
+                "signatureTypeCode": { 
+             "$ref": "#/definitions/signatureTypeCode_Type"  } 
+            ,
+                "signatoryParty": { 
+             "items": {  "$ref": "#/definitions/signatoryParty_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["signatureTypeCode" ]
+             } 
+            , "geoCoordinates_Type": { 
+             "description": "geoCoordinates", 
+             "type": "object",
+            "properties": { 
+            
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@geoRefSystem": { "$ref": "#/definitions/geoRefSystem_Type" }, 
+                "xGeoCoord": { 
+             "$ref": "#/definitions/xGeoCoord_Type"  } 
+            ,
+                "yGeoCoord": { 
+             "$ref": "#/definitions/yGeoCoord_Type"  } 
+            ,
+                "zGeoCoord": { 
+             "$ref": "#/definitions/zGeoCoord_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["xGeoCoord" ,"yGeoCoord" ]
+             } 
+            , "ProductIdentification_Type": { 
+             "description": "ProductIdentification", 
+             "type": "object",
+            "properties": { 
+            
+                "uniqueProductID": { 
+             "$ref": "#/definitions/uniqueProductID_Type"  } 
+            ,
+                "objectTypeCode": { 
+             "$ref": "#/definitions/objectTypeCode_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "rawCode": { 
+             "items": {  "$ref": "#/definitions/rawCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "yarnCode": { 
+             "items": {  "$ref": "#/definitions/yarnCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "texCode": { 
+             "items": {  "$ref": "#/definitions/texCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "acsCode": { 
+             "items": {  "$ref": "#/definitions/acsCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "garmentPartCode": { 
+             "items": {  "$ref": "#/definitions/garmentPartCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "garmentCode": { 
+             "items": {  "$ref": "#/definitions/garmentCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+             "anyOf": [ {},  { "": "rawCode" } 
+                        , { "": "yarnCode" } 
+                        , { "": "texCode" } 
+                        , {  "required": [
+                                    "acsCode"]  } 
+                        , { "": "garmentPartCode" } 
+                        , { "": "garmentCode" } 
+                        ], 
+             "additionalProperties": false 
+            , "required": ["uniqueProductID" ,"objectTypeCode" ]
+             } 
+            , "billOfComponents_Type": { 
+             "description": "billOfComponents", 
+             "type": "object",
+            "properties": { 
+            
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "productComponent": { 
+             "items": {  "$ref": "#/definitions/productComponent_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@um","@exhaustiveInformation","@disclosureLevel","@storageAction"]
+             } 
+            , "productCompos_Type": { 
+             "description": "productCompos", 
+             "type": "object",
+            "properties": { 
+            
+                "percCompos": { 
+             "items": {  "$ref": "#/definitions/percCompos_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["percCompos" ]
+             } 
+            , "processStepsList_Type": { 
+             "description": "processStepsList", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "processStep": { 
+             "items": {  "$ref": "#/definitions/processStep_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["processStep" ,"@exhaustiveInformation","@disclosureLevel","@storageAction"]
+             } 
+            , "productOrigin_Type": { 
+             "description": "productOrigin", 
+             "type": "object",
+            "properties": { 
+            
+                "made": { 
+             "$ref": "#/definitions/made_Type"  } 
+            ,
+                "refDoc": { 
+             "items": {  "$ref": "#/definitions/refDoc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["made" ]
+             } 
+            , "PEFStudyDocument_Type": { 
+             "description": "PEFStudyDocument", 
+             "type": "object",
+            "properties": { 
+            
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@docStatusCode": { "$ref": "#/definitions/docStatusCode_Type" },
+                "@isStudyDataset": { "$ref": "#/definitions/isStudyDataset_Type" }, 
+                "docID": { 
+             "$ref": "#/definitions/docID_Type"  } 
+            ,
+                "docDate": { 
+             "$ref": "#/definitions/docDate_Type"  } 
+            ,
+                "PEFLifeCyclePhase": { 
+             "items": {  "$ref": "#/definitions/PEFLifeCyclePhase_Type"  }, "type": "array" 
+                , "maxItems": 6 } 
+            ,
+                "ProductIdentification": { 
+             "items": {  "$ref": "#/definitions/ProductIdentification_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "title": { 
+             "items": {  "$ref": "#/definitions/title_Type"  }, "type": "array" 
+                 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+            ,
+                "publishableAbstract": { 
+             "items": {  "$ref": "#/definitions/publishableAbstract_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "author": { 
+             "$ref": "#/definitions/author_Type"  } 
+            ,
+                "reviewerParty": { 
+             "items": {  "$ref": "#/definitions/reviewerParty_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "reviewDate": { 
+             "$ref": "#/definitions/reviewDate_Type"  } 
+            ,
+                "issuerParty": { 
+             "$ref": "#/definitions/issuerParty_Type"  } 
+            ,
+                "validityStart": { 
+             "$ref": "#/definitions/validityStart_Type"  } 
+            ,
+                "validityEnd": { 
+             "$ref": "#/definitions/validityEnd_Type"  } 
+            ,
+                "signatureInformation": { 
+             "$ref": "#/definitions/signatureInformation_Type"  } 
+            ,
+                "functionalUnitDescription": { 
+             "items": {  "$ref": "#/definitions/functionalUnitDescription_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "systemBoundariesDescription": { 
+             "items": {  "$ref": "#/definitions/systemBoundariesDescription_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "limitationsDescription": { 
+             "items": {  "$ref": "#/definitions/limitationsDescription_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "allocationsDescription": { 
+             "items": {  "$ref": "#/definitions/allocationsDescription_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "dataQualityDescription": { 
+             "items": {  "$ref": "#/definitions/dataQualityDescription_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "attachment": { 
+             "$ref": "#/definitions/attachment_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@isStudyDataset"]
+             } 
+            , "assessmentStudyDocument_Type": { 
+             "description": "assessmentStudyDocument", 
+             "type": "object",
+            "properties": { 
+            
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@docStatusCode": { "$ref": "#/definitions/docStatusCode_Type" },
+                "@isStudyDataset": { "$ref": "#/definitions/isStudyDataset_Type" }, 
+                "docID": { 
+             "$ref": "#/definitions/docID_Type"  } 
+            ,
+                "docDate": { 
+             "$ref": "#/definitions/docDate_Type"  } 
+            ,
+                "ProductIdentification": { 
+             "items": {  "$ref": "#/definitions/ProductIdentification_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "title": { 
+             "items": {  "$ref": "#/definitions/title_Type"  }, "type": "array" 
+                 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+            ,
+                "publishableAbstract": { 
+             "items": {  "$ref": "#/definitions/publishableAbstract_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "author": { 
+             "$ref": "#/definitions/author_Type"  } 
+            ,
+                "reviewerParty": { 
+             "items": {  "$ref": "#/definitions/reviewerParty_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "reviewDate": { 
+             "$ref": "#/definitions/reviewDate_Type"  } 
+            ,
+                "issuerParty": { 
+             "$ref": "#/definitions/issuerParty_Type"  } 
+            ,
+                "validityStart": { 
+             "$ref": "#/definitions/validityStart_Type"  } 
+            ,
+                "validityEnd": { 
+             "$ref": "#/definitions/validityEnd_Type"  } 
+            ,
+                "signatureInformation": { 
+             "$ref": "#/definitions/signatureInformation_Type"  } 
+            ,
+                "attachment": { 
+             "$ref": "#/definitions/attachment_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@isStudyDataset"]
+             } 
+            , "productSustainabilityCharacteristics_Type": { 
+             "description": "productSustainabilityCharacteristics", 
+             "type": "object",
+            "properties": { 
+            
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "billOfTreatments": { 
+             "$ref": "#/definitions/billOfTreatments_Type"  } 
+            ,
+                "billOfMaterials": { 
+             "$ref": "#/definitions/billOfMaterials_Type"  } 
+            ,
+                "billOfChemical": { 
+             "$ref": "#/definitions/billOfChemical_Type"  } 
+            ,
+                "billOfUsedWater": { 
+             "items": {  "$ref": "#/definitions/billOfUsedWater_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfEnergy": { 
+             "items": {  "$ref": "#/definitions/billOfEnergy_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfWaste": { 
+             "items": {  "$ref": "#/definitions/billOfWaste_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfWasteWater": { 
+             "items": {  "$ref": "#/definitions/billOfWasteWater_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfDirectEmissions": { 
+             "items": {  "$ref": "#/definitions/billOfDirectEmissions_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "internalWastewaterTreatmentPlant": { 
+             "items": {  "$ref": "#/definitions/internalWastewaterTreatmentPlant_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "productUsageCharacteristics": { 
+             "$ref": "#/definitions/productUsageCharacteristics_Type"  } 
+            ,
+                "endOfLifePerformance": { 
+             "$ref": "#/definitions/endOfLifePerformance_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "organisationAddress_Type": { 
+             "description": "organisationAddress", 
+             "type": "object",
+            "properties": { 
+            
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "socialAndEthicalSpecificInformation_Type": { 
+             "description": "socialAndEthicalSpecificInformation", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "assessmentStudyDocument": { 
+             "items": {  "$ref": "#/definitions/assessmentStudyDocument_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "socialAccountabilityEvidence": { 
+             "items": {  "$ref": "#/definitions/socialAccountabilityEvidence_Type"  }, "type": "array" 
+                 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["socialAccountabilityEvidence" ,"@exhaustiveInformation","@disclosureLevel","@storageAction"]
+             } 
+            , "listOfFacilities_Type": { 
+             "description": "listOfFacilities", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "facilityDescriptor": { 
+             "items": {  "$ref": "#/definitions/facilityDescriptor_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@exhaustiveInformation","@disclosureLevel","@storageAction"]
+             } 
+            , "selfAssertionEntity_Type": { 
+             "description": "selfAssertionEntity", 
+             "type": "object",
+            "properties": { 
+            
+                "entityID": { 
+             "items": {  "$ref": "#/definitions/entityID_Type"  }, "type": "array" 
+                , "maxItems": 3 } 
+            ,
+                "entityTypeCode": { 
+             "$ref": "#/definitions/entityTypeCode_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["entityID" ,"entityTypeCode" ]
+             } 
+            , "externalReference_Type": { 
+             "description": "externalReference", 
+             "type": "object",
+            "properties": { 
+            
+                "uri": { 
+             "$ref": "#/definitions/uri_Type"  } 
+            ,
+                "mimeCode": { 
+             "$ref": "#/definitions/mimeCode_Type"  } 
+            ,
+                "formatCode": { 
+             "$ref": "#/definitions/formatCode_Type"  } 
+            ,
+                "encodingCode": { 
+             "$ref": "#/definitions/encodingCode_Type"  } 
+            ,
+                "characterSetCode": { 
+             "$ref": "#/definitions/characterSetCode_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["uri" ]
+             } 
+            , "blockChainReference_Type": { 
+             "description": "blockChainReference", 
+             "type": "object",
+            "properties": { 
+            
+                "uri": { 
+             "$ref": "#/definitions/uri_Type"  } 
+            ,
+                "transactionReceipt": { 
+             "items": {  "$ref": "#/definitions/transactionReceipt_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["uri" ,"transactionReceipt" ]
+             } 
+            , "signatoryParty_Type": { 
+             "description": "signatoryParty", 
+             "type": "object",
+            "properties": { 
+            
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "rawCode_Type": { 
+             "description": "rawCode", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "art": { 
+             "$ref": "#/definitions/art_Type"  } 
+            ,
+                "color": { 
+             "$ref": "#/definitions/color_Type"  } 
+            ,
+                "added": { 
+             "items": {  "$ref": "#/definitions/added_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["art" ]
+             } 
+            , "yarnCode_Type": { 
+             "description": "yarnCode", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "art": { 
+             "$ref": "#/definitions/art_Type"  } 
+            ,
+                "color": { 
+             "$ref": "#/definitions/color_Type"  } 
+            ,
+                "added": { 
+             "items": {  "$ref": "#/definitions/added_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["art" ]
+             } 
+            , "texCode_Type": { 
+             "description": "texCode", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "art": { 
+             "$ref": "#/definitions/art_Type"  } 
+            ,
+                "pattern": { 
+             "$ref": "#/definitions/pattern_Type"  } 
+            ,
+                "color": { 
+             "$ref": "#/definitions/color_Type"  } 
+            ,
+                "added": { 
+             "items": {  "$ref": "#/definitions/added_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["art" ]
+             } 
+            , "acsCode_Type": { 
+             "description": "acsCode", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "art": { 
+             "$ref": "#/definitions/art_Type"  } 
+            ,
+                "pattern": { 
+             "$ref": "#/definitions/pattern_Type"  } 
+            ,
+                "color": { 
+             "$ref": "#/definitions/color_Type"  } 
+            ,
+                "added": { 
+             "items": {  "$ref": "#/definitions/added_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["art" ]
+             } 
+            , "garmentPartCode_Type": { 
+             "description": "garmentPartCode", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "gPart": { 
+             "$ref": "#/definitions/gPart_Type"  } 
+            ,
+                "mod": { 
+             "$ref": "#/definitions/mod_Type"  } 
+            ,
+                "fabric": { 
+             "$ref": "#/definitions/fabric_Type"  } 
+            ,
+                "color": { 
+             "$ref": "#/definitions/color_Type"  } 
+            ,
+                "added": { 
+             "items": {  "$ref": "#/definitions/added_Type"  }, "type": "array" 
+                , "maxItems": 19 } 
+            ,
+                "size": { 
+             "$ref": "#/definitions/size_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["gPart" ,"mod" ]
+             } 
+            , "garmentCode_Type": { 
+             "description": "garmentCode", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "garmentCodeB": { 
+             "$ref": "#/definitions/garmentCodeB_Type"  } 
+            ,
+                "garmentCodeA": { 
+             "$ref": "#/definitions/garmentCodeA_Type"  } 
+             }, 
+            
+            "oneOf": [ {  "required": [
+                                    "garmentCodeB"]  } 
+                        , {  "required": [
+                                    "garmentCodeA"]  } 
+                        ], 
+             "additionalProperties": false 
+            
+             } 
+            , "productComponent_Type": { 
+             "description": "productComponent", 
+             "type": "object",
+            "properties": { 
+            
+                "@internallyPerformed": { "$ref": "#/definitions/internallyPerformed_Type" }, 
+                "uniqueProductID": { 
+             "$ref": "#/definitions/uniqueProductID_Type"  } 
+            ,
+                "rawCode": { 
+             "items": {  "$ref": "#/definitions/rawCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "yarnCode": { 
+             "items": {  "$ref": "#/definitions/yarnCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "texCode": { 
+             "items": {  "$ref": "#/definitions/texCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "acsCode": { 
+             "items": {  "$ref": "#/definitions/acsCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "garmentPartCode": { 
+             "items": {  "$ref": "#/definitions/garmentPartCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "garmentCode": { 
+             "items": {  "$ref": "#/definitions/garmentCode_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "refDoc": { 
+             "items": {  "$ref": "#/definitions/refDoc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "objectTypeCode": { 
+             "$ref": "#/definitions/objectTypeCode_Type"  } 
+            ,
+                "qty": { 
+             "items": {  "$ref": "#/definitions/qty_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "supplier": { 
+             "items": {  "$ref": "#/definitions/supplier_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+             "anyOf": [ {},  { "": "rawCode" } 
+                        , { "": "yarnCode" } 
+                        , { "": "texCode" } 
+                        , { "": "acsCode" } 
+                        , { "": "garmentPartCode" } 
+                        , { "": "garmentCode" } 
+                        ], 
+             "additionalProperties": false 
+            , "required": ["uniqueProductID" ,"@internallyPerformed"]
+             } 
+            , "processStep_Type": { 
+             "description": "processStep", 
+             "type": "object",
+            "properties": { 
+            
+                "@progr": { "$ref": "#/definitions/progr_Type" },
+                "@internallyPerformed": { "$ref": "#/definitions/internallyPerformed_Type" }, 
+                "processStepID": { 
+             "$ref": "#/definitions/processStepID_Type"  } 
+            ,
+                "manufacturingOperationCode": { 
+             "$ref": "#/definitions/manufacturingOperationCode_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "activityLocation": { 
+             "items": {  "$ref": "#/definitions/activityLocation_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["processStepID" ,"manufacturingOperationCode" ,"@progr"]
+             } 
+            , "reviewerParty_Type": { 
+             "description": "reviewerParty", 
+             "type": "object",
+            "properties": { 
+            
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["id" ]
+             } 
+            , "billOfTreatments_Type": { 
+             "description": "billOfTreatments", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "treatmentDescriptor": { 
+             "items": {  "$ref": "#/definitions/treatmentDescriptor_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["treatmentDescriptor" ,"@exhaustiveInformation","@disclosureLevel","@storageAction"]
+             } 
+            , "billOfMaterials_Type": { 
+             "description": "billOfMaterials", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "materialDescriptor": { 
+             "items": {  "$ref": "#/definitions/materialDescriptor_Type"  }, "type": "array" 
+                 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["materialDescriptor" ,"@exhaustiveInformation","@storageAction"]
+             } 
+            , "billOfChemical_Type": { 
+             "description": "billOfChemical", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "dyesDescriptor": { 
+             "items": {  "$ref": "#/definitions/dyesDescriptor_Type"  }, "type": "array" 
+                 } 
+            ,
+                "chemicalItem": { 
+             "items": {  "$ref": "#/definitions/chemicalItem_Type"  }, "type": "array" 
+                 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@exhaustiveInformation","@storageAction"]
+             } 
+            , "billOfUsedWater_Type": { 
+             "description": "billOfUsedWater", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "usedWaterDescriptor": { 
+             "items": {  "$ref": "#/definitions/usedWaterDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@exhaustiveInformation","@storageAction"]
+             } 
+            , "billOfEnergy_Type": { 
+             "description": "billOfEnergy", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "energySupplyDescriptor": { 
+             "items": {  "$ref": "#/definitions/energySupplyDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "energyConsumptionDescriptor": { 
+             "items": {  "$ref": "#/definitions/energyConsumptionDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "auxSystemsConsumptionPerc": { 
+             "items": {  "$ref": "#/definitions/auxSystemsConsumptionPerc_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["energySupplyDescriptor" ,"energyConsumptionDescriptor" ,"@exhaustiveInformation","@storageAction"]
+             } 
+            , "billOfWaste_Type": { 
+             "description": "billOfWaste", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "wasteDescriptor": { 
+             "items": {  "$ref": "#/definitions/wasteDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["@exhaustiveInformation","@storageAction"]
+             } 
+            , "billOfWasteWater_Type": { 
+             "description": "billOfWasteWater", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "wasteWaterDescriptor": { 
+             "items": {  "$ref": "#/definitions/wasteWaterDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["wasteWaterDescriptor" ,"@exhaustiveInformation","@storageAction"]
+             } 
+            , "billOfDirectEmissions_Type": { 
+             "description": "billOfDirectEmissions", 
+             "type": "object",
+            "properties": { 
+            
+                "@limitedByDisclosureIndicator": { "$ref": "#/definitions/limitedByDisclosureIndicator_Type" },
+                "@exhaustiveInformation": { "$ref": "#/definitions/exhaustiveInformation_Type" },
+                "@disclosureLevel": { "$ref": "#/definitions/disclosureLevel_Type" },
+                "@storageAction": { "$ref": "#/definitions/storageAction_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+            ,
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "directEmissionDescriptor": { 
+             "items": {  "$ref": "#/definitions/directEmissionDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["directEmissionDescriptor" ,"@exhaustiveInformation","@storageAction"]
+             } 
+            , "internalWastewaterTreatmentPlant_Type": { 
+             "description": "internalWastewaterTreatmentPlant", 
+             "type": "object",
+            "properties": { 
+            
+                "activityLocation": { 
+             "$ref": "#/definitions/activityLocation_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "wasteWaterPlantInputList": { 
+             "$ref": "#/definitions/wasteWaterPlantInputList_Type"  } 
+            ,
+                "wasteWaterPlantOutputList": { 
+             "$ref": "#/definitions/wasteWaterPlantOutputList_Type"  } 
+            ,
+                "directEmissionDescriptor": { 
+             "items": {  "$ref": "#/definitions/directEmissionDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "productUsageCharacteristics_Type": { 
+             "description": "productUsageCharacteristics", 
+             "type": "object",
+            "properties": { 
+            
+                "usageDirectives": { 
+             "$ref": "#/definitions/usageDirectives_Type"  } 
+            ,
+                "expectedUsagePerformance": { 
+             "$ref": "#/definitions/expectedUsagePerformance_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "endOfLifePerformance_Type": { 
+             "description": "endOfLifePerformance", 
+             "type": "object",
+            "properties": { 
+            
+                "collectedFractionMassPercentage": { 
+             "items": {  "$ref": "#/definitions/collectedFractionMassPercentage_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "fractionMassToCompostingPerc": { 
+             "items": {  "$ref": "#/definitions/fractionMassToCompostingPerc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "fractionMassToRecyclingPerc": { 
+             "items": {  "$ref": "#/definitions/fractionMassToRecyclingPerc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "fractionMassToReusePerc": { 
+             "items": {  "$ref": "#/definitions/fractionMassToReusePerc_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "socialAccountabilityEvidence_Type": { 
+             "description": "socialAccountabilityEvidence", 
+             "type": "object",
+            "properties": { 
+            
+                "@socialAccountabilityMethod": { "$ref": "#/definitions/socialAccountabilityMethod_Type" }, 
+                "socialAccountabilityEvidenceCategory": { 
+             "$ref": "#/definitions/socialAccountabilityEvidenceCategory_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "evidenceValue": { 
+             "$ref": "#/definitions/evidenceValue_Type"  } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["socialAccountabilityEvidenceCategory" ]
+             } 
+            , "facilityDescriptor_Type": { 
+             "description": "facilityDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "facilityLocation": { 
+             "$ref": "#/definitions/facilityLocation_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "processStepsList": { 
+             "$ref": "#/definitions/processStepsList_Type"  } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "assessmentStudyDocument": { 
+             "items": {  "$ref": "#/definitions/assessmentStudyDocument_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "facilityYearlyProductionMass": { 
+             "items": {  "$ref": "#/definitions/facilityYearlyProductionMass_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "facilitySustainabilityCharacteristics": { 
+             "$ref": "#/definitions/facilitySustainabilityCharacteristics_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["facilityLocation" ]
+             } 
+            , "garmentCodeB_Type": { 
+             "description": "garmentCodeB", 
+             "type": "object",
+            "properties": { 
+            
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" }, 
+                "mod": { 
+             "$ref": "#/definitions/mod_Type"  } 
+            ,
+                "fabric": { 
+             "$ref": "#/definitions/fabric_Type"  } 
+            ,
+                "color": { 
+             "$ref": "#/definitions/color_Type"  } 
+            ,
+                "garmentVariant": { 
+             "items": {  "$ref": "#/definitions/garmentVariant_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "drop": { 
+             "$ref": "#/definitions/drop_Type"  } 
+            ,
+                "size": { 
+             "$ref": "#/definitions/size_Type"  } 
+            ,
+                "artGroup": { 
+             "$ref": "#/definitions/artGroup_Type"  } 
+            ,
+                "added": { 
+             "items": {  "$ref": "#/definitions/added_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["mod" ]
+             } 
+            , "garmentCodeA_Type": { 
+             "description": "garmentCodeA", 
+             "type": "object",
+            "properties": { 
+            
+                "art": { 
+             "$ref": "#/definitions/art_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["art" ]
+             } 
+            , "supplier_Type": { 
+             "description": "supplier", 
+             "type": "object",
+            "properties": { 
+            
+                "@logo": { "$ref": "#/definitions/logo_Type" },
+                "@sender": { "$ref": "#/definitions/sender_Type" }, 
+                "id": { 
+             "$ref": "#/definitions/id_Type"  } 
+            ,
+                "additionalIdentifier": { 
+             "items": {  "$ref": "#/definitions/additionalIdentifier_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["id" ]
+             } 
+            , "activityLocation_Type": { 
+             "description": "activityLocation", 
+             "type": "object",
+            "properties": { 
+            
+                "@part": { "$ref": "#/definitions/part_Type" }, 
+                "location": { 
+             "$ref": "#/definitions/location_Type"  } 
+            ,
+                "legalName": { 
+             "$ref": "#/definitions/legalName_Type"  } 
+            ,
+                "dept": { 
+             "$ref": "#/definitions/dept_Type"  } 
+            ,
+                "subDept": { 
+             "$ref": "#/definitions/subDept_Type"  } 
+            ,
+                "person": { 
+             "$ref": "#/definitions/person_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "treatmentDescriptor_Type": { 
+             "description": "treatmentDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@internallyPerformed": { "$ref": "#/definitions/internallyPerformed_Type" }, 
+                "manufacturingOperationCode": { 
+             "$ref": "#/definitions/manufacturingOperationCode_Type"  } 
+            ,
+                "machineryName": { 
+             "$ref": "#/definitions/machineryName_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "certificate": { 
+             "items": {  "$ref": "#/definitions/certificate_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "selfAssertion": { 
+             "items": {  "$ref": "#/definitions/selfAssertion_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "billOfComponents": { 
+             "$ref": "#/definitions/billOfComponents_Type"  } 
+            ,
+                "billOfChemical": { 
+             "$ref": "#/definitions/billOfChemical_Type"  } 
+            ,
+                "billOfUsedWater": { 
+             "$ref": "#/definitions/billOfUsedWater_Type"  } 
+            ,
+                "billOfEnergy": { 
+             "$ref": "#/definitions/billOfEnergy_Type"  } 
+            ,
+                "billOfWaste": { 
+             "$ref": "#/definitions/billOfWaste_Type"  } 
+            ,
+                "billOfWasteWater": { 
+             "$ref": "#/definitions/billOfWasteWater_Type"  } 
+            ,
+                "billOfDirectEmissions": { 
+             "$ref": "#/definitions/billOfDirectEmissions_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["manufacturingOperationCode" ,"machineryName" ,"@internallyPerformed"]
+             } 
+            , "facilityLocation_Type": { 
+             "description": "facilityLocation", 
+             "type": "object",
+            "properties": { 
+            
+                "location": { 
+             "$ref": "#/definitions/location_Type"  } 
+            ,
+                "street": { 
+             "$ref": "#/definitions/street_Type"  } 
+            ,
+                "city": { 
+             "$ref": "#/definitions/city_Type"  } 
+            ,
+                "subCountry": { 
+             "$ref": "#/definitions/subCountry_Type"  } 
+            ,
+                "country": { 
+             "$ref": "#/definitions/country_Type"  } 
+            ,
+                "postCode": { 
+             "$ref": "#/definitions/postCode_Type"  } 
+            ,
+                "geoCoordinates": { 
+             "$ref": "#/definitions/geoCoordinates_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["location" ]
+             } 
+            , "materialDescriptor_Type": { 
+             "description": "materialDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "prodServName": { 
+             "$ref": "#/definitions/prodServName_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "declaredQty": { 
+             "$ref": "#/definitions/declaredQty_Type"  } 
+            ,
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "inputMaterialCategory": { 
+             "$ref": "#/definitions/inputMaterialCategory_Type"  } 
+            ,
+                "transportImpactPrimaryData": { 
+             "items": {  "$ref": "#/definitions/transportImpactPrimaryData_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "packagingImpactPrimaryData": { 
+             "items": {  "$ref": "#/definitions/packagingImpactPrimaryData_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["prodServName" ,"inputMaterialCategory" ]
+             } 
+            , "dyesDescriptor_Type": { 
+             "description": "dyesDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "dyesCategory": { 
+             "$ref": "#/definitions/dyesCategory_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["dyesCategory" ]
+             } 
+            , "chemicalItem_Type": { 
+             "description": "chemicalItem", 
+             "type": "object",
+            "properties": { 
+            
+                "CASCode": { 
+             "$ref": "#/definitions/CASCode_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "SDSDoc": { 
+             "$ref": "#/definitions/SDSDoc_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["CASCode" ,"description" ]
+             } 
+            , "usedWaterDescriptor_Type": { 
+             "description": "usedWaterDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@indirectIncluded": { "$ref": "#/definitions/indirectIncluded_Type" }, 
+                "usedWaterType": { 
+             "$ref": "#/definitions/usedWaterType_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "declaredQty": { 
+             "items": {  "$ref": "#/definitions/declaredQty_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["usedWaterType" ,"@indirectIncluded"]
+             } 
+            , "energySupplyDescriptor_Type": { 
+             "description": "energySupplyDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@percSourcesRenewable": { "$ref": "#/definitions/percSourcesRenewable_Type" },
+                "@internalEnergyProduction": { "$ref": "#/definitions/internalEnergyProduction_Type" }, 
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "energySourceType": { 
+             "$ref": "#/definitions/energySourceType_Type"  } 
+            ,
+                "typeOfEnergyVector": { 
+             "$ref": "#/definitions/typeOfEnergyVector_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            , "energy": { "$ref": "#/definitions/energy_Type" }
+                 "timeDuration": { "$ref": "#/definitions/timeDuration_Type" }
+                , "activePower": { "$ref": "#/definitions/activePower_Type" }
+                 }, 
+            
+            "oneOf": [, { 
+                                
+                                        "required": [ "energy"] 
+                                        
+                                        }], { 
+                                
+                                        "required": [ "timeDuration","activePower"] 
+                                        
+                                        }], 
+                        
+             "additionalProperties": false 
+            , "required": ["typeOfEnergyVector" ,"@internalEnergyProduction"]
+             } 
+            , "energyConsumptionDescriptor_Type": { 
+             "description": "energyConsumptionDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@isElectric": { "$ref": "#/definitions/isElectric_Type" },
+                "@indirectIncluded": { "$ref": "#/definitions/indirectIncluded_Type" }, 
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "description": { 
+             "$ref": "#/definitions/description_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            , "activePower": { "$ref": "#/definitions/activePower_Type" }
+                , "timeDuration": { "$ref": "#/definitions/timeDuration_Type" }
+                 "energy": { "$ref": "#/definitions/energy_Type" }
+                 }, 
+            
+            "oneOf": [, { 
+                                
+                                        "required": [ "activePower","timeDuration"] 
+                                        
+                                        }], { 
+                                
+                                        "required": [ "energy"] 
+                                        
+                                        }], 
+                        
+             "additionalProperties": false 
+            , "required": ["description" ,"@isElectric","@indirectIncluded"]
+             } 
+            , "wasteDescriptor_Type": { 
+             "description": "wasteDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@indirectIncluded": { "$ref": "#/definitions/indirectIncluded_Type" }, 
+                "EWCWasteCode": { 
+             "$ref": "#/definitions/EWCWasteCode_Type"  } 
+            ,
+                "wasteTypeCode": { 
+             "items": {  "$ref": "#/definitions/wasteTypeCode_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "declaredQty": { 
+             "$ref": "#/definitions/declaredQty_Type"  } 
+            ,
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "routeLength": { 
+             "$ref": "#/definitions/routeLength_Type"  } 
+            ,
+                "wasteFinalTreatmentType": { 
+             "items": {  "$ref": "#/definitions/wasteFinalTreatmentType_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["EWCWasteCode" ,"@indirectIncluded"]
+             } 
+            , "wasteWaterDescriptor_Type": { 
+             "description": "wasteWaterDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@hazardous": { "$ref": "#/definitions/hazardous_Type" },
+                "@indirectIncluded": { "$ref": "#/definitions/indirectIncluded_Type" }, 
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "declaredQty": { 
+             "$ref": "#/definitions/declaredQty_Type"  } 
+            ,
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "wasteWaterFinalTreatmentType": { 
+             "items": {  "$ref": "#/definitions/wasteWaterFinalTreatmentType_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "wasteWaterContaminantType": { 
+             "items": {  "$ref": "#/definitions/wasteWaterContaminantType_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["description" ,"@hazardous","@indirectIncluded"]
+             } 
+            , "directEmissionDescriptor_Type": { 
+             "description": "directEmissionDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@releasedOn": { "$ref": "#/definitions/releasedOn_Type" },
+                "@indirectIncluded": { "$ref": "#/definitions/indirectIncluded_Type" }, 
+                "directEmissionType": { 
+             "$ref": "#/definitions/directEmissionType_Type"  } 
+            ,
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "declaredQty": { 
+             "$ref": "#/definitions/declaredQty_Type"  } 
+            ,
+                "productReferenceQty": { 
+             "$ref": "#/definitions/productReferenceQty_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["directEmissionType" ,"@releasedOn","@indirectIncluded"]
+             } 
+            , "wasteWaterPlantInputList_Type": { 
+             "description": "wasteWaterPlantInputList", 
+             "type": "object",
+            "properties": { 
+            
+                "wasteWaterPlantInputDescriptor": { 
+             "items": {  "$ref": "#/definitions/wasteWaterPlantInputDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "wasteWaterPlantOutputList_Type": { 
+             "description": "wasteWaterPlantOutputList", 
+             "type": "object",
+            "properties": { 
+            
+                "wasteDescriptor": { 
+             "items": {  "$ref": "#/definitions/wasteDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["wasteDescriptor" ]
+             } 
+            , "usageDirectives_Type": { 
+             "description": "usageDirectives", 
+             "type": "object",
+            "properties": { 
+            
+                "washingType": { 
+             "$ref": "#/definitions/washingType_Type"  } 
+            ,
+                "maximumWashingTemperature": { 
+             "$ref": "#/definitions/maximumWashingTemperature_Type"  } 
+            ,
+                "maximumIroningTemperature": { 
+             "$ref": "#/definitions/maximumIroningTemperature_Type"  } 
+            ,
+                "allowedTumbleDrying": { 
+             "$ref": "#/definitions/allowedTumbleDrying_Type"  } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "expectedUsagePerformance_Type": { 
+             "description": "expectedUsagePerformance", 
+             "type": "object",
+            "properties": { 
+            
+                "averageWashingNumber": { 
+             "items": {  "$ref": "#/definitions/averageWashingNumber_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "averageProductLifetime": { 
+             "items": {  "$ref": "#/definitions/averageProductLifetime_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "averageReferenceProductLifeTime": { 
+             "items": {  "$ref": "#/definitions/averageReferenceProductLifeTime_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "externalRefDoc": { 
+             "items": {  "$ref": "#/definitions/externalRefDoc_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "facilityYearlyProductionMass_Type": { 
+             "description": "facilityYearlyProductionMass", 
+             "type": "object",
+            "properties": { 
+            
+                "objectTypeCode": { 
+             "$ref": "#/definitions/objectTypeCode_Type"  } 
+            ,
+                "declaredQty": { 
+             "items": {  "$ref": "#/definitions/declaredQty_Type"  }, "type": "array" 
+                , "maxItems": 2 } 
+            ,
+                "year": { 
+             "$ref": "#/definitions/year_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "facilitySustainabilityCharacteristics_Type": { 
+             "description": "facilitySustainabilityCharacteristics", 
+             "type": "object",
+            "properties": { 
+            
+                "billOfUsedWater": { 
+             "items": {  "$ref": "#/definitions/billOfUsedWater_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfEnergy": { 
+             "items": {  "$ref": "#/definitions/billOfEnergy_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfWaste": { 
+             "items": {  "$ref": "#/definitions/billOfWaste_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfWasteWater": { 
+             "items": {  "$ref": "#/definitions/billOfWasteWater_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+            ,
+                "billOfDirectEmissions": { 
+             "items": {  "$ref": "#/definitions/billOfDirectEmissions_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "garmentVariant_Type": { 
+             "description": "garmentVariant", 
+             "type": "object",
+            "properties": { 
+            
+                "variantType": { 
+             "$ref": "#/definitions/variantType_Type"  } 
+            ,
+                "variantCode": { 
+             "$ref": "#/definitions/variantCode_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["variantType" ,"variantCode" ]
+             } 
+            , "transportImpactPrimaryData_Type": { 
+             "description": "transportImpactPrimaryData", 
+             "type": "object",
+            "properties": { 
+            
+                "@part": { "$ref": "#/definitions/part_Type" }, 
+                "description": { 
+             "items": {  "$ref": "#/definitions/description_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+            ,
+                "transMode": { 
+             "$ref": "#/definitions/transMode_Type"  } 
+            ,
+                "transMeans": { 
+             "$ref": "#/definitions/transMeans_Type"  } 
+            ,
+                "routeLength": { 
+             "$ref": "#/definitions/routeLength_Type"  } 
+            ,
+                "transportMeansUtilisationPercentage": { 
+             "$ref": "#/definitions/transportMeansUtilisationPercentage_Type"  } 
+            ,
+                "emptyReturnForTruck": { 
+             "$ref": "#/definitions/emptyReturnForTruck_Type"  } 
+            ,
+                "note": { 
+             "items": {  "$ref": "#/definitions/note_Type"  }, "type": "array" 
+                , "maxItems": 9 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["transMode" ,"transMeans" ,"routeLength" ]
+             } 
+            , "packagingImpactPrimaryData_Type": { 
+             "description": "packagingImpactPrimaryData", 
+             "type": "object",
+            "properties": { 
+            
+                "packageText": { 
+             "$ref": "#/definitions/packageText_Type"  } 
+            ,
+                "weight": { 
+             "$ref": "#/definitions/weight_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["packageText" ,"weight" ]
+             } 
+            , "SDSDoc_Type": { 
+             "description": "SDSDoc", 
+             "type": "object",
+            "properties": { 
+            
+                "CASCode": { 
+             "$ref": "#/definitions/CASCode_Type"  } 
+            ,
+                "attachment": { 
+             "$ref": "#/definitions/attachment_Type"  } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            , "required": ["CASCode" ,"attachment" ]
+             } 
+            , "wasteWaterPlantInputDescriptor_Type": { 
+             "description": "wasteWaterPlantInputDescriptor", 
+             "type": "object",
+            "properties": { 
+            
+                "@sharePerc": { "$ref": "#/definitions/sharePerc_Type" }, 
+                "wasteWaterProvenance": { 
+             "$ref": "#/definitions/wasteWaterProvenance_Type"  } 
+            ,
+                "materialDescriptor": { 
+             "items": {  "$ref": "#/definitions/materialDescriptor_Type"  }, "type": "array" 
+                , "maxItems": 99 } 
+             }, 
+            
+            
+             "additionalProperties": false 
+            
+             } 
+            , "msgDate_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_msgDate_Type"  } ,
+                "@dateForm": { "$ref": "#/definitions/dateForm_Type" } },  "additionalProperties": false 
+             } 
+            , "note_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_note_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@noteLabel": { "$ref": "#/definitions/noteLabel_Type" } },  "additionalProperties": false 
+             } 
+            , "docID_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_docID_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" } },  "additionalProperties": false 
+             } 
+            , "docDate_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_docDate_Type"  } ,
+                "@dateForm": { "$ref": "#/definitions/dateForm_Type" } },  "additionalProperties": false 
+             } 
+            , "season_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_season_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "certificateID_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_certificateID_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" } },  "additionalProperties": false 
+             } 
+            , "certificationStandardName_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_certificationStandardName_Type"  } ,
+                "@standardOwner": { "$ref": "#/definitions/standardOwner_Type" } },  "additionalProperties": false 
+            , "required": ["@standardOwner"] } 
+            , "title_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_title_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "description_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_description_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "validityStart_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_validityStart_Type"  } ,
+                "@dateForm": { "$ref": "#/definitions/dateForm_Type" } },  "additionalProperties": false 
+             } 
+            , "validityEnd_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_validityEnd_Type"  } ,
+                "@dateForm": { "$ref": "#/definitions/dateForm_Type" } },  "additionalProperties": false 
+             } 
+            , "validityExtensionDate_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_validityExtensionDate_Type"  } ,
+                "@dateForm": { "$ref": "#/definitions/dateForm_Type" } },  "additionalProperties": false 
+             } 
+            , "sustainabilityCharacteristicText_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_sustainabilityCharacteristicText_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "id_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_id_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" } },  "additionalProperties": false 
+             } 
+            , "person_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_person_Type"  } ,
+                "@email": { "$ref": "#/definitions/email_Type" },
+                "@phone": { "$ref": "#/definitions/phone_Type" },
+                "@fax": { "$ref": "#/definitions/fax_Type" } },  "additionalProperties": false 
+             } 
+            , "customsStat_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_customsStat_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" } },  "additionalProperties": false 
+             } 
+            , "activityStatisticalCode_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_activityStatisticalCode_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" } },  "additionalProperties": false 
+             } 
+            , "fileName_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_fileName_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" } },  "additionalProperties": false 
+             } 
+            , "binaryObject_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_binaryObject_Type"  } ,
+                "@format": { "$ref": "#/definitions/format_Type" },
+                "@mime": { "$ref": "#/definitions/mime_Type" },
+                "@encoding": { "$ref": "#/definitions/encoding_Type" },
+                "@characterSet": { "$ref": "#/definitions/characterSet_Type" } },  "additionalProperties": false 
+             } 
+            , "hashFootprint_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_hashFootprint_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" },
+                "@hashMethod": { "$ref": "#/definitions/hashMethod_Type" } },  "additionalProperties": false 
+            , "required": ["@hashMethod"] } 
+            , "entityID_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_entityID_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" } },  "additionalProperties": false 
+            , "required": ["@schemeID"] } 
+            , "signatureTypeCode_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_signatureTypeCode_Type"  }  },  "additionalProperties": false 
+             } 
+            , "xGeoCoord_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_xGeoCoord_Type"  }  },  "additionalProperties": false 
+             } 
+            , "yGeoCoord_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_yGeoCoord_Type"  }  },  "additionalProperties": false 
+             } 
+            , "zGeoCoord_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_zGeoCoord_Type"  }  },  "additionalProperties": false 
+             } 
+            , "uniqueProductID_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_uniqueProductID_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" } },  "additionalProperties": false 
+            , "required": ["@schemeID"] } 
+            , "productReferenceQty_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_productReferenceQty_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "percCompos_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_percCompos_Type"  } ,
+                "@fibre": { "$ref": "#/definitions/fibre_Type" },
+                "@materialSource": { "$ref": "#/definitions/materialSource_Type" },
+                "@recyclingProcessMethod": { "$ref": "#/definitions/recyclingProcessMethod_Type" },
+                "@percSourcesRenewable": { "$ref": "#/definitions/percSourcesRenewable_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@recyclingProcessEfficiency": { "$ref": "#/definitions/recyclingProcessEfficiency_Type" } },  "additionalProperties": false 
+            , "required": ["@fibre"] } 
+            , "publishableAbstract_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_publishableAbstract_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "author_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_author_Type"  } ,
+                "@email": { "$ref": "#/definitions/email_Type" },
+                "@phone": { "$ref": "#/definitions/phone_Type" },
+                "@fax": { "$ref": "#/definitions/fax_Type" } },  "additionalProperties": false 
+             } 
+            , "reviewDate_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_reviewDate_Type"  } ,
+                "@dateForm": { "$ref": "#/definitions/dateForm_Type" } },  "additionalProperties": false 
+             } 
+            , "functionalUnitDescription_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_functionalUnitDescription_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "systemBoundariesDescription_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_systemBoundariesDescription_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "limitationsDescription_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_limitationsDescription_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "allocationsDescription_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_allocationsDescription_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "dataQualityDescription_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_dataQualityDescription_Type"  } ,
+                "@ln": { "$ref": "#/definitions/ln_Type" } },  "additionalProperties": false 
+             } 
+            , "uri_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_uri_Type"  } ,
+                "@isURL": { "$ref": "#/definitions/isURL_Type" } },  "additionalProperties": false 
+             } 
+            , "transactionReceipt_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_transactionReceipt_Type"  }  },  "additionalProperties": false 
+             } 
+            , "art_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_art_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "color_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_color_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "added_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_added_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@addType": { "$ref": "#/definitions/addType_Type" } },  "additionalProperties": false 
+             } 
+            , "pattern_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_pattern_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "mod_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_mod_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "fabric_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_fabric_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "size_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_size_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "qty_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_qty_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "auxSystemsConsumptionPerc_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_auxSystemsConsumptionPerc_Type"  } ,
+                "@isElectric": { "$ref": "#/definitions/isElectric_Type" } },  "additionalProperties": false 
+             } 
+            , "collectedFractionMassPercentage_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_collectedFractionMassPercentage_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "fractionMassToCompostingPerc_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_fractionMassToCompostingPerc_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" },
+                "@energyRecoveryEfficiency": { "$ref": "#/definitions/energyRecoveryEfficiency_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "fractionMassToRecyclingPerc_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_fractionMassToRecyclingPerc_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@recyclingProcessMethod": { "$ref": "#/definitions/recyclingProcessMethod_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" },
+                "@recyclingProcessEfficiency": { "$ref": "#/definitions/recyclingProcessEfficiency_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "fractionMassToReusePerc_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_fractionMassToReusePerc_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "evidenceValue_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_evidenceValue_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" } },  "additionalProperties": false 
+             } 
+            , "drop_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_drop_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "artGroup_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_artGroup_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "additionalIdentifier_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_additionalIdentifier_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@idQualifier": { "$ref": "#/definitions/idQualifier_Type" } },  "additionalProperties": false 
+             } 
+            , "location_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_location_Type"  } ,
+                "@LRI": { "$ref": "#/definitions/LRI_Type" } },  "additionalProperties": false 
+             } 
+            , "declaredQty_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_declaredQty_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "energy_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_energy_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "activePower_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_activePower_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "wasteTypeCode_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_wasteTypeCode_Type"  } ,
+                "@schemeID": { "$ref": "#/definitions/schemeID_Type" } },  "additionalProperties": false 
+            , "required": ["@schemeID"] } 
+            , "routeLength_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_routeLength_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "wasteFinalTreatmentType_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_wasteFinalTreatmentType_Type"  } ,
+                "@part": { "$ref": "#/definitions/part_Type" },
+                "@recyclingProcessEfficiency": { "$ref": "#/definitions/recyclingProcessEfficiency_Type" } },  "additionalProperties": false 
+             } 
+            , "wasteWaterFinalTreatmentType_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_wasteWaterFinalTreatmentType_Type"  } ,
+                "@part": { "$ref": "#/definitions/part_Type" } },  "additionalProperties": false 
+             } 
+            , "maximumWashingTemperature_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_maximumWashingTemperature_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" } },  "additionalProperties": false 
+             } 
+            , "maximumIroningTemperature_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_maximumIroningTemperature_Type"  }  },  "additionalProperties": false 
+             } 
+            , "allowedTumbleDrying_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_allowedTumbleDrying_Type"  }  },  "additionalProperties": false 
+             } 
+            , "averageWashingNumber_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_averageWashingNumber_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "averageProductLifetime_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_averageProductLifetime_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "averageReferenceProductLifeTime_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_averageReferenceProductLifeTime_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" },
+                "@validationMethod": { "$ref": "#/definitions/validationMethod_Type" },
+                "@referenceYear": { "$ref": "#/definitions/referenceYear_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "variantType_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_variantType_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "variantCode_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_variantCode_Type"  } ,
+                "@numberingOrg": { "$ref": "#/definitions/numberingOrg_Type" },
+                "@codeList": { "$ref": "#/definitions/codeList_Type" },
+                "@listName": { "$ref": "#/definitions/listName_Type" },
+                "@listVersion": { "$ref": "#/definitions/listVersion_Type" } },  "additionalProperties": false 
+             } 
+            , "transMeans_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_transMeans_Type"  } ,
+                "@propulsionSystemCode": { "$ref": "#/definitions/propulsionSystemCode_Type" } },  "additionalProperties": false 
+             } 
+            , "weight_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_weight_Type"  } ,
+                "@um": { "$ref": "#/definitions/um_Type" } },  "additionalProperties": false 
+            , "required": ["@um"] } 
+            , "wasteWaterProvenance_Type": { "type": "object", "properties": {  "$": {  "$ref": "#/definitions/sub_wasteWaterProvenance_Type"  }  },  "additionalProperties": false 
+             } 
+            , "version_Type": {  "enum": [ "2013-1","2018-1","draft"],  "type": "string"  } 
+            , "useProfile_Type": {  "type": "string"  } 
+            , "TRCReportFunction_Type": {  "enum": [ "REG","REP"],  "type": "string"  } 
+            , "msgN_Type": {  "maxLength": 35,  "type": "string"  } 
+            , "msgID_Type": {  "maxLength": 35,  "type": "string"  } 
+            , "sub_msgDate_Type": {  "pattern": "^(((19|20)[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])(:([0,1][0-9]|2[0-4])-([0-5][0-9])){0,1})|(((19|20)[0-9][0-9])-([0-4][0-9]|[5][0-2]))$",  "type": "string"  } 
+            , "sub_note_Type": {  "maxLength": 350,  "type": "string"  } 
+            , "dateForm_Type": {  "enum": [ "D","M","S","W"],  "type": "string"  } 
+            , "sub_docID_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "sub_docDate_Type": {  "pattern": "^(((19|20)[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])(:([0,1][0-9]|2[0-4])-([0-5][0-9])){0,1})|(((19|20)[0-9][0-9])-([0-4][0-9]|[5][0-2]))$",  "type": "string"  } 
+            , "sub_season_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "itemID_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "docType_Type": {  "enum": [ "BIL","BOR","CAT","CEO","CER","CMR","COC","CRN","CTO","CTR","CXF","DAD","DDT","DEA","DER","DR","EAD","ECMR","ECUS","FOR","GSO","GSX","ICUS","INV","KCC","KCI","LCA","LCAD","M2M","MAS","MCI","OCH","OFF","ORD","ORP","OSR","OSS","OST","OUR","PCO","PEF","PEFD","PEFP","QR","RAI","RDC","RDH","RDR","REA","REQ","RET","RSC","RSH","RSR","SAD","SCL","SDE","SDS","SLCA","SLCAD","TFC","TFX","TPC","TPX","TWI","VMI","WAC","WAYB","WEC","YDC","YDH","YDR","YTC","YWI"],  "type": "string"  } 
+            , "sub_certificateID_Type": {  "type": "string"  } 
+            , "sub_certificationStandardName_Type": {  "type": "string"  } 
+            , "sub_title_Type": {  "type": "string"  } 
+            , "sub_description_Type": {  "maxLength": 250,  "type": "string"  } 
+            , "sub_validityStart_Type": {  "pattern": "^(((19|20)[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])(:([0,1][0-9]|2[0-4])-([0-5][0-9])){0,1})|(((19|20)[0-9][0-9])-([0-4][0-9]|[5][0-2]))$",  "type": "string"  } 
+            , "sub_validityEnd_Type": {  "pattern": "^(((19|20)[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])(:([0,1][0-9]|2[0-4])-([0-5][0-9])){0,1})|(((19|20)[0-9][0-9])-([0-4][0-9]|[5][0-2]))$",  "type": "string"  } 
+            , "sub_validityExtensionDate_Type": {  "pattern": "^(((19|20)[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])(:([0,1][0-9]|2[0-4])-([0-5][0-9])){0,1})|(((19|20)[0-9][0-9])-([0-4][0-9]|[5][0-2]))$",  "type": "string"  } 
+            , "sub_sustainabilityCharacteristicText_Type": {  "minLength": 1,  "type": "string"  } 
+            , "docStatusCode_Type": {  "enum": [ "112","21","39","40","41","45","67","70","73","74","97"],  "type": "number"  } 
+            , "docValidity_Type": {  "type": "boolean"  } 
+            , "documentType_Type": {  "enum": [ "BIL","BOR","CAT","CEO","CER","CMR","COC","CRN","CTO","CTR","CXF","DAD","DDT","DEA","DER","DR","EAD","ECMR","ECUS","FOR","GSO","GSX","ICUS","INV","KCC","KCI","LCA","LCAD","M2M","MAS","MCI","OCH","OFF","ORD","ORP","OSR","OSS","OST","OUR","PCO","PEF","PEFD","PEFP","QR","RAI","RDC","RDH","RDR","REA","REQ","RET","RSC","RSH","RSR","SAD","SCL","SDE","SDS","SLCA","SLCAD","TFC","TFX","TPC","TPX","TWI","VMI","WAC","WAYB","WEC","YDC","YDH","YDR","YTC","YWI"],  "type": "string"  } 
+            , "sub_id_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "legalName_Type": {  "maxLength": 250,  "type": "string"  } 
+            , "dept_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "subDept_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "sub_person_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "street_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "city_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "subCountry_Type": {  "maxLength": 9,  "type": "string"  } 
+            , "country_Type": {  "type": "string"  } 
+            , "postCode_Type": {  "maxLength": 10,  "type": "string"  } 
+            , "role_Type": {  "enum": [ "AG","AU","BU","CE","CM","CO","CU","DC","DF","DI","DM","DP","EX","IM","OR","SC","SM","SP","SU","TL","TX"],  "type": "string"  } 
+            , "sender_Type": {  "type": "boolean"  } 
+            , "VAT_Type": {  "enum": [ "001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016","017","018","019","020","021","022","023","024","025","162","164","165","166","169","174","177","183","184","201","220","227","374","701","702","902","904","905","907","915","926","974"],  "type": "string"  } 
+            , "numberingOrg_Type": {  "enum": [ "CL","CO","DU","EB","EN","EO","ES","FO","GS","MF","ML","PL","REX","SP","SU"],  "type": "string"  } 
+            , "codeList_Type": {  "maxLength": 255,  "type": "string"  } 
+            , "noteLabel_Type": {  "maxLength": 35,  "type": "string"  } 
+            , "sub_customsStat_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "externaProviderIndicator_Type": {  "type": "boolean"  } 
+            , "sub_activityStatisticalCode_Type": {  "type": "string"  } 
+            , "assertionCategory_Type": {  "enum": [ "ENV","ETH","FIB","HLT","LOC","ORG","OTH","PER","PRO","REC"],  "type": "string"  } 
+            , "disclosureLevel_Type": {  "enum": [ "1","2","3","4","9"],  "type": "number"  } 
+            , "listName_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "listVersion_Type": {  "maxLength": 6,  "type": "string"  } 
+            , "sub_fileName_Type": {  "maxLength": 255,  "type": "string"  } 
+            , "sub_binaryObject_Type": {  "type": "string"  } 
+            , "sub_hashFootprint_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "uid_Type": {  "type": "string"  } 
+            , "schemeID_Type": {  "type": "string"  } 
+            , "standardOwner_Type": {  "type": "string"  } 
+            , "ln_Type": {  "enum": [ "af","ar","be","bg","bn","bo","bs","ca","cs","da","de","el","en","eo","es","et","eu","F","fa","fi","fr","ga","gd","gn","he","hr","ht","hu","hy","ia","id","is","it","ja","jv","ka","km","ko","ku","lb","lo","lt","lv","mg","mk","mn","mt","nl","no","pl","pt","ro","ru","se","sk","sl","sm","so","sq","sr","sv","sw","ta","th","tr","uk","ur","uz","vi","zh"],  "type": "string"  } 
+            , "issuerAccreditationInfo_Type": {  "type": "string"  } 
+            , "sub_entityID_Type": {  "type": "string"  } 
+            , "entityTypeCode_Type": {  "enum": [ "FAC","INS","LOT","ORG","PRC","PRD","PRO","SHP"],  "type": "string"  } 
+            , "sub_signatureTypeCode_Type": {  "type": "string"  } 
+            , "email_Type": {  "maxLength": 250,  "type": "string"  } 
+            , "phone_Type": {  "maxLength": 35,  "type": "string"  } 
+            , "fax_Type": {  "maxLength": 35,  "type": "string"  } 
+            , "sub_xGeoCoord_Type": {  "type": "number"  } 
+            , "sub_yGeoCoord_Type": {  "type": "number"  } 
+            , "sub_zGeoCoord_Type": {  "type": "number"  } 
+            , "um_Type": {  "enum": [ "CMK","CMQ","CMT","CNE","CO2TON","COUPLES","DAY","DEGD","DEGMS","DMQ","E37","GRM","HUR","INH","KGM","KMT","KWH","LBR","MCG","MG","MIN","MMK","MONTH","MSEC","MTK","MTQ","MTR","NMB","ONZ","P1","PPM","PZ","RPM","SEC","YEAR","YRD"],  "type": "string"  } 
+            , "geoRefSystem_Type": {  "type": "string"  } 
+            , "sub_uniqueProductID_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "objectTypeCode_Type": {  "enum": [ "ACCE","CFBR","FABR","FIL","GARM","GRCO","KNFA","LFIB","PFBR","POLY","PPFB","RAFA","RAFI","RAGA","RAKF","RAYA","TOPS","TRIM","WACC","WFFP","WFGP","WFYP","WGGP","WPAC","WPFB","WPGR","WPTR","WTRM","WYFP","WYYP","YARN"],  "type": "string"  } 
+            , "sub_productReferenceQty_Type": {  "minimum": 0,  "type": "number"  } 
+            , "limitedByDisclosureIndicator_Type": {  "type": "boolean"  } 
+            , "exhaustiveInformation_Type": {  "type": "boolean"  } 
+            , "storageAction_Type": {  "enum": [ "AD","DW","NA","WU"],  "type": "string"  } 
+            , "sub_percCompos_Type": {  "minimum": 0,  "maximum": 100,  "type": "number"  } 
+            , "made_Type": {  "type": "string"  } 
+            , "PEFLifeCyclePhase_Type": {  "enum": [ "0.1","0.2","0.3","1","2","3","4","5","6","7","8"],  "type": "string"  } 
+            , "year_Type": {  "minimum": 1800,  "maximum": 2100,  "type": "number"  } 
+            , "sub_publishableAbstract_Type": {  "type": "string"  } 
+            , "sub_author_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "sub_reviewDate_Type": {  "pattern": "^(((19|20)[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])(:([0,1][0-9]|2[0-4])-([0-5][0-9])){0,1})|(((19|20)[0-9][0-9])-([0-4][0-9]|[5][0-2]))$",  "type": "string"  } 
+            , "sub_functionalUnitDescription_Type": {  "type": "string"  } 
+            , "sub_systemBoundariesDescription_Type": {  "type": "string"  } 
+            , "sub_limitationsDescription_Type": {  "type": "string"  } 
+            , "sub_allocationsDescription_Type": {  "type": "string"  } 
+            , "sub_dataQualityDescription_Type": {  "type": "string"  } 
+            , "isStudyDataset_Type": {  "type": "boolean"  } 
+            , "format_Type": {  "type": "string"  } 
+            , "mime_Type": {  "type": "string"  } 
+            , "encoding_Type": {  "type": "string"  } 
+            , "characterSet_Type": {  "type": "string"  } 
+            , "sub_uri_Type": {  "type": "string"  } 
+            , "mimeCode_Type": {  "type": "string"  } 
+            , "formatCode_Type": {  "type": "string"  } 
+            , "encodingCode_Type": {  "type": "string"  } 
+            , "characterSetCode_Type": {  "type": "string"  } 
+            , "hashMethod_Type": {  "maxLength": 80,  "enum": [ "ADLER32","HMAC","MD2","MD4","MD5","MDC-2","PANAMA","RIPEMD-160","SHA-1","SHA-2 256","SHA-2 384","SHA-2 512","TIGER"],  "type": "string"  } 
+            , "sub_transactionReceipt_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "sub_art_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "sub_color_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "sub_added_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "sub_pattern_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "gPart_Type": {  "enum": [ "BB","BF","CO","CU","DV","EM","OC","PO","SC","SL","TB","TF"],  "type": "string"  } 
+            , "sub_mod_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "sub_fabric_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "sub_size_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "sub_qty_Type": {  "minimum": 0,  "type": "number"  } 
+            , "internallyPerformed_Type": {  "type": "boolean"  } 
+            , "fibre_Type": {  "enum": [ "AB","AC","AF","AG","AL","AR","CA","CC","CL","CO","CU","EA","EF","EL","EM","FL","GI","GL","HA","HE","HL","JU","KE","KP","LI","LY","MA","MD","ME","MG","MM","PA","PB","PC","PE","PI","PL","PM","PO","PP","PR","PU","RA","SE","SI","SN","TA","TR","TV","VI","VY","WA","WB","WC","WG","WK","WL","WM","WN","WO","WP","WS","WT","WU","WV","WY"],  "type": "string"  } 
+            , "materialSource_Type": {  "enum": [ "REU","SCL","SCL1","SCLx","VRG","VRGB","VRGN"],  "type": "string"  } 
+            , "recyclingProcessMethod_Type": {  "enum": [ "CHMD","CHMP","ENZ","MEC","THE","THMC"],  "type": "string"  } 
+            , "percSourcesRenewable_Type": {  "type": "number"  } 
+            , "validationMethod_Type": {  "enum": [ "CER","EST","EXP","LAB","LIT","MON","REV","SAM","SUP"],  "type": "string"  } 
+            , "recyclingProcessEfficiency_Type": {  "minimum": 0,  "maximum": 100,  "type": "number"  } 
+            , "processStepID_Type": {  "type": "string"  } 
+            , "manufacturingOperationCode_Type": {  "type": "string"  } 
+            , "progr_Type": {  "minimum": 1,  "type": "number"  } 
+            , "sub_auxSystemsConsumptionPerc_Type": {  "type": "number"  } 
+            , "sub_collectedFractionMassPercentage_Type": {  "type": "number"  } 
+            , "sub_fractionMassToCompostingPerc_Type": {  "type": "number"  } 
+            , "sub_fractionMassToRecyclingPerc_Type": {  "type": "number"  } 
+            , "sub_fractionMassToReusePerc_Type": {  "type": "number"  } 
+            , "socialAccountabilityEvidenceCategory_Type": {  "enum": [ "1.1","1.2","1.3","2.1","3.1","3.2","3.3","4.1","4.2","4.3","5.1","5.2","6","7","8.1","8.2","8.3","9.1","9.10","9.2","9.3","9.4","9.5","9.6","9.7","9.8","9.9"],  "type": "string"  } 
+            , "sub_evidenceValue_Type": {  "type": "string"  } 
+            , "socialAccountabilityMethod_Type": {  "type": "string"  } 
+            , "isURL_Type": {  "type": "boolean"  } 
+            , "addType_Type": {  "enum": [ "CC","CL","CO","DY","LT","MDI","MS","PKG","PL","RGB","SE"],  "type": "string"  } 
+            , "sub_drop_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "sub_artGroup_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "sub_additionalIdentifier_Type": {  "maxLength": 15,  "type": "string"  } 
+            , "logo_Type": {  "maxLength": 255,  "type": "string"  } 
+            , "sub_location_Type": {  "maxLength": 128,  "type": "string"  } 
+            , "part_Type": {  "minimum": 1,  "maximum": 100,  "type": "number"  } 
+            , "machineryName_Type": {  "maxLength": 50,  "type": "string"  } 
+            , "prodServName_Type": {  "maxLength": 100,  "type": "string"  } 
+            , "sub_declaredQty_Type": {  "minimum": 0,  "type": "number"  } 
+            , "inputMaterialCategory_Type": {  "enum": [ "AUX","PACK1","PACK2","PACK3","PROC"],  "type": "string"  } 
+            , "dyesCategory_Type": {  "enum": [ "1","10","11","12","13","14","15","17","2","3","5","6","9"],  "type": "number"  } 
+            , "CASCode_Type": {  "maxLength": 10,  "minLength": 1,  "enum": [ "01-2119433307-44-XXXX","7758-97-6"],  "type": "string"  } 
+            , "usedWaterType_Type": {  "enum": [ "DESA","GRND","NETW","RAIN","SURF","TREAT","TRUCK"],  "type": "string"  } 
+            , "indirectIncluded_Type": {  "type": "boolean"  } 
+            , "sub_energy_Type": {  "type": "number"  } 
+            , "timeDuration_Type": {  "type": "string"  } 
+            , "sub_activePower_Type": {  "type": "number"  } 
+            , "energySourceType_Type": {  "enum": [ "COG","FOSS","GEO","HYDR","NUC","OTH","PV","SOLC","UNK","WND"],  "type": "string"  } 
+            , "typeOfEnergyVector_Type": {  "enum": [ "BIOFUEL","BIOMASS","COAL","DIESEL","GAS","GASOLINE","GRID","HFO","HYDR","LFO","LPG","OTHER","SELF","STEAM","WATER"],  "type": "string"  } 
+            , "internalEnergyProduction_Type": {  "type": "boolean"  } 
+            , "isElectric_Type": {  "type": "boolean"  } 
+            , "EWCWasteCode_Type": {  "maxLength": 9,  "type": "string"  } 
+            , "sub_wasteTypeCode_Type": {  "type": "string"  } 
+            , "sub_routeLength_Type": {  "minimum": 0,  "type": "number"  } 
+            , "sub_wasteFinalTreatmentType_Type": {  "enum": [ "CHR","COM","EZR","IER","IWE","LND","MCR","OTH","RCY","REC","REU","TMR"],  "type": "string"  } 
+            , "sub_wasteWaterFinalTreatmentType_Type": {  "type": "string"  } 
+            , "wasteWaterContaminantType_Type": {  "type": "string"  } 
+            , "hazardous_Type": {  "type": "boolean"  } 
+            , "directEmissionType_Type": {  "maxLength": 40,  "type": "string"  } 
+            , "releasedOn_Type": {  "enum": [ "AIR","SOI","WAT"],  "type": "string"  } 
+            , "washingType_Type": {  "enum": [ "1","2","3","4","5","6"],  "type": "number"  } 
+            , "sub_maximumWashingTemperature_Type": {  "type": "number"  } 
+            , "sub_maximumIroningTemperature_Type": {  "type": "number"  } 
+            , "sub_allowedTumbleDrying_Type": {  "enum": [ "NOT","TDL","TDN"],  "type": "string"  } 
+            , "sub_averageWashingNumber_Type": {  "minimum": 0,  "type": "number"  } 
+            , "sub_averageProductLifetime_Type": {  "minimum": 0,  "type": "number"  } 
+            , "sub_averageReferenceProductLifeTime_Type": {  "minimum": 0,  "type": "number"  } 
+            , "referenceYear_Type": {  "type": "number"  } 
+            , "energyRecoveryEfficiency_Type": {  "type": "number"  } 
+            , "sub_variantType_Type": {  "type": "string"  } 
+            , "sub_variantCode_Type": {  "type": "string"  } 
+            , "idQualifier_Type": {  "type": "string"  } 
+            , "LRI_Type": {  "enum": [ "EN4","GLN","MD","NCA","PLA","TRI"],  "type": "string"  } 
+            , "transMode_Type": {  "enum": [ "1","10","2","3","4","5","6","8","9"],  "type": "string"  } 
+            , "sub_transMeans_Type": {  "enum": [ "AIR","SHP","TRU","VAN"],  "type": "string"  } 
+            , "transportMeansUtilisationPercentage_Type": {  "type": "number"  } 
+            , "emptyReturnForTruck_Type": {  "type": "boolean"  } 
+            , "packageText_Type": {  "maxLength": 80,  "type": "string"  } 
+            , "sub_weight_Type": {  "minimum": 0,  "type": "number"  } 
+            , "sub_wasteWaterProvenance_Type": {  "enum": [ "0.1","0.2","0.3","1","2","3","4","5","6","7","8"],  "type": "string"  } 
+            , "sharePerc_Type": {  "minimum": 0,  "maximum": 100,  "type": "number"  } 
+            , "propulsionSystemCode_Type": {  "enum": [ "ALC","BDIE","BEV","BFUE","DIE","FCEV","GAS","GPL","HEV","HUM","HYB","MHY","NUC","PET","PHEV","STEAM","WIND"],  "type": "string"  } 
+            
+         },  "type":
+        "object", "properties": { "TRCTRNReport":
+            {"$ref":"#/definitions/TRCTRNReport_Type"}}, "required": [
+            "TRCTRNReport" ] } 
