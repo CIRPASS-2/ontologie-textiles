@@ -6,7 +6,9 @@ prefix skos: <http://www.w3.org/2004/02/skos/core#>
 
 construct {
   $_thes_iri skos:member ?item.
-  ?item a skos:Concept; skos:notation ?code; skos:prefLabel ?name; skos:definition ?descr.
+  ?item a skos:Concept; 
+    skos:inScheme <>; # if we decide to use separate ConceptSchemes, change this
+    skos:notation ?code; skos:prefLabel ?name; skos:definition ?descr.
 }
 where { service <x-sparql-anything:>
   { fx:properties fx:location $_location; fx:csv.delimiter "\t"; fx:csv.headers true.
