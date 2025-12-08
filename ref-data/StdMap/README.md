@@ -47,4 +47,5 @@ For now (2025-10-28), we are not using this endpoint.
 
 ## Thesauri and concepts extraction
 
-TODO document this
+run `get-thesauri-and-concepts.R`: this will create two files that are further
+manually processed in Google docs.
