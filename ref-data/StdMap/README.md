@@ -44,3 +44,7 @@ We do some data-cleaning:
 ### Endpoint 2
 
 For now (2025-10-28), we are not using this endpoint.
+
+## Thesauri and concepts extraction
+
+TODO document this
