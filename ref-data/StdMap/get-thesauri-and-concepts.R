@@ -16,7 +16,7 @@ urlfy = function(x) {
   x %>% str_to_sentence() %>% str_replace_all("&", " and ") %>% str_replace_all("[^[:alnum:]]+", "_") %>% str_replace_all("^_|_$", "")}
 
 # to process sectors and value chain
-simple_process = function (prefix = "thes/Value_Chain/", path = "valueChain") {
+simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain") {
   aurl = paste0(prefix, local({
     things = unlist(response[[path]])
     things = things[!is.na(things) & things != ""]
@@ -86,7 +86,7 @@ concepts_Sector = simple_process(prefix = "thesesauri/Sector/", path = "sectors"
   
 # Value chain
 thes_Value_Chain = data.frame(thes_url = "thesauri/Value_Chain", name = "Value Chain", parent = "", src = "data/thesauri/StdMap")
-concepts_Value_Chain = simple_process(prefix = "thes/Value_Chain/", path = "valueChain")
+concepts_Value_Chain = simple_process(prefix = "thesauri/Value_Chain/", path = "valueChain")
 
 # Output  
 write.csv(rbind(
