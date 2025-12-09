@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xsl/codelist.xsl'?>
+
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+xmlns:ns3="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:eds="urn:moda-ml:repository:schema:eBIZDocumentationSpecification" 
+ns3:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/genericode/xsd/genericode.xsd">
+
+    <Annotation>
+        <Description>
+            <eds:Generalities xml:lang="en">general type of yarn</eds:Generalities>
+            <eds:Generalities xml:lang="it">tipologia generale di un filato</eds:Generalities>
+        </Description>
+    </Annotation>
+
+    <Identification>
+        <ShortName>T54</ShortName>
+        <LongName xml:lang="it">tipo di filato</LongName>
+        <LongName xml:lang="en">kind of yarn</LongName>
+        <Version>2018-1</Version>
+        <CanonicalUri>urn:x-eBIZ:specification:documents:decoding-tables:xml:T54</CanonicalUri>
+        <CanonicalVersionUri>urn:x-eBIZ:specification:documents:decoding-tables:xml:T54:2018-1</CanonicalVersionUri>
+        <LocationUri>http://www.ebiz.enea.it/moda-ml/repository/codelist/v2018-1/gc_T54.xml</LocationUri>
+        <Agency>
+        <LongName>eBIZ</LongName>
+        </Agency>
+    </Identification>
+
+    <ColumnSet>
+        <Column Id="code" Use="required">
+            <ShortName>Code</ShortName>
+            <Data Type="string"/>
+        </Column>
+        <Column Id="EN" Use="optional">
+            <ShortName>EN</ShortName>
+            <Data Lang="en" Type="string"/>
+        </Column>
+        <Column Id="IT" Use="optional">
+            <ShortName>IT</ShortName>
+            <Data Lang="it" Type="string"/>
+        </Column>
+        <Column Id="date_of_insertion" Use="optional">
+            <ShortName>date_of_insertion</ShortName>
+            <Data Type="string"/>
+        </Column>
+        <Column Id="adoption_note" Use="optional">
+            <ShortName>adoption_note</ShortName>
+            <Data Type="string"/>
+        </Column>
+        <Column Id="Description" Use="optional">
+            <ShortName>Description</ShortName>
+            <Data Lang="en" Type="string"/>
+        </Column>
+        <Column Id="Descrizione" Use="optional">
+            <ShortName>Descrizione</ShortName>
+            <Data Lang="it" Type="string"/>
+        </Column>
+        <Key Id="CodeKey">
+            <ShortName>CodeKey</ShortName>
+            <ColumnRef Ref="code"/>
+        </Key>
+    </ColumnSet>
+
+    <SimpleCodeList>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>01</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Spun yarn (Staple yarn)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Filato da fibre discontinue]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue></SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Spun yarn (Staple yarn)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Filato da fibre discontinue]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>02</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Worsted]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Pettinato laniero]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue></SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Worsted]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Pettinato laniero]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>03</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Woollen]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Cardato laniero]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue></SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Woollen]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Cardato laniero]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>04</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Carded]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Cardato cotoniero]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Carded]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Cardato cotoniero]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>05</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Combed]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Pettinato cotoniero]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Combed]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Pettinato cotoniero]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>06</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Flax-spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Filato liniero o canapiero]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Flax-spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Filato liniero o canapiero]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>07</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Rotor spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Open-end da turbina]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Rotor spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Open-end da turbina]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>08</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Air jet spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Open-end da getto d'aria]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Air jet spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Open-end da getto d'aria]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>09</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Fancy yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Filato fantasia]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Fancy yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Filato fantasia]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>10</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Filament yarn - Flat]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Fili da filamenti continui, fili continui - Lisci]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Filament yarn - Flat]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Fili da filamenti continui, fili continui - Lisci]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>11</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Zero twist]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Paralleli]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Zero twist]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Paralleli]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>12</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Twisted]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Torsionati]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Twisted]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Torsionati]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>13</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Crepe]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Crespi]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Crepe]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Crespi]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>14</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Textured yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Fili testurizzati]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Textured yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Fili testurizzati]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>15</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[False Twist, FT (also stretch)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Falsa torsione, FT]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[False Twist, FT (also stretch)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Falsa torsione, FT]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>16</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[False Twist, Fixed, FTF (also bulked)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Falsa torsione fissata, FTF]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[False Twist, Fixed, FTF (also bulked)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Falsa torsione fissata, FTF]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>17</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Air textured]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Testurizzati a getto d'aria (anche talsanizzati)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Air textured]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Testurizzati a getto d'aria (anche talsanizzati)]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>18</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Elastic yarn (also Elastomeric yarn)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Fili elastici (fili elastomerici)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Elastic yarn (also Elastomeric yarn)]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Fili elastici (fili elastomerici)]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>19</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Single covered yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Filo a copertura (spiralatura) singola]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Single covered yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Filo a copertura (spiralatura) singola]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>20</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Double covered yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Filo a copertura (spiralatura) doppia]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Double covered yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Filo a copertura (spiralatura) doppia]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>21</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Air covered  yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Filo ricoperto ad aria o interlacciato]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Air covered  yarn]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Filo ricoperto ad aria o interlacciato]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>22</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[Core-spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[Core-spun - filato ad anima da fibre discontinue]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/07/2013</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[Core-spun]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[Core-spun - filato ad anima da fibre discontinue]]></SimpleValue>
+            </Value>
+        </Row>
+    </SimpleCodeList>
+
+</gc:CodeList>

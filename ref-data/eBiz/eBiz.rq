@@ -5,8 +5,7 @@ prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 
 construct {
-  $_thes_iri skos:member ?item.
-  ?item a skos:Concept; skos:notation ?code; skos:prefLabel ?label.
+  ?item a skos:Concept; skos:notation ?code; skos:prefLabel ?label; skos:inScheme $_thes_iri.
 }
 where { service <x-sparql-anything:>
   { fx:properties fx:location $_location.

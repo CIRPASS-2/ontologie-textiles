@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xsl/codelist.xsl'?>
+
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+xmlns:ns3="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:eds="urn:moda-ml:repository:schema:eBIZDocumentationSpecification" 
+ns3:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/genericode/xsd/genericode.xsd">
+
+    <Annotation>
+        <Description>
+            <eds:Generalities xml:lang="en">code specifying the type of component or part of a garment (sleeve, neck, . . .)</eds:Generalities>
+            <eds:Generalities xml:lang="it">codice che specifica il tipo di componente o parte di un articolo di maglieria/confezione (manica, collo, . . .)</eds:Generalities>
+        </Description>
+    </Annotation>
+
+    <Identification>
+        <ShortName>T48</ShortName>
+        <LongName xml:lang="it">tipo di parte del capo confezionato</LongName>
+        <LongName xml:lang="en">garment part type</LongName>
+        <Version>2018-1</Version>
+        <CanonicalUri>urn:x-eBIZ:specification:documents:decoding-tables:xml:T48</CanonicalUri>
+        <CanonicalVersionUri>urn:x-eBIZ:specification:documents:decoding-tables:xml:T48:2018-1</CanonicalVersionUri>
+        <LocationUri>http://www.ebiz.enea.it/moda-ml/repository/codelist/v2018-1/gc_T48.xml</LocationUri>
+        <Agency>
+        <LongName>eBIZ</LongName>
+        </Agency>
+    </Identification>
+
+    <ColumnSet>
+        <Column Id="code" Use="required">
+            <ShortName>Code</ShortName>
+            <Data Type="string"/>
+        </Column>
+        <Column Id="EN" Use="optional">
+            <ShortName>EN</ShortName>
+            <Data Lang="en" Type="string"/>
+        </Column>
+        <Column Id="IT" Use="optional">
+            <ShortName>IT</ShortName>
+            <Data Lang="it" Type="string"/>
+        </Column>
+        <Column Id="date_of_insertion" Use="optional">
+            <ShortName>date_of_insertion</ShortName>
+            <Data Type="string"/>
+        </Column>
+        <Column Id="adoption_note" Use="optional">
+            <ShortName>adoption_note</ShortName>
+            <Data Type="string"/>
+        </Column>
+        <Column Id="Description" Use="optional">
+            <ShortName>Description</ShortName>
+            <Data Lang="en" Type="string"/>
+        </Column>
+        <Column Id="Descrizione" Use="optional">
+            <ShortName>Descrizione</ShortName>
+            <Data Lang="it" Type="string"/>
+        </Column>
+        <Key Id="CodeKey">
+            <ShortName>CodeKey</ShortName>
+            <ColumnRef Ref="code"/>
+        </Key>
+    </ColumnSet>
+
+    <SimpleCodeList>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BB</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[bottom back]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[bottom retro]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[bottom back]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[bottom retro]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>BF</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[bottom fore/front]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[bottom davanti]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[bottom fore/front]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[bottom davanti]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CO</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[collar]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[collare]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[collar]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[collare]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>CU</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[cuff]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[polsino]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[cuff]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[polsino]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>DV</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[fore]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[davanti]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue></SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[fore]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[davanti]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>EM</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[embroidery]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[ricamo]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[embroidery]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[ricamo]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>OC</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[other component]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[altro componente]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[other component]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[altro componente]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>PO</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[pocket]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[tasca]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[pocket]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[tasca]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SC</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[back]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[schiena]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue></SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[back]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[schiena]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>SL</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[sleeve]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[manica]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[sleeve]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[manica]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TB</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[top back]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[top retro]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[top back]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[top retro]]></SimpleValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="code">
+                <SimpleValue>TF</SimpleValue>
+            </Value>
+            <Value ColumnRef="EN">
+                <SimpleValue><![CDATA[top fore/front]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="IT">
+                <SimpleValue><![CDATA[top  davanti]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="date_of_insertion">
+                <SimpleValue>01/08/2018</SimpleValue>
+            </Value>
+            <Value ColumnRef="adoption_note">
+                <SimpleValue><![CDATA[]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Description">
+                <SimpleValue><![CDATA[top fore/front]]></SimpleValue>
+            </Value>
+            <Value ColumnRef="Descrizione">
+                <SimpleValue><![CDATA[top  davanti]]></SimpleValue>
+            </Value>
+        </Row>
+    </SimpleCodeList>
+
+</gc:CodeList>

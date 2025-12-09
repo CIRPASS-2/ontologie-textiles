@@ -1,0 +1,2 @@
+- Master version: https://textileexchange.org/knowledge-center/documents/materials-processes-products-classification/ (PDF)
+- Process and Product Category codes scraped from https://www.scsglobalservices.com/application/textile-exchange
