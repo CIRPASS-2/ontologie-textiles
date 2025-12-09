@@ -73,5 +73,5 @@ small_response <- typed_response %>%
 
 
 
-write.csv(small_response, file = "StdMap-Standard.csv", row.names = FALSE, na = "")
-write.csv(typed_response, file = "StdMap-Standard-Extended.csv", row.names = FALSE,  na = "")
+# write.csv(small_response, file = "StdMap-Standard.csv", row.names = FALSE, na = "") # why go small if we can go full
+write.csv(typed_response, file = "StdMap-Standard.csv", row.names = FALSE,  na = "")
