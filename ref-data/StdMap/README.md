@@ -49,3 +49,11 @@ For now (2025-10-28), we are not using this endpoint.
 
 run `get-thesauri-and-concepts.R`: this will create two files that are further
 manually processed in Google docs.
+
+## Exploratory Data Analysis
+
+```
+csvtk cut -f origin      StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq>country-origin.txt
+csvtk cut -f destination StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq>country-destination.txt
+csvtk cut -f mandate     StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq -c|sort -rn>mandate.txt
+```
