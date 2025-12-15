@@ -1,0 +1,14 @@
+base          <https://w3id.org/eudpp/>
+prefix eudpp: <https://w3id.org/eudpp/>
+prefix dct:   <http://purl.org/dc/terms/>
+prefix xsd:   <http://www.w3.org/2001/XMLSchema#>
+construct {
+  ?standard_sustainability_id_URL a eudpp:SustainabilityStandard;
+    dct:title ?standard .
+    }
+where {
+
+    bind(iri(concat("standard/sustainability/",?id)) as ?standard_sustainability_id_URL)
+}
+
+

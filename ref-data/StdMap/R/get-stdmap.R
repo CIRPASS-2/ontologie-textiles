@@ -3,6 +3,9 @@ library(jsonlite)
 library(dplyr)
 library(purrr)
 library(stringr)
+library(stringdist)
+
+country_codes = read.csv("../manual/flat-ui__data-Mon Dec 15 2025.csv")
 
 response = fromJSON(content(GET("https://api.production.standardsmap.sustainable-trade.org/api/standards?client=NO%20AFFILIATION"), "text", encoding = "UTF-8"))
 write_json(response, path = "StdMap-Extraction.JSON", pretty = TRUE, auto_unbox = TRUE)
@@ -14,6 +17,17 @@ typed_response = response %>% mutate(
   weblink = str_extract(description, "https?://\\S+"),
   client = map_chr(client, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   origin = map_chr(origin, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  origin_country_code = map_chr(origin, function(x) { 
+    # try exact match first
+    exact_match = which(x == country_codes$CountryName)
+    if (exact_match > 0)
+      country_codes$CountryCode[exact_match]
+    else {
+      # now try fuzzy match
+      approx_match = stringdist::amatch(x, country_codes$CountryName, maxDist=Inf)
+      country_codes$CountryCode[approx_match]
+    }})
+  #origin_country_code = map_chr(origin, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   destination = map_chr(destination, ~ paste(na.omit(.x), collapse= ";")),
   yearOfEstablishment = as.integer(str_extract(yearOfEstablishment, "(19|20)\\d{2}")),
   det_products = map_chr(det_products, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
