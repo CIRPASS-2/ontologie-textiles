@@ -1,4 +1,11 @@
-# StandardsMap Extraction
+# Standards Map Extraction
+
+Standards Map is 
+
+> The world’s largest database for sustainability standards
+
+In this directory we have put various tools to extract them in a structured
+format.
 
 There are two undocumented public API endpoints:
 
@@ -10,7 +17,7 @@ standard ID, for example 496 or 100000. The first one returns info on all
 standards, the second one returns detailed information about a particular
 standard.
 
-## What we do
+## Further info on endpoints
 
 ### Endpoint 1
 
@@ -19,20 +26,12 @@ to do so. To run the R script, besides the R environment, you need to install
 some libraries, which you can do by running `setup.R`. After the execution,
 the following files are generated:
 
-  - `StdMap-Extraction.JSON` is the JSON that is returned from the endpoint;
+  - `a.JSON` is the JSON that is returned from the endpoint;
   we pretty-print it and "unbox" it, i.e. vectors of length 1 are represented
   as JSON scalars.
-  - `StdMap-Standard.csv` is a summary of the standards in tabular format; the 
-  fields that we keep are
-    - `url`
-    - `standard`
-    - `sectors`
-    - `products`
-    - `weblink`
-    - `descr`
-  - `StdMap-Standard-Extended.csv` has the same rows, but more elements from
-  the JSON are converted into tabular format (all except `themeScores`, some
-  elements are renamed)
+  - `a.csv` is a summary of the standards in tabular format; the 
+  fields that we keep areall except `themeScores`, some
+  elements are renamed 
   
 We do some data-cleaning:
 
@@ -40,20 +39,26 @@ We do some data-cleaning:
   - extract URLs 
   - format dates
   - etc
-  
 ### Endpoint 2
 
 For now (2025-10-28), we are not using this endpoint.
 
-## Thesauri and concepts extraction
+## Files and directory structure
 
-run `get-thesauri-and-concepts.R`: this will create two files that are further
-manually processed in Google docs.
-
-## Exploratory Data Analysis
+### `manual`
 
 ```
 csvtk cut -f origin      StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq>country-origin.txt
 csvtk cut -f destination StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq>country-destination.txt
 csvtk cut -f mandate     StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq -c|sort -rn>mandate.txt
 ```
+
+### thes
+
+Thesauri. Files are created here with the R scripts in the R directory and then
+further manually processed in Google docs: run `get-thesauri-and-concepts.R`:
+this will create two files that are further manually processed in Google docs.
+
+### root
+
+The main action is here.
