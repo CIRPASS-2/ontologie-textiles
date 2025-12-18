@@ -16,7 +16,7 @@ urlfy = function(x) {
   x %>% str_to_sentence() %>% str_replace_all("&", " and ") %>% str_replace_all("[^[:alnum:]]+", "_") %>% str_replace_all("^_|_$", "")}
 
 # to process sectors and value chain
-simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain") {
+simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain", pos = 3) {
   aurl = paste0(prefix, local({
     things = unlist(response[[path]])
     things = things[!is.na(things) & things != ""]
@@ -26,7 +26,7 @@ simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain"
   data.frame(
     url = aurl,
     name = sapply(strsplit(aurl, "/"), function (x) {
-      str_replace_all(x[3], "_", " ")
+      str_replace_all(x[pos], "_", " ")
     }),
     parent = str_remove(prefix, "/$"),
     src = "data/thesauri/StdMap"
@@ -88,6 +88,10 @@ concepts_Sector = simple_process(prefix = "thesesauri/Sector/", path = "sectors"
 thes_Value_Chain = data.frame(thes_url = "thesauri/Value_Chain", name = "Value Chain", parent = "", src = "data/thesauri/StdMap")
 concepts_Value_Chain = simple_process(prefix = "thesauri/Value_Chain/", path = "valueChain")
 
+# Products
+concepts_products = rbind(simple_process(prefix = "thesauri/product/products/", path = "products", pos = 4),
+                          simple_process(prefix = "thesauri/product/products/", path = "det_products", pos = 4))
+
 # Output  
 write.csv(rbind(
             thes_Sector,
@@ -101,7 +105,8 @@ write.csv(rbind(
 write.csv(rbind(
   concepts_Sector,
   concepts_Value_Chain,
-  concepts_Sustainability), 
+  concepts_Sustainability,
+  concepts_products), 
   file = "StdMap-Concepts.csv",
   row.names = FALSE,
   na = "")
