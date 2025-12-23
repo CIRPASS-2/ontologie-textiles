@@ -1,0 +1,51 @@
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+
+CONSTRUCT {
+  ?parentIRI rdf:type ?parentType .
+  ?childIRI rdf:type ?childType .
+
+  ?childIRI ?p1 ?parentIRI .
+  ?parentIRI ?p2 ?childIRI .
+
+  ?nameIRI ?nameProp ?nameLiteral .
+  ?nameIRI dcterms:bibliographicCitation ?sourceVocab .
+}
+WHERE {
+  SERVICE <x-sparql-anything:> {
+    fx:properties
+      fx:location "paths.csv";
+      fx:csv.headers true .
+    ?rowA xyz:thes_url ?pathStrA .
+  }
+  SERVICE <x-sparql-anything:> {
+    fx:properties
+      fx:location "data.csv";
+      fx:csv.headers true .
+    ?rowB xyz:thes_url ?pathStrB .
+    ?rowB xyz:src ?sourceVocab .
+    ?rowB xyz:name ?name .
+  }
+
+  BIND((STRLEN(?pathStrA) - STRLEN(REPLACE(?pathStrA, "/", ""))) AS ?slashCount)
+
+  FILTER(?slashCount > 0)
+
+  BIND(IRI(CONCAT("https://w3id.org/eudpp/", REPLACE(?pathStrA, "/[^/]*$", ""))) AS ?parentIRI)
+  BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?pathStrA)) AS ?childIRI)
+
+  BIND(IF(?slashCount = 1, skos:ConceptScheme, skos:Concept) AS ?parentType)
+  BIND(IF(?slashCount > 1, skos:Concept, skos:Concept) AS ?childType)
+  
+  BIND(IF(?slashCount = 1, skos:topConceptOf, skos:broader) AS ?p1)
+  BIND(IF(?slashCount = 1, skos:hasTopConcept, skos:narrower) AS ?p2)
+
+  BIND((STRLEN(?pathStrB) - STRLEN(REPLACE(?pathStrB, "/", ""))) AS ?isCS)
+  BIND(IF(?isCS > 0, skos:prefLabel, dcterms:title) AS ?nameProp)
+  BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?pathStrB)) AS ?nameIRI)
+  BIND(STRLANG(?name, "en") AS ?nameLiteral)
+}
