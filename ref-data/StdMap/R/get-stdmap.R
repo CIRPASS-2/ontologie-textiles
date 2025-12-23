@@ -26,6 +26,9 @@ country_code_is_exact_match = function(x) {
   return (ccm)
 }
 
+urlfy = function(x) {
+  x %>% str_to_sentence() %>% str_replace_all("&", " and ") %>% str_replace_all("[^[:alnum:]]+", "_") %>% str_replace_all("^_|_$", "")}
+
 # TEST - country mapping
 
 test_countries = unique(c(unlist(response$origin), unlist(response$destination)))
@@ -50,8 +53,12 @@ typed_response = response %>% mutate(
   destination = map_chr(destination, ~ paste(na.omit(.x), collapse= ";")),
   
   yearOfEstablishment = as.integer(str_extract(yearOfEstablishment, "(19|20)\\d{2}")),
+  det_products_urlfied =  map_chr(det_products, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   det_products = map_chr(det_products, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
+  products_urlfied = map_chr(products, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   products = map_chr(products, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
   sectors = map_chr(sectors, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   isInternational = map_lgl(isInternational, ~ na.omit(.x) == "Yes"),
   mandate = map_chr(mandate, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),

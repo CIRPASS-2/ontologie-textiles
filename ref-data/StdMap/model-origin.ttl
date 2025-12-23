@@ -1,0 +1,10 @@
+<standard/sustainability/(id)> a eudpp:SustainabilityStandard;
+  eudpp:appliesToCountryOfOriginStr "SPLIT_SEMI(origin)".
+###
+<standard/sustainability/(id)> a eudpp:SustainabilityStandard;  
+  eudpp:appliesToCountryOfOriginCode "SPLIT_SEMI(origin_country_code)".
+###
+<standard/sustainability/(id)> a eudpp:SustainabilityStandard;  
+  eudpp:appliesToCountryOfOrigin <country/SPLIT_SEMI(origin_country_code)> .
+  
+  
