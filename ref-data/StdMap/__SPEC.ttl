@@ -3,9 +3,9 @@
   # (logo) # none has it
   # (lastUpdated) # unix timestamp
   # (client) # not interesting
-  eudpp:countryOfOrigin "SPLIT_SEMI(origin)"; # TODO: lookup by name to link to UNLOCODE. Check country-origin.txt is covered by UNLOCODE
+  eudpp:appliesToCountryOfOrigin "SPLIT_SEMI(origin)"; # TODO: lookup by name to link to UNLOCODE. Check country-origin.txt is covered by UNLOCODE
   # TODO: SPLIT_SEMI should allow optional space
-  eudpp:countryOfDestination "SPLIT_SEMI(destination)";
+  eudpp:appliesToCountryOfDestination "SPLIT_SEMI(destination)";
   dct:issued "(yearOfEstablishment)"^^xsd:gYear;
   # (det_products) # TODO: seems to be a superset (child expansion) of below
   eudpp:product "SPLIT_SEMI(products)"; # TODO: turn to taxonomy

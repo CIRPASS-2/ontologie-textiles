@@ -1,0 +1,89 @@
+@base <https://w3id.org/eudpp/> .
+
+@prefix eudpp: <https://w3id.org/eudpp/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<> rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/ns/prov-o#> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core#> ; 
+
+  owl:versionInfo "0.1" ; 
+  rdfs:comment "You are free to create derivative work as long as you cite the original authors." ; 
+  dct:title "The EU Digital Product Passport Ontology" ; 
+  dct:subject "Sustainability", "Circular Economy" ;
+  rdfs:label "EUDPP Ontology" ; 
+  dct:creator <https://orcid.org/0000-0003-3340-5963> 
+            , <https://orcid.org/0000-0002-3244-5341>  
+            , <https://orcid.org/0000-0001-7508-7428> ; # "Viktor Senderov", "Robert David", "Vladimir Alexiev"
+  dct:license <https://creativecommons.org/licenses/by/4.0/> .
+  #owl:imports XXX .
+
+# --- Country ---
+eudpp:Country rdf:type owl:Class ;
+  rdfs:label "Country"@en ;
+  rdfs:comment "A nation state recognized by the EU Digital Product Passport system."@en ;
+  rdfs:subClassOf <http://schema.org/Country> , 
+                  <http://dbpedia.org/ontology/Country> ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+# --- Destination Properties ---
+eudpp:appliesToCountryOfDestination rdf:type owl:ObjectProperty ;
+  rdfs:label "applies to country of destination"@en ;
+  rdfs:comment "Links a standard, a product passport, or something else to the destination country resource in which the product is sold."@en ;
+  rdfs:range eudpp:Country ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+eudpp:appliesToCountryOfDestinationCode rdf:type owl:DatatypeProperty ;
+  rdfs:label "applies to country of destination code"@en ;
+  rdfs:comment "The ISO 3166-1 alpha-2 code of the destination country."@en ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+eudpp:appliesToCountryOfDestinationStr rdf:type owl:DatatypeProperty ;
+  rdfs:label "applies to country of destination name"@en ;
+  rdfs:comment "The full English name of the destination country."@en ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+# --- Origin Properties ---
+eudpp:appliesToCountryOfOrigin rdf:type owl:ObjectProperty ;
+  rdfs:label "applies to country of origin"@en ;
+  rdfs:comment "Links a standard, a product passport, or something else to the country of origin of the product."@en ;
+  rdfs:range eudpp:Country ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+eudpp:appliesToCountryOfOriginCode rdf:type owl:DatatypeProperty ;
+  rdfs:label "applies to country of origin code"@en ;
+  rdfs:comment "The ISO 3166-1 alpha-2 code of the country of origin."@en ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+eudpp:appliesToCountryOfOriginStr rdf:type owl:DatatypeProperty ;
+  rdfs:label "applies to country of origin name"@en ;
+  rdfs:comment "The full English name of the country of origin."@en ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+# --- Product ---
+eudpp:Product rdf:type owl:Class ;
+  rdfs:label "Product"@en ;
+  rdfs:comment "A type of product or commodity defined within the EUDPP thesaurus."@en ;
+  rdfs:subClassOf skos:Concept , <http://schema.org/Product> ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+# --- Product Properties ---
+eudpp:product rdf:type owl:ObjectProperty ;
+  rdfs:label "product"@en ;
+  rdfs:comment "Links the passport or standard to a specific product concept from the EUDPP thesaurus."@en ;
+  rdfs:range eudpp:Product ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+eudpp:productStr rdf:type owl:DatatypeProperty ;
+  rdfs:label "product name"@en ;
+  rdfs:comment "The literal string representation of the product name."@en ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .

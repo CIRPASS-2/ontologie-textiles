@@ -51,6 +51,8 @@ test_countries = unique(c(unlist(response$origin), unlist(response$destination))
 # country_code(test_countries[251]) => CI
 # data.frame(test_country = test_countries[!country_code_is_exact_match(test_countries)], cc = country_code(test_countries[!country_code_is_exact_match(test_countries)]))
 
+# DONE(vsenderov, 2025-01-06): na.omit here is potentially problematic
+# better to rewrite stuff as isInternational = map_lgl(isInternational, ~ .x %in% "Yes")
 typed_response = response %>% mutate(
   id = as.character(id),
   url = paste0("https://www.standardsmap.org/en/factsheet/", as.character(id)),
@@ -74,8 +76,15 @@ typed_response = response %>% mutate(
   products_urlfied = map_chr(products, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   products = map_chr(products, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   
+  sectors_urlfied = map_chr(sectors, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   sectors = map_chr(sectors, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
-  isInternational = map_lgl(isInternational, ~ na.omit(.x) == "Yes"),
+  
+  isInternational = map_lgl(isInternational, ~ .x %in% "Yes"),
+  isInternationalStandard = map_lgl(typology, ~ .x %in% "isInternationalStandard"),
+  isInternational = as.integer(isInternational | isInternationalStandard),
+  isPrivate = as.integer(map_lgl(typology, ~ .x %in% "isPrivateStandard")),
+  isPublic = as.integer(map_lgl(typology, ~ .x %in% "isPublicStandard")),
+  
   mandate = map_chr(mandate, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   valueChain = map_chr(valueChain, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   nonConversion = map_chr(nonConversion, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
