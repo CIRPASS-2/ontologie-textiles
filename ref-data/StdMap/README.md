@@ -1,6 +1,6 @@
-# Standards Map Extraction
+# Standards Map RDFization
 
-Standards Map is 
+Standards Map is
 
 > The world’s largest database for sustainability standards
 
@@ -9,56 +9,29 @@ format.
 
 There are two undocumented public API endpoints:
 
-  1. https://api.production.standardsmap.sustainable-trade.org/api/standards?client=NO%20AFFILIATION
-  2. https://api.production.standardsmap.sustainable-trade.org/api/standards/<ID>/all?preview=false
+  1.
+  https://api.production.standardsmap.sustainable-trade.org/api/standards?client=NO%20AFFILIATION
+  2.
+  https://api.production.standardsmap.sustainable-trade.org/api/standards/<ID>/all?preview=false
 
 The first one has no arguments. In the second <ID> has to be replaced with
 standard ID, for example 496 or 100000. The first one returns info on all
 standards, the second one returns detailed information about a particular
 standard.
 
-## Further info on endpoints
+## Transformation pipeline
 
-### Endpoint 1
+![alt text](pipeline.png)
 
-We pull and clean the info from endpoint 1. We use the R script `get-stdmap.R`
-to do so. To run the R script, besides the R environment, you need to install
-some libraries, which you can do by running `setup.R`. After the execution,
-the following files are generated:
+We use R code to scrape JSON as `data/stdmap-uncorrected.JSON` from the API
+(stage 1).
 
-  - `a.JSON` is the JSON that is returned from the endpoint;
-  we pretty-print it and "unbox" it, i.e. vectors of length 1 are represented
-  as JSON scalars.
-  - `a.csv` is a summary of the standards in tabular format; the 
-  fields that we keep areall except `themeScores`, some
-  elements are renamed 
-  
-We do some data-cleaning:
+Then we do manual edits on the JSON resulting in `data/stdmap.csv`
+(spell-checking).
 
-  - remove `\n`
-  - extract URLs 
-  - format dates
-  - etc
-### Endpoint 2
+Then we use R code for create a `data/stdmap.csv` (stage 2a) that we then
+process with the `rdf2sparql` tools into RDF. This stage contains automatic
+filtering and data-cleaning.
 
-For now (2025-10-28), we are not using this endpoint.
-
-## Files and directory structure
-
-### `manual`
-
-```
-csvtk cut -f origin      StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq>country-origin.txt
-csvtk cut -f destination StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq>country-destination.txt
-csvtk cut -f mandate     StdMap-Standard.csv|perl -pe 's{;}{\n}g'|sort|uniq -c|sort -rn>mandate.txt
-```
-
-### thes
-
-Thesauri. Files are created here with the R scripts in the R directory and then
-further manually processed in Google docs: run `get-thesauri-and-concepts.R`:
-this will create two files that are further manually processed in Google docs.
-
-### root
-
-The main action is here.
+Then we use R code to create `data/thesauri.csv` and `data/concepts.csv` (stage 2b) that go
+into the Google Doc for further processing.

@@ -1,15 +1,9 @@
-library(httr)
-library(jsonlite)
-library(dplyr)
-library(purrr)
-library(stringr)
-library(stringdist)
+source("setup.R")
 
-response = fromJSON(content(GET("https://api.production.standardsmap.sustainable-trade.org/api/standards?client=NO%20AFFILIATION"), "text", encoding = "UTF-8"))
-#write_json(response, path = "stdmap.JSON", pretty = TRUE, auto_unbox = TRUE)
+response = read_json("../data/stdmap.json", simplifyVector = TRUE)
 
 country_code = function(x) { 
-  country_codes = read.csv("../manual/flat-ui__data-Mon Dec 15 2025.csv")
+  country_codes = read.csv("../data/cc-cname-mapping-2025-12-15.csv")
   cc = map_chr(x, function(y) {
     if (is.na(y) || y == "") {
       return(NA_character_)
@@ -20,21 +14,42 @@ country_code = function(x) {
   return (cc)
 }
 
+# (require '[clojure.data.csv :as csv]
+#          '[clojure.java.io :as io]
+#   '[clj-fuzzy.metrics :as metrics]) ; Jaro-Winkler implementation
+# 
+# (defn country-code [x]
+#   (let [path "../manual/flat-ui__data-Mon Dec 15 2025.csv"
+#         ;; Load CSV and transform into a map of {:name "CountryName", :code "CountryCode"}
+#         country-codes (with-open [reader (io/reader path)]
+#                         (doall
+#                          (map (fn [[name code]] {:name name :code code})
+#                               (rest (csv/read-csv reader)))))]
+#     
+#     ;; Map over the input sequence 'x'
+#     (map (fn [y]
+#            (if (or (nil? y) (= y ""))
+#              nil ; Equivalent to NA_character_
+#              (let [;; Find the best match based on Jaro-Winkler distance
+#                    best-match (apply max-key 
+#                                      #(metrics/jaro-winkler (:name %) y) 
+#                                      country-codes)]
+#                (:code best-match))))
+#          x)))
+
 country_code_is_exact_match = function(x) {
-  country_codes = read.csv("../manual/flat-ui__data-Mon Dec 15 2025.csv")
+  country_codes = read.csv("../data/cc-cname-mapping-2025-12-15.csv")
   ccm = map_lgl(x, function(y) y %in% country_codes$CountryName)
   return (ccm)
 }
 
-urlfy = function(x) {
-  x %>% str_to_sentence() %>% str_replace_all("&", " and ") %>% str_replace_all("[^[:alnum:]]+", "_") %>% str_replace_all("^_|_$", "")}
 
 # TEST - country mapping
-
 test_countries = unique(c(unlist(response$origin), unlist(response$destination)))
-country_codes = read.csv("../manual/flat-ui__data-Mon Dec 15 2025.csv")
-tf = data.frame(test_country = test_countries[!country_code_is_exact_match(test_countries)], cc = country_code(test_countries[!country_code_is_exact_match(test_countries)]))
-write.csv(tf, file = "../manual/countries-test.csv", row.names = FALSE,  na = "")
+# country_code(test_countries[1]) => ES
+# country_code(test_countries[189]) => MK
+# country_code(test_countries[251]) => CI
+# data.frame(test_country = test_countries[!country_code_is_exact_match(test_countries)], cc = country_code(test_countries[!country_code_is_exact_match(test_countries)]))
 
 typed_response = response %>% mutate(
   id = as.character(id),
@@ -109,10 +124,8 @@ typed_response = response %>% mutate(
   descr = description
 )
 
-small_response <- typed_response %>%
-  select(url, standard, sectors, products, weblink, weblinkExtra, descr)
-
-
-
+#small_response <- typed_response %>%
+#  select(url, standard, sectors, products, weblink, weblinkExtra, descr)
 # write.csv(small_response, file = "StdMap-Standard.csv", row.names = FALSE, na = "") # why go small if we can go full
-write.csv(typed_response, file = "../stdmap.csv", row.names = FALSE,  na = "")
+
+write.csv(typed_response, file = "../data/stdmap.csv", row.names = FALSE,  na = "")

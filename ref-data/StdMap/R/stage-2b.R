@@ -2,21 +2,10 @@
 #' https://graphwise.atlassian.net/jira/software/c/projects/GS1/boards/3477?selectedIssue=GS1-3
 #' https://docs.google.com/spreadsheets/d/1kC1DnHEIsKaX39I31gkQyCJ4FqHbn9lDuZC3NEIP0mE/edit?gid=0#gid=0
 
-library(httr)
-library(jsonlite)
-library(dplyr)
-library(purrr)
-library(stringr)
-
-# str_to_title does Ada Case but we can use str_to_sentence For sentence case
-# we also 
-#   - fix case
-#   - replace & with a space
-urlfy = function(x) {
-  x %>% str_to_sentence() %>% str_replace_all("&", " and ") %>% str_replace_all("[^[:alnum:]]+", "_") %>% str_replace_all("^_|_$", "")}
+response = read_json("../data/stdmap.json", simplifyVector = TRUE)
 
 # to process sectors and value chain
-simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain", pos = 3) {
+simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain", pos = 3, src = "data/thesauri/StdMap") {
   aurl = paste0(prefix, local({
     things = unlist(response[[path]])
     things = things[!is.na(things) & things != ""]
@@ -29,14 +18,9 @@ simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain"
       str_replace_all(x[pos], "_", " ")
     }),
     parent = str_remove(prefix, "/$"),
-    src = "data/thesauri/StdMap"
+    src = src
   )
 }
-
-raw_response <- GET("https://api.production.standardsmap.sustainable-trade.org/api/standards?client=NO%20AFFILIATION")
-stop_for_status(raw_response) # Stops the script if error occurs (e.g. 404 or 500)
-
-response = fromJSON(content(raw_response, "text", encoding = "UTF-8"))
 
 # Sustainability theme or pillar
 thes_Sustainability = local({
@@ -65,7 +49,7 @@ concepts_Sustainability = local({
   concept_name = sapply(str_split(concept_url, "/"), function (x) {
     x[4] %>% str_replace_all("_", " ")   })
   parent = str_remove(concept_url, "/[^/]*$")
-  our_src = rep("data/thesauri/StdMap", length(concept_name))
+  our_src = rep("data/concepts/StdMap", length(concept_name))
   rbind(
     data.frame( url = concept_url, name = concept_name, parent = parent, src = our_src)
   )
@@ -82,22 +66,22 @@ concepts_Sustainability = local({
 
 # Sector
 thes_Sector = data.frame(thes_url = "thesauri/Sector", name = "Sector", parent = "", src = "data/thesauri/StdMap")
-concepts_Sector = simple_process(prefix = "thesesauri/Sector/", path = "sectors")
+concepts_Sector = simple_process(prefix = "thesesauri/Sector/", path = "sectors", src = "data/concepts/StdMap")
   
 # Value chain
 thes_Value_Chain = data.frame(thes_url = "thesauri/Value_Chain", name = "Value Chain", parent = "", src = "data/thesauri/StdMap")
-concepts_Value_Chain = simple_process(prefix = "thesauri/Value_Chain/", path = "valueChain")
+concepts_Value_Chain = simple_process(prefix = "thesauri/Value_Chain/", path = "valueChain", src = "data/concepts/StdMap")
 
 # Products
-concepts_products = rbind(simple_process(prefix = "thesauri/product/products/", path = "products", pos = 4),
-                          simple_process(prefix = "thesauri/product/products/", path = "det_products", pos = 4))
+concepts_products = rbind(simple_process(prefix = "thesauri/product/products/", path = "products", pos = 4, src = "data/concepts/StdMap"),
+                          simple_process(prefix = "thesauri/product/products/", path = "det_products", pos = 4, src = "data/concepts/StdMap"))
 
 # Output  
 write.csv(rbind(
             thes_Sector,
             thes_Value_Chain,
             thes_Sustainability), 
-          file = "StdMap-Thesauri.csv",
+          file = "../data/thesauri.csv",
           row.names = FALSE,
           na = "")
 
@@ -107,6 +91,6 @@ write.csv(rbind(
   concepts_Value_Chain,
   concepts_Sustainability,
   concepts_products), 
-  file = "StdMap-Concepts.csv",
+  file = "../data/concepts.csv",
   row.names = FALSE,
   na = "")

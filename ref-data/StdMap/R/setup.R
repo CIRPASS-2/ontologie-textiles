@@ -1,11 +1,20 @@
 # To run:
 # Rscript setup.R
 
-options(repos = c(CRAN = "https://cloud.r-project.org"))
+if (!require("pacman")) install.packages("pacman")
 
-install.packages("httr")
-install.packages("jsonlite")
-install.packages("dplyr")
-install.packages("purrr")
-install.packages("stringr")
-install.packages("stringdist")
+pacman::p_load(
+  httr, 
+  jsonlite, 
+  dplyr, 
+  purrr, 
+  stringr, 
+  stringdist
+)
+
+# str_to_title does Ada Case but we can use str_to_sentence For sentence case
+# we also 
+#   - fix case
+#   - replace & with a space
+urlfy = function(x) {
+  x %>% str_to_sentence() %>% str_replace_all("&", " and ") %>% str_replace_all("[^[:alnum:]]+", "_") %>% str_replace_all("^_|_$", "")}

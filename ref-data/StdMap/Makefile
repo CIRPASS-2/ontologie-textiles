@@ -2,7 +2,7 @@ CPP := gcc-15
 CPP_FLAGS := -E -P -C -nostdinc -Wno-invalid-token-paste
 CHUNK_DIR := .chunks
 
-all: stdmap.ttl
+all: rdf/stdmap.ttl
 
 prefixes.rq: prefixes.ttl
 	perl -pe 'm{###} and last; s{^@}{}; s{ *\.$$}{}' $^ > $@
@@ -29,7 +29,7 @@ stdmap.tarql: model-origin.tarql model-dest.tarql model-meta.tarql model-product
 	mv $@.tmp $@
 	rm -rf $(CHUNK_DIR)/$*
 
-stdmap.ttl: stdmap.tarql stdmap.csv
+rdf/stdmap.ttl: stdmap.tarql data/stdmap.csv
 	tarql --base https://w3id.org/eudpp/ --write-base $^ > temp.ttl; owl write --useCommaByDefault temp.ttl $@; rm temp.ttl
 
 .PHONY clean:
