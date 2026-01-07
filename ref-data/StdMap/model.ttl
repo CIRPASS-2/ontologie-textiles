@@ -1,0 +1,45 @@
+<standard/sustainability/(id)> a eudpp:SustainabilityStandard;
+  dct:title "(standard)" ;
+  dct:issued "(yearOfEstablishment)"^^xsd:gYear ;
+  eudpp:hasThirdPartyVerification "(hasThirdPartyVerification)"^^xsd:boolean ;
+  eudpp:isConsumableLabel "(isConsumableLabel)"^^xsd:boolean ;
+  dct:description "(descr)" ;
+  eudpp:isPrivate "(isPrivate)"^^xsd:boolean ;
+  eudpp:isPublic "(isPublic)"^^xsd:boolean ;
+  eudpp:isInternational "(isInternational)"^^xsd:boolean .
+###
+<standard/sustainability/(id)> 
+  eudpp:product <thesauri/product/products/SPLIT_SEMI(det_products_urlfied)> .
+###
+<standard/sustainability/(id)>
+  eudpp:product <thesauri/product/products/SPLIT_SEMI(products_urlfied)> .
+###
+<standard/sustainability/(id)>
+  eudpp:productStr "SPLIT_SEMI(products)" .
+###
+<standard/sustainability/(id)>
+  eudpp:productStr "SPLIT_SEMI(det_products)" .
+###
+<standard/sustainability/(id)>
+  eudpp:appliesToCountryOfDestinationStr "SPLIT_SEMI(destination)" .
+###
+<standard/sustainability/(id)>
+  eudpp:appliesToCountryOfDestinationCode "SPLIT_SEMI(destination_country_code)" .
+###
+<standard/sustainability/(id)>  
+  eudpp:appliesToCountryOfDestination <country/SPLIT_SEMI(destination_country_code)> .
+###
+<standard/sustainability/(id)>
+  eudpp:appliesToCountryOfOriginStr "SPLIT_SEMI(origin)" .
+###
+<standard/sustainability/(id)>
+  eudpp:appliesToCountryOfOriginCode "SPLIT_SEMI(origin_country_code)" .
+###
+<standard/sustainability/(id)>
+  eudpp:appliesToCountryOfOrigin <country/SPLIT_SEMI(origin_country_code)> .
+###
+<standard/sustainability/(id)>
+  eudpp:sector <thesauri/Sector/(SPLIT_SEMI(sectors_urlfied))> .
+###
+<standard/sustainability/(id)>
+  eudpp:sectorStr "SPLIT_SEMI(sectors)" .
