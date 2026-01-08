@@ -1,12 +1,20 @@
 <standard/sustainability/(id)> a eudpp:SustainabilityStandard;
   dct:title "(standard)" ;
   dct:issued "(yearOfEstablishment)"^^xsd:gYear ;
+  dct:created "(createdDate)"^^xsd:date ;
+  dct:source <(url)> ;
+  dct:references <(weblink)> ;
   eudpp:hasThirdPartyVerification "(hasThirdPartyVerification)"^^xsd:boolean ;
   eudpp:isConsumableLabel "(isConsumableLabel)"^^xsd:boolean ;
   dct:description "(descr)" ;
   eudpp:isPrivate "(isPrivate)"^^xsd:boolean ;
   eudpp:isPublic "(isPublic)"^^xsd:boolean ;
-  eudpp:isInternational "(isInternational)"^^xsd:boolean .
+  eudpp:isInternational "(isInternational)"^^xsd:boolean ;
+  eudpp:benchmarkedBefore2022 "(benchmarkedBefore2022)"^^xsd:boolean ;
+  eudpp:benchmarkedAfter2022 "(benchmarkedAfter2022)"^^xsd:boolean ;
+  eudpp:pillarScoreSocial "(pillarScores_soc)"^^xsd:integer ;
+  eudpp:pillarScoreEthics "(pillarScores_ethics)"^^xsd:integer ;
+  eudpp:pillarScoreQuality "(pillarScores_qual)"^^xsd:integer . 
 ###
 <standard/sustainability/(id)> 
   eudpp:product <thesauri/product/products/SPLIT_SEMI(det_products_urlfied)> .
@@ -43,3 +51,27 @@
 ###
 <standard/sustainability/(id)>
   eudpp:sectorStr "SPLIT_SEMI(sectors)" .
+###
+<standard/sustainability/(id)>
+  eudpp:valueChain <thesauri/Value_Chain/SPLIT_SEMI(valueChain_urlfied)> .
+###
+<standard/sustainability/(id)>
+  eudpp:supplyChain <thesauri/Supply_Chain/SPLIT_SEMI(supplyChain_urlfied)> .
+###
+<standard/sustainability/(id)>
+  eudpp:nonConnversionRequirements <thesauri/Non_Conversion_Requirements/SPLIT_SEMI(nonConnversion_urlfied)> .
+### 
+<standard/sustainability/(id)>
+  eudpp:recognitionAndCertificates <thesauri/Recognition_and_Certificates/SPLIT_SEMI(recogAndCerts)> .
+###
+<standard/sustainability/(id)>
+  eudpp:sustainableDevelopmentGoalId "SPLIT_SEMI(sdgs)" ; # TODO: find SDG as SKOS and reify
+###
+<standard/sustainability/(id)>
+  eudpp:sustainabilityPillarOrTheme <thesauri/Sustainability/SPLIT_SEMI(pillars_urlfied)> .
+###
+<standard/sustainability/(id)>
+  eudpp:sustainabilityPillarOrTheme <thesauri/Sustainability/SPLIT_SEMI(themes_urlfied)> .
+###
+<standard/sustainability/(id)>
+  dct:relation <SPLIT_SEMI(weblinkExtra)> .

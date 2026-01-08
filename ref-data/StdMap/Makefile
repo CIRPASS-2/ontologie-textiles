@@ -12,7 +12,7 @@ prefixes.rq: prefixes.ttl
 	plantuml $*.puml
 	rm $*.puml
 
-stdmap.tarql: model-origin.tarql model-dest.tarql model-meta.tarql model-products.tarql model-sector.tarql model-typology.tarql
+stdmap.tarql: model.tarql
 	cat $^ > $@
 
 %.tarql: prefixes.rq macros.h %.ttl 

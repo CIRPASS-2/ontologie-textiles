@@ -2,6 +2,39 @@ source("setup.R")
 
 response = read_json("../data/stdmap.json", simplifyVector = TRUE)
 
+# Helper to process and urlfy hierarchical structures
+# TODO(vsenderov, 2026-01-08): this is a vibe-coded function and it works,
+#.  however the linter complains about it and it is weird
+process_hierarchy <- function(as_urlfied = FALSE) {
+  function(.x) {
+    if (is.null(.x) || (is.data.frame(.x) && nrow(.x) == 0)) {
+      return("") 
+    }
+    
+#    parents <- .x$parent
+    names <- .x$name
+    
+    if (as_urlfied) {
+      # Apply urlfy to each element. 
+      # We wrap it in a safe check to handle NAs gracefully.
+#      parents <- map_chr(parents, ~ if(is.na(.x) || .x == "") NA_character_ else urlfy(.x))
+      names <- map_chr(names, ~ if(is.na(.x) || .x == "") NA_character_ else urlfy(.x))
+    }
+    
+    # Combine parent and name with a slash
+    pairs = names
+    # pairs <- paste(parents, names, sep = "/") %>% 
+    #   str_remove("^NA/") %>% 
+    #   str_remove("/NA$")
+    
+    # Filter out empty pairs and collapse into a single string
+    result <- paste(pairs[nzchar(pairs)], collapse = ";")
+    
+    # Clean up any newlines
+    return(str_replace_all(result, "[\r\n]", " "))
+  }
+}
+
 country_code = function(x) { 
   country_codes = read.csv("../data/cc-cname-mapping-2025-12-15.csv")
   cc = map_chr(x, function(y) {
@@ -51,6 +84,12 @@ test_countries = unique(c(unlist(response$origin), unlist(response$destination))
 # country_code(test_countries[251]) => CI
 # data.frame(test_country = test_countries[!country_code_is_exact_match(test_countries)], cc = country_code(test_countries[!country_code_is_exact_match(test_countries)]))
 
+# Helper to process and urlfy hierarchical structures
+
+# Helper to process and urlfy hierarchical structures
+
+
+
 # DONE(vsenderov, 2025-01-06): na.omit here is potentially problematic
 # better to rewrite stuff as isInternational = map_lgl(isInternational, ~ .x %in% "Yes")
 typed_response = response %>% mutate(
@@ -85,28 +124,53 @@ typed_response = response %>% mutate(
   isPrivate = as.integer(map_lgl(typology, ~ .x %in% "isPrivateStandard")),
   isPublic = as.integer(map_lgl(typology, ~ .x %in% "isPublicStandard")),
   
+  hasThirdPartyVerification = as.integer(hasThirdPartyVerification),
+  isConsumableLabel = as.integer(isConsumableLabel) ,
+  
+  mandata_urlfied = map_chr(mandate, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   mandate = map_chr(mandate, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
+  valueChain_urlfied = map_chr(valueChain, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   valueChain = map_chr(valueChain, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
+  nonConversion_urlfied = map_chr(nonConversion, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   nonConversion = map_chr(nonConversion, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
+  supplyChain_urlfied = map_chr(supplyChain, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   supplyChain = map_chr(supplyChain, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
+  recogAndCerts_urlfied = map_chr(recogAndCerts, ~ paste(urlfy(na.omit(.x)), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   recogAndCerts = map_chr(recogAndCerts, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
   sdgs = map_chr(sdgs, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
-  pillars = map_chr(pillars, ~ {
-    if (is.null(.x) || nrow(.x) == 0) {
-      return("") 
-    }
-    parent_child_pairs <- paste(.x$parent, .x$name, sep = "/")%>% str_remove("^NA/") %>% str_remove("/NA$")
-    paste(parent_child_pairs[nzchar(parent_child_pairs)], collapse = ";")
-  }),
-  themes = map_chr(themes, ~ {
-    if (is.null(.x) || nrow(.x) == 0) {
-      return("") 
-    }
-    parent_child_pairs <- paste(.x$parent, .x$name, sep = "/")  %>% str_remove("^NA/") %>% str_remove("/NA$")
-    paste(parent_child_pairs[nzchar(parent_child_pairs)], collapse = ";")
-  }),
-  BenchmarkedFEFAC = map_chr(BenchmarkedFEFAC, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
-  docs_exists = map_lgl(docs$exists, ~ tolower(na.omit(.x)) == "yes"),
+  # pillars = map_chr(pillars, ~ {
+  #   if (is.null(.x) || nrow(.x) == 0) {
+  #     return("") 
+  #   }
+  #   parent_child_pairs <- paste(.x$parent, .x$name, sep = "/")%>% str_remove("^NA/") %>% str_remove("/NA$")
+  #   paste(parent_child_pairs[nzchar(parent_child_pairs)], collapse = ";")
+  # }),
+  
+  pillars_urlfied = map_chr(pillars, process_hierarchy(as_urlfied = TRUE)),
+  pillars         = map_chr(pillars, process_hierarchy(as_urlfied = FALSE)),
+  
+  # themes = map_chr(themes, ~ {
+  #   if (is.null(.x) || nrow(.x) == 0) {
+  #     return("") 
+  #   }
+  #   parent_child_pairs <- paste(.x$parent, .x$name, sep = "/")  %>% str_remove("^NA/") %>% str_remove("/NA$")
+  #   paste(parent_child_pairs[nzchar(parent_child_pairs)], collapse = ";")
+  # }),
+  
+  themes_urlfied = map_chr(themes, process_hierarchy(as_urlfied = TRUE)),
+  themes         = map_chr(themes, process_hierarchy(as_urlfied = FALSE)),
+  
+ #BenchmarkedFEFAC = map_chr(BenchmarkedFEFAC, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
+  
+  benchmarkedBefore2022 = as.integer(map_lgl(BenchmarkedFEFAC, ~ "before2022" %in% .x)),
+  benchmarkedAfter2022  = as.integer(map_lgl(BenchmarkedFEFAC, ~ "after2022" %in% .x)),
+  
+  docs_exists = as.integer(map_lgl(docs$exists, ~ tolower(na.omit(.x)) == "yes")),
   docs_items = map_chr(docs$items, ~ paste(na.omit(.x), collapse = ";") %>% str_replace_all("[\r\n]", " ")),
   docs_links = map_chr(docs$links, ~ {
     regex_pattern <- "https?://\\S+"
@@ -126,7 +190,8 @@ typed_response = response %>% mutate(
 ) %>% select(
   -docs,
   -pillarScores,
-  -themeScores
+  -themeScores,
+  -BenchmarkedFEFAC
 ) %>% rename(
   standard = name,
   weblinkExtra = docs_links,
