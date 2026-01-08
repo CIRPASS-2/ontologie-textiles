@@ -4,81 +4,70 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/11>
-        rdf:type         skos:Concept;
-        skos:definition  "The inventory movement corresponds to goods taken out of consigned inventory for consumption.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "11";
-        skos:prefLabel   "Consumption" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "11";
+        skos:prefLabel  "Consumption"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/10>
-        rdf:type         skos:Concept;
-        skos:definition  "The inventory movement is due to conversion of goods.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "10";
-        skos:prefLabel   "Conversion" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "10";
+        skos:prefLabel  "Conversion"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/9>
-        rdf:type         skos:Concept;
-        skos:definition  "The inventory movement has been issued for commercial reasons.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "9";
-        skos:prefLabel   "Commercial" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "9";
+        skos:prefLabel  "Commercial"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/8>
-        rdf:type         skos:Concept;
-        skos:definition  "This inventory movement corresponds to parts with technical defect.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "8";
-        skos:prefLabel   "Defects (technical)" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "8";
+        skos:prefLabel  "Defects (technical)"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/7>
-        rdf:type         skos:Concept;
-        skos:definition  "This inventory movement is issued to cancel a previously processed movement.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "7";
-        skos:prefLabel   "Reversal of previous movement" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "7";
+        skos:prefLabel  "Reversal of previous movement"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/6>
-        rdf:type         skos:Concept;
-        skos:definition  "This inventory movement is due to recycling of goods. For instance, defective goods have been repaired and are put back to the available inventory.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "6";
-        skos:prefLabel   "Inventory recycling" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "6";
+        skos:prefLabel  "Inventory recycling"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/5>
-        rdf:type         skos:Concept;
-        skos:definition  "An inventory movement issued when goods are moved (physically or logically) from one owner to another, whenever inventories are held in account of several owners of the same product within the same warehouse.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "5";
-        skos:prefLabel   "Property transfer within warehouse" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "5";
+        skos:prefLabel  "Property transfer within warehouse"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/4>
-        rdf:type         skos:Concept;
-        skos:definition  "The difference between the inventory, as physically counted, and the inventory recorded by the system.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "4";
-        skos:prefLabel   "Difference" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "4";
+        skos:prefLabel  "Difference"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/3>
-        rdf:type         skos:Concept;
-        skos:definition  "Adjustment due to scrapped parts.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "3";
-        skos:prefLabel   "Scrapped parts" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "3";
+        skos:prefLabel  "Scrapped parts"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/2>
-        rdf:type         skos:Concept;
-        skos:definition  "Goods which have been delivered from the inventory to another party or warehouse.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "2";
-        skos:prefLabel   "Delivery" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "2";
+        skos:prefLabel  "Delivery"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement/1>
-        rdf:type         skos:Concept;
-        skos:definition  "Goods received at warehouse from another party or warehouse.";
-        skos:inScheme    <https://w3id.org/eudpp/thesauri/>;
-        skos:notation    "1";
-        skos:prefLabel   "Reception" .
+        rdf:type        skos:Concept;
+        skos:inScheme   <https://w3id.org/eudpp/thesauri/>;
+        skos:notation   "1";
+        skos:prefLabel  "Reception"@en .
 
 <https://w3id.org/eudpp/thesauri/inventory/reason/movement>
         skos:member  <https://w3id.org/eudpp/thesauri/inventory/reason/movement/11> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/10> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/9> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/8> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/7> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/6> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/5> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/4> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/3> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/2> , <https://w3id.org/eudpp/thesauri/inventory/reason/movement/1> .

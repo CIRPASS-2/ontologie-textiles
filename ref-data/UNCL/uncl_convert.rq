@@ -8,11 +8,13 @@ construct {
   $_thes_iri skos:member ?item.
   ?item a skos:Concept; 
     skos:inScheme <>; # if we decide to use separate ConceptSchemes, change this
-    skos:notation ?code; skos:prefLabel ?name; skos:definition ?descr.
+    skos:notation ?code; skos:prefLabel ?name_en; skos:definition ?descr_en.
 }
 where { service <x-sparql-anything:>
   { fx:properties fx:location $_location; fx:csv.delimiter "\t"; fx:csv.headers true.
     [] a fx:root; ?li [xyz:code ?code; xyz:name ?name; xyz:descr ?descr]
   }
+  bind(strlang(?name,"en") as ?name_en)
+  bind(strlang(?desc,"en") as ?descr_en)
   bind(iri(concat(str($_thes_iri),"/",?code)) as ?item)
 }

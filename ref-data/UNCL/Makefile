@@ -6,7 +6,7 @@ extract:
 	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3035.htm
 	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3055.htm
 	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3139.htm
-	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3207.htm
+	# uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3207.htm # not a real thesaurus, says "Refer to ISO"
 	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3227.htm
 	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3453.htm
 	uncl-extract.sh run --url https://service.unece.org/trade/untdid/d22a/tred/tred3499.htm
@@ -26,7 +26,7 @@ convert:
 	sparql-anything -v location=UNCL3035.tsv -o UNCL3035.ttl -v thes=TODO/TODO -q uncl_convert.rq
 	sparql-anything -v location=UNCL3055.tsv -o UNCL3055.ttl -v thes=TODO/TODO -q uncl_convert.rq
 	sparql-anything -v location=UNCL3139.tsv -o UNCL3139.ttl -v thes=TODO/TODO -q uncl_convert.rq
-	sparql-anything -v location=UNCL3207.tsv -o UNCL3207.ttl -v thes=TODO/TODO -q uncl_convert.rq
+	# sparql-anything -v location=UNCL3207.tsv -o UNCL3207.ttl -v thes=TODO/TODO -q uncl_convert.rq # not a real thesaurus
 	sparql-anything -v location=UNCL3227.tsv -o UNCL3227.ttl -v thes=TODO/TODO -q uncl_convert.rq
 	sparql-anything -v location=UNCL3453.tsv -o UNCL3453.ttl -v thes=TODO/TODO -q uncl_convert.rq
 	sparql-anything -v location=UNCL3499.tsv -o UNCL3499.ttl -v thes=TODO/TODO -q uncl_convert.rq
