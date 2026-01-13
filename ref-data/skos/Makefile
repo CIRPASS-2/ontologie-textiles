@@ -1,7 +1,7 @@
 JAR_FILE := sparql-anything-v1.1.0.jar
 CSV_FILE := data.csv
 PATHS_FILE := paths.csv
-RESULT_FILE := taxonomy.ttl
+RESULT_FILE := taxonomy.concepts.ttl
 
 # Default target
 all: $(JAR_FILE) fetch urls transform
