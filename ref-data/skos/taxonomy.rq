@@ -14,6 +14,9 @@ CONSTRUCT {
 
   ?nameIRI ?nameProp ?nameLiteral .
   ?nameIRI dcterms:bibliographicCitation ?sourceVocab .
+
+  ?collectionIRI rdf:type skos:Collection .
+  ?collectionIRI skos:member ?nameIRI .
 }
 WHERE {
   SERVICE <x-sparql-anything:> {
@@ -48,4 +51,7 @@ WHERE {
   BIND(IF(?isCS > 1, skos:prefLabel, dcterms:title) AS ?nameProp)
   BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?pathStrB)) AS ?nameIRI)
   BIND(STRLANG(?name, "en") AS ?nameLiteral)
+
+  BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?sourceVocab)) AS ?genCollectionIRI)
+  BIND(IF(?isCS > 1 && ?sourceVocab != "", ?genCollectionIRI, ?unbound) AS ?collectionIRI)
 }
