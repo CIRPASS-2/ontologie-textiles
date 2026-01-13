@@ -32,3 +32,5 @@ transform:
 	java -jar sparql-anything-v1.1.0.jar -q taxonomy.rq -o $(RESULT_FILE)
 	@echo "Done. Taxonomy written to $(RESULT_FILE)"
 
+clean:
+	rm $(JAR_FILE) $(CSV_FILE) $(PATHS_FILE) $(RESULT_FILE)
