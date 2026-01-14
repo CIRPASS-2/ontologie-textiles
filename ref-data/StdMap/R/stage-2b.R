@@ -15,7 +15,7 @@ simple_process = function (prefix = "thesauri/Value_Chain/", path = "valueChain"
   }))
   
   data.frame(
-    url = aurl,
+    thes_url = aurl,
     name = sapply(strsplit(aurl, "/"), function (x) {
       str_replace_all(x[pos], "_", " ")
     }),
@@ -37,7 +37,7 @@ thes_Sustainability = local({
   our_src = rep("data/thesauri/StdMap", length(thes_name))
   
   rbind(
-    data.frame( thes_url = "thesauri/Sustainability", name = "Sustanability theme or pillar", parent ="", src = "data/thesauri/StdMap"),
+    data.frame( thes_url = "thesauri/Sustainability", name = "Sustainability theme or pillar", parent ="", src = "data/thesauri/StdMap"),
     data.frame( thes_url = thes_url, name = thes_name, parent = parent, src = our_src)
   )
 })
@@ -54,12 +54,13 @@ concepts_Sustainability = local({
     x[4] %>% str_replace_all("_", " ")   })
   
   # we go back and forth here, not good, but works
-  concept_url_simple = paste0('thesauri/Sustainability/', urlfy(concept_name))
+  # concept_url_simple = paste0('thesauri/Sustainability/', urlfy(concept_name))
   
   parent = str_remove(concept_url, "/[^/]*$")
   our_src = rep("data/concepts/StdMap", length(concept_name))
   rbind(
-    data.frame( url = concept_url_simple, name = concept_name, parent = parent, src = our_src)
+    #data.frame( url = concept_url_simple, name = concept_name, parent = parent, src = our_src)
+    data.frame( thes_url = concept_url, name = concept_name, parent = parent, src = our_src)
   )
 })
 
@@ -74,49 +75,43 @@ concepts_Sustainability = local({
 
 # Sector
 thes_Sector = data.frame(thes_url = "thesauri/Sector", name = "Sector", parent = "", src = "data/thesauri/StdMap")
-concepts_Sector = simple_process(prefix = "thesesauri/Sector/", path = "sectors", src = "data/concepts/StdMap")
+concepts_Sector = simple_process(prefix = "thesauri/Sector/", path = "sectors", src = "data/thesauri/StdMap")
   
 # Value chain
 thes_Value_Chain = data.frame(thes_url = "thesauri/Value_Chain", name = "Value Chain", parent = "", src = "data/thesauri/StdMap")
-concepts_Value_Chain = simple_process(prefix = "thesauri/Value_Chain/", path = "valueChain", src = "data/concepts/StdMap")
+concepts_Value_Chain = simple_process(prefix = "thesauri/Value_Chain/", path = "valueChain", src = "data/thesauri/StdMap")
 
 # Supply chain
 thes_Supply_Chain = data.frame(thes_url = "thesauri/Supply_Chain", name = "Supply Chain", parent = "", src = "data/thesauri/StdMap")
-concepts_Supply_Chain = simple_process(prefix = "thesauri/Supply_Chain/", path = "supplyChain", src = "data/concepts/StdMap")
+concepts_Supply_Chain = simple_process(prefix = "thesauri/Supply_Chain/", path = "supplyChain", src = "data/thesauri/StdMap")
 
 # Certs
 thes_Certs = data.frame(thes_url = "thesauri/Recognition_and_Certificates", name = "Recognition and Certificates", parent = "", src = "data/thesauri/StdMap")
-concepts_Certs = simple_process(prefix = "thesauri/Recognition_and_Certificates/", path = "recogAndCerts", src = "data/concepts/StdMap", urlfy = FALSE)
+concepts_Certs = simple_process(prefix = "thesauri/Recognition_and_Certificates/", path = "recogAndCerts", src = "data/thesauri/StdMap")#, urlfy = FALSE)
 
 # Non-conversion requirements
 thes_nonConversion = data.frame(thes_url = "thesauri/Non_Conversion_Requirements", name = "Non Conversion Requirements", parent = "", src = "data/thesauri/StdMap")
-concepts_nonConversion = simple_process(prefix = "thesauri/Non_Conversion_Requirements/", path = "nonConversion", src = "data/concepts/StdMap")
+concepts_nonConversion = simple_process(prefix = "thesauri/Non_Conversion_Requirements/", path = "nonConversion", src = "data/thesauri/StdMap")
 
 # Products
-concepts_products = rbind(simple_process(prefix = "thesauri/product/products/", path = "products", pos = 4, src = "data/concepts/StdMap"),
-                          simple_process(prefix = "thesauri/product/products/", path = "det_products", pos = 4, src = "data/concepts/StdMap"))
+concepts_products = rbind(simple_process(prefix = "thesauri/product/products/", path = "products", pos = 4, src = "data/thesauri/StdMap"),
+                          simple_process(prefix = "thesauri/product/products/", path = "det_products", pos = 4, src = "data/thesauri/StdMap"))
 
 # Output  
 write.csv(rbind(
             thes_Sector,
+            concepts_Sector,
             thes_Value_Chain,
+            concepts_Value_Chain,
             thes_Supply_Chain,
+            concepts_Supply_Chain,
             thes_Sustainability,
+            concepts_Sustainability,
             thes_Certs,
-            thes_nonConversion), 
+            concepts_Certs,
+            thes_nonConversion,
+            concepts_nonConversion,
+            concepts_products), 
           file = "../data/thesauri.csv",
           row.names = FALSE,
           na = "")
-
-
-write.csv(rbind(
-  concepts_Sector,
-  concepts_Value_Chain,
-  concepts_Supply_Chain,
-  concepts_Sustainability,
-  concepts_products,
-  concepts_Certs,
-  concepts_nonConversion), 
-  file = "../data/concepts.csv",
-  row.names = FALSE,
-  na = "")
