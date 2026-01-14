@@ -11,21 +11,21 @@ process_hierarchy <- function(as_urlfied = FALSE) {
       return("") 
     }
     
-#    parents <- .x$parent
+    parents <- .x$parent
     names <- .x$name
     
     if (as_urlfied) {
       # Apply urlfy to each element. 
       # We wrap it in a safe check to handle NAs gracefully.
-#      parents <- map_chr(parents, ~ if(is.na(.x) || .x == "") NA_character_ else urlfy(.x))
-      names <- map_chr(names, ~ if(is.na(.x) || .x == "") NA_character_ else urlfy(.x))
+       parents <- map_chr(parents, ~ if(is.na(.x) || .x == "") NA_character_ else urlfy(.x))
+       names <- map_chr(names, ~ if(is.na(.x) || .x == "") NA_character_ else urlfy(.x))
     }
     
     # Combine parent and name with a slash
-    pairs = names
-    # pairs <- paste(parents, names, sep = "/") %>% 
-    #   str_remove("^NA/") %>% 
-    #   str_remove("/NA$")
+    #pairs = names
+    pairs <- paste(parents, names, sep = "/") %>% 
+       str_remove("^NA/") %>% 
+       str_remove("/NA$")
     
     # Filter out empty pairs and collapse into a single string
     result <- paste(pairs[nzchar(pairs)], collapse = ";")
