@@ -15,9 +15,9 @@ build() {
     # Create virtual environment if not exists
     if [ ! -d "$VENV_DIR" ]; then
         python3 -m venv "$VENV_DIR"
-        echo "✅ Virtual environment created at '$VENV_DIR'"
+        echo "Virtual environment created at '$VENV_DIR'" >&2
     else
-        echo "ℹ️ Virtual environment already exists at '$VENV_DIR'"
+        echo "Virtual environment already exists at '$VENV_DIR'" >&2
     fi
 
     # Activate environment
@@ -25,12 +25,12 @@ build() {
 
     # Install dependencies
     if [ -f "$REQUIREMENTS_FILE" ]; then
-        echo "📦 Installing dependencies from $REQUIREMENTS_FILE..."
+        echo "Installing dependencies from $REQUIREMENTS_FILE..." >&2
         pip install --upgrade pip
         pip install -r "$REQUIREMENTS_FILE"
-        echo "✅ Dependencies installed successfully."
+        echo "Dependencies installed successfully." >&2
     else
-        echo "⚠️ No $REQUIREMENTS_FILE found. Skipping dependency installation."
+        echo "No $REQUIREMENTS_FILE found. Skipping dependency installation." >&2
     fi
 
     deactivate
@@ -47,12 +47,12 @@ run() {
                     URL_ARG="$2"
                     shift 2
                 else
-                    echo "❌ Error: --url requires a value."
+                    echo "Error: --url requires a value." >&2
                     exit 1
                 fi
                 ;;
             *)
-                echo "⚠️ Unknown argument: $1"
+                echo "Unknown argument: $1" >&2
                 exit 1
                 ;;
         esac
@@ -60,14 +60,14 @@ run() {
 
     # Ensure URL is provided
     if [ -z "$URL_ARG" ]; then
-        echo "❌ Error: The '--url' argument is mandatory."
-        echo "Usage: $0 run --url <URL>"
+        echo "Error: The '--url' argument is mandatory." >&2
+        echo "Usage: $0 run --url <URL>" >&2
         exit 1
     fi
 
-    echo "🚀 Running Python program..."
+    echo "Running Python program..." >&2
     if [ ! -d "$VENV_DIR" ]; then
-        echo "❌ Virtual environment not found. Run './uncl.sh build' first."
+        echo "Virtual environment not found. Run './uncl.sh build' first." >&2
         exit 1
     fi
 
@@ -76,10 +76,10 @@ run() {
 
     # Execute Python script with URL argument
     if [ -f "$PYTHON_SCRIPT" ]; then
-        echo "🌐 Passing URL argument: $URL_ARG"
+        echo "Passing URL argument: $URL_ARG" >&2
         python "$PYTHON_SCRIPT" --url "$URL_ARG"
     else
-        echo "❌ Python script '$PYTHON_SCRIPT' not found."
+        echo "Python script '$PYTHON_SCRIPT' not found." >&2
         deactivate
         exit 1
     fi

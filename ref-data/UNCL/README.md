@@ -19,6 +19,9 @@ These are plain text data embedded in HTML that looks like this:
 
 ## Extraction
 
+NOTE(vsenderov, 2026-01-22): Don't rerun the extractors unless you absolutely need to. The TSV's have been manually edited 
+to remove spelling errors and other inconsistencies.
+
 We use a Python script `uncl_extract.py` to extract the item lists.
 First build the python environment:
 ```
