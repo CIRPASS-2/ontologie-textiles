@@ -1,9 +1,9 @@
-PREFIX xyz: <http://sparql.xyz/facade-x/data/>
-PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
-PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 
 CONSTRUCT {
   ?parentIRI rdf:type ?parentType .
@@ -16,6 +16,7 @@ CONSTRUCT {
   ?nameIRI dcterms:bibliographicCitation ?sourceVocab .
 
   ?collectionIRI rdf:type skos:Collection .
+  ?collectionIRI skos:prefLabel ?collectionLabel .
   ?collectionIRI skos:member ?nameIRI .
 }
 WHERE {
@@ -54,4 +55,5 @@ WHERE {
 
   BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?sourceVocab)) AS ?genCollectionIRI)
   BIND(IF(?isCS > 1 && ?sourceVocab != "", ?genCollectionIRI, ?unbound) AS ?collectionIRI)
+  BIND(STRLANG(REPLACE(STR(?collectionIRI), ".*/", ""), "en") AS ?collectionLabel)
 }
