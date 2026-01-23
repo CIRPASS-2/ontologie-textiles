@@ -6,37 +6,37 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xyz: <http://sparql.xyz/facade-x/data/>
 
 CONSTRUCT {
+  # Hierarchy (from paths.csv)
   ?parentIRI rdf:type ?parentType .
   ?childIRI rdf:type ?childType .
-
   ?childIRI ?p1 ?parentIRI .
   ?parentIRI ?p2 ?childIRI .
 
+  # Metadata & Type Definition (from data.csv)
+  ?nameIRI rdf:type ?primaryType .       # <--- Added this to ensure 'orphan' schemes get a type
   ?nameIRI ?nameProp ?nameLiteral .
   ?nameIRI dcterms:bibliographicCitation ?sourceVocab .
 
+  # Collection grouping
   ?collectionIRI rdf:type skos:Collection .
-  ?collectionIRI skos:prefLabel ?collectionLabel .
+  ?collectionIRI dcterms:title ?collectionLabel .
   ?collectionIRI skos:member ?nameIRI .
 }
 WHERE {
+  # --- BLOCK 1: HIERARCHY (paths.csv) ---
   SERVICE <x-sparql-anything:> {
     fx:properties
       fx:location "paths.csv";
       fx:csv.headers true .
     ?rowA xyz:thes_url ?pathStrA .
   }
-  SERVICE <x-sparql-anything:> {
-    fx:properties
-      fx:location "data.csv";
-      fx:csv.headers true .
-    ?rowB xyz:thes_url ?pathStrB .
-    ?rowB xyz:src ?sourceVocab .
-    ?rowB xyz:name ?name .
-  }
-
+  
+  # Calculate depth for paths
   BIND((STRLEN(?pathStrA) - STRLEN(REPLACE(?pathStrA, "/", ""))) AS ?slashCount)
 
+  # Keep this filter! We only want strictly hierarchical relationships here.
+  # If slashCount is 1 (thesauri/document), it has no parent in this logic, 
+  # so we ignore it here and handle its type in Block 2.
   FILTER(?slashCount > 1)
 
   BIND(IRI(CONCAT("https://w3id.org/eudpp/", REPLACE(?pathStrA, "/[^/]*$", ""))) AS ?parentIRI)
@@ -48,12 +48,33 @@ WHERE {
   BIND(IF(?slashCount = 2, skos:topConceptOf, skos:broader) AS ?p1)
   BIND(IF(?slashCount = 2, skos:hasTopConcept, skos:narrower) AS ?p2)
 
-  BIND((STRLEN(?pathStrB) - STRLEN(REPLACE(?pathStrB, "/", ""))) AS ?isCS)
-  BIND(IF(?isCS > 1, skos:prefLabel, dcterms:title) AS ?nameProp)
+  # --- BLOCK 2: METADATA & ORPHAN TYPES (data.csv) ---
+  SERVICE <x-sparql-anything:> {
+    fx:properties
+      fx:location "data.csv";
+      fx:csv.headers true .
+    ?rowB xyz:thes_url ?pathStrB .
+    ?rowB xyz:src ?sourceVocab .
+    ?rowB xyz:name ?name .
+    ?rowB xyz:collection_title ?rawCollectionLabel .
+    # FILTER OUT EMPTY ROWS
+    FILTER(?pathStrB != "")
+  }
+
+  BIND((STRLEN(?pathStrB) - STRLEN(REPLACE(?pathStrB, "/", ""))) AS ?depthB)
+  
+  # KEY FIX: Explicitly define type based on slash count in data.csv
+  # If slashes = 1 (e.g. thesauri/document), it is a ConceptScheme
+  BIND(IF(?depthB = 1, skos:ConceptScheme, skos:Concept) AS ?primaryType)
+
+  # Property selection (dcterms:title for Schemes, skos:prefLabel for Concepts)
+  BIND(IF(?depthB = 1, dcterms:title, skos:prefLabel) AS ?nameProp)
+  
   BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?pathStrB)) AS ?nameIRI)
   BIND(STRLANG(?name, "en") AS ?nameLiteral)
 
   BIND(IRI(CONCAT("https://w3id.org/eudpp/", ?sourceVocab)) AS ?genCollectionIRI)
-  BIND(IF(?isCS > 1 && ?sourceVocab != "", ?genCollectionIRI, ?unbound) AS ?collectionIRI)
-  BIND(STRLANG(REPLACE(STR(?collectionIRI), ".*/", ""), "en") AS ?collectionLabel)
+  BIND(IF(?depthB > 1 && ?sourceVocab != "", ?genCollectionIRI, ?unbound) AS ?collectionIRI)
+
+  BIND(STRLANG(?rawCollectionLabel, "en") AS ?collectionLabel)
 }

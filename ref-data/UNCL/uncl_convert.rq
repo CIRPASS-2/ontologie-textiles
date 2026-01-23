@@ -3,18 +3,32 @@ prefix xyz:  <http://sparql.xyz/facade-x/data/>
 prefix fx:   <http://sparql.xyz/facade-x/ns/>
 prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix dcterms: <http://purl.org/dc/terms/>
 
 construct {
-  $_thes_iri skos:member ?item.
+  ?collection_iri rdf:type skos:Collection .
+  ?collection_iri skos:member ?item.
+
+  ?parent_iri rdf:type skos:ConceptScheme ;
+    dcterms:title ?title.
+  
+  ?item rdf:type skos:Concept .
   ?item a skos:Concept; 
-    skos:inScheme <>; # if we decide to use separate ConceptSchemes, change this
+    skos:topConceptOf ?parent_iri ;
     skos:notation ?code; skos:prefLabel ?name_en; skos:definition ?descr_en.
 }
 where { service <x-sparql-anything:>
   { fx:properties fx:location $_location; fx:csv.delimiter "\t"; fx:csv.headers true.
-    [] a fx:root; ?li [xyz:code ?code; xyz:name ?name; xyz:descr ?descr]
+    [] a fx:root; ?li [xyz:Code%20Tag ?code; xyz:Code%20Value ?name; xyz:Description ?descr]
   }
+
+  # Convert the CLI string arguments into proper IRIs using the BASE
+  # $_parent = "thesauri/document"
+  # $_collection = "doc/unece/refCodeListsTextile"
+  bind(iri(concat(str(<https://w3id.org/eudpp/>), $_parent)) as ?parent_iri)
+  bind(iri(concat(str(<https://w3id.org/eudpp/>), $_collection)) as ?collection_iri)
+  bind(strlang($_title, "en") AS ?title)
   bind(strlang(?name,"en") as ?name_en)
-  bind(strlang(?desc,"en") as ?descr_en)
-  bind(iri(concat(str($_thes_iri),"/",?code)) as ?item)
+  bind(strlang(?descr,"en") as ?descr_en)
+  bind(iri(concat(str(?parent_iri),"/",?code)) as ?item)
 }

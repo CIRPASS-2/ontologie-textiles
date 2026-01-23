@@ -2,7 +2,10 @@ JAR_FILE := sparql-anything-v1.1.0.jar
 
 .PHONY: all clean full-clean
 
-all: taxonomy.concepts.ttl
+all: taxonomy.concepts.ttl uncl.concepts.ttl
+
+uncl.concepts.ttl: ../UNCL/UNCL1001.ttl
+	cat ../UNCL/UNCL1001.ttl > uncl.concepts.ttl
 
 taxonomy.concepts.ttl: taxonomy.rq paths.csv data.csv $(JAR_FILE)
 	java -jar $(JAR_FILE) -q taxonomy.rq -o $@
