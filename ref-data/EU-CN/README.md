@@ -50,6 +50,8 @@ We can explore nodes at the deepest level 11 like this (the weird double-in-sing
 less '+/"11"' cn.ttl
 ```
 
+
+The first match is `cn2021:220421380080`
 - It is defined like this (I kid you not!)
 > "White wines produced in EU, in containers holding <= 2 l and of an actual alcoholic strength of <= 15% vol, with PDO (other than Alsace, Bordeaux, Bourgogne, Val de Loire, Mosel, Pfalz, Rheinhessen, Tokaj, Lazio, Toscana, Trentino, Alto Adige, Friuli, Veneto, Sicilia, vinho verde, Penedés, Rioja, Valencia, sparkling wine and semi-sparkling wine)"@en
 - Its code (`dc:identifier` and URL) has 12 digits
