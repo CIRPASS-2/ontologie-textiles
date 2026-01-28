@@ -1,13 +1,16 @@
 JAR_FILE := sparql-anything-v1.1.0.jar
 
-.PHONY: all clean full-clean
+.PHONY: all clean install
 
-all: taxonomy.concepts.ttl uncl.concepts.ttl
+all: skos.concepts.ttl
 
-uncl.concepts.ttl: ../UNCL/UNCL1001.ttl
-	cat ../UNCL/UNCL1001.ttl > uncl.concepts.ttl
+skos.concepts.ttl: taxonomy.concepts.ttl uncl.concepts.ttl
+	cat taxonomy.concepts.ttl uncl.concepts.ttl > skos.concepts.ttl
 
-taxonomy.concepts.ttl: taxonomy.rq paths.csv data.csv $(JAR_FILE)
+uncl.concepts.ttl: ../UNCL/UNCL*.ttl
+	cat ../UNCL/UNCL*.ttl  > uncl.concepts.ttl
+
+taxonomy.concepts.ttl: taxonomy.rq paths.csv data.csv
 	java -jar $(JAR_FILE) -q taxonomy.rq -o $@
 
 data.csv:
@@ -26,11 +29,8 @@ paths.csv: data.csv
 		} \
 	}' >> $@
 
-$(JAR_FILE):
-	curl -L "https://github.com/SPARQL-Anything/sparql.anything/releases/download/v1.1.0/$(JAR_FILE)" -o $@
+install:
+	curl -L "https://github.com/SPARQL-Anything/sparql.anything/releases/download/v1.1.0/$(JAR_FILE)" -o $(JAR_FILE)
 
 clean:
-	rm -f paths.csv data.csv $(JAR_FILE)
-
-full-clean:
-	rm -f $(JAR_FILE) paths.csv data.csv taxonomy.concepts.ttl
+	rm -f paths.csv data.csv taxonomy.concepts.ttl uncl.concepts.ttl
