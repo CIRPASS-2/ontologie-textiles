@@ -9,12 +9,11 @@ construct {
   ?collection_iri rdf:type skos:Collection .
   ?collection_iri skos:member ?item.
 
-  ?parent_iri rdf:type skos:ConceptScheme ;
-    dcterms:title ?title.
+  ?parent_iri rdf:type skos:ConceptScheme .
   
   ?item rdf:type skos:Concept .
   ?item a skos:Concept; 
-    skos:topConceptOf ?parent_iri ;
+    ?hierarchyRel ?parent_iri ;
     skos:notation ?code; skos:prefLabel ?name_en; skos:definition ?descr_en.
 }
 where { service <x-sparql-anything:>
@@ -27,8 +26,9 @@ where { service <x-sparql-anything:>
   # $_collection = "doc/unece/refCodeListsTextile"
   bind(iri(concat(str(<https://w3id.org/eudpp/>), $_parent)) as ?parent_iri)
   bind(iri(concat(str(<https://w3id.org/eudpp/>), $_collection)) as ?collection_iri)
-  bind(strlang($_title, "en") AS ?title)
   bind(strlang(?name,"en") as ?name_en)
   bind(strlang(?descr,"en") as ?descr_en)
   bind(iri(concat(str(?parent_iri),"/",?code)) as ?item)
+  bind(STRLEN(REPLACE($_parent, "[^/]", "")) AS ?slashCount)
+  bind(IF(?slashCount = 1, skos:topConceptOf, skos:broader) AS ?hierarchyRel)
 }

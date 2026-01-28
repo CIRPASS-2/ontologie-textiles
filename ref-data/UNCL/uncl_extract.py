@@ -29,28 +29,30 @@ def extract_and_save_tsv(url):
 
     soup = BeautifulSoup(html_content, 'html.parser') # Keep this line to parse HTML
 
-    # # Title Extraction and Filename Construction
-    #
-    # # Fallback filename base
-    # clean_title = url.split('/')[-1].replace('.htm', '')
-    #
-    # # Search for the specific title pattern (text ending with [A-Z]) in key header elements
-    # title_pattern = re.compile(r'^(.*)\s+\[[A-Z]\]$', re.IGNORECASE)
-    #
-    # # Check H1, H2, and the <title> tag text for the pattern
-    # potential_titles = [soup.find('title').get_text(strip=True)] if soup.find('title') else []
-    # potential_titles.extend([tag.get_text(strip=True) for tag in soup.find_all(['h1', 'h2', 'h3'])])
-    #
-    # found_title = None
-    # for raw_text in potential_titles:
-    #     match = title_pattern.search(raw_text)
-    #     if match:
-    #         found_title = match.group(1).strip()
-    #         break
-    #
-    # if found_title:
-    #     clean_title = re.sub(r'[^\w\s-]', '', found_title).strip().replace(' ', '_').replace('__', '_')
-    #     clean_title = clean_title.strip('_')
+    # Title Extraction and Filename Construction
+    
+    # Fallback filename base
+    clean_title = url.split('/')[-1].replace('.htm', '')
+    
+    # Search for the specific title pattern (text ending with [A-Z]) in key header elements
+    title_pattern = re.compile(r'^(.*)\s+\[[A-Z]\]$', re.IGNORECASE)
+    
+    # Check H1, H2, and the <title> tag text for the pattern
+    potential_titles = [soup.find('title').get_text(strip=True)] if soup.find('title') else []
+    potential_titles.extend([tag.get_text(strip=True) for tag in soup.find_all(['h1', 'h2', 'h3'])])
+    
+    found_title = None
+    for raw_text in potential_titles:
+        match = title_pattern.search(raw_text)
+        if match:
+            found_title = match.group(1).strip()
+            break
+    
+    if found_title:
+        clean_title = re.sub(r'[^\w\s-]', '', found_title).strip().replace(' ', '_').replace('__', '_')
+        clean_title = clean_title.strip('_')
+        print(f"Processing: {clean_title}", file=sys.stderr)
+    
     #
     # filename = clean_title + '.tsv'
 

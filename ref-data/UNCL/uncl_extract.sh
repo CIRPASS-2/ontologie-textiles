@@ -10,7 +10,7 @@ REQUIREMENTS_FILE="requirements.txt"
 PYTHON_SCRIPT="uncl_extract.py"
 
 build() {
-    echo "🔧 Setting up Python virtual environment..."
+    echo "Setting up Python virtual environment..."
 
     # Create virtual environment if not exists
     if [ ! -d "$VENV_DIR" ]; then
