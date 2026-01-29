@@ -9,7 +9,8 @@ construct {
   ?collection_iri rdf:type skos:Collection .
   ?collection_iri skos:member ?item.
 
-  ?parent_iri rdf:type skos:ConceptScheme .
+  #?parent_iri rdf:type skos:ConceptScheme .
+  ?parent_iri rdf:type ?parent_rdf_type .
   
   ?item rdf:type skos:Concept .
   ?item a skos:Concept; 
@@ -29,6 +30,7 @@ where { service <x-sparql-anything:>
   bind(strlang(?name,"en") as ?name_en)
   bind(strlang(?descr,"en") as ?descr_en)
   bind(iri(concat(str(?parent_iri),"/",?code)) as ?item)
-  bind(STRLEN(REPLACE($_parent, "[^/]", "")) AS ?slashCount)
-  bind(IF(?slashCount = 1, skos:topConceptOf, skos:broader) AS ?hierarchyRel)
+  bind(strlen(replace($_parent, "[^/]", "")) AS ?slashCount)
+  bind(if(?slashCount = 1, skos:ConceptScheme, skos:Concept)  as ?parent_rdf_type)
+  bind(if(?slashCount = 1, skos:topConceptOf, skos:broader) AS ?hierarchyRel)
 }

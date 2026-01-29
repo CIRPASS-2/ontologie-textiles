@@ -4922,17 +4922,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "data/thesauri/uncefact/rec20";
         dcterms:title                  "Unit of measure"@en .
 
-<https://w3id.org/eudpp/data/thesauri/uncl/8053>
-        rdf:type       skos:Collection;
-        dcterms:title  "data_thesauri_uncl_8053"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/transport/equipment> .
-
-<https://w3id.org/eudpp/thesauri/transport/equipment>
-        rdf:type                       skos:Concept;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/8053";
-        skos:prefLabel                 "Transport Equipment"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/transport> .
-
 <https://w3id.org/eudpp/data/thesauri/uncefact/rec28>
         rdf:type       skos:Collection;
         dcterms:title  "data_thesauri_uncefact_rec28"@en;
@@ -4954,12 +4943,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "data/thesauri/uncefact/rec19";
         skos:prefLabel                 "Transport Mode"@en;
         skos:topConceptOf              <https://w3id.org/eudpp/thesauri/transport> .
-
-<https://w3id.org/eudpp/thesauri/transport>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/transportation";
-        dcterms:title                  "Transportation"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/transport/equipment> , <https://w3id.org/eudpp/thesauri/transport/means> , <https://w3id.org/eudpp/thesauri/transport/mode> .
 
 <https://w3id.org/eudpp/data/thesauri/ebiz/t45>
         rdf:type       skos:Collection;
@@ -5139,17 +5122,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:title                  "Technology"@en;
         skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/technology/printing> , <https://w3id.org/eudpp/thesauri/technology/fabric> , <https://w3id.org/eudpp/thesauri/technology/yarn> .
 
-<https://w3id.org/eudpp/data/thesauri/uncl/4405>
-        rdf:type       skos:Collection;
-        dcterms:title  "data_thesauri_uncl_4405"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/status/status> .
-
-<https://w3id.org/eudpp/thesauri/status/status>
-        rdf:type                       skos:Concept;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/4405";
-        skos:prefLabel                 "Status Codes: (For transport status, use UN/ECE Recommendation 24, see above)"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/status> .
-
 <https://w3id.org/eudpp/data/thesauri/unece/rec24>
         rdf:type       skos:Collection;
         dcterms:title  "data_thesauri_unece_rec24"@en;
@@ -5160,12 +5132,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "data/thesauri/unece/rec24";
         skos:prefLabel                 "Trade and Transport Status Codes"@en;
         skos:topConceptOf              <https://w3id.org/eudpp/thesauri/status> .
-
-<https://w3id.org/eudpp/thesauri/status>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/status";
-        dcterms:title                  "Status"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/status/status> , <https://w3id.org/eudpp/thesauri/status/trade_and_transport> .
 
 <https://w3id.org/eudpp/data/thesauri/eppo/codes>
         rdf:type       skos:Collection;
@@ -5283,11 +5249,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         skos:prefLabel                 "Process (Textile) Type"@en;
         skos:topConceptOf              <https://w3id.org/eudpp/thesauri/textile_process> .
 
-<https://w3id.org/eudpp/thesauri/process_code>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/7187";
-        dcterms:title                  "Code specifying a type of process"@en .
-
 <https://w3id.org/eudpp/thesauri/textile_process>
         rdf:type                       skos:ConceptScheme;
         dcterms:bibliographicCitation  "doc/unece/refCodeListstextile_process";
@@ -5322,50 +5283,16 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:title                  "Picture"@en;
         skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/picture/intended_use_codes> , <https://w3id.org/eudpp/thesauri/picture/resolution_type> .
 
-<https://w3id.org/eudpp/data/thesauri/uncl/7233>
-        rdf:type       skos:Collection;
-        dcterms:title  "data_thesauri_uncl_7233"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/package_logistic_units/package_marking> .
-
-<https://w3id.org/eudpp/thesauri/package_logistic_units/package_marking>
-        rdf:type                       skos:Concept;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/7233";
-        skos:prefLabel                 "Package Marking"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/package_logistic_units> .
-
 <https://w3id.org/eudpp/data/thesauri/uncefact/rec21>
         rdf:type       skos:Collection;
         dcterms:title  "data_thesauri_uncefact_rec21"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/package_logistic_units/package_type> .
+        skos:member    <https://w3id.org/eudpp/thesauri/package/package_type> .
 
-<https://w3id.org/eudpp/thesauri/package_logistic_units/package_type>
+<https://w3id.org/eudpp/thesauri/package/package_type>
         rdf:type                       skos:Concept;
         dcterms:bibliographicCitation  "data/thesauri/uncefact/rec21";
         skos:prefLabel                 "Package Type"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/package_logistic_units> .
-
-<https://w3id.org/eudpp/thesauri/package_logistic_units>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/package_logistic_units";
-        dcterms:title                  "Package (logistic units)"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/package_logistic_units/package_marking> , <https://w3id.org/eudpp/thesauri/package_logistic_units/package_type> .
-
-<https://w3id.org/eudpp/data/thesauri/uncl/4451>
-        rdf:type       skos:Collection;
-        dcterms:title  "data_thesauri_uncl_4451"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/note_subject/note_subject> .
-
-<https://w3id.org/eudpp/thesauri/note_subject/note_subject>
-        rdf:type                       skos:Concept;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/4451";
-        skos:prefLabel                 "Note Subject"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/note_subject> .
-
-<https://w3id.org/eudpp/thesauri/note_subject>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/note_subject";
-        dcterms:title                  "Note Subject"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/note_subject/note_subject> .
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/package> .
 
 <https://w3id.org/eudpp/data/thesauri/ebiz/t422>
         rdf:type       skos:Collection;
@@ -5394,23 +5321,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "data/thesauri/unece/rec16";
         skos:prefLabel                 "UN Location (UNLOCODE)"@en;
         skos:topConceptOf              <https://w3id.org/eudpp/thesauri/location> .
-
-<https://w3id.org/eudpp/data/thesauri/uncl/3227>
-        rdf:type       skos:Collection;
-        dcterms:title  "data_thesauri_uncl_3227"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/location/function> .
-
-<https://w3id.org/eudpp/thesauri/location/function>
-        rdf:type                       skos:Concept;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/3227";
-        skos:prefLabel                 "Location Function"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/location> .
-
-<https://w3id.org/eudpp/thesauri/location>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/location";
-        dcterms:title                  "Location"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/location/un_location> , <https://w3id.org/eudpp/thesauri/location/function> .
 
 <https://w3id.org/eudpp/data/thesauri/uncl/3453>
         rdf:type       skos:Collection;
@@ -5523,23 +5433,6 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/country";
         dcterms:title                  "Country"@en;
         skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/country/country_code> .
-
-<https://w3id.org/eudpp/data/thesauri/uncl/3129>
-        rdf:type       skos:Collection;
-        dcterms:title  "data_thesauri_uncl_3129"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/contact/contact_type> .
-
-<https://w3id.org/eudpp/thesauri/contact/contact_type>
-        rdf:type                       skos:Concept;
-        dcterms:bibliographicCitation  "data/thesauri/uncl/3129";
-        skos:prefLabel                 "Contact Type"@en;
-        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/contact> .
-
-<https://w3id.org/eudpp/thesauri/contact>
-        rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/contact";
-        dcterms:title                  "Contact"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/contact/contact_type> .
 
 <https://w3id.org/eudpp/data/thesauri/ebiz/nt26>
         rdf:type       skos:Collection;
@@ -5904,6 +5797,12 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "data/thesauri/StdMap";
         dcterms:title                  "Purpose"@en .
 
+<https://w3id.org/eudpp/thesauri/hazard/other>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/wikipedia/ghs";
+        skos:prefLabel                 "Other hazard"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/hazard> .
+
 <https://w3id.org/eudpp/thesauri/hazard/environmental>
         rdf:type                       skos:Concept;
         dcterms:bibliographicCitation  "doc/wikipedia/ghs";
@@ -5918,8 +5817,8 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
 
 <https://w3id.org/eudpp/doc/wikipedia/ghs>
         rdf:type       skos:Collection;
-        dcterms:title  "doc_wikipedia_ghs"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/hazard/environmental> , <https://w3id.org/eudpp/thesauri/hazard/health> , <https://w3id.org/eudpp/thesauri/hazard/physical> .
+        dcterms:title  "Globally Harmonized System of Classification and Labelling of Chemicals"@en;
+        skos:member    <https://w3id.org/eudpp/thesauri/hazard/other> , <https://w3id.org/eudpp/thesauri/hazard/environmental> , <https://w3id.org/eudpp/thesauri/hazard/health> , <https://w3id.org/eudpp/thesauri/hazard/physical> .
 
 <https://w3id.org/eudpp/thesauri/hazard/physical>
         rdf:type                       skos:Concept;
@@ -5929,9 +5828,79 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
 
 <https://w3id.org/eudpp/thesauri/hazard>
         rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/wikipedia/ghs";
+        dcterms:bibliographicCitation  "";
         dcterms:title                  "Hazard"@en;
-        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/hazard/environmental> , <https://w3id.org/eudpp/thesauri/hazard/health> , <https://w3id.org/eudpp/thesauri/hazard/physical> .
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/hazard/other> , <https://w3id.org/eudpp/thesauri/hazard/environmental> , <https://w3id.org/eudpp/thesauri/hazard/health> , <https://w3id.org/eudpp/thesauri/hazard/physical> .
+
+<https://w3id.org/eudpp/thesauri/transport/equipment>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Transport Equipment (UNCL 8053)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/transport> .
+
+<https://w3id.org/eudpp/thesauri/transport>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  "Transportation"@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/transport/means> , <https://w3id.org/eudpp/thesauri/transport/mode> , <https://w3id.org/eudpp/thesauri/transport/equipment> .
+
+<https://w3id.org/eudpp/thesauri/package/marking>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Packaging related description code (UNCL 7233)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/package> .
+
+<https://w3id.org/eudpp/thesauri/package>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  "Package (logistic units)"@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/package/package_type> , <https://w3id.org/eudpp/thesauri/package/marking> .
+
+<https://w3id.org/eudpp/thesauri/note_subject>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile/note_subject" , "doc/unece/refCodeListsTextile";
+        dcterms:title                  "Note Subject"@en , "Text subject code qualifier (UNCL 4451)"@en .
+
+<https://w3id.org/eudpp/thesauri/process/process>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Process description code (UNCL 7187)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/process> .
+
+<https://w3id.org/eudpp/thesauri/process>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  "Process"@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/process/process> .
+
+<https://w3id.org/eudpp/thesauri/status/status>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Status description code (UNCL 4405)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/status> .
+
+<https://w3id.org/eudpp/thesauri/status>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  ""@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/status/trade_and_transport> , <https://w3id.org/eudpp/thesauri/status/status> .
+
+<https://w3id.org/eudpp/thesauri/location/function>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Location function code qualifier (UNCL 3227)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/location> .
+
+<https://w3id.org/eudpp/thesauri/location>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  "Location"@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/location/un_location> , <https://w3id.org/eudpp/thesauri/location/function> .
+
+<https://w3id.org/eudpp/thesauri/contact_function>
+        rdf:type                       skos:ConceptScheme;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        dcterms:title                  "Contact Function Code (UNCL 3139)"@en .
 
 <https://w3id.org/eudpp/thesauri/code_list_responsible_agency>
         rdf:type                       skos:ConceptScheme;
@@ -5953,25 +5922,41 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
         dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
         dcterms:title                  "Action request/notification description code (UNCL 1229)"@en .
 
-<https://w3id.org/eudpp/thesauri/inventory_movement_reason>
-        rdf:type                       skos:ConceptScheme;
+<https://w3id.org/eudpp/thesauri/inventory/movement_reason>
+        rdf:type                       skos:Concept;
         dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
-        dcterms:title                  "Inventory movement reason code (UNCL 4499)"@en .
+        skos:prefLabel                 "Inventory movement reason code (UNCL 4499)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/inventory> .
+
+<https://w3id.org/eudpp/thesauri/inventory/inventory>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Inventory type code (UNCL 7491)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/inventory> .
 
 <https://w3id.org/eudpp/thesauri/inventory>
         rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
-        dcterms:title                  "Inventory type code (UNCL 7491)"@en .
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  "Inventory"@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/inventory/movement_reason> , <https://w3id.org/eudpp/thesauri/inventory/inventory> .
 
-<https://w3id.org/eudpp/thesauri/document_status>
-        rdf:type                       skos:ConceptScheme;
+<https://w3id.org/eudpp/thesauri/document/status>
+        rdf:type                       skos:Concept;
         dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
-        dcterms:title                  "Document status code (UNCL 1373)"@en .
+        skos:prefLabel                 "Document status code (UNCL 1373)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/document> .
+
+<https://w3id.org/eudpp/thesauri/document/document>
+        rdf:type                       skos:Concept;
+        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
+        skos:prefLabel                 "Document name code (UNCL  1001)"@en;
+        skos:topConceptOf              <https://w3id.org/eudpp/thesauri/document> .
 
 <https://w3id.org/eudpp/thesauri/document>
         rdf:type                       skos:ConceptScheme;
-        dcterms:bibliographicCitation  "doc/unece/refCodeListsTextile";
-        dcterms:title                  "Document name code (UNCL  1001)"@en .
+        dcterms:bibliographicCitation  "";
+        dcterms:title                  "Document"@en;
+        skos:hasTopConcept             <https://w3id.org/eudpp/thesauri/document/status> , <https://w3id.org/eudpp/thesauri/document/document> .
 
 <https://w3id.org/eudpp/thesauri/inspection/3>
         rdf:type                       skos:Concept;
@@ -5988,7 +5973,7 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
 <https://w3id.org/eudpp/doc/unece/refCodeListsTextile>
         rdf:type       skos:Collection;
         dcterms:title  "UN Code Lists and Ids for Textile"@en;
-        skos:member    <https://w3id.org/eudpp/thesauri/inspection/3> , <https://w3id.org/eudpp/thesauri/inspection/2> , <https://w3id.org/eudpp/thesauri/inspection/1> .
+        skos:member    <https://w3id.org/eudpp/thesauri/transport/equipment> , <https://w3id.org/eudpp/thesauri/package/marking> , <https://w3id.org/eudpp/thesauri/process/process> , <https://w3id.org/eudpp/thesauri/status/status> , <https://w3id.org/eudpp/thesauri/location/function> , <https://w3id.org/eudpp/thesauri/inventory/movement_reason> , <https://w3id.org/eudpp/thesauri/inventory/inventory> , <https://w3id.org/eudpp/thesauri/document/status> , <https://w3id.org/eudpp/thesauri/document/document> , <https://w3id.org/eudpp/thesauri/inspection/3> , <https://w3id.org/eudpp/thesauri/inspection/2> , <https://w3id.org/eudpp/thesauri/inspection/1> .
 
 <https://w3id.org/eudpp/thesauri/inspection/1>
         rdf:type                       skos:Concept;
@@ -30044,3 +30029,1040 @@ PREFIX xyz:     <http://sparql.xyz/facade-x/data/>
 <https://w3id.org/eudpp/doc/unece/refCodeListsTextile>
         rdf:type     skos:Collection;
         skos:member  <https://w3id.org/eudpp/thesauri/transport/equipment/PL> , <https://w3id.org/eudpp/thesauri/transport/equipment/PPA> , <https://w3id.org/eudpp/thesauri/transport/equipment/PST> , <https://w3id.org/eudpp/thesauri/transport/equipment/RF> , <https://w3id.org/eudpp/thesauri/transport/equipment/RG> , <https://w3id.org/eudpp/thesauri/transport/equipment/RGF> , <https://w3id.org/eudpp/thesauri/transport/equipment/RO> , <https://w3id.org/eudpp/thesauri/transport/equipment/RR> , <https://w3id.org/eudpp/thesauri/transport/equipment/SPP> , <https://w3id.org/eudpp/thesauri/transport/equipment/STR> , <https://w3id.org/eudpp/thesauri/transport/equipment/SW> , <https://w3id.org/eudpp/thesauri/transport/equipment/TE> , <https://w3id.org/eudpp/thesauri/transport/equipment/TP> , <https://w3id.org/eudpp/thesauri/transport/equipment/TS> , <https://w3id.org/eudpp/thesauri/transport/equipment/TSU> , <https://w3id.org/eudpp/thesauri/transport/equipment/UL> , <https://w3id.org/eudpp/thesauri/transport/equipment/PFP> , <https://w3id.org/eudpp/thesauri/transport/equipment/PBP> , <https://w3id.org/eudpp/thesauri/transport/equipment/PA> , <https://w3id.org/eudpp/thesauri/transport/equipment/MPA> , <https://w3id.org/eudpp/thesauri/transport/equipment/LU> , <https://w3id.org/eudpp/thesauri/transport/equipment/LAR> , <https://w3id.org/eudpp/thesauri/transport/equipment/IL> , <https://w3id.org/eudpp/thesauri/transport/equipment/FPR> , <https://w3id.org/eudpp/thesauri/transport/equipment/FPN> , <https://w3id.org/eudpp/thesauri/transport/equipment/EYP> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGI> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGH> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGG> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGF> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGE> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGD> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGC> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGB> , <https://w3id.org/eudpp/thesauri/transport/equipment/EGA> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFZ> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFY> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFX> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFW> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFV> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFU> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFT> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFS> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFR> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFQ> , <https://w3id.org/eudpp/thesauri/transport/equipment/EFP> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPO> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPN> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPM> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPL> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPK> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPJ> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPI> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPH> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPG> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPF> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPE> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPD> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPC> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPB> , <https://w3id.org/eudpp/thesauri/transport/equipment/DPA> , <https://w3id.org/eudpp/thesauri/transport/equipment/CN> , <https://w3id.org/eudpp/thesauri/transport/equipment/CH> , <https://w3id.org/eudpp/thesauri/transport/equipment/BX> , <https://w3id.org/eudpp/thesauri/transport/equipment/BR> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPZ> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPY> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPX> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPW> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPV> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPU> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPT> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPS> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPR> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPQ> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPP> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPO> , <https://w3id.org/eudpp/thesauri/transport/equipment/BPN> , <https://w3id.org/eudpp/thesauri/transport/equipment/BL> , <https://w3id.org/eudpp/thesauri/transport/equipment/BB> , <https://w3id.org/eudpp/thesauri/transport/equipment/AT> , <https://w3id.org/eudpp/thesauri/transport/equipment/AQ> , <https://w3id.org/eudpp/thesauri/transport/equipment/AP> , <https://w3id.org/eudpp/thesauri/transport/equipment/AO> , <https://w3id.org/eudpp/thesauri/transport/equipment/AN> , <https://w3id.org/eudpp/thesauri/transport/equipment/AM> , <https://w3id.org/eudpp/thesauri/transport/equipment/AL> , <https://w3id.org/eudpp/thesauri/transport/equipment/AK> , <https://w3id.org/eudpp/thesauri/transport/equipment/AJ> , <https://w3id.org/eudpp/thesauri/transport/equipment/AI> , <https://w3id.org/eudpp/thesauri/transport/equipment/AH> , <https://w3id.org/eudpp/thesauri/transport/equipment/AG> , <https://w3id.org/eudpp/thesauri/transport/equipment/AE> , <https://w3id.org/eudpp/thesauri/transport/equipment/AD> , <https://w3id.org/eudpp/thesauri/transport/equipment/AB> , <https://w3id.org/eudpp/thesauri/transport/equipment/AA> .
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH451>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH451";
+        skos:prefLabel  "Can cause very long-lasting and diffuse contamination of water resources" .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH201>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH201";
+        skos:prefLabel  "Contains lead. Should not be used on surfaces liable to be chewed or sucked by children." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH201A>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH201A";
+        skos:prefLabel  "Warning! Contains lead." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH202>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH202";
+        skos:prefLabel  "Cyanoacrylate. Danger. Bonds skin and eyes in seconds. Keep out of the reach of children." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH203>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH203";
+        skos:prefLabel  "Contains chromium(VI). May produce an allergic reaction." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH204>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH204";
+        skos:prefLabel  "Contains isocyanates. May produce an allergic reaction." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH205>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH205";
+        skos:prefLabel  "Contains epoxy constituents. May produce an allergic reaction." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH206>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH206";
+        skos:prefLabel  "Warning! Do not use together with other products. May release dangerous gases (chlorine)." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH207>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH207";
+        skos:prefLabel  "Warning! Contains cadmium. Dangerous fumes are formed during use. See information supplied by the manufacturer. Comply with the safety instructions." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH208>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH208";
+        skos:prefLabel  "Contains <name of sensitising substance>. May produce an allergic reaction." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH209>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH209";
+        skos:prefLabel  "Can become highly flammable in use." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH209A>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH209A";
+        skos:prefLabel  "Can become flammable in use." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH210>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH210";
+        skos:prefLabel  "Safety data sheet available on request." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH211>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH211";
+        skos:prefLabel  "Warning! Hazardous respirable droplets may be formed when sprayed. Do not breathe spray or mist." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH212>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH212";
+        skos:prefLabel  "Warning! Hazardous respirable dust may be formed when used. Do not breathe dust." .
+
+<https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH401>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/other>;
+        skos:notation   "EUH401";
+        skos:prefLabel  "To avoid risks to human health and the environment, comply with the instructions for use." .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH450>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH450";
+        skos:prefLabel  "Can cause long-lasting and diffuse contamination of water resources" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH441>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH441";
+        skos:prefLabel  "Strongly accumulates in the environment and living organisms including in humans" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH440>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH440";
+        skos:prefLabel  "Accumulates in the environment and living organisms including in humans" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH431>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH431";
+        skos:prefLabel  "Suspected of causing endocrine disruption in the environment" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH430>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH430";
+        skos:prefLabel  "May cause endocrine disruption in the environment" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH059>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "EUH059";
+        skos:prefLabel  "Hazardous to the ozone layer, superseded by GHS Class 5.1 in the second adaptation to technical progress of CLP." .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH381>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH381";
+        skos:prefLabel  "Suspected of causing endocrine disruption in humans" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH380>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH380";
+        skos:prefLabel  "May cause endocrine disruption in humans" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH071>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH071";
+        skos:prefLabel  "Corrosive to the respiratory tract" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH070>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH070";
+        skos:prefLabel  "Toxic by eye contact" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH066>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH066";
+        skos:prefLabel  "Repeated exposure may cause skin dryness or cracking" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH032>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH032";
+        skos:prefLabel  "Contact with acids liberates very toxic gas" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH031>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH031";
+        skos:prefLabel  "Contact with acids liberates toxic gas" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH029>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "EUH029";
+        skos:prefLabel  "Contact with water liberates toxic gas" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH044>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "EUH044";
+        skos:prefLabel  "Risk of explosion if heated under confinement" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH019>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "EUH019";
+        skos:prefLabel  "May form explosive peroxides" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH018>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "EUH018";
+        skos:prefLabel  "In use may form flammable/explosive vapour-air mixture" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH014>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "EUH014";
+        skos:prefLabel  "Reacts violently with water" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH006>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/eu>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "EUH006";
+        skos:prefLabel  "Explosive with or without contact with air, deleted in the fourth adaptation to technical progress of CLP." .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H441>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H441";
+        skos:prefLabel  "Very toxic to terrestrial invertebrates" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H420>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H420";
+        skos:prefLabel  "Harms public health and the environment by destroying ozone in the upper atmosphere" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H413>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H413";
+        skos:prefLabel  "May cause long lasting harmful effects to aquatic life" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H412>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H412";
+        skos:prefLabel  "Harmful to aquatic life with long lasting effects" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H411>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H411";
+        skos:prefLabel  "Toxic to aquatic life with long lasting effects" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H410>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H410";
+        skos:prefLabel  "Very toxic to aquatic life with long lasting effects" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H402>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H402";
+        skos:prefLabel  "Harmful to aquatic life" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H401>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H401";
+        skos:prefLabel  "Toxic to aquatic life" .
+
+<https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H400>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/environmental>;
+        skos:notation   "H400";
+        skos:prefLabel  "Very toxic to aquatic life" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H373>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H373";
+        skos:prefLabel  "May cause damage to organs through prolonged or repeated exposure" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H372>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H372";
+        skos:prefLabel  "Causes damage to organs through prolonged or repeated exposure" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H371>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H371";
+        skos:prefLabel  "May cause damage to organs" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H370>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H370";
+        skos:prefLabel  "Causes damage to organs" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H362>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H362";
+        skos:prefLabel  "May cause harm to breast-fed children" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361fd>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H361fd";
+        skos:prefLabel  "Suspected of damaging fertility. Suspected of damaging the unborn child." .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361f>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H361f";
+        skos:prefLabel  "Suspected of damaging fertility" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361d>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H361d";
+        skos:prefLabel  "Suspected of damaging the unborn child" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H361";
+        skos:prefLabel  "Suspected of damaging fertility or the unborn child" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360Fd>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H360Fd";
+        skos:prefLabel  "May damage fertility. Suspected of damaging the unborn child." .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360FD>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H360FD";
+        skos:prefLabel  "May damage fertility. May damage the unborn child." .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360F>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H360F";
+        skos:prefLabel  "May damage fertility" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360Df>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H360Df";
+        skos:prefLabel  "May damage the unborn child. Suspected of damaging fertility." .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360D>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H360D";
+        skos:prefLabel  "May damage the unborn child" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H360";
+        skos:prefLabel  "May damage fertility or the unborn child" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H351>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H351";
+        skos:prefLabel  "Suspected of causing cancer" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H350i>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H350i";
+        skos:prefLabel  "May cause cancer by inhalation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H350>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H350";
+        skos:prefLabel  "May cause cancer" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H341>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H341";
+        skos:prefLabel  "Suspected of causing genetic defects" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H340>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H340";
+        skos:prefLabel  "May cause genetic defects" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H336>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H336";
+        skos:prefLabel  "May cause drowsiness or dizziness" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H335>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H335";
+        skos:prefLabel  "May cause respiratory irritation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H334>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H334";
+        skos:prefLabel  "May cause allergy or asthma symptoms or breathing difficulties if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H333>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H333";
+        skos:prefLabel  "May be harmful if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H332>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H332";
+        skos:prefLabel  "Harmful if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H331>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H331";
+        skos:prefLabel  "Toxic if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H330>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H330";
+        skos:prefLabel  "Fatal if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H320>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H320";
+        skos:prefLabel  "Causes eye irritation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H319>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H319";
+        skos:prefLabel  "Causes serious eye irritation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H318>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H318";
+        skos:prefLabel  "Causes serious eye damage" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H317>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H317";
+        skos:prefLabel  "May cause an allergic skin reaction" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H316>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H316";
+        skos:prefLabel  "Causes mild skin irritation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H315_H320>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H315+H320";
+        skos:prefLabel  "Causes skin and eye irritation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H315>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H315";
+        skos:prefLabel  "Causes skin irritation" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H314>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H314";
+        skos:prefLabel  "Causes severe skin burns and eye damage" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H313_H333>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H313+H333";
+        skos:prefLabel  "May be harmful in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H313>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H313";
+        skos:prefLabel  "May be harmful in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H312_H332>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H312+H332";
+        skos:prefLabel  "Harmful in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H312>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H312";
+        skos:prefLabel  "Harmful in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H311_H331>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H311+H331";
+        skos:prefLabel  "Toxic in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H311>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H311";
+        skos:prefLabel  "Toxic in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H310_H330>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H310+H330";
+        skos:prefLabel  "Fatal in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H310>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H310";
+        skos:prefLabel  "Fatal in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H305>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H305";
+        skos:prefLabel  "May be harmful if swallowed and enters airways" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H304>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H304";
+        skos:prefLabel  "May be fatal if swallowed and enters airways" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303_H333>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H303+H333";
+        skos:prefLabel  "May be harmful if swallowed or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303_H313_H333>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H303+H313+H333";
+        skos:prefLabel  "May be harmful if swallowed, in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303_H313>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H303+H313";
+        skos:prefLabel  "May be harmful if swallowed or in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H303";
+        skos:prefLabel  "May be harmful if swallowed" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302_H332>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H302+H332";
+        skos:prefLabel  "Harmful if swallowed or inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302_H312_H332>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H302+H312+H332";
+        skos:prefLabel  "Harmful if swallowed, in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302_H312>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H302+H312";
+        skos:prefLabel  "Harmful if swallowed or in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H302";
+        skos:prefLabel  "Harmful if swallowed" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301_H331>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H301+H331";
+        skos:prefLabel  "Toxic if swallowed or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301_H311_H331>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H301+H311+H331";
+        skos:prefLabel  "Toxic if swallowed, in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301_H311>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H301+H311";
+        skos:prefLabel  "Toxic if swallowed or in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H301";
+        skos:prefLabel  "Toxic if swallowed" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300_H330>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H300+H330";
+        skos:prefLabel  "Fatal if swallowed or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300_H310_H330>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H300+H310+H330";
+        skos:prefLabel  "Fatal if swallowed, in contact with skin or if inhaled" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300_H310>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H300+H310";
+        skos:prefLabel  "Fatal if swallowed or in contact with skin" .
+
+<https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/health>;
+        skos:notation   "H300";
+        skos:prefLabel  "Fatal if swallowed" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H290>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H290";
+        skos:prefLabel  "May be corrosive to metals" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H284>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H284";
+        skos:prefLabel  "Chemical under pressure: May explode if heated" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H283>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H283";
+        skos:prefLabel  "Flammable chemical under pressure: May explode if heated" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H282>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H282";
+        skos:prefLabel  "Extremely flammable chemical under pressure: May explode if heated" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H281>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H281";
+        skos:prefLabel  "Contains refrigerated gas: may cause cryogenic burns or injury" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H280>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H280";
+        skos:prefLabel  "Contains gas under pressure: may explode if heated" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H272>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H272";
+        skos:prefLabel  "May intensify fire: OXIDISER" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H271>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H271";
+        skos:prefLabel  "May cause fire or explosion: strong oxidizer" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H270>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H270";
+        skos:prefLabel  "May cause or intensify fire: oxidizer" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H261>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H261";
+        skos:prefLabel  "In contact with water releases flammable gas" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H260>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H260";
+        skos:prefLabel  "In contact with water releases flammable gases which may ignite spontaneously" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H252>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H252";
+        skos:prefLabel  "Self-heating in large quantities: may catch fire" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H251>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H251";
+        skos:prefLabel  "Self-heating: may catch fire" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H250>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H250";
+        skos:prefLabel  "Catches fire spontaneously if exposed to air" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H242>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H242";
+        skos:prefLabel  "Heating may cause a fire" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H241>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H241";
+        skos:prefLabel  "Heating may cause a fire or explosion" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H240>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H240";
+        skos:prefLabel  "Heating may cause an explosion" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H232>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H232";
+        skos:prefLabel  "May ignite spontaneously if exposed to air" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H231>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H231";
+        skos:prefLabel  "May react explosively even in the absence of air at elevated pressure and/or temperature" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H230>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H230";
+        skos:prefLabel  "May react explosively even in the absence of air" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H229>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H229";
+        skos:prefLabel  "Pressurized container: may burst if heated" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H228>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H228";
+        skos:prefLabel  "Flammable solid" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H227>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H227";
+        skos:prefLabel  "Combustible liquid" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H226>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H226";
+        skos:prefLabel  "Flammable liquid and vapour" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H225>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H225";
+        skos:prefLabel  "Highly flammable liquid and vapour" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H224>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H224";
+        skos:prefLabel  "Extremely flammable liquid and vapour" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H223>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H223";
+        skos:prefLabel  "Flammable material" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H200>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H200";
+        skos:prefLabel  "Unstable explosive" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H201>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H201";
+        skos:prefLabel  "Explosive: mass explosion hazard" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H202>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H202";
+        skos:prefLabel  "Explosive: severe projection hazard" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H203>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H203";
+        skos:prefLabel  "Explosive: fire, blast or projection hazard" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H204>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H204";
+        skos:prefLabel  "Fire or projection hazard" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H205>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H205";
+        skos:prefLabel  "May mass explode in fire" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H206>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H206";
+        skos:prefLabel  "Fire, blast or projection hazard: increased risk of explosion if desensitizing agent is reduced" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H207>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H207";
+        skos:prefLabel  "Fire or projection hazard; increased risk of explosion if desensitizing agent is reduced" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H208>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H208";
+        skos:prefLabel  "Fire hazard; increased risk of explosion if desensitizing agent is reduced" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H209>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H209";
+        skos:prefLabel  "Explosive" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H210>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H210";
+        skos:prefLabel  "Very sensitive" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H211>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H211";
+        skos:prefLabel  "May be sensitive" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H220>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H220";
+        skos:prefLabel  "Extremely flammable gas" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H221>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H221";
+        skos:prefLabel  "Flammable gas" .
+
+<https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H222>
+        rdf:type        skos:Concept;
+        dct:publisher   <https://w3id.org/eudpp/org/uncefact>;
+        skos:broader    <https://w3id.org/eudpp/thesauri/hazard/physical>;
+        skos:notation   "H222";
+        skos:prefLabel  "Extremely flammable material" .
+
+<https://w3id.org/eudpp/doc/wikipedia/ghs>
+        skos:member  <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH451> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH201> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH201A> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH202> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH203> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH204> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH205> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH206> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH207> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH208> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH209> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH209A> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH210> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH211> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH212> , <https://w3id.org/eudpp/thesauri/hazard/other/eu/EUH401> , <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH450> , <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH441> , <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH440> , <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH431> , <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH430> , <https://w3id.org/eudpp/thesauri/hazard/environmental/eu/EUH059> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH381> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH380> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH071> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH070> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH066> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH032> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH031> , <https://w3id.org/eudpp/thesauri/hazard/health/eu/EUH029> , <https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH044> , <https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH019> , <https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH018> , <https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH014> , <https://w3id.org/eudpp/thesauri/hazard/physical/eu/EUH006> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H441> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H420> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H413> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H412> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H411> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H410> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H402> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H401> , <https://w3id.org/eudpp/thesauri/hazard/environmental/uncefact/H400> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H373> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H372> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H371> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H370> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H362> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361fd> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361f> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361d> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H361> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360Fd> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360FD> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360F> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360Df> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360D> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H360> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H351> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H350i> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H350> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H341> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H340> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H336> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H335> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H334> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H333> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H332> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H331> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H330> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H320> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H319> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H318> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H317> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H316> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H315_H320> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H315> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H314> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H313_H333> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H313> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H312_H332> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H312> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H311_H331> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H311> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H310_H330> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H310> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H305> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H304> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303_H333> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303_H313_H333> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303_H313> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H303> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302_H332> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302_H312_H332> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302_H312> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H302> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301_H331> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301_H311_H331> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301_H311> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H301> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300_H330> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300_H310_H330> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300_H310> , <https://w3id.org/eudpp/thesauri/hazard/health/uncefact/H300> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H290> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H284> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H283> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H282> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H281> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H280> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H272> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H271> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H270> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H261> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H260> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H252> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H251> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H250> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H242> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H241> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H240> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H232> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H231> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H230> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H229> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H228> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H227> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H226> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H225> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H224> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H222> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H221> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H220> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H211> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H210> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H209> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H208> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H207> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H206> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H205> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H204> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H203> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H202> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H201> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H200> , <https://w3id.org/eudpp/thesauri/hazard/physical/uncefact/H223> .

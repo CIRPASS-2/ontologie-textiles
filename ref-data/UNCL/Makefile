@@ -1,11 +1,6 @@
-.PHONY: clean extract convert clean UNCL3207.tsv UNCL3453.tsv UNCL3499.tsv
+.PHONY: clean extract all clean UNCL3207.tsv UNCL3453.tsv UNCL3499.tsv
 
-clean:
-	rm *.ttl
-
-extract: UNCL1001.tsv UNCL1229.tsv UNCL1373.tsv UNCL2379.tsv UNCL3035.tsv UNCL3055.tsv UNCL3139.tsv UNCL3227.tsv UNCL3453.tsv UNCL3499.tsv UNCL4405.tsv UNCL4451.tsv UNCL4499.tsv UNCL7187.tsv UNCL7233.tsv UNCL7491.tsv UNCL8053.tsv
-
-convert: UNCL1001.ttl UNCL1229.ttl UNCL1373.ttl UNCL2379.ttl UNCL3035.ttl UNCL3055.ttl UNCL3139.ttl UNCL3227.ttl  UNCL4405.ttl UNCL4451.ttl UNCL4499.ttl UNCL7187.ttl UNCL7233.ttl UNCL7491.ttl UNCL8053.ttl
+all: UNCL1001.ttl UNCL1229.ttl UNCL1373.ttl UNCL2379.ttl UNCL3035.ttl UNCL3055.ttl UNCL3139.ttl UNCL3227.ttl  UNCL4405.ttl UNCL4451.ttl UNCL4499.ttl UNCL7187.ttl UNCL7233.ttl UNCL7491.ttl UNCL8053.ttl
 
 UNCL1001.tsv:
 	echo "The command has been commented out to avoid accidental overwrite since the TSV has been edited manually."
@@ -102,7 +97,7 @@ UNCL3139.ttl: UNCL3139.tsv uncl_convert.rq
 	java -jar sparql-anything-v1.1.0.jar -v location=UNCL3139.tsv -o UNCL3139.ttl -v parent=thesauri/contact_function -v collection=doc/unece/refCodeListsTextile -q uncl_convert.rq
 
 UNCL3227.ttl: UNCL3227.tsv uncl_convert.rq
-	java -jar sparql-anything-v1.1.0.jar -v location=UNCL3227.tsv -o UNCL3227.ttl -v parent=thesauri/location_function -v collection=doc/unece/refCodeListsTextile -q uncl_convert.rq
+	java -jar sparql-anything-v1.1.0.jar -v location=UNCL3227.tsv -o UNCL3227.ttl -v parent=thesauri/location/function -v collection=doc/unece/refCodeListsTextile -q uncl_convert.rq
 
 UNCL4405.ttl: UNCL4405.tsv uncl_convert.rq
 	java -jar sparql-anything-v1.1.0.jar -v location=UNCL4405.tsv -o UNCL4405.ttl -v parent=thesauri/status/status -v collection=doc/unece/refCodeListsTextile -q uncl_convert.rq
@@ -125,3 +120,8 @@ UNCL7233.ttl: UNCL7233.tsv uncl_convert.rq
 UNCL8053.ttl: UNCL8053.tsv uncl_convert.rq
 	java -jar sparql-anything-v1.1.0.jar -v location=UNCL8053.tsv -o UNCL8053.ttl -v parent=thesauri/transport/equipment -v collection=doc/unece/refCodeListsTextile -q uncl_convert.rq
 
+
+clean:
+	rm *.ttl
+
+extract: UNCL1001.tsv UNCL1229.tsv UNCL1373.tsv UNCL2379.tsv UNCL3035.tsv UNCL3055.tsv UNCL3139.tsv UNCL3227.tsv UNCL3453.tsv UNCL3499.tsv UNCL4405.tsv UNCL4451.tsv UNCL4499.tsv UNCL7187.tsv UNCL7233.tsv UNCL7491.tsv UNCL8053.tsv
