@@ -5,8 +5,11 @@ JAR_FILE := ../../bin/${JAR_VER}
 
 all: skos.concepts.ttl
 
-skos.concepts.ttl: taxonomy.concepts.ttl uncl.concepts.ttl hazards.concepts.ttl
-	cat taxonomy.concepts.ttl uncl.concepts.ttl hazards.concepts.ttl > skos.concepts.ttl
+ebiz.concepts.ttl: ../eBiz/eBiz*.ttl
+	cat ../eBiz/eBiz*.ttl > ebiz.concepts.ttl
+
+skos.concepts.ttl: taxonomy.concepts.ttl uncl.concepts.ttl hazards.concepts.ttl ebiz.concepts.ttl
+	cat taxonomy.concepts.ttl uncl.concepts.ttl hazards.concepts.ttl ebiz.concepts.ttl> skos.concepts.ttl
 
 uncl.concepts.ttl: ../UNCL/UNCL*.ttl
 	cat ../UNCL/UNCL*.ttl  > uncl.concepts.ttl
@@ -37,4 +40,4 @@ install:
 	curl -L "https://github.com/SPARQL-Anything/sparql.anything/releases/download/v1.1.0/$(JAR_VER)" -o $(JAR_FILE)
 
 clean:
-	rm -f paths.csv data.csv taxonomy.concepts.ttl uncl.concepts.ttl hazards.concepts.ttl
+	rm -f paths.csv data.csv taxonomy.concepts.ttl uncl.concepts.ttl hazards.concepts.ttl ebiz.concepts.ttl

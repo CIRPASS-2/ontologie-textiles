@@ -1,11 +1,11 @@
-base         <https://w3id.org/eudpp/thesauri/>
+base         <https://w3id.org/eudpp/>
 prefix xyz:  <http://sparql.xyz/facade-x/data/>
 prefix fx:   <http://sparql.xyz/facade-x/ns/>
 prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 
 construct {
-  ?item a skos:Concept; skos:notation ?code; skos:prefLabel ?label; skos:inScheme $_thes_iri.
+  ?item a skos:Concept; skos:notation ?code; skos:prefLabel ?label_lang; skos:broader $_thes_iri.
 }
 where { service <x-sparql-anything:>
   { fx:properties fx:location $_location.
@@ -14,4 +14,5 @@ where { service <x-sparql-anything:>
       rdf:_2 [xyz:ColumnRef "EN";   rdf:_1/rdf:_1 ?label]
   }
   bind(iri(concat(str($_thes_iri),"/",?code)) as ?item)
+  bind(strlang(?label,"en") as ?label_lang)
 }
