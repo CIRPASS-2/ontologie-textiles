@@ -1,19 +1,23 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [Ontology Reviews](#ontology-reviews)
-- [MVP](#mvp)
+- [Reviews and Proposals](#reviews-and-proposals)
+    - [UNTP Ontologies Review](#untp-ontologies-review)
+    - [Cirpass Ontologies Review](#cirpass-ontologies-review)
+    - [MVP Textile Review](#mvp-textile-review)
+- [MVP Ontology](#mvp-ontology)
 
 <!-- markdown-toc end -->
 
-# Ontology Reviews
-We have reviewed comprehensively 2 relevant ontologies:
+# Reviews and Proposals
+
+## UNTP Ontologies Review
+We have reviewed comprehensively the United Nations Transparency Protocol (UNTP) ontologies (DPP, DFR etc):
 - [UNTP Ontology Review](https://docs.google.com/document/d/1R3yqaYCO3JTpWsIckSzbumzyQgwRvd5X4Ewg-9Ax4yU/edit) (United Nations Transparency Protocol)
   - Issues posted on the [UNTP gitlab at UNICC](https://opensource.unicc.org/un/unece/uncefact/spec-untp/-/issues)
-  - [Ontologies saved as turtle](https://github.com/VladimirAlexiev/untp-ontologies) at github 
-- [Cirpass2 Ontology Review: Core and Substances of Concern](https://docs.google.com/document/d/1yGp35EHM_54bdIllKz_iXvdFDFs7ahfm9OOcXjZDUWc/edit)
+  - [Ontologies saved as turtle](https://github.com/VladimirAlexiev/untp-ontologies) at github
 
-The full bibliographic records are below:
+Bibliographic record:
 ```bibtex
 @TechReport{AlexievEtAl-Cirpass2-Review-2025,
   author       = {Vladimir Alexiev and Elio Hbeich and Robert David},
@@ -26,7 +30,14 @@ The full bibliographic records are below:
   date         = {2025-10-23},
   abstract     = {The document is a review of the United Nations Transparency Protocol (UNTP) ontologies, identifying problems and areas for improvement. Purpose: The review aims to help the EU Cirpass2 project assess UNTP ontology suitability; and to facilitate posting issues to UNTP (at UNICC GitLab). Parts: Describes the current UNTP domains (core, dcc, dfr, dia, dpp, dte). Links to a github repo with Turtle variants and some analysis. Outlines issues in 16 detailed subsections. After general approval at the UNTP mailing list, all the issues were posted on the UNTP gitlab},
 }
+```
 
+## Cirpass Ontologies Review
+We also reviewed the  Cirpass2 ontologies:
+- [Cirpass2 Ontology Review: Core and Substances of Concern](https://docs.google.com/document/d/1yGp35EHM_54bdIllKz_iXvdFDFs7ahfm9OOcXjZDUWc/edit)
+
+Bibliographic record:
+```bibtex
 @TechReport{AlexievEtAl-Cirpass2-Review-2025,
   author       = {Vladimir Alexiev and Elio Hbeich and Ivo Ladenius},
   title        = {Cirpass2 Ontology Review: Core and Substances of Concern},
@@ -40,5 +51,19 @@ The full bibliographic records are below:
 }
 ```
 
-# MVP
-A [MVP Textile DPP](https://dpp.vocabulary-hub.eu/message-model-tree/Message_0e9f0257-c021-48fb-bad5-fe15791d8e66?panes=element_tree:Message_0e9f0257-c021-48fb-bad5-fe15791d8e66:hkz1hp:primary) was proposed recently at the [CIRPASS-2 Digital Product Passport Vocabulary Hub](https://dpp.vocabulary-hub.eu/)
+## MVP Textile Review
+The [MVP Textile DPP](https://dpp.vocabulary-hub.eu/message-model/MessageModel_b564fa30-31bc-4849-bea9-3712ba84b6cf) is a data ("message") model at the [CIRPASS-2 Digital Product Passport Vocabulary Hub](https://dpp.vocabulary-hub.eu/)
+that describes a tentative "minimum viable model" for Cirpass Textile DPPs.
+The MVP Textile DPP so far has 2 versions:
+- Version 1 was a flat data model from the Kezzler pilot, ingested "as-is" into the DPP Vocabulary Hub
+- Version 2 (2025-12-04) transformed the flat v1 model into a hierarchical model, but IMHO doesn't go nearly far enough.
+
+I downloaded MVP v2 as a sheet from [CP2 DPP textile data.xlsx](https://dpp.vocabulary-hub.eu/api/file-object/FileObject_b433e028-8486-4d65-a7a7-8d42854f680b/download/CP2%20DPP%20textile%20data.xlsx), and made:
+- Sheet [MVP Textile DPP Review](https://docs.google.com/spreadsheets/d/1NsB8gzLI9XmpU1oO3jQexFkmYQwyDMar8C6R2X7EnSg/edit?gid=0#gid=0) with detailed comments by Graphwise and GS1, and some link to [issues](https://github.com/CIRPASS-2/dpp-textiles/issues)
+- Document [MVP Textile DPP Review and Proposal](https://docs.google.com/document/d/1pv0GGC3Wfs-U33O-EdtuC-_30z3b0e1Gu3O-OwGfIPo/edit), Vladimir Alexiev, 2026-01-09. It includes:
+  - Higher-level critique of some aspects
+  -
+
+
+
+# MVP Ontology
