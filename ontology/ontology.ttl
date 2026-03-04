@@ -1,89 +1,347 @@
-@base <https://w3id.org/eudpp/> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix eudpp:  <https://w3id.org/eudpp/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rov:    <http://www.w3.org/ns/regorg#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix eudpp: <https://w3id.org/eudpp/> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+# TODO: move external alignments to separate file
 
-<> rdf:type owl:Ontology ;
-  owl:imports <http://www.w3.org/ns/prov-o#> ;
-  owl:imports <http://www.w3.org/2004/02/skos/core#> ; 
+## Metadata
 
-  owl:versionInfo "0.1" ; 
-  rdfs:comment "You are free to create derivative work as long as you cite the original authors." ; 
-  dct:title "The EU Digital Product Passport Ontology" ; 
+eudpp: a owl:Ontology ;
+  #owl:imports <http://www.w3.org/ns/prov-o#> ;
+  #owl:imports <http://www.w3.org/2004/02/skos/core#> ;
+  owl:versionInfo "0.1" ;
+  dct:created "2026-03-02"^^xsd:date ;
+  rdfs:label "EU Digital Product Passport Ontology" ;
+  dct:title "EU Digital Product Passport Ontology" ;
+  dct:description "Core constructs to support Textile Digital Product Passports: agents, facilities, products, identifiers & schemes, classifications & schemes, and product-agent role relations/events."@en ;
+  skos:scopeNote "Covers MVP Textile DPP: core constructs needed for all kinds of products"@en ;
   dct:subject "Sustainability", "Circular Economy" ;
-  rdfs:label "EUDPP Ontology" ; 
-  dct:creator <https://orcid.org/0000-0003-3340-5963> 
-            , <https://orcid.org/0000-0002-3244-5341>  
-            , <https://orcid.org/0000-0001-7508-7428> ; # "Viktor Senderov", "Robert David", "Vladimir Alexiev"
+  dct:creator <https://orcid.org/0000-0003-3340-5963> , <https://orcid.org/0000-0002-3244-5341> , <https://orcid.org/0000-0001-7508-7428>, <https://orcid.org/0000-0001-8766-4069> ;
+  dct:rights "You are free to create derivative work as long as you cite the original authors." ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> .
-  #owl:imports XXX .
 
-# --- Country ---
-eudpp:Country rdf:type owl:Class ;
+<https://orcid.org/0000-0003-3340-5963>  a schema:Person; schema:name "Viktor Senderov".
+<https://orcid.org/0000-0002-3244-5341>  a schema:Person; schema:name "Robert David".
+<https://orcid.org/0000-0001-7508-7428>  a schema:Person; schema:name "Vladimir Alexiev".
+<https://orcid.org/0000-0001-8766-4069>  a schema:Person; schema:name "Albin Ahmeti".
+
+## === Core Entities ===
+eudpp:Entity a owl:Class ;
+  rdfs:label "Entity"@en ;
+  rdfs:comment "Superclass for core DPP-described entities in this ontology."@en;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:Country a owl:Class ;
   rdfs:label "Country"@en ;
   rdfs:comment "A nation state recognized by the EU Digital Product Passport system."@en ;
-  rdfs:subClassOf <http://schema.org/Country> , 
-                  <http://dbpedia.org/ontology/Country> ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+  rdfs:subClassOf eudpp:Entity ;
+  rdfs:subClassOf schema:Country , dbo:Country ;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:Agent a owl:Class ;
+  rdfs:subClassOf eudpp:Entity ;
+  rdfs:label "Agent"@en ;
+  rdfs:comment "An organization or person involved in the value chain (economic operator). Intended as a reusable class linked from product DPPs."@en ;
+  rdfs:subClassOf schema:Organization;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:Facility a owl:Class ;
+  rdfs:subClassOf eudpp:Entity ;
+  rdfs:label "Facility"@en ;
+  rdfs:comment "A physical facility such as a plant, warehouse, store, office, etc. Facilities can be owned or operated by an Agent."@en ;
+  rdfs:subClassOf schema:Place;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:Product a owl:Class ;
+  rdfs:subClassOf eudpp:Entity ;
+  rdfs:label "Product"@en ;
+  rdfs:comment "A product described by a DPP. Identifiers and classifications can be attached to it. Product-to-agent links are expressed via ProductAgentRelationOrEvent."@en ;
+  rdfs:subClassOf schema:Product;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:Identifier a owl:Class ;
+  rdfs:label "Identifier"@en ;
+  rdfs:comment "A (usually) unique identifier of an entity, consisting of a literal identifier value and a reference to an IdentifierScheme. Optional issuance and expiry dates support registrations and certificates. Expected to be unique per scheme and entity"@en ;
+  rdfs:subClassOf adms:Identifier;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:IdentifierScheme a owl:Class ;
+  rdfs:label "Identifier Scheme"@en ;
+  rdfs:comment "A system or scheme defining identifier values (e.g., GS1 GLN, EU VAT, national company register). Includes optional web link patterns to create resolvable URLs."@en;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:Classification a owl:Class ;
+  rdfs:label "Classification"@en ;
+  rdfs:comment "A classification assignment for an entity, consisting of a code/value and a reference to a ClassificationScheme, optionally with a human-readable name. Unlike Identifier, many entities can have the same Classification."@en;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:ClassificationScheme a owl:Class ;
+  rdfs:label "Classification Scheme"@en ;
+  rdfs:comment "A system defining classification codes (e.g., WCO HS, EU CN, GS1 GPC, EU NACE). Also indicates the kind of entity it applies to."@en;
+  rdfs:isDefinedBy eudpp: .
+
+# TODO: rework as skos:ConceptScheme
+eudpp:Role a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:label "Role"@en ;
+  rdfs:comment "Nomenclature of economic operator roles in relation to a product, as per ESPR (e.g., manufacturer, importer, Tier1 economic operator, distributor, recycler, repairer). Intended to be used as a SKOS Concept."@en;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:ProductAgentRelationOrEvent a owl:Class ;
+  rdfs:label "Product-Agent Relation or Event"@en ;
+  rdfs:comment "A statement that a Product is related to an Agent or Facility in a specified Role. If a date is present it can be interpreted as an event; if absent as a relation."@en;
+  rdfs:isDefinedBy eudpp: .
+
+## === Core Properties ===
+
+# Common name/contact/address (kept lightweight, can be aligned/elaborated later)
+eudpp:name a owl:DatatypeProperty ;
+  rdfs:label "name"@en ;
+  rdfs:comment "Name of an entity (Agent, Facility, Product, etc.)."@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:country a owl:ObjectProperty ;
+  rdfs:label "country"@en ;
+  rdfs:comment "Country associated with an Agent or Facility (e.g., establishment or address country). Range is a SKOS Concept representing a country code list."@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range eudpp:Country;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:postalAddress a owl:DatatypeProperty ;
+  rdfs:label "postal address"@en ;
+  rdfs:comment "Postal address as free text. Detailed address modeling can be added later or aligned to schema:PostalAddress."@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:emailAddress a owl:DatatypeProperty ;
+  rdfs:label "email address"@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:phoneNumber a owl:DatatypeProperty ;
+  rdfs:label "phone number"@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+# Identifier and Classification modeling
+eudpp:identifier a owl:ObjectProperty ;
+  rdfs:label "identifier"@en ;
+  rdfs:comment "Associates an entity with one or more Identifier resources, enabling multiple identifiers (e.g., GLN and EORI) to be recorded simultaneously."@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range eudpp:Identifier;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:identifierScheme a owl:ObjectProperty ;
+  rdfs:label "identifier scheme"@en ;
+  rdfs:domain eudpp:Identifier ;
+  rdfs:range eudpp:IdentifierScheme;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:classification a owl:ObjectProperty ;
+  rdfs:label "classification"@en ;
+  rdfs:comment "Associates an entity with one or more Classification assignments."@en ;
+  rdfs:domain eudpp:Entity ;
+  rdfs:range eudpp:Classification;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:classificationScheme a owl:ObjectProperty ;
+  rdfs:label "classification scheme"@en ;
+  rdfs:domain eudpp:Classification ;
+  rdfs:range eudpp:ClassificationScheme;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:code a owl:DatatypeProperty ;
+  rdfs:label "code"@en ;
+  rdfs:comment "The code of an Identifier, Classification, IdentifierScheme, or ClassificationScheme."@en ;
+  skos:example
+    "ClassificationSchemes: WCO.HS, EU.TARIC, EU.NACE"@en,
+    "IdentifierSchemes: EU.VAT, EU.EORI, GS1.GLN"@en;
+  rdfs:domain [a owl:Class; owl:unionOf (eudpp:Identifier eudpp:Classification eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:Identifier, eudpp:Classification, eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:codePattern a owl:DatatypeProperty ;
+  rdfs:label "code pattern"@en ;
+  rdfs:comment "A regexp that the identifier/classification code must conform to."@en ;
+  rdfs:domain  [a owl:Class; owl:unionOf (eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:issuedOn a owl:DatatypeProperty ;
+  rdfs:label "issued on"@en ;
+  rdfs:domain eudpp:Identifier ;
+  rdfs:range xsd:date;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:expiresOn a owl:DatatypeProperty ;
+  rdfs:label "expires on"@en ;
+  rdfs:domain eudpp:Identifier ;
+  rdfs:range xsd:date;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:agency a owl:DatatypeProperty ;
+  rdfs:label "agency"@en ;
+  rdfs:comment "Agency/authority that designs, issues or administers a scheme."@en ;
+  rdfs:domain  [a owl:Class; owl:unionOf (eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+# TODO: US and some others have sub-country jurisdicttions
+eudpp:jurisdiction a owl:ObjectProperty ;
+  rdfs:label "jurisdiction"@en ;
+  rdfs:comment "Jurisdiction in which a scheme is officially issued/valid (e.g., country, state)."@en ;
+  rdfs:domain eudpp:IdentifierScheme ;
+  rdfs:range eudpp:Country;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:webLinkPattern a owl:DatatypeProperty ;
+  rdfs:label "web link pattern"@en ;
+  rdfs:comment "A URL template/pattern into which a code (identifier/classification value) can be inserted to obtain a resolvable URL (e.g., https://example.org/id/{ident})."@en ;
+  rdfs:domain  [a owl:Class; owl:unionOf (eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:appliesTo a owl:ObjectProperty ;
+  rdfs:label "applies to"@en ;
+  rdfs:comment "Indicates what kind of entity a scheme applies to (e.g., Product, Agent, Facility, Certificate). Range is a class (owl:Class)."@en ;
+  rdfs:domain  [a owl:Class; owl:unionOf (eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range owl:Class; # TODO: or a SKOS Concept in an entity-kind codelist?
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:mandatorinessLevel a owl:DatatypeProperty;
+  rdfs:label "mandatoriness level"@en;
+  rdfs:comment "Level of mandatoriness/desirability (0..10) of the identifier/classification scheme for the given appliesTo class(es). Eg EUDPP products must have at least one DPP ID";
+  skos:scopeNote "0 or missing: optional, 5=recommended, 10=mandatory (within jurisdiction). If eudpp:jurisdiction is also used, then it's mandatory only for Agents/Facilities in that Country"@en;
+  rdfs:domain  [a owl:Class; owl:unionOf (eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range xsd:integer ;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:isPreferred a owl:DatatypeProperty;
+  rdfs:label "is preferred"@en;
+  rdfs:comment "Whether this mandatory identifier/classification scheme is preferred and its code is used in the Entity URL";
+  skos:scopeNote "An IndentifierScheme that is preferred (and mandatory) for a jurisdiction corresponds to rov:registration (company registration in an official register)"@en;
+  rdfs:domain  [a owl:Class; owl:unionOf (eudpp:IdentifierScheme eudpp:ClassificationScheme)];
+  schema:domainIncludes eudpp:IdentifierScheme, eudpp:ClassificationScheme;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy eudpp: .
+
+# Facility ownership/operation
+eudpp:ownerOrOperator a owl:ObjectProperty ;
+  rdfs:label "owner or operator"@en ;
+  rdfs:comment "Links a Facility to an Agent that owns or operates it."@en ;
+  rdfs:domain eudpp:Facility ;
+  rdfs:range eudpp:Agent;
+  rdfs:isDefinedBy eudpp: .
+
+# Product-agent role relation/event
+eudpp:product a owl:ObjectProperty ;
+  rdfs:label "product"@en ;
+  rdfs:domain eudpp:ProductAgentRelationOrEvent ;
+  rdfs:range eudpp:Product;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:agent a owl:ObjectProperty ;
+  rdfs:label "agent"@en ;
+  rdfs:comment "The involved party (Agent, economic operator)"@en ;
+  rdfs:domain eudpp:ProductAgentRelationOrEvent ;
+  rdfs:range eudpp:Agent;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:facility a owl:ObjectProperty ;
+  rdfs:label "facility"@en ;
+  rdfs:comment "The involved Facility. This only needs to be recorded to prove the product was manufactured at a facility that conforms to certifications/assessments, eg according to StandardsMap-listed assessment schemes"@en ;
+  rdfs:domain eudpp:ProductAgentRelationOrEvent ;
+  rdfs:range eudpp:Facility;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:role a owl:ObjectProperty ;
+  rdfs:label "role"@en ;
+  rdfs:domain eudpp:ProductAgentRelationOrEvent ;
+  rdfs:range eudpp:Role;
+  rdfs:isDefinedBy eudpp: .
+
+eudpp:date a owl:DatatypeProperty ;
+  rdfs:label "date"@en ;
+  rdfs:comment "If present, the relation can be interpreted as an event occurring on this date."@en ;
+  rdfs:domain eudpp:ProductAgentRelationOrEvent ;
+  rdfs:range xsd:date;
+  rdfs:isDefinedBy eudpp: .
+
+## === StandardsMap ===
 
 # --- Destination Properties ---
-eudpp:appliesToCountryOfDestination rdf:type owl:ObjectProperty ;
+eudpp:appliesToCountryOfDestination a owl:ObjectProperty ;
   rdfs:label "applies to country of destination"@en ;
   rdfs:comment "Links a standard, a product passport, or something else to the destination country resource in which the product is sold."@en ;
   rdfs:range eudpp:Country ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+  rdfs:isDefinedBy eudpp: .
 
-eudpp:appliesToCountryOfDestinationCode rdf:type owl:DatatypeProperty ;
-  rdfs:label "applies to country of destination code"@en ;
-  rdfs:comment "The ISO 3166-1 alpha-2 code of the destination country."@en ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+# eudpp:appliesToCountryOfDestinationCode a owl:DatatypeProperty ;
+#   rdfs:label "applies to country of destination code"@en ;
+#   rdfs:comment "The ISO 3166-1 alpha-2 code of the destination country."@en ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy eudpp: .
 
-eudpp:appliesToCountryOfDestinationStr rdf:type owl:DatatypeProperty ;
-  rdfs:label "applies to country of destination name"@en ;
-  rdfs:comment "The full English name of the destination country."@en ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+# eudpp:appliesToCountryOfDestinationStr a owl:DatatypeProperty ;
+#   rdfs:label "applies to country of destination name"@en ;
+#   rdfs:comment "The full English name of the destination country."@en ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy eudpp: .
 
 # --- Origin Properties ---
-eudpp:appliesToCountryOfOrigin rdf:type owl:ObjectProperty ;
+eudpp:appliesToCountryOfOrigin a owl:ObjectProperty ;
   rdfs:label "applies to country of origin"@en ;
   rdfs:comment "Links a standard, a product passport, or something else to the country of origin of the product."@en ;
   rdfs:range eudpp:Country ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+  rdfs:isDefinedBy eudpp: .
 
-eudpp:appliesToCountryOfOriginCode rdf:type owl:DatatypeProperty ;
-  rdfs:label "applies to country of origin code"@en ;
-  rdfs:comment "The ISO 3166-1 alpha-2 code of the country of origin."@en ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+# eudpp:appliesToCountryOfOriginCode a owl:DatatypeProperty ;
+#   rdfs:label "applies to country of origin code"@en ;
+#   rdfs:comment "The ISO 3166-1 alpha-2 code of the country of origin."@en ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy eudpp: .
 
-eudpp:appliesToCountryOfOriginStr rdf:type owl:DatatypeProperty ;
-  rdfs:label "applies to country of origin name"@en ;
-  rdfs:comment "The full English name of the country of origin."@en ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+# eudpp:appliesToCountryOfOriginStr a owl:DatatypeProperty ;
+#   rdfs:label "applies to country of origin name"@en ;
+#   rdfs:comment "The full English name of the country of origin."@en ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy eudpp: .
 
 # --- Product ---
-eudpp:Product rdf:type owl:Class ;
+eudpp:Product a owl:Class ;
   rdfs:label "Product"@en ;
   rdfs:comment "A type of product or commodity defined within the EUDPP thesaurus."@en ;
   rdfs:subClassOf skos:Concept , <http://schema.org/Product> ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+  rdfs:isDefinedBy eudpp: .
 
 # --- Product Properties ---
-eudpp:product rdf:type owl:ObjectProperty ;
+eudpp:product a owl:ObjectProperty ;
   rdfs:label "product"@en ;
   rdfs:comment "Links the passport or standard to a specific product concept from the EUDPP thesaurus."@en ;
   rdfs:range eudpp:Product ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+  rdfs:isDefinedBy eudpp: .
 
-eudpp:productStr rdf:type owl:DatatypeProperty ;
-  rdfs:label "product name"@en ;
-  rdfs:comment "The literal string representation of the product name."@en ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+# eudpp:productStr a owl:DatatypeProperty ;
+#   rdfs:label "product name"@en ;
+#   rdfs:comment "Literal string representation of a product."@en ;
+#   rdfs:range xsd:string ;
+#   rdfs:isDefinedBy eudpp: .
