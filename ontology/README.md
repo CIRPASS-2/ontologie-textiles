@@ -59,11 +59,25 @@ The MVP Textile DPP so far has 2 versions:
 - Version 2 (2025-12-04) transformed the flat v1 model into a hierarchical model, but IMHO doesn't go nearly far enough.
 
 I downloaded MVP v2 as a sheet from [CP2 DPP textile data.xlsx](https://dpp.vocabulary-hub.eu/api/file-object/FileObject_b433e028-8486-4d65-a7a7-8d42854f680b/download/CP2%20DPP%20textile%20data.xlsx), and made:
-- Sheet [MVP Textile DPP Review](https://docs.google.com/spreadsheets/d/1NsB8gzLI9XmpU1oO3jQexFkmYQwyDMar8C6R2X7EnSg/edit?gid=0#gid=0) with detailed comments by Graphwise and GS1, and some link to [issues](https://github.com/CIRPASS-2/dpp-textiles/issues)
+- Sheet [MVP Textile DPP Review](https://docs.google.com/spreadsheets/d/1NsB8gzLI9XmpU1oO3jQexFkmYQwyDMar8C6R2X7EnSg/edit?gid=0#gid=0) with detailed comments by Graphwise and GS1
+  - A very substantive discussion wit Cirpass project partners has ensued in additional columns of that sheet
+  - Some rows link to [issues](https://github.com/CIRPASS-2/dpp-textiles/issues)
 - Document [MVP Textile DPP Review and Proposal](https://docs.google.com/document/d/1pv0GGC3Wfs-U33O-EdtuC-_30z3b0e1Gu3O-OwGfIPo/edit), Vladimir Alexiev, 2026-01-09. It includes:
   - Higher-level critique of some aspects
-  -
-
-
+  - Some proposed generic concepts, most importantly 
+    - `Identifier` (and `IdentifierSchme`)
+    - `Classification` (and `ClassificationScheme`)
+    - `ProductAgentRelationOrEvent`
 
 # MVP Ontology
+[ontology.ttl](ontology.ttl) is an initial version of the MVP ontology.
+
+Authors:
+- Viktor Senderov [0000-0003-3340-5963](https://orcid.org/0000-0003-3340-5963): started and added StandardsMap concepts
+- Robert David [0000-0002-3244-5341](https://orcid.org/0000-0002-3244-5341): loading in GraphDB and PoolParty
+- Vladimir Alexiev [0000-0001-7508-7428](https://orcid.org/0000-0001-7508-7428): initial idea and overall editing
+- Albin Ahmeti [0000-0001-8766-4069](https://orcid.org/0000-0001-8766-4069): LLM ontology generation from the initial idea
+
+The ontology and related taxonomies:
+- Are loaded in GraphDB at TODO
+- Can be viewd in PoolParty at TODO
