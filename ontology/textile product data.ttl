@@ -1,0 +1,585 @@
+@prefix txt: <https://w3id.org/eudpp/textile-product-data#> .
+@prefix txtctx: <https://w3id.org/eudpp/textile-context#> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix soc: <https://w3id.org/eudpp/soc#> .
+
+#################################################
+# Ontology
+#################################################
+
+<https://w3id.org/eudpp/textile-product-data>
+    a owl:Ontology ;
+    rdfs:label "EU DPP Textile Product Data Ontology"@en ;
+    dcterms:title "EU DPP Textile Product Data Ontology"@en ;
+    dcterms:description "Ontology for representing selected textile product data relevant to EU Digital Product Passports, including textile apparel categories, fibre composition, quantitative values, and selected scope-related concepts aligned with the JRC preparatory study on textiles."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:bibliographicCitation "EU DPP Textile Core Ontology Module. Draft version 0.1.0."@en ;
+    dcterms:creator "Elio Hbeich"@en ;
+    dcterms:created "2026-03-06"^^xsd:date ;
+    dcterms:issued "2026-03-06"^^xsd:date ;
+    owl:versionInfo "Version 0.1.0 DRAFT"@en ;
+    vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-core#" ;
+    vann:preferredNamespacePrefix "txt" .
+
+#################################################
+# Provisional generic product concepts
+#################################################
+
+dpp:FinalProduct a owl:Class ;
+    rdfs:subClassOf dpp:Product ;
+    rdfs:label "Final product"@en ;
+    skos:definition "A product that is already suitable for users."@en ;
+    rdfs:comment "Provisionally declared in the textile module and intended to be moved later to the generic DPP product core module."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 2 – Definitions."@en .
+
+dpp:IntermediateProduct a owl:Class ;
+    rdfs:subClassOf dpp:Product ;
+    rdfs:label "Intermediate product"@en ;
+    skos:definition "A product that requires further manufacturing or transformation before being suitable for end-users."@en ;
+    rdfs:comment "Provisionally declared in the textile module and intended to be moved later to the generic DPP product core module."@en ;
+    dcterms:source "ESPR Article 2(3) and JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+#################################################
+# Core product classes
+#################################################
+
+txt:TextileProduct a owl:Class ;
+    rdfs:subClassOf dpp:Product ;
+    rdfs:label "Textile product"@en ;
+    skos:definition "Any raw, semi-worked, worked, semi-manufactured, manufactured, semi-made-up or made-up product which is exclusively composed of textile fibres, as well as a product containing at least 80% textile fibres by weight."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 2 – Definitions."@en .
+
+txt:TextileApparel a owl:Class ;
+    rdfs:subClassOf txt:TextileProduct , dpp:FinalProduct ;
+    rdfs:label "Textile apparel"@en ;
+    skos:definition "Textile products that aim to cover the body with everything except footwear, including clothing and clothing accessories worn to clothe, adorn, shield, provide comfort, or express identity and belonging."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 2 – Definitions."@en .
+
+txt:IntermediateTextileProduct a owl:Class ;
+    rdfs:subClassOf txt:TextileProduct , dpp:IntermediateProduct ;
+    rdfs:label "Intermediate textile product"@en ;
+    skos:definition "A textile product requiring further manufacturing or transformation before being suitable for end-users, such as fibres, yarns or fabrics."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:ExcludedTextileProduct a owl:Class ;
+    rdfs:subClassOf txt:TextileProduct ;
+    rdfs:label "Excluded textile product"@en ;
+    skos:definition "Textile product explicitly excluded from the scope of the JRC preparatory study."@en ;
+    rdfs:comment "Scope-specific class used to represent textile products that are explicitly outside the scope of the JRC preparatory study. This is a study-bound exclusion layer, not a general textile taxonomy class."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+
+
+#################################################
+# Apparel categories
+#################################################
+
+txt:TShirt a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "T-shirts and tops"@en ;
+    skos:definition "Garment to cover the upper body to the elbow, including singlets, vests, T-shirts, polo shirts and other short-sleeved shirts."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:ShirtOrBlouse a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Shirts and blouses"@en ;
+    skos:definition "Garment to cover the upper body including the entire arm, including long-sleeved shirts, blouses and base layers."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:SweaterOrMidLayer a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Sweaters, pullovers and mid-layers"@en ;
+    skos:definition "Garment to keep the upper body warm and covered, including pullovers, cardigans, hoodies, jerseys, sweatshirts and sweaters."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:JacketOrCoat a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Jackets and coats"@en ;
+    skos:definition "Garments worn on top of a shirt or sweater or intended to protect from natural elements, including blazers, suit jackets, overcoats, rain jackets, parkas and anoraks."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:PantsOrShorts a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Pants and shorts"@en ;
+    skos:definition "Garment to cover the lower body, including casual pants, jeans, sports pants, dress pants and shorts."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:DressSkirtOrJumpsuit a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Dresses, skirts and jumpsuits"@en ;
+    skos:definition "One-piece garment covering the upper and lower body, or the lower body only, other than pants and shorts."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:LeggingStockingTightOrSock a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Leggings, stockings, tights and socks"@en ;
+    skos:definition "Tight garment to cover the legs and/or feet."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:Underwear a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Underwear"@en ;
+    skos:definition "Garment worn under clothes, often next to the skin of the upper or lower body, including boxers, briefs, panties, bras and body-shaping suits."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:Swimwear a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Swimwear"@en ;
+    skos:definition "Garment worn for water-based or sun-based activities, including bikinis, bathing suits, racing-style swimwear and board shorts."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:TextileApparelAccessory a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Textile apparel accessory"@en ;
+    skos:definition "Textile apparel accessory such as hats, scarves, ties, belts, gloves or mittens."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7 and Annex 13.2.4."@en .
+
+#################################################
+# Conditional categories and exclusions
+#################################################
+
+txt:Workwear a owl:Class ;
+    rdfs:subClassOf txt:TextileApparel ;
+    rdfs:label "Workwear"@en ;
+    skos:definition "Textile apparel designed or used for professional or occupational contexts."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.2.1 and 3.2.2."@en .
+
+txt:NonPPEWorkwear a owl:Class ;
+    rdfs:subClassOf txt:Workwear , txt:TextileApparel ;
+    rdfs:label "Non-PPE workwear"@en ;
+    skos:definition "Workwear included in the JRC preparatory study scope when it is not classified as personal protective equipment."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.2.1 and 3.2.2."@en .
+
+txt:TextileCleaningProduct a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct ;
+    rdfs:label "Textile cleaning product"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because textile cleaning products perform a different function from textile apparel and are considered technical textiles."@en ;
+    skos:definition "Textile cleaning product considered a technical textile and excluded from scope because its function differs from apparel."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:ReusableTextileAbsorbentHygieneProduct a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct ;
+    rdfs:label "Reusable textile absorbent hygiene product"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because reusable textile absorbent hygiene products perform a different function from textile apparel and are considered technical textiles."@en ;
+    skos:definition "Reusable textile absorbent hygiene product considered a technical textile and excluded from scope."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:SmartTextile a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct ;
+    rdfs:label "Smart textile"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because smart textiles are very different from textile apparel in terms of function and physical characteristics."@en ;
+    skos:definition "Textile able to sense and react to environmental conditions or external stimuli through incorporated sensors or responsive components."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:ElectronicTextile a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct ;
+    rdfs:label "Electronic textile"@en ;
+    skos:altLabel "E-textile"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because electronic textiles are very different from textile apparel in terms of function and physical characteristics."@en ;
+    skos:definition "Textile-based system that exhibits an intended and exploitable response to changes in its surroundings or to an external signal or input."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:PPETextileApparel a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct , txt:TextileApparel ;
+    rdfs:label "PPE textile apparel"@en ;
+    skos:altLabel "Personal protective equipment textile apparel"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because textile apparel identified as personal protective equipment is outside the selected scope."@en ;
+    skos:definition "Textile apparel identified as personal protective equipment in accordance with Regulation (EU) 2016/425."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:MedicalDeviceTextileApparel a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct , txt:TextileApparel ;
+    rdfs:label "Medical device textile apparel"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because textile apparel identified as a medical device or as an accessory for a medical device is outside the selected scope."@en ;
+    skos:definition "Textile apparel identified as a medical device or as an accessory for a medical device in accordance with Regulation (EU) 2017/745."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+txt:ToyTextileApparel a owl:Class ;
+    rdfs:subClassOf txt:ExcludedTextileProduct , txt:TextileApparel ;
+    rdfs:label "Toy textile apparel"@en ;
+    txt:inJRCStudyScope false ;
+    txt:jrcExclusionReason "Excluded because textile apparel identified as a toy is outside the selected scope."@en ;
+    skos:definition "Textile apparel identified as a toy in accordance with Directive 2009/48/EC."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.2."@en .
+
+
+#################################################
+#  accessory subcategories
+#################################################
+
+txt:Hat a owl:Class ;
+    rdfs:subClassOf txt:TextileApparelAccessory ;
+    rdfs:label "Hat"@en ;
+    skos:definition "Textile apparel accessory used to cover the head for warmth or as a fashion item, including caps, flat caps, woollen hats, beanies, fedoras, panamas, bowlers, newsboys and berets."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:ScarfOrTie a owl:Class ;
+    rdfs:subClassOf txt:TextileApparelAccessory ;
+    rdfs:label "Scarf or tie"@en ;
+    skos:altLabel "Scarves and ties"@en ;
+    skos:definition "Textile apparel accessory worn around the neck for warmth or as a fashion item, including warm and light scarves, buffs, neckerchiefs, headscarves, shawls, bowties and ties."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:Belt a owl:Class ;
+    rdfs:subClassOf txt:TextileApparelAccessory ;
+    rdfs:label "Belt"@en ;
+    skos:definition "Flexible band or strap worn around the waist or over the shoulders, used to secure or hold up clothing such as pants."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+txt:GloveOrMitten a owl:Class ;
+    rdfs:subClassOf txt:TextileApparelAccessory ;
+    rdfs:label "Glove or mitten"@en ;
+    skos:altLabel "Gloves and mittens"@en ;
+    skos:definition "Article of clothing used in pairs to protect hands and wrists from the elements or as a fashion item."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.2.1 – Table 7."@en .
+
+
+#################################################
+# Fibre hierarchy
+#################################################
+
+txt:TextileFibre a owl:Class ;
+    rdfs:label "Textile fibre"@en ;
+    skos:definition "Unit of matter characterised by flexibility, fineness and a high ratio of length to maximum transverse dimension, suitable for textile applications."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 2 – Definitions."@en .
+
+txt:NaturalOriginFibre a owl:Class ;
+    rdfs:subClassOf txt:TextileFibre ;
+    rdfs:label "Natural origin fibre"@en ;
+    skos:definition "Textile fibre originating from natural biological sources."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:AnimalOriginFibre a owl:Class ;
+    rdfs:subClassOf txt:NaturalOriginFibre ;
+    rdfs:label "Animal origin fibre"@en ;
+    skos:definition "Natural origin textile fibre derived from animals or insects, such as wool, silk or hair."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:VegetableOriginFibre a owl:Class ;
+    rdfs:subClassOf txt:NaturalOriginFibre ;
+    rdfs:label "Vegetable origin fibre"@en ;
+    skos:definition "Natural origin textile fibre derived from plants, such as cotton, flax or jute."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:ChemicalFibre a owl:Class ;
+    rdfs:subClassOf txt:TextileFibre ;
+    rdfs:label "Chemical fibre"@en ;
+    skos:definition "Textile fibre manufactured through chemical processing, including man-made cellulosic fibres and synthetic polymer fibres."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:ManMadeCellulosicFibre a owl:Class ;
+    rdfs:subClassOf txt:ChemicalFibre ;
+    rdfs:label "Man-made cellulosic fibre"@en ;
+    skos:definition "Chemical fibre manufactured from natural polymers, typically cellulose, including viscose, cupro, lyocell, acetate and triacetate."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:SyntheticPolymerFibre a owl:Class ;
+    rdfs:subClassOf txt:ChemicalFibre ;
+    rdfs:label "Synthetic polymer fibre"@en ;
+    skos:definition "Chemical fibre manufactured from synthetic organic polymers, including polyester, polyamide, acrylic, polypropylene and elastane."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+#################################################
+# Fibre subclasses
+#################################################
+
+txt:Cotton a owl:Class ;
+    rdfs:subClassOf txt:VegetableOriginFibre ;
+    rdfs:label "Cotton"@en ;
+    skos:definition "Vegetable origin textile fibre obtained from cotton plants."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Flax a owl:Class ;
+    rdfs:subClassOf txt:VegetableOriginFibre ;
+    rdfs:label "Flax"@en ;
+    skos:definition "Vegetable origin textile fibre obtained from flax plants."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Jute a owl:Class ;
+    rdfs:subClassOf txt:VegetableOriginFibre ;
+    rdfs:label "Jute"@en ;
+    skos:definition "Vegetable origin textile fibre obtained from jute plants."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Wool a owl:Class ;
+    rdfs:subClassOf txt:AnimalOriginFibre ;
+    rdfs:label "Wool"@en ;
+    skos:definition "Animal origin textile fibre obtained mainly from sheep."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Silk a owl:Class ;
+    rdfs:subClassOf txt:AnimalOriginFibre ;
+    rdfs:label "Silk"@en ;
+    skos:definition "Animal origin textile fibre obtained from silkworms."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Hair a owl:Class ;
+    rdfs:subClassOf txt:AnimalOriginFibre ;
+    rdfs:label "Hair"@en ;
+    skos:definition "Animal origin textile fibre obtained from animal hair."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Viscose a owl:Class ;
+    rdfs:subClassOf txt:ManMadeCellulosicFibre ;
+    rdfs:label "Viscose"@en ;
+    skos:definition "Man-made cellulosic fibre produced from dissolved cellulose."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Cupro a owl:Class ;
+    rdfs:subClassOf txt:ManMadeCellulosicFibre ;
+    rdfs:label "Cupro"@en ;
+    skos:definition "Man-made cellulosic fibre produced from regenerated cellulose."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Lyocell a owl:Class ;
+    rdfs:subClassOf txt:ManMadeCellulosicFibre ;
+    rdfs:label "Lyocell"@en ;
+    skos:definition "Man-made cellulosic fibre produced from cellulose by solvent spinning."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Acetate a owl:Class ;
+    rdfs:subClassOf txt:ManMadeCellulosicFibre ;
+    rdfs:label "Acetate"@en ;
+    skos:definition "Man-made cellulosic fibre produced from cellulose acetate."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Triacetate a owl:Class ;
+    rdfs:subClassOf txt:ManMadeCellulosicFibre ;
+    rdfs:label "Triacetate"@en ;
+    skos:definition "Man-made cellulosic fibre produced from cellulose triacetate."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Polyester a owl:Class ;
+    rdfs:subClassOf txt:SyntheticPolymerFibre ;
+    rdfs:label "Polyester"@en ;
+    skos:definition "Synthetic polymer fibre produced from polyester polymers."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Polyamide a owl:Class ;
+    rdfs:subClassOf txt:SyntheticPolymerFibre ;
+    rdfs:label "Polyamide"@en ;
+    skos:definition "Synthetic polymer fibre produced from polyamide polymers."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Acrylic a owl:Class ;
+    rdfs:subClassOf txt:SyntheticPolymerFibre ;
+    rdfs:label "Acrylic"@en ;
+    skos:definition "Synthetic polymer fibre produced from acrylic polymers."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Polypropylene a owl:Class ;
+    rdfs:subClassOf txt:SyntheticPolymerFibre ;
+    rdfs:label "Polypropylene"@en ;
+    skos:definition "Synthetic polymer fibre produced from polypropylene polymers."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+txt:Elastane a owl:Class ;
+    rdfs:subClassOf txt:SyntheticPolymerFibre ;
+    rdfs:label "Elastane"@en ;
+    skos:definition "Synthetic polymer fibre characterised by very high elasticity."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+#################################################
+# Quantitative value model 
+#################################################
+
+soc:QuantitativeValue a owl:Class ;
+    rdfs:label "Quantitative value"@en ;
+    skos:definition "A structured representation of a quantitative value including a numeric value and a unit of measurement."@en .
+
+soc:ExactQuantitativeValue
+    a owl:Class ;
+    rdfs:subClassOf soc:QuantitativeValue ;
+    rdfs:label "Exact quantitative value"@en ;
+    skos:definition "A quantitative expression represented by a single exact numerical value and a unit."@en .
+
+soc:MaximumQuantitativeValue
+    a owl:Class ;
+    rdfs:subClassOf soc:QuantitativeValue ;
+    rdfs:label "Maximum quantitative value"@en ;
+    skos:definition "A quantitative expression represented by a single upper-bound numerical value and a unit."@en .
+
+soc:RangeQuantitativeValue
+    a owl:Class ;
+    rdfs:subClassOf soc:QuantitativeValue ;
+    rdfs:label "Range quantitative value"@en ;
+    skos:definition "A quantitative expression represented by a lower bound, an upper bound, and a unit."@en .
+
+soc:numericValue
+    a owl:DatatypeProperty ;
+    rdfs:label "numeric value"@en ;
+    skos:definition "Single numerical value used for an exact quantitative value."@en ;
+    rdfs:domain soc:ExactQuantitativeValue ;
+    rdfs:range xsd:decimal .
+
+soc:maximumValue
+    a owl:DatatypeProperty ;
+    rdfs:label "maximum value"@en ;
+    skos:definition "Single upper-bound numerical value used for a maximum quantitative value."@en ;
+    rdfs:domain soc:MaximumQuantitativeValue ;
+    rdfs:range xsd:decimal .
+
+soc:lowerBound
+    a owl:DatatypeProperty ;
+    rdfs:label "lower bound"@en ;
+    skos:definition "Lower bound of a quantitative range."@en ;
+    rdfs:domain soc:RangeQuantitativeValue ;
+    rdfs:range xsd:decimal .
+
+soc:upperBound
+    a owl:DatatypeProperty ;
+    rdfs:label "upper bound"@en ;
+    skos:definition "Upper bound of a quantitative range."@en ;
+    rdfs:domain soc:RangeQuantitativeValue ;
+    rdfs:range xsd:decimal .
+
+soc:Unit
+    a owl:Class ;
+    rdfs:subClassOf qudt:Unit ;
+    rdfs:label "unit"@en ;
+    skos:definition "Unit used to express a quantitative value."@en ;
+    rdfs:comment "This class reuses QUDT units for expressing quantitative values in the SoC module."@en .
+
+soc:hasUnit
+    a owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
+    skos:definition "Links a quantitative value to the unit in which it is expressed."@en ;
+    rdfs:domain soc:QuantitativeValue ;
+    rdfs:range soc:Unit .
+
+soc:isUnitOf
+    a owl:ObjectProperty ;
+    rdfs:label "is unit of"@en ;
+    skos:definition "Links a unit to a quantitative value expressed using that unit."@en ;
+    rdfs:domain soc:Unit ;
+    rdfs:range soc:QuantitativeValue ;
+    owl:inverseOf soc:hasUnit .
+
+#################################################
+# Fibre composition model
+#################################################
+
+txt:FibreCompositionComponent a owl:Class ;
+    rdfs:label "Fibre composition component"@en ;
+    skos:definition "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 2 – Definitions; Section 3.3.1."@en ;
+    rdfs:subClassOf
+        [
+            a owl:Restriction ;
+            owl:onProperty txt:hasFibreType ;
+            owl:someValuesFrom txt:TextileFibre
+        ] ,
+        [
+            a owl:Restriction ;
+            owl:onProperty txt:hasFibreShare ;
+            owl:someValuesFrom soc:QuantitativeValue
+        ] .
+
+txt:hasFibreCompositionComponent a owl:ObjectProperty ;
+    rdfs:label "has fibre composition component"@en ;
+    skos:definition "Relates a textile product to a structured fibre composition component."@en ;
+    rdfs:comment "Preferred relation for representing the declared fibre composition of a textile product, including the fibre type and its quantitative share."@en ;
+    rdfs:domain txt:TextileProduct ;
+    rdfs:range txt:FibreCompositionComponent .
+
+txt:hasFibreType a owl:ObjectProperty ;
+    rdfs:label "has fibre type"@en ;
+    skos:definition "Relates a fibre composition component to the textile fibre type it describes."@en ;
+    rdfs:domain txt:FibreCompositionComponent ;
+    rdfs:range txt:TextileFibre .
+
+txt:hasFibreShare a owl:ObjectProperty ;
+    rdfs:label "has fibre share"@en ;
+    skos:definition "Relates a fibre composition component to the quantitative share of the fibre in the textile product."@en ;
+    rdfs:domain txt:FibreCompositionComponent ;
+    rdfs:range soc:QuantitativeValue .
+
+#################################################
+# Object properties
+#################################################
+
+txt:hasFibreComponent a owl:ObjectProperty ;
+    rdfs:label "has fibre component"@en ;
+    skos:definition "Relates a textile product to a textile fibre that is part of its composition."@en ;
+    rdfs:comment "Non-quantitative relation indicating that a textile product contains a given textile fibre. This property is useful when the presence of a fibre is known but its quantitative share is not represented."@en ;
+    rdfs:domain txt:TextileProduct ;
+    rdfs:range txt:TextileFibre .
+
+txt:hasTextileFibreContent a owl:ObjectProperty ;
+    rdfs:label "has textile fibre content"@en ;
+    skos:definition "Relates a textile product candidate to its total textile fibre content, expressed as a quantitative value."@en ;
+    rdfs:comment "This property represents the total textile fibre content of a product. According to the JRC textile product definition, a product containing less than 80% textile fibres by weight should not be classified as txt:TextileProduct."@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:range soc:QuantitativeValue .
+
+#################################################
+# Linking properties to context ontology
+#################################################
+
+txt:usesChemical a owl:ObjectProperty ;
+    rdfs:label "uses chemical"@en ;
+    skos:definition "Relates a textile product to a chemical substance used during its manufacturing or finishing."@en ;
+    rdfs:domain txt:TextileProduct ;
+    rdfs:range txtctx:ChemicalSubstance ;
+    rdfs:comment "This property refers to process or performance chemical use and does not imply that the full substance remains in the final product."@en .
+
+txt:hasPackagingMaterial a owl:ObjectProperty ;
+    rdfs:label "has packaging material"@en ;
+    skos:definition "Relates a textile product to a material used for its packaging."@en ;
+    rdfs:domain txt:TextileProduct ;
+    rdfs:range txtctx:PackagingMaterial .
+
+txt:hasNonTextileComponent a owl:ObjectProperty ;
+    rdfs:label "has non-textile component"@en ;
+    skos:definition "Relates a textile product to a non-textile component physically integrated into it."@en ;
+    rdfs:domain txt:TextileProduct ;
+    rdfs:range txtctx:NonTextileComponent .
+
+txt:hasNonTextileMaterialFraction a owl:ObjectProperty ;
+    rdfs:label "has non-textile material fraction"@en ;
+    skos:definition "Relates a textile product to a quantitative value expressing its non-textile material fraction."@en ;
+    rdfs:domain txt:TextileProduct ;
+    rdfs:range soc:QuantitativeValue .
+
+#################################################
+# annotation properties
+#################################################
+
+txt:inJRCStudyScope a owl:AnnotationProperty ;
+    rdfs:label "in JRC study scope"@en ;
+    skos:definition "Annotation indicating whether a textile product class or category is included in the scope of the JRC preparatory study on textiles."@en ;
+    rdfs:range xsd:boolean .
+
+txt:jrcScopeCondition a owl:AnnotationProperty ;
+    rdfs:label "JRC scope condition"@en ;
+    skos:definition "Annotation specifying a textual condition governing inclusion of a textile product class or category in the JRC preparatory study scope."@en ;
+    rdfs:range xsd:string .
+
+txt:jrcExclusionReason a owl:AnnotationProperty ;
+    rdfs:label "JRC exclusion reason"@en ;
+    skos:definition "Annotation specifying the reason why a textile product class or category is excluded from the JRC preparatory study scope."@en ;
+    rdfs:range xsd:string .
+
+#################################################
+# Logical refinement
+#################################################
+
+txt:NaturalOriginFibre owl:disjointWith txt:ChemicalFibre .
+txt:AnimalOriginFibre owl:disjointWith txt:VegetableOriginFibre .
+txt:ManMadeCellulosicFibre owl:disjointWith txt:SyntheticPolymerFibre .
+

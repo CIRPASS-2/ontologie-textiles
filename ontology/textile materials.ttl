@@ -1,0 +1,231 @@
+@prefix txtctx: <https://w3id.org/eudpp/textile-materials#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+#################################################
+# Ontology
+#################################################
+
+<https://w3id.org/eudpp/textile-context>
+    a owl:Ontology ;
+    rdfs:label "EU DPP Textile Material and Substance Ontology"@en ;
+    dcterms:title "EU DPP Textile Material and Substance Ontology"@en ;
+    dcterms:description "Ontology for representing materials and substances associated with textile products in EU Digital Product Passports, including textile chemicals, packaging materials, and non-textile components, aligned with the JRC preparatory study."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:bibliographicCitation "EU DPP Textile Material and Substance Ontology. Draft version 0.1.0."@en ;
+    dcterms:creator "Elio Hbeich"@en ;
+    dcterms:created "2026-03-06"^^xsd:date ;
+    dcterms:issued "2026-03-06"^^xsd:date ;
+    owl:versionInfo "Version 0.1.0 DRAFT"@en ;
+    vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-materials#" ;
+    vann:preferredNamespacePrefix "txtctx" .
+
+#################################################
+# Chemical context
+#################################################
+
+txtctx:ChemicalSubstance a owl:Class ;
+    rdfs:label "Chemical substance"@en ;
+    skos:definition "A chemical substance relevant to textile manufacturing, treatment, finishing, or functionalisation."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.1, 3.3.2, 5.4.2 and 12."@en .
+
+txtctx:TextileChemicalSubstance a owl:Class ;
+    rdfs:subClassOf txtctx:ChemicalSubstance ;
+    rdfs:label "Textile chemical substance"@en ;
+    skos:definition "A chemical substance specifically used in textile manufacturing, wet processing, finishing, or functional treatment."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.1, 3.3.2 and 5.4.2."@en .
+
+txtctx:ProcessChemical a owl:Class ;
+    rdfs:subClassOf txtctx:TextileChemicalSubstance ;
+    rdfs:label "Process chemical"@en ;
+    skos:definition "A textile chemical substance primarily used during textile production, preparation, dyeing, printing, washing, or finishing processes."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.1, 3.3.2 and 5.4.2."@en .
+
+txtctx:PerformanceChemical a owl:Class ;
+    rdfs:subClassOf txtctx:TextileChemicalSubstance ;
+    rdfs:label "Performance chemical"@en ;
+    skos:definition "A textile chemical substance used to confer, support, or maintain a targeted functional or performance property in a textile product."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.2 and 12."@en .
+
+txtctx:Dye a owl:Class ;
+    rdfs:subClassOf txtctx:TextileChemicalSubstance ;
+    rdfs:label "Dye"@en ;
+    skos:definition "A chemical substance used to impart colour to textile fibres, yarns, fabrics, or finished textile products."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.1, 3.3.2 and 5.4.2."@en .
+
+txtctx:DisperseDye a owl:Class ;
+    rdfs:subClassOf txtctx:Dye ;
+    rdfs:label "Disperse dye"@en ;
+    skos:altLabel "Disperse dyes"@en ;
+    skos:definition "A dye category used in textile dyeing, represented here as a subclass of textile dye."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 12.3.20; Annex 13.11.10 ."@en .
+
+txtctx:AcidDye a owl:Class ;
+    rdfs:subClassOf txtctx:Dye ;
+    rdfs:label "Acid dye"@en ;
+    skos:altLabel "Acid dyes"@en ;
+    skos:definition "A dye category used in textile dyeing, represented here as a subclass of textile dye."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Annex 13.8.3, Table 169."@en .
+
+txtctx:BasicDye a owl:Class ;
+    rdfs:subClassOf txtctx:Dye ;
+    rdfs:label "Basic dye"@en ;
+    skos:altLabel "Basic dyes"@en ;
+    skos:definition "A dye category used in textile dyeing, represented here as a subclass of textile dye."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Annex 13.8.3, Table 169"@en .
+
+txtctx:Pigment a owl:Class ;
+    rdfs:subClassOf txtctx:TextileChemicalSubstance ;
+    rdfs:label "Pigment"@en ;
+    skos:definition "A colouring substance used in textile processes such as coating or printing, and potentially contributing to the colour properties of the final textile product."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 5.4.2."@en .
+
+txtctx:Surfactant a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Surfactant"@en ;
+    skos:definition "A chemical substance used to facilitate wet processing, cleaning, washing, or treatment operations in textile manufacturing."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 5.4.2."@en .
+
+txtctx:BleachingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Bleaching agent"@en ;
+    skos:definition "A chemical substance used to bleach or decolourise textile materials during preparation or finishing processes."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.1, 3.3.2 and 5.4.2."@en .
+
+txtctx:Solvent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Solvent"@en ;
+    skos:definition "A chemical substance used as a solvent in textile manufacturing or finishing processes."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.2 and 5.4.2."@en .
+
+txtctx:FinishingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Finishing agent"@en ;
+    skos:definition "A chemical substance used in textile finishing processes to modify appearance, handle, or functional behaviour."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.1 and 3.3.2."@en .
+
+txtctx:Softener a owl:Class ;
+    rdfs:subClassOf txtctx:FinishingAgent ;
+    rdfs:label "Softener"@en ;
+    skos:definition "A finishing chemical used to modify the handle or softness of textile materials."@en .
+
+txtctx:UVProtectant a owl:Class ;
+    rdfs:subClassOf txtctx:PerformanceChemical ;
+    rdfs:label "UV protectant"@en ;
+    skos:definition "A performance chemical used to improve resistance to ultraviolet radiation or to protect textile materials from UV-related degradation."@en .
+
+txtctx:AntimicrobialAgent a owl:Class ;
+    rdfs:subClassOf txtctx:PerformanceChemical ;
+    rdfs:label "Antimicrobial agent"@en ;
+    skos:altLabel "Anti-microbial agent"@en ;
+    skos:definition "A performance chemical used to provide or support antimicrobial properties in textile materials or products."@en ;
+    rdfs:comment "This class is kept distinct from txtctx:Biocide because antimicrobial function and biocidal regulatory status should not be treated as strictly equivalent without further qualification."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 12.3."@en .
+
+txtctx:WettingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:Surfactant ;
+    rdfs:label "Wetting agent"@en ;
+    skos:definition "A surfactant used to improve wetting of textile fibres, yarns or fabrics during wet processing."@en .
+
+txtctx:DispersingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Dispersing agent"@en ;
+    skos:definition "A process chemical used to disperse dyes, pigments or other substances in textile processing baths or formulations."@en .
+
+txtctx:LevellingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Levelling agent"@en ;
+    skos:definition "A process chemical used to promote uniform dye uptake or colour distribution during dyeing."@en .
+
+txtctx:FixingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Fixing agent"@en ;
+    skos:definition "A process chemical used to improve fixation of dyes or finishing substances on textile materials."@en .
+
+txtctx:SizingAgent a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Sizing agent"@en ;
+    skos:definition "A process chemical applied to yarns to improve performance during weaving or other textile manufacturing operations."@en .
+
+txtctx:AcidOrAlkali a owl:Class ;
+    rdfs:subClassOf txtctx:ProcessChemical ;
+    rdfs:label "Acid or alkali"@en ;
+    skos:altLabel "Acids and alkalis"@en ;
+    skos:definition "A process chemical used to adjust pH or support chemical reactions during textile preparation, dyeing or finishing."@en .
+
+txtctx:Biocide a owl:Class ;
+    rdfs:subClassOf txtctx:PerformanceChemical ;
+    rdfs:label "Biocide"@en ;
+    skos:definition "A chemical substance used to provide biocidal or antimicrobial properties."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.2 and 12."@en .
+
+txtctx:WaterRepellent a owl:Class ;
+    rdfs:subClassOf txtctx:PerformanceChemical ;
+    rdfs:label "Water repellent"@en ;
+    skos:definition "A chemical substance used to confer water repellency to textile materials."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.2, 4.5 and 12."@en .
+
+txtctx:StainRepellent a owl:Class ;
+    rdfs:subClassOf txtctx:PerformanceChemical ;
+    rdfs:label "Stain repellent"@en ;
+    skos:definition "A chemical substance used to confer stain repellency to textile materials."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 4.5."@en .
+
+txtctx:FlameRetardant a owl:Class ;
+    rdfs:subClassOf txtctx:PerformanceChemical ;
+    rdfs:label "Flame retardant"@en ;
+    skos:definition "A chemical substance used to reduce flammability or delay ignition and flame propagation in textile materials."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Sections 3.3.2, 4.1 and 12."@en .
+
+#################################################
+# Packaging context
+#################################################
+
+txtctx:PackagingMaterial a owl:Class ;
+    rdfs:label "Packaging material"@en ;
+    skos:definition "A material used for packaging a textile product."@en ;
+    dcterms:source "JRC Textile Preparatory Study."@en .
+
+txtctx:PaperPackagingMaterial a owl:Class ;
+    rdfs:subClassOf txtctx:PackagingMaterial ;
+    rdfs:label "Paper packaging material"@en ;
+    skos:definition "A packaging material made primarily of paper."@en ;
+    dcterms:source "JRC Textile Preparatory Study."@en .
+
+txtctx:CardboardPackagingMaterial a owl:Class ;
+    rdfs:subClassOf txtctx:PackagingMaterial ;
+    rdfs:label "Cardboard packaging material"@en ;
+    skos:definition "A packaging material made primarily of cardboard."@en ;
+    dcterms:source "JRC Textile Preparatory Study."@en .
+
+txtctx:PlasticPackagingMaterial a owl:Class ;
+    rdfs:subClassOf txtctx:PackagingMaterial ;
+    rdfs:label "Plastic packaging material"@en ;
+    skos:definition "A packaging material made primarily of plastic."@en ;
+    dcterms:source "JRC Textile Preparatory Study."@en .
+
+txtctx:PolyethylenePackagingMaterial a owl:Class ;
+    rdfs:subClassOf txtctx:PlasticPackagingMaterial ;
+    rdfs:label "Polyethylene packaging material"@en ;
+    skos:definition "A plastic packaging material made of polyethylene, such as a polybag."@en ;
+    dcterms:source "JRC Textile Preparatory Study."@en .
+
+#################################################
+# Non-textile context
+#################################################
+
+txtctx:NonTextileComponent a owl:Class ;
+    rdfs:label "Non-textile component"@en ;
+    skos:definition "A non-textile component physically integrated into a textile product."@en ;
+    dcterms:source "JRC Textile Preparatory Study, Section 3.3.1."@en .
+
+#################################################
+# Logical refinement
+#################################################
+
+
