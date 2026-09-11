@@ -1,0 +1,9 @@
+@prefix ex: <https://example.org/textile-soc/> .
+@prefix soc: <https://w3id.org/eudpp/soc#> .
+@prefix txtsoc: <https://w3id.org/eudpp/textile-soc#> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+units:one a soc:Unit .
+ex:reportedRange a soc:RangeQuantitativeValue ; soc:lowerBound '0.9'^^xsd:decimal ; soc:upperBound '0.1'^^xsd:decimal ; soc:hasUnit units:one .
+ex:trackingThreshold a txtsoc:TextileTrackingThreshold ; soc:hasThresholdQuantitativeValue ex:reportedRange .

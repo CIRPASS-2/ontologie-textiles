@@ -1,0 +1,139 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix soc: <https://w3id.org/eudpp/soc#> .
+@prefix tsh: <https://w3id.org/eudpp/textile-shacl#> .
+@prefix txtsoc: <https://w3id.org/eudpp/textile-soc#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tsh:ExactQuantitativeValueShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:decimal ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:numericValue ],
+        [ sh:class soc:Unit ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:hasUnit ] ;
+    sh:targetClass soc:ExactQuantitativeValue .
+
+tsh:MaximumQuantitativeValueShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:decimal ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:maximumValue ],
+        [ sh:class soc:Unit ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:hasUnit ] ;
+    sh:targetClass soc:MaximumQuantitativeValue .
+
+tsh:RangeQuantitativeValueShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:decimal ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:lowerBound ],
+        [ sh:datatype xsd:decimal ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:upperBound ],
+        [ sh:class soc:Unit ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path soc:hasUnit ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "The lower bound of a quantitative range must not exceed its upper bound."@en ;
+            sh:prefixes <https://w3id.org/eudpp/textile-shacl/soc> ;
+            sh:select """
+          SELECT $this WHERE {
+            $this soc:lowerBound ?lower ; soc:upperBound ?upper .
+            FILTER (?lower > ?upper)
+          }
+        """ ] ;
+    sh:targetClass soc:RangeQuantitativeValue .
+
+tsh:TextileConcentrationInformationShape a sh:NodeShape ;
+    sh:property [ sh:class soc:QuantitativeValue ;
+            sh:maxCount 1 ;
+            sh:message "Textile concentration information must have exactly one quantitative expression."@en ;
+            sh:minCount 1 ;
+            sh:path soc:hasQuantitativeValue ] ;
+    sh:targetClass txtsoc:TextileConcentrationInformation .
+
+tsh:TextileRegulatoryThresholdShape a sh:NodeShape ;
+    sh:property [ sh:class soc:QuantitativeValue ;
+            sh:maxCount 1 ;
+            sh:message "A textile regulatory threshold must have exactly one quantitative expression."@en ;
+            sh:minCount 1 ;
+            sh:path soc:hasThresholdQuantitativeValue ] ;
+    sh:targetClass txtsoc:TextileRecyclingAlertThreshold,
+        txtsoc:TextileTrackingThreshold .
+
+<https://w3id.org/eudpp/textile-shacl/soc> a owl:Ontology ;
+    rdfs:label "Textile substance-of-concern SHACL profile"@en ;
+    rdfs:comment "Constraints for concentration expressions and regulatory thresholds using the source SoC quantitative-value model."@en ;
+    sh:declare [ sh:namespace "http://purl.org/vocab/vann/"^^xsd:anyURI ;
+            sh:prefix "vann" ],
+        [ sh:namespace "https://brickschema.org/schema/Brick#"^^xsd:anyURI ;
+            sh:prefix "brick" ],
+        [ sh:namespace "http://www.w3.org/2006/time#"^^xsd:anyURI ;
+            sh:prefix "time" ],
+        [ sh:namespace "http://www.w3.org/ns/csvw#"^^xsd:anyURI ;
+            sh:prefix "csvw" ],
+        [ sh:namespace "http://www.w3.org/ns/ssn/"^^xsd:anyURI ;
+            sh:prefix "ssn" ],
+        [ sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
+            sh:prefix "dcat" ],
+        [ sh:namespace "https://schema.org/"^^xsd:anyURI ;
+            sh:prefix "schema" ],
+        [ sh:namespace "http://www.w3.org/ns/odrl/2/"^^xsd:anyURI ;
+            sh:prefix "odrl" ],
+        [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+            sh:prefix "owl" ],
+        [ sh:namespace "http://usefulinc.com/ns/doap#"^^xsd:anyURI ;
+            sh:prefix "doap" ],
+        [ sh:namespace "http://www.w3.org/ns/dx/prof/"^^xsd:anyURI ;
+            sh:prefix "prof" ],
+        [ sh:namespace "https://www.w3.org/2003/01/geo/wgs84_pos#"^^xsd:anyURI ;
+            sh:prefix "wgs" ],
+        [ sh:namespace "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+            sh:prefix "dc" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dcterms" ],
+        [ sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+            sh:prefix "sh" ],
+        [ sh:namespace "http://purl.org/linked-data/cube#"^^xsd:anyURI ;
+            sh:prefix "qb" ],
+        [ sh:namespace "http://www.w3.org/ns/prov#"^^xsd:anyURI ;
+            sh:prefix "prov" ],
+        [ sh:namespace "https://w3id.org/eudpp/textile-shacl#"^^xsd:anyURI ;
+            sh:prefix "tsh" ],
+        [ sh:namespace "http://www.w3.org/XML/1998/namespace"^^xsd:anyURI ;
+            sh:prefix "xml" ],
+        [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;
+            sh:prefix "org" ],
+        [ sh:namespace "http://purl.org/dc/dcam/"^^xsd:anyURI ;
+            sh:prefix "dcam" ],
+        [ sh:namespace "https://w3id.org/eudpp/soc#"^^xsd:anyURI ;
+            sh:prefix "soc" ],
+        [ sh:namespace "http://www.opengis.net/ont/geosparql#"^^xsd:anyURI ;
+            sh:prefix "geo" ],
+        [ sh:namespace "http://www.w3.org/ns/sosa/"^^xsd:anyURI ;
+            sh:prefix "sosa" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://rdfs.org/ns/void#"^^xsd:anyURI ;
+            sh:prefix "void" ],
+        [ sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+            sh:prefix "foaf" ],
+        [ sh:namespace "http://purl.org/dc/dcmitype/"^^xsd:anyURI ;
+            sh:prefix "dcmitype" ],
+        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+            sh:prefix "xsd" ],
+        [ sh:namespace "https://w3id.org/eudpp/textile-soc#"^^xsd:anyURI ;
+            sh:prefix "txtsoc" ],
+        [ sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+            sh:prefix "skos" ] .
+

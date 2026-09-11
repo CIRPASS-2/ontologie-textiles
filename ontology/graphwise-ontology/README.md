@@ -1,3 +1,9 @@
+# Earlier Graphwise ontology work
+
+Earlier Graphwise ontology work preserved for reference and project continuity. This directory is separate from the current JRC-grounded Textile ontology. The current entry point is [textile-ontology.ttl](../textile-ontology.ttl).
+
+These reference graphs are outside the current package catalogue, import closure, validation scope and 1.1.2 checksum contract. Load them separately; do not combine them indiscriminately with the current model. Original technical content follows.
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 

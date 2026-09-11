@@ -1,0 +1,88 @@
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix ex: <https://example.org/textile-soc/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soc: <https://w3id.org/eudpp/soc#> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+@prefix txtam: <https://w3id.org/eudpp/textile-associated-materials#> .
+@prefix txtamcs: <https://w3id.org/eudpp/textile-associated-materials-codelists#> .
+@prefix txtsoc: <https://w3id.org/eudpp/textile-soc#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Illustrative data only. The substance identity, qualification and values are
+# examples of the modelling pattern, not regulatory determinations.
+
+ex:jacket
+    a txt:TextileApparel ;
+    soc:hasPart ex:outerFabricMaterialGroup .
+
+ex:outerFabricMaterialGroup
+    a txtsoc:TextileFibreCompositionMaterialGroup .
+
+ex:reportedSubstance
+    a txtam:TextileChemicalSubstance ;
+    soc:substanceIdentifier "illustrative-substance-id" .
+
+ex:typeAQualification
+    a soc:SoCTypeAQualification ;
+    soc:qualifiesSubstance ex:reportedSubstance ;
+    soc:qualificationSource "Illustrative qualification for this RDF example." .
+
+ex:presence
+    a txtsoc:TextileSubstanceOfConcernPresenceContext ;
+    soc:hasProduct ex:jacket ;
+    soc:hasSubstance ex:reportedSubstance ;
+    soc:hasApplicableQualification ex:typeAQualification ;
+    soc:hasLocationInformation ex:locationInformation ;
+    soc:hasConcentrationInformation ex:concentrationInformation ;
+    soc:hasThresholdEvaluation ex:thresholdEvaluation ;
+    txtsoc:hasPresenceUseCategory txtamcs:performanceChemical ;
+    txtsoc:hasPresenceChemicalFunction txtamcs:waterRepellent ;
+    txtsoc:hasTextileHandlingInformation ex:recyclingInformation .
+
+ex:locationInformation
+    a soc:LocationInformation ;
+    soc:refersToProductPartForLocation ex:outerFabricMaterialGroup ;
+    txtsoc:hasTextileLocationType txtsoc:coatingOrFinishLocation ;
+    soc:locationDescriptor "Water-repellent finish on the outer fabric." .
+
+ex:concentrationInformation
+    a txtsoc:TextileConcentrationInformation ;
+    soc:hasConcentrationReportingLevel soc:MaterialLevel ;
+    soc:refersToProductPartForConcentration ex:outerFabricMaterialGroup ;
+    soc:hasConcentrationReferenceBasis soc:MaterialGroupMassBasis ;
+    soc:hasApplicableRegulatoryThreshold ex:nonExemptionThreshold ;
+    soc:analyticalMethod "Illustrative laboratory method" ;
+    soc:hasQuantitativeValue ex:reportedMassFraction .
+
+# 0.0008 as a dimensionless mass fraction corresponds to 0.08 % w/w.
+ex:reportedMassFraction
+    a soc:ExactQuantitativeValue ;
+    soc:numericValue "0.0008"^^xsd:decimal ;
+    soc:hasUnit ex:dimensionlessUnit .
+
+ex:dimensionlessUnit
+    a soc:Unit ;
+    rdfs:label "dimensionless mass fraction"@en .
+
+# 0.1 % w/w is represented as the dimensionless mass fraction 0.001.
+ex:nonExemptionThreshold
+    a soc:NonExemptionThreshold ;
+    soc:hasThresholdQuantitativeValue ex:thresholdMassFraction ;
+    soc:thresholdNote "Illustrative encoding of a 0.1 % w/w threshold; applicability depends on the relevant qualification and legal rule." .
+
+ex:thresholdMassFraction
+    a soc:ExactQuantitativeValue ;
+    soc:numericValue "0.001"^^xsd:decimal ;
+    soc:hasUnit ex:dimensionlessUnit .
+
+ex:thresholdEvaluation
+    a soc:ThresholdEvaluation ;
+    soc:evaluatesConcentrationInformation ex:concentrationInformation ;
+    soc:evaluatesAgainstThreshold ex:nonExemptionThreshold ;
+    soc:hasThresholdEvaluationResult soc:BelowThreshold ;
+    soc:evaluationNote "Illustrative comparison: 0.0008 is below 0.001." .
+
+ex:recyclingInformation
+    a txtsoc:TextileSoCHandlingInformation ;
+    soc:hasInstructionType soc:RecyclingInstructionType ;
+    soc:instructionContent "Route the product to an operator able to manage the reported substance and consult the applicable product-group rules before recycling." .
