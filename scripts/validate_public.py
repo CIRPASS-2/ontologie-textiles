@@ -49,11 +49,22 @@ CURRENT_MODULES = ('textile-assessment.ttl', 'textile-associated-materials.ttl',
 
 def package_files(root):
  paths=set(PACKAGE_ROOT_FILES)
+
  for area in PACKAGE_AREAS:
   for p in (root/area).rglob('*'):
    rel=p.relative_to(root).as_posix()
-   if p.is_file() and not rel.startswith('ontology/graphwise-ontology/'):
-    paths.add(rel)
+
+   if not p.is_file():
+    continue
+
+   if rel.startswith('ontology/graphwise-ontology/'):
+    continue
+
+   if '__pycache__' in p.parts or p.suffix == '.pyc':
+    continue
+
+   paths.add(rel)
+
  return sorted(paths)
 
 def manifest_sections(root):
