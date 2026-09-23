@@ -18,6 +18,32 @@ The complete runtime closure is the 13 Textile graphs plus six MIREOT graphs. In
 
 The SoC MIREOT declares 1.1.3; all other subsets declare 1.1.2. These are Textile subset versions, distinct from upstream source versions. Both the declared SoC 1.1.3 IRI and its legacy 1.1.2 catalogue alias resolve to the current subset. The legacy alias does not provide a historical snapshot. Source snapshots and MIREOT bytes are retained unchanged in this candidate.
 
+## Ontology identity, term namespaces and adoption
+
+An ontology IRI identifies a module; a term namespace forms its class/property
+IRIs; a serialization prefix binding abbreviates those IRIs. The integrated
+snapshots distinguish them as follows:
+
+| Module | Ontology IRI | Own-term namespace |
+| -- | -- | -- |
+| ACTOR | `https://w3id.org/eudpp/ACTOR` | `https://w3id.org/eudpp#` |
+| MAT | `https://w3id.org/eudpp/MAT` | `https://w3id.org/eudpp#` |
+| EVENT | `https://w3id.org/eudpp/EVENT` | `https://w3id.org/eudpp#` |
+| P_DPP | `https://w3id.org/eudpp/P_DPP` | `https://w3id.org/eudpp#` |
+| SoC | `https://w3id.org/eudpp/soc` | `https://w3id.org/eudpp/soc#` |
+
+For example, `soc:` is bound to `https://w3id.org/eudpp/soc#` in the SoC
+snapshot. Renaming the prefix label consistently while retaining that namespace
+IRI does not change RDF identifiers. Changing
+`https://w3id.org/eudpp/soc#Substance` to
+`https://w3id.org/eudpp#Substance` changes the RDF identifier itself and requires
+an upstream namespace/migration decision.
+
+Dependency snapshots are versioned integration inputs. New upstream drafts
+must not automatically replace an integrated snapshot solely because they are
+newer: adoption requires stability and the existing
+[dependency compatibility/reuse review](governance/upstream-dependency-governance.md).
+
 ## Snapshot attribution and redistribution status
 
 ACTOR and P_DPP embed Apache-2.0 licence references and a textual CC-BY-4.0 fallback statement. EVENT and SoC embed CC-BY-4.0 references. Their creator and source annotations are preserved in the supplied files.

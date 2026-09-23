@@ -72,6 +72,24 @@ established from this repository; this record makes no claim about them.
 - Ask CORE governance whether Textile fibre concepts should also be `dpp:MaterialType` instances before proposing a type-property alignment.
 - Agree the recycled-content source, denominator and aggregation semantics with CORE/Battery owners before adoption.
 
+### Pending SoC/EVENT upstream governance
+
+The current GitHub community candidate integrates the selected upstream SoC
+`0.1.2 DRAFT` and EVENT `0.1.0 DRAFT` snapshots. Further upstream changes to
+both modules are being developed/reviewed outside this repository. Those
+forthcoming revisions are intentionally not integrated yet. Textile should
+reassess and update these dependencies only once the upstream revisions are
+considered stable, followed by the existing dependency compatibility/reuse
+checks described in [upstream dependency governance](upstream-dependency-governance.md).
+
+ACTOR, MAT, EVENT and P_DPP currently use the shared term namespace
+`https://w3id.org/eudpp#`; the current SoC snapshot uses
+`https://w3id.org/eudpp/soc#`. Moving SoC terms to the shared namespace would
+change their actual IRIs, not merely clean up a local prefix. No such migration
+is authorized by the current Textile repository. This namespace-governance
+question should be resolved upstream when the next SoC version is stabilized;
+it does not establish that the current SoC namespace is erroneous.
+
 All six MIREOT subsets, upstream dependencies, Connector, examples and SHACL
 remain unchanged by this review implementation. Provenance and namespace
 ownership are preserved.
