@@ -25,7 +25,7 @@
         <terms:title xml:lang="en">EU DPP Textile Indicator Ontology</terms:title>
         <vann:preferredNamespacePrefix>txtind</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/eudpp/textile-indicator#</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">The module deliberately does not subclass dpp:QualityIndicator because the inspected DPP Core makes dpp:QualityIndicator a subclass of dpp:QuantitativeProperty. That pattern would conflate an indicator with the quantitative-value model rejected by the textile network.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This module does not assert a subclass alignment to dpp:QualityIndicator. CORE dpp:QuantitativeProperty, a superclass of dpp:QualityIndicator, represents a quantitative property or measurand of a product. Textile txtcon:QuantitativeValue represents a structured numerical value with a measurement unit and, optionally, a quantity kind. These roles are distinct; the CORE hierarchy alone does not establish their equivalence or justify an Indicator alignment.</rdfs:comment>
         <rdfs:comment xml:lang="en">This module models interpretive or calculated indicators. It does not treat a raw assessment result, a durability characteristic, a threshold or a quantitative value as an indicator.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP Textile Indicator Ontology</rdfs:label>
         <owl:versionInfo>Version 1.1.2</owl:versionInfo>

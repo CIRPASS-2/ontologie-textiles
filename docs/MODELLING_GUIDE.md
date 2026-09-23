@@ -23,3 +23,38 @@ The pattern is a modelling abstraction, not a claim that JRC defines this OWL st
 ## Substances of concern
 
 Represent the substance identity separately from the substance-presence context and from its regulatory qualification. Attach concentration, location and handling information to the presence context. For the supplied SoC dependency, exact, maximum and range quantitative expressions use the source ontology classes.
+
+## Verified CORE reuse and module ownership
+
+`txt:FibreCompositionComponent` already specializes CORE
+`dpp:MaterialOfComposition`. The relation `txt:hasFibreCompositionComponent`
+links a product to a composition entry; it is not equivalent to
+`dpp:hasMaterialType`, which links a material occurrence to its classification.
+The MAT snapshot uses the `https://w3id.org/eudpp#` term namespace.
+
+`txt:hasFibreType` is a potential alignment candidate only if governance decides
+that Textile fibre concepts are also instances of `dpp:MaterialType`. Their
+current SKOS representation does not by itself establish or prohibit that
+additional classification. No such mapping is asserted.
+
+`dpp:materialPercentage` carries a literal decimal percentage. Textile uses
+`txt:hasFibreMassFraction` to link to a structured `txtcon:QuantitativeValue`
+on a 0?1 scale with `units:one`. Substitution would change the RDF kind, value
+structure and scale interpretation; it is not semantics-preserving.
+
+CORE `dpp:QuantitativeProperty` represents a quantitative property or measurand;
+Textile `txtcon:QuantitativeValue` represents its structured value. The CORE
+snapshot also supplies numerical-value and unit carriers, but this structural
+overlap does not establish class equivalence. See the local
+[CORE snapshot](../dependencies/p_dpp.owl) and
+[MAT snapshot](../dependencies/mat.owl).
+
+The five `hasTextualValue` local names belong to distinct IRIs in the
+`textile-assessment#`, `textile-context#`, `textile-indicator#`,
+`textile-process#` and `textile-structure#` namespaces under
+`https://w3id.org/eudpp/`. Each module owns its property with a role-specific
+domain. They are not duplicate declarations of one property. The shared value
+structures remain in Connector; no centralization is required by this review.
+
+See the [Nader review record](governance/nader-review.md) for evidence and
+outstanding governance questions.

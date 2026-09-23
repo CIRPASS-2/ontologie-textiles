@@ -126,3 +126,52 @@ def test_resolution_cannot_change_source_identity(tmp_path,tables):
  (tmp_path/'traceability/evidence-locator-resolutions.csv').write_bytes(v.csv_bytes(v.RESOLUTION_FIELDS,resolutions))
  with pytest.raises(ValueError,match='changes source relationship'):
   v.apply_locator_resolutions(evidence,tmp_path)
+
+
+@pytest.mark.parametrize('relative_path', [
+ 'mireot/actor-textile-mireot.ttl',
+ 'mireot/dpp-textile-mireot.ttl',
+ 'mireot/event-textile-mireot.ttl',
+ 'mireot/mat-textile-mireot.ttl',
+ 'mireot/si-textile-mireot.ttl',
+ 'mireot/soc-textile-mireot.ttl',
+ 'dependencies/soc.ttl',
+])
+def test_review_dependencies_are_packaged_and_checksum_covered(relative_path):
+ assert (ROOT/relative_path).is_file()
+ assert relative_path in v.manifest_sections(ROOT)['CURRENT_PACKAGE']
+ checksums = dict(line.split('  ', 1)[::-1]
+                  for line in (ROOT/'SHA256SUMS').read_text('utf8').splitlines())
+ assert checksums[relative_path] == v.hashlib.sha256((ROOT/relative_path).read_bytes()).hexdigest()
+
+
+def test_review_current_properties_have_single_declaration_owner():
+ property_types = {v.RDF.Property, v.OWL.ObjectProperty, v.OWL.DatatypeProperty,
+                   v.OWL.AnnotationProperty, v.OWL.FunctionalProperty,
+                   v.OWL.InverseFunctionalProperty, v.OWL.TransitiveProperty,
+                   v.OWL.SymmetricProperty, v.OWL.AsymmetricProperty,
+                   v.OWL.ReflexiveProperty, v.OWL.IrreflexiveProperty}
+ owners = {}
+ for path in sorted((ROOT/'ontology').glob('*.ttl')):
+  graph = v.parse(path)
+  declared = {s for s, kind in graph.subject_objects(v.RDF.type)
+              if isinstance(s, v.URIRef) and kind in property_types}
+  for subject in declared:
+   owners.setdefault(subject, []).append(path.name)
+ duplicates = {str(subject): files for subject, files in owners.items() if len(files) > 1}
+ assert not duplicates, duplicates
+
+
+def test_review_fibre_component_keeps_core_material_specialization():
+ graph = v.parse(ROOT/'ontology/textile-core.ttl')
+ assert (v.URIRef('https://w3id.org/eudpp/textile-core#FibreCompositionComponent'),
+         v.RDFS.subClassOf,
+         v.URIRef('https://w3id.org/eudpp#MaterialOfComposition')) in graph
+
+
+def test_review_object_properties_do_not_use_subclass_axioms():
+ graph = v.ontology_graph(ROOT)
+ defects = [(str(subject), str(parent))
+            for subject in graph.subjects(v.RDF.type, v.OWL.ObjectProperty)
+            for parent in graph.objects(subject, v.RDFS.subClassOf)]
+ assert not defects, defects
