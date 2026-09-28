@@ -51,6 +51,29 @@ def test_ontology_headers_and_external_subjects_are_excluded(tables):
  assert not any((v.URIRef(x['resource_iri']),v.RDF.type,v.OWL.Ontology) in g for x in r)
  assert all(x['resource_iri'].startswith('https://w3id.org/eudpp/textile-') for x in r)
 
+
+def test_textile_ontology_headers_cannot_self_define_and_context_metadata_is_stable():
+ context=v.URIRef('https://w3id.org/eudpp/textile-context')
+ expected_imports={
+  v.URIRef('https://w3id.org/eudpp/textile-connector'),
+  v.URIRef('https://w3id.org/eudpp/textile-dpp-mireot'),
+  v.URIRef('https://w3id.org/eudpp/textile-durability'),
+  v.URIRef('https://w3id.org/eudpp/textile-process'),
+ }
+ for name in v.CURRENT_MODULES:
+  graph=v.parse(ROOT/'ontology'/name)
+  headers=set(graph.subjects(v.RDF.type,v.OWL.Ontology))
+  assert headers, name
+  offenders=[str(header) for header in headers if (header,v.RDFS.isDefinedBy,header) in graph]
+  assert not offenders, (name,offenders)
+ context_graph=v.parse(ROOT/'ontology/textile-context.ttl')
+ assert (context,v.RDF.type,v.OWL.Ontology) in context_graph
+ assert set(context_graph.objects(context,v.OWL.versionIRI))=={
+  v.URIRef('https://w3id.org/eudpp/textile-context/1.1.2')
+ }
+ assert {str(value) for value in context_graph.objects(context,v.OWL.versionInfo)}=={'Version 1.1.2'}
+ assert set(context_graph.objects(context,v.OWL.imports))==expected_imports
+
 def test_missing_external_locator_stays_unresolved(tables):
  _,e,_=tables
  rows=[x for x in e if not x['source_locator']]

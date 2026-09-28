@@ -1,25 +1,25 @@
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-process> .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Context Ontology. Version 1.1.2."@en .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/description> "Ontology module for representing concrete observations, declarations and settings about textile use, care, environmental exposure, storage and user behaviour. Context factor types are represented as SKOS concepts; processes and process parameters remain in TEXTILE_PROCESS."@en .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/dc/terms/title> "EU DPP Textile Context Ontology"@en .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtctx" .
-<https://w3id.org/eudpp/textile-durability> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-context#" .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2000/01/rdf-schema#comment> "A context observation is not a textile process, process parameter, assessment result or derived indicator. Washing temperature and similar operational settings remain represented through TEXTILE_PROCESS."@en .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-context> .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Context Ontology"@en .
-<https://w3id.org/eudpp/textile-durability> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
-<https://w3id.org/eudpp/textile-durability> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC 3rd milestone, Sections 6.3 (pages 84-87, lines 2105-2244), 9.2.2.2 (pages 125-126, lines 3296-3327), and 13.7.2 (pages 395-410, lines 10227-10646)."@en .
-<https://w3id.org/eudpp/textile-durability> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-context/1.1.2> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Context Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/description> "Ontology module for representing concrete observations, declarations and settings about textile use, care, environmental exposure, storage and user behaviour. Context factor types are represented as SKOS concepts; processes and process parameters remain in TEXTILE_PROCESS."@en .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/title> "EU DPP Textile Context Ontology"@en .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtctx" .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-context#" .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2000/01/rdf-schema#comment> "A context observation is not a textile process, process parameter, assessment result or derived indicator. Washing temperature and similar operational settings remain represented through TEXTILE_PROCESS."@en .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Context Ontology"@en .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-context> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC 3rd milestone, Sections 6.3 (pages 84-87, lines 2105-2244), 9.2.2.2 (pages 125-126, lines 3296-3327), and 13.7.2 (pages 395-410, lines 10227-10646)."@en .
+<https://w3id.org/eudpp/textile-context> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
 #
 #
 # #################################################################

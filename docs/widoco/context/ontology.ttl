@@ -554,7 +554,6 @@ txtctx:ContextFactorScheme a skos:ConceptScheme ;
     vann:preferredNamespacePrefix "txtctx" ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-context#" ;
     rdfs:comment "A context observation is not a textile process, process parameter, assessment result or derived indicator. Washing temperature and similar operational settings remain represented through TEXTILE_PROCESS."@en ;
-    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
     owl:imports <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability>,

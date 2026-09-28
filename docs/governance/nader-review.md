@@ -58,6 +58,16 @@ source IRI and one fraction, paired optional masses, matching mass units and
 arithmetic consistency. The shared quantitative profile checks fraction bounds
 and units. Positive/negative V07/I07 fixtures exercise the declaration pattern.
 
+## WIDOCO Context follow-up
+
+The issue was reproduced and the self-referential ontology-header assertion
+was confirmed as the cause of the identity/version defect. Before the fix,
+WIDOCO displayed only the incorrect Durability import; after the correction,
+the HTML import-list block is absent. Context vocabulary and logical axioms are
+unchanged, and all four direct Context imports remain in the RDF
+serializations. This HTML behavior remains a separate WIDOCO presentation
+issue for investigation.
+
 Possible CORE/Battery adoption requires upstream governance concerning
 source-category semantics (including overlap), denominator scope, aggregation
 and double-counting. The existing shapes do not establish an exhaustive source

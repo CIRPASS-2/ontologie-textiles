@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/eudpp/textile-durability#"
-     xml:base="https://w3id.org/eudpp/textile-durability"
+<rdf:RDF xmlns="https://w3id.org/eudpp/textile-context#"
+     xml:base="https://w3id.org/eudpp/textile-context"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,7 +11,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:textile-context="https://w3id.org/eudpp/textile-context#"
      xmlns:textile-connector="https://w3id.org/eudpp/textile-connector#">
-    <owl:Ontology rdf:about="https://w3id.org/eudpp/textile-durability">
+    <owl:Ontology rdf:about="https://w3id.org/eudpp/textile-context">
+        <owl:versionIRI rdf:resource="https://w3id.org/eudpp/textile-context/1.1.2"/>
         <owl:imports rdf:resource="https://w3id.org/eudpp/textile-connector"/>
         <owl:imports rdf:resource="https://w3id.org/eudpp/textile-dpp-mireot"/>
         <owl:imports rdf:resource="https://w3id.org/eudpp/textile-durability"/>
@@ -28,7 +29,6 @@
         <vann:preferredNamespacePrefix>txtctx</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/eudpp/textile-context#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">A context observation is not a textile process, process parameter, assessment result or derived indicator. Washing temperature and similar operational settings remain represented through TEXTILE_PROCESS.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-context"/>
         <rdfs:label xml:lang="en">EU DPP Textile Context Ontology</rdfs:label>
         <owl:versionInfo>Version 1.1.2</owl:versionInfo>
         <textile-connector:sourceLocator xml:lang="en">JRC 3rd milestone, Sections 6.3 (pages 84-87, lines 2105-2244), 9.2.2.2 (pages 125-126, lines 3296-3327), and 13.7.2 (pages 395-410, lines 10227-10646).</textile-connector:sourceLocator>
@@ -556,7 +556,7 @@
         <skos:prefLabel xml:lang="en">Bleaching practice</skos:prefLabel>
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3305.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
     </owl:NamedIndividual>
 
 
@@ -643,7 +643,7 @@
         <skos:prefLabel xml:lang="en">Cleaning frequency</skos:prefLabel>
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10230-10248.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
     </owl:NamedIndividual>
 
 
@@ -663,7 +663,7 @@
         <skos:prefLabel xml:lang="en">Detergent use practice</skos:prefLabel>
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2112-2116; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3308-3314.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
     </owl:NamedIndividual>
 
 
@@ -685,7 +685,7 @@
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.7.2.5, printed page 403, lines 10404-10416; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2126-2131.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
         <textile-connector:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#DimensionalStability"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#DryingProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#DryingProcess"/>
     </owl:NamedIndividual>
 
 
@@ -768,7 +768,7 @@
         <skos:prefLabel xml:lang="en">Folding or hanging condition</skos:prefLabel>
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3259-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 13.7.2.7, printed page 403, lines 10434-10439.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#directExtraction"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#StorageProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#StorageProcess"/>
     </owl:NamedIndividual>
 
 
@@ -847,7 +847,7 @@
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.7.2.6, printed page 403, lines 10417-10433; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2132-2134.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#directExtraction"/>
         <textile-connector:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#DimensionalStability"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#IroningProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#IroningProcess"/>
     </owl:NamedIndividual>
 
 
@@ -867,7 +867,7 @@
         <skos:prefLabel xml:lang="en">Laundry sorting practice</skos:prefLabel>
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.7.2.1, printed pages 395-396, lines 10249-10268; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3249-3255.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
     </owl:NamedIndividual>
 
 
@@ -925,7 +925,7 @@
         <skos:prefLabel xml:lang="en">Repair behaviour</skos:prefLabel>
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2196-2219; JRC Preparatory Study, Section 13.7.2.9, printed pages 406-407, lines 10528-10556.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#RepairProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#RepairProcess"/>
     </owl:NamedIndividual>
 
 
@@ -1133,7 +1133,7 @@
         <textile-connector:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10248; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111.</textile-connector:sourceLocator>
         <textile-connector:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#directExtraction"/>
         <textile-connector:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#DimensionalStability"/>
-        <textile-context:typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
+        <typicallyQualifiesProcess rdf:resource="https://w3id.org/eudpp/textile-process#WashingProcess"/>
     </owl:NamedIndividual>
 
 
