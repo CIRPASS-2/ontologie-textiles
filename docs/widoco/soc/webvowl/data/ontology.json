@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/eudpp/textile-soc",
     "version" : "Version 1.1.2",
-    "author" : [ "Elio Hbeich" ],
+    "author" : [ "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Textile-sector specialisation of the EU DPP Substances of Concern ontology. It specialises substance presence, product location, concentration reporting, product-group qualification, thresholds and lifecycle handling for textile products."
     },
@@ -26,6 +26,11 @@
         "type" : "iri"
       } ],
       "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "BOUGACHA Racem",
+        "type" : "label"
+      }, {
         "identifier" : "creator",
         "language" : "en",
         "value" : "Elio Hbeich",
@@ -49,12 +54,13 @@
         "value" : "2026-07-16",
         "type" : "label"
       } ],
-      "source" : [ {
-        "identifier" : "source",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "iri"
-      }, {
+        "value" : "Version 1.1.2",
+        "type" : "label"
+      } ],
+      "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-ontology",
@@ -62,20 +68,13 @@
       }, {
         "identifier" : "source",
         "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "EU DPP Textile Ontology - Textile Substances of Concern Module. Version 1.1.2.",
-        "type" : "label"
-      } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "Version 1.1.2",
-        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -83,16 +82,22 @@
         "value" : "https://w3id.org/eudpp/textile-soc#",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Ontology - Textile Substances of Concern Module",
+        "value" : "EU DPP Textile Ontology - Textile Substances of Concern Module. Version 1.1.2.",
         "type" : "label"
       } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2026-07-09",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "EU DPP Textile Ontology - Textile Substances of Concern Module",
         "type" : "label"
       } ]
     }
@@ -138,10 +143,10 @@
     "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -213,17 +218,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -245,12 +250,12 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -283,17 +288,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -338,76 +343,6 @@
         "en" : "Adhesive or bonding layer location"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
-      "baseIri" : "https://w3id.org/eudpp/textile-soc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "LOC_PRINT_DYE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Printed or dyed region location",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
-      },
-      "labels" : {
-        "IRI-based" : "printedOrDyedRegionLocation",
-        "en" : "Printed or dyed region location"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
@@ -450,17 +385,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -478,6 +413,76 @@
         "en" : "Coating or finish location"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
+      "baseIri" : "https://w3id.org/eudpp/textile-soc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "LOC_PRINT_DYE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Printed or dyed region location",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
+      },
+      "labels" : {
+        "IRI-based" : "printedOrDyedRegionLocation",
+        "en" : "Printed or dyed region location"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
@@ -493,17 +498,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -525,12 +530,12 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -563,17 +568,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -595,12 +600,12 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -779,12 +784,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
@@ -813,17 +818,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -883,17 +888,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -915,12 +920,12 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -936,6 +941,76 @@
       "labels" : {
         "IRI-based" : "fibreCompositionLocation",
         "en" : "Fibre composition location"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
+      "baseIri" : "https://w3id.org/eudpp/textile-soc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "LOC_PRINT_DYE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Printed or dyed region location",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
+      },
+      "labels" : {
+        "IRI-based" : "printedOrDyedRegionLocation",
+        "en" : "Printed or dyed region location"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
@@ -980,17 +1055,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1008,76 +1083,6 @@
         "en" : "Coating or finish location"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
-      "baseIri" : "https://w3id.org/eudpp/textile-soc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "LOC_PRINT_DYE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Printed or dyed region location",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
-      },
-      "labels" : {
-        "IRI-based" : "printedOrDyedRegionLocation",
-        "en" : "Printed or dyed region location"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
@@ -1093,17 +1098,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1125,12 +1130,12 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1163,17 +1168,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1195,12 +1200,12 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1310,17 +1315,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1331,7 +1336,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation",
+          "value" : "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -1341,17 +1346,17 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
+          "value" : "https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -1361,13 +1366,13 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
+          "value" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
           "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
@@ -1377,7 +1382,7 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -1456,27 +1461,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 12.1, printed page 220, lines 6213-6220; Section 12.3.12, printed page 246, lines 6823-6863.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -1500,24 +1505,19 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 12.1, printed pages 219-220, lines 6205-6220.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 12.1, printed pages 219-220, lines 6205-6220.",
+        "type" : "label"
+      } ],
       "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "iri"
-      }, {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-ontology",
@@ -1526,6 +1526,11 @@
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       } ]
     },
@@ -1559,15 +1564,6 @@
     "attributes" : [ "external" ],
     "id" : "19"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept",
-    "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TextileChemicalUseCategoryConcept"
-    },
-    "attributes" : [ "external" ],
-    "id" : "37"
-  }, {
     "iri" : "https://w3id.org/eudpp/soc#SubstanceOfConcernPresenceContext",
     "baseIri" : "https://w3id.org/eudpp/soc",
     "instances" : 0,
@@ -1577,6 +1573,15 @@
     "subClasses" : [ "5" ],
     "attributes" : [ "external" ],
     "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept",
+    "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TextileChemicalUseCategoryConcept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -1660,12 +1665,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -1677,7 +1682,7 @@
       "en" : "Bridge class for a fibre-composition component that is used as the material-group scope of a textile substance-of-concern presence context."
     },
     "id" : "18",
-    "superClasses" : [ "17", "21" ]
+    "superClasses" : [ "21", "17" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -1772,17 +1777,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1842,12 +1847,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -1871,22 +1876,22 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 12.1, printed page 219, lines 6169-6170; Section 12.3.6, printed pages 238-239, lines 6634-6639; Section 12.3.11, printed page 246, lines 6815-6822.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 12.1, printed page 219, lines 6169-6170; Section 12.3.6, printed pages 238-239, lines 6634-6639; Section 12.3.11, printed page 246, lines 6815-6822.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
@@ -1896,7 +1901,7 @@
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -1992,47 +1997,47 @@
   "propertyAttribute" : [ {
     "range" : "19",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "range" : "19",
     "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   }, {
-    "range" : "21",
+    "range" : "17",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "range" : "11",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
     "range" : "10",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
-    "range" : "17",
+    "range" : "21",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
     "range" : "14",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "31",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
     "range" : "16",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
     "iri" : "https://w3id.org/eudpp/soc#isQualifiedByProductGroupList",
@@ -2043,7 +2048,7 @@
     },
     "domain" : "34",
     "subproperty" : [ "35" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#relevantToTextileProcess",
@@ -2056,27 +2061,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -2093,37 +2098,37 @@
   }, {
     "range" : "5",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "range" : "15",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "5",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "range" : "5",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "6",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "range" : "0",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "2",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "44"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction",
@@ -2136,17 +2141,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2173,12 +2178,12 @@
   }, {
     "range" : "9",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "47"
   }, {
     "range" : "15",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasTextileLocationType",
@@ -2251,12 +2256,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -2280,7 +2285,7 @@
     },
     "domain" : "34",
     "subproperty" : [ "50" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "51"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference",
@@ -2293,27 +2298,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Regulation (EU) 2024/1781, Article 2(27)(d).",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Regulation (EU) 2024/1781, Article 2(27)(d).",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       } ]
     },
@@ -2339,27 +2344,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
