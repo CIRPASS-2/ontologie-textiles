@@ -52,6 +52,7 @@ docs/DEPENDENCIES.md
 docs/MODELLING_GUIDE.md
 docs/PUBLICATION_SCOPE.md
 docs/SOURCE_TRACEABILITY.md
+docs/TEXTILE_IRI_RESOLVER_COORDINATION_2.0.0.md
 docs/decisions/TXT-DEC-001.md
 docs/decisions/TXT-DEC-002.md
 docs/decisions/TXT-DEC-003.md
@@ -547,6 +548,7 @@ examples/example-10-textile-soc-v2.0.0.ttl
 examples/example-11-textile-recyclability-v1.1.2.ttl
 migration/AUDIT_CORRECTIONS.md
 migration/CREATOR_UPDATE.md
+migration/PUBLICATION_BLOCKER_REMEDIATION.md
 migration/README.md
 migration/STAGE_CHECKS.md
 migration/TEXTILE_CORE_2026_FINAL_RECONCILIATION.md
@@ -572,6 +574,7 @@ migration/creator-update-results.json
 migration/extraction-scopes.json
 migration/finalize_audit_records.py
 migration/finalize_creator_records.py
+migration/finalize_publication_blockers.py
 migration/historical-closure-results.json
 migration/historical/1.1.2/catalog-v001.xml
 migration/historical/1.1.2/dependencies/SI_REFERENCE_POINT.md
@@ -606,13 +609,18 @@ migration/implement_core.py
 migration/legacy-soc-attribution.json
 migration/node-correspondence.json
 migration/prepare_inputs.py
+migration/publication-blocker-results.json
 migration/refresh_publication.py
+migration/resolver-http-observations.json
+migration/retained-version-identities.json
 migration/run_final_runtime.py
 migration/semantic-mapping.csv
 migration/update_creators.py
 migration/update_validation_contracts.py
 migration/validation-pytest.xml
 migration/validation-results.json
+migration/widoco-links-after.json
+migration/widoco-links-before.json
 mireot/actor-textile-mireot.ttl
 mireot/con-textile-mireot.ttl
 mireot/dpp-textile-mireot.ttl
@@ -634,11 +642,14 @@ ontology/textile-repairability.ttl
 ontology/textile-soc.ttl
 ontology/textile-structure.ttl
 requirements-validation.txt
+scripts/check_widoco_links.py
 scripts/generate-migration-diagrams.ps1
 scripts/generate-widoco-docs.ps1
 scripts/generate-widoco-index.py
+scripts/observe_textile_resolvers.py
 scripts/sync-widoco-rdf.py
 scripts/validate_public.py
+scripts/widoco_annotations.py
 shacl/README.md
 shacl/profiles/textile-soc-complete-report.ttl
 shacl/textile-quantitative-shapes.ttl
@@ -717,6 +728,7 @@ tests/test_creator_metadata.py
 tests/test_migration_publication.py
 tests/test_public_package.py
 tests/test_shacl_result_matching.py
+tests/test_widoco_links.py
 traceability/README.md
 traceability/evidence-locator-resolutions.csv
 traceability/source-documents.csv

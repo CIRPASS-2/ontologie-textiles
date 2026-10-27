@@ -351,6 +351,9 @@ foreach ($module in $modules) {
         python scripts/sync-widoco-rdf.py $module
         if ($LASTEXITCODE -ne 0) { throw "Canonical RDF synchronisation failed for $module" }
 
+        python scripts/widoco_annotations.py $module
+        if ($LASTEXITCODE -ne 0) { throw "Annotation-property documentation failed for $module" }
+
         Write-Host "Canonical TTL restored: $module"
 
         Write-Host "Completed: $module"

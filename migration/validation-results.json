@@ -60,19 +60,30 @@
     "compound_citations": 326,
     "resources_with_jrc_evidence": 549,
     "current_import_closure_files": 20,
-    "package_files": 771,
+    "package_files": 783,
     "preserved_reference_files": 3,
     "parsed_rdf_files": 171,
     "public_adrs": 10,
     "multiple_source_annotations": 152,
     "structural_checks": "passed",
+    "widoco_links": {
+      "html_files": 121,
+      "assembled_pages": 37,
+      "ajax_sections": 84,
+      "reference_count": 12319,
+      "statuses": {
+        "application_route": 12,
+        "external_not_checked": 5394,
+        "ok": 6913
+      }
+    },
     "examples_conformant": 11,
     "shacl_scenarios": 16,
     "reasoning_scenarios": 6,
     "rdfs_negative_control": "passed"
   },
   "pytest": {
-    "tests": 174,
+    "tests": 180,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -167,5 +178,39 @@
     "historical_core_si_mireot_shacl_examples": "unchanged",
     "candidate_version": "2.0.0",
     "local_only": true
+  },
+  "publication_blockers": {
+    "baseline_commit": "1866acd9f998976481dcfaba3b531c016822b87f",
+    "candidate": "2.0.0",
+    "pytest": {
+      "tests": 180,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "public_validation_modes": {
+      "partial": {
+        "examples_conformant": 11,
+        "shacl_scenarios": 16,
+        "reasoning_scenarios": 6,
+        "rdfs_negative_control": "passed"
+      },
+      "complete": {
+        "examples_conformant": 11,
+        "shacl_scenarios": 16,
+        "reasoning_scenarios": 6,
+        "rdfs_negative_control": "passed"
+      }
+    },
+    "canonical_graphs_verified": 13,
+    "canonical_rdf_differences": 0,
+    "metadata_exclusions": 0,
+    "widoco_exports_isomorphic": 48,
+    "widoco_exports_byte_unchanged": 48,
+    "protected_files_verified": 163,
+    "broken_links_before": 49,
+    "broken_links_after": 0,
+    "local_only": true,
+    "redirects_modified": false
   }
 }

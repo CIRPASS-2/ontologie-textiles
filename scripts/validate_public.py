@@ -45,6 +45,8 @@ PRIVATE_PATH = re.compile(
 # The current package owns these areas. Other repository content is out of scope.
 PACKAGE_ROOT_FILES = ('CHANGELOG.md','LICENSE.md','PUBLICATION_MANIFEST.txt','README.md','SHA256SUMS','VERSION','catalog-v001.xml','requirements-validation.txt')
 PACKAGE_AREAS = ('ontology','mireot','dependencies','shacl','examples','docs','diagrams','scripts','tests','traceability','LICENSES','migration','widoco')
+# Owner-reviewed working plan remains untracked and outside the release contract.
+NON_RELEASE_PLANNING_FILES = ('migration/PUBLICATION_PLAN_2.0.0.md',)
 PRESERVED_REFERENCE_MATERIAL = ('ontology/graphwise-ontology/README.md','ontology/graphwise-ontology/SHACL textile product data.ttl','ontology/graphwise-ontology/ontology.ttl')
 RESOLUTION_FIELDS = 'previous_evidence_id resource_iri source_document_id source_section source_page source_locator verification_basis notes'.split()
 CURRENT_MODULES = ('textile-assessment.ttl', 'textile-associated-materials.ttl', 'textile-connector.ttl', 'textile-context.ttl', 'textile-core.ttl', 'textile-durability.ttl', 'textile-indicator.ttl', 'textile-ontology.ttl', 'textile-process.ttl', 'textile-recyclability.ttl', 'textile-repairability.ttl', 'textile-soc.ttl', 'textile-structure.ttl')
@@ -55,6 +57,8 @@ def package_files(root):
  for area in PACKAGE_AREAS:
   for p in (root/area).rglob('*'):
    rel=p.relative_to(root).as_posix()
+   if rel in NON_RELEASE_PLANNING_FILES:
+    continue
 
    if not p.is_file():
     continue
@@ -293,6 +297,12 @@ def summary(resources,evidence,sources):
   resources_with_jrc_evidence=sum(r['has_jrc_evidence']=='TRUE' for r in resources))
 
 def structural_checks(root):
+ try:
+  from scripts.check_widoco_links import audit_tree
+ except ImportError:
+  from check_widoco_links import audit_tree
+ links=audit_tree(root/'docs/widoco')
+ require(not links['errors'],'Broken WIDOCO references: '+repr(links['errors']))
  g=ontology_graph(root);r,e,s,m=derive(g,root)
  for file,fields,expected in [('textile-resource-traceability.csv',RESOURCE_FIELDS,r),('textile-resource-evidence.csv',EVIDENCE_FIELDS,e),('source-documents.csv',SOURCE_FIELDS,s)]:
   actual=read_csv(root/'traceability'/file,fields);require(actual==expected,'Traceability differs from RDF-derived projection: '+file)
@@ -331,6 +341,7 @@ def structural_checks(root):
  lines=(root/'SHA256SUMS').read_text('utf8').splitlines();want=[p for p in manifest if p!='SHA256SUMS']
  require(lines==[hashlib.sha256((root/p).read_bytes()).hexdigest()+'  '+p for p in want],'Checksum mismatch')
  report=summary(r,e,s);report.update(current_import_closure_files=len(closure),package_files=len(manifest),preserved_reference_files=len(PRESERVED_REFERENCE_MATERIAL),parsed_rdf_files=len(rdf_paths),public_adrs=len(adr),multiple_source_annotations=m,structural_checks='passed')
+ report['widoco_links']={k:links[k] for k in ('html_files','assembled_pages','ajax_sections','reference_count','statuses')}
  return report
 
 def match_shacl_results(results, shapes, scenario):

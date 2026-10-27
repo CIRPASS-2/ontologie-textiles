@@ -1,0 +1,291 @@
+[
+  {
+    "source": "ontology/textile-assessment.ttl",
+    "iri": "https://w3id.org/eudpp/textile-assessment",
+    "version_iri": "https://w3id.org/eudpp/textile-assessment/1.1.2",
+    "current_sha256": "b9c8f955ffa847efbdb7e2d6ece939682ad5747c2531875e74dbf30e476db503",
+    "historical_sha256": "cae6539f12debdb43c8d461e0544c3846190cd4440f681a4df8c1405b5dfeaf4",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-assessment.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-durability",
+        "current": "ontology/textile-durability.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-durability.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-connector.ttl",
+    "iri": "https://w3id.org/eudpp/textile-connector",
+    "version_iri": "https://w3id.org/eudpp/textile-connector/1.1.2",
+    "current_sha256": "ba2eb85692311a2daf0d132676e644ef839c6d21c2a32f5e9bdc78b79dbd1fc9",
+    "historical_sha256": "6cea5a1c7438ea086d0bb841668d694ee169f5e64a3898105687cece34a55086",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-connector.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-si-mireot",
+        "current": "mireot/si-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/si-textile-mireot.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-context.ttl",
+    "iri": "https://w3id.org/eudpp/textile-context",
+    "version_iri": "https://w3id.org/eudpp/textile-context/1.1.2",
+    "current_sha256": "8d737e358f0596ddc022458a74ea7a61c121dcb1a8f74ad79a517ae0257db57b",
+    "historical_sha256": "5b2409d8c391995b4c5e0293c43836430ee54eadd6ef6943a7693eb80f1c162d",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-context.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-durability",
+        "current": "ontology/textile-durability.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-durability.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-process",
+        "current": "ontology/textile-process.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-process.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-core.ttl",
+    "iri": "https://w3id.org/eudpp/textile-core",
+    "version_iri": "https://w3id.org/eudpp/textile-core/1.1.2",
+    "current_sha256": "1eb1769d6eba350a0fda77c2e099bb890c33cc9af225d3c932bf98fee1663fb6",
+    "historical_sha256": "0624cf9ee7ad8ee9f07c8893c5d8f2e4f4f030cbf5e67408243626f8cf162745",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-core.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-mat-mireot",
+        "current": "mireot/mat-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/mat-textile-mireot.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-durability.ttl",
+    "iri": "https://w3id.org/eudpp/textile-durability",
+    "version_iri": "https://w3id.org/eudpp/textile-durability/1.1.2",
+    "current_sha256": "2fd53618e7b0b8dae0ee9139fb1965556c864446e8ee20ca9ca3e2c21e8c954b",
+    "historical_sha256": "a7b3906a38b9de1bfbdce1051dd32df4821daf1231ff94208dead81cd36a5343",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-durability.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-indicator.ttl",
+    "iri": "https://w3id.org/eudpp/textile-indicator",
+    "version_iri": "https://w3id.org/eudpp/textile-indicator/1.1.2",
+    "current_sha256": "68a91de1d6167d95eb590a1440da56765dee41e9bcbbf16d2219b4afb23a19d7",
+    "historical_sha256": "b142a64ed36f93f5ffa92b153a5dedf6cf0db58a1ebdbfeb8038a20141529a5e",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-indicator.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-assessment",
+        "current": "ontology/textile-assessment.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-assessment.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-durability",
+        "current": "ontology/textile-durability.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-durability.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-process.ttl",
+    "iri": "https://w3id.org/eudpp/textile-process",
+    "version_iri": "https://w3id.org/eudpp/textile-process/1.1.2",
+    "current_sha256": "4c5d36b02c9467b3e6c40f483c10857e0daa1d9099b09093954d5164c364b88a",
+    "historical_sha256": "a8e5f4b76f8512701e3187519014c7324a6f1039043b7fd9f3e992a8a6ab1ba1",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-process.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-associated-materials",
+        "current": "ontology/textile-associated-materials.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-associated-materials.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-core",
+        "current": "ontology/textile-core.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-core.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-durability",
+        "current": "ontology/textile-durability.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-durability.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-event-mireot",
+        "current": "mireot/event-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/event-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-structure",
+        "current": "ontology/textile-structure.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-structure.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-repairability.ttl",
+    "iri": "https://w3id.org/eudpp/textile-repairability",
+    "version_iri": "https://w3id.org/eudpp/textile-repairability/1.1.2",
+    "current_sha256": "528ccfabb1133961625ee2e2cbc95d703a7b5d637bcdaa9a4ab07f7b4585c6f2",
+    "historical_sha256": "12fdbc3448c806a7503131b04d0314dfb21d66e58950aa3df39d457e4d0f4e53",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-repairability.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-actor-mireot",
+        "current": "mireot/actor-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/actor-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-assessment",
+        "current": "ontology/textile-assessment.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-assessment.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-associated-materials",
+        "current": "ontology/textile-associated-materials.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-associated-materials.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-context",
+        "current": "ontology/textile-context.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-context.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-core",
+        "current": "ontology/textile-core.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-core.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-durability",
+        "current": "ontology/textile-durability.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-durability.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-event-mireot",
+        "current": "mireot/event-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/event-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-process",
+        "current": "ontology/textile-process.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-process.ttl"
+      }
+    ]
+  },
+  {
+    "source": "ontology/textile-structure.ttl",
+    "iri": "https://w3id.org/eudpp/textile-structure",
+    "version_iri": "https://w3id.org/eudpp/textile-structure/1.1.2",
+    "current_sha256": "03c84e1130b2ba46f57d912ed2ff19fd8f6a75e7e25a65633fe9b6fd3e939ae7",
+    "historical_sha256": "0c5ff4583d5bd1a6c89df80cdfb63731c6c9a5278770957f447019c9bb94c1a4",
+    "historical_source": "migration/historical/1.1.2/ontology/textile-structure.ttl",
+    "isomorphic_excluding_only_creator": true,
+    "imports": [
+      {
+        "iri": "https://w3id.org/eudpp/textile-connector",
+        "current": "ontology/textile-connector.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-connector.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-core",
+        "current": "ontology/textile-core.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-core.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-dpp-mireot",
+        "current": "mireot/dpp-textile-mireot.ttl",
+        "historical": "migration/historical/1.1.2/mireot/dpp-textile-mireot.ttl"
+      },
+      {
+        "iri": "https://w3id.org/eudpp/textile-durability",
+        "current": "ontology/textile-durability.ttl",
+        "historical": "migration/historical/1.1.2/ontology/textile-durability.ttl"
+      }
+    ]
+  }
+]
