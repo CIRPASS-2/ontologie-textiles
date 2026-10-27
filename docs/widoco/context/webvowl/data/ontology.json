@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/eudpp/textile-context",
     "version" : "Version 1.1.2",
-    "author" : [ "Elio Hbeich", "BOUGACHA Racem" ],
+    "author" : [ "Jan Merckx", "Andreas Schneider", "Piero de Sabbata", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for representing concrete observations, declarations and settings about textile use, care, environmental exposure, storage and user behaviour. Context factor types are represented as SKOS concepts; processes and process parameters remain in TEXTILE_PROCESS."
     },
@@ -22,12 +22,32 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
+        "value" : "Jan Merckx",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
         "value" : "BOUGACHA Racem",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
         "value" : "Elio Hbeich",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Andreas Schneider",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Piero de Sabbata",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Ivo Ladenius",
         "type" : "label"
       } ],
       "created" : [ {
@@ -270,17 +290,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3260-3262.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -330,17 +350,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2157; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458; JRC Preparatory Study, Section 9.2.2.1, printed pages 122-123, lines 3234-3262.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -378,16 +398,16 @@
       "iri" : "https://w3id.org/eudpp/textile-context#repairBehaviour",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
         "typicallyQualifiesProcess" : [ {
           "identifier" : "typicallyQualifiesProcess",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-process#RepairProcess",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -414,16 +434,16 @@
           "value" : "Repair behaviour",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
           "type" : "iri"
         } ]
       },
@@ -450,17 +470,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -468,16 +488,16 @@
           "value" : "Storage sunlight exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
           "type" : "iri"
         } ]
       },
@@ -492,16 +512,16 @@
       "iri" : "https://w3id.org/eudpp/textile-context#foldingOrHangingCondition",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
         "typicallyQualifiesProcess" : [ {
           "identifier" : "typicallyQualifiesProcess",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-process#StorageProcess",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -510,17 +530,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3259-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 13.7.2.7, printed page 403, lines 10434-10439.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3259-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 13.7.2.7, printed page 403, lines 10434-10439.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -528,16 +548,16 @@
           "value" : "Folding or hanging condition",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -564,17 +584,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 9.2.1.3, printed page 113, lines 3000-3009; Annex 13.4, Table 124, printed pages 362-367.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -618,17 +638,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -637,6 +657,21 @@
           "type" : "label"
         } ],
         "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#sunlightExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#uvExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#moistureExposure",
+          "type" : "iri"
+        }, {
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#temperatureExposure",
@@ -650,21 +685,6 @@
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#externalChemicalExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#moistureExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#sunlightExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#uvExposure",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -721,16 +741,16 @@
           "value" : "Moisture exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
           "type" : "iri"
         } ]
       },
@@ -757,17 +777,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3309-3318.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3309-3318.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -775,16 +795,16 @@
           "value" : "Temperature exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
           "type" : "iri"
         } ]
       },
@@ -805,16 +825,16 @@
           "value" : "High-temperature ironing may contribute to shrinkage; the effect remains product- and condition-dependent.",
           "type" : "label"
         } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#IroningProcess",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#IroningProcess",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -841,16 +861,16 @@
           "value" : "Ironing practice",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "typicalInfluenceOn" : [ {
@@ -883,17 +903,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10235-10243; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -937,17 +957,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10244; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3310-3314.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -955,16 +975,16 @@
           "value" : "External chemical exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
           "type" : "iri"
         } ]
       },
@@ -991,17 +1011,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1012,7 +1032,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#mechanicalStress",
+          "value" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -1022,17 +1042,17 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#frequencyOfUse",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#abrasionExposure",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
+          "value" : "https://w3id.org/eudpp/textile-context#frequencyOfUse",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#mechanicalStress",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -1077,17 +1097,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3305.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1114,60 +1134,6 @@
       "labels" : {
         "IRI-based" : "bleachingPractice",
         "en" : "Bleaching practice"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
-      "baseIri" : "https://w3id.org/eudpp/textile-context",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 6.3.4, printed pages 86-87, lines 2220-2244; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2246-2259.",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Replacement behaviour",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "User behaviour concerning substitution or disposal of a textile product; replacement frequency remains a derived indicator in TEXTILE_INDICATOR."
-      },
-      "labels" : {
-        "IRI-based" : "replacementBehaviour",
-        "en" : "Replacement behaviour"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-context#mechanicalStress",
@@ -1224,7 +1190,7 @@
         "en" : "Mechanical stress"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
+      "iri" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -1242,14 +1208,68 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.6.1, printed pages 146-147, lines 4090-4130.",
+          "value" : "JRC Preparatory Study, Section 6.3.4, printed pages 86-87, lines 2220-2244; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2246-2259.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Replacement behaviour",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "User behaviour concerning substitution or disposal of a textile product; replacement frequency remains a derived indicator in TEXTILE_INDICATOR."
+      },
+      "labels" : {
+        "IRI-based" : "replacementBehaviour",
+        "en" : "Replacement behaviour"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
+      "baseIri" : "https://w3id.org/eudpp/textile-context",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
+          "type" : "iri"
         } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.6.1, printed pages 146-147, lines 4090-4130.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1293,17 +1313,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Annex 13.7.2, printed page 395, lines 10235-10243.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Annex 13.7.2, printed page 395, lines 10235-10243.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1368,22 +1388,22 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#careBehaviour",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#careInstructionCompliance",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#repairBehaviour",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#careBehaviour",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -1446,16 +1466,16 @@
           "value" : "Detergent use practice",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
           "type" : "iri"
         } ]
       },
@@ -1465,78 +1485,6 @@
       "labels" : {
         "IRI-based" : "detergentUsePractice",
         "en" : "Detergent use practice"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#washingFrequency",
-      "baseIri" : "https://w3id.org/eudpp/textile-context",
-      "annotations" : {
-        "modellingNote" : [ {
-          "identifier" : "modellingNote",
-          "language" : "en",
-          "value" : "Washing frequency may influence physical durability and dimensional stability, but the effect depends on material, programme and care conditions.",
-          "type" : "label"
-        } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#WashingProcess",
-          "type" : "iri"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10248; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111.",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Washing frequency",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
-          "type" : "iri"
-        } ],
-        "typicalInfluenceOn" : [ {
-          "identifier" : "typicalInfluenceOn",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-durability#DimensionalStability",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "How often a textile product is washed during a stated reference period."
-      },
-      "labels" : {
-        "IRI-based" : "washingFrequency",
-        "en" : "Washing frequency"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-context#laundrySortingPractice",
@@ -1560,17 +1508,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2.1, printed pages 395-396, lines 10249-10268; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3249-3255.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1599,6 +1547,78 @@
         "en" : "Laundry sorting practice"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-context#washingFrequency",
+      "baseIri" : "https://w3id.org/eudpp/textile-context",
+      "annotations" : {
+        "modellingNote" : [ {
+          "identifier" : "modellingNote",
+          "language" : "en",
+          "value" : "Washing frequency may influence physical durability and dimensional stability, but the effect depends on material, programme and care conditions.",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#WashingProcess",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10248; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Washing frequency",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "typicalInfluenceOn" : [ {
+          "identifier" : "typicalInfluenceOn",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-durability#DimensionalStability",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "How often a textile product is washed during a stated reference period."
+      },
+      "labels" : {
+        "IRI-based" : "washingFrequency",
+        "en" : "Washing frequency"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-context#sunlightExposure",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
@@ -1620,17 +1640,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3315-3316; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3315-3316; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1638,16 +1658,16 @@
           "value" : "Sunlight exposure",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "typicalInfluenceOn" : [ {
@@ -1674,16 +1694,16 @@
           "value" : "Drying method and temperature may influence shrinkage and dimensional stability; no deterministic effect is asserted.",
           "type" : "label"
         } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#DryingProcess",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#DryingProcess",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -1692,17 +1712,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.7.2.5, printed page 403, lines 10404-10416; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2126-2131.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.7.2.5, printed page 403, lines 10404-10416; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2126-2131.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1740,16 +1760,16 @@
       "iri" : "https://w3id.org/eudpp/textile-context#cleaningFrequency",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
         "typicallyQualifiesProcess" : [ {
           "identifier" : "typicallyQualifiesProcess",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-process#WashingProcess",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -1812,17 +1832,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1838,17 +1858,17 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#activeOrInactiveStorage",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#storageHumidity",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#foldingOrHangingCondition",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#activeOrInactiveStorage",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -1887,17 +1907,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 6.3.1, printed pages 84-85, lines 2105-2143; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2001,17 +2021,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2022,17 +2042,12 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#cleaningFrequency",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#dryingPractice",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#bleachingPractice",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#laundrySortingPractice",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -2047,12 +2062,17 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#washingFrequency",
+          "value" : "https://w3id.org/eudpp/textile-context#cleaningFrequency",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#laundrySortingPractice",
+          "value" : "https://w3id.org/eudpp/textile-context#dryingPractice",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#washingFrequency",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -2082,12 +2102,12 @@
   }, {
     "instances" : 0,
     "union" : [ "6", "4" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "5"
   }, {
     "instances" : 0,
     "union" : [ "6", "4" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "7"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -2116,17 +2136,17 @@
         "value" : "https://w3id.org/eudpp/textile-context",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2263,17 +2283,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3260-3262.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2302,6 +2322,66 @@
         "en" : "Storage humidity"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-context#repairBehaviour",
+      "baseIri" : "https://w3id.org/eudpp/textile-context",
+      "annotations" : {
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#RepairProcess",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2196-2219; JRC Preparatory Study, Section 13.7.2.9, printed pages 406-407, lines 10528-10556.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Repair behaviour",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "User behaviour concerning self-repair, seeking help or using a professional repair service."
+      },
+      "labels" : {
+        "IRI-based" : "repairBehaviour",
+        "en" : "Repair behaviour"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-context#careInstructionCompliance",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
@@ -2323,17 +2403,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2157; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458; JRC Preparatory Study, Section 9.2.2.1, printed pages 122-123, lines 3234-3262.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2368,66 +2448,6 @@
         "en" : "Care-instruction compliance"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#repairBehaviour",
-      "baseIri" : "https://w3id.org/eudpp/textile-context",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#RepairProcess",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2196-2219; JRC Preparatory Study, Section 13.7.2.9, printed pages 406-407, lines 10528-10556.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Repair behaviour",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "User behaviour concerning self-repair, seeking help or using a professional repair service."
-      },
-      "labels" : {
-        "IRI-based" : "repairBehaviour",
-        "en" : "Repair behaviour"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-context#storageSunlightExposure",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
@@ -2443,17 +2463,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2461,16 +2481,16 @@
           "value" : "Storage sunlight exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
           "type" : "iri"
         } ]
       },
@@ -2497,17 +2517,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 9.2.1.3, printed page 113, lines 3000-3009; Annex 13.4, Table 124, printed pages 362-367.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2539,16 +2559,70 @@
       "iri" : "https://w3id.org/eudpp/textile-context#foldingOrHangingCondition",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#StorageProcess",
+          "type" : "iri"
+        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context",
           "type" : "iri"
         } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
+        "inScheme" : [ {
+          "identifier" : "inScheme",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#StorageProcess",
+          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3259-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 13.7.2.7, printed page 403, lines 10434-10439.",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Folding or hanging condition",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Whether and how a textile product is folded or hung during storage."
+      },
+      "labels" : {
+        "IRI-based" : "foldingOrHangingCondition",
+        "en" : "Folding or hanging condition"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
+      "baseIri" : "https://w3id.org/eudpp/textile-context",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2560,40 +2634,71 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3259-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 13.7.2.7, printed page 403, lines 10434-10439.",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
         } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Folding or hanging condition",
+          "value" : "Environmental exposure context factor",
           "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#sunlightExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#uvExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#moistureExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#temperatureExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#humidityExposure",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#externalChemicalExposure",
+          "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
+          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ]
       },
       "comment" : {
-        "en" : "Whether and how a textile product is folded or hung during storage."
+        "en" : "Context factor related to sunlight, ultraviolet radiation, humidity, moisture, temperature or external chemicals."
       },
       "labels" : {
-        "IRI-based" : "foldingOrHangingCondition",
-        "en" : "Folding or hanging condition"
+        "IRI-based" : "environmentalContextFactor",
+        "en" : "Environmental exposure context factor"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-context#moistureExposure",
@@ -2629,16 +2734,16 @@
           "value" : "Moisture exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
           "type" : "iri"
         } ]
       },
@@ -2648,91 +2753,6 @@
       "labels" : {
         "IRI-based" : "moistureExposure",
         "en" : "Moisture exposure"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-      "baseIri" : "https://w3id.org/eudpp/textile-context",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Environmental exposure context factor",
-          "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#temperatureExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#humidityExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#externalChemicalExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#moistureExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#sunlightExposure",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#uvExposure",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Context factor related to sunlight, ultraviolet radiation, humidity, moisture, temperature or external chemicals."
-      },
-      "labels" : {
-        "IRI-based" : "environmentalContextFactor",
-        "en" : "Environmental exposure context factor"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-context#temperatureExposure",
@@ -2750,17 +2770,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3309-3318.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3309-3318.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2768,16 +2788,16 @@
           "value" : "Temperature exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
           "type" : "iri"
         } ]
       },
@@ -2798,16 +2818,16 @@
           "value" : "High-temperature ironing may contribute to shrinkage; the effect remains product- and condition-dependent.",
           "type" : "label"
         } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#IroningProcess",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#IroningProcess",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -2834,16 +2854,16 @@
           "value" : "Ironing practice",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "typicalInfluenceOn" : [ {
@@ -2876,17 +2896,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10235-10243; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2930,17 +2950,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10244; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3310-3314.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2948,16 +2968,16 @@
           "value" : "External chemical exposure",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
           "type" : "iri"
         } ]
       },
@@ -2984,17 +3004,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3005,7 +3025,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#mechanicalStress",
+          "value" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -3015,17 +3035,17 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#frequencyOfUse",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#abrasionExposure",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
+          "value" : "https://w3id.org/eudpp/textile-context#frequencyOfUse",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#mechanicalStress",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -3070,17 +3090,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3305.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3107,60 +3127,6 @@
       "labels" : {
         "IRI-based" : "bleachingPractice",
         "en" : "Bleaching practice"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
-      "baseIri" : "https://w3id.org/eudpp/textile-context",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 6.3.4, printed pages 86-87, lines 2220-2244; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2246-2259.",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Replacement behaviour",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "User behaviour concerning substitution or disposal of a textile product; replacement frequency remains a derived indicator in TEXTILE_INDICATOR."
-      },
-      "labels" : {
-        "IRI-based" : "replacementBehaviour",
-        "en" : "Replacement behaviour"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-context#mechanicalStress",
@@ -3217,7 +3183,7 @@
         "en" : "Mechanical stress"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
+      "iri" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -3235,14 +3201,68 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.6.1, printed pages 146-147, lines 4090-4130.",
+          "value" : "JRC Preparatory Study, Section 6.3.4, printed pages 86-87, lines 2220-2244; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2246-2259.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Replacement behaviour",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#userBehaviourFactor",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "User behaviour concerning substitution or disposal of a textile product; replacement frequency remains a derived indicator in TEXTILE_INDICATOR."
+      },
+      "labels" : {
+        "IRI-based" : "replacementBehaviour",
+        "en" : "Replacement behaviour"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-context#intensityOfUse",
+      "baseIri" : "https://w3id.org/eudpp/textile-context",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
+          "type" : "iri"
         } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.6.1, printed pages 146-147, lines 4090-4130.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3286,17 +3306,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Annex 13.7.2, printed page 395, lines 10235-10243.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Annex 13.7.2, printed page 395, lines 10235-10243.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3361,22 +3381,22 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#careBehaviour",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#careInstructionCompliance",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#replacementBehaviour",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#repairBehaviour",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#careBehaviour",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -3439,16 +3459,16 @@
           "value" : "Detergent use practice",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
           "type" : "iri"
         } ]
       },
@@ -3481,17 +3501,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2.1, printed pages 395-396, lines 10249-10268; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3249-3255.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3529,16 +3549,16 @@
           "value" : "Washing frequency may influence physical durability and dimensional stability, but the effect depends on material, programme and care conditions.",
           "type" : "label"
         } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#WashingProcess",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#WashingProcess",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -3547,17 +3567,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10248; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3565,16 +3585,16 @@
           "value" : "Washing frequency",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "typicalInfluenceOn" : [ {
@@ -3613,17 +3633,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3315-3316; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3315-3316; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3631,16 +3651,16 @@
           "value" : "Sunlight exposure",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "typicalInfluenceOn" : [ {
@@ -3667,16 +3687,16 @@
           "value" : "Drying method and temperature may influence shrinkage and dimensional stability; no deterministic effect is asserted.",
           "type" : "label"
         } ],
-        "typicallyQualifiesProcess" : [ {
-          "identifier" : "typicallyQualifiesProcess",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#DryingProcess",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context",
+          "type" : "iri"
+        } ],
+        "typicallyQualifiesProcess" : [ {
+          "identifier" : "typicallyQualifiesProcess",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-process#DryingProcess",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -3685,17 +3705,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.7.2.5, printed page 403, lines 10404-10416; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2126-2131.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.7.2.5, printed page 403, lines 10404-10416; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2126-2131.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3733,16 +3753,16 @@
       "iri" : "https://w3id.org/eudpp/textile-context#cleaningFrequency",
       "baseIri" : "https://w3id.org/eudpp/textile-context",
       "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context",
-          "type" : "iri"
-        } ],
         "typicallyQualifiesProcess" : [ {
           "identifier" : "typicallyQualifiesProcess",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-process#WashingProcess",
+          "type" : "iri"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -3805,17 +3825,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3831,17 +3851,17 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#activeOrInactiveStorage",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#storageHumidity",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#foldingOrHangingCondition",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#activeOrInactiveStorage",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -3880,17 +3900,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 6.3.1, printed pages 84-85, lines 2105-2143; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3994,17 +4014,17 @@
           "value" : "https://w3id.org/eudpp/textile-context#ContextFactorScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -4015,17 +4035,12 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#cleaningFrequency",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#dryingPractice",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-context#bleachingPractice",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#laundrySortingPractice",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -4040,12 +4055,17 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#washingFrequency",
+          "value" : "https://w3id.org/eudpp/textile-context#cleaningFrequency",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#laundrySortingPractice",
+          "value" : "https://w3id.org/eudpp/textile-context#dryingPractice",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#washingFrequency",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -4112,17 +4132,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#useContextFactor",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
+          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -4132,7 +4142,17 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-context#storageContextFactor",
+          "value" : "https://w3id.org/eudpp/textile-context#careContextFactor",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#environmentalContextFactor",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-context#useContextFactor",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -4190,17 +4210,17 @@
         "value" : "https://w3id.org/eudpp/textile-context",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4359,17 +4379,17 @@
         "value" : "https://w3id.org/eudpp/textile-context",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4404,17 +4424,17 @@
         "value" : "https://w3id.org/eudpp/textile-context",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4524,17 +4544,17 @@
         "value" : "https://w3id.org/eudpp/textile-context",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",

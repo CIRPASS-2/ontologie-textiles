@@ -292,7 +292,7 @@ def module_row(slug: str) -> tuple[str, dict]:
     return row, stats
 
 
-def network_metadata() -> tuple[str, str, str]:
+def network_metadata() -> tuple[str, str, str, str]:
     path = ONTOLOGY_DIR / "textile-ontology.ttl"
 
     graph = Graph()
@@ -318,6 +318,7 @@ def network_metadata() -> tuple[str, str, str]:
         title,
         version,
         str(ontology),
+        ", ".join(sorted(str(person) for person in graph.objects(ontology, DCTERMS.creator))),
     )
 
 
@@ -338,6 +339,7 @@ def main() -> None:
         network_title,
         network_version,
         network_iri,
+        network_creators,
     ) = network_metadata()
 
     html = TEMPLATE.read_text(
@@ -349,6 +351,7 @@ def main() -> None:
         "{{NETWORK_TITLE}}": escape(network_title),
         "{{NETWORK_VERSION}}": escape(network_version),
         "{{NETWORK_IRI}}": escape(network_iri),
+        "{{NETWORK_CREATORS}}": escape(network_creators),
         "{{MODULE_ROWS}}": "\n\n".join(rows),
     }
 

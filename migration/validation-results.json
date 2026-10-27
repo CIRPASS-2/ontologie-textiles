@@ -60,7 +60,7 @@
     "compound_citations": 326,
     "resources_with_jrc_evidence": 549,
     "current_import_closure_files": 20,
-    "package_files": 764,
+    "package_files": 771,
     "preserved_reference_files": 3,
     "parsed_rdf_files": 171,
     "public_adrs": 10,
@@ -72,7 +72,7 @@
     "rdfs_negative_control": "passed"
   },
   "pytest": {
-    "tests": 164,
+    "tests": 174,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -85,7 +85,7 @@
   "soc_targeted_shapes_with_positive_and_negative_coverage": 16,
   "wrapper_conversion_conflict_and_provenance_controls": 4,
   "widoco_canonical_equivalence": {
-    "modules": 3,
+    "modules": 12,
     "rdf_formats_per_module": 4,
     "status": "passed"
   },
@@ -98,7 +98,7 @@
   },
   "historical_archive_sha256": "4384bfd9f8f4e8a0ce1a6b7a7fd679d2190d9be33df87b2f181207aa78a46e74",
   "nonfatal_warnings": [
-    "Three RDFLib JSON-LD parser deprecation warnings in pytest.",
+    "Twelve RDFLib JSON-LD parser deprecation warnings in pytest.",
     "WIDOCO optional configuration/logging/XML parser-property warnings; generation succeeded."
   ],
   "accepted_implementation": "5bac1a2cba2332b3e5ad7d45d305fbb786ee59f2",
@@ -137,8 +137,35 @@
       "corrected_conforms": true
     },
     "historical_and_core_bytes": "unchanged",
-    "creators": "unchanged",
+    "creators": "unchanged during audit corrections; four owner-approved additions in subsequent creator task",
     "constraint_coverage": "targeted; not claimed to be complete",
     "temporary_directory_note": "Sandbox runs encountered four temporary-directory setup errors, including with a fresh workspace directory; the successful full run used approved normal Windows access."
+  },
+  "creator_update": {
+    "baseline_commit": "f527fc577bec246a25d9332df018be6a64ec9070",
+    "status": "passed",
+    "canonical_graphs": 13,
+    "creator_triples_added": 52,
+    "other_canonical_rdf_changes": 0,
+    "documentation_annotations_excluded": 0,
+    "before": [
+      "Elio Hbeich",
+      "BOUGACHA Racem"
+    ],
+    "after": [
+      "Elio Hbeich",
+      "BOUGACHA Racem",
+      "Ivo Ladenius",
+      "Andreas Schneider",
+      "Jan Merckx",
+      "Piero de Sabbata"
+    ],
+    "normalized_widoco_exports": 27,
+    "regenerated_exports_verified_isomorphic": 48,
+    "creator_only_documentation_provenance_graphs": 12,
+    "normalization_authorization": "Explicit owner approval within creator task; exact non-creator differences in creator-export-differences.json",
+    "historical_core_si_mireot_shacl_examples": "unchanged",
+    "candidate_version": "2.0.0",
+    "local_only": true
   }
 }

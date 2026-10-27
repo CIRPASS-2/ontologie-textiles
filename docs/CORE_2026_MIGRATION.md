@@ -2,7 +2,10 @@
 
 The [final reconciliation](../migration/TEXTILE_CORE_2026_FINAL_RECONCILIATION.md)
 and OD-01 through OD-06 authorise this breaking migration. The accepted baseline
-is preserved independently; no release approval or creator changes are included.
+is preserved independently. The subsequent owner-approved creator update adds
+Ivo Ladenius, Andreas Schneider, Jan Merckx and Piero de Sabbata alongside
+Elio Hbeich and BOUGACHA Racem on all 13 Textile ontology headers. Release
+approval remains separate.
 
 | Existing pattern | Implemented representation |
 |---|---|
@@ -72,7 +75,8 @@ fails on missing imports rather than consulting another catalogue or the network
 The archive also contains original examples, documentation and WIDOCO output.
 
 Changed graphs receive new identities. Unchanged modules and SI retain their
-accepted bytes and versions. The active runtime contains no legacy SOC semantic
+accepted non-creator RDF and versions; their creator metadata is now updated.
+The active runtime contains no legacy SOC semantic
 terms or imports; historical IRIs occur only in source/provenance annotations.
 It has no IDENT/COMP/LCA dependency. Removed unused P_DPP anchors and obsolete EVENT
 restrictions are not recreated as Textile constraints.
@@ -86,8 +90,9 @@ preservation and non-entailments. Source fidelity and historical/source hashes
 are tested separately. This is bounded profile/inference evidence, not a proof
 of complete OWL DL satisfiability or legal applicability.
 
-The provisional candidate identity is 2.0.0. Final release numbering, the separate
-creator-metadata task and publication require their own owner approval. Nothing
+The provisional candidate identity is 2.0.0. The separate creator-metadata task
+is implemented under explicit owner approval. Final release numbering and
+publication still require owner approval. Nothing
 in this migration authorises a push, merge, tag or publication.
 
 Unchanged active modules retain their original 1.1.2 version metadata, but their

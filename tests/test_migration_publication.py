@@ -2,13 +2,13 @@
 from pathlib import Path
 import json
 import pytest
-from rdflib import Graph, RDF
+from rdflib import Graph, RDF, OWL
 from rdflib.compare import isomorphic
 
 ROOT=Path(__file__).resolve().parents[1]
 
 
-@pytest.mark.parametrize('module',['soc','associated-materials','recyclability'])
+@pytest.mark.parametrize('module',['assessment','associated-materials','connector','context','core','durability','indicator','process','recyclability','repairability','soc','structure'])
 def test_widoco_downloads_match_canonical_graph(module):
     path=ROOT/f'ontology/textile-{module}.ttl'
     folder=ROOT/'docs/widoco'/module
@@ -18,7 +18,9 @@ def test_widoco_downloads_match_canonical_graph(module):
         graph=Graph().parse(folder/name,format=format_)
         assert isomorphic(source,graph),(module,name)
     html=(folder/'index-en.html').read_text('utf8')
-    assert '/2.0.0' in html
+    assert str(next(source.objects(None,OWL.versionIRI))) in html
+    for creator in ('Elio Hbeich','BOUGACHA Racem','Ivo Ladenius','Andreas Schneider','Jan Merckx','Piero de Sabbata'):
+        assert creator in html
     assert 'https://w3id.org/eudpp/soc#' not in html
     editorial=ROOT/f'widoco/sections/{module}/description-en.html'
     assert editorial.read_bytes()==(folder/'sections/description-en.html').read_bytes()

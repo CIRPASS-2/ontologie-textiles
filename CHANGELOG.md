@@ -1,5 +1,16 @@
 # Changelog
 
+## Final creator metadata update - 2026-10-27
+
+Added Ivo Ladenius, Andreas Schneider, Jan Merckx and Piero de Sabbata as
+creators on all 13 Textile ontology headers, preserving Elio Hbeich and
+BOUGACHA Racem. Canonical graphs change only by those 52 creator triples.
+Regenerated all twelve WIDOCO modules and the network landing page. The owner
+also approved normalizing 27 previously inconsistent non-Turtle documentation
+exports to their canonical sources; exact differences are recorded in
+[creator update evidence](migration/CREATOR_UPDATE.md). Candidate version and
+semantic axioms are unchanged.
+
 ## 2.0.0 candidate — 2026-10-27
 
 Breaking migration to owner-designated October 2026 CORE: bounded SOC/CON,

@@ -4,6 +4,11 @@ A modular OWL ontology network for textile Digital Product Passport information.
 
 This repository brings together Textile DPP work by GS1, Graphwise and CIRPASS-2 contributors.
 
+The Textile ontology network and its twelve modules identify **Elio Hbeich,
+BOUGACHA Racem, Ivo Ladenius, Andreas Schneider, Jan Merckx and Piero de Sabbata**
+as `dcterms:creator`. The owner-approved creator update preserves the established
+English language-tagged literal representation and all existing creators.
+
 ## Two bodies of ontology work
 
 The **current CIRPASS Textile Ontology** is the JRC-grounded community review candidate directly under `ontology/`, with entry point [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl). It includes normalized public source traceability, modelling-decision documentation, MIREOT dependencies, SHACL profiles, examples and public validation.

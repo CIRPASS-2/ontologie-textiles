@@ -190,11 +190,13 @@ def test_legacy_data_is_rejected_before_inference():
     with pytest.raises(ValueError,match='Legacy SOC identity'):v.reject_legacy_soc(graph,'negative fixture')
 
 
-def test_creator_metadata_is_unchanged():
+def test_existing_creators_are_preserved_with_owner_approved_additions():
     for name in v.CURRENT_MODULES:
         before=m.parse(m.HISTORY/'ontology'/name)
         after=m.parse(ROOT/'ontology'/name)
-        assert set(before.subject_objects(m.DC.creator))==set(after.subject_objects(m.DC.creator)),name
+        ontology=next(after.subjects(RDF.type,OWL.Ontology))
+        additions={(ontology,m.Literal(person,lang='en')) for person in ('Ivo Ladenius','Andreas Schneider','Jan Merckx','Piero de Sabbata')}
+        assert set(after.subject_objects(m.DC.creator))==set(before.subject_objects(m.DC.creator))|additions,name
 
 
 def test_product_event_has_no_obsolete_minimum_product_restriction():
