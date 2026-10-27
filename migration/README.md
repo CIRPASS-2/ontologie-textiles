@@ -58,6 +58,10 @@ expected-result contracts have not been rewritten. The runtime suite passes
 with strict matching enabled: all 11 examples, 16 SHACL scenarios, six
 reasoning scenarios and the RDFS negative control remain valid. Package
 structural checks pass with 596 manifest members after adding the matcher test.
+The final combined pytest run passed all 41 tests. Git whitespace checks report
+trailing whitespace and end-of-file blank lines in the unchanged upstream
+source snapshots; those bytes are deliberately retained. Authored changes pass
+the whitespace check when those snapshots are excluded.
 
 Stage 1 is partially complete: branch, historical preservation and source
 staging are ready. Bounded extraction and new MIREOT identities remain pending.
