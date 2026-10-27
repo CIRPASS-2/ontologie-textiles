@@ -378,7 +378,7 @@ txtind:Indicator a owl:Class ;
 
 <https://w3id.org/eudpp/textile-indicator> a owl:Ontology ;
     rdfs:label "EU DPP Textile Indicator Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Indicator Ontology. Version 1.1.2."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Indicator Ontology. Version 2.0.0 candidate."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -389,7 +389,7 @@ txtind:Indicator a owl:Class ;
     dcterms:description "Ontology module for derived textile durability and use-related indicators. It separates indicators from assessment results, product characteristics, thresholds and quantitative values."@en ;
     dcterms:issued "2026-03-06"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
     dcterms:title "EU DPP Textile Indicator Ontology"@en ;
     vann:preferredNamespacePrefix "txtind" ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-indicator#" ;
@@ -399,8 +399,9 @@ txtind:Indicator a owl:Class ;
         <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-indicator/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-indicator/1.1.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-indicator/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( txtind:Indicator txtass:AssessmentResult txtdur:ObservedPerformanceParameter txtdur:ObservedDegradationPhenomenon txtdur:FailureMode txtcon:QuantitativeValue ) .

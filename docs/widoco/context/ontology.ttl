@@ -542,7 +542,7 @@ txtctx:ContextFactorScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-context> a owl:Ontology ;
     rdfs:label "EU DPP Textile Context Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Context Ontology. Version 1.1.2."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Context Ontology. Version 2.0.0 candidate."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -553,7 +553,7 @@ txtctx:ContextFactorScheme a skos:ConceptScheme ;
     dcterms:description "Ontology module for representing concrete observations, declarations and settings about textile use, care, environmental exposure, storage and user behaviour. Context factor types are represented as SKOS concepts; processes and process parameters remain in TEXTILE_PROCESS."@en ;
     dcterms:issued "2026-03-06"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
     dcterms:title "EU DPP Textile Context Ontology"@en ;
     vann:preferredNamespacePrefix "txtctx" ;
@@ -563,8 +563,9 @@ txtctx:ContextFactorScheme a skos:ConceptScheme ;
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability>,
         <https://w3id.org/eudpp/textile-process> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-context/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-context/1.1.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-context/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" ;
     txtcon:sourceLocator "JRC 3rd milestone, Sections 6.3 (pages 84-87, lines 2105-2244), 9.2.2.2 (pages 125-126, lines 3296-3327), and 13.7.2 (pages 395-410, lines 10227-10646)."@en ;
     txtcon:sourceType txtcon:adaptedDefinition .
 

@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Repairability Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-repairability",
-    "version" : "Version 1.1.2",
+    "version" : "Version 2.0.0 candidate",
     "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for textile repairability-related product aspects, services, guidance, design features, contextual conditions, priority elements, assessments, repair-related process specialisations and their links to EU DPP product-event semantics. The module does not define a universal objective repairability score."
@@ -16,7 +16,7 @@
       "en" : "EU DPP Textile Repairability Ontology"
     },
     "comments" : {
-      "en" : "The JRC concludes that textile-apparel repairability cannot currently be represented by a simple objective framework. This ontology therefore represents evidence and enabling conditions without inferring that a product is objectively repairable."
+      "en" : "The module reuses the semantic product-event classes defined in the EU DPP EVENT module. Textile-specific life-extension event classes bridge those event semantics with concrete textile process executions; EPCIS technical carriers remain defined by the EVENT module."
     },
     "other" : {
       "license" : [ {
@@ -25,15 +25,21 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-repairability/1.1.2",
+        "type" : "iri"
+      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Piero de Sabbata",
+        "value" : "Elio Hbeich",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Jan Merckx",
+        "value" : "Piero de Sabbata",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -43,17 +49,17 @@
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Andreas Schneider",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Elio Hbeich",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
         "value" : "Ivo Ladenius",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Jan Merckx",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Andreas Schneider",
         "type" : "label"
       } ],
       "created" : [ {
@@ -71,25 +77,19 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-07-16",
+        "value" : "2026-10-27",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "EU DPP Textile Repairability Ontology. Version 2.0.0 candidate.",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version 1.1.2",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "EU DPP Textile Repairability Ontology. Version 1.1.2.",
+        "value" : "Version 2.0.0 candidate",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -98,16 +98,22 @@
         "value" : "https://w3id.org/eudpp/textile-repairability#",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "en",
-        "value" : "EU DPP Textile Repairability Ontology",
-        "type" : "label"
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
       } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2026-07-01",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "EU DPP Textile Repairability Ontology",
         "type" : "label"
       } ]
     }
@@ -222,7 +228,7 @@
     "id" : "117",
     "type" : "owl:Class"
   }, {
-    "id" : "130",
+    "id" : "128",
     "type" : "owl:Class"
   }, {
     "id" : "13",
@@ -231,10 +237,10 @@
     "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "94",
+    "id" : "48",
     "type" : "owl:Class"
   }, {
-    "id" : "48",
+    "id" : "94",
     "type" : "owl:Class"
   }, {
     "id" : "132",
@@ -273,10 +279,10 @@
     "id" : "136",
     "type" : "owl:unionOf"
   }, {
-    "id" : "98",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "98",
     "type" : "owl:Class"
   }, {
     "id" : "137",
@@ -338,16 +344,16 @@
       "iri" : "https://w3id.org/eudpp/textile-repairability#buttonRepairElement",
       "baseIri" : "https://w3id.org/eudpp/textile-repairability",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#button",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-repairability",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#button",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -482,17 +488,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#PriorityRepairElementTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -500,22 +506,22 @@
           "value" : "REPAIR_ELEMENT_EMBELLISHMENT",
           "type" : "label"
         } ],
-        "relatedMatch" : [ {
-          "identifier" : "relatedMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#sequin",
-          "type" : "iri"
-        }, {
-          "identifier" : "relatedMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
-          "type" : "iri"
-        } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
           "value" : "Embellishment repair element",
           "type" : "label"
+        } ],
+        "relatedMatch" : [ {
+          "identifier" : "relatedMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
+          "type" : "iri"
+        }, {
+          "identifier" : "relatedMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#sequin",
+          "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
@@ -544,66 +550,6 @@
         "en" : "Embellishment repair element"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-repairability#userAcceptanceNotAccepted",
-      "baseIri" : "https://w3id.org/eudpp/textile-repairability",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "USER_ACCEPTANCE_NOT_ACCEPTED",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Not accepted by user",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The repaired product is not accepted by the user in the stated assessment context."
-      },
-      "labels" : {
-        "IRI-based" : "userAcceptanceNotAccepted",
-        "en" : "Not accepted by user"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-repairability#mendingAction",
       "baseIri" : "https://w3id.org/eudpp/textile-repairability",
       "annotations" : {
@@ -619,17 +565,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -664,6 +610,66 @@
         "en" : "Mending"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-repairability#userAcceptanceNotAccepted",
+      "baseIri" : "https://w3id.org/eudpp/textile-repairability",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "USER_ACCEPTANCE_NOT_ACCEPTED",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Not accepted by user",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The repaired product is not accepted by the user in the stated assessment context."
+      },
+      "labels" : {
+        "IRI-based" : "userAcceptanceNotAccepted",
+        "en" : "Not accepted by user"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-repairability#repairServiceBC",
       "baseIri" : "https://w3id.org/eudpp/textile-repairability",
       "annotations" : {
@@ -679,29 +685,29 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
         } ],
-        "broadMatch" : [ {
-          "identifier" : "broadMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel",
-          "type" : "iri"
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
           "value" : "REPAIR_SERVICE_BC",
           "type" : "label"
+        } ],
+        "broadMatch" : [ {
+          "identifier" : "broadMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -865,17 +871,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -943,17 +949,17 @@
           "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
           "type" : "label"
         } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "REPAIR_SERVICE_BAT",
-          "type" : "label"
-        } ],
         "broadMatch" : [ {
           "identifier" : "broadMatch",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel",
           "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "REPAIR_SERVICE_BAT",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1177,17 +1183,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1237,17 +1243,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1363,17 +1369,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1558,12 +1564,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-event-mireot",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-event-mireot",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -1598,17 +1604,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1677,17 +1683,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1726,17 +1732,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1885,17 +1891,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2005,17 +2011,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2173,17 +2179,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2233,17 +2239,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2293,17 +2299,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2431,17 +2437,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11283; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11378-11386; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11649-11658.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11283; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11378-11386; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11649-11658.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2671,66 +2677,6 @@
       "en" : "Repair action type concept"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/eudpp/textile-repairability#buttonReplacementAction",
-      "baseIri" : "https://w3id.org/eudpp/textile-repairability",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "REPAIR_ACTION_BUTTON_REPLACEMENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Button replacement",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Repair action replacing a missing or damaged button."
-      },
-      "labels" : {
-        "IRI-based" : "buttonReplacementAction",
-        "en" : "Button replacement"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-repairability#zipperReplacementAction",
       "baseIri" : "https://w3id.org/eudpp/textile-repairability",
       "annotations" : {
@@ -2789,6 +2735,66 @@
       "labels" : {
         "IRI-based" : "zipperReplacementAction",
         "en" : "Zipper replacement"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-repairability#buttonReplacementAction",
+      "baseIri" : "https://w3id.org/eudpp/textile-repairability",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "REPAIR_ACTION_BUTTON_REPLACEMENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Button replacement",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Repair action replacing a missing or damaged button."
+      },
+      "labels" : {
+        "IRI-based" : "buttonReplacementAction",
+        "en" : "Button replacement"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-repairability#patchingAction",
@@ -2866,17 +2872,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2985,17 +2991,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3031,7 +3037,7 @@
       "IRI-based" : "DurabilityAssessment"
     },
     "attributes" : [ "external" ],
-    "id" : "130"
+    "id" : "128"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
@@ -3043,17 +3049,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3082,17 +3088,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3160,17 +3166,17 @@
           "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
           "type" : "label"
         } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "REPAIR_SERVICE_BAT",
-          "type" : "label"
-        } ],
         "broadMatch" : [ {
           "identifier" : "broadMatch",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel",
           "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "REPAIR_SERVICE_BAT",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3214,29 +3220,29 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
         } ],
-        "broadMatch" : [ {
-          "identifier" : "broadMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel",
-          "type" : "iri"
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
           "value" : "REPAIR_SERVICE_BC",
           "type" : "label"
+        } ],
+        "broadMatch" : [ {
+          "identifier" : "broadMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3281,17 +3287,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3429-3435; JRC Preparatory Study, Section 9.2.3.3, printed page 129, lines 3477-3481.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3309,16 +3315,6 @@
     },
     "id" : "47",
     "superClasses" : [ "45" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-assessment#AssessmentExecution",
-    "baseIri" : "https://w3id.org/eudpp/textile-assessment",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AssessmentExecution"
-    },
-    "subClasses" : [ "4" ],
-    "attributes" : [ "external" ],
-    "id" : "94"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#SparePartAvailabilityCondition",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
@@ -3359,6 +3355,16 @@
     "id" : "48",
     "superClasses" : [ "45" ]
   }, {
+    "iri" : "https://w3id.org/eudpp/textile-assessment#AssessmentExecution",
+    "baseIri" : "https://w3id.org/eudpp/textile-assessment",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssessmentExecution"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "94"
+  }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
     "instances" : 0,
@@ -3396,7 +3402,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#consumerRepairActor",
+          "value" : "https://w3id.org/eudpp/textile-repairability#repairCafeActor",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -3406,12 +3412,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#companyRepairActor",
+          "value" : "https://w3id.org/eudpp/textile-repairability#consumerRepairActor",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#repairCafeActor",
+          "value" : "https://w3id.org/eudpp/textile-repairability#companyRepairActor",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -3438,17 +3444,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3459,12 +3465,12 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#userAcceptanceUnknown",
+          "value" : "https://w3id.org/eudpp/textile-repairability#userAcceptanceNotAccepted",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#userAcceptanceNotAccepted",
+          "value" : "https://w3id.org/eudpp/textile-repairability#userAcceptanceUnknown",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -3517,7 +3523,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#buttonRepairElement",
+          "value" : "https://w3id.org/eudpp/textile-repairability#zipperRepairElement",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -3527,7 +3533,7 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#zipperRepairElement",
+          "value" : "https://w3id.org/eudpp/textile-repairability#buttonRepairElement",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -3548,64 +3554,6 @@
       "labels" : {
         "IRI-based" : "PriorityRepairElementTypeScheme",
         "en" : "Priority repair element type scheme"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme",
-      "baseIri" : "https://w3id.org/eudpp/textile-repairability",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Repair service configuration scheme",
-          "type" : "label"
-        } ],
-        "hasTopConcept" : [ {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#repairServiceBAT",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#repairServiceBC",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#repairServiceBNAT",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Controlled scheme for the JRC Table 48 BC, BAT and BNAT descriptions of repair-service and guidance configurations."
-      },
-      "labels" : {
-        "IRI-based" : "RepairServiceConfigurationScheme",
-        "en" : "Repair service configuration scheme"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme",
@@ -3643,12 +3591,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#zipperReplacementAction",
+          "value" : "https://w3id.org/eudpp/textile-repairability#buttonReplacementAction",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-repairability#buttonReplacementAction",
+          "value" : "https://w3id.org/eudpp/textile-repairability#zipperReplacementAction",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -3670,6 +3618,64 @@
         "IRI-based" : "RepairActionTypeScheme",
         "en" : "Repair action type scheme"
       }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme",
+      "baseIri" : "https://w3id.org/eudpp/textile-repairability",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Repair service configuration scheme",
+          "type" : "label"
+        } ],
+        "hasTopConcept" : [ {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#repairServiceBAT",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#repairServiceBC",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-repairability#repairServiceBNAT",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Controlled scheme for the JRC Table 48 BC, BAT and BNAT descriptions of repair-service and guidance configurations."
+      },
+      "labels" : {
+        "IRI-based" : "RepairServiceConfigurationScheme",
+        "en" : "Repair service configuration scheme"
+      }
     } ],
     "attributes" : [ "external" ],
     "id" : "132"
@@ -3684,27 +3690,27 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-event-mireot",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-event-mireot",
         "type" : "iri"
       } ]
     },
@@ -3734,17 +3740,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11273-11279; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11273-11279; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3779,27 +3785,27 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11374-11400; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-event-mireot",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-event-mireot",
         "type" : "iri"
       } ]
     },
@@ -3823,17 +3829,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3911,27 +3917,27 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11273-11279; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-event-mireot",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-event-mireot",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -3955,17 +3961,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4004,16 +4010,6 @@
     "attributes" : [ "anonymous", "union" ],
     "id" : "136"
   }, {
-    "iri" : "https://w3id.org/eudpp#RefurbishmentEvent",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RefurbishmentEvent"
-    },
-    "subClasses" : [ "35" ],
-    "attributes" : [ "external" ],
-    "id" : "98"
-  }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#TextileRemanufacturingEvent",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
     "instances" : 0,
@@ -4024,17 +4020,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4057,6 +4053,16 @@
     },
     "id" : "36",
     "superClasses" : [ "33", "51" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#RefurbishmentEvent",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RefurbishmentEvent"
+    },
+    "subClasses" : [ "35" ],
+    "attributes" : [ "external" ],
+    "id" : "98"
   }, {
     "instances" : 0,
     "union" : [ "140", "54" ],
@@ -4101,17 +4107,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4172,16 +4178,16 @@
       "iri" : "https://w3id.org/eudpp/textile-repairability#buttonRepairElement",
       "baseIri" : "https://w3id.org/eudpp/textile-repairability",
       "annotations" : {
-        "exactMatch" : [ {
-          "identifier" : "exactMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#button",
-          "type" : "iri"
-        } ],
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-repairability",
+          "type" : "iri"
+        } ],
+        "exactMatch" : [ {
+          "identifier" : "exactMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#button",
           "type" : "iri"
         } ],
         "inScheme" : [ {
@@ -4256,17 +4262,17 @@
           "value" : "https://w3id.org/eudpp/textile-repairability#PriorityRepairElementTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4274,22 +4280,22 @@
           "value" : "REPAIR_ELEMENT_EMBELLISHMENT",
           "type" : "label"
         } ],
-        "relatedMatch" : [ {
-          "identifier" : "relatedMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#sequin",
-          "type" : "iri"
-        }, {
-          "identifier" : "relatedMatch",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
-          "type" : "iri"
-        } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
           "value" : "Embellishment repair element",
           "type" : "label"
+        } ],
+        "relatedMatch" : [ {
+          "identifier" : "relatedMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
+          "type" : "iri"
+        }, {
+          "identifier" : "relatedMatch",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#sequin",
+          "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
@@ -4512,17 +4518,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11374-11400; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11374-11400; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4551,17 +4557,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 9.1.2, printed pages 101-102, lines 2722-2728; JRC Preparatory Study, Section 13.10.1.4, printed page 472, lines 11264-11272; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4619,17 +4625,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4844,7 +4850,7 @@
     "id" : "127",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "128",
+    "id" : "129",
     "type" : "owl:objectProperty"
   }, {
     "id" : "131",
@@ -4862,7 +4868,7 @@
     "id" : "138",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "129",
+    "id" : "130",
     "type" : "owl:objectProperty"
   }, {
     "id" : "141",
@@ -4924,17 +4930,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5041,17 +5047,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.1.7, printed pages 473-475, lines 11280-11386.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5172,17 +5178,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5253,17 +5259,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11283; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11378-11386; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11649-11658.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5293,17 +5299,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5473,17 +5479,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5604,17 +5610,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5685,17 +5691,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5720,6 +5726,46 @@
     "domain" : "69",
     "attributes" : [ "object", "anonymous" ],
     "id" : "124"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-repairability#hasPriorityRepairElement",
+    "baseIri" : "https://w3id.org/eudpp/textile-repairability",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-repairability",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPriorityRepairElement",
+      "en" : "has priority repair element"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates a repairability assessment to a priority repair element considered in the assessment."
+    },
+    "attributes" : [ "object" ],
+    "id" : "125"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#coversPriorityElementType",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
@@ -5759,46 +5805,6 @@
       "en" : "Relates repair guidance to a controlled priority-element type covered by the guidance."
     },
     "attributes" : [ "object" ],
-    "id" : "125"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-repairability#hasPriorityRepairElement",
-    "baseIri" : "https://w3id.org/eudpp/textile-repairability",
-    "range" : "7",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-repairability",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasPriorityRepairElement",
-      "en" : "has priority repair element"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Relates a repairability assessment to a priority repair element considered in the assessment."
-    },
-    "attributes" : [ "object" ],
     "id" : "126"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#usesSpareComponent",
@@ -5811,17 +5817,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3399-3408; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11291-11296.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5843,7 +5849,7 @@
     "id" : "127"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#hasRepairabilityAssessment",
-    "inverse" : "129",
+    "inverse" : "130",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
     "range" : "4",
     "annotations" : {
@@ -5853,17 +5859,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5881,7 +5887,7 @@
       "en" : "Relates textile apparel to a repairability assessment execution."
     },
     "attributes" : [ "object" ],
-    "id" : "128"
+    "id" : "129"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#hasRepairCostCondition",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
@@ -5893,17 +5899,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3429-3435; JRC Preparatory Study, Section 9.2.3.3, printed page 129, lines 3477-3481.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3429-3435; JRC Preparatory Study, Section 9.2.3.3, printed page 129, lines 3477-3481.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5933,17 +5939,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5973,17 +5979,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology 1.1.0, repair-element role modelling specification.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6093,17 +6099,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6122,7 +6128,7 @@
       "en" : "Relates a repairability assessment execution to the textile apparel it assesses."
     },
     "attributes" : [ "object" ],
-    "id" : "129"
+    "id" : "130"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-repairability#hasUserAcceptanceCondition",
     "baseIri" : "https://w3id.org/eudpp/textile-repairability",
@@ -6179,17 +6185,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6261,7 +6267,7 @@
     "id" : "146"
   }, {
     "range" : "4",
-    "domain" : "130",
+    "domain" : "128",
     "attributes" : [ "object", "anonymous" ],
     "id" : "149"
   }, {
@@ -6312,7 +6318,7 @@
       "IRI-based" : "assessesProduct"
     },
     "domain" : "21",
-    "subproperty" : [ "129" ],
+    "subproperty" : [ "130" ],
     "attributes" : [ "object", "external" ],
     "id" : "139"
   }, {
@@ -6326,17 +6332,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6366,17 +6372,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11290; JRC Preparatory Study, Section 9.2.3.1, printed page 127, lines 3362-3375.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6468,17 +6474,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6508,17 +6514,17 @@
         "value" : "https://w3id.org/eudpp/textile-repairability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",

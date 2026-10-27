@@ -601,7 +601,7 @@
 <https://w3id.org/eudpp/textile-structure#hasTextualValue> <https://w3id.org/eudpp/textile-connector#modellingNote> "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."@en .
 <https://w3id.org/eudpp/textile-structure#hasTextualValue> <https://w3id.org/eudpp/textile-connector#sourceLocator> "docs/decisions/TXT-DEC-005.md"@en .
 <https://w3id.org/eudpp/textile-structure#hasTextualValue> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Structure Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Structure Ontology. Version 2.0.0 candidate."@en .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -612,7 +612,7 @@
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/description> "Ontology module for characteristics of textile fibres, yarns, fabrics and assemblies. It separates characteristic types from quantitative or qualitative values and does not represent process settings, assessment results or observed degradation phenomena."@en .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/modified> "2026-10-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/dc/terms/title> "EU DPP Textile Structure Ontology"@en .
 <https://w3id.org/eudpp/textile-structure> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtstr" .
@@ -624,8 +624,9 @@
 <https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
-<https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-structure/1.1.2> .
-<https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-structure/1.1.2> .
+<https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-structure/2.0.0> .
+<https://w3id.org/eudpp/textile-structure> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
 <https://w3id.org/eudpp/textile-structure> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.10.2, pages 484-495, Tables 177-182, lines ending at 11874 and lines 11875-11920; Section 4.5, page 41, lines 1001-1037."@en .
 <https://w3id.org/eudpp/textile-structure> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#ontologyModule> .
 _:cb0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic> .

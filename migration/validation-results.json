@@ -60,7 +60,7 @@
     "compound_citations": 326,
     "resources_with_jrc_evidence": 549,
     "current_import_closure_files": 20,
-    "package_files": 783,
+    "package_files": 791,
     "preserved_reference_files": 3,
     "parsed_rdf_files": 171,
     "public_adrs": 10,
@@ -70,11 +70,11 @@
       "html_files": 121,
       "assembled_pages": 37,
       "ajax_sections": 84,
-      "reference_count": 12319,
+      "reference_count": 12336,
       "statuses": {
         "application_route": 12,
-        "external_not_checked": 5394,
-        "ok": 6913
+        "external_not_checked": 5403,
+        "ok": 6921
       }
     },
     "examples_conformant": 11,
@@ -83,7 +83,7 @@
     "rdfs_negative_control": "passed"
   },
   "pytest": {
-    "tests": 180,
+    "tests": 205,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -109,8 +109,7 @@
   },
   "historical_archive_sha256": "4384bfd9f8f4e8a0ce1a6b7a7fd679d2190d9be33df87b2f181207aa78a46e74",
   "nonfatal_warnings": [
-    "Twelve RDFLib JSON-LD parser deprecation warnings in pytest.",
-    "WIDOCO optional configuration/logging/XML parser-property warnings; generation succeeded."
+    "Twelve RDFLib JSON-LD deprecation warnings in pytest; WIDOCO optional changelog retrieval and existing configuration/logging warnings. See final-pre-push-results.json limitations."
   ],
   "accepted_implementation": "5bac1a2cba2332b3e5ad7d45d305fbb786ee59f2",
   "public_validation_modes": {
@@ -212,5 +211,22 @@
     "broken_links_after": 0,
     "local_only": true,
     "redirects_modified": false
+  },
+  "final_pre_push_corrections": {
+    "baseline_commit": "ba6e12ef769d3849bde078ef4f1d32bdcf5e1af1",
+    "status": "passed",
+    "owner_decision": "Option B",
+    "canonical_non_metadata_rdf_differences": 0,
+    "removed_metadata_triples": 36,
+    "added_metadata_triples": 45,
+    "textile_version_iris_2_0_0": 13,
+    "mireot_version_iris_2_0_0": 6,
+    "si_version": "1.1.2",
+    "creators_preserved": true,
+    "all_48_exports_isomorphic": true,
+    "all_12_annotation_supplements_idempotent": true,
+    "local_broken_links": 0,
+    "protected_files_unchanged": true,
+    "local_only": true
   }
 }

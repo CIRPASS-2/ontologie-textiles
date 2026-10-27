@@ -476,7 +476,7 @@ txtcon:projectDecision a skos:Concept ;
 
 <https://w3id.org/eudpp/textile-connector> a owl:Ontology ;
     rdfs:label "EU DPP Textile Connector Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Connector Ontology. Version 1.1.2."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Connector Ontology. Version 2.0.0 candidate."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -487,7 +487,7 @@ txtcon:projectDecision a skos:Concept ;
     dcterms:description "Shared foundation and connector module for the EU DPP textile ontology network. It defines the common quantitative-value and reference-period patterns, the shared product-technology-level vocabulary, controlled provenance vocabularies, editorial annotations and weak cross-module annotation relations. Domain-specific operational relations remain in their domain modules."@en ;
     dcterms:issued "2026-03-06"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf>,
         <https://w3id.org/eudpp/textile-ontology> ;
     dcterms:title "EU DPP Textile Connector Ontology"@en ;
@@ -502,8 +502,9 @@ txtcon:projectDecision a skos:Concept ;
         "The typical relation properties are annotation properties for contextual class-level or concept-level statements. They do not assert deterministic causal axioms."@en,
         "Working extraction identifiers are maintained in the crosswalk documentation rather than stabilised as ontology annotations."@en ;
     owl:imports <https://w3id.org/eudpp/textile-si-mireot> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-connector/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-connector/1.1.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-connector/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:ontologyModule .
 

@@ -669,7 +669,7 @@ txtstr:TextileStructureCharacteristic a owl:Class ;
 
 <https://w3id.org/eudpp/textile-structure> a owl:Ontology ;
     rdfs:label "EU DPP Textile Structure Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Structure Ontology. Version 1.1.2."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Structure Ontology. Version 2.0.0 candidate."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -680,7 +680,7 @@ txtstr:TextileStructureCharacteristic a owl:Class ;
     dcterms:description "Ontology module for characteristics of textile fibres, yarns, fabrics and assemblies. It separates characteristic types from quantitative or qualitative values and does not represent process settings, assessment results or observed degradation phenomena."@en ;
     dcterms:issued "2026-03-06"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
     dcterms:title "EU DPP Textile Structure Ontology"@en ;
     vann:preferredNamespacePrefix "txtstr" ;
@@ -690,8 +690,9 @@ txtstr:TextileStructureCharacteristic a owl:Class ;
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-structure/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-structure/1.1.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-structure/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" ;
     txtcon:sourceLocator "JRC Annex 13.10.2, pages 484-495, Tables 177-182, lines ending at 11874 and lines 11875-11920; Section 4.5, page 41, lines 1001-1037."@en ;
     txtcon:sourceType txtcon:ontologyModule .
 

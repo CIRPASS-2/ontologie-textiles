@@ -899,7 +899,7 @@
 <https://w3id.org/eudpp/textile-repairability#zipperReplacementAction> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme> .
 <https://w3id.org/eudpp/textile-repairability#zipperReplacementAction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en .
 <https://w3id.org/eudpp/textile-repairability#zipperReplacementAction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
-<https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Repairability Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Repairability Ontology. Version 2.0.0 candidate."@en .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/created> "2026-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -910,7 +910,7 @@
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/description> "Ontology module for textile repairability-related product aspects, services, guidance, design features, contextual conditions, priority elements, assessments, repair-related process specialisations and their links to EU DPP product-event semantics. The module does not define a universal objective repairability score."@en .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/issued> "2026-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/modified> "2026-10-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/dc/terms/title> "EU DPP Textile Repairability Ontology"@en .
 <https://w3id.org/eudpp/textile-repairability> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtrep" .
@@ -929,8 +929,9 @@
 <https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
 <https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-event-mireot> .
 <https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-process> .
-<https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-repairability/1.1.2> .
-<https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-repairability/1.1.2> .
+<https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-repairability/2.0.0> .
+<https://w3id.org/eudpp/textile-repairability> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
 _:cb1243bdceb3562a33d494c9dcc720e7b5a965c4db47bb8013e852b4ca17caf2520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-repairability#PriorityRepairElement> .
 _:cb1243bdceb3562a33d494c9dcc720e7b5a965c4db47bb8013e852b4ca17caf2520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:cb14e0697d11a225e8b9ab784a29aaca206c09530eb0cedfef67e8c829cb75fe1ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-repairability#RepairGuidance> .

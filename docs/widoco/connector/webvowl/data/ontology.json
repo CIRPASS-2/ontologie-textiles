@@ -7,8 +7,8 @@
       "en" : "EU DPP Textile Connector Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-connector",
-    "version" : "Version 1.1.2",
-    "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
+    "version" : "Version 2.0.0 candidate",
+    "author" : [ "Jan Merckx", "Andreas Schneider", "Piero de Sabbata", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Shared foundation and connector module for the EU DPP textile ontology network. It defines the common quantitative-value and reference-period patterns, the shared product-technology-level vocabulary, controlled provenance vocabularies, editorial annotations and weak cross-module annotation relations. Domain-specific operational relations remain in their domain modules."
     },
@@ -19,17 +19,13 @@
       "en" : "The quantitative-value pattern links numerical values to BIPM SI measurement-unit and quantity-kind resources without recreating SI terms."
     },
     "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector/1.1.2",
+        "type" : "iri"
+      } ],
       "creator" : [ {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Jan Merckx",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Piero de Sabbata",
-        "type" : "label"
-      }, {
         "identifier" : "creator",
         "language" : "en",
         "value" : "Andreas Schneider",
@@ -42,12 +38,22 @@
       }, {
         "identifier" : "creator",
         "language" : "en",
+        "value" : "Piero de Sabbata",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
         "value" : "Ivo Ladenius",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
         "value" : "BOUGACHA Racem",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Jan Merckx",
         "type" : "label"
       } ],
       "created" : [ {
@@ -56,22 +62,22 @@
         "value" : "2026-03-06",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "Version 1.1.2",
-        "type" : "label"
-      } ],
       "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      }, {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "Version 2.0.0 candidate",
+        "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -106,19 +112,19 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-07-16",
+        "value" : "2026-10-27",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "EU DPP Textile Connector Ontology. Version 2.0.0 candidate.",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#",
-        "type" : "label"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "EU DPP Textile Connector Ontology. Version 1.1.2.",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -265,17 +271,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 2, printed page 17, lines 228-235.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -397,17 +403,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -430,48 +436,6 @@
         "en" : "Context-dependent evidence"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
-      "baseIri" : "https://w3id.org/eudpp/textile-connector",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Explicit evidence",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The source explicitly states the concept or relation."
-      },
-      "labels" : {
-        "IRI-based" : "explicitEvidence",
-        "en" : "Explicit evidence"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-connector#ontologyModule",
       "baseIri" : "https://w3id.org/eudpp/textile-connector",
       "annotations" : {
@@ -481,17 +445,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -514,7 +478,7 @@
         "en" : "Ontology module"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+      "iri" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
       "baseIri" : "https://w3id.org/eudpp/textile-connector",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -534,6 +498,48 @@
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Explicit evidence",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The source explicitly states the concept or relation."
+      },
+      "labels" : {
+        "IRI-based" : "explicitEvidence",
+        "en" : "Explicit evidence"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+      "baseIri" : "https://w3id.org/eudpp/textile-connector",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -613,17 +619,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -655,17 +661,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -697,17 +703,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -739,17 +745,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 2, printed page 17, lines 228-235.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -871,17 +877,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1028,17 +1034,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 2, printed page 17, lines 228-235.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1076,17 +1082,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 2, printed page 17, lines 228-235.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1189,17 +1195,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1231,17 +1237,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1273,17 +1279,17 @@
           "value" : "https://w3id.org/eudpp/textile-connector",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 2, printed page 17, lines 228-235.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 2, printed page 17, lines 228-235.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1319,17 +1325,17 @@
         "value" : "https://w3id.org/eudpp/textile-connector",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1419,7 +1425,7 @@
       "IRI-based" : "inScheme"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "0"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
@@ -1429,7 +1435,7 @@
       "IRI-based" : "closeMatch"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "2"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
@@ -1439,12 +1445,12 @@
       "IRI-based" : "hasTopConcept"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "3"
   }, {
     "range" : "4",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "7"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
@@ -1455,7 +1461,7 @@
       "IRI-based" : "broadMatch"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "8"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit",
@@ -1468,17 +1474,17 @@
         "value" : "https://w3id.org/eudpp/textile-connector",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "docs/decisions/TXT-DEC-001.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "docs/decisions/TXT-DEC-001.md",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1505,7 +1511,7 @@
       "IRI-based" : "narrower"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "14"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
@@ -1515,7 +1521,7 @@
       "IRI-based" : "relatedMatch"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "15"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#hasReferenceDuration",
@@ -1565,7 +1571,7 @@
       "IRI-based" : "topConceptOf"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "20"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#periodStart",
@@ -1578,17 +1584,17 @@
         "value" : "https://w3id.org/eudpp/textile-connector",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1615,7 +1621,7 @@
       "IRI-based" : "broader"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "23"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#exactMatch",
@@ -1625,7 +1631,7 @@
       "IRI-based" : "exactMatch"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "24"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
@@ -1635,8 +1641,18 @@
       "IRI-based" : "narrowMatch"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#related",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "related"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#hasQuantityKind",
     "baseIri" : "https://w3id.org/eudpp/textile-connector",
@@ -1648,17 +1664,17 @@
         "value" : "https://w3id.org/eudpp/textile-connector",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "docs/decisions/TXT-DEC-001.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1676,16 +1692,6 @@
       "en" : "Relates a quantitative value to the kind of quantity that it expresses."
     },
     "attributes" : [ "object" ],
-    "id" : "25"
-  }, {
-    "iri" : "http://www.w3.org/2004/02/skos/core#related",
-    "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "related"
-    },
-    "domain" : "1",
-    "attributes" : [ "object", "external" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#numericValue",

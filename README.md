@@ -17,9 +17,10 @@ The **current CIRPASS Textile Ontology** is the JRC-grounded community review ca
 
 ## Versions and entry point
 
-The proposed breaking-change candidate is **2.0.0**. Changed Textile SOC,
-Associated Materials, Recyclability and the network entry point declare new
-2.0.0 candidate identities. Unchanged Textile modules and SI retain 1.1.2.
+The proposed breaking-change candidate is **2.0.0**. All thirteen current Textile
+ontology graphs declare distinct 2.0.0 version identities. The nine modules
+updated under owner-approved Option B cite their historical 1.1.2 prior versions.
+The unchanged SI MIREOT retains its 1.1.2 identity and exact bytes.
 Six rebuilt CORE subsets declare 2.0.0 candidate identities; together with SI
 they form seven MIREOT graphs and a 20-graph runtime closure.
 

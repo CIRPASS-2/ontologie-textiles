@@ -548,6 +548,7 @@ examples/example-10-textile-soc-v2.0.0.ttl
 examples/example-11-textile-recyclability-v1.1.2.ttl
 migration/AUDIT_CORRECTIONS.md
 migration/CREATOR_UPDATE.md
+migration/FINAL_PRE_PUSH_CORRECTIONS.md
 migration/PUBLICATION_BLOCKER_REMEDIATION.md
 migration/README.md
 migration/STAGE_CHECKS.md
@@ -568,12 +569,17 @@ migration/core-sources/mat.owl
 migration/core-sources/p_dpp.owl
 migration/core-sources/soc.owl
 migration/correct_audit.py
+migration/correct_version_identities.py
 migration/creator-export-differences.json
 migration/creator-update-files.txt
 migration/creator-update-results.json
+migration/current-version-iri-inventory.json
 migration/extraction-scopes.json
+migration/final-pre-push-links.json
+migration/final-pre-push-results.json
 migration/finalize_audit_records.py
 migration/finalize_creator_records.py
+migration/finalize_pre_push_corrections.py
 migration/finalize_publication_blockers.py
 migration/historical-closure-results.json
 migration/historical/1.1.2/catalog-v001.xml
@@ -619,6 +625,7 @@ migration/update_creators.py
 migration/update_validation_contracts.py
 migration/validation-pytest.xml
 migration/validation-results.json
+migration/version-identity-results.json
 migration/widoco-links-after.json
 migration/widoco-links-before.json
 mireot/actor-textile-mireot.ttl
@@ -728,6 +735,7 @@ tests/test_creator_metadata.py
 tests/test_migration_publication.py
 tests/test_public_package.py
 tests/test_shacl_result_matching.py
+tests/test_version_identities.py
 tests/test_widoco_links.py
 traceability/README.md
 traceability/evidence-locator-resolutions.csv

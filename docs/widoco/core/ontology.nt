@@ -799,7 +799,7 @@
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version 2.0.0 candidate."@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -810,7 +810,7 @@
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/description> "Ontology module for representing core textile product data relevant to EU Digital Product Passports, including textile product classes, textile apparel scope concepts, fibre composition structures, and controlled SKOS vocabularies for textile apparel product types and fibre types aligned with the JRC preparatory study on textiles."@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> "2026-10-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/title> "EU DPP Textile Core Ontology"@en .
@@ -825,8 +825,9 @@
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-mat-mireot> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/1.1.2> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-core/1.1.2> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/2.0.0> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/textile-core#hasFibreMassFraction> .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .

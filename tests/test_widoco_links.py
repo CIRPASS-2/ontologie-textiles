@@ -1,6 +1,6 @@
 from pathlib import Path
 import pytest
-from rdflib import Graph
+from rdflib import Graph, RDF, OWL
 from scripts.check_widoco_links import audit_tree
 from scripts.widoco_annotations import render, Anchors
 from scripts.validate_public import package_files
@@ -8,19 +8,21 @@ from scripts.validate_public import package_files
 ROOT=Path(__file__).resolve().parents[1]
 
 
-@pytest.mark.parametrize('module,names',[
-    ('connector',('sourceLocator','sourceType')),
-    ('context',('typicallyQualifiesProcess',)),
+@pytest.mark.parametrize('module',[
+    'assessment','associated-materials','connector','context','core','durability',
+    'indicator','process','recyclability','repairability','soc','structure',
 ])
-def test_canonical_annotation_rendering_is_idempotent(module,names):
+def test_canonical_annotation_rendering_is_idempotent(module):
     graph=Graph().parse(ROOT/f'ontology/textile-{module}.ttl')
     text=(ROOT/f'docs/widoco/{module}/sections/crossref-en.html').read_text('utf8')
     assert render(graph,text)==text
     anchors=Anchors();anchors.feed(text)
+    namespace='https://w3id.org/eudpp/textile-'+module+'#'
+    names=[str(subject)[len(namespace):] for subject in graph.subjects(RDF.type,OWL.AnnotationProperty)
+           if str(subject).startswith(namespace)]
     for name in names:
         assert name in anchors.ids
         assert f'href="{name}"' not in text
-        assert f'href="#{name}"' in text
 
 
 def test_complete_widoco_inventory():

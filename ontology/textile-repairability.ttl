@@ -1021,7 +1021,7 @@ txtrep:RepairabilityAssessment a owl:Class ;
 
 <https://w3id.org/eudpp/textile-repairability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Repairability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Repairability Ontology. Version 1.1.2."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Repairability Ontology. Version 2.0.0 candidate."@en ;
     dcterms:created "2026-07-01"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -1032,7 +1032,7 @@ txtrep:RepairabilityAssessment a owl:Class ;
     dcterms:description "Ontology module for textile repairability-related product aspects, services, guidance, design features, contextual conditions, priority elements, assessments, repair-related process specialisations and their links to EU DPP product-event semantics. The module does not define a universal objective repairability score."@en ;
     dcterms:issued "2026-07-01"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
     dcterms:title "EU DPP Textile Repairability Ontology"@en ;
     vann:preferredNamespacePrefix "txtrep" ;
@@ -1049,8 +1049,9 @@ txtrep:RepairabilityAssessment a owl:Class ;
         <https://w3id.org/eudpp/textile-durability>,
         <https://w3id.org/eudpp/textile-event-mireot>,
         <https://w3id.org/eudpp/textile-process> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-repairability/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-repairability/1.1.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-repairability/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" .
 
 _:n45f5a72c52284881be6ba2bc8d1da5cab12 rdf:first txtrep:RepairRelatedProcess ;
     rdf:rest () .

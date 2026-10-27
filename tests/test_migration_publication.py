@@ -32,4 +32,4 @@ def test_diagrams_and_landing_page_show_migrated_candidate():
         assert 'https://w3id.org/eudpp/soc#' not in svg
         assert (ROOT/f'diagrams/{name}.png').read_bytes().startswith(b'\x89PNG\r\n\x1a\n')
     landing=(ROOT/'docs/widoco/index.html').read_text('utf8')
-    assert '2.0.0' in landing and '1.1.2' in landing
+    assert '2.0.0' in landing and '/1.1.2' not in landing

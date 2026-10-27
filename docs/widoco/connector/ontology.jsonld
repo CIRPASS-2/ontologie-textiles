@@ -1,163 +1,12 @@
 [
   {
-    "@id": "https://w3id.org/eudpp/textile-connector",
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://purl.org/dc/terms/bibliographicCitation": [
-      {
-        "@language": "en",
-        "@value": "EU DPP Textile Connector Ontology. Version 1.1.2."
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-03-06"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@language": "en",
-        "@value": "Andreas Schneider"
-      },
-      {
-        "@language": "en",
-        "@value": "BOUGACHA Racem"
-      },
-      {
-        "@language": "en",
-        "@value": "Elio Hbeich"
-      },
-      {
-        "@language": "en",
-        "@value": "Ivo Ladenius"
-      },
-      {
-        "@language": "en",
-        "@value": "Jan Merckx"
-      },
-      {
-        "@language": "en",
-        "@value": "Piero de Sabbata"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Shared foundation and connector module for the EU DPP textile ontology network. It defines the common quantitative-value and reference-period patterns, the shared product-technology-level vocabulary, controlled provenance vocabularies, editorial annotations and weak cross-module annotation relations. Domain-specific operational relations remain in their domain modules."
-      }
-    ],
-    "http://purl.org/dc/terms/issued": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-03-06"
-      }
-    ],
-    "http://purl.org/dc/terms/license": [
-      {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-07-16"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU DPP Textile Connector Ontology"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
-      {
-        "@value": "txtcon"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespaceUri": [
-      {
-        "@value": "https://w3id.org/eudpp/textile-connector#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Operational instance-level relations belong in the relevant domain module and are validated through SHACL."
-      },
-      {
-        "@language": "en",
-        "@value": "Relation polarity is not represented as a direct annotation on a source class because one class may have several outgoing weak relations with different directions. Edge-level polarity and evidence remain in the canonical relation register until a statement-level representation is adopted."
-      },
-      {
-        "@language": "en",
-        "@value": "The BC/BAT/BNAT product-technology axis is shared here because it is used by more than one textile aspect module. Aspect-specific configurations remain in their own module and map to the shared level rather than duplicating it."
-      },
-      {
-        "@language": "en",
-        "@value": "The common ReferencePeriod pattern is infrastructure only; domain modules retain their own hasReferencePeriod relations."
-      },
-      {
-        "@language": "en",
-        "@value": "The connector is intentionally dependency-light: it imports the BIPM SI Reference Point but no textile domain module. SKOS terms are referenced directly through their standard W3C IRIs."
-      },
-      {
-        "@language": "en",
-        "@value": "The quantitative-value pattern links numerical values to BIPM SI measurement-unit and quantity-kind resources without recreating SI terms."
-      },
-      {
-        "@language": "en",
-        "@value": "The typical relation properties are annotation properties for contextual class-level or concept-level statements. They do not assert deterministic causal axioms."
-      },
-      {
-        "@language": "en",
-        "@value": "Working extraction identifiers are maintained in the crosswalk documentation rather than stabilised as ontology annotations."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "EU DPP Textile Connector Ontology"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-si-mireot"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionIRI": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector/1.1.2"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
-      {
-        "@value": "Version 1.1.2"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ontologyModule"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#implicitEvidence",
+    "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
@@ -169,7 +18,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The support is implicit and requires interpretation beyond a direct extraction."
+        "@value": "The concept is source-supported, but the ontology definition has been shortened, normalised or adapted."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -180,23 +29,23 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Implicit evidence"
+        "@value": "Adapted definition"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Implicit evidence"
+        "@value": "Adapted definition"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#topConceptOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -208,242 +57,6 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A numerical value expressed using a measurement unit and, when useful, a kind of quantity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Quantitative value"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-001.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#numericValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a quantitative value to its numerical component."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "numeric value"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-001.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#relatedMatch",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/source",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelConcept",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Controlled concept classifying a product technology as base case, best available technology or best not-yet-available technology."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Product technology level concept"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This shared class prevents aspect modules from recreating the same BC/BAT/BNAT axis. Aspect-specific profiles may map to one of its concepts without becoming equivalent to that generic level."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, relevant section, printed page 17, lines 228-235."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#narrower",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#topConceptOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelScheme",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Controlled vocabulary of the JRC base case, best available technology and best not-yet-available technology levels."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Product technology level scheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#hasTopConcept": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#bestNotYetAvailableTechnologyLevel"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Product technology level scheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Section 2, printed page 17, lines 228-235."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
       }
     ]
   },
@@ -503,401 +116,19 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Weak annotation relation indicating that a source entity typically increases the likelihood of a target degradation phenomenon, failure mode, damage mechanism or adverse outcome."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "typically increases likelihood of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This property is appropriate for risk-like links, for example context or use factors increasing the likelihood of a durability failure mode."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-006.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The concept or relation is not stated verbatim but is strongly implied by the cited source."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Strongly implied evidence"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Strongly implied evidence"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#evidenceStatus",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates an ontology resource to one or more controlled concepts describing how explicitly the resource is supported or how strongly it was reconstructed from source material."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "evidence status"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This annotation qualifies the ontology resource itself. Evidence and polarity for an individual weak relation edge remain in the canonical relation register or require a reified statement model."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-006.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#projectDecision",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The resource results from an explicit project modelling or governance decision."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Project decision"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Project decision"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/identifier",
+    "@id": "http://www.w3.org/2004/02/skos/core#definition",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#related",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelConcept"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Product technology with ambitious performance that is available on the market and implemented at scale."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Best available technology level"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#notation": [
-      {
-        "@value": "BAT"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Best available technology level"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelScheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Section 2, printed page 17, lines 228-235."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#periodStart",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Start date and time of a reference period."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "period start"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#sourceType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates an ontology resource to a controlled source-category concept describing how the resource was obtained or justified."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "source type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Source Traceability Policy, lines 7-43 and 86-108"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+    "@id": "https://w3id.org/eudpp/textile-connector#adaptedRelation",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
@@ -909,7 +140,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The source explicitly states the concept or relation."
+        "@value": "The relation is source-supported, but its ontology formulation has been normalised or adapted."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -920,74 +151,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Explicit evidence"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Explicit evidence"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/references",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The ontology introduces a structure needed to represent source information correctly."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Modelling abstraction"
+        "@value": "Adapted relation"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -998,7 +162,7 @@
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Modelling abstraction"
+        "@value": "Adapted relation"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#topConceptOf": [
@@ -1019,15 +183,42 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/hasVersion",
+    "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#editorialNote",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A numerical value expressed using a measurement unit and, when useful, a kind of quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Quantitative value"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-001.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
     ]
   },
   {
@@ -1092,151 +283,19 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf",
+    "@id": "http://purl.org/dc/terms/modified",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Weak annotation relation indicating that a source entity typically reduces the likelihood of a target degradation phenomenon, failure mode, damage mechanism or adverse outcome."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "typically reduces likelihood of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This property is appropriate for protective or mitigating links. It should not be interpreted as a guarantee of prevention."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-006.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#modellingNote",
+    "@id": "http://www.w3.org/2004/02/skos/core#editorialNote",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Human-readable note documenting a modelling decision, limitation, assumption, source wording or intended future refinement."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "modelling note"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-006.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#broader",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#sourceLocator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Identifies, in human-readable form, the section, page, table, figure, line range or file location in the cited source that supports an ontology resource."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "source locator"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Source Traceability Policy, lines 7-43 and 86-108"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#contextDependentEvidence",
+    "@id": "https://w3id.org/eudpp/textile-connector#implicitEvidence",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
@@ -1248,7 +307,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The evidence depends on product, material, process, method or use context."
+        "@value": "The support is implicit and requires interpretation beyond a direct extraction."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1259,7 +318,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Context-dependent evidence"
+        "@value": "Implicit evidence"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1270,7 +329,7 @@
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Context-dependent evidence"
+        "@value": "Implicit evidence"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#topConceptOf": [
@@ -1291,21 +350,9 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/title",
+    "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#definition",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#hasQuantityKind",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -1315,12 +362,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a quantitative value to the kind of quantity that it expresses."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+        "@value": "The concept, hierarchy or relation was reconstructed from several source statements or analytical artefacts."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1331,98 +373,35 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has quantity kind"
+        "@value": "Reconstructed evidence"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Reconstructed evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-001.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/description",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#typicallyContributesTo",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Weak annotation relation indicating that a source entity typically contributes to, supports or participates in the realisation of a target characteristic, performance aspect or outcome."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "typically contributes to"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This is a specialised form of typical influence. It should not be interpreted as a necessary or sufficient condition."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-006.md"
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
       }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/created",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/issued",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -1487,15 +466,21 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "@id": "http://purl.org/dc/terms/references",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod",
+    "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#externalReuse",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -1505,7 +490,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Structured temporal interval used to qualify the period to which an observation, indicator or other time-bound textile statement applies."
+        "@value": "The resource is reused from an external ontology, standard or controlled vocabulary."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1516,7 +501,521 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Reference period"
+        "@value": "External reuse"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "External reuse"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/bibliographicCitation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#periodEnd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "End date and time of a reference period."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "period end"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#notation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#narrower",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/source",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#projectDecision",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The resource results from an explicit project modelling or governance decision."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Project decision"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Project decision"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The concept or relation is not stated verbatim but is strongly implied by the cited source."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Strongly implied evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Strongly implied evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#sectorExtension",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The resource extends a horizontal model with a textile-sector concept or relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sector extension"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Sector extension"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#broader",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Weak annotation relation indicating that a source concept, parameter, process, context factor or structural characteristic typically influences a target concept, without asserting a deterministic or universally valid causal relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "typical influence on"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Use this property for cross-module class-level or concept-level links such as process parameter to structural characteristic, structure to durability, or context factor to durability. It is intentionally an annotation property to avoid strong OWL inferences over classes."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-006.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#relatedMatch",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#sourceType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates an ontology resource to a controlled source-category concept describing how the resource was obtained or justified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "source type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Source Traceability Policy, lines 7-43 and 86-108"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelScheme",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Controlled vocabulary of the JRC base case, best available technology and best not-yet-available technology levels."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Product technology level scheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#bestNotYetAvailableTechnologyLevel"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Product technology level scheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 2, printed page 17, lines 228-235."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#contextDependentEvidence",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The evidence depends on product, material, process, method or use context."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Context-dependent evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Context-dependent evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1581,7 +1080,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#sectorExtension",
+    "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
@@ -1593,7 +1092,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The resource extends a horizontal model with a textile-sector concept or relation."
+        "@value": "The source explicitly states the concept or relation."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1604,23 +1103,23 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Sector extension"
+        "@value": "Explicit evidence"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "Sector extension"
+        "@value": "Explicit evidence"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#topConceptOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1636,7 +1135,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn",
+    "@id": "https://w3id.org/eudpp/textile-connector#typicallyContributesTo",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ],
@@ -1648,7 +1147,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Weak annotation relation indicating that a source concept, parameter, process, context factor or structural characteristic typically influences a target concept, without asserting a deterministic or universally valid causal relation."
+        "@value": "Weak annotation relation indicating that a source entity typically contributes to, supports or participates in the realisation of a target characteristic, performance aspect or outcome."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1659,13 +1158,18 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "typical influence on"
+        "@value": "typically contributes to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Use this property for cross-module class-level or concept-level links such as process parameter to structural characteristic, structure to durability, or context factor to durability. It is intentionally an annotation property to avoid strong OWL inferences over classes."
+        "@value": "This is a specialised form of typical influence. It should not be interpreted as a necessary or sufficient condition."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1681,9 +1185,9 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+    "@id": "https://w3id.org/eudpp/textile-connector#periodStart",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -1693,7 +1197,12 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The concept is source-supported, but the ontology definition has been shortened, normalised or adapted."
+        "@value": "Start date and time of a reference period."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1704,23 +1213,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Adapted definition"
+        "@value": "period start"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Adapted definition"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1736,20 +1234,76 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#broadMatch",
+    "@id": "http://purl.org/dc/terms/hasVersion",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
+    "@id": "http://purl.org/dc/terms/creator",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Product technology with ambitious performance that is available on the market and implemented at scale."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Best available technology level"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "BAT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Best available technology level"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 2, printed page 17, lines 228-235."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
     ]
   },
   {
@@ -1808,7 +1362,56 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#externalReuse",
+    "@id": "https://w3id.org/eudpp/textile-connector#numericValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a quantitative value to its numerical component."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "numeric value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-001.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#supportingEvidence",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
@@ -1820,7 +1423,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The resource is reused from an external ontology, standard or controlled vocabulary."
+        "@value": "The cited source provides supporting rather than primary evidence."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1831,7 +1434,62 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "External reuse"
+        "@value": "Supporting evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Supporting evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The ontology introduces a structure needed to represent source information correctly."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Modelling abstraction"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1842,7 +1500,7 @@
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
       {
         "@language": "en",
-        "@value": "External reuse"
+        "@value": "Modelling abstraction"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#topConceptOf": [
@@ -1854,6 +1512,383 @@
       {
         "@language": "en",
         "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#broadMatch",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#hasQuantityKind",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a quantitative value to the kind of quantity that it expresses."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has quantity kind"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://si-digital-framework.org/SI#QuantityKind"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-001.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#hasReferenceDuration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a reference period to its quantitative duration."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has reference duration"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-004.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Weak annotation relation indicating that a source entity typically reduces the likelihood of a target degradation phenomenon, failure mode, damage mechanism or adverse outcome."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "typically reduces likelihood of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This property is appropriate for protective or mitigating links. It should not be interpreted as a guarantee of prevention."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-006.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#sourceLocator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies, in human-readable form, the section, page, table, figure, line range or file location in the cited source that supports an ontology resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "source locator"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Source Traceability Policy, lines 7-43 and 86-108"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#topConceptOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/relation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#ProductTechnologyLevelConcept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Controlled concept classifying a product technology as base case, best available technology or best not-yet-available technology."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Product technology level concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This shared class prevents aspect modules from recreating the same BC/BAT/BNAT axis. Aspect-specific profiles may map to one of its concepts without becoming equivalent to that generic level."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, relevant section, printed page 17, lines 228-235."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#modellingNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Human-readable note documenting a modelling decision, limitation, assumption, source wording or intended future refinement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "modelling note"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-006.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/license",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Weak annotation relation indicating that a source entity typically increases the likelihood of a target degradation phenomenon, failure mode, damage mechanism or adverse outcome."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "typically increases likelihood of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This property is appropriate for risk-like links, for example context or use factors increasing the likelihood of a durability failure mode."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-006.md"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
@@ -1928,73 +1963,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#periodEnd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "End date and time of a reference period."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "period end"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#closeMatch",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/modified",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/bibliographicCitation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
     "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
@@ -2066,15 +2034,15 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/license",
+    "@id": "http://purl.org/dc/terms/issued",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#hasReferenceDuration",
+    "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -2084,12 +2052,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a reference period to its quantitative duration."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ReferencePeriod"
+        "@value": "Structured temporal interval used to qualify the period to which an observation, indicator or other time-bound textile statement applies."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2100,18 +2063,69 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has reference duration"
+        "@value": "Reference period"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#related",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-connector#evidenceStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates an ontology resource to one or more controlled concepts describing how explicitly the resource is supported or how strongly it was reconstructed from source material."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "evidence status"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This annotation qualifies the ontology resource itself. Evidence and polarity for an individual weak relation edge remain in the canonical relation register or require a reified statement model."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-004.md"
+        "@value": "docs/decisions/TXT-DEC-006.md"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
@@ -2121,119 +2135,165 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#notation",
+    "@id": "http://purl.org/dc/terms/title",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#adaptedRelation",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The relation is source-supported, but its ontology formulation has been normalised or adapted."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Adapted relation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Adapted relation"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#SourceTypeScheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/relation",
+    "@id": "http://purl.org/dc/terms/identifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+    "@id": "https://w3id.org/eudpp/textile-connector",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/bibliographicCitation": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Connector Ontology. Version 2.0.0 candidate."
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-03-06"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@language": "en",
+        "@value": "Andreas Schneider"
+      },
+      {
+        "@language": "en",
+        "@value": "BOUGACHA Racem"
+      },
+      {
+        "@language": "en",
+        "@value": "Elio Hbeich"
+      },
+      {
+        "@language": "en",
+        "@value": "Ivo Ladenius"
+      },
+      {
+        "@language": "en",
+        "@value": "Jan Merckx"
+      },
+      {
+        "@language": "en",
+        "@value": "Piero de Sabbata"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Shared foundation and connector module for the EU DPP textile ontology network. It defines the common quantitative-value and reference-period patterns, the shared product-technology-level vocabulary, controlled provenance vocabularies, editorial annotations and weak cross-module annotation relations. Domain-specific operational relations remain in their domain modules."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-03-06"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-10-27"
+      }
     ],
     "http://purl.org/dc/terms/source": [
       {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
         "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Connector Ontology"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "txtcon"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "https://w3id.org/eudpp/textile-connector#"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The cited source provides supporting rather than primary evidence."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        "@value": "Operational instance-level relations belong in the relevant domain module and are validated through SHACL."
+      },
       {
-        "@id": "https://w3id.org/eudpp/textile-connector"
+        "@language": "en",
+        "@value": "Relation polarity is not represented as a direct annotation on a source class because one class may have several outgoing weak relations with different directions. Edge-level polarity and evidence remain in the canonical relation register until a statement-level representation is adopted."
+      },
+      {
+        "@language": "en",
+        "@value": "The BC/BAT/BNAT product-technology axis is shared here because it is used by more than one textile aspect module. Aspect-specific configurations remain in their own module and map to the shared level rather than duplicating it."
+      },
+      {
+        "@language": "en",
+        "@value": "The common ReferencePeriod pattern is infrastructure only; domain modules retain their own hasReferencePeriod relations."
+      },
+      {
+        "@language": "en",
+        "@value": "The connector is intentionally dependency-light: it imports the BIPM SI Reference Point but no textile domain module. SKOS terms are referenced directly through their standard W3C IRIs."
+      },
+      {
+        "@language": "en",
+        "@value": "The quantitative-value pattern links numerical values to BIPM SI measurement-unit and quantity-kind resources without recreating SI terms."
+      },
+      {
+        "@language": "en",
+        "@value": "The typical relation properties are annotation properties for contextual class-level or concept-level statements. They do not assert deterministic causal axioms."
+      },
+      {
+        "@language": "en",
+        "@value": "Working extraction identifiers are maintained in the crosswalk documentation rather than stabilised as ontology annotations."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Supporting evidence"
+        "@value": "EU DPP Textile Connector Ontology"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
+    "http://www.w3.org/2002/07/owl#imports": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+        "@id": "https://w3id.org/eudpp/textile-si-mireot"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+    "http://www.w3.org/2002/07/owl#priorVersion": [
       {
-        "@language": "en",
-        "@value": "Supporting evidence"
+        "@id": "https://w3id.org/eudpp/textile-connector/1.1.2"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+    "http://www.w3.org/2002/07/owl#versionIRI": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
+        "@id": "https://w3id.org/eudpp/textile-connector/2.0.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "Version 2.0.0 candidate"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2244,62 +2304,7 @@
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The concept, hierarchy or relation was reconstructed from several source statements or analytical artefacts."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Reconstructed evidence"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "Reconstructed evidence"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#EvidenceStatusScheme"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+        "@id": "https://w3id.org/eudpp/textile-connector#ontologyModule"
       }
     ]
   }

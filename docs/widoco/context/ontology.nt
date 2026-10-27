@@ -485,7 +485,7 @@
 <https://w3id.org/eudpp/textile-context#washingFrequency> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
 <https://w3id.org/eudpp/textile-context#washingFrequency> <https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> <https://w3id.org/eudpp/textile-durability#DimensionalStability> .
 <https://w3id.org/eudpp/textile-context#washingFrequency> <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#WashingProcess> .
-<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Context Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Context Ontology. Version 2.0.0 candidate."@en .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -496,7 +496,7 @@
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/description> "Ontology module for representing concrete observations, declarations and settings about textile use, care, environmental exposure, storage and user behaviour. Context factor types are represented as SKOS concepts; processes and process parameters remain in TEXTILE_PROCESS."@en .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/modified> "2026-10-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/dc/terms/title> "EU DPP Textile Context Ontology"@en .
 <https://w3id.org/eudpp/textile-context> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtctx" .
@@ -508,8 +508,9 @@
 <https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
 <https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-process> .
-<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-context/1.1.2> .
-<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-context/1.1.2> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-context/2.0.0> .
+<https://w3id.org/eudpp/textile-context> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
 <https://w3id.org/eudpp/textile-context> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC 3rd milestone, Sections 6.3 (pages 84-87, lines 2105-2244), 9.2.2.2 (pages 125-126, lines 3296-3327), and 13.7.2 (pages 395-410, lines 10227-10646)."@en .
 <https://w3id.org/eudpp/textile-context> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
 _:cb10011bbacd25684ae3ee0d34be28c65f0a3c89a62e4df351a23118503742fd702 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-context#TextileContextObservation> .

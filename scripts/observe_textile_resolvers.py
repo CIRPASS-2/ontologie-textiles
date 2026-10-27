@@ -4,15 +4,17 @@ import argparse
 from datetime import datetime, timezone
 import json
 import hashlib
+import sys
 from pathlib import Path
 import urllib.request
 import urllib.error
-from rdflib import Graph, RDF, OWL
+from rdflib import Graph, RDF, OWL, URIRef
 from rdflib.namespace import DCTERMS
 from rdflib.compare import isomorphic
 from xml.etree import ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:sys.path.insert(0,str(ROOT))
 
 
 def identities():
@@ -27,25 +29,29 @@ def identities():
 
 
 def retained_versions():
+    from migration.correct_version_identities import MODULES, project
     historical=ROOT/'migration/historical/1.1.2'
     active_catalog={x.attrib['name']:x.attrib['uri'] for x in ET.parse(ROOT/'catalog-v001.xml').getroot()}
     old_catalog={x.attrib['name']:x.attrib['uri'] for x in ET.parse(historical/'catalog-v001.xml').getroot()}
     rows=[]
     for row in identities():
-        if not row['source'].startswith('ontology/') or not row['version_iri'].endswith('/1.1.2'):continue
+        if row['source'] not in {'ontology/textile-'+module+'.ttl' for module in MODULES}:continue
         source=ROOT/row['source'];old=historical/row['source']
         current=Graph().parse(source);past=Graph().parse(old)
         current.remove((None,DCTERMS.creator,None));past.remove((None,DCTERMS.creator,None))
+        ontology=URIRef(row['iri'])
         imports=sorted(map(str,current.objects(None,OWL.imports)))
         rows.append(dict(**row,current_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
                          historical_sha256=hashlib.sha256(old.read_bytes()).hexdigest(),
                          historical_source=old.relative_to(ROOT).as_posix(),
                          isomorphic_excluding_only_creator=isomorphic(current,past),
+                         isomorphic_excluding_creator_and_version_metadata=isomorphic(project(current,ontology),project(past,ontology)),
+                         prior_version=str(current.value(ontology,OWL.priorVersion)),
                          imports=[dict(iri=uri,current=active_catalog[uri],
                                        historical=(historical/old_catalog[uri]).relative_to(ROOT).as_posix()) for uri in imports]))
     assert len(rows)==9
     (ROOT/'migration/retained-version-identities.json').write_text(json.dumps(rows,indent=2)+'\n',encoding='utf8',newline='\n')
-    print('Retained version identities:',len(rows),'; non-creator graphs equivalent:',sum(row['isomorphic_excluding_only_creator'] for row in rows))
+    print('Corrected retained identities:',len(rows),'; non-metadata graphs equivalent:',sum(row['isomorphic_excluding_creator_and_version_metadata'] for row in rows))
 
 
 def observe(pair):

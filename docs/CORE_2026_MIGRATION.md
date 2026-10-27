@@ -95,10 +95,14 @@ is implemented under explicit owner approval. Final release numbering and
 publication still require owner approval. Nothing
 in this migration authorises a push, merge, tag or publication.
 
-Unchanged active modules retain their original 1.1.2 version metadata, but their
-versionless imports participate in the current closure. Selecting their historical
-version endpoint requires the historical catalogue, which resolves the complete
-original closure. Local file loading alone is not historical resolution.
+Owner-approved Option B gives all thirteen current Textile graphs distinct
+2.0.0 version identities. Assessment, connector, context, core, durability,
+indicator, process, repairability and structure now cite their historical 1.1.2
+IRIs through owl:priorVersion. Only the byte-unchanged SI MIREOT retains 1.1.2.
+Selecting a historical version endpoint requires the historical catalogue,
+which resolves the complete original closure. Local file loading alone is not
+historical resolution. See the resolver coordination brief for the separate
+immutable version routes and current versionless aliases.
 
 The converter is bounded to supported positive reports. Unknown legacy resources
 (including identity properties whose semantics have not been reconciled) require

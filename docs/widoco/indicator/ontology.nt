@@ -326,7 +326,7 @@
 <https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-durability#Durability> .
 <https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
 <https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Indicator Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Indicator Ontology. Version 2.0.0 candidate."@en .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -337,7 +337,7 @@
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/description> "Ontology module for derived textile durability and use-related indicators. It separates indicators from assessment results, product characteristics, thresholds and quantitative values."@en .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/modified> "2026-10-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/title> "EU DPP Textile Indicator Ontology"@en .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtind" .
 <https://w3id.org/eudpp/textile-indicator> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-indicator#" .
@@ -349,8 +349,9 @@
 <https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
 <https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
-<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-indicator/1.1.2> .
-<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-indicator/1.1.2> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-indicator/2.0.0> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
 _:cb107e35b53d661562fa4e231c43718cb9fbd4d57164167816c881d81681174f083 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-durability#FailureMode> .
 _:cb107e35b53d661562fa4e231c43718cb9fbd4d57164167816c881d81681174f083 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:cb1356dc9ff27125fe61465d2a72ae6b8abb66ceb6f4947fd945ec2383a091292c3 .
 _:cb11aab39878d767b7ef8bca075a61bf1dfc9bfc5cfe2c420c1621fed6e59666fe0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-assessment#AssessmentResult> .
