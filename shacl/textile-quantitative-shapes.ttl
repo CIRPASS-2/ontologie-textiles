@@ -8,6 +8,7 @@
 @prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
 @prefix txtrec: <https://w3id.org/eudpp/textile-recyclability#> .
 @prefix txtrep: <https://w3id.org/eudpp/textile-repairability#> .
+@prefix txtsoc: <https://w3id.org/eudpp/textile-soc#> .
 @prefix txtstr: <https://w3id.org/eudpp/textile-structure#> .
 @prefix units: <https://si-digital-framework.org/SI/units/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -39,12 +40,12 @@ tsh:MeasurementParameterSettingShape a sh:NodeShape ;
 
 tsh:NoQuantitativeValueSubclassShape a sh:NodeShape ;
     sh:sparql [ a sh:SPARQLConstraint ;
-            sh:message "Minimum, maximum, exact, range and other roles must not be represented as subclasses of QuantitativeValue."@en ;
+            sh:message "Only the three approved Textile threshold roles may specialise QuantitativeValue."@en ;
             sh:prefixes <https://w3id.org/eudpp/textile-shacl/quantitative> ;
             sh:select """
             SELECT $this ?subclass WHERE {
               ?subclass rdfs:subClassOf+ $this .
-              FILTER (?subclass != $this)
+              FILTER (?subclass != $this && ?subclass NOT IN (<https://w3id.org/eudpp/textile-soc#ExactThresholdValue>, <https://w3id.org/eudpp/textile-soc#MaximumThresholdValue>, <https://w3id.org/eudpp/textile-soc#RangeThresholdValue>))
             }
         """ ] ;
     sh:targetNode txtcon:QuantitativeValue .
@@ -98,10 +99,11 @@ tsh:QuantitativeMeasurementResultShape a sh:NodeShape ;
     sh:targetSubjectsOf txtass:hasMeasuredValue .
 
 tsh:QuantitativeValueShape a sh:NodeShape ;
+    sh:or ( [ sh:class txtsoc:MaximumThresholdValue ] [ sh:class txtsoc:RangeThresholdValue ] [ sh:property [ sh:minCount 1 ;
+                        sh:path txtcon:numericValue ] ] ) ;
     sh:property [ sh:datatype xsd:decimal ;
             sh:maxCount 1 ;
-            sh:message "A quantitative value must carry exactly one xsd:decimal numeric value."@en ;
-            sh:minCount 1 ;
+            sh:message "A scalar quantitative value must have at most one decimal numeric value."@en ;
             sh:path txtcon:numericValue ],
         [ sh:maxCount 1 ;
             sh:message "A quantitative value must carry exactly one measurement unit, represented by an IRI or a structured blank node."@en ;
@@ -146,6 +148,7 @@ tsh:ReferencePeriodShape a sh:NodeShape ;
 <https://w3id.org/eudpp/textile-shacl/quantitative> a owl:Ontology ;
     rdfs:label "Textile quantitative SHACL profile"@en ;
     rdfs:comment "Validation constraints for the shared quantitative-value pattern and common quantitative roles."@en ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-shacl/quantitative/2.0.0> ;
     sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
         [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;
@@ -222,4 +225,3 @@ tsh:ReferencePeriodShape a sh:NodeShape ;
             sh:prefix "qb" ],
         [ sh:namespace "http://www.opengis.net/ont/geosparql#"^^xsd:anyURI ;
             sh:prefix "geo" ] .
-

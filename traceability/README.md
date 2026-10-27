@@ -69,7 +69,7 @@ The December 2025 JRC Textile Preparatory Study is a broad technical source for 
 
 Run `python -B scripts/validate_public.py` from the package root. The validator derives the three tables again from packaged RDF plus the locator supplements and compares every row, then checks CSV structure, source/resource links, counts, public ADR paths, the file manifest and hashes. `--full` adds the declared SHACL and reasoning checks. Neither the source documents nor the historical Excel workbook are distributed. Public references identify them without reproducing their text. Historical specification version labels in documentary locators are preserved as source references, not current release metadata.
 
-The tables contain 838 resources, 904 evidence relationships and 5 source documents. 282 resources have no external evidence rows; 248 have multiple evidence rows. 549 resources have a recorded JRC source association.
+The tables contain 899 resources, 904 evidence relationships and 5 source documents. 343 resources have no external evidence rows; 248 have multiple evidence rows. 549 resources have a recorded JRC source association.
 
 
 ## Seven publication locator supplements

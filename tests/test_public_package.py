@@ -158,7 +158,8 @@ def test_resolution_cannot_change_source_identity(tmp_path,tables):
  'mireot/mat-textile-mireot.ttl',
  'mireot/si-textile-mireot.ttl',
  'mireot/soc-textile-mireot.ttl',
- 'dependencies/soc.ttl',
+ 'mireot/con-textile-mireot.ttl',
+ 'dependencies/current-core/soc.owl',
 ])
 def test_review_dependencies_are_packaged_and_checksum_covered(relative_path):
  assert (ROOT/relative_path).is_file()

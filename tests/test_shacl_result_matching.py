@@ -82,3 +82,13 @@ def test_anonymous_source_path_must_match_reported_path():
     shapes.set((prop, SH.path, EX.unrelated))
     with pytest.raises(ValueError, match='unexpected result path'):
         v.match_shacl_results(report, shapes, contract)
+
+
+def test_specific_source_constraint_identity_is_checked():
+    shapes, report, contract, result, _ = sample()
+    report.add((result, SH.sourceConstraint, EX.ExpectedConstraint))
+    contract['expected_results'][0]['source_constraint'] = str(EX.ExpectedConstraint)
+    v.match_shacl_results(report, shapes, contract)
+    contract['expected_results'][0]['source_constraint'] = str(EX.UnrelatedConstraint)
+    with pytest.raises(ValueError, match='Missing expected SHACL result'):
+        v.match_shacl_results(report, shapes, contract)

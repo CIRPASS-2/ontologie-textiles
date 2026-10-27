@@ -1,11 +1,22 @@
-@prefix ex: <https://example.org/textile-abox/valid/> .
-@prefix soc: <https://w3id.org/eudpp/soc#> .
+@prefix si: <https://si-digital-framework.org/SI#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
 @prefix txtsoc: <https://w3id.org/eudpp/textile-soc#> .
 @prefix units: <https://si-digital-framework.org/SI/units/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-units:one a soc:Unit .
-ex:reportedRange a soc:RangeQuantitativeValue ; soc:lowerBound '0.1'^^xsd:decimal ; soc:upperBound '0.9'^^xsd:decimal ; soc:hasUnit units:one .
-ex:maximumAllowed a soc:MaximumQuantitativeValue ; soc:maximumValue '0.5'^^xsd:decimal ; soc:hasUnit units:one .
-ex:trackingThreshold a txtsoc:TextileTrackingThreshold ; soc:hasThresholdQuantitativeValue ex:reportedRange .
-ex:recyclingAlertThreshold a txtsoc:TextileRecyclingAlertThreshold ; soc:hasThresholdQuantitativeValue ex:maximumAllowed .
+<https://example.org/textile-abox/valid/recyclingAlertThreshold> a txtsoc:TextileRecyclingAlertThreshold ;
+    txtsoc:hasThresholdQuantitativeValue <https://example.org/textile-abox/valid/maximumAllowed> .
+
+<https://example.org/textile-abox/valid/trackingThreshold> a txtsoc:TextileTrackingThreshold ;
+    txtsoc:hasThresholdQuantitativeValue <https://example.org/textile-abox/valid/reportedRange> .
+
+<https://example.org/textile-abox/valid/maximumAllowed> a txtsoc:MaximumThresholdValue ;
+    txtcon:hasMeasurementUnit units:one ;
+    txtsoc:maximumValue 0.5 .
+
+<https://example.org/textile-abox/valid/reportedRange> a txtsoc:RangeThresholdValue ;
+    txtcon:hasMeasurementUnit units:one ;
+    txtsoc:lowerBound 0.1 ;
+    txtsoc:upperBound 0.9 .
+
+units:one a si:MeasurementUnit .

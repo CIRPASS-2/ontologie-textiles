@@ -1,11 +1,13 @@
 # Textile ontology diagrams
 
-These supplied diagrams are illustrative views, not complete axiom or provenance specifications. The SVG and PNG assets are preserved; they have not been regenerated to establish exhaustive agreement with every current axiom. Use the Turtle graphs as authority. The table below is recomputed from those graphs and may exceed the content shown in an illustration.
+SOC, Associated Materials, Recyclability and the network overview are regenerated
+for the 2.0.0 candidate. Other diagrams retain their accepted baseline bytes.
+Views are illustrative; Turtle remains the axiom authority.
 
 | Module | Classes | Object properties | Datatype properties | SKOS concepts | SKOS schemes |
 |---|---:|---:|---:|---:|---:|
 | textile-assessment | 30 | 26 | 1 | 5 | 1 |
-| textile-associated-materials | 7 | 7 | 0 | 42 | 4 |
+| textile-associated-materials | 8 | 7 | 0 | 42 | 4 |
 | textile-connector | 5 | 14 | 3 | 17 | 3 |
 | textile-context | 3 | 6 | 1 | 31 | 1 |
 | textile-core | 16 | 8 | 0 | 40 | 3 |
@@ -14,7 +16,7 @@ These supplied diagrams are illustrative views, not complete axiom or provenance
 | textile-process | 105 | 22 | 1 | 6 | 2 |
 | textile-recyclability | 44 | 47 | 0 | 76 | 11 |
 | textile-repairability | 38 | 31 | 3 | 18 | 5 |
-| textile-soc | 11 | 6 | 0 | 7 | 1 |
+| textile-soc | 28 | 27 | 14 | 7 | 1 |
 | textile-structure | 49 | 3 | 1 | 0 | 0 |
 
 ## Assets

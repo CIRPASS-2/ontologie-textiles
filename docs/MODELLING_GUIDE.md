@@ -22,7 +22,7 @@ The pattern is a modelling abstraction, not a claim that JRC defines this OWL st
 
 ## Substances of concern
 
-Represent the substance identity separately from the substance-presence context and from its regulatory qualification. Attach concentration, location and handling information to the presence context. For the supplied SoC dependency, exact, maximum and range quantitative expressions use the source ontology classes.
+Represent the substance identity separately from the substance-presence context and from its regulatory qualification. Attach concentration, location and handling information to the presence context. Positive reports use CORE SubstancePresence and concernsSubstance, which entails SubstanceOfConcern typing. Applicable qualifications remain presence-scoped and must qualify that same substance. Concentrations use CORE scalar/range carriers directly; threshold expressions retain Textile roles beneath the shared QuantitativeValue. See [the migration patterns](CORE_2026_MIGRATION.md).
 
 ## Verified CORE reuse and module ownership
 
@@ -46,8 +46,8 @@ CORE `dpp:QuantitativeProperty` represents a quantitative property or measurand;
 Textile `txtcon:QuantitativeValue` represents its structured value. The CORE
 snapshot also supplies numerical-value and unit carriers, but this structural
 overlap does not establish class equivalence. See the local
-[CORE snapshot](../dependencies/p_dpp.owl) and
-[MAT snapshot](../dependencies/mat.owl).
+[CORE snapshot](../dependencies/current-core/p_dpp.owl) and
+[MAT snapshot](../dependencies/current-core/mat.owl).
 
 The five `hasTextualValue` local names belong to distinct IRIs in the
 `textile-assessment#`, `textile-context#`, `textile-indicator#`,

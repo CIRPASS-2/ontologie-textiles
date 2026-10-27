@@ -1,3 +1,7 @@
+> Historical baseline examples below describe 1.1.2. The October 2026
+> adoption is implemented by [TXT-DEC-010](../decisions/TXT-DEC-010.md)
+> and the [migration guide](../CORE_2026_MIGRATION.md); policy rules remain in force.
+
 # Nader review of the Textile community candidate
 
 Review baseline: commit `1a88772`, following candidate integration at `ef7695d`.

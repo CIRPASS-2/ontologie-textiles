@@ -1807,7 +1807,6 @@ txtrec:RecyclabilityLabelScheme a skos:ConceptScheme ;
 
 txtrec:RecycledContentDeclaration a owl:Class ;
     rdfs:label "Recycled content declaration"@en ;
-    dcterms:relation dpp:RecycledMaterialsUse ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf>,
         <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Declaration reporting the mass fraction of recycled material in a textile product or material. Recycled content is related to, but distinct from, recyclability."@en ;
@@ -2034,14 +2033,14 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-recyclability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Recyclability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Recyclability Ontology. Version 1.1.2."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Recyclability Ontology. Version 2.0.0 candidate."@en ;
     dcterms:created "2026-07-09"^^xsd:date ;
-    dcterms:creator "Elio Hbeich"@en,
-        "BOUGACHA Racem"@en ;
+    dcterms:creator "BOUGACHA Racem"@en,
+        "Elio Hbeich"@en ;
     dcterms:description "Ontology module for route-specific textile recyclability, assessment criteria and results, barriers, scores and labels, actual recycling events, recovered materials, textile waste categories, recycling yield and recycled-content declarations."@en ;
     dcterms:issued "2026-07-09"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf>,
         <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf>,
         <https://w3id.org/eudpp/textile-ontology> ;
@@ -2060,8 +2059,8 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
         <https://w3id.org/eudpp/textile-indicator>,
         <https://w3id.org/eudpp/textile-process>,
         <https://w3id.org/eudpp/textile-soc> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-recyclability/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-recyclability/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -2073,4 +2072,3 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
 
 [] a owl:AllDisjointClasses ;
     owl:members ( txtrec:RecyclabilityAssessmentResult txtrec:RecycledContentAssessmentResult ) .
-

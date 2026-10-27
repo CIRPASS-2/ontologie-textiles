@@ -12,9 +12,18 @@ The **current CIRPASS Textile Ontology** is the JRC-grounded community review ca
 
 ## Versions and entry point
 
-The 13 Textile ontology graphs declare version 1.1.2. Five MIREOT graphs declare 1.1.2; the SoC MIREOT declares 1.1.3. `VERSION` retains 1.1.2 as the supplied base package label and must not be interpreted as a claim that every graph has that version. No new release version has been minted.
+The proposed breaking-change candidate is **2.0.0**. Changed Textile SOC,
+Associated Materials, Recyclability and the network entry point declare new
+2.0.0 candidate identities. Unchanged Textile modules and SI retain 1.1.2.
+Six rebuilt CORE subsets declare 2.0.0 candidate identities; together with SI
+they form seven MIREOT graphs and a 20-graph runtime closure.
 
-Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with [catalog-v001.xml](catalog-v001.xml) to resolve imports locally. The declared SoC MIREOT 1.1.3 identity is mapped; the earlier 1.1.2 alias remains for compatibility and does not retrieve historical bytes. Public term IRIs are unversioned. Codelists are embedded in their defining modules; SI units and quantity kinds are included in the bounded SI graph.
+Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the local
+[catalogue](catalog-v001.xml). Historical version IRIs resolve to preserved bytes,
+including SoC MIREOT 1.1.3 and its former 1.1.2 alias. The old lowercase SOC
+ontology identity resolves only to its historical source. For a historical
+runtime use the preserved standalone historical catalogue, never a mixed closure.
+See the [migration guide](docs/CORE_2026_MIGRATION.md).
 
 ## Package contents
 
@@ -33,12 +42,13 @@ Use Python 3.11 or later. The candidate is tested with the installed versions re
 python -m pip install -r requirements-validation.txt
 python -B scripts/validate_public.py
 python -B scripts/validate_public.py --full
-python -B -m pytest -p no:cacheprovider tests/test_public_package.py -q
+python -B -m pytest -p no:cacheprovider tests -q
+python -B scripts/validate_public.py --full --complete-report
 ```
 
-Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks eleven examples, eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
+Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks eleven examples, the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
 
-Supply the ontology graph when executing SHACL. Recyclability requires explicit RDFS inference; an entailment declaration does not itself load the ontology. These three profiles are selective application constraints, not complete ontology conformance. The supplied reasoning checks do not establish complete OWL DL consistency or satisfiability.
+The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL. Recyclability requires explicit RDFS inference; an entailment declaration does not itself load the ontology. The three structural profiles and optional complete-report profile are selective application constraints, not complete ontology conformance. The supplied reasoning checks do not establish complete OWL DL consistency or satisfiability.
 
 ## Source traceability
 
@@ -50,7 +60,7 @@ The CIRPASS Textile Ontology is grounded in the JRC textile studies while explic
 - [Traceability guide](traceability/README.md)
 - [Source methodology](docs/SOURCE_TRACEABILITY.md)
 
-The following counts are generated from the public CSV: **838 resources**, **904 evidence rows**, **5 source documents**, and **248 resources with multiple evidence records**.
+The following counts are generated from the public CSV: **899 resources**, **904 evidence rows**, **5 source documents**, and **248 resources with multiple evidence records**.
 
 | Provenance category | Resource count |
 |---|---:|
@@ -59,12 +69,12 @@ The following counts are generated from the public CSV: **838 resources**, **904
 | directExtraction | 16 |
 | externalReuse | 1 |
 | modellingAbstraction | 378 |
-| projectDecision | 55 |
+| projectDecision | 116 |
 
 | Defining module | Resource count |
 |---|---:|
 | textile-assessment | 59 |
-| textile-associated-materials | 60 |
+| textile-associated-materials | 61 |
 | textile-connector | 37 |
 | textile-context | 42 |
 | textile-core | 70 |
@@ -73,7 +83,7 @@ The following counts are generated from the public CSV: **838 resources**, **904
 | textile-process | 130 |
 | textile-recyclability | 176 |
 | textile-repairability | 92 |
-| textile-soc | 25 |
+| textile-soc | 85 |
 | textile-structure | 53 |
 | textile-ontology | 0 |
 
@@ -85,7 +95,7 @@ The December 2025 JRC Textile Preparatory Study is a broad technical source for 
 
 See [LICENSE.md](LICENSE.md) and the dependency notices in [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md). Upstream snapshot annotations retain their own terms; the candidate does not relabel them under the Textile licence. MAT redistribution evidence is recorded in the dependency documentation, with the applicable Apache 2.0 licence supplied under `LICENSES/`.
 
-Propose issues and changes through the official [CIRPASS-2/dpp-textiles repository](https://github.com/CIRPASS-2/dpp-textiles). Include resource IRIs, applicable examples and source references. This branch prepares the CIRPASS Textile Ontology Community Review Candidate 1.1.2 for publication in this repository. The current JRC-grounded ontology is available directly under `ontology/`; earlier Graphwise work is preserved separately under `ontology/graphwise-ontology/`. The two earlier Textile draft files, `ontology/textile materials.ttl` and `ontology/textile product data.ttl`, were removed from the current tree and remain available through Git history. This candidate is not a final official release.
+Propose issues and changes through the official [CIRPASS-2/dpp-textiles repository](https://github.com/CIRPASS-2/dpp-textiles). Include resource IRIs, applicable examples and source references. This branch prepares a local 2.0.0 migration candidate; publication still requires owner approval. The current JRC-grounded ontology is available directly under `ontology/`; earlier Graphwise work is preserved separately under `ontology/graphwise-ontology/`. The two earlier Textile draft files, `ontology/textile materials.ttl` and `ontology/textile product data.ttl`, were removed from the current tree and remain available through Git history. This candidate is not a final official release.
 
 `PUBLICATION_MANIFEST.txt` lists every candidate file, including itself and `SHA256SUMS`. `SHA256SUMS` hashes every manifest member except itself. Verify these before distributing a candidate.
 

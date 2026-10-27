@@ -1,3 +1,7 @@
+> Historical baseline examples below describe 1.1.2. The October 2026
+> adoption is implemented by [TXT-DEC-010](../decisions/TXT-DEC-010.md)
+> and the [migration guide](../CORE_2026_MIGRATION.md); policy rules remain in force.
+
 # Upstream dependency governance
 
 ## 1. Purpose

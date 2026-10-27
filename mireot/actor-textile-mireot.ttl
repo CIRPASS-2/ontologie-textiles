@@ -15,16 +15,17 @@ dpp:Actor a owl:Class ;
             owl:onProperty schema:address ] .
 
 <https://w3id.org/eudpp/textile-actor-mireot> a owl:Ontology ;
-    rdfs:label "Textile Actor MIREOT subset"@en ;
-    dcterms:description "Bounded Textile-scoped MIREOT subset of ACTOR terms required by the CIRPASS Textile Ontology."@en ;
-    dcterms:modified "2026-07-24"^^xsd:date ;
-    dcterms:references "External source ontology version 2.0.0."@en ;
+    rdfs:label "Textile ACTOR bounded MIREOT"@en ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
+    dcterms:references "Owner-designated CORE 2.2.0; unchanged source in dependencies/current-core/actor.owl."@en ;
     dcterms:source <https://w3id.org/eudpp/ACTOR> ;
-    dcterms:title "Textile Actor MIREOT subset"@en ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-actor-mireot/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" .
+    owl:versionIRI <https://w3id.org/eudpp/textile-actor-mireot/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" .
+
+schema:PostalAddress a owl:Class ;
+    rdfs:isDefinedBy schema:PostalAddress .
 
 schema:address a owl:ObjectProperty ;
-    rdfs:label "Has address"@en .
-
-schema:PostalAddress a owl:Class .
+    rdfs:label "has address"@en ;
+    rdfs:comment "Links an Actor or Facility to its postal address, represented as a schema:PostalAddress"@en ;
+    rdfs:isDefinedBy schema:address .

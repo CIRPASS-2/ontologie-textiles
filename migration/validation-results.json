@@ -1,0 +1,103 @@
+{
+  "candidate": "2.0.0",
+  "public_validation": "passed",
+  "complete_report_selected": true,
+  "results": {
+    "resource_count": 899,
+    "evidence_rows": 904,
+    "source_documents": 5,
+    "categories": {
+      "adaptedDefinition": 361,
+      "adaptedRelation": 27,
+      "directExtraction": 16,
+      "externalReuse": 1,
+      "modellingAbstraction": 378,
+      "projectDecision": 116
+    },
+    "modules": {
+      "textile-assessment": 59,
+      "textile-associated-materials": 61,
+      "textile-connector": 37,
+      "textile-context": 42,
+      "textile-core": 70,
+      "textile-durability": 58,
+      "textile-indicator": 36,
+      "textile-process": 130,
+      "textile-recyclability": 176,
+      "textile-repairability": 92,
+      "textile-soc": 85,
+      "textile-structure": 53
+    },
+    "locator_statuses": {
+      "PRESENT_NOT_REVERIFIED": 902,
+      "UNRESOLVED": 2
+    },
+    "traceability_statuses": {
+      "COMPLETE": 298,
+      "NO_EXTERNAL_SOURCE_REQUIRED": 278,
+      "PARTIAL": 323
+    },
+    "evidence_by_source": {
+      "EU-2024-1781": 17,
+      "JRC-DPP-2026-05": 20,
+      "JRC-TEXTILE-2025-12": 861,
+      "TEXTILE-EVENT-MIREOT": 5,
+      "TEXTILE-MAT-MIREOT": 1
+    },
+    "zero_evidence": 343,
+    "one_evidence": 308,
+    "multiple_evidence": 248,
+    "max_evidence": 5,
+    "evidence_count_distribution": {
+      "0": 343,
+      "1": 308,
+      "2": 158,
+      "3": 82,
+      "4": 6,
+      "5": 2
+    },
+    "compound_citations": 284,
+    "resources_with_jrc_evidence": 549,
+    "current_import_closure_files": 20,
+    "package_files": 754,
+    "preserved_reference_files": 3,
+    "parsed_rdf_files": 171,
+    "public_adrs": 10,
+    "multiple_source_annotations": 110,
+    "structural_checks": "passed",
+    "examples_conformant": 11,
+    "shacl_scenarios": 16,
+    "reasoning_scenarios": 6,
+    "rdfs_negative_control": "passed"
+  },
+  "pytest": {
+    "tests": 111,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "migration_scenarios": {
+    "total": 41,
+    "positive": 4,
+    "negative": 37
+  },
+  "soc_targeted_shapes_with_positive_and_negative_coverage": 16,
+  "wrapper_conversion_conflict_and_provenance_controls": 4,
+  "widoco_canonical_equivalence": {
+    "modules": 3,
+    "rdf_formats_per_module": 4,
+    "status": "passed"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "rdflib": "7.6.0",
+    "pyshacl": "0.40.1",
+    "owlrl": "7.6.2",
+    "pytest": "9.1.1"
+  },
+  "historical_archive_sha256": "4384bfd9f8f4e8a0ce1a6b7a7fd679d2190d9be33df87b2f181207aa78a46e74",
+  "nonfatal_warnings": [
+    "Three RDFLib JSON-LD parser deprecation warnings in pytest.",
+    "WIDOCO optional configuration/logging/XML parser-property warnings; generation succeeded."
+  ]
+}

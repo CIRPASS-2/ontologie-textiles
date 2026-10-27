@@ -2,6 +2,14 @@ ref-data/EU-CN/cn.ttl filter=lfs diff=lfs merge=lfs -text
 
 # Current Textile package bytes are covered by SHA256SUMS.
 "/migration/**" -text
+"/dependencies/current-core/**" -text
+"/docs/**" -text
+"/examples/**" -text
+"/mireot/**" -text
+"/scripts/**" -text
+"/shacl/**" -text
+"/tests/**" -text
+"/widoco/**" -text
 "/tests/test_shacl_result_matching.py" -text
 "/CHANGELOG.md" -text
 "/LICENSE.md" -text

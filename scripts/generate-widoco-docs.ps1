@@ -1,4 +1,7 @@
+param([string[]]$OnlyModules = @())
 $ErrorActionPreference = "Stop"
+$GenerationWorkspace = (Get-Location).Path
+$InitialWidocoTemps = @(Get-ChildItem -Directory -Filter "tmp*" | Select-Object -ExpandProperty FullName)
 
 $Widoco        = "tools\widoco-1.4.25_JDK-17.jar"
 $Jaxb          = "tools\jaxb-api-2.3.1.jar"
@@ -20,6 +23,12 @@ $modules = @(
     "soc",
     "structure"
 )
+if ($OnlyModules.Count -gt 0) {
+    foreach ($selectedModule in $OnlyModules) {
+        if ($selectedModule -notin $modules) { throw "Unknown module: $selectedModule" }
+    }
+    $modules = @($modules | Where-Object { $_ -in $OnlyModules })
+}
 
 if (-not (Test-Path $Widoco)) {
     throw "WIDOCO JAR not found: $Widoco"
@@ -80,7 +89,7 @@ function Remove-WidocoResidualTempFolders {
         -Filter "tmp*" `
         -ErrorAction SilentlyContinue |
     Where-Object {
-        $_.Name -match '^tmp\d+$'
+        $_.Name -match '^tmp\d+$' -and $_.FullName -notin $InitialWidocoTemps -and $_.Parent.FullName -eq $GenerationWorkspace
     } |
     Remove-Item `
         -Recurse `
@@ -261,7 +270,12 @@ foreach ($module in $modules) {
     try {
 
         if (Test-Path $output) {
-            Remove-Item $output -Recurse -Force
+            $resolvedOutput = (Resolve-Path -LiteralPath $output).Path
+            $expectedOutputRoot = [System.IO.Path]::GetFullPath((Join-Path $GenerationWorkspace $OutputRoot))
+            if ([System.IO.Path]::GetDirectoryName($resolvedOutput) -ne $expectedOutputRoot) {
+                throw "Unexpected WIDOCO output directory: $resolvedOutput"
+            }
+            Remove-Item -LiteralPath $resolvedOutput -Recurse -Force
         }
 
         java -cp "$Widoco;$Jaxb" `
@@ -333,6 +347,9 @@ foreach ($module in $modules) {
             $ontology `
             (Join-Path $output "ontology.ttl") `
             -Force
+
+        python scripts/sync-widoco-rdf.py $module
+        if ($LASTEXITCODE -ne 0) { throw "Canonical RDF synchronisation failed for $module" }
 
         Write-Host "Canonical TTL restored: $module"
 

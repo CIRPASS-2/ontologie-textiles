@@ -27,8 +27,8 @@ SOURCE_META = {
  J25: ('JRC-TEXTILE-2025-12','Textile Preparatory Study - 3rd Milestone','European Commission Joint Research Centre','2025-12-12','Broad textile technical and preparatory evidence','JRC',''),
  J26: ('JRC-DPP-2026-05','Textiles Digital Product Passport study','European Commission Joint Research Centre','2026-05-13','Narrower proposed apparel-DPP information content','JRC','Does not supersede the broad technical scope of the December 2025 study.'),
  LEGAL: ('EU-2024-1781','Regulation (EU) 2024/1781 (ESPR)','European Union','2024-06-28','Recorded regulatory references','LEGISLATION','Citation does not establish that every ontology field is legally mandatory.'),
- MAT: ('TEXTILE-MAT-MIREOT','Textile MAT MIREOT referencing EU DPP MAT 1.0.2','','','Bounded external material semantics','EXTERNAL_ONTOLOGY','Local graph: mireot/mat-textile-mireot.ttl; upstream: https://w3id.org/eudpp/MAT'),
- EVENT: ('TEXTILE-EVENT-MIREOT','Textile EVENT MIREOT referencing EU DPP EVENT 0.1.0 DRAFT','','','Bounded external product-event semantics','EXTERNAL_ONTOLOGY','Local graph: mireot/event-textile-mireot.ttl; upstream: https://w3id.org/eudpp/EVENT'),
+ MAT: ('TEXTILE-MAT-MIREOT','Textile MAT MIREOT referencing EU DPP MAT 1.1.0','','','Bounded external material semantics','EXTERNAL_ONTOLOGY','Local graph: mireot/mat-textile-mireot.ttl; upstream: https://w3id.org/eudpp/MAT'),
+ EVENT: ('TEXTILE-EVENT-MIREOT','Textile EVENT MIREOT referencing EU DPP EVENT 1.0.0','','','Bounded external product-event semantics','EXTERNAL_ONTOLOGY','Local graph: mireot/event-textile-mireot.ttl; upstream: https://w3id.org/eudpp/EVENT'),
 }
 # Public hygiene checks cover filesystem references, not workflow vocabulary.
 LOCAL_PATH = re.compile(
@@ -42,7 +42,7 @@ PRIVATE_PATH = re.compile(
 
 # The current package owns these areas. Other repository content is out of scope.
 PACKAGE_ROOT_FILES = ('CHANGELOG.md','LICENSE.md','PUBLICATION_MANIFEST.txt','README.md','SHA256SUMS','VERSION','catalog-v001.xml','requirements-validation.txt')
-PACKAGE_AREAS = ('ontology','mireot','dependencies','shacl','examples','docs','diagrams','scripts','tests','traceability','LICENSES')
+PACKAGE_AREAS = ('ontology','mireot','dependencies','shacl','examples','docs','diagrams','scripts','tests','traceability','LICENSES','migration','widoco')
 PRESERVED_REFERENCE_MATERIAL = ('ontology/graphwise-ontology/README.md','ontology/graphwise-ontology/SHACL textile product data.ttl','ontology/graphwise-ontology/ontology.ttl')
 RESOLUTION_FIELDS = 'previous_evidence_id resource_iri source_document_id source_section source_page source_locator verification_basis notes'.split()
 CURRENT_MODULES = ('textile-assessment.ttl', 'textile-associated-materials.ttl', 'textile-connector.ttl', 'textile-context.ttl', 'textile-core.ttl', 'textile-durability.ttl', 'textile-indicator.ttl', 'textile-ontology.ttl', 'textile-process.ttl', 'textile-recyclability.ttl', 'textile-repairability.ttl', 'textile-soc.ttl', 'textile-structure.ttl')
@@ -58,6 +58,8 @@ def package_files(root):
     continue
 
    if rel.startswith('ontology/graphwise-ontology/'):
+    continue
+   if rel.startswith('migration/historical/1.1.2/ontology/graphwise-ontology/'):
     continue
 
    if '__pycache__' in p.parts or p.suffix == '.pyc':
@@ -175,7 +177,7 @@ def derive(g, root=ROOT):
   multiple_sources += len(sources)>1
   external=[x for x in sources if x!=PROJECT]
   require(all(x in SOURCE_META for x in external),'Unregistered source')
-  adr=raw if re.fullmatch(r'docs/decisions/TXT-DEC-00[1-9]\.md',raw) else ''
+  adr=raw if re.fullmatch(r'docs/decisions/TXT-DEC-\d{3}\.md',raw) else ''
   assigned,unassigned=split_locations(raw,external) if external else ({},[])
   linked=[];partial=False
   for source in external:
@@ -290,7 +292,10 @@ def structural_checks(root):
  for rel in package_files(root):
   p=root/rel
   if p.is_file() and p.suffix in ('.md','.csv','.ttl','.owl','.xml','.json','.txt'):
-   require(not LOCAL_PATH.search(p.read_text('utf-8')), 'Content scan match: '+rel)
+   # A bare cache-directory name in the supplied reconciliation is public
+   # tooling vocabulary; absolute/user/private paths still match independently.
+   public_text=re.sub(r'(?<![\w./])\.pytest_cache[\\/]', 'pytest_cache/', p.read_text('utf-8'))
+   require(not LOCAL_PATH.search(public_text), 'Content scan match: '+rel)
  manifest=manifest_sections(root)['CURRENT_PACKAGE']
  lines=(root/'SHA256SUMS').read_text('utf8').splitlines();want=[p for p in manifest if p!='SHA256SUMS']
  require(lines==[hashlib.sha256((root/p).read_bytes()).hexdigest()+'  '+p for p in want],'Checksum mismatch')
@@ -316,13 +321,14 @@ def match_shacl_results(results, shapes, scenario):
   actual.append(dict(
    focus_node=results.value(result,SH.focusNode),
    source_shapes=owners,
+   source_constraint=results.value(result,SH.sourceConstraint),
    constraint_component=results.value(result,SH.sourceConstraintComponent),
    result_path=path,
    severity=results.value(result,SH.resultSeverity),
    message_hashes={hashlib.sha256(str(m).encode('utf8')).hexdigest()
                    for m in results.objects(result,SH.resultMessage)}))
  require(scenario['result_count_min']<=len(actual)<=scenario['result_count_max'],
-         'Unexpected SHACL result count: '+scenario['scenario_id'])
+         'Unexpected SHACL result count: '+scenario['scenario_id']+' '+repr(actual))
  unmatched=list(actual)
  for expected in scenario['expected_results']:
   def matches(row):
@@ -330,6 +336,7 @@ def match_shacl_results(results, shapes, scenario):
     value=row[field]
     if (None if value is None else str(value))!=expected[field]:return False
    if URIRef(expected['source_shape']) not in row['source_shapes']:return False
+   if expected.get('source_constraint') is not None and str(row['source_constraint'])!=expected['source_constraint']:return False
    checksum=expected.get('source_constraint_message_sha256')
    return checksum is None or checksum in row['message_hashes']
   found=next((i for i,row in enumerate(unmatched) if matches(row)),None)
@@ -339,38 +346,55 @@ def match_shacl_results(results, shapes, scenario):
          'Unexpected additional SHACL results: '+scenario['scenario_id'])
 
 
-def runtime_checks(root):
+def reject_legacy_soc(graph, label):
+ offenders=sorted({str(term) for triple in graph for term in triple
+                   if isinstance(term,URIRef) and (str(term).startswith('https://w3id.org/eudpp/soc#') or str(term)=='https://w3id.org/eudpp/soc')})
+ require(not offenders,'Legacy SOC identity in '+label+': '+', '.join(offenders))
+
+
+def runtime_checks(root, complete_report=False, progress=None):
  from pyshacl import validate
  from owlrl import DeductiveClosure,RDFS_Semantics,OWLRL_Semantics
+ emit=progress or (lambda message: None)
  ont=Graph();shapes=Graph()
  ont += ontology_graph(root)
  for p in sorted((root/'mireot').glob('*.ttl')):ont += parse(p)
  for p in sorted((root/'shacl').glob('*.ttl')):shapes+=parse(p)
+ if complete_report:shapes+=parse(root/'shacl/profiles/textile-soc-complete-report.ttl')
+ reject_legacy_soc(ont,'active ontology closure');reject_legacy_soc(shapes,'active SHACL profiles')
  examples=0
  for p in sorted((root/'examples').glob('*.ttl')):
-  ok,_,_=validate(parse(p),shacl_graph=shapes,ont_graph=ont,inference='rdfs',advanced=True,do_owl_imports=False)
+  emit('Example: '+p.name)
+  reject_legacy_soc(parse(p),p.name)
+  ok,_,_=validate(ont+parse(p),shacl_graph=shapes,inference='rdfs',advanced=True,do_owl_imports=False)
   require(ok,'Nonconformant public example: '+p.name);examples+=1
  sh=json.loads((root/'tests/abox_corpus/expectations/shacl-expectations.json').read_text('utf8'))
  for scenario in sh['scenarios']:
-  ok,results,_=validate(parse(root/scenario['fixture_path']),shacl_graph=shapes,ont_graph=ont,inference='rdfs',advanced=True,do_owl_imports=False)
+  emit('SHACL: '+scenario['scenario_id'])
+  reject_legacy_soc(parse(root/scenario['fixture_path']),scenario['scenario_id'])
+  ok,results,_=validate(ont+parse(root/scenario['fixture_path']),shacl_graph=shapes,inference='rdfs',advanced=True,do_owl_imports=False)
   require(bool(ok)==scenario['expected_conforms'],'Unexpected SHACL conformance: '+scenario['scenario_id'])
   match_shacl_results(results,shapes,scenario)
  rn=json.loads((root/'tests/abox_corpus/expectations/reasoning-expectations.json').read_text('utf8'))
  for scenario in rn['scenarios']:
+  emit('Reasoning: '+scenario['scenario_id'])
   model=ont+parse(root/scenario['fixture_path'])
   DeductiveClosure(RDFS_Semantics if scenario['reasoning_profile']=='RDFS' else OWLRL_Semantics).expand(model)
   for t in scenario['required_named_triples']:require(tuple(map(URIRef,t)) in model,'Missing inferred triple: '+scenario['scenario_id'])
   for t in scenario['forbidden_named_triples']:require(tuple(map(URIRef,t)) not in model,'Forbidden inferred triple: '+scenario['scenario_id'])
+  overlap=sum(len(set(model.subjects(RDF.type,URIRef(left))) & set(model.subjects(RDF.type,URIRef(right))))
+              for left,right in scenario.get('disjoint_type_pairs_checked',[]))
+  require(overlap==scenario.get('expected_disjoint_overlap_count',0),'Unexpected disjoint-type overlap: '+scenario['scenario_id'])
  # Discriminating inference control, using the recyclability profile alone.
  p=root/'examples/example-11-textile-recyclability-v1.1.2.ttl';shape=parse(root/'shacl/textile-recyclability-shapes.ttl')
- plain,_,_=validate(parse(p),shacl_graph=shape,ont_graph=ont,inference='none',advanced=True,do_owl_imports=False)
+ plain,_,_=validate(ont+parse(p),shacl_graph=shape,inference='none',advanced=True,do_owl_imports=False)
  require(not plain,'RDFS negative control unexpectedly conforms without inference')
  return dict(examples_conformant=examples,shacl_scenarios=len(sh['scenarios']),reasoning_scenarios=len(rn['scenarios']),rdfs_negative_control='passed')
 
 def main():
- ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--full',action='store_true');args=ap.parse_args()
+ ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--full',action='store_true');ap.add_argument('--complete-report',action='store_true',help='Also select the SoC concentration-completeness profile');args=ap.parse_args()
  result=structural_checks(ROOT)
- if args.full:result.update(runtime_checks(ROOT))
+ if args.full:result.update(runtime_checks(ROOT,complete_report=args.complete_report))
  print(json.dumps(result,indent=2));return 0
 if __name__=='__main__':
  try:raise SystemExit(main())

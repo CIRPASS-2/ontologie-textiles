@@ -1,85 +1,81 @@
-# October 2026 CORE migration work area
+# October 2026 CORE migration — 2.0.0 candidate
 
-This directory is outside the current publication manifest and active import
-closure. It holds migration inputs and historical preservation, not a release.
+Implemented on `migration/october-2026-core-2.0.0`, continuing preparation commit
+`287d4d5cf90f0a5175986f0563a87495ea498add`. The accepted historical baseline is
+`1ca2aa89241785dedeab430247bc9947daf69881`. No reset or archive recreation occurred.
 
-Accepted baseline: `1ca2aa89241785dedeab430247bc9947daf69881`.
-Migration branch: `migration/october-2026-core-2.0.0`.
-Proposed future candidate: **2.0.0**, pending semantic implementation and validation.
-The upstream dependency governance policy bases Textile version consequences on
-observable semantic changes rather than upstream version numbers. The owner's
-breaking-change decision therefore supports a new major candidate. The active
-package VERSION and ontology version IRIs have not yet been changed.
+The complete [final reconciliation](TEXTILE_CORE_2026_FINAL_RECONCILIATION.md)
+supplies M1–M9, A1–A9 and OD-01 through OD-06. Its actual supplied filename is
+retained. See [implementation guidance](../docs/CORE_2026_MIGRATION.md),
+[term mappings](semantic-mapping.csv), [concentration node correspondence](node-correspondence.json)
+and [bounded source selections](extraction-scopes.json).
 
-## Preserved baseline
+## Historical preservation
 
-`historical/textile-1.1.2-1ca2aa89241785dedeab430247bc9947daf69881.zip`
-contains 648 exact Git blobs: the accepted manifest's current package and
-preserved reference inventory, plus WIDOCO generation inputs. This includes
-historical dependencies, MIREOT graphs, catalogue, ontology versions, examples,
-documentation, generated WIDOCO outputs, diagrams, traceability and checksums.
-The SoC MIREOT retains its original 1.1.3 declaration and catalogue aliases.
+The original 648-file archive is unchanged:
+`historical/textile-1.1.2-1ca2aa89241785dedeab430247bc9947daf69881.zip`.
+SHA-256: `4384bfd9f8f4e8a0ce1a6b7a7fd679d2190d9be33df87b2f181207aa78a46e74`.
+`historical/inventory.json` records every member digest. Exact historical runtime
+files and catalogue are extracted under `historical/1.1.2/`. They remain outside
+the active closure. Previous version IRIs and lowercase SOC target historical
+bytes; historical loading uses its own catalogue. E10's original versioned file
+is in the archive; the active E10 has a 2.0.0 filename.
 
-The archive SHA-256 is
-`4384bfd9f8f4e8a0ce1a6b7a7fd679d2190d9be33df87b2f181207aa78a46e74`.
-`historical/inventory.json` records every member's SHA-256. The preparation
-script verifies every accepted SHA256SUMS entry against its Git blob, then
-verifies the stored ZIP members against the inventory. ZIP entry ordering,
-timestamps, permissions and storage method are fixed for reproducibility.
+Migration inputs, implementation records, historical preservation and WIDOCO
+sources now participate in the candidate manifest/checksum inventory. Their
+inclusion does not make historical/source graphs runtime dependencies. The
+unpacked Graphwise reference copies remain excluded; the immutable archive
+preserves them. Source staging remains byte-identical to the owner-designated
+CORE and to adopted files in `dependencies/current-core/`.
 
-Extract the archive into a separate directory to use the historical package's
-catalogue and validation tools. Do not combine historical graphs with the
-future migrated runtime. No historical version IRI has been redirected.
+## Implementation and gates
 
-## Staged current CORE
+1. Branch and identity preservation: original preparation retained, historical
+   hashes checked, six faithful bounded CORE subsets plus unchanged SI.
+2. Semantic migration: Textile identity/presence alignment, retained source,
+   location/denominator, instruction and threshold/evaluation semantics; E10 and
+   V08/I08 migrated. No legacy SOC URI remains in active RDF.
+3. Validation: separate partial/complete profiles, stable named constraints and
+   strict multiset matching, forty-one additional scenarios, positive focus coverage,
+   entailment/non-entailment tests and unchanged-purpose regressions.
+4. Publication consistency: affected documentation, deterministic traceability,
+   four SVG/PNG diagrams and three WIDOCO modules regenerated. Canonical RDF
+   downloads are synchronised across TTL/RDFXML/NT/JSON-LD. Manifest and SHA-256
+   cover the candidate and preserved historical archive.
 
-`core-sources/` contains unchanged owner-designated ACTOR, CON (`connector.owl`),
-EVENT, MAT, P_DPP and SOC sources, plus their README and licence.
-`core-sources/SHA256SUMS` records their byte digests. IDENT is deferred and is
-not staged. No source is imported into the active package at this point.
+The final check results and complete change inventory accompany the local commit.
+The original baseline passed 30 package tests, eleven examples, sixteen SHACL
+scenarios, six reasoning scenarios and the recyclability inference control.
 
-Reproduce with `python migration/prepare_inputs.py --core <source-directory>`.
-The script refuses to overwrite preserved files with different bytes.
+Issues found and corrected during implementation:
 
-## Validation and implementation status
+- Missing SOC endpoint declarations were caught by the wrong maximum-carrier
+  inference test. The authoritative properties are now included faithfully.
+- Invalid-unit fixtures also fail comparison compatibility. Their contracts
+  explicitly require both diagnostics rather than allowing arbitrary extras.
+- The two-product shared-qualification control reports both affected presences
+  for a wrong substance. Its contract requires both exact focus/constraint pairs.
+- pySHACL ontology inoculation recursively cloned linked metadata. Explicitly
+  merging the same offline closure avoids that copying without dropping axioms.
+- WIDOCO's independent RDF exporters added differing declaration triples.
+  Canonical RDF download synchronisation and graph-isomorphism tests correct this.
 
-Before edits, the full offline validator passed: 595 package files, 19 runtime
-graphs, 96 parsed RDF files, 11 examples, 16 SHACL scenarios, six reasoning
-scenarios and the RDFS negative control. All 30 existing pytest tests passed.
-Initial sandbox runs had temporary-directory permission errors; an approved
-run outside that restriction passed. These were environment setup errors.
+Unchanged upstream snapshots retain their whitespace. WIDOCO reports missing
+optional configuration/logging and XML parser-property warnings but exits
+successfully. The installed RDFLib JSON-LD parser emits a deprecation warning.
+Initial pytest sandbox runs required approved access to temporary directories.
+No substantive semantic conflict remains unresolved.
 
-The independent harness improvement in `scripts/validate_public.py` now checks
-the existing SHACL contracts one-to-one: focus node, owning named shape for
-anonymous property shapes, actual constraint component, result path, severity
-and optional message digest. Duplicate results and duplicate expectations
-cannot satisfy each other. Eleven discriminating matcher tests pass. Existing
-expected-result contracts have not been rewritten. The runtime suite passes
-with strict matching enabled: all 11 examples, 16 SHACL scenarios, six
-reasoning scenarios and the RDFS negative control remain valid. Package
-structural checks pass with 596 manifest members after adding the matcher test.
-The final combined pytest run passed all 41 tests. Git whitespace checks report
-trailing whitespace and end-of-file blank lines in the unchanged upstream
-source snapshots; those bytes are deliberately retained. Authored changes pass
-the whitespace check when those snapshots are excluded.
+## Reproduction
 
-Stage 1 is partially complete: branch, historical preservation and source
-staging are ready. Bounded extraction and new MIREOT identities remain pending.
-Stage 2 has not started. Stage 3 has the independent matcher improvement only.
-Stage 4 has only the manifest/checksum maintenance required by that improvement.
-Documentation, traceability, diagrams and WIDOCO remain baseline artefacts;
-they have not been presented as migrated outputs.
+The preparation script is retained for provenance and need not be rerun.
+`implement_core.py 1` rebuilds bounded subsets and verifies historical extraction
+without changing the archive; `implement_core.py 2` rebuilds Textile/data mappings.
+Then run the `migration.build_soc_shapes`, `migration.update_validation_contracts`
+and `migration.build_semantic_cases` modules. `migration.refresh_publication`
+refreshes documentation/traceability; its `--integrity` mode refreshes the manifest
+and checksums. PowerShell scripts regenerate diagrams and WIDOCO output.
 
-## Required input
-
-The task designates the **final reconciliation specification** as the primary
-implementation contract, but supplies neither its contents nor its location.
-It was not found in this repository. The owner decisions OD-01 through OD-06
-are recorded in the task but do not specify the complete accepted term mapping,
-bounded CON selection, P_DPP/EVENT changes or retained Textile extension design.
-
-Provide that specification before implementing those dependent changes. No
-substitute audit, upstream provenance investigation or invented semantic
-mapping has been performed. This is missing implementation authority, not a
-request to approve a new semantic design. No release approval is claimed;
-no push, merge, tag or publication is authorised by this work.
+The candidate version is provisional 2.0.0. Creator metadata is unchanged.
+Final numbering, the separate approved creator task and publication remain owner
+decisions. No push, merge, tag or publication has occurred.

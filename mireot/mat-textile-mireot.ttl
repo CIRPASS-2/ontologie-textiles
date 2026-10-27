@@ -5,19 +5,18 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dpp:hasMaterialType a owl:ObjectProperty ;
-    rdfs:label "Has material type"@en ;
+    rdfs:label "has material type"@en ;
+    rdfs:comment "Links material to its type in some classification system used by the sector."@en ;
     rdfs:domain dpp:MaterialOfComposition ;
     rdfs:range dpp:MaterialType .
 
 <https://w3id.org/eudpp/textile-mat-mireot> a owl:Ontology ;
-    rdfs:label "Textile MAT MIREOT subset"@en ;
-    dcterms:description "Bounded Textile-scoped MIREOT subset of MAT terms required by the CIRPASS Textile Ontology."@en ;
-    dcterms:modified "2026-07-24"^^xsd:date ;
-    dcterms:references "External source ontology version 1.0.2."@en ;
+    rdfs:label "Textile MAT bounded MIREOT"@en ;
+    dcterms:modified "2026-10-27"^^xsd:date ;
+    dcterms:references "Owner-designated CORE 1.1.0; unchanged source in dependencies/current-core/mat.owl."@en ;
     dcterms:source <https://w3id.org/eudpp/MAT> ;
-    dcterms:title "Textile MAT MIREOT subset"@en ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-mat-mireot/1.1.2> ;
-    owl:versionInfo "Version 1.1.2" .
+    owl:versionIRI <https://w3id.org/eudpp/textile-mat-mireot/2.0.0> ;
+    owl:versionInfo "Version 2.0.0 candidate" .
 
 dpp:MaterialOfComposition a owl:Class ;
     rdfs:label "Material of composition"@en ;

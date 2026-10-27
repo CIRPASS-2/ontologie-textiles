@@ -1,0 +1,84 @@
+# October 2026 CORE migration — 2.0.0 candidate
+
+The [final reconciliation](../migration/TEXTILE_CORE_2026_FINAL_RECONCILIATION.md)
+and OD-01 through OD-06 authorise this breaking migration. The accepted baseline
+is preserved independently; no release approval or creator changes are included.
+
+| Existing pattern | Implemented representation |
+|---|---|
+| Generic chemical identity | TextileChemicalSubstance under CORE Substance |
+| Positive SoC context | Existing Textile presence IRI under CORE SubstancePresence |
+| Product and substance links | CORE isSubstancePresenceOf / concernsSubstance |
+| Applicable qualification | CORE hasApplicableQualification / qualifiesSubstance, same substance |
+| Type D | Existing TextileTypeDQualification under SoCQualificationAssertion, explicit CriterionD and appliesToProduct |
+| Concentration value wrapper | CORE numericalValue and unit directly on the concentration; range endpoints for ranges |
+| Maximum concentration | MaximumConcentration with numericalValue, never maximumNumericalValue |
+| Threshold purpose | CORE ThresholdOfSubstanceOfConcern with Textile purpose subclasses |
+| Exact/maximum/range thresholds | Textile expression roles under shared txtcon:QuantitativeValue |
+| Location/denominator | Textile structured location, part membership, reference basis and reporting level |
+| Non-textile component | TextileProductPart, with separate component-material relationship |
+| Qualification source | Preserved text plus structured regulatory references, not qualificationNote substitution |
+| Handling information | SubstanceManagementInstruction, generic Textile attachment and specific CORE activity edge where justified |
+| Unknown identifier scheme | Textile substanceIdentifier text; known schemes use SOC properties |
+
+The [term mapping](../migration/semantic-mapping.csv),
+[node correspondence](../migration/node-correspondence.json) and
+[extraction scopes](../migration/extraction-scopes.json) supply the detailed inventory.
+Concentration-wrapper fields are transferred only for uniquely owned, unambiguous
+nodes; shared/external references or conflicting metadata cause a migration error.
+For concentration wrappers, old numeric/unit fields map to CORE carriers; for
+threshold expressions they map to the shared Textile carriers and local endpoints.
+
+E10 now resides at [example-10-textile-soc-v2.0.0.ttl](../examples/example-10-textile-soc-v2.0.0.ttl).
+Its 0.0008 reported mass fraction and 0.001 threshold retain their scales. Its
+unknown identifier string is not classified as CAS/EC/ECHA. The anonymous
+dimensionless unit is replaced specifically for this mass-fraction use by
+massFractionUnit; units:one remains approved. No owl:sameAs equates units.
+The old concentration value node becomes its uniquely owning concentration node.
+V08 retains range and maximum threshold expressions. I08 retains the same inverted
+range at the same focus node; only its migrated shape/message identity changes.
+
+Positive reports entail global SubstanceOfConcern membership through CORE ranges.
+This does not propagate CriterionD applicability to another product. Generic
+chemicals outside those reports remain Substance without inferred SoC membership.
+Material groups are structural reporting objects, not universal products or
+material occurrences. CORE isLocatedInProduct is limited to appropriate products.
+
+Partial-report validation retains mandatory product, substance, qualification,
+expression/unit and evaluation relationships. Concentration presence is mandatory
+only with the separately selected complete-report profile. Shared quantitative
+SHACL permits exactly three new threshold roles; ordinary scalar behaviour and
+the ban on arbitrary quantity subclasses remain. Units are validated by approved
+identities before range inference can mask an arbitrary unit.
+
+Threshold comparison uses compatible mass ratios and the concentration's declared
+scope through its applicable-threshold relation. Explicit threshold scope overrides
+must match. Maximum-only mass-fraction intervals are [0, maximum]; overlapping
+intervals are indeterminate. Below/above/equal outcomes do not establish compliance.
+See [TXT-DEC-010](decisions/TXT-DEC-010.md).
+
+## Historical compatibility and rollback
+
+The original 648-file archive and inventory are unchanged. The root catalogue
+maps prior version IRIs and lowercase SOC to exact original bytes. The extracted
+historical runtime has its own catalogue under `migration/historical/1.1.2/`;
+use that catalogue for historical loading. Do not mix it with the active closure.
+The archive also contains original examples, documentation and WIDOCO output.
+
+Changed graphs receive new identities. Unchanged modules and SI retain their
+accepted bytes and versions. The active runtime contains no legacy soc# identities
+or IDENT/COMP/LCA dependency. Removed unused P_DPP anchors and obsolete EVENT
+restrictions are not recreated as Textile constraints.
+
+## Validation and approval boundary
+
+The regression suite retains eleven examples, sixteen original SHACL scenarios,
+six reasoning scenarios and the recyclability control. Forty-one additional migration
+scenarios check exact constraint identities, positive focus coverage, semantic
+preservation and non-entailments. Source fidelity and historical/source hashes
+are tested separately. This is bounded profile/inference evidence, not a proof
+of complete OWL DL satisfiability or legal applicability.
+
+The provisional candidate identity is 2.0.0. Final release numbering, the separate
+creator-metadata task and publication require their own owner approval. Nothing
+in this migration authorises a push, merge, tag or publication.
