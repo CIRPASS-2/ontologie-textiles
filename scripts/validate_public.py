@@ -7,7 +7,7 @@ from __future__ import annotations
 import argparse, collections, csv, hashlib, io, json, re, sys
 from pathlib import Path
 from xml.etree import ElementTree as ET
-from rdflib import Graph, URIRef, RDF, RDFS, OWL, SKOS, Namespace
+from rdflib import Graph, URIRef, BNode, RDF, RDFS, OWL, SKOS, Namespace
 from rdflib.namespace import SH
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -297,6 +297,48 @@ def structural_checks(root):
  report=summary(r,e,s);report.update(current_import_closure_files=len(closure),package_files=len(manifest),preserved_reference_files=len(PRESERVED_REFERENCE_MATERIAL),parsed_rdf_files=len(rdf_paths),public_adrs=len(adr),multiple_source_annotations=m,structural_checks='passed')
  return report
 
+def match_shacl_results(results, shapes, scenario):
+ """Match results one-to-one, resolving anonymous property shapes by ownership.
+
+ Blank-node identifiers are serialization-local. A contract can name the owning
+ node shape; the actual property shape must belong to it and have the reported
+ path. Named source shapes are matched directly, without owner substitution.
+ """
+ actual=[]
+ for result in set(results.subjects(RDF.type,SH.ValidationResult)):
+  source=results.value(result,SH.sourceShape)
+  path=results.value(result,SH.resultPath)
+  owners={source}
+  if isinstance(source,BNode):
+   require((source,SH.path,path) in shapes,'Anonymous source shape has unexpected result path')
+   owners=set(shapes.subjects(SH.property,source))
+   require(owners,'Anonymous source shape has no owning node shape')
+  actual.append(dict(
+   focus_node=results.value(result,SH.focusNode),
+   source_shapes=owners,
+   constraint_component=results.value(result,SH.sourceConstraintComponent),
+   result_path=path,
+   severity=results.value(result,SH.resultSeverity),
+   message_hashes={hashlib.sha256(str(m).encode('utf8')).hexdigest()
+                   for m in results.objects(result,SH.resultMessage)}))
+ require(scenario['result_count_min']<=len(actual)<=scenario['result_count_max'],
+         'Unexpected SHACL result count: '+scenario['scenario_id'])
+ unmatched=list(actual)
+ for expected in scenario['expected_results']:
+  def matches(row):
+   for field in ('focus_node','constraint_component','result_path','severity'):
+    value=row[field]
+    if (None if value is None else str(value))!=expected[field]:return False
+   if URIRef(expected['source_shape']) not in row['source_shapes']:return False
+   checksum=expected.get('source_constraint_message_sha256')
+   return checksum is None or checksum in row['message_hashes']
+  found=next((i for i,row in enumerate(unmatched) if matches(row)),None)
+  require(found is not None,'Missing expected SHACL result: '+scenario['scenario_id']+' '+json.dumps(expected,sort_keys=True))
+  unmatched.pop(found)
+ require(scenario['allowed_additional_results'] or not unmatched,
+         'Unexpected additional SHACL results: '+scenario['scenario_id'])
+
+
 def runtime_checks(root):
  from pyshacl import validate
  from owlrl import DeductiveClosure,RDFS_Semantics,OWLRL_Semantics
@@ -312,8 +354,7 @@ def runtime_checks(root):
  for scenario in sh['scenarios']:
   ok,results,_=validate(parse(root/scenario['fixture_path']),shacl_graph=shapes,ont_graph=ont,inference='rdfs',advanced=True,do_owl_imports=False)
   require(bool(ok)==scenario['expected_conforms'],'Unexpected SHACL conformance: '+scenario['scenario_id'])
-  count=len(set(results.subjects(RDF.type,SH.ValidationResult)))
-  require(scenario['result_count_min']<=count<=scenario['result_count_max'],'Unexpected SHACL result count: '+scenario['scenario_id'])
+  match_shacl_results(results,shapes,scenario)
  rn=json.loads((root/'tests/abox_corpus/expectations/reasoning-expectations.json').read_text('utf8'))
  for scenario in rn['scenarios']:
   model=ont+parse(root/scenario['fixture_path'])
