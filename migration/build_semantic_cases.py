@@ -73,8 +73,9 @@ def case(name,changes,expected,complete=False,conforms=False):
 case('M01-missing-product',[('remove',(EX.presence,E.isSubstancePresenceOf,None))],[result(EX.presence,'PresenceProduct','MinCountConstraintComponent',E.isSubstancePresenceOf)])
 case('M02-missing-substance',[('remove',(EX.presence,E.concernsSubstance,None))],[result(EX.presence,'PresenceSubstance','MinCountConstraintComponent',E.concernsSubstance)])
 case('M03-missing-qualification',[('remove',(EX.presence,E.hasApplicableQualification,None))],[result(EX.presence,'PresenceQualification','MinCountConstraintComponent',E.hasApplicableQualification)])
-case('M04-missing-concentration-complete',[('remove',(EX.presence,E.hasConcentration,None))],[result(EX.presence,'CompletePresenceConcentration','MinCountConstraintComponent',E.hasConcentration)],complete=True)
-case('M04-partial-without-concentration',[('remove',(EX.presence,E.hasConcentration,None))],[],conforms=True)
+partial_changes=[('remove',(EX.presence,E.hasConcentration,None)),('remove',(EX.presence,T.hasThresholdEvaluation,None))]
+case('M04-missing-concentration-complete',partial_changes,[result(EX.presence,'CompletePresenceConcentration','MinCountConstraintComponent',E.hasConcentration)],complete=True)
+case('M04-partial-without-concentration',partial_changes,[],conforms=True)
 case('M05-missing-exact-scalar',[('remove',(EX.concentrationInformation,E.numericalValue,None))],[result(EX.concentrationInformation,'ExactConcentrationScalar','MinCountConstraintComponent',E.numericalValue)])
 case('M06-missing-maximum-scalar',[('remove',(EX.maximumConcentration,E.numericalValue,None))],[result(EX.maximumConcentration,'MaximumConcentrationScalar','MinCountConstraintComponent',E.numericalValue)])
 case('M07-missing-range-endpoint',[('remove',(EX.rangeConcentration,E.minimumNumericalValue,None))],[result(EX.rangeConcentration,'ConcentrationMinimum','MinCountConstraintComponent',E.minimumNumericalValue)])

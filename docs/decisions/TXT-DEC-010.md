@@ -31,6 +31,40 @@ supports AtThreshold; overlapping intervals support only an indeterminate result
 These vocabulary values assert a comparison, not compliance or exemption.
 
 Historical catalogue and RDF bytes are preserved separately. Previous version
-IRIs resolve to those bytes; the new closure excludes all legacy SOC identities.
+IRIs resolve only with the historical catalogue; the new closure excludes legacy
+SOC semantic terms and imports. Provenance annotations identify the old sources.
 Only changed module graphs receive 2.0.0 candidate identities. No release or
 creator-metadata approval is implied.
+
+
+## Independent audit corrections
+
+The 42 retained definitions/comments copied from SOC 0.1.2 DRAFT are adapted
+external content, attributed to that ontology and their exact source resources
+under CC BY 4.0. The local namespace, scope, constraints and alignment remain
+Textile decisions. These decisions do not make the copied text source-free.
+See [migration guidance](../CORE_2026_MIGRATION.md) and the
+`migration/legacy-soc-attribution.json` statement inventory.
+
+Product membership follows forward hasPart, inverse isPartOfProduct and
+hasNonTextileComponent edges, in the same direction away from the owning
+product. It never follows arbitrary material references or crosses to another
+product. The inverse axiom is restored. Evaluations attached to a presence
+must evaluate a concentration owned by that presence.
+
+The product-group-list property's domain is restored to TextileTypeDQualification,
+retaining its OWL criterion-D inference. The SVHC-list property's common CORE
+qualification domain is intentional: the candidate has no separate Textile type-A
+class. Its SHACL constraint requires explicit CriterionA. This avoids inventing
+a type-A class or silently inferring a criterion from a source link. Both cases
+are tested. Criterion D likewise remains explicit for RDFS validation.
+
+The public txtsoc:appliesToProduct IRI is retained and labelled "qualification
+applies to product". Its domain is SoCQualificationAssertion; the homonymous
+CORE property has DigitalProductPassport as domain. They are distinct properties,
+without a bridge. Examples and shapes consistently use the txtsoc property.
+
+The CON selection excludes unused concernsProduct (and its ProductEvent support),
+and includes SubstanceManagementInstruction with its complete source superclass
+axiom to DigitalInstruction and necessary supporting declarations. Each selected
+subject remains graph-isomorphic to the supplied source; no blanket import is added.

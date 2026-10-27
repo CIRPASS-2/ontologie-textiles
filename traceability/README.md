@@ -69,7 +69,7 @@ The December 2025 JRC Textile Preparatory Study is a broad technical source for 
 
 Run `python -B scripts/validate_public.py` from the package root. The validator derives the three tables again from packaged RDF plus the locator supplements and compares every row, then checks CSV structure, source/resource links, counts, public ADR paths, the file manifest and hashes. `--full` adds the declared SHACL and reasoning checks. Neither the source documents nor the historical Excel workbook are distributed. Public references identify them without reproducing their text. Historical specification version labels in documentary locators are preserved as source references, not current release metadata.
 
-The tables contain 899 resources, 904 evidence relationships and 5 source documents. 343 resources have no external evidence rows; 248 have multiple evidence rows. 549 resources have a recorded JRC source association.
+The tables contain 899 resources, 946 evidence relationships and 6 source documents. 301 resources have no external evidence rows; 248 have multiple evidence rows. 549 resources have a recorded JRC source association.
 
 
 ## Seven publication locator supplements
@@ -78,4 +78,4 @@ The [locator-resolution table](evidence-locator-resolutions.csv) records exactly
 
 The supplements provide attributable locations; they do not claim full semantic re-verification. Their status is PRESENT_NOT_REVERIFIED and their verification basis records the public-locator check on 2026-09-11. EVENT locations name classes in the public upstream EVENT 0.1.0 DRAFT graph, connected through the source registry's upstream reference. The local Textile EVENT MIREOT IRI is not represented as a confirmed dereferencing endpoint. Regulatory locators support only the cited regulatory aspect of the Textile adaptation.
 
-Exactly two relationships remain UNRESOLVED: `textile-soc#fibreCompositionLocation` and `textile-soc#nonTextileComponentLocation` against EU-2024-1781. Article 7(5)(b) addresses location generally and is not substituted as category-specific evidence. There are 902 PRESENT_NOT_REVERIFIED rows, two UNRESOLVED rows and zero VERIFIED rows. Resource-level PARTIAL states are conservatively retained from the original annotation projection; locator supplements do not erase its recorded limitations.
+Exactly two relationships remain UNRESOLVED: `textile-soc#fibreCompositionLocation` and `textile-soc#nonTextileComponentLocation` against EU-2024-1781. Article 7(5)(b) addresses location generally and is not substituted as category-specific evidence. There are 944 PRESENT_NOT_REVERIFIED rows, two UNRESOLVED rows and zero VERIFIED rows. Resource-level PARTIAL states are conservatively retained from the original annotation projection; locator supplements do not erase its recorded limitations.

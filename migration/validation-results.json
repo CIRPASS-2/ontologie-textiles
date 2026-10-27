@@ -4,15 +4,15 @@
   "complete_report_selected": true,
   "results": {
     "resource_count": 899,
-    "evidence_rows": 904,
-    "source_documents": 5,
+    "evidence_rows": 946,
+    "source_documents": 6,
     "categories": {
-      "adaptedDefinition": 361,
+      "adaptedDefinition": 403,
       "adaptedRelation": 27,
       "directExtraction": 16,
       "externalReuse": 1,
       "modellingAbstraction": 378,
-      "projectDecision": 116
+      "projectDecision": 74
     },
     "modules": {
       "textile-assessment": 59,
@@ -29,41 +29,42 @@
       "textile-structure": 53
     },
     "locator_statuses": {
-      "PRESENT_NOT_REVERIFIED": 902,
+      "PRESENT_NOT_REVERIFIED": 944,
       "UNRESOLVED": 2
     },
     "traceability_statuses": {
       "COMPLETE": 298,
-      "NO_EXTERNAL_SOURCE_REQUIRED": 278,
-      "PARTIAL": 323
+      "NO_EXTERNAL_SOURCE_REQUIRED": 236,
+      "PARTIAL": 365
     },
     "evidence_by_source": {
       "EU-2024-1781": 17,
+      "HISTORICAL-SOC-0.1.2": 42,
       "JRC-DPP-2026-05": 20,
       "JRC-TEXTILE-2025-12": 861,
       "TEXTILE-EVENT-MIREOT": 5,
       "TEXTILE-MAT-MIREOT": 1
     },
-    "zero_evidence": 343,
-    "one_evidence": 308,
+    "zero_evidence": 301,
+    "one_evidence": 350,
     "multiple_evidence": 248,
     "max_evidence": 5,
     "evidence_count_distribution": {
-      "0": 343,
-      "1": 308,
+      "0": 301,
+      "1": 350,
       "2": 158,
       "3": 82,
       "4": 6,
       "5": 2
     },
-    "compound_citations": 284,
+    "compound_citations": 326,
     "resources_with_jrc_evidence": 549,
     "current_import_closure_files": 20,
-    "package_files": 754,
+    "package_files": 764,
     "preserved_reference_files": 3,
     "parsed_rdf_files": 171,
     "public_adrs": 10,
-    "multiple_source_annotations": 110,
+    "multiple_source_annotations": 152,
     "structural_checks": "passed",
     "examples_conformant": 11,
     "shacl_scenarios": 16,
@@ -71,7 +72,7 @@
     "rdfs_negative_control": "passed"
   },
   "pytest": {
-    "tests": 111,
+    "tests": 164,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -99,5 +100,45 @@
   "nonfatal_warnings": [
     "Three RDFLib JSON-LD parser deprecation warnings in pytest.",
     "WIDOCO optional configuration/logging/XML parser-property warnings; generation succeeded."
-  ]
+  ],
+  "accepted_implementation": "5bac1a2cba2332b3e5ad7d45d305fbb786ee59f2",
+  "public_validation_modes": {
+    "partial": {
+      "examples_conformant": 11,
+      "shacl_scenarios": 16,
+      "reasoning_scenarios": 6,
+      "rdfs_negative_control": "passed"
+    },
+    "complete": {
+      "examples_conformant": 11,
+      "shacl_scenarios": 16,
+      "reasoning_scenarios": 6,
+      "rdfs_negative_control": "passed"
+    }
+  },
+  "audit_corrections": {
+    "major_findings": 3,
+    "targeted_minor_findings": 8,
+    "status": "corrected",
+    "copied_external_definitions_attributed": 42,
+    "historical_mapping_inventory_resources": 96,
+    "historical_root_closure_graphs": 19,
+    "historical_soc_closure_graphs": 12,
+    "CE6": {
+      "accepted_conforms": true,
+      "corrected_conforms": false
+    },
+    "CE7": {
+      "accepted_conforms": false,
+      "corrected_conforms": true
+    },
+    "CE8": {
+      "accepted_conforms": false,
+      "corrected_conforms": true
+    },
+    "historical_and_core_bytes": "unchanged",
+    "creators": "unchanged",
+    "constraint_coverage": "targeted; not claimed to be complete",
+    "temporary_directory_note": "Sandbox runs encountered four temporary-directory setup errors, including with a fresh workspace directory; the successful full run used approved normal Windows access."
+  }
 }

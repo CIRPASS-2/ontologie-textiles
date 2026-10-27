@@ -8,7 +8,7 @@ and LCA are outside this migration.
 | Subset | Source file | Source ontology | Selected source triples |
 |---|---|---|---:|
 | SOC | `soc.owl` | `https://w3id.org/eudpp/SOC` | 371 |
-| CON | `connector.owl` | `https://w3id.org/eudpp/CON` | 34 |
+| CON | `connector.owl` | `https://w3id.org/eudpp/CON` | 32 |
 | DPP | `p_dpp.owl` | `https://w3id.org/eudpp/P_DPP` | 89 |
 | EVENT | `event.owl` | `https://w3id.org/eudpp/EVENT` | 33 |
 | ACTOR | `actor.owl` | `https://w3id.org/eudpp/ACTOR` | 15 |
@@ -36,12 +36,21 @@ ontology header. It is an extracted work, not the complete upstream module.
 Upstream terms remain externally owned. The Textile licence does not
 supersede upstream terms. The bundled Apache licence is retained.
 
+The 42 adapted legacy definitions/comments originate in the historical
+[SOC 0.1.2 DRAFT snapshot](../migration/historical/1.1.2/dependencies/soc.ttl),
+created by Elio Hbeich, issued 2026-04-17, under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Textile changes the namespace, scope and CORE alignment. Exact source
+resources and copied statements are recorded in
+[the attribution inventory](../migration/legacy-soc-attribution.json).
+This text comparison does not independently verify underlying JRC or legal references.
+
 ## Historical compatibility
 
 The accepted older dependency snapshots and MIREOT bytes are preserved in
 the [historical inventory](../migration/historical/inventory.json) and archive.
 The extracted historical runtime and its own catalogue are under
-`migration/historical/1.1.2/`. Root catalogue mappings for previous version
-IRIs and lowercase `/soc` target those original bytes. No equivalence or
+`migration/historical/1.1.2/`. Historical version IRIs and lowercase `/soc`
+are deliberately absent from the active catalogue. No equivalence or
 redirect bridges the legacy `soc#` vocabulary to the migrated runtime.
 See [migration guidance](CORE_2026_MIGRATION.md).

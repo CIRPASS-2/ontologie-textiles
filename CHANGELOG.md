@@ -13,6 +13,14 @@ matching, a separate complete-report profile and migration/inference controls
 cover the changed contract. Historical 1.1.2/SoC MIREOT 1.1.3 bytes are preserved.
 No creator changes or publication approval are included.
 
+## Targeted independent audit corrections
+
+Historical catalogue isolation; attribution for 42 copied SOC definitions;
+inverse and non-textile component membership; evaluation ownership; complete
+96-resource mapping inventory; explicit converter failures; metadata and E10
+restoration; bounded CON fidelity; additional constraint regressions.
+See [correction evidence](migration/AUDIT_CORRECTIONS.md).
+
 ## 1.1.2 historical baseline
 
 Accepted baseline `1ca2aa89241785dedeab430247bc9947daf69881` is preserved with

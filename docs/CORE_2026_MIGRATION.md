@@ -59,15 +59,22 @@ See [TXT-DEC-010](decisions/TXT-DEC-010.md).
 
 ## Historical compatibility and rollback
 
-The original 648-file archive and inventory are unchanged. The root catalogue
-maps prior version IRIs and lowercase SOC to exact original bytes. The extracted
-historical runtime has its own catalogue under `migration/historical/1.1.2/`;
-use that catalogue for historical loading. Do not mix it with the active closure.
+The original 648-file archive and inventory are unchanged. Historical version
+IRIs and lowercase SOC are intentionally absent from the active catalogue.
+For a historical load, select `migration/historical/1.1.2/catalog-v001.xml`
+as the only catalogue for the entire session, disable network fallback, and
+load `https://w3id.org/eudpp/textile-ontology/1.1.2` or
+`https://w3id.org/eudpp/textile-soc/1.1.2`. Do not combine catalogues or load
+current and historical versionless identities into the same ontology manager.
+The historical catalogue also resolves SoC MIREOT 1.1.3 and its 1.1.2 alias.
+The offline `catalogue_import_closure` helper in `scripts/validate_public.py`
+fails on missing imports rather than consulting another catalogue or the network.
 The archive also contains original examples, documentation and WIDOCO output.
 
 Changed graphs receive new identities. Unchanged modules and SI retain their
-accepted bytes and versions. The active runtime contains no legacy soc# identities
-or IDENT/COMP/LCA dependency. Removed unused P_DPP anchors and obsolete EVENT
+accepted bytes and versions. The active runtime contains no legacy SOC semantic
+terms or imports; historical IRIs occur only in source/provenance annotations.
+It has no IDENT/COMP/LCA dependency. Removed unused P_DPP anchors and obsolete EVENT
 restrictions are not recreated as Textile constraints.
 
 ## Validation and approval boundary
@@ -82,3 +89,15 @@ of complete OWL DL satisfiability or legal applicability.
 The provisional candidate identity is 2.0.0. Final release numbering, the separate
 creator-metadata task and publication require their own owner approval. Nothing
 in this migration authorises a push, merge, tag or publication.
+
+Unchanged active modules retain their original 1.1.2 version metadata, but their
+versionless imports participate in the current closure. Selecting their historical
+version endpoint requires the historical catalogue, which resolves the complete
+original closure. Local file loading alone is not historical resolution.
+
+The converter is bounded to supported positive reports. Unknown legacy resources
+(including identity properties whose semantics have not been reconciled) require
+manual review. It preserves RDF literals verbatim. Quantitative-wrapper mappings
+are context dependent and must complete the checked field-transfer stage; the
+mapping inventory does not assert equivalences. Bare or incomplete legacy
+presences are rejected before projection.

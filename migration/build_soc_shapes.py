@@ -60,6 +60,9 @@ prop(qualification,'QualificationSourceText',T.qualificationSource,maximum=None,
 prop(qualification,'QualificationBasis',T.hasRegulatoryBasis,maximum=None,cls=T.ExternalRegulatoryReference)
 query(qualification,'QualificationSourceRequired','A qualification needs preserved source text or a structured regulatory basis.',
       'FILTER NOT EXISTS { $this t:qualificationSource ?text. FILTER(STRLEN(STR(?text)) > 0) } FILTER NOT EXISTS { $this t:hasRegulatoryBasis ?reference }')
+for relation,criterion in [('isQualifiedBySVHCList','CriterionA'),('isQualifiedByProductGroupList','CriterionD')]:
+    query(qualification,relation+'Criterion','A criterion-specific regulatory basis requires its matching criterion.',
+          '$this t:'+relation+' ?basis. FILTER NOT EXISTS { $this e:hasSoCCriterion e:'+criterion+' }')
 
 reference=shape('TextileRegulatoryReferenceShape',objects=T.hasRegulatoryBasis)
 prop(reference,'ReferenceIdentifier',T.referenceIdentifier,datatype=XSD.string)
@@ -75,10 +78,11 @@ prop(location,'LocationPart',T.refersToProductPartForLocation,cls=A.TextileProdu
 prop(location,'LocationDescriptor',T.locationDescriptor,datatype=XSD.string)
 
 scope=shape('TextileScopeShape',T.TextileSubstanceOfConcernPresenceContext)
+membership='(t:hasPart|^t:isPartOfProduct|a:hasNonTextileComponent)+'
 query(scope,'LocationPartMembership','A location part must belong to the owning product structure.',
-      '$this e:isSubstancePresenceOf ?product; t:hasLocationInformation ?loc. ?loc t:refersToProductPartForLocation ?part. FILTER NOT EXISTS { ?product t:hasPart+ ?part }')
+      '$this e:isSubstancePresenceOf ?product; t:hasLocationInformation ?loc. ?loc t:refersToProductPartForLocation ?part. FILTER NOT EXISTS { ?product '+membership+' ?part }')
 query(scope,'DenominatorPartMembership','A concentration denominator part must belong to the owning product structure.',
-      '$this e:isSubstancePresenceOf ?product; e:hasConcentration ?conc. ?conc t:refersToProductPartForConcentration ?part. FILTER NOT EXISTS { ?product t:hasPart+ ?part }')
+      '$this e:isSubstancePresenceOf ?product; e:hasConcentration ?conc. ?conc t:refersToProductPartForConcentration ?part. FILTER NOT EXISTS { ?product '+membership+' ?part }')
 query(scope,'ProductLocationNotGroup','CORE product-location objects must be products, not structural material groups.',
       '$this e:isLocatedInProduct ?part. ?part a a:TextileProductPart.')
 
@@ -136,6 +140,8 @@ prop(evaluation,'EvaluationResult',T.hasThresholdEvaluationResult,1,
      allowed=[T.BelowThreshold,T.AtThreshold,T.AboveThreshold,T.IndeterminateThresholdResult])
 query(evaluation,'EvaluationApplicability','The evaluated threshold must be applicable to the concentration.',
       '$this t:evaluatesConcentrationInformation ?c; t:evaluatesAgainstThreshold ?threshold. FILTER NOT EXISTS { ?c t:hasApplicableRegulatoryThreshold ?threshold }')
+query(evaluation,'EvaluationOwnership','An evaluation attached to a presence must evaluate a concentration of that presence.',
+      '?presence t:hasThresholdEvaluation $this. $this t:evaluatesConcentrationInformation ?c. FILTER NOT EXISTS { ?presence e:hasConcentration ?c }')
 query(evaluation,'EvaluationScopeRequired','Numerical evaluation requires a declared concentration reference basis and reporting level.',
       '$this t:evaluatesConcentrationInformation ?c. FILTER NOT EXISTS { ?c t:hasConcentrationReferenceBasis ?basis; t:hasConcentrationReportingLevel ?level }')
 query(evaluation,'EvaluationUnitCompatibility','Threshold comparison requires the same approved decimal mass-ratio unit.',

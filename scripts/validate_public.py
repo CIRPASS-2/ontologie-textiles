@@ -23,7 +23,9 @@ PROJECT = 'https://w3id.org/eudpp/textile-ontology'
 LEGAL = 'http://data.europa.eu/eli/reg/2024/1781/oj'
 MAT = 'https://w3id.org/eudpp/textile-mat-mireot'
 EVENT = 'https://w3id.org/eudpp/textile-event-mireot'
+LEGACY_SOC = 'https://w3id.org/eudpp/soc'
 SOURCE_META = {
+ LEGACY_SOC: ('HISTORICAL-SOC-0.1.2','EU DPP Core Ontology - Substances of Concern Module, Version 0.1.2 DRAFT','Elio Hbeich','2026-04-17','Preserved historical definitions adapted into Textile extensions','EXTERNAL_ONTOLOGY','CC BY 4.0. Exact snapshot: migration/historical/1.1.2/dependencies/soc.ttl. Source text comparison does not verify underlying legal or JRC references.'),
  J25: ('JRC-TEXTILE-2025-12','Textile Preparatory Study - 3rd Milestone','European Commission Joint Research Centre','2025-12-12','Broad textile technical and preparatory evidence','JRC',''),
  J26: ('JRC-DPP-2026-05','Textiles Digital Product Passport study','European Commission Joint Research Centre','2026-05-13','Narrower proposed apparel-DPP information content','JRC','Does not supersede the broad technical scope of the December 2025 study.'),
  LEGAL: ('EU-2024-1781','Regulation (EU) 2024/1781 (ESPR)','European Union','2024-06-28','Recorded regulatory references','LEGISLATION','Citation does not establish that every ontology field is legally mandatory.'),
@@ -114,6 +116,25 @@ def current_import_closure(root,cat):
  require(seen==expected,'Current import closure differs from the approved module/MIREOT set')
  return seen
 
+def catalogue_import_closure(catalogue, entry_iri):
+ """Resolve every import with one explicitly selected offline catalogue.
+
+ Never fall back to the active catalogue or the network for missing entries.
+ """
+ base=catalogue.parent.resolve()
+ cat={x.attrib['name']:x.attrib['uri'] for x in ET.parse(catalogue).getroot()}
+ pending=[str(entry_iri)];seen=set()
+ while pending:
+  iri=pending.pop()
+  require(iri in cat,'Unmapped import in selected catalogue: '+iri)
+  path=(base/cat[iri]).resolve()
+  require(path.is_relative_to(base),'Catalogue target escapes selected package')
+  if path in seen:continue
+  require(path.is_file(),'Missing selected catalogue target: '+cat[iri])
+  seen.add(path)
+  pending.extend(map(str,parse(path).objects(None,OWL.imports)))
+ return seen
+
 def require(condition, message):
  if not condition: raise ValueError(message)
 
@@ -139,6 +160,7 @@ def evidence_id(row):
  return 'EVID-'+hashlib.sha256(canonical).hexdigest()[:16]
 
 def identify(text):
+ if text.startswith('Historical SOC 0.1.2'):return LEGACY_SOC
  if re.search(r'JRC DPP Study',text,re.I): return J26
  if re.search(r'JRC',text,re.I): return J25
  if re.search(r'ESPR|Regulation \(EU\) 2024/1781',text,re.I): return LEGAL
@@ -285,10 +307,19 @@ def structural_checks(root):
  require(sorted(p.name for p in (root/'ontology').glob('*.ttl'))==list(CURRENT_MODULES),'Unexpected current ontology modules')
  closure=current_import_closure(root,cat)
  rdf_paths=[root/rel for rel in package_files(root) if Path(rel).suffix in ('.ttl','.owl')]
+ historical=root/'migration/historical/1.1.2'
+ hcat={x.attrib['name']:x.attrib['uri'] for x in ET.parse(historical/'catalog-v001.xml').getroot()}
+ require(not any(k.endswith(('/1.1.2','/1.1.3')) or v.startswith('migration/historical/') for k,v in cat.items()),'Historical identities require the historical catalogue')
  for p in rdf_paths:
   gg=parse(p)
-  for uri in list(gg.objects(None,OWL.imports))+list(gg.objects(None,OWL.versionIRI)):
-   require(str(uri) in cat and (root/cat[str(uri)]).is_file(),'Unmapped ontology identity: '+str(uri))
+  selected,base=(hcat,historical) if p.is_relative_to(historical) else (cat,root)
+  for uri in gg.objects(None,OWL.imports):
+   require(str(uri) in selected and (base/selected[str(uri)]).is_file(),'Unmapped ontology import: '+str(uri))
+  for uri in gg.objects(None,OWL.versionIRI):
+   # Unchanged active modules retain their historical metadata. Their old
+   # version endpoints are intentionally available only in the old catalogue.
+   available=hcat if str(uri).endswith(('/1.1.2','/1.1.3')) else selected
+   require(str(uri) in available,'Unmapped declared ontology version: '+str(uri))
  for rel in package_files(root):
   p=root/rel
   if p.is_file() and p.suffix in ('.md','.csv','.ttl','.owl','.xml','.json','.txt'):
@@ -347,7 +378,10 @@ def match_shacl_results(results, shapes, scenario):
 
 
 def reject_legacy_soc(graph, label):
- offenders=sorted({str(term) for triple in graph for term in triple
+ # Attribution to preserved source resources is metadata, never a semantic
+ # bridge or a runtime import of the legacy ontology.
+ attribution={DCT.source,URIRef('http://www.w3.org/ns/prov#wasDerivedFrom')}
+ offenders=sorted({str(term) for triple in graph if triple[1] not in attribution for term in triple
                    if isinstance(term,URIRef) and (str(term).startswith('https://w3id.org/eudpp/soc#') or str(term)=='https://w3id.org/eudpp/soc')})
  require(not offenders,'Legacy SOC identity in '+label+': '+', '.join(offenders))
 

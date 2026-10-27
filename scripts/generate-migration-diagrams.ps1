@@ -11,8 +11,8 @@ $diagramModels = @(
         @('MaximumConcentration','uses numericalValue','Never maximumNumericalValue'),
         @('Textile threshold purpose','subClassOf','CORE ThresholdOfSubstanceOfConcern'),
         @('Exact / maximum / range value roles','subClassOf','Shared Textile QuantitativeValue'),
-        @('Structured location / denominator','membership','Textile part or material group'),
-        @('ThresholdEvaluation','inputs / result','Concentration + threshold + outcome'),
+        @('Structured location / denominator','membership','Forward / inverse / non-textile part'),
+        @('ThresholdEvaluation','ownership','Concentration of its owning presence'),
         @('Textile handling information','subClassOf','CORE SubstanceManagementInstruction')
     )},
     @{ Name='textile-associated-materials'; Title='Associated Materials - retained structural distinctions'; Rows=@(

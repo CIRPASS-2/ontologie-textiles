@@ -5,9 +5,9 @@
   "preparation_commit": "287d4d5cf90f0a5175986f0563a87495ea498add",
   "status_convention": "Git path/status; renames represented as deletion plus addition.",
   "summary_since_accepted_baseline": {
-    "M": 81,
+    "A": 125,
     "D": 6,
-    "A": 115
+    "M": 81
   },
   "entries_since_accepted_baseline": [
     {
@@ -303,6 +303,10 @@
       "status": "A"
     },
     {
+      "path": "migration/AUDIT_CORRECTIONS.md",
+      "status": "A"
+    },
+    {
       "path": "migration/README.md",
       "status": "A"
     },
@@ -312,6 +316,18 @@
     },
     {
       "path": "migration/TEXTILE_CORE_2026_FINAL_RECONCILIATION.md",
+      "status": "A"
+    },
+    {
+      "path": "migration/attribution-baseline-evidence.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/audit-counterexample-results.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/audit_counterexamples.py",
       "status": "A"
     },
     {
@@ -363,7 +379,19 @@
       "status": "A"
     },
     {
+      "path": "migration/correct_audit.py",
+      "status": "A"
+    },
+    {
       "path": "migration/extraction-scopes.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/finalize_audit_records.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/historical-closure-results.json",
       "status": "A"
     },
     {
@@ -479,7 +507,15 @@
       "status": "A"
     },
     {
+      "path": "migration/historical_closure_evidence.py",
+      "status": "A"
+    },
+    {
       "path": "migration/implement_core.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/legacy-soc-attribution.json",
       "status": "A"
     },
     {
@@ -772,6 +808,10 @@
     },
     {
       "path": "tests/abox_corpus/fixtures/valid/V09-soc-migration-coverage.ttl",
+      "status": "A"
+    },
+    {
+      "path": "tests/test_audit_corrections.py",
       "status": "A"
     },
     {
@@ -1113,6 +1153,10 @@
       "status": "A"
     },
     {
+      "path": "migration/AUDIT_CORRECTIONS.md",
+      "status": "A"
+    },
+    {
       "path": "migration/README.md",
       "status": "M"
     },
@@ -1122,6 +1166,18 @@
     },
     {
       "path": "migration/TEXTILE_CORE_2026_FINAL_RECONCILIATION.md",
+      "status": "A"
+    },
+    {
+      "path": "migration/attribution-baseline-evidence.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/audit-counterexample-results.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/audit_counterexamples.py",
       "status": "A"
     },
     {
@@ -1137,7 +1193,19 @@
       "status": "A"
     },
     {
+      "path": "migration/correct_audit.py",
+      "status": "A"
+    },
+    {
       "path": "migration/extraction-scopes.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/finalize_audit_records.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/historical-closure-results.json",
       "status": "A"
     },
     {
@@ -1245,7 +1313,15 @@
       "status": "A"
     },
     {
+      "path": "migration/historical_closure_evidence.py",
+      "status": "A"
+    },
+    {
       "path": "migration/implement_core.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/legacy-soc-attribution.json",
       "status": "A"
     },
     {
@@ -1537,6 +1613,10 @@
       "status": "A"
     },
     {
+      "path": "tests/test_audit_corrections.py",
+      "status": "A"
+    },
+    {
       "path": "tests/test_core_migration.py",
       "status": "A"
     },
@@ -1580,5 +1660,281 @@
       "path": "widoco/sections/soc/description-en.html",
       "status": "M"
     }
-  ]
+  ],
+  "accepted_implementation": "5bac1a2cba2332b3e5ad7d45d305fbb786ee59f2",
+  "summary_since_preparation": {
+    "A": 111,
+    "D": 6,
+    "M": 83
+  },
+  "entries_since_accepted_implementation": [
+    {
+      "path": "CHANGELOG.md",
+      "status": "M"
+    },
+    {
+      "path": "PUBLICATION_MANIFEST.txt",
+      "status": "M"
+    },
+    {
+      "path": "README.md",
+      "status": "M"
+    },
+    {
+      "path": "SHA256SUMS",
+      "status": "M"
+    },
+    {
+      "path": "catalog-v001.xml",
+      "status": "M"
+    },
+    {
+      "path": "diagrams/textile-soc.png",
+      "status": "M"
+    },
+    {
+      "path": "diagrams/textile-soc.svg",
+      "status": "M"
+    },
+    {
+      "path": "docs/CORE_2026_MIGRATION.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/DEPENDENCIES.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/SOURCE_TRACEABILITY.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/decisions/TXT-DEC-010.md",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/index-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/ontology.jsonld",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/ontology.nt",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/ontology.owl",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/ontology.ttl",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/provenance/provenance-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/sections/crossref-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/associated-materials/webvowl/data/ontology.json",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/index.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/index-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/ontology.jsonld",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/ontology.nt",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/ontology.owl",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/ontology.ttl",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/provenance/provenance-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/sections/crossref-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/sections/overview-en.html",
+      "status": "M"
+    },
+    {
+      "path": "docs/widoco/soc/webvowl/data/ontology.json",
+      "status": "M"
+    },
+    {
+      "path": "examples/example-10-textile-soc-v2.0.0.ttl",
+      "status": "M"
+    },
+    {
+      "path": "migration/AUDIT_CORRECTIONS.md",
+      "status": "A"
+    },
+    {
+      "path": "migration/README.md",
+      "status": "M"
+    },
+    {
+      "path": "migration/STAGE_CHECKS.md",
+      "status": "M"
+    },
+    {
+      "path": "migration/attribution-baseline-evidence.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/audit-counterexample-results.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/audit_counterexamples.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/build_semantic_cases.py",
+      "status": "M"
+    },
+    {
+      "path": "migration/build_soc_shapes.py",
+      "status": "M"
+    },
+    {
+      "path": "migration/change-inventory.json",
+      "status": "M"
+    },
+    {
+      "path": "migration/correct_audit.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/extraction-scopes.json",
+      "status": "M"
+    },
+    {
+      "path": "migration/finalize_audit_records.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/historical-closure-results.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/historical_closure_evidence.py",
+      "status": "A"
+    },
+    {
+      "path": "migration/implement_core.py",
+      "status": "M"
+    },
+    {
+      "path": "migration/legacy-soc-attribution.json",
+      "status": "A"
+    },
+    {
+      "path": "migration/refresh_publication.py",
+      "status": "M"
+    },
+    {
+      "path": "migration/semantic-mapping.csv",
+      "status": "M"
+    },
+    {
+      "path": "migration/validation-pytest.xml",
+      "status": "M"
+    },
+    {
+      "path": "migration/validation-results.json",
+      "status": "M"
+    },
+    {
+      "path": "mireot/con-textile-mireot.ttl",
+      "status": "M"
+    },
+    {
+      "path": "ontology/textile-associated-materials.ttl",
+      "status": "M"
+    },
+    {
+      "path": "ontology/textile-soc.ttl",
+      "status": "M"
+    },
+    {
+      "path": "scripts/generate-migration-diagrams.ps1",
+      "status": "M"
+    },
+    {
+      "path": "scripts/validate_public.py",
+      "status": "M"
+    },
+    {
+      "path": "shacl/textile-soc-shapes.ttl",
+      "status": "M"
+    },
+    {
+      "path": "tests/abox_corpus/fixtures/invalid/M04-missing-concentration-complete.ttl",
+      "status": "M"
+    },
+    {
+      "path": "tests/abox_corpus/fixtures/valid/M04-partial-without-concentration.ttl",
+      "status": "M"
+    },
+    {
+      "path": "tests/abox_corpus/fixtures/valid/V09-soc-migration-coverage.ttl",
+      "status": "M"
+    },
+    {
+      "path": "tests/test_audit_corrections.py",
+      "status": "A"
+    },
+    {
+      "path": "tests/test_core_migration.py",
+      "status": "M"
+    },
+    {
+      "path": "tests/test_public_package.py",
+      "status": "M"
+    },
+    {
+      "path": "traceability/README.md",
+      "status": "M"
+    },
+    {
+      "path": "traceability/source-documents.csv",
+      "status": "M"
+    },
+    {
+      "path": "traceability/textile-resource-evidence.csv",
+      "status": "M"
+    },
+    {
+      "path": "traceability/textile-resource-traceability.csv",
+      "status": "M"
+    }
+  ],
+  "summary_since_accepted_implementation": {
+    "A": 10,
+    "M": 56
+  }
 }

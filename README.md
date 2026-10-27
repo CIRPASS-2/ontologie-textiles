@@ -19,10 +19,10 @@ Six rebuilt CORE subsets declare 2.0.0 candidate identities; together with SI
 they form seven MIREOT graphs and a 20-graph runtime closure.
 
 Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the local
-[catalogue](catalog-v001.xml). Historical version IRIs resolve to preserved bytes,
-including SoC MIREOT 1.1.3 and its former 1.1.2 alias. The old lowercase SOC
-ontology identity resolves only to its historical source. For a historical
-runtime use the preserved standalone historical catalogue, never a mixed closure.
+[catalogue](catalog-v001.xml). Historical version IRIs and lowercase SOC are
+intentionally absent from this active catalogue. Load historical versions with
+the standalone `migration/historical/1.1.2/catalog-v001.xml` for the entire
+session, with network fallback disabled; never combine these catalogues.
 See the [migration guide](docs/CORE_2026_MIGRATION.md).
 
 ## Package contents
@@ -60,16 +60,16 @@ The CIRPASS Textile Ontology is grounded in the JRC textile studies while explic
 - [Traceability guide](traceability/README.md)
 - [Source methodology](docs/SOURCE_TRACEABILITY.md)
 
-The following counts are generated from the public CSV: **899 resources**, **904 evidence rows**, **5 source documents**, and **248 resources with multiple evidence records**.
+The following counts are generated from the public CSV: **899 resources**, **946 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
 
 | Provenance category | Resource count |
 |---|---:|
-| adaptedDefinition | 361 |
+| adaptedDefinition | 403 |
 | adaptedRelation | 27 |
 | directExtraction | 16 |
 | externalReuse | 1 |
 | modellingAbstraction | 378 |
-| projectDecision | 116 |
+| projectDecision | 74 |
 
 | Defining module | Resource count |
 |---|---:|
@@ -122,4 +122,4 @@ Then use commit and push as for normal files.
 
 ## Publication boundary and evidence supplements
 
-See [publication scope](docs/PUBLICATION_SCOPE.md) for the current package manifest and the separate preserved-reference inventory. Public validation excludes Graphwise material and existing reference-data collections. Seven [documentary locator supplements](traceability/evidence-locator-resolutions.csv) resolve previously missing locations without changing RDF: 902 evidence rows have recorded locators and two remain transparently unresolved. No row claims full substantive verification.
+See [publication scope](docs/PUBLICATION_SCOPE.md) for the current package manifest and the separate preserved-reference inventory. Public validation excludes Graphwise material and existing reference-data collections. Seven [documentary locator supplements](traceability/evidence-locator-resolutions.csv) resolve previously missing locations without changing RDF: 944 evidence rows have recorded locators and two remain transparently unresolved. No row claims full substantive verification.

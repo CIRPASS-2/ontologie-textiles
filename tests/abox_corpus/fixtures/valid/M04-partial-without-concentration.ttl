@@ -36,14 +36,19 @@
     txtsoc:hasLocationInformation <https://example.org/textile-soc/locationInformation> ;
     txtsoc:hasPresenceChemicalFunction <https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> ;
     txtsoc:hasPresenceUseCategory <https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> ;
-    txtsoc:hasTextileHandlingInformation <https://example.org/textile-soc/recyclingInformation> ;
-    txtsoc:hasThresholdEvaluation <https://example.org/textile-soc/thresholdEvaluation> .
+    txtsoc:hasTextileHandlingInformation <https://example.org/textile-soc/recyclingInformation> .
 
 <https://example.org/textile-soc/rangeConcentration> a dpp:ConcentrationRange,
         txtsoc:TextileConcentrationInformation ;
     dpp:hasMeasurementUnit dpp:massFractionUnit ;
     dpp:maximumNumericalValue 0.0009 ;
     dpp:minimumNumericalValue 0.0006 .
+
+<https://example.org/textile-soc/thresholdEvaluation> a txtsoc:ThresholdEvaluation ;
+    txtsoc:evaluatesAgainstThreshold <https://example.org/textile-soc/nonExemptionThreshold> ;
+    txtsoc:evaluatesConcentrationInformation <https://example.org/textile-soc/concentrationInformation> ;
+    txtsoc:evaluationNote "Illustrative comparison: 0.0008 is below 0.001." ;
+    txtsoc:hasThresholdEvaluationResult txtsoc:BelowThreshold .
 
 <https://example.org/textile-abox/valid/maximumAllowed> a txtsoc:MaximumThresholdValue ;
     txtcon:hasMeasurementUnit units:one ;
@@ -80,12 +85,6 @@
     txtsoc:referenceDate "2026-10-15"^^xsd:date ;
     txtsoc:referenceIdentifier "Illustrative reference; no legal determination" ;
     txtsoc:referenceVersion "example-v1" .
-
-<https://example.org/textile-soc/thresholdEvaluation> a txtsoc:ThresholdEvaluation ;
-    txtsoc:evaluatesAgainstThreshold <https://example.org/textile-soc/nonExemptionThreshold> ;
-    txtsoc:evaluatesConcentrationInformation <https://example.org/textile-soc/concentrationInformation> ;
-    txtsoc:evaluationNote "Illustrative comparison: 0.0008 is below 0.001." ;
-    txtsoc:hasThresholdEvaluationResult txtsoc:BelowThreshold .
 
 <https://example.org/textile-soc/thresholdMassFraction> a txtsoc:ExactThresholdValue ;
     txtcon:hasMeasurementUnit dpp:massFractionUnit ;

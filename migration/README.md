@@ -17,8 +17,8 @@ The original 648-file archive is unchanged:
 SHA-256: `4384bfd9f8f4e8a0ce1a6b7a7fd679d2190d9be33df87b2f181207aa78a46e74`.
 `historical/inventory.json` records every member digest. Exact historical runtime
 files and catalogue are extracted under `historical/1.1.2/`. They remain outside
-the active closure. Previous version IRIs and lowercase SOC target historical
-bytes; historical loading uses its own catalogue. E10's original versioned file
+the active closure. Previous version IRIs and lowercase SOC are absent from the active catalogue;
+historical loading requires its own catalogue for the complete session. E10's original versioned file
 is in the archive; the active E10 has a 2.0.0 filename.
 
 Migration inputs, implementation records, historical preservation and WIDOCO
@@ -34,7 +34,8 @@ CORE and to adopted files in `dependencies/current-core/`.
    hashes checked, six faithful bounded CORE subsets plus unchanged SI.
 2. Semantic migration: Textile identity/presence alignment, retained source,
    location/denominator, instruction and threshold/evaluation semantics; E10 and
-   V08/I08 migrated. No legacy SOC URI remains in active RDF.
+   V08/I08 migrated. No legacy SOC semantic term or import remains in active RDF; provenance
+   annotations explicitly identify historical source resources.
 3. Validation: separate partial/complete profiles, stable named constraints and
    strict multiset matching, forty-one additional scenarios, positive focus coverage,
    entailment/non-entailment tests and unchanged-purpose regressions.
@@ -79,3 +80,10 @@ and checksums. PowerShell scripts regenerate diagrams and WIDOCO output.
 The candidate version is provisional 2.0.0. Creator metadata is unchanged.
 Final numbering, the separate approved creator task and publication remain owner
 decisions. No push, merge, tag or publication has occurred.
+
+## Targeted independent audit corrections
+
+Continue from accepted implementation `5bac1a2` using the bounded correction
+script `python -m migration.correct_audit`, rather than rerunning migration
+stages. The [correction matrix](AUDIT_CORRECTIONS.md) records all findings,
+counterexamples, historical closures and validation evidence.

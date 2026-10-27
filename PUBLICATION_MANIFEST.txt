@@ -545,9 +545,13 @@ examples/example-08-context-v1.1.2.ttl
 examples/example-09-repairability-v1.1.2.ttl
 examples/example-10-textile-soc-v2.0.0.ttl
 examples/example-11-textile-recyclability-v1.1.2.ttl
+migration/AUDIT_CORRECTIONS.md
 migration/README.md
 migration/STAGE_CHECKS.md
 migration/TEXTILE_CORE_2026_FINAL_RECONCILIATION.md
+migration/attribution-baseline-evidence.json
+migration/audit-counterexample-results.json
+migration/audit_counterexamples.py
 migration/build_semantic_cases.py
 migration/build_soc_shapes.py
 migration/change-inventory.json
@@ -560,7 +564,10 @@ migration/core-sources/event.owl
 migration/core-sources/mat.owl
 migration/core-sources/p_dpp.owl
 migration/core-sources/soc.owl
+migration/correct_audit.py
 migration/extraction-scopes.json
+migration/finalize_audit_records.py
+migration/historical-closure-results.json
 migration/historical/1.1.2/catalog-v001.xml
 migration/historical/1.1.2/dependencies/SI_REFERENCE_POINT.md
 migration/historical/1.1.2/dependencies/actor.owl
@@ -589,7 +596,9 @@ migration/historical/1.1.2/ontology/textile-soc.ttl
 migration/historical/1.1.2/ontology/textile-structure.ttl
 migration/historical/inventory.json
 migration/historical/textile-1.1.2-1ca2aa89241785dedeab430247bc9947daf69881.zip
+migration/historical_closure_evidence.py
 migration/implement_core.py
+migration/legacy-soc-attribution.json
 migration/node-correspondence.json
 migration/prepare_inputs.py
 migration/refresh_publication.py
@@ -696,6 +705,7 @@ tests/abox_corpus/fixtures/valid/V06-recyclability-overall-result.ttl
 tests/abox_corpus/fixtures/valid/V07-recycled-content-declaration.ttl
 tests/abox_corpus/fixtures/valid/V08-soc-quantities-thresholds.ttl
 tests/abox_corpus/fixtures/valid/V09-soc-migration-coverage.ttl
+tests/test_audit_corrections.py
 tests/test_core_migration.py
 tests/test_migration_publication.py
 tests/test_public_package.py

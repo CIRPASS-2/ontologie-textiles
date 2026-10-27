@@ -4,14 +4,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dpp:concernsProduct a owl:ObjectProperty ;
-    rdfs:label "concerns product"@en ;
-    rdfs:comment """Links a product event to the product whose state, condition, or lifecycle is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.
-
-Product is modelled in the EU DPP CO P_DPP module.
-ProductEvent is modelled in the EU DPP CO EVENT module."""@en ;
-    rdfs:domain dpp:ProductEvent ;
-    rdfs:range dpp:Product .
+dpp:SubstanceManagementInstruction a owl:Class ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/SOC> ;
+    rdfs:subClassOf dpp:DigitalInstruction .
 
 dpp:hasConcentration a owl:ObjectProperty ;
     rdfs:label "has concentration"@en ;
@@ -56,8 +51,8 @@ SubstancePresence is modelled in the EU DPP CO IDENT module."""@en ;
 dpp:ConcentrationOfSubstanceOfConcern a owl:Class ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/P_DPP> .
 
-dpp:ProductEvent a owl:Class ;
-    rdfs:isDefinedBy "https://w3id.org/eudpp/EVENT" .
+dpp:DigitalInstruction a owl:Class ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/P_DPP> .
 
 dpp:isSubstancePresenceOf a owl:ObjectProperty ;
     rdfs:label "is substance presence of"@en ;

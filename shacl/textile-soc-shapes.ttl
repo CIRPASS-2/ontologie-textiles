@@ -100,7 +100,9 @@ SELECT ?this WHERE { ?this a e:ConcentrationOfSubstanceOfConcern.
         <https://w3id.org/eudpp/textile-shacl#QualificationCriteria>,
         <https://w3id.org/eudpp/textile-shacl#QualificationSourceText>,
         <https://w3id.org/eudpp/textile-shacl#QualificationSubstance> ;
-    sh:sparql <https://w3id.org/eudpp/textile-shacl#QualificationSourceRequired> ;
+    sh:sparql <https://w3id.org/eudpp/textile-shacl#QualificationSourceRequired>,
+        <https://w3id.org/eudpp/textile-shacl#isQualifiedByProductGroupListCriterion>,
+        <https://w3id.org/eudpp/textile-shacl#isQualifiedBySVHCListCriterion> ;
     sh:targetObjectsOf dpp:hasApplicableQualification .
 
 <https://w3id.org/eudpp/textile-shacl#TextileRegulatoryReferenceShape> a sh:NodeShape ;
@@ -131,6 +133,7 @@ SELECT ?this WHERE { ?this a e:ConcentrationOfSubstanceOfConcern.
         <https://w3id.org/eudpp/textile-shacl#EvaluationBasisCompatibility>,
         <https://w3id.org/eudpp/textile-shacl#EvaluationIntervalOutcome>,
         <https://w3id.org/eudpp/textile-shacl#EvaluationLevelCompatibility>,
+        <https://w3id.org/eudpp/textile-shacl#EvaluationOwnership>,
         <https://w3id.org/eudpp/textile-shacl#EvaluationPartCompatibility>,
         <https://w3id.org/eudpp/textile-shacl#EvaluationScopeRequired>,
         <https://w3id.org/eudpp/textile-shacl#EvaluationUnitCompatibility> ;
@@ -221,7 +224,7 @@ PREFIX a: <https://w3id.org/eudpp/textile-associated-materials#>
 PREFIX c: <https://w3id.org/eudpp/textile-connector#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT DISTINCT $this WHERE { $this e:isSubstancePresenceOf ?product; e:hasConcentration ?conc. ?conc t:refersToProductPartForConcentration ?part. FILTER NOT EXISTS { ?product t:hasPart+ ?part } }""" .
+SELECT DISTINCT $this WHERE { $this e:isSubstancePresenceOf ?product; e:hasConcentration ?conc. ?conc t:refersToProductPartForConcentration ?part. FILTER NOT EXISTS { ?product (t:hasPart|^t:isPartOfProduct|a:hasNonTextileComponent)+ ?part } }""" .
 
 <https://w3id.org/eudpp/textile-shacl#EvaluationApplicability> a sh:SPARQLConstraint ;
     sh:message "The evaluated threshold must be applicable to the concentration."@en ;
@@ -282,6 +285,16 @@ PREFIX c: <https://w3id.org/eudpp/textile-connector#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT $this WHERE { $this t:evaluatesConcentrationInformation ?c; t:evaluatesAgainstThreshold ?threshold. ?threshold <https://w3id.org/eudpp/textile-soc#hasThresholdReportingLevel> ?scope. FILTER NOT EXISTS { ?c <https://w3id.org/eudpp/textile-soc#hasConcentrationReportingLevel> ?scope } }""" .
+
+<https://w3id.org/eudpp/textile-shacl#EvaluationOwnership> a sh:SPARQLConstraint ;
+    sh:message "An evaluation attached to a presence must evaluate a concentration of that presence."@en ;
+    sh:select """PREFIX e: <https://w3id.org/eudpp#>
+PREFIX t: <https://w3id.org/eudpp/textile-soc#>
+PREFIX a: <https://w3id.org/eudpp/textile-associated-materials#>
+PREFIX c: <https://w3id.org/eudpp/textile-connector#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT $this WHERE { ?presence t:hasThresholdEvaluation $this. $this t:evaluatesConcentrationInformation ?c. FILTER NOT EXISTS { ?presence e:hasConcentration ?c } }""" .
 
 <https://w3id.org/eudpp/textile-shacl#EvaluationPartCompatibility> a sh:SPARQLConstraint ;
     sh:message "Comparison scope must match the concentration scope."@en ;
@@ -401,7 +414,7 @@ PREFIX a: <https://w3id.org/eudpp/textile-associated-materials#>
 PREFIX c: <https://w3id.org/eudpp/textile-connector#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT DISTINCT $this WHERE { $this e:isSubstancePresenceOf ?product; t:hasLocationInformation ?loc. ?loc t:refersToProductPartForLocation ?part. FILTER NOT EXISTS { ?product t:hasPart+ ?part } }""" .
+SELECT DISTINCT $this WHERE { $this e:isSubstancePresenceOf ?product; t:hasLocationInformation ?loc. ?loc t:refersToProductPartForLocation ?part. FILTER NOT EXISTS { ?product (t:hasPart|^t:isPartOfProduct|a:hasNonTextileComponent)+ ?part } }""" .
 
 <https://w3id.org/eudpp/textile-shacl#LocationType> a sh:PropertyShape ;
     sh:class txtsoc:TextileSoCLocationTypeConcept ;
@@ -647,3 +660,23 @@ PREFIX c: <https://w3id.org/eudpp/textile-connector#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT $this WHERE { $this t:lowerBound ?lower; t:upperBound ?upper. FILTER (?lower > ?upper) }""" .
+
+<https://w3id.org/eudpp/textile-shacl#isQualifiedByProductGroupListCriterion> a sh:SPARQLConstraint ;
+    sh:message "A criterion-specific regulatory basis requires its matching criterion."@en ;
+    sh:select """PREFIX e: <https://w3id.org/eudpp#>
+PREFIX t: <https://w3id.org/eudpp/textile-soc#>
+PREFIX a: <https://w3id.org/eudpp/textile-associated-materials#>
+PREFIX c: <https://w3id.org/eudpp/textile-connector#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT $this WHERE { $this t:isQualifiedByProductGroupList ?basis. FILTER NOT EXISTS { $this e:hasSoCCriterion e:CriterionD } }""" .
+
+<https://w3id.org/eudpp/textile-shacl#isQualifiedBySVHCListCriterion> a sh:SPARQLConstraint ;
+    sh:message "A criterion-specific regulatory basis requires its matching criterion."@en ;
+    sh:select """PREFIX e: <https://w3id.org/eudpp#>
+PREFIX t: <https://w3id.org/eudpp/textile-soc#>
+PREFIX a: <https://w3id.org/eudpp/textile-associated-materials#>
+PREFIX c: <https://w3id.org/eudpp/textile-connector#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT $this WHERE { $this t:isQualifiedBySVHCList ?basis. FILTER NOT EXISTS { $this e:hasSoCCriterion e:CriterionA } }""" .

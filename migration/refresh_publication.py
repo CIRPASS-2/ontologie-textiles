@@ -33,17 +33,22 @@ Six rebuilt CORE subsets declare 2.0.0 candidate identities; together with SI
 they form seven MIREOT graphs and a 20-graph runtime closure.
 
 Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the local
-[catalogue](catalog-v001.xml). Historical version IRIs resolve to preserved bytes,
-including SoC MIREOT 1.1.3 and its former 1.1.2 alias. The old lowercase SOC
-ontology identity resolves only to its historical source. For a historical
-runtime use the preserved standalone historical catalogue, never a mixed closure.
+[catalogue](catalog-v001.xml). Historical version IRIs and lowercase SOC are
+intentionally absent from this active catalogue. Load historical versions with
+the standalone `migration/historical/1.1.2/catalog-v001.xml` for the entire
+session, with network fallback disabled; never combine these catalogues.
 See the [migration guide](docs/CORE_2026_MIGRATION.md).
 
 '''+text[end:]
     text=text.replace('python -B -m pytest -p no:cacheprovider tests/test_public_package.py -q','python -B -m pytest -p no:cacheprovider tests -q\npython -B scripts/validate_public.py --full --complete-report')
     text=text.replace('These three profiles are selective application constraints','The three structural profiles and optional complete-report profile are selective application constraints')
     text=text.replace('**838 resources**',f"**{stats['resource_count']} resources**")
+    text=text.replace('**904 evidence rows**',f'**{len(evidence)} evidence rows**').replace('**5 source documents**',f'**{len(sources)} source documents**')
+    text=text.replace('902 evidence rows have recorded locators',f"{stats['locator_statuses']['PRESENT_NOT_REVERIFIED']} evidence rows have recorded locators")
     text=text.replace('| projectDecision | 55 |',f"| projectDecision | {stats['categories']['projectDecision']} |")
+    import re
+    for category,count in stats['categories'].items():
+        text=re.sub(r'\| '+category+r' \| \d+ \|',f'| {category} | {count} |',text)
     for module in ('textile-soc','textile-associated-materials'):
         import re
         text=re.sub(r'\| '+module+r' \| \d+ \|',f"| {module} | {stats['modules'][module]} |",text)
@@ -101,12 +106,20 @@ its original changelog, manifest, catalogue, sources and generated documentation
             'ontology header. It is an extracted work, not the complete upstream module.',
             'Upstream terms remain externally owned. The Textile licence does not',
             'supersede upstream terms. The bundled Apache licence is retained.',
+            '', 'The 42 adapted legacy definitions/comments originate in the historical',
+            '[SOC 0.1.2 DRAFT snapshot](../migration/historical/1.1.2/dependencies/soc.ttl),',
+            'created by Elio Hbeich, issued 2026-04-17, under',
+            '[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).',
+            'Textile changes the namespace, scope and CORE alignment. Exact source',
+            'resources and copied statements are recorded in',
+            '[the attribution inventory](../migration/legacy-soc-attribution.json).',
+            'This text comparison does not independently verify underlying JRC or legal references.',
             '', '## Historical compatibility', '',
             'The accepted older dependency snapshots and MIREOT bytes are preserved in',
             'the [historical inventory](../migration/historical/inventory.json) and archive.',
             'The extracted historical runtime and its own catalogue are under',
-            '`migration/historical/1.1.2/`. Root catalogue mappings for previous version',
-            'IRIs and lowercase `/soc` target those original bytes. No equivalence or',
+            '`migration/historical/1.1.2/`. Historical version IRIs and lowercase `/soc`',
+            'are deliberately absent from the active catalogue. No equivalence or',
             'redirect bridges the legacy `soc#` vocabulary to the migrated runtime.',
             'See [migration guidance](CORE_2026_MIGRATION.md).','']
     write('docs/DEPENDENCIES.md','\n'.join(lines))
@@ -152,13 +165,17 @@ in Git history. See [dependencies](DEPENDENCIES.md) and
 [migration treatment](CORE_2026_MIGRATION.md).
 ''')
     text=baseline_text('docs/SOURCE_TRACEABILITY.md')
+    text=text.replace('902 PRESENT_NOT_REVERIFIED',f"{stats['locator_statuses']['PRESENT_NOT_REVERIFIED']} PRESENT_NOT_REVERIFIED")
     text+=f'''
 ## October 2026 migration
 
-New retained Textile extension resources are project decisions documented in
-[TXT-DEC-010](decisions/TXT-DEC-010.md). Their rows do not fabricate JRC evidence.
-The projection now contains {stats['resource_count']} resources while retaining 904 evidence rows,
-902 PRESENT_NOT_REVERIFIED and two UNRESOLVED relationships. Source registry
+Local modelling decisions are documented in [TXT-DEC-010](decisions/TXT-DEC-010.md).
+Forty-two resources with copied historical SOC definitions/comments are classified
+as adaptedDefinition and attributed to SOC 0.1.2 DRAFT and their exact source
+resources. Local scope/alignment decisions remain separately annotated.
+The projection contains {stats['resource_count']} resources and {len(evidence)} evidence rows:
+the original 904 relationships plus 42 historical SOC citations, all remaining
+PRESENT_NOT_REVERIFIED except the two unchanged UNRESOLVED relationships. Source registry
 descriptions identify the adopted MAT 1.1.0 and EVENT 1.0.0 subsets. The seven
 earlier locator supplements remain historical evidence statements; the migration
 does not claim fresh documentary verification. The presence locator names the
@@ -166,6 +183,8 @@ current SubstancePresence pivot while retaining its ESPR source relationship.
 '''
     write('docs/SOURCE_TRACEABILITY.md',text)
     text=baseline_text('traceability/README.md').replace('838 resources',f"{stats['resource_count']} resources").replace('282 resources have no external',f"{stats['zero_evidence']} resources have no external")
+    text=text.replace('904 evidence relationships and 5 source documents',f'{len(evidence)} evidence relationships and {len(sources)} source documents')
+    text=text.replace('902 PRESENT_NOT_REVERIFIED',f"{stats['locator_statuses']['PRESENT_NOT_REVERIFIED']} PRESENT_NOT_REVERIFIED")
     write('traceability/README.md',text)
     for name in ('nader-review.md','upstream-dependency-governance.md'):
         path=ROOT/'docs/governance'/name

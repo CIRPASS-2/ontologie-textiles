@@ -1,6 +1,5 @@
 @prefix dpp: <https://w3id.org/eudpp#> .
 @prefix ns1: <https://w3id.org/eudpp/textile-process#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix si: <https://si-digital-framework.org/SI#> .
 @prefix txtam: <https://w3id.org/eudpp/textile-associated-materials#> .
 @prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
@@ -13,9 +12,6 @@
 
 <https://example.org/textile-abox/valid/trackingThreshold> a txtsoc:TextileTrackingThreshold ;
     txtsoc:hasThresholdQuantitativeValue <https://example.org/textile-abox/valid/reportedRange> .
-
-<https://example.org/textile-soc/dimensionlessUnit> a si:MeasurementUnit ;
-    rdfs:label "dimensionless mass fraction"@en .
 
 <https://example.org/textile-soc/execution> a ns1:TextileProcessExecution ;
     ns1:concernsProduct <https://example.org/textile-soc/jacket> ;

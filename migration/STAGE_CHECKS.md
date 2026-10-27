@@ -95,3 +95,11 @@ run passed all eleven examples, sixteen original SHACL scenarios, six reasoning
 scenarios and the recyclability control. Forty-one migration scenarios comprise
 four positive and thirty-seven negative cases. All sixteen targeted SoC shapes
 (including the optional complete profile) have positive and negative coverage.
+
+## Post-audit corrections
+
+The preceding stage counts describe accepted implementation `5bac1a2`. The
+current [audit correction matrix](AUDIT_CORRECTIONS.md) and machine-readable
+validation results supersede those counts. Traceability now has 946 rows and
+six sources, with 944 PRESENT_NOT_REVERIFIED and the same two UNRESOLVED rows.
+Historical aliases require the historical catalogue for the complete load.

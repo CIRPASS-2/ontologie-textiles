@@ -71,11 +71,26 @@ def test_no_legacy_or_unrelated_core_in_active_closure():
 
 def test_historical_catalogue_targets_exact_preserved_bytes():
     inventory=json.loads((ROOT/'migration/historical/inventory.json').read_text('utf8'))['files']
-    for entry in v.ET.parse(ROOT/'catalog-v001.xml').getroot():
+    for entry in v.ET.parse(m.HISTORY/'catalog-v001.xml').getroot():
         iri,rel=entry.attrib['name'],entry.attrib['uri']
         if iri.endswith(('/1.1.2','/1.1.3')) or iri=='https://w3id.org/eudpp/soc':
-            historical=rel.removeprefix('migration/historical/1.1.2/')
-            assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==inventory[historical]
+            assert hashlib.sha256((m.HISTORY/rel).read_bytes()).hexdigest()==inventory[rel]
+
+
+@pytest.mark.parametrize('entry', ['textile-ontology/1.1.2','textile-soc/1.1.2','textile-soc-mireot/1.1.3'])
+def test_historical_complete_import_closure_is_isolated(entry):
+    catalogue=m.HISTORY/'catalog-v001.xml'
+    closure=v.catalogue_import_closure(catalogue,'https://w3id.org/eudpp/'+entry)
+    inventory=json.loads((ROOT/'migration/historical/inventory.json').read_text('utf8'))['files']
+    assert closure
+    if entry.startswith('textile-ontology/'):assert len(closure)==19
+    for path in closure:
+        rel=path.relative_to(m.HISTORY).as_posix()
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==inventory[rel]
+        assert path.name!='con-textile-mireot.ttl'
+        assert not any(str(x).endswith('/2.0.0') for x in m.parse(path).objects(None,OWL.versionIRI))
+    with pytest.raises(ValueError,match='Unmapped import'):
+        v.catalogue_import_closure(ROOT/'catalog-v001.xml','https://w3id.org/eudpp/'+entry)
 
 
 def test_e10_concentration_transfer_and_unknown_identifier_are_lossless():

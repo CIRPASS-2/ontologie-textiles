@@ -90,7 +90,8 @@ def test_reversed_documentary_range_is_rejected():
 
 def test_seven_supplements_leave_only_two_unresolved(tables):
  _,e,_=tables
- assert len(e)==904
+ assert len([x for x in e if x['source_document_id']!='HISTORICAL-SOC-0.1.2'])==904
+ assert len([x for x in e if x['source_document_id']=='HISTORICAL-SOC-0.1.2'])==42
  assert {x['resource_iri'].split('#')[-1] for x in e if x['locator_status']=='UNRESOLVED'}=={'fibreCompositionLocation','nonTextileComponentLocation'}
  assert sum(x['verification_basis'].startswith('public_locator_checked_') for x in e)==7
 

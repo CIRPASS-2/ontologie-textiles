@@ -23,8 +23,8 @@ HISTORY = ROOT/'migration/historical/1.1.2'
 SOURCE = ROOT/'migration/core-sources'
 MAP = {
  'Substance': E.Substance, 'SubstanceOfConcern': E.SubstanceOfConcern,
- 'SubstancePresenceContext': E.SubstancePresence,
- 'SubstanceOfConcernPresenceContext': E.SubstancePresence,
+ 'SubstancePresenceContext': T.TextileSubstanceOfConcernPresenceContext,
+ 'SubstanceOfConcernPresenceContext': T.TextileSubstanceOfConcernPresenceContext,
  'RegulatoryQualification': E.SoCQualificationAssertion,
  'SubstanceOfConcernQualification': E.SoCQualificationAssertion,
  'SoCTypeAQualification': E.SoCQualificationAssertion,
@@ -44,6 +44,20 @@ MAP = {
  'numericValue': C.numericValue, 'hasUnit': C.hasMeasurementUnit,
  'Unit': SI.MeasurementUnit,
 }
+# Deliberately enumerated retained legacy terms. Identity properties and new
+# legacy resources require review; constructing a local IRI is not a mapping.
+RETAINED = '''MaterialGroup LocationInformation ConcentrationReferenceBasis ReportingLevel
+ProductGroupSpecificSoCList ExternalRegulatoryReference SVHCCandidateList isQualifiedBySVHCList Situation
+NonExemptionThreshold TrackingThreshold AlertConcentrationThreshold ThresholdEvaluation ThresholdEvaluationResult
+BelowThreshold AtThreshold AboveThreshold IndeterminateThresholdResult
+MaterialGroupMassBasis MaterialLevel RecyclingInstructionType
+SafeUseInstructionType InstructionType hasInstructionType instructionContent hasLocationInformation
+locationDescriptor refersToProductPartForLocation hasPart isPartOfProduct refersToProductPartForConcentration
+hasConcentrationReferenceBasis hasConcentrationReportingLevel analyticalMethod hasRegulatoryBasis
+isQualifiedByProductGroupList qualificationSource hasApplicableRegulatoryThreshold hasThresholdEvaluation
+evaluatesConcentrationInformation evaluatesAgainstThreshold hasThresholdEvaluationResult evaluationNote
+thresholdNote hasThresholdQuantitativeValue substanceIdentifier maximumValue lowerBound upperBound'''.split()
+MAP.update({name:T[name] for name in RETAINED})
 
 
 def parse(path):
@@ -59,9 +73,11 @@ def save(graph, path):
 def mapped(term):
     if isinstance(term, URIRef) and str(term).startswith(str(OLD)):
         name = str(term)[len(str(OLD)):]
-        return MAP.get(name, T[name])
-    if isinstance(term, Literal) and 'soc:' in str(term):
-        return Literal(str(term).replace('soc:', 'txtsoc:'), lang=term.language, datatype=term.datatype)
+        if name in MAP:return MAP[name]
+        # These edges are consumed by the contextual converter, not published.
+        if name=='hasQuantitativeValue':return T.hasQuantitativeValue
+        if name=='hasInstructionInformation':return T.hasTextileHandlingInformation
+        raise ValueError('Unmapped legacy SOC resource requires manual review: '+str(term))
     return term
 
 
@@ -112,7 +128,7 @@ def stage1():
          qualificationNote qualificationValidFrom qualificationValidUntil substanceLocationDescription
          SubstanceManagementInstruction hasSafeUseInstruction hasRecyclingInstruction hasReuseInstruction
          hasDisassemblyInstruction hasPreparationForReuseInstruction hasEndOfLifeManagementInstruction massFractionUnit sourceStatus'''.split()),
-     'con': ('connector.owl', 'hasSubstancePresence isSubstancePresenceOf isLocatedInProduct hasConcentration concernsProduct'.split()),
+     'con': ('connector.owl', 'hasSubstancePresence isSubstancePresenceOf isLocatedInProduct hasConcentration SubstanceManagementInstruction'.split()),
      'dpp': ('p_dpp.owl', sorted({str(s).split('#')[-1] for s in parse(HISTORY/'mireot/dpp-textile-mireot.ttl').subjects()
               if isinstance(s,URIRef) and str(s).startswith(str(E))}
               - {'EnvironmentalFootprint','ResourceConsumption','RecycledMaterialsUse','CarbonFootprint'}
@@ -285,6 +301,21 @@ class MigrationConflict(ValueError):
     """A wrapper cannot be projected safely without an explicit decision."""
 
 
+def project_supported_legacy_data(old):
+    """Project the bounded positive-report input; refuse incomplete contexts.
+
+    This is not a general SOC/IDENT converter. Wrapper edges are temporary and
+    must subsequently be consumed by flatten_concentration_wrapper.
+    """
+    presences=set(old.subjects(RDF.type,OLD.SubstancePresenceContext))|set(old.subjects(RDF.type,OLD.SubstanceOfConcernPresenceContext))
+    for presence in presences:
+        if not all(any(old.objects(presence,p)) for p in (OLD.hasProduct,OLD.hasSubstance,OLD.hasApplicableQualification)):
+            raise MigrationConflict('Incomplete legacy presence requires manual review: '+str(presence))
+    graph=Graph()
+    for triple in old:graph.add(tuple(mapped(term) for term in triple))
+    return graph
+
+
 def flatten_concentration_wrapper(old, graph, concentration, wrapper):
     incoming=list(old.subject_predicates(wrapper))
     if incoming!=[(concentration,OLD.hasQuantitativeValue)]:
@@ -320,8 +351,7 @@ def migrate_data():
     with zipfile.ZipFile(next((ROOT/'migration/historical').glob('*.zip'))) as archive:
         for rel in paths:
             old=Graph().parse(data=archive.read(rel.as_posix()),format='turtle')
-            g=Graph()
-            for triple in old:g.add(tuple(mapped(t) for t in triple))
+            g=project_supported_legacy_data(old)
             for qualification in old.subjects(RDF.type,OLD.SoCTypeAQualification):g.add((qualification,E.hasSoCCriterion,E.CriterionA))
             type_d=set(old.subjects(RDF.type,OLD.SoCTypeDQualification))|set(old.subjects(RDF.type,T.TextileTypeDQualification))
             for qualification in type_d:
@@ -367,11 +397,9 @@ def migrate_data():
 
 def catalog():
     ns='urn:oasis:names:tc:entity:xmlns:xml:catalog';ET.register_namespace('',ns)
-    cat=ET.parse(HISTORY/'catalog-v001.xml').getroot()
-    mappings={entry.attrib['name']:entry.attrib['uri'] for entry in cat}
-    for iri,path in list(mappings.items()):
-        if iri.endswith(('/1.1.2','/1.1.3')) or iri=='https://w3id.org/eudpp/soc':
-            mappings[iri]='migration/historical/1.1.2/'+path
+    # Historical versions require their own catalogue for the entire load.
+    # A top-level alias here would resolve their versionless imports as current.
+    mappings={}
     for file in (ROOT/'dependencies/current-core').glob('*.owl'):
         for iri in parse(file).subjects(RDF.type,OWL.Ontology):mappings[str(iri)]=file.relative_to(ROOT).as_posix()
     for area in ('ontology','mireot','shacl'):
@@ -380,7 +408,9 @@ def catalog():
             g=parse(file)
             for iri in g.subjects(RDF.type,OWL.Ontology):
                 mappings[str(iri)]=file.relative_to(ROOT).as_posix()
-                for version in g.objects(iri,OWL.versionIRI):mappings[str(version)]=file.relative_to(ROOT).as_posix()
+                for version in g.objects(iri,OWL.versionIRI):
+                    if not str(version).endswith(('/1.1.2','/1.1.3')):
+                        mappings[str(version)]=file.relative_to(ROOT).as_posix()
     new=ET.Element('{'+ns+'}catalog',prefer='public')
     for iri,path in sorted(mappings.items()):ET.SubElement(new,'{'+ns+'}uri',name=iri,uri=path)
     ET.indent(new,space='  ')

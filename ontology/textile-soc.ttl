@@ -1,6 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dpp: <https://w3id.org/eudpp#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix si: <https://si-digital-framework.org/SI#> .
@@ -16,6 +17,7 @@ txtsoc:AboveThreshold a owl:NamedIndividual,
     rdfs:label "AboveThreshold"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
+    skos:definition "An evaluation result in which the complete concentration interval lies above the threshold interval."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -24,18 +26,21 @@ txtsoc:AtThreshold a owl:NamedIndividual,
     rdfs:label "AtThreshold"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
+    skos:definition "An evaluation result in which exact concentration and exact threshold values are equal."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:BelowThreshold a owl:NamedIndividual,
         txtsoc:ThresholdEvaluationResult ;
-    rdfs:label "BelowThreshold"@en,
-        "below threshold"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "below threshold"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Evaluation result indicating that the reported concentration is below the applicable threshold."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#BelowThreshold> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#BelowThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:ExactThresholdValue a owl:Class ;
     rdfs:label "ExactThresholdValue"@en ;
@@ -49,6 +54,7 @@ txtsoc:ExactThresholdValue a owl:Class ;
             owl:someValuesFrom xsd:decimal ],
         txtcon:QuantitativeValue ;
     owl:disjointWith dpp:ConcentrationOfSubstanceOfConcern ;
+    skos:definition "A Textile threshold expression represented by one exact decimal mass-ratio value."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -57,32 +63,35 @@ txtsoc:IndeterminateThresholdResult a owl:NamedIndividual,
     rdfs:label "IndeterminateThresholdResult"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
+    skos:definition "An evaluation result in which the recorded intervals overlap without establishing an exact equality or a strictly lower or higher relation."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:MaterialGroupMassBasis a owl:NamedIndividual,
         txtsoc:ConcentrationReferenceBasis ;
-    rdfs:label "MaterialGroupMassBasis"@en,
-        "material group mass basis"@en ;
+    rdfs:label "material group mass basis"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
+    skos:definition "A concentration reference basis using the mass of the identified material reporting group as denominator."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:MaterialLevel a owl:NamedIndividual,
         txtsoc:ReportingLevel ;
-    rdfs:label "Material level"@en,
-        "MaterialLevel"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Material level"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Reporting level corresponding to a material or material group within a product structure."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#MaterialLevel> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#MaterialLevel; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:NonExemptionThreshold a owl:Class ;
-    rdfs:label "Non-exemption threshold"@en,
-        "NonExemptionThreshold"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Non-exemption threshold"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class represents thresholds used to determine when exemptions are not allowed, such as the 0.1% w/w threshold for certain substances."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -91,8 +100,10 @@ txtsoc:NonExemptionThreshold a owl:Class ;
         dpp:ThresholdOfSubstanceOfConcern ;
     owl:disjointWith dpp:ConcentrationOfSubstanceOfConcern ;
     skos:definition "A threshold value above which an information element may not be exempted."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#NonExemptionThreshold> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#NonExemptionThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:NonTextileComponentMaterialGroup a owl:Class ;
     rdfs:label "Non-textile component material group"@en ;
@@ -106,23 +117,27 @@ txtsoc:NonTextileComponentMaterialGroup a owl:Class ;
 
 txtsoc:RecyclingInstructionType a owl:NamedIndividual,
         txtsoc:InstructionType ;
-    rdfs:label "RecyclingInstructionType"@en,
-        "recycling"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "recycling"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Instruction related to the recycling of the product in relation to the substance."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#RecyclingInstructionType> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#RecyclingInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:SafeUseInstructionType a owl:NamedIndividual,
         txtsoc:InstructionType ;
-    rdfs:label "SafeUseInstructionType"@en,
-        "safe-use"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "safe-use"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Instruction related to the safe use of the product in relation to the substance."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#SafeUseInstructionType> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SafeUseInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:TextileFibreCompositionMaterialGroup a owl:Class ;
     rdfs:label "Textile fibre-composition material group"@en ;
@@ -165,107 +180,111 @@ txtsoc:TextileTrackingThreshold a owl:Class ;
     txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:analyticalMethod a owl:DatatypeProperty ;
-    rdfs:label "analytical method"@en,
-        "analyticalMethod"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "analytical method"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain dpp:ConcentrationOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Textual description of the analytical method used to determine or verify the concentration."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#analyticalMethod> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#analyticalMethod; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:appliesToProduct a owl:ObjectProperty ;
-    rdfs:label "appliesToProduct"@en ;
+    rdfs:label "qualification applies to product"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain dpp:SoCQualificationAssertion ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range dpp:Product ;
+    skos:definition "Identifies the product to which a qualification assertion applies in this Textile reporting profile."@en ;
+    txtcon:modellingNote "Qualification applicability in the Textile SoC profile. This differs from dpp:appliesToProduct, whose domain is DigitalProductPassport. Always use the txtsoc prefix for qualification scope."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:evaluationNote a owl:DatatypeProperty ;
-    rdfs:label "evaluation note"@en,
-        "evaluationNote"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "evaluation note"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain txtsoc:ThresholdEvaluation ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Additional explanatory note associated with a threshold evaluation."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#evaluationNote> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluationNote; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasApplicableRegulatoryThreshold a owl:ObjectProperty ;
-    rdfs:label "has applicable regulatory threshold"@en,
-        "hasApplicableRegulatoryThreshold"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has applicable regulatory threshold"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property indicates which regulatory thresholds are relevant for interpreting a reported concentration. It does not by itself express whether the threshold is met, exceeded, or violated."@en ;
     rdfs:domain dpp:ConcentrationOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range dpp:ThresholdOfSubstanceOfConcern ;
     skos:definition "Links a concentration information object to a regulatory threshold that is applicable for its interpretation."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasConcentrationReferenceBasis a owl:ObjectProperty ;
-    rdfs:label "has concentration reference basis"@en,
-        "hasConcentrationReferenceBasis"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has concentration reference basis"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property clarifies the denominator or reference scope of the reported concentration. It is important because the regulatory interpretation of a concentration may differ depending on whether it is calculated against the final product, an article, a product part, or a material group."@en ;
     rdfs:domain dpp:ConcentrationOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ConcentrationReferenceBasis ;
     skos:definition "Links a concentration information object to the reference basis used for calculating or reporting the concentration."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasConcentrationReferenceBasis> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasConcentrationReferenceBasis; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasConcentrationReportingLevel a owl:ObjectProperty ;
-    rdfs:label "has concentration reporting level"@en,
-        "hasConcentrationReportingLevel"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has concentration reporting level"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property expresses whether the concentration is reported at product, component, material, or spare-part level."@en ;
     rdfs:domain dpp:ConcentrationOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ReportingLevel ;
     skos:definition "Indicates the reporting granularity at which the concentration is described."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasConcentrationReportingLevel> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasConcentrationReportingLevel; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasInstructionType a owl:ObjectProperty ;
-    rdfs:label "has instruction type"@en,
-        "hasInstructionType"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has instruction type"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property expresses whether the instruction concerns safe use, repair, reuse, disassembly, or recycling."@en ;
     rdfs:domain dpp:SubstanceManagementInstruction ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:InstructionType ;
     skos:definition "Indicates the declared type of instruction represented by an instruction information object."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasInstructionType> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasLocationInformation a owl:ObjectProperty ;
-    rdfs:label "has location information"@en,
-        "hasLocationInformation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has location information"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property attaches contextual location information to a substance presence context."@en ;
     rdfs:domain dpp:SubstancePresence ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:LocationInformation ;
     skos:definition "Links a substance presence context to a location information object."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
-
-txtsoc:hasPart a owl:ObjectProperty ;
-    rdfs:label "has part"@en,
-        "hasPart"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Inverse of isPartOfProduct."@en ;
-    rdfs:domain dpp:Product ;
-    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
-    rdfs:range txtam:TextileProductPart ;
-    skos:definition "Links a product to one of its parts."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasLocationInformation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasLocationInformation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasPresenceChemicalFunction a owl:ObjectProperty ;
     rdfs:label "has presence chemical function"@en ;
@@ -324,15 +343,17 @@ txtsoc:hasTextileProductGroupReference a owl:ObjectProperty ;
     txtcon:sourceType txtcon:modellingAbstraction .
 
 txtsoc:hasThresholdEvaluation a owl:ObjectProperty ;
-    rdfs:label "has threshold evaluation"@en,
-        "hasThresholdEvaluation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has threshold evaluation"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain dpp:SubstancePresence ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ThresholdEvaluation ;
     skos:definition "Links a substance presence context to a threshold evaluation associated with it."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasThresholdEvaluation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasThresholdReferenceBasis a owl:ObjectProperty ;
     rdfs:label "hasThresholdReferenceBasis"@en ;
@@ -340,6 +361,7 @@ txtsoc:hasThresholdReferenceBasis a owl:ObjectProperty ;
     rdfs:domain dpp:ThresholdOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ConcentrationReferenceBasis ;
+    skos:definition "Records the reference basis applicable to a regulatory threshold comparison."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -349,68 +371,80 @@ txtsoc:hasThresholdReportingLevel a owl:ObjectProperty ;
     rdfs:domain dpp:ThresholdOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ReportingLevel ;
+    skos:definition "Records the reporting level applicable to a regulatory threshold comparison."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:instructionContent a owl:DatatypeProperty ;
-    rdfs:label "instruction content"@en,
-        "instructionContent"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "instruction content"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Free-text guidance attached to a substance presence context. The ESPR does not define a controlled vocabulary or formal structure for instruction content."@en ;
     rdfs:domain dpp:SubstanceManagementInstruction ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Textual content of an instruction related to a substance present in a product."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#instructionContent> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#instructionContent; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:isPartOfProduct a owl:ObjectProperty ;
-    rdfs:label "is part of product"@en,
-        "isPartOfProduct"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "is part of product"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property expresses structural inclusion of a part within a product."@en ;
     rdfs:domain txtam:TextileProductPart ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range dpp:Product ;
+    owl:inverseOf txtsoc:hasPart ;
     skos:definition "Links a product part to the product of which it is a part."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#isPartOfProduct> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isPartOfProduct; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:isQualifiedByProductGroupList a owl:ObjectProperty ;
-    rdfs:label "is qualified by product-group list"@en,
-        "isQualifiedByProductGroupList"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "is qualified by product-group list"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Links a SoC type (d) qualification to the product-group-specific external list or delegated act used as qualification basis."@en ;
-    rdfs:domain dpp:SoCQualificationAssertion ;
+    rdfs:domain txtsoc:TextileTypeDQualification ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ProductGroupSpecificSoCList ;
     rdfs:subPropertyOf txtsoc:hasRegulatoryBasis ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#isQualifiedByProductGroupList> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isQualifiedByProductGroupList; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:isQualifiedBySVHCList a owl:ObjectProperty ;
-    rdfs:label "is qualified by SVHC list"@en,
-        "isQualifiedBySVHCList"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "is qualified by SVHC list"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Links a SoC type (a) qualification to the external SVHC Candidate List used as qualification basis."@en ;
     rdfs:domain dpp:SoCQualificationAssertion ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:SVHCCandidateList ;
     rdfs:subPropertyOf txtsoc:hasRegulatoryBasis ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#isQualifiedBySVHCList> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isQualifiedBySVHCList; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:locationDescriptor a owl:DatatypeProperty ;
-    rdfs:label "location descriptor"@en,
-        "locationDescriptor"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "location descriptor"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Free-text description used because the JRC and ESPR do not define a controlled vocabulary or formal spatial model for location. This textual description may complement a structured reference to a product part."@en ;
     rdfs:domain txtsoc:LocationInformation ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Textual description of where the substance is located within the product."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#locationDescriptor> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#locationDescriptor; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:productGroupApplicability a owl:DatatypeProperty ;
     rdfs:label "productGroupApplicability"@en ;
@@ -418,19 +452,22 @@ txtsoc:productGroupApplicability a owl:DatatypeProperty ;
     rdfs:domain txtsoc:ExternalRegulatoryReference ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
+    skos:definition "Text describing the product groups to which an external regulatory reference applies."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:qualificationSource a owl:DatatypeProperty ;
-    rdfs:label "qualification source"@en,
-        "qualificationSource"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "qualification source"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain dpp:SoCQualificationAssertion ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Textual reference to the legal or regulatory source on which a qualification is based."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#qualificationSource> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#qualificationSource; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:referenceDate a owl:DatatypeProperty ;
     rdfs:label "referenceDate"@en ;
@@ -438,6 +475,7 @@ txtsoc:referenceDate a owl:DatatypeProperty ;
     rdfs:domain txtsoc:ExternalRegulatoryReference ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:date ;
+    skos:definition "A date recorded for an external regulatory reference."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -447,6 +485,7 @@ txtsoc:referenceIdentifier a owl:DatatypeProperty ;
     rdfs:domain txtsoc:ExternalRegulatoryReference ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
+    skos:definition "An identifier recorded for an external regulatory reference."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -456,32 +495,37 @@ txtsoc:referenceVersion a owl:DatatypeProperty ;
     rdfs:domain txtsoc:ExternalRegulatoryReference ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
+    skos:definition "A version recorded for an external regulatory reference."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:refersToProductPartForConcentration a owl:ObjectProperty ;
-    rdfs:label "refers to product part for concentration"@en,
-        "refersToProductPartForConcentration"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "refers to product part for concentration"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Optional property used when the reported concentration refers to a specific part of the product rather than to the whole product."@en ;
     rdfs:domain dpp:ConcentrationOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtam:TextileProductPart ;
     skos:definition "Links a concentration information object to the product part to which the reported concentration refers."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#refersToProductPartForConcentration> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#refersToProductPartForConcentration; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:refersToProductPartForLocation a owl:ObjectProperty ;
-    rdfs:label "refers to product part for location"@en,
-        "refersToProductPartForLocation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "refers to product part for location"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Optional property used when the reported location refers to a specific part of the product rather than to the whole product."@en ;
     rdfs:domain txtsoc:LocationInformation ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtam:TextileProductPart ;
     skos:definition "Links a location information object to the product part to which the reported location refers."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#refersToProductPartForLocation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#refersToProductPartForLocation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:refersToProductPartForThreshold a owl:ObjectProperty ;
     rdfs:label "refersToProductPartForThreshold"@en ;
@@ -489,6 +533,7 @@ txtsoc:refersToProductPartForThreshold a owl:ObjectProperty ;
     rdfs:domain dpp:ThresholdOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtam:TextileProductPart ;
+    skos:definition "Identifies the structural product part to which a regulatory threshold comparison applies."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -504,38 +549,44 @@ txtsoc:relevantToTextileProcess a owl:ObjectProperty ;
     txtcon:sourceType txtcon:modellingAbstraction .
 
 txtsoc:substanceIdentifier a owl:DatatypeProperty ;
-    rdfs:label "substance identifier"@en,
-        "substanceIdentifier"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "substance identifier"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Functional interoperability property used for cross-checking against SVHC, CLP, POPs or other external references."@en ;
     rdfs:domain dpp:Substance ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Identifier used to match a substance against regulatory lists."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#substanceIdentifier> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#substanceIdentifier; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:thresholdNote a owl:DatatypeProperty ;
-    rdfs:label "threshold note"@en,
-        "thresholdNote"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "threshold note"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain dpp:ThresholdOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:string ;
     skos:definition "Additional explanatory note associated with a regulatory threshold."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#thresholdNote> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#thresholdNote; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:AlertConcentrationThreshold a owl:Class ;
-    rdfs:label "Alert concentration threshold"@en,
-        "AlertConcentrationThreshold"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Alert concentration threshold"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class represents circularity-driven threshold values such as c_alert for SoC type (d)."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf dpp:ThresholdOfSubstanceOfConcern ;
     skos:definition "A threshold value above which a substance should trigger alert-based handling, such as disposal instead of recycling."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#AlertConcentrationThreshold> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#AlertConcentrationThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:MaximumThresholdValue a owl:Class ;
     rdfs:label "MaximumThresholdValue"@en ;
@@ -549,28 +600,34 @@ txtsoc:MaximumThresholdValue a owl:Class ;
             owl:someValuesFrom xsd:decimal ],
         txtcon:QuantitativeValue ;
     owl:disjointWith dpp:ConcentrationOfSubstanceOfConcern ;
+    skos:definition "A Textile threshold expression represented by an upper bound on a decimal mass ratio."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
 txtsoc:SVHCCandidateList a owl:Class ;
-    rdfs:label "SVHC Candidate List"@en,
-        "SVHCCandidateList"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "SVHC Candidate List"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "External regulatory reference used to determine SoC type (a) qualification. This reference may be documented with identifiers, source, version, and date information."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf txtsoc:ExternalRegulatoryReference ;
     skos:definition "List of substances identified under REACH Article 59."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#SVHCCandidateList> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SVHCCandidateList; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:Situation a owl:Class ;
     rdfs:label "Situation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Generic superclass introduced for modelling contextual situations. It is not tied to a specific regulatory domain."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "A contextualised state of affairs or configuration in which entities stand in a meaningful relation under specific conditions."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#Situation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#Situation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:TextileConcentrationInformation a owl:Class ;
     rdfs:label "Textile concentration information"@en ;
@@ -602,30 +659,18 @@ txtsoc:TextileMaterialGroup a owl:Class ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en ;
     txtcon:sourceType txtcon:adaptedDefinition .
 
-txtsoc:TextileTypeDQualification a owl:Class ;
-    rdfs:label "Textile type (d) qualification"@en ;
-    dcterms:source <http://data.europa.eu/eli/reg/2024/1781/oj>,
-        <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf>,
-        <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "A product-group-specific type (d) qualification indicating that a substance hinders the reuse or recycling of a textile product or textile material stream."@en ;
-    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:hasValue dpp:CriterionD ;
-            owl:onProperty dpp:hasSoCCriterion ],
-        dpp:SoCQualificationAssertion ;
-    txtcon:sourceLocator "JRC Section 12.1, printed page 219, lines 6169-6170; Section 12.3.6, printed pages 238-239, lines 6634-6639; Section 12.3.11, printed page 246, lines 6815-6822."@en ;
-    txtcon:sourceType txtcon:adaptedDefinition .
-
 txtsoc:TrackingThreshold a owl:Class ;
-    rdfs:label "Tracking threshold"@en,
-        "TrackingThreshold"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Tracking threshold"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class represents thresholds used to determine whether a substance of concern must be tracked or reported in the DPP context."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf dpp:ThresholdOfSubstanceOfConcern ;
     skos:definition "A threshold value above which a substance of concern must be tracked or reported."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#TrackingThreshold> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#TrackingThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:adhesiveOrBondingLayerLocation a skos:Concept,
         txtsoc:TextileSoCLocationTypeConcept ;
@@ -658,26 +703,30 @@ txtsoc:coatingOrFinishLocation a skos:Concept,
     txtcon:sourceType txtcon:modellingAbstraction .
 
 txtsoc:evaluatesAgainstThreshold a owl:ObjectProperty ;
-    rdfs:label "evaluates against threshold"@en,
-        "evaluatesAgainstThreshold"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "evaluates against threshold"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain txtsoc:ThresholdEvaluation ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range dpp:ThresholdOfSubstanceOfConcern ;
     skos:definition "Links a threshold evaluation to the regulatory threshold used for the comparison."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#evaluatesAgainstThreshold> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesAgainstThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:evaluatesConcentrationInformation a owl:ObjectProperty ;
-    rdfs:label "evaluates concentration information"@en,
-        "evaluatesConcentrationInformation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "evaluates concentration information"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain txtsoc:ThresholdEvaluation ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range dpp:ConcentrationOfSubstanceOfConcern ;
     skos:definition "Links a threshold evaluation to the concentration information being evaluated."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#evaluatesConcentrationInformation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesConcentrationInformation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:fibreCompositionLocation a skos:Concept,
         txtsoc:TextileSoCLocationTypeConcept ;
@@ -694,16 +743,32 @@ txtsoc:fibreCompositionLocation a skos:Concept,
     txtcon:sourceLocator "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en ;
     txtcon:sourceType txtcon:modellingAbstraction .
 
+txtsoc:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:comment "Inverse of isPartOfProduct."@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
+    rdfs:range txtam:TextileProductPart ;
+    skos:definition "Links a product to one of its parts."@en ;
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasPart> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasPart; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
+
 txtsoc:hasThresholdEvaluationResult a owl:ObjectProperty ;
-    rdfs:label "has threshold evaluation result"@en,
-        "hasThresholdEvaluationResult"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has threshold evaluation result"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:domain txtsoc:ThresholdEvaluation ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ThresholdEvaluationResult ;
     skos:definition "Links a threshold evaluation to its result."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasThresholdEvaluationResult> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:lowerBound a owl:DatatypeProperty ;
     rdfs:label "lowerBound"@en ;
@@ -711,6 +776,7 @@ txtsoc:lowerBound a owl:DatatypeProperty ;
     rdfs:domain txtsoc:RangeThresholdValue ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:decimal ;
+    skos:definition "The lower bound of a Textile range threshold expression."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -720,6 +786,7 @@ txtsoc:maximumValue a owl:DatatypeProperty ;
     rdfs:domain txtsoc:MaximumThresholdValue ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:decimal ;
+    skos:definition "The upper bound of a Textile maximum threshold expression."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -774,6 +841,7 @@ txtsoc:upperBound a owl:DatatypeProperty ;
     rdfs:domain txtsoc:RangeThresholdValue ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range xsd:decimal ;
+    skos:definition "The upper bound of a Textile range threshold expression."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -793,26 +861,30 @@ txtsoc:wholeProductLocation a skos:Concept,
     txtcon:sourceType txtcon:modellingAbstraction .
 
 txtsoc:MaterialGroup a owl:Class ;
-    rdfs:label "MaterialGroup"@en,
-        "material group"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "material group"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class remains product-sector neutral. Sector-specific material group subclasses, such as textile material groups or hard component material groups, should be defined in product-specific modules."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf txtam:TextileProductPart ;
     skos:definition "A material or material grouping within a product, used as a structural unit for reporting or calculating substance concentration."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#MaterialGroup> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#MaterialGroup; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:ProductGroupSpecificSoCList a owl:Class ;
-    rdfs:label "Product-group specific SoC list"@en,
-        "ProductGroupSpecificSoCList"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Product-group specific SoC list"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "External regulatory specification used to determine SoC type (d) qualification. This reference may be documented with identifiers, source, version, date, and product-category applicability information."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf txtsoc:ExternalRegulatoryReference ;
     skos:definition "List of substances hindering reuse or recycling for a given product group."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:RangeThresholdValue a owl:Class ;
     rdfs:label "RangeThresholdValue"@en ;
@@ -829,6 +901,7 @@ txtsoc:RangeThresholdValue a owl:Class ;
             owl:someValuesFrom xsd:decimal ],
         txtcon:QuantitativeValue ;
     owl:disjointWith dpp:ConcentrationOfSubstanceOfConcern ;
+    skos:definition "A Textile threshold expression represented by lower and upper decimal mass-ratio bounds."@en ;
     txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
     txtcon:sourceType txtcon:projectDecision .
 
@@ -853,69 +926,95 @@ txtsoc:TextileSoCHandlingInformation a owl:Class ;
     txtcon:sourceLocator "JRC Section 12.1, printed pages 219-220, lines 6205-6220."@en ;
     txtcon:sourceType txtcon:adaptedDefinition .
 
+txtsoc:TextileTypeDQualification a owl:Class ;
+    rdfs:label "Textile type (d) qualification"@en ;
+    dcterms:source <http://data.europa.eu/eli/reg/2024/1781/oj>,
+        <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf>,
+        <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:comment "A product-group-specific type (d) qualification indicating that a substance hinders the reuse or recycling of a textile product or textile material stream."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue dpp:CriterionD ;
+            owl:onProperty dpp:hasSoCCriterion ],
+        dpp:SoCQualificationAssertion ;
+    txtcon:sourceLocator "JRC Section 12.1, printed page 219, lines 6169-6170; Section 12.3.6, printed pages 238-239, lines 6634-6639; Section 12.3.11, printed page 246, lines 6815-6822."@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
+
 txtsoc:ConcentrationReferenceBasis a owl:Class ;
-    rdfs:label "ConcentrationReferenceBasis"@en,
-        "concentration reference basis"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "concentration reference basis"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "ConcentrationReferenceBasis represents the denominator or reference scope used for concentration calculation, such as the final product mass, an article mass, a product part mass, or a material group mass. It is distinct from the reporting level and from the concrete product part to which the information may refer."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Reference basis against which a substance concentration is calculated or reported."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#ConcentrationReferenceBasis> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ConcentrationReferenceBasis; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:InstructionType a owl:Class ;
-    rdfs:label "Instruction type"@en,
-        "InstructionType"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Instruction type"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class represents the kind of instruction expressed in the DPP information element."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Declared type of instruction according to the relevant lifecycle-related activity addressed by the information element."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#InstructionType> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#InstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:ReportingLevel a owl:Class ;
-    rdfs:label "ReportingLevel"@en,
-        "reporting level"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "reporting level"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Reporting level indicates the declared granularity of an information item, such as product level, component level, material level, or spare-part level. It does not by itself identify the concrete product part concerned, nor does it define the mass reference basis used for concentration calculation."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Declared level of granularity at which a substance-related information item is reported."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#ReportingLevel> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ReportingLevel; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasRegulatoryBasis a owl:ObjectProperty ;
-    rdfs:label "has regulatory basis"@en,
-        "hasRegulatoryBasis"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has regulatory basis"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Generic property linking a qualification to its supporting external legal or classificatory basis."@en ;
     rdfs:domain dpp:SoCQualificationAssertion ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtsoc:ExternalRegulatoryReference ;
     skos:definition "Links a regulatory qualification to the external regulatory reference on which it is based."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasRegulatoryBasis> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasRegulatoryBasis; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:hasThresholdQuantitativeValue a owl:ObjectProperty ;
-    rdfs:label "has threshold quantitative value"@en,
-        "hasThresholdQuantitativeValue"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "has threshold quantitative value"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This property links a regulatory threshold to an exact, maximum, or range quantitative value."@en ;
     rdfs:domain dpp:ThresholdOfSubstanceOfConcern ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:range txtcon:QuantitativeValue ;
     skos:definition "Links a regulatory threshold to its quantitative expression."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#hasThresholdQuantitativeValue> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdQuantitativeValue; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:LocationInformation a owl:Class ;
-    rdfs:label "Location information"@en,
-        "LocationInformation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Location information"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Information object attached to a SubstancePresenceContext in order to describe the reported location of the substance within the product. This class does not imply a formal spatial model."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Contextual qualitative information describing where a substance is located within a product."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#LocationInformation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#LocationInformation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:TextileSubstanceOfConcernPresenceContext a owl:Class ;
     rdfs:label "Textile substance of concern presence context"@en ;
@@ -937,9 +1036,9 @@ txtsoc:TextileSubstanceOfConcernPresenceContext a owl:Class ;
     txtcon:sourceType txtcon:modellingAbstraction .
 
 txtsoc:ThresholdEvaluation a owl:Class ;
-    rdfs:label "Threshold evaluation"@en,
-        "ThresholdEvaluation"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Threshold evaluation"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class represents the evaluative layer between measurement and regulatory consequence. It does not replace ConcentrationInformation or RegulatoryThreshold; it records the result of applying a threshold rule to a concentration value in a given substance presence context."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -953,28 +1052,34 @@ txtsoc:ThresholdEvaluation a owl:Class ;
             owl:someValuesFrom dpp:ConcentrationOfSubstanceOfConcern ],
         txtsoc:Situation ;
     skos:definition "A contextual regulatory evaluation in which a reported concentration is compared with an applicable regulatory threshold."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#ThresholdEvaluation> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ThresholdEvaluation; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:ThresholdEvaluationResult a owl:Class ;
-    rdfs:label "Threshold evaluation result"@en,
-        "ThresholdEvaluationResult"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "Threshold evaluation result"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class is used as a controlled vocabulary for the outcome of threshold evaluation."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "Controlled result value produced by a threshold evaluation."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#ThresholdEvaluationResult> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:ExternalRegulatoryReference a owl:Class ;
-    rdfs:label "External regulatory reference"@en,
-        "ExternalRegulatoryReference"@en ;
-    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:label "External regulatory reference"@en ;
+    dcterms:source <https://w3id.org/eudpp/soc>,
+        <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "This class represents external documentary or classificatory references used to justify or determine a regulatory qualification."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-soc> ;
     skos:definition "An external regulatory list, classification, or specification used as the basis for a regulatory qualification."@en ;
-    txtcon:sourceLocator "docs/decisions/TXT-DEC-010.md"@en ;
-    txtcon:sourceType txtcon:projectDecision .
+    prov:wasDerivedFrom <https://w3id.org/eudpp/soc#ExternalRegulatoryReference> ;
+    txtcon:modellingNote "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."@en ;
+    txtcon:sourceLocator "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ExternalRegulatoryReference; local adaptation: docs/decisions/TXT-DEC-010.md"@en ;
+    txtcon:sourceType txtcon:adaptedDefinition .
 
 txtsoc:TextileSoCLocationTypeConcept a owl:Class ;
     rdfs:label "Textile SoC location type concept"@en ;
