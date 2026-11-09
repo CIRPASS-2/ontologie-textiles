@@ -609,7 +609,7 @@ This section provides details for each class and property defined by EU DPP Text
     is in domain of
    </dt>
    <dd>
-    <a href="#hasParameterValue" title="https://w3id.org/eudpp/textile-assessment#hasParameterValue">has parameter value</a> <sup class="type-op" title="object property">op</sup>, <a href="#settingForParameter" title="https://w3id.org/eudpp/textile-assessment#settingForParameter">setting for parameter</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasParameterConcept" title="https://w3id.org/eudpp/textile-assessment#hasParameterConcept">has parameter concept</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasParameterValue" title="https://w3id.org/eudpp/textile-assessment#hasParameterValue">has parameter value</a> <sup class="type-op" title="object property">op</sup>, <a href="#settingForParameter" title="https://w3id.org/eudpp/textile-assessment#settingForParameter">setting for parameter</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -1108,6 +1108,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#hasCondition" title="https://w3id.org/eudpp/textile-assessment#hasCondition">has condition</a></li>
   <li><a href="#hasMeasuredValue" title="https://w3id.org/eudpp/textile-assessment#hasMeasuredValue">has measured value</a></li>
   <li><a href="#hasMeasurementParameter" title="https://w3id.org/eudpp/textile-assessment#hasMeasurementParameter">has measurement parameter</a></li>
+  <li><a href="#hasParameterConcept" title="https://w3id.org/eudpp/textile-assessment#hasParameterConcept">has parameter concept</a></li>
   <li><a href="#hasParameterSetting" title="https://w3id.org/eudpp/textile-assessment#hasParameterSetting">has parameter setting</a></li>
   <li><a href="#hasParameterValue" title="https://w3id.org/eudpp/textile-assessment#hasParameterValue">has parameter value</a></li>
   <li><a href="#hasRatingValue" title="https://w3id.org/eudpp/textile-assessment#hasRatingValue">has rating value</a></li>
@@ -1557,6 +1558,37 @@ This section provides details for each class and property defined by EU DPP Text
     </dt>
     <dd>
      <a href="#MeasurementParameter" title="https://w3id.org/eudpp/textile-assessment#MeasurementParameter">Measurement parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasParameterConcept">
+  <h3>has parameter concept<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-assessment#hasParameterConcept</p>
+  <div class="comment">
+   <span class="markdown">Links a measurement parameter setting to its categorical or coded protocol value, represented by a SKOS concept. The concept qualifies the protocol setting, not the assessed product characteristic or a rule for selecting an applicable threshold.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-assessment">https://w3id.org/eudpp/textile-assessment</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MeasurementParameterSetting" title="https://w3id.org/eudpp/textile-assessment#MeasurementParameterSetting">Measurement parameter setting</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

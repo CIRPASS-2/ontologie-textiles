@@ -7,9 +7,10 @@ from owlrl import DeductiveClosure, RDFS_Semantics, OWLRL_Semantics
 from pyshacl import validate
 import pytest
 from migration import mat_alignment as m
-from issue20_support import published_contract_graph, published_bytes
+from issue20_support import (published_contract_graph, published_bytes,
+                             expected_quantitative_shapes, POINT3_SHACL_README_SHA256)
 from scripts import validate_public as v
-from rdflib.compare import graph_diff, to_isomorphic
+from rdflib.compare import graph_diff, to_isomorphic, isomorphic
 import subprocess
 
 EX = Namespace('https://example.org/eu-dpp-textile/')
@@ -91,7 +92,8 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
     assert len(names) == 76
     additions = {'examples/example-12-assessed-aspects-v2.1.0-dev.ttl',
                  'shacl/profiles/textile-assessed-aspect-targets.ttl',
-                 'examples/example-13-assessment-product-event-v2.1.0-dev.ttl'}
+                 'examples/example-13-assessment-product-event-v2.1.0-dev.ttl',
+                 'examples/example-14-parameter-values-v2.1.0-dev.ttl'}
     active = {name for name in v.package_files(m.ROOT)
               if any(name == area or name.startswith(area + '/') for area in areas)}
     assert active == set(names) | additions
@@ -104,11 +106,15 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
                 expected = expected.replace(
                     ('textile-' + module + '/2.0.0').encode(),
                     ('textile-' + module + '/2.1.0-dev').encode())
+            expected = expected.replace(b'textile-shacl/quantitative/2.0.0', b'textile-shacl/quantitative/2.1.0-dev')
         elif name == 'shacl/README.md':
             current = (m.ROOT / name).read_bytes()
             assert current.startswith(old)  # Existing profile contract is untouched.
-            assert hashlib.sha256(current[len(old):]).hexdigest() == '3543dc4ca94440c45f07de6b01d67f5068ac9c3f76115d5f3b6faa9c34754c0b'
+            assert hashlib.sha256(current).hexdigest() == POINT3_SHACL_README_SHA256
             expected = current  # Only the exact new optional-profile documentation.
+        elif name == 'shacl/textile-quantitative-shapes.ttl':
+            assert isomorphic(Graph().parse(m.ROOT / name), expected_quantitative_shapes())
+            expected = (m.ROOT / name).read_bytes()  # Complete exact graph checked above.
         elif name == 'traceability/textile-resource-traceability.csv':
             rows = v.derive(v.ontology_graph(m.ROOT))[0]
             expected = v.csv_bytes(v.RESOURCE_FIELDS, rows)
@@ -117,8 +123,9 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
             before = list(csv.DictReader(io.StringIO(old.decode('utf8'))))
             assert [r for r in rows if r['resource_iri'] not in {
                     'https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect',
-                    'https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent'}] == before
-            assert len(rows) == len(before) + 2
+                    'https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent',
+                    'https://w3id.org/eudpp/textile-assessment#hasParameterConcept'}] == before
+            assert len(rows) == len(before) + 3
         assert (m.ROOT / name).read_bytes() == expected, name
 
 

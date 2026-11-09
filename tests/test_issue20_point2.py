@@ -1,5 +1,6 @@
 """Only the approved assessment-to-conceptual-event bridge and import."""
 import subprocess
+import hashlib
 
 import pytest
 from rdflib import Graph, Namespace, RDF, RDFS, OWL, Literal
@@ -8,7 +9,8 @@ from owlrl import DeductiveClosure, OWLRL_Semantics
 from pyshacl import validate
 
 from scripts import validate_public as v
-from issue20_support import POINT2_TURTLE, published_contract_graph
+from issue20_support import (POINT2_TURTLE, published_contract_graph, apply_point3,
+                             expected_quantitative_shapes, POINT3_SHACL_README_SHA256)
 
 ROOT = v.ROOT
 POINT1 = 'c87568e707d1c183a8ef24090180fcae01001f7c'
@@ -35,6 +37,7 @@ def test_exact_delta_preserves_point1_and_all_other_modules():
             assert len(extension) == 9  # Eight property triples and one import.
             assert not set(extension) & set(expected)
             expected += extension
+            apply_point3(expected)  # Check the exact separately approved later delta.
         else:
             assert (ROOT / name).read_bytes() == before, name
         assert isomorphic(Graph().parse(ROOT / name), expected), name
@@ -49,7 +52,17 @@ def test_dependency_and_point1_inputs_are_unchanged():
          'docs/ISSUE20_POINT1_IMPLEMENTATION.md', 'VERSION', 'catalog-v001.xml',
          'scripts/validate_public.py'], cwd=ROOT, text=True).splitlines()
     for name in names:
-        assert (ROOT / name).read_bytes() == point1_bytes(name), name
+        if name == 'catalog-v001.xml':
+            assert (ROOT / name).read_bytes() == point1_bytes(name).replace(
+                b'textile-shacl/quantitative/2.0.0', b'textile-shacl/quantitative/2.1.0-dev')
+        elif name == 'shacl/textile-quantitative-shapes.ttl':
+            assert isomorphic(Graph().parse(ROOT / name), expected_quantitative_shapes())
+        elif name == 'shacl/README.md':
+            current = (ROOT / name).read_bytes()
+            assert current.startswith(point1_bytes(name))
+            assert hashlib.sha256(current).hexdigest() == POINT3_SHACL_README_SHA256
+        else:
+            assert (ROOT / name).read_bytes() == point1_bytes(name), name
 
 
 def test_standalone_import_is_bounded_and_does_not_import_process():

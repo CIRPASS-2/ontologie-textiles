@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 point 3 - 2026-11-09
+
+Add hasParameterConcept for categorical protocol-setting values. Change only the
+measurement-parameter setting shape to inclusive numerical/categorical presence,
+keeping numerical checks unconditional and allowing multiple concepts. Advance
+only the changed quantitative profile version IRI to 2.1.0-dev with explicit
+maintainer approval. Points 1 and 2 and other shapes are preserved. See TXT-DEC-013.
+
 ## 2.1.0-dev - issue #20 point 2 - 2026-11-09
 
 Add the optional ASSESSMENT isRepresentedByProductEvent bridge and a direct

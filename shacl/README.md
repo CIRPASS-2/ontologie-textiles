@@ -38,3 +38,19 @@ nor restricts the number of bindings. The default loader does not select it.
 Use it as pySHACL's `shacl_graph` with the same offline ontology/data merge and
 `do_owl_imports=False` as the baseline. The regression tests cover valid and
 invalid targets, missing/multiple links and existing examples 06/07.
+
+## Parameter-setting values (issue #20 point 3)
+
+MeasurementParameterSettingShape accepts a quantitative value, one or more SKOS
+concepts, or both. It retains the numerical maximum of one and validates every
+supplied value outside the inclusive alternatives. Units, decimal datatypes and
+quantity-kind checks are unchanged. No coded maximum or exclusive xone is added.
+A setting with neither form now produces a node-level OrConstraintComponent,
+rather than a hasParameterValue MinCountConstraintComponent.
+
+For a concept-typing check on supplied data, validate before RDFS materialisation
+with the relevant code declarations available. The standard RDFS run can infer
+Concept typing from hasParameterConcept itself; passing is not authoritative
+vocabulary-membership verification. Literal code targets fail either mode.
+The changed quantitative profile has version IRI ending 2.1.0-dev, approved as a
+single-IRI metadata correction; its original 2.0.0 graph remains in Git history.

@@ -306,6 +306,14 @@
 <https://w3id.org/eudpp/textile-assessment#hasMeasurementParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-assessment#MeasurementParameter> .
 <https://w3id.org/eudpp/textile-assessment#hasMeasurementParameter> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010; Annex 13.4, Table 124, printed pages 362-367, caption line 9698."@en .
 <https://w3id.org/eudpp/textile-assessment#hasMeasurementParameter> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a measurement parameter setting to its categorical or coded protocol value, represented by a SKOS concept. The concept qualifies the protocol setting, not the assessed product characteristic or a rule for selecting an applicable threshold."@en .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-assessment#MeasurementParameterSetting> .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-assessment> .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter concept"@en .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "docs/decisions/TXT-DEC-013.md"@en .
+<https://w3id.org/eudpp/textile-assessment#hasParameterConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-assessment#hasParameterSetting> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-assessment#hasParameterSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-assessment#hasParameterSetting> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an assessment execution or condition to a concrete parameter setting."@en .
@@ -553,7 +561,7 @@
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtass" .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-assessment#" .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern."@en .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative results, quantitative parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern; categorical parameter settings use SKOS concepts."@en .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "The module separates reusable methods and standards, concrete assessment executions, and the results produced by those executions."@en .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Assessment Ontology"@en .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .

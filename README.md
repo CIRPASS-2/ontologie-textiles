@@ -18,7 +18,7 @@ The **current CIRPASS Textile Ontology** is the JRC-grounded community review ca
 ## Versions and entry point
 
 The current uncommitted development candidate is **2.1.0-dev**, implementing
-issue #20 points 1 and 2. ASSESSMENT and the network entry point have new
+issue #20 points 1-3. ASSESSMENT and the network entry point have new
 2.1.0-dev version identities; the other eleven modules and all seven MIREOTs
 retain their existing identities and axioms. Nothing on this branch is published.
 
@@ -40,7 +40,7 @@ See the [migration guide](docs/CORE_2026_MIGRATION.md).
 - [Architecture](docs/ARCHITECTURE.md), [modelling guide](docs/MODELLING_GUIDE.md) and public modelling rationale under `docs/decisions/`.
 - `ontology/` and `mireot/`: the complete bounded Textile network.
 - [Dependencies](docs/DEPENDENCIES.md): relevant upstream snapshots for comparison and provenance.
-- [SHACL profiles](shacl/README.md) and thirteen [examples](examples/).
+- [SHACL profiles](shacl/README.md) and fourteen [examples](examples/).
 - [Diagrams](diagrams/DIAGRAM_INDEX.md): illustrative views with a recomputed inventory.
 - Positive, negative and reasoning fixtures under `tests/abox_corpus/`.
 
@@ -56,7 +56,7 @@ python -B -m pytest -p no:cacheprovider tests -q
 python -B scripts/validate_public.py --full --complete-report
 ```
 
-Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks thirteen examples, the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
+Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks fourteen examples, the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
 
 The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL. Recyclability requires explicit RDFS inference; an entailment declaration does not itself load the ontology. The three structural profiles and optional complete-report profile are selective application constraints, not complete ontology conformance. The supplied reasoning checks do not establish complete OWL DL consistency or satisfiability.
 
@@ -70,7 +70,7 @@ The CIRPASS Textile Ontology is grounded in the JRC textile studies while explic
 - [Traceability guide](traceability/README.md)
 - [Source methodology](docs/SOURCE_TRACEABILITY.md)
 
-The following counts are generated from the public CSV: **901 resources**, **946 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
+The following counts are generated from the public CSV: **902 resources**, **946 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
 
 | Provenance category | Resource count |
 |---|---:|
@@ -78,12 +78,12 @@ The following counts are generated from the public CSV: **901 resources**, **946
 | adaptedRelation | 27 |
 | directExtraction | 16 |
 | externalReuse | 1 |
-| modellingAbstraction | 380 |
+| modellingAbstraction | 381 |
 | projectDecision | 74 |
 
 | Defining module | Resource count |
 |---|---:|
-| textile-assessment | 61 |
+| textile-assessment | 62 |
 | textile-associated-materials | 61 |
 | textile-connector | 37 |
 | textile-context | 42 |
@@ -152,3 +152,12 @@ the ProductEvent separate from its EPCIS ObjectEvent carrier. The existing
 bounded EVENT import supplies ProductEvent, not the carrier mapping axioms;
 those remain available in the unchanged full EVENT 1.0.0 reference source.
 See [TXT-DEC-012](docs/decisions/TXT-DEC-012.md).
+
+## Issue #20 point 3 coded parameter settings
+
+`txtass:hasParameterConcept` supplies categorical protocol values alongside the
+existing quantitative setting pattern. [Example 14](examples/example-14-parameter-values-v2.1.0-dev.ttl)
+shows both kinds of setting. Inclusive SHACL alternatives permit either or both
+forms, preserve numeric validation and impose no categorical maximum. Concept
+typing after RDFS inference does not verify controlled-vocabulary membership.
+See [TXT-DEC-013](docs/decisions/TXT-DEC-013.md) and [SHACL guidance](shacl/README.md).

@@ -198,6 +198,15 @@ txtass:hasParameterSetting a owl:ObjectProperty ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:modellingAbstraction .
 
+txtass:hasParameterConcept a owl:ObjectProperty ;
+    rdfs:label "has parameter concept"@en ;
+    rdfs:comment "Links a measurement parameter setting to its categorical or coded protocol value, represented by a SKOS concept. The concept qualifies the protocol setting, not the assessed product characteristic or a rule for selecting an applicable threshold."@en ;
+    rdfs:domain txtass:MeasurementParameterSetting ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-013.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
 txtass:hasParameterValue a owl:ObjectProperty ;
     rdfs:label "has parameter value"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
@@ -634,7 +643,7 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
     dcterms:title "EU DPP Textile Assessment Ontology"@en ;
     vann:preferredNamespacePrefix "txtass" ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-assessment#" ;
-    rdfs:comment "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern."@en,
+    rdfs:comment "Quantitative results, quantitative parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern; categorical parameter settings use SKOS concepts."@en,
         "The module separates reusable methods and standards, concrete assessment executions, and the results produced by those executions."@en ;
     owl:imports <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,

@@ -19,7 +19,7 @@ MeasurementResult. Point to an individual typed by the relevant characteristic
 or phenomenon class, following [example 12](../examples/example-12-assessed-aspects-v2.1.0-dev.ttl).
 Do not point directly to an OWL class IRI: class/individual punning does not
 inherit class membership. Protocol controls remain MeasurementParameterSettings
-with settingForParameter and hasParameterValue.
+with settingForParameter and hasParameterValue or hasParameterConcept.
 
 The target is the direct subject, not necessarily the scalar quantity or grade
 dimension. Pilling and PillingResistance remain different categories. A numeric
@@ -50,6 +50,25 @@ EPCIS carrier mappings; applications using `dpp:isRepresentedByCarrier` provide
 their existing EVENT definitions. No links or cardinalities are required.
 See [example 13](../examples/example-13-assessment-product-event-v2.1.0-dev.ttl)
 and [TXT-DEC-012](decisions/TXT-DEC-012.md).
+
+## Numerical and categorical protocol settings (issue #20 point 3)
+
+A MeasurementParameterSetting assigns a numerical value with hasParameterValue
+or a coded value with hasParameterConcept to a MeasurementParameter. An execution
+or AssessmentCondition can own the setting through hasParameterSetting. The code
+is a SKOS concept supplied by the application; no code list is introduced here.
+A setting is distinct from an intrinsic specimen/product characteristic and
+from a rule selecting an applicable threshold. Neither role is added by point 3.
+
+The baseline setting shape requires at least one value form. Both may be present;
+all numerical values remain checked, with a maximum of one, and all code targets
+must be SKOS concepts in the validation graph. There is no categorical maximum.
+Before inference, missing or incorrect concept typing fails. With RDFS, the
+property range itself infers Concept typing: this is not verification against
+an authoritative vocabulary. Type-check imported code data before entailment
+when that distinction matters. Code-to-number agreement is not checked.
+See [example 14](../examples/example-14-parameter-values-v2.1.0-dev.ttl) and
+[TXT-DEC-013](decisions/TXT-DEC-013.md).
 
 ## Quantitative values
 
