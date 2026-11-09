@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 point 1 - 2026-11-09
+
+Add resultForAssessedAspect to ASSESSMENT, linking a MeasurementResult to its
+individual assessed subject. Provide opt-in target checking without cardinality constraints;
+the baseline remains compatible. Add
+multi-result, degradation and structural examples and negative/inference tests.
+Preserve the 2.0.0 baseline in existing Git history. Only ASSESSMENT
+and the network advance version identity. No other issue point is implemented,
+and no release is published. See TXT-DEC-011.
+
 ## CORE MAT classification alignment - 2026-11-02
 
 Addressed Nader Jelassi's source PR #19 review: FibreTypeConcept now subclasses

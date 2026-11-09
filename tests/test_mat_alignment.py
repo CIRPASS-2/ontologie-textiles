@@ -7,22 +7,39 @@ from owlrl import DeductiveClosure, RDFS_Semantics, OWLRL_Semantics
 from pyshacl import validate
 import pytest
 from migration import mat_alignment as m
+from issue20_support import published_contract_graph, published_bytes
+from scripts import validate_public as v
+from rdflib.compare import graph_diff, to_isomorphic
+import subprocess
 
 EX = Namespace('https://example.org/eu-dpp-textile/')
 
 
+def closure():
+    return sum((Graph().parse(p) for p in v.catalogue_import_closure(
+        m.ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology')), Graph())
+
+
 @pytest.fixture(scope='module', params=[RDFS_Semantics, OWLRL_Semantics], ids=['RDFS', 'OWL-RL'])
 def model(request):
-    graph = m.closure() + Graph().parse(m.ROOT / 'examples/example-01-product-composition-v1.1.2.ttl')
+    graph = closure() + Graph().parse(m.ROOT / 'examples/example-01-product-composition-v1.1.2.ttl')
     DeductiveClosure(request.param).expand(graph)
     return graph
 
 
 def test_exact_approved_delta_and_no_other_canonical_changes():
-    rows = m.canonical_differences()
-    assert len(rows) == 13
-    assert sum(len(row['added']) for row in rows) == 7
-    assert sum(len(row['removed']) for row in rows) == 6
+    added_count = removed_count = 0
+    for filename in v.CURRENT_MODULES:
+        name = 'ontology/' + filename
+        published = published_contract_graph(Graph().parse(m.ROOT / name), name)
+        before = Graph().parse(data=m.baseline_bytes(name), format='turtle')
+        _, added, removed = graph_diff(to_isomorphic(published), to_isomorphic(before))
+        want_added, want_removed = m.expected_delta(name)
+        assert set(added) == want_added and set(removed) == want_removed
+        m.restore_frozen_graph(published, name)
+        added_count += len(added)
+        removed_count += len(removed)
+    assert added_count == 7 and removed_count == 6
 
 
 @pytest.mark.parametrize('fault', [
@@ -64,7 +81,43 @@ def test_exact_delta_rejects_unauthorized_changes(fault):
 
 
 def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
-    assert len(m.protected_hashes()) == 76
+    # Keep checking ACTIVE files, not an archived substitute. Only the exact
+    # catalogue/version change, derived traceability row and doc append are permitted.
+    areas = ['catalog-v001.xml', 'dependencies', 'mireot', 'migration/core-sources',
+             'migration/historical', 'shacl', 'examples', 'traceability']
+    names = subprocess.check_output(
+        ['git', 'ls-tree', '-r', '--name-only', m.BASELINE, '--', *areas],
+        cwd=m.ROOT, text=True).splitlines()
+    assert len(names) == 76
+    additions = {'examples/example-12-assessed-aspects-v2.1.0-dev.ttl',
+                 'shacl/profiles/textile-assessed-aspect-targets.ttl'}
+    active = {name for name in v.package_files(m.ROOT)
+              if any(name == area or name.startswith(area + '/') for area in areas)}
+    assert active == set(names) | additions
+    for name in names:
+        old = m.baseline_bytes(name)
+        assert old == published_bytes(name), name  # Historical protected contract.
+        expected = old
+        if name == 'catalog-v001.xml':
+            for module in ('assessment', 'ontology'):
+                expected = expected.replace(
+                    ('textile-' + module + '/2.0.0').encode(),
+                    ('textile-' + module + '/2.1.0-dev').encode())
+        elif name == 'shacl/README.md':
+            current = (m.ROOT / name).read_bytes()
+            assert current.startswith(old)  # Existing profile contract is untouched.
+            assert hashlib.sha256(current[len(old):]).hexdigest() == '3543dc4ca94440c45f07de6b01d67f5068ac9c3f76115d5f3b6faa9c34754c0b'
+            expected = current  # Only the exact new optional-profile documentation.
+        elif name == 'traceability/textile-resource-traceability.csv':
+            rows = v.derive(v.ontology_graph(m.ROOT))[0]
+            expected = v.csv_bytes(v.RESOURCE_FIELDS, rows)
+            # The public validator verifies the projection; only one new row.
+            import csv, io
+            before = list(csv.DictReader(io.StringIO(old.decode('utf8'))))
+            assert [r for r in rows if r['resource_iri'] !=
+                    'https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect'] == before
+            assert len(rows) == len(before) + 1
+        assert (m.ROOT / name).read_bytes() == expected, name
 
 
 def test_all_fibre_concepts_are_mat_material_types(model):
@@ -110,7 +163,7 @@ def test_historical_ontology_bytes_are_unchanged():
 
 @pytest.mark.parametrize('complete', [False, True], ids=['default', 'complete-report'])
 def test_public_example_shacl_results_are_preserved(complete):
-    graph = m.closure()
+    graph = closure()
     examples = sum((Graph().parse(p) for p in (m.ROOT / 'examples').glob('*.ttl')), Graph())
     shapes = sum((Graph().parse(p) for p in (m.ROOT / 'shacl').glob('*.ttl')), Graph())
     if complete:

@@ -4,6 +4,7 @@ import re
 from rdflib import Graph, Literal, URIRef
 from migration import implement_core as m
 from migration.update_creators import semantic_digest
+from issue20_support import published_contract_graph
 
 
 def test_all_thirteen_graphs_preserve_every_non_creator_triple():
@@ -13,7 +14,7 @@ def test_all_thirteen_graphs_preserve_every_non_creator_triple():
     revision=json.loads((m.ROOT/'migration/version-identity-results.json').read_text('utf8'))
     revisions={row['file']:row for row in revision['modules']}
     for row in report['modules']:
-        path=m.ROOT/row['file'];graph=m.parse(path);ontology=URIRef(row['ontology_iri'])
+        path=m.ROOT/row['file'];graph=published_contract_graph(m.parse(path),row['file']);ontology=URIRef(row['ontology_iri'])
         assert set(graph.objects(ontology,m.DC.creator))=={Literal(name,lang='en') for name in row['creators_after']}
         assert set(row['creators_before'])=={'Elio Hbeich','BOUGACHA Racem'}
         from migration.mat_alignment import restore_frozen_graph

@@ -12,6 +12,31 @@ Use Textile Process for process types and executions. Use the event-aligned clas
 
 An assessment method specifies how a characteristic is evaluated. An assessment execution applies the method under stated conditions. The result records the observed or calculated outcome. Indicators interpret or aggregate such results for a defined purpose and context.
 
+## Binding individual results to assessed subjects (2.1.0-dev)
+
+Use `txtass:resultForAssessedAspect` on each independently identifiable
+MeasurementResult. Point to an individual typed by the relevant characteristic
+or phenomenon class, following [example 12](../examples/example-12-assessed-aspects-v2.1.0-dev.ttl).
+Do not point directly to an OWL class IRI: class/individual punning does not
+inherit class membership. Protocol controls remain MeasurementParameterSettings
+with settingForParameter and hasParameterValue.
+
+The target is the direct subject, not necessarily the scalar quantity or grade
+dimension. Pilling and PillingResistance remain different categories. A numeric
+pilling result needs an adequate method/interpretation scale; an aspect link alone
+does not distinguish severity, count and affected area. No measuredDimension
+relation or automatic promotion of result values to structural characteristic
+values is introduced. Existing execution-level assessesPerformanceParameter
+retains its OPP range and must not be used for phenomena or structural targets.
+
+No global cardinality is imposed. Explicit-target validation is an optional
+[application profile](../shacl/README.md), without cardinality constraints.
+The broad OWL union is an upper bound, not closed-world target validation.
+Derived indicators remain distinct from the underlying result. The generic
+MeasurementResult definition still requires a measurement/test outcome; an
+arbitrary evaluation output can instead be an AssessmentResult.
+See [TXT-DEC-011](decisions/TXT-DEC-011.md).
+
 ## Quantitative values
 
 Use explicit quantitative-value nodes. Record the numerical value, unit and quantity kind when applicable. Do not encode a measurement and its unit as an unstructured string.

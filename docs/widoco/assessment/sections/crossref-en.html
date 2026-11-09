@@ -652,7 +652,7 @@ This section provides details for each class and property defined by EU DPP Text
     is in domain of
    </dt>
    <dd>
-    <a href="#hasMeasuredValue" title="https://w3id.org/eudpp/textile-assessment#hasMeasuredValue">has measured value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRatingValue" title="https://w3id.org/eudpp/textile-assessment#hasRatingValue">has rating value</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInterpretedBy" title="https://w3id.org/eudpp/textile-assessment#isInterpretedBy">is interpreted by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasMeasuredValue" title="https://w3id.org/eudpp/textile-assessment#hasMeasuredValue">has measured value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRatingValue" title="https://w3id.org/eudpp/textile-assessment#hasRatingValue">has rating value</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInterpretedBy" title="https://w3id.org/eudpp/textile-assessment#isInterpretedBy">is interpreted by</a> <sup class="type-op" title="object property">op</sup>, <a href="#resultForAssessedAspect" title="https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect">result for assessed aspect</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1120,6 +1120,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#isInterpretedBy" title="https://w3id.org/eudpp/textile-assessment#isInterpretedBy">is interpreted by</a></li>
   <li><a href="#measuresPerformanceParameter" title="https://w3id.org/eudpp/textile-assessment#measuresPerformanceParameter">measures performance parameter</a></li>
   <li><a href="#producesResult" title="https://w3id.org/eudpp/textile-assessment#producesResult">produces result</a></li>
+  <li><a href="#resultForAssessedAspect" title="https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect">result for assessed aspect</a></li>
   <li><a href="#resultOfAssessment" title="https://w3id.org/eudpp/textile-assessment#resultOfAssessment">result of assessment</a></li>
   <li><a href="#settingForParameter" title="https://w3id.org/eudpp/textile-assessment#settingForParameter">setting for parameter</a></li>
   <li><a href="#specifiesCondition" title="https://w3id.org/eudpp/textile-assessment#specifiesCondition">specifies condition</a></li>
@@ -2047,6 +2048,37 @@ This section provides details for each class and property defined by EU DPP Text
     </dt>
     <dd>
      <a href="#resultOfAssessment" title="https://w3id.org/eudpp/textile-assessment#resultOfAssessment">result of assessment</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="resultForAssessedAspect">
+  <h3>result for assessed aspect<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect</p>
+  <div class="comment">
+   <span class="markdown">Relates an individual measurement or test result to the individual product property, observed degradation phenomenon, failure mode, or external damage that the result directly concerns. This relation identifies the subject of the result, not necessarily the specific quantity, degree, or grading dimension measured. Its intended object is not a test-protocol parameter, result value, assessment criterion, derived indicator, or OWL class used as an individual. A result's method and interpretation scale, when relevant, determine how the reported value is to be interpreted.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-assessment">https://w3id.org/eudpp/textile-assessment</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MeasurementResult" title="https://w3id.org/eudpp/textile-assessment#MeasurementResult">Measurement result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#Property" target="_blank" title="https://w3id.org/eudpp#Property">Property</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/eudpp/textile-durability#ExternalDamage" target="_blank" title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External Damage</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/eudpp/textile-durability#FailureMode" target="_blank" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure Mode</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon" target="_blank" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed Degradation Phenomenon</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

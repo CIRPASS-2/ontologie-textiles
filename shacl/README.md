@@ -27,3 +27,14 @@ message/source-constraint identity one-to-one. Forty-one migration scenarios ret
 exact result multisets. Every targeted SoC shape has positive focus coverage
 and discriminating negative coverage. The existing sixteen SHACL regression
 scenarios and recyclability inference control remain unchanged in purpose.
+
+## Optional assessed-aspect target validation (issue #20 point 1)
+
+Select `profiles/textile-assessed-aspect-targets.ttl` to check explicit bindings.
+Merge the relevant ontology and instance typing with the data: an untyped target
+fails. The profile rejects protocol controls, values, criteria, indicators and
+class IRIs used as individuals. It neither requires a binding on legacy results
+nor restricts the number of bindings. The default loader does not select it.
+Use it as pySHACL's `shacl_graph` with the same offline ontology/data merge and
+`do_owl_imports=False` as the baseline. The regression tests cover valid and
+invalid targets, missing/multiple links and existing examples 06/07.
