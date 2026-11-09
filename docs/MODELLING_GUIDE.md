@@ -37,6 +37,20 @@ MeasurementResult definition still requires a measurement/test outcome; an
 arbitrary evaluation output can instead be an AssessmentResult.
 See [TXT-DEC-011](decisions/TXT-DEC-011.md).
 
+## Assessment executions and product events (issue #20 point 2)
+
+Use `txtass:isRepresentedByProductEvent` when a conceptual, product-facing
+ProductEvent represents the concrete assessment execution. The target is distinct
+from the technical EPCIS carrier. An ObjectEvent with OBSERVE / inspecting does
+not by itself establish a qualifying ProductEvent. The existing PROCESS bridge
+would instead also classify the assessment as a TextileProcessExecution.
+
+ASSESSMENT directly imports the unchanged bounded EVENT MIREOT. It does not load
+EPCIS carrier mappings; applications using `dpp:isRepresentedByCarrier` provide
+their existing EVENT definitions. No links or cardinalities are required.
+See [example 13](../examples/example-13-assessment-product-event-v2.1.0-dev.ttl)
+and [TXT-DEC-012](decisions/TXT-DEC-012.md).
+
 ## Quantitative values
 
 Use explicit quantitative-value nodes. Record the numerical value, unit and quantity kind when applicable. Do not encode a measurement and its unit as an unstructured string.

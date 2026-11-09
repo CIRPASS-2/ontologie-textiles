@@ -1,4 +1,4 @@
-"""Test-only exact point-1 delta against the published Git baseline.
+"""Test-only exact point-1 and point-2 deltas against the published Git baseline.
 
 Historical creator, version and MAT proofs still run against their original
 graphs, but only after checking every current triple against this exact delta.
@@ -35,6 +35,26 @@ txtass:resultForAssessedAspect a owl:ObjectProperty ;
 '''
 
 
+POINT2_TURTLE = '''
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+txtass:isRepresentedByProductEvent a owl:ObjectProperty ;
+    rdfs:label "is represented by product event"@en ;
+    rdfs:comment "Links a concrete assessment execution to the conceptual, product-facing ProductEvent that represents it, distinct from any technical EPCIS carrier. The relation does not identify the execution with the event or its carrier and does not imply that every assessment execution or EPCIS observation qualifies as a ProductEvent."@en ;
+    rdfs:domain txtass:AssessmentExecution ;
+    rdfs:range dpp:ProductEvent ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-012.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
+<https://w3id.org/eudpp/textile-assessment>
+    owl:imports <https://w3id.org/eudpp/textile-event-mireot> .
+'''
+
+
 def current_version(filename):
     return '2.1.0-dev' if filename in CHANGED_MODULES else '2.0.0'
 
@@ -57,6 +77,7 @@ def expected_graph(relative):
         graph.set((ontology, DCTERMS.bibliographicCitation,
                    Literal('EU DPP Textile Assessment Ontology. Version 2.1.0-dev.', lang='en')))
         graph.parse(data=PROPERTY_TURTLE, format='turtle')
+        graph.parse(data=POINT2_TURTLE, format='turtle')
     return graph
 
 

@@ -406,6 +406,14 @@
 <https://w3id.org/eudpp/textile-assessment#isInterpretedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-assessment#InterpretationScale> .
 <https://w3id.org/eudpp/textile-assessment#isInterpretedBy> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5284; Table 71, printed page 186."@en .
 <https://w3id.org/eudpp/textile-assessment#isInterpretedBy> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a concrete assessment execution to the conceptual, product-facing ProductEvent that represents it, distinct from any technical EPCIS carrier. The relation does not identify the execution with the event or its carrier and does not imply that every assessment execution or EPCIS observation qualifies as a ProductEvent."@en .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-assessment> .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <http://www.w3.org/2000/01/rdf-schema#label> "is represented by product event"@en .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "docs/decisions/TXT-DEC-012.md"@en .
+<https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-assessment#measuresPerformanceParameter> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-assessment#measuresPerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-assessment#measuresPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a test method to the durability-related performance parameter that the method is intended to assess."@en .
@@ -551,6 +559,7 @@
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-event-mireot> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-assessment/2.0.0> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-assessment/2.1.0-dev> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.1.0-dev" .

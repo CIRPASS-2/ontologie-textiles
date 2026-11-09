@@ -16,4 +16,12 @@ quantity or grading dimension and from protocol controls. No global cardinality
 is imposed. Explicit-target SHACL validation is optional and has no cardinality
 constraint.
 </p>
+<p>
+The optional <code>isRepresentedByProductEvent</code> relation links an assessment
+execution to its conceptual, product-facing ProductEvent, distinct from an EPCIS
+technical carrier. The existing PROCESS bridge is independent. ASSESSMENT imports
+the bounded EVENT MIREOT; carrier mapping axioms remain outside that subset.
+Neither the relation nor OBSERVE / inspecting establishes that every assessment
+or observation qualifies as a ProductEvent. See TXT-DEC-012 and example 13.
+</p>
 </span>

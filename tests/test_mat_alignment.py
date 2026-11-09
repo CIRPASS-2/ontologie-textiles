@@ -90,7 +90,8 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
         cwd=m.ROOT, text=True).splitlines()
     assert len(names) == 76
     additions = {'examples/example-12-assessed-aspects-v2.1.0-dev.ttl',
-                 'shacl/profiles/textile-assessed-aspect-targets.ttl'}
+                 'shacl/profiles/textile-assessed-aspect-targets.ttl',
+                 'examples/example-13-assessment-product-event-v2.1.0-dev.ttl'}
     active = {name for name in v.package_files(m.ROOT)
               if any(name == area or name.startswith(area + '/') for area in areas)}
     assert active == set(names) | additions
@@ -111,12 +112,13 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
         elif name == 'traceability/textile-resource-traceability.csv':
             rows = v.derive(v.ontology_graph(m.ROOT))[0]
             expected = v.csv_bytes(v.RESOURCE_FIELDS, rows)
-            # The public validator verifies the projection; only one new row.
+            # The public validator verifies the projection; one row per approved property.
             import csv, io
             before = list(csv.DictReader(io.StringIO(old.decode('utf8'))))
-            assert [r for r in rows if r['resource_iri'] !=
-                    'https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect'] == before
-            assert len(rows) == len(before) + 1
+            assert [r for r in rows if r['resource_iri'] not in {
+                    'https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect',
+                    'https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent'}] == before
+            assert len(rows) == len(before) + 2
         assert (m.ROOT / name).read_bytes() == expected, name
 
 

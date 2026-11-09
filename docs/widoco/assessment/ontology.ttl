@@ -300,6 +300,15 @@ txtass:producesResult a owl:ObjectProperty ;
     txtcon:sourceLocator "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010."@en ;
     txtcon:sourceType txtcon:adaptedRelation .
 
+txtass:isRepresentedByProductEvent a owl:ObjectProperty ;
+    rdfs:label "is represented by product event"@en ;
+    rdfs:comment "Links a concrete assessment execution to the conceptual, product-facing ProductEvent that represents it, distinct from any technical EPCIS carrier. The relation does not identify the execution with the event or its carrier and does not imply that every assessment execution or EPCIS observation qualifies as a ProductEvent."@en ;
+    rdfs:domain txtass:AssessmentExecution ;
+    rdfs:range dpp:ProductEvent ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-012.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
 txtass:resultForAssessedAspect a owl:ObjectProperty ;
     rdfs:label "result for assessed aspect"@en ;
     rdfs:comment "Relates an individual measurement or test result to the individual product property, observed degradation phenomenon, failure mode, or external damage that the result directly concerns. This relation identifies the subject of the result, not necessarily the specific quantity, degree, or grading dimension measured. Its intended object is not a test-protocol parameter, result value, assessment criterion, derived indicator, or OWL class used as an individual. A result's method and interpretation scale, when relevant, determine how the reported value is to be interpreted."@en ;
@@ -629,7 +638,8 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
         "The module separates reusable methods and standards, concrete assessment executions, and the results produced by those executions."@en ;
     owl:imports <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
-        <https://w3id.org/eudpp/textile-durability> ;
+        <https://w3id.org/eudpp/textile-durability>,
+        <https://w3id.org/eudpp/textile-event-mireot> ;
     owl:priorVersion <https://w3id.org/eudpp/textile-assessment/2.0.0> ;
     owl:versionIRI <https://w3id.org/eudpp/textile-assessment/2.1.0-dev> ;
     owl:versionInfo "Version 2.1.0-dev" ;

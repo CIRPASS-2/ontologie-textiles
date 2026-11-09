@@ -241,7 +241,7 @@ This section provides details for each class and property defined by EU DPP Text
     is in domain of
    </dt>
    <dd>
-    <a href="#appliesMethod" title="https://w3id.org/eudpp/textile-assessment#appliesMethod">applies method</a> <sup class="type-op" title="object property">op</sup>, <a href="#assessesPerformanceParameter" title="https://w3id.org/eudpp/textile-assessment#assessesPerformanceParameter">assesses performance parameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#assessesProduct" title="https://w3id.org/eudpp/textile-assessment#assessesProduct">assesses product</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCondition" title="https://w3id.org/eudpp/textile-assessment#hasCondition">has condition</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasParameterSetting" title="https://w3id.org/eudpp/textile-assessment#hasParameterSetting">has parameter setting</a> <sup class="type-op" title="object property">op</sup>, <a href="#producesResult" title="https://w3id.org/eudpp/textile-assessment#producesResult">produces result</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#appliesMethod" title="https://w3id.org/eudpp/textile-assessment#appliesMethod">applies method</a> <sup class="type-op" title="object property">op</sup>, <a href="#assessesPerformanceParameter" title="https://w3id.org/eudpp/textile-assessment#assessesPerformanceParameter">assesses performance parameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#assessesProduct" title="https://w3id.org/eudpp/textile-assessment#assessesProduct">assesses product</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCondition" title="https://w3id.org/eudpp/textile-assessment#hasCondition">has condition</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasParameterSetting" title="https://w3id.org/eudpp/textile-assessment#hasParameterSetting">has parameter setting</a> <sup class="type-op" title="object property">op</sup>, <a href="#isRepresentedByProductEvent" title="https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent">is represented by product event</a> <sup class="type-op" title="object property">op</sup>, <a href="#producesResult" title="https://w3id.org/eudpp/textile-assessment#producesResult">produces result</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -1118,6 +1118,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#isDefinedByStandard" title="https://w3id.org/eudpp/textile-assessment#isDefinedByStandard">is defined by standard</a></li>
   <li><a href="#isEvaluatedAgainst" title="https://w3id.org/eudpp/textile-assessment#isEvaluatedAgainst">is evaluated against</a></li>
   <li><a href="#isInterpretedBy" title="https://w3id.org/eudpp/textile-assessment#isInterpretedBy">is interpreted by</a></li>
+  <li><a href="#isRepresentedByProductEvent" title="https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent">is represented by product event</a></li>
   <li><a href="#measuresPerformanceParameter" title="https://w3id.org/eudpp/textile-assessment#measuresPerformanceParameter">measures performance parameter</a></li>
   <li><a href="#producesResult" title="https://w3id.org/eudpp/textile-assessment#producesResult">produces result</a></li>
   <li><a href="#resultForAssessedAspect" title="https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect">result for assessed aspect</a></li>
@@ -1964,6 +1965,37 @@ This section provides details for each class and property defined by EU DPP Text
     </dt>
     <dd>
      <a href="#InterpretationScale" title="https://w3id.org/eudpp/textile-assessment#InterpretationScale">Interpretation scale</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isRepresentedByProductEvent">
+  <h3>is represented by product event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent</p>
+  <div class="comment">
+   <span class="markdown">Links a concrete assessment execution to the conceptual, product-facing ProductEvent that represents it, distinct from any technical EPCIS carrier. The relation does not identify the execution with the event or its carrier and does not imply that every assessment execution or EPCIS observation qualifies as a ProductEvent.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-assessment">https://w3id.org/eudpp/textile-assessment</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AssessmentExecution" title="https://w3id.org/eudpp/textile-assessment#AssessmentExecution">Assessment execution</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#ProductEvent" target="_blank" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

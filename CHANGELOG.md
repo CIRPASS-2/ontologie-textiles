@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 point 2 - 2026-11-09
+
+Add the optional ASSESSMENT isRepresentedByProductEvent bridge and a direct
+import of the existing bounded EVENT MIREOT. Keep assessment executions,
+conceptual ProductEvents and technical EPCIS carriers distinct. Preserve the
+point-1 correction and existing PROCESS/EVENT definitions. See TXT-DEC-012.
+
 ## 2.1.0-dev - issue #20 point 1 - 2026-11-09
 
 Add resultForAssessedAspect to ASSESSMENT, linking a MeasurementResult to its
