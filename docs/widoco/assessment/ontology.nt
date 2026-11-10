@@ -242,6 +242,14 @@
 <https://w3id.org/eudpp/textile-assessment#assessesProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Product> .
 <https://w3id.org/eudpp/textile-assessment#assessesProduct> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
 <https://w3id.org/eudpp/textile-assessment#assessesProduct> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assessment result to the number of points actually awarded to that individual result under the applicable scoring method. The awarded points are distinct from an underlying measured value, points prescribed by a scoring rule, and an aggregated indicator value. This relation does not calculate, aggregate or verify the award."@en .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-assessment#AssessmentResult> .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-assessment> .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <http://www.w3.org/2000/01/rdf-schema#label> "awarded score value"@en .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <https://w3id.org/eudpp/textile-connector#sourceLocator> "docs/decisions/TXT-DEC-014.md"@en .
+<https://w3id.org/eudpp/textile-assessment#awardedScoreValue> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-assessment#criterionForPerformanceParameter> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-assessment#criterionForPerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-assessment#criterionForPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a decision criterion to the durability-related performance parameter to which it applies."@en .

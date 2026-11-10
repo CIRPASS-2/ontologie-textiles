@@ -151,6 +151,15 @@ tsh:ReferencePeriodShape a sh:NodeShape ;
         """ ] ;
     sh:targetClass txtcon:ReferencePeriod .
 
+tsh:AwardedScoreValueShape a sh:NodeShape ;
+    sh:targetObjectsOf txtass:awardedScoreValue ;
+    sh:class txtcon:QuantitativeValue ;
+    sh:node tsh:QuantitativeValueShape ;
+    sh:property [ sh:path txtcon:numericValue ;
+            sh:minCount 1 ],
+        [ sh:path txtcon:hasMeasurementUnit ;
+            sh:hasValue units:one ] .
+
 <https://w3id.org/eudpp/textile-shacl/quantitative> a owl:Ontology ;
     rdfs:label "Textile quantitative SHACL profile"@en ;
     rdfs:comment "Validation constraints for the shared quantitative-value pattern and common quantitative roles."@en ;

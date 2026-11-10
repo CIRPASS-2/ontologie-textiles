@@ -11,7 +11,7 @@ from rdflib.namespace import SH, SKOS, XSD
 from scripts import validate_public as v
 from issue20_support import (
     POINT3_TURTLE, POINT3_SETTING_SHAPE, apply_point3,
-    expected_quantitative_shapes, published_contract_graph,
+    expected_quantitative_shapes, published_contract_graph, POINT4_TURTLE, POINT4_SHAPE,
 )
 
 ROOT = v.ROOT
@@ -42,6 +42,7 @@ def test_exact_ontology_delta_preserves_points1_and2_and_all_imports():
             apply_point3(expected)
             assert len(set(expected) - set(before)) == 9
             assert len(set(before) - set(expected)) == 1  # Header guidance only.
+            expected.parse(data=POINT4_TURTLE, format='turtle')
             assert set(expected.triples((None, OWL.imports, None))) == set(before.triples((None, OWL.imports, None)))
         else:
             assert (ROOT / name).read_bytes() == old, name
@@ -63,6 +64,9 @@ def test_exact_shape_edit_and_approved_single_version_iri_change():
         '@prefix sh: <http://www.w3.org/ns/shacl#> .',
         '@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .')
     expected = expected.replace('quantitative/2.0.0>', 'quantitative/2.1.0-dev>')
+    marker = '<https://w3id.org/eudpp/textile-shacl/quantitative> a owl:Ontology ;'
+    addition = POINT4_SHAPE[POINT4_SHAPE.index('tsh:AwardedScoreValueShape'):]
+    expected = expected.replace(marker, addition + '\n' + marker)
     assert (ROOT / QUANT).read_bytes() == expected.encode('utf8')
     catalogue = {entry.attrib['name']: entry.attrib['uri'] for entry in v.ET.parse(ROOT / 'catalog-v001.xml').getroot()}
     assert 'https://w3id.org/eudpp/textile-shacl/quantitative/2.0.0' not in catalogue

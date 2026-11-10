@@ -166,6 +166,15 @@ txtass:hasCondition a owl:ObjectProperty ;
     txtcon:sourceLocator "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5279; Table 71, printed page 186."@en ;
     txtcon:sourceType txtcon:adaptedRelation .
 
+txtass:awardedScoreValue a owl:ObjectProperty ;
+    rdfs:label "awarded score value"@en ;
+    rdfs:comment "Links an assessment result to the number of points actually awarded to that individual result under the applicable scoring method. The awarded points are distinct from an underlying measured value, points prescribed by a scoring rule, and an aggregated indicator value. This relation does not calculate, aggregate or verify the award."@en ;
+    rdfs:domain txtass:AssessmentResult ;
+    rdfs:range txtcon:QuantitativeValue ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-014.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
 txtass:hasMeasuredValue a owl:ObjectProperty ;
     rdfs:label "has measured value"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;

@@ -311,3 +311,21 @@ baselines are documented in the
 See its linked machine-readable delta and final validation results for the
 current publication candidate. The earlier MAT-only evidence remains an
 unchanged historical proof of that narrower transition.
+
+## Awarded points on results (issue #20 point 4)
+
+Use `txtass:awardedScoreValue` on an AssessmentResult, including MeasurementResult
+and RecyclabilityCriterionResult, to identify points actually awarded under the
+applicable scoring method. Keep the measured value, the rule's prescribed points,
+the awarded contribution and any derived indicator value as distinct roles.
+The execution and its method supply interpretation context; this property does
+not identify an applied rule, execute a method, aggregate or verify the award.
+
+The quantitative profile checks every supplied award: QuantitativeValue typing,
+an actual decimal numericValue, units:one and the existing quantitative constraints.
+The numeric requirement excludes threshold-expression alternatives. Missing award
+links and multiple awards are allowed; no universal non-negativity or maximum is
+asserted. Application-specific method compliance remains outside this correction.
+RDFS range typing is classification, not proof of correct data or scoring.
+See [TXT-DEC-014](decisions/TXT-DEC-014.md) and
+[example 15](../examples/example-15-awarded-points-v2.1.0-dev.ttl).

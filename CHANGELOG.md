@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 point 4 - 2026-11-10
+
+Add awardedScoreValue for points actually awarded to individual assessment
+results, distinct from measurements, prescribed rule points and indicators.
+Validate only supplied award values as decimal, dimensionless QuantitativeValues.
+No mandatory awards, score bounds or calculation are introduced. Preserve points
+1-3, other ontology sources and existing shapes. See TXT-DEC-014.
+
 ## 2.1.0-dev - issue #20 point 3 - 2026-11-09
 
 Add hasParameterConcept for categorical protocol-setting values. Change only the

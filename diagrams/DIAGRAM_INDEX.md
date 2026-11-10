@@ -4,11 +4,11 @@ SOC, Associated Materials, Recyclability and the network overview are regenerate
 for the 2.0.0 candidate. The Core diagram is regenerated for the approved
 MAT classification alignment. Other diagrams retain their accepted baseline bytes.
 Views are illustrative; Turtle remains the axiom authority. The assessment
-diagram retains its 2.0.0 baseline; the inventory includes the point-1, point-2 and point-3 properties.
+diagram retains its 2.0.0 baseline; the inventory includes the point-1 through point-4 properties.
 
 | Module | Classes | Object properties | Datatype properties | SKOS concepts | SKOS schemes |
 |---|---:|---:|---:|---:|---:|
-| textile-assessment | 30 | 29 | 1 | 5 | 1 |
+| textile-assessment | 30 | 30 | 1 | 5 | 1 |
 | textile-associated-materials | 8 | 7 | 0 | 42 | 4 |
 | textile-connector | 5 | 13 | 3 | 17 | 3 |
 | textile-context | 3 | 6 | 1 | 31 | 1 |

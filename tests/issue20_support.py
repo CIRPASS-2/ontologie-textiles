@@ -120,7 +120,44 @@ def expected_quantitative_shapes():
     graph.parse(data=POINT3_SETTING_SHAPE, format='turtle')
     profile = URIRef('https://w3id.org/eudpp/textile-shacl/quantitative')
     graph.set((profile, OWL.versionIRI, URIRef(str(profile) + '/2.1.0-dev')))
+    graph.parse(data=POINT4_SHAPE, format='turtle')
     return graph
+
+
+POINT4_SHACL_README_SHA256 = '7c34c78630e05689c7cdc7bdcf83ff6a916e8a870812ad68ffed2b5b2a0fb06c'
+
+
+POINT4_TURTLE = '''
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+txtass:awardedScoreValue a owl:ObjectProperty ;
+    rdfs:label "awarded score value"@en ;
+    rdfs:comment "Links an assessment result to the number of points actually awarded to that individual result under the applicable scoring method. The awarded points are distinct from an underlying measured value, points prescribed by a scoring rule, and an aggregated indicator value. This relation does not calculate, aggregate or verify the award."@en ;
+    rdfs:domain txtass:AssessmentResult ;
+    rdfs:range txtcon:QuantitativeValue ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-014.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+'''
+
+
+POINT4_SHAPE = '''
+@prefix tsh: <https://w3id.org/eudpp/textile-shacl#> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+tsh:AwardedScoreValueShape a sh:NodeShape ;
+    sh:targetObjectsOf txtass:awardedScoreValue ;
+    sh:class txtcon:QuantitativeValue ;
+    sh:node tsh:QuantitativeValueShape ;
+    sh:property [ sh:path txtcon:numericValue ;
+            sh:minCount 1 ],
+        [ sh:path txtcon:hasMeasurementUnit ;
+            sh:hasValue units:one ] .
+'''
 
 
 def current_version(filename):
@@ -147,6 +184,7 @@ def expected_graph(relative):
         graph.parse(data=PROPERTY_TURTLE, format='turtle')
         graph.parse(data=POINT2_TURTLE, format='turtle')
         apply_point3(graph)
+        graph.parse(data=POINT4_TURTLE, format='turtle')
     return graph
 
 

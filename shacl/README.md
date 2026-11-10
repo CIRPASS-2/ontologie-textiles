@@ -54,3 +54,14 @@ Concept typing from hasParameterConcept itself; passing is not authoritative
 vocabulary-membership verification. Literal code targets fail either mode.
 The changed quantitative profile has version IRI ending 2.1.0-dev, approved as a
 single-IRI metadata correction; its original 2.0.0 graph remains in Git history.
+
+## Awarded points (issue #20 point 4)
+
+AwardedScoreValueShape targets only supplied awardedScoreValue objects. Each must
+be a QuantitativeValue with an actual decimal numericValue and units:one, reusing
+the existing unit, quantity-kind and scalar checks. The numeric minimum excludes
+threshold expressions that deliberately omit numericValue. No award is required,
+and multiple links remain permitted. Negative values are not prohibited; no
+method-specific maximum or calculation is imposed. A second unit still fails the
+existing quantitative maximum. RDFS can infer value typing from the property's
+range; pre-inference sh:class checks explicit or subclass typing instead.
