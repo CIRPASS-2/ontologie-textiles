@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 point 5 - 2026-11-12
+
+Add the optional independent hasAssessmentOutcome relation for controlled result
+conclusions under the applied method and context. Keep aggregate recyclability
+verdicts separate from criterion outcomes and use only synthetic application
+concepts in the example. Preserve all production SHACL profiles; exercise the
+optional supplied-value guard in tests. No new vocabulary class, code list or
+decision rule is added. See TXT-DEC-015.
+
 ## 2.1.0-dev - issue #20 point 4 - 2026-11-10
 
 Add awardedScoreValue for points actually awarded to individual assessment

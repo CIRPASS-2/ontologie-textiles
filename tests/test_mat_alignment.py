@@ -8,7 +8,7 @@ from pyshacl import validate
 import pytest
 from migration import mat_alignment as m
 from issue20_support import (published_contract_graph, published_bytes,
-                             expected_quantitative_shapes, POINT4_SHACL_README_SHA256)
+                             expected_quantitative_shapes, POINT5_SHACL_README_SHA256)
 from scripts import validate_public as v
 from rdflib.compare import graph_diff, to_isomorphic, isomorphic
 import subprocess
@@ -94,7 +94,8 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
                  'shacl/profiles/textile-assessed-aspect-targets.ttl',
                  'examples/example-13-assessment-product-event-v2.1.0-dev.ttl',
                  'examples/example-14-parameter-values-v2.1.0-dev.ttl',
-                 'examples/example-15-awarded-points-v2.1.0-dev.ttl'}
+                 'examples/example-15-awarded-points-v2.1.0-dev.ttl',
+                 'examples/example-16-assessment-outcomes-v2.1.0-dev.ttl'}
     active = {name for name in v.package_files(m.ROOT)
               if any(name == area or name.startswith(area + '/') for area in areas)}
     assert active == set(names) | additions
@@ -111,7 +112,7 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
         elif name == 'shacl/README.md':
             current = (m.ROOT / name).read_bytes()
             assert current.startswith(old)  # Existing profile contract is untouched.
-            assert hashlib.sha256(current).hexdigest() == POINT4_SHACL_README_SHA256
+            assert hashlib.sha256(current).hexdigest() == POINT5_SHACL_README_SHA256
             expected = current  # Only the exact new optional-profile documentation.
         elif name == 'shacl/textile-quantitative-shapes.ttl':
             assert isomorphic(Graph().parse(m.ROOT / name), expected_quantitative_shapes())
@@ -126,8 +127,9 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
                     'https://w3id.org/eudpp/textile-assessment#resultForAssessedAspect',
                     'https://w3id.org/eudpp/textile-assessment#isRepresentedByProductEvent',
                     'https://w3id.org/eudpp/textile-assessment#hasParameterConcept',
-                    'https://w3id.org/eudpp/textile-assessment#awardedScoreValue'}] == before
-            assert len(rows) == len(before) + 4
+                    'https://w3id.org/eudpp/textile-assessment#awardedScoreValue',
+                    'https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome'}] == before
+            assert len(rows) == len(before) + 5
         assert (m.ROOT / name).read_bytes() == expected, name
 
 

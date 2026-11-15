@@ -160,6 +160,26 @@ tsh:AwardedScoreValueShape a sh:NodeShape ;
 '''
 
 
+POINT5_SHACL_README_SHA256 = '60be194dba89fad4def76a77341f2e829d4329e83082e9ef809c5d1f3d72ba17'
+
+
+POINT5_TURTLE = '''
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+txtass:hasAssessmentOutcome a owl:ObjectProperty ;
+    rdfs:label "has assessment outcome"@en ;
+    rdfs:comment "Links an assessment result to a controlled concept expressing its conclusion under the applicable method and context. For recyclability assessments, the intended use is the overall conclusion on the aggregate assessment result under the stated method and recycling route, distinct from hasCriterionOutcome on individual criterion results. Criterion-level outcome concepts do not express an overall product-level recyclability verdict. This relation does not infer a decision or establish a universal recyclability classification."@en ;
+    rdfs:domain txtass:AssessmentResult ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-015.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+'''
+
+
 def current_version(filename):
     return '2.1.0-dev' if filename in CHANGED_MODULES else '2.0.0'
 
@@ -185,6 +205,7 @@ def expected_graph(relative):
         graph.parse(data=POINT2_TURTLE, format='turtle')
         apply_point3(graph)
         graph.parse(data=POINT4_TURTLE, format='turtle')
+        graph.parse(data=POINT5_TURTLE, format='turtle')
     return graph
 
 

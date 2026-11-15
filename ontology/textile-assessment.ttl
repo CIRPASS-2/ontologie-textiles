@@ -247,6 +247,15 @@ txtass:hasScaleValue a owl:ObjectProperty ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:modellingAbstraction .
 
+txtass:hasAssessmentOutcome a owl:ObjectProperty ;
+    rdfs:label "has assessment outcome"@en ;
+    rdfs:comment "Links an assessment result to a controlled concept expressing its conclusion under the applicable method and context. For recyclability assessments, the intended use is the overall conclusion on the aggregate assessment result under the stated method and recycling route, distinct from hasCriterionOutcome on individual criterion results. Criterion-level outcome concepts do not express an overall product-level recyclability verdict. This relation does not infer a decision or establish a universal recyclability classification."@en ;
+    rdfs:domain txtass:AssessmentResult ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-015.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
 txtass:hasTextualValue a owl:DatatypeProperty ;
     rdfs:label "has textual value"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;

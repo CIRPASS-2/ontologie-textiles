@@ -1,7 +1,7 @@
 # Development scope and published preservation
 
 The working package is an unpublished 2.1.0-dev implementation of issue #20
-points 1-4. ASSESSMENT and the network entry point advance; all other modules and
+points 1-5. ASSESSMENT and the network entry point advance; all other modules and
 MIREOTs retain their prior bytes. The complete 2.0.0 baseline remains in Git at
 `40b08bff9316ba47b0b8b0c2b5265ef2ddbdfe6b`; use a separate checkout and its original
 catalogue to load it. No duplicate package archive is added. The development

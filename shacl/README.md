@@ -65,3 +65,21 @@ and multiple links remain permitted. Negative values are not prohibited; no
 method-specific maximum or calculation is imposed. A second unit still fails the
 existing quantitative maximum. RDFS can infer value typing from the property's
 range; pre-inference sh:class checks explicit or subclass typing instead.
+
+## Assessment conclusions (issue #20 point 5)
+
+The optional hasAssessmentOutcome relation has no production SHACL guard here.
+No suitable general assessment-conclusion development profile exists: the current
+quantitative profile covers quantities and associated parameter settings; the
+assessed-aspect profile checks MeasurementResult subjects. The recyclability and
+SoC profiles retain their published 2.0.0 identities and constraints. No new
+profile, constraint or profile-version change is introduced for this correction.
+
+Focused tests construct a supplied-value guard in memory using targetObjectsOf
+hasAssessmentOutcome and class skos:Concept, with no minimum or maximum count.
+It rejects literal targets and untyped concepts before inference. RDFS range
+inference can supply Concept typing; neither it nor sh:class establishes
+vocabulary membership, aggregate scope or method-specific verdict correctness.
+Criterion-level concepts also pass this generic type check but must not be used
+as overall verdicts. The existing public validator does not add this guard;
+passing baseline validation does not validate supplied assessment-outcome values.

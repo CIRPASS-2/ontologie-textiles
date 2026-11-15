@@ -388,7 +388,7 @@ This section provides details for each class and property defined by EU DPP Text
     is in domain of
    </dt>
    <dd>
-    <a href="#awardedScoreValue" title="https://w3id.org/eudpp/textile-assessment#awardedScoreValue">awarded score value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTextualValue" title="https://w3id.org/eudpp/textile-assessment#hasTextualValue">has textual value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isEvaluatedAgainst" title="https://w3id.org/eudpp/textile-assessment#isEvaluatedAgainst">is evaluated against</a> <sup class="type-op" title="object property">op</sup>, <a href="#resultOfAssessment" title="https://w3id.org/eudpp/textile-assessment#resultOfAssessment">result of assessment</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#awardedScoreValue" title="https://w3id.org/eudpp/textile-assessment#awardedScoreValue">awarded score value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAssessmentOutcome" title="https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome">has assessment outcome</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTextualValue" title="https://w3id.org/eudpp/textile-assessment#hasTextualValue">has textual value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isEvaluatedAgainst" title="https://w3id.org/eudpp/textile-assessment#isEvaluatedAgainst">is evaluated against</a> <sup class="type-op" title="object property">op</sup>, <a href="#resultOfAssessment" title="https://w3id.org/eudpp/textile-assessment#resultOfAssessment">result of assessment</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -1105,6 +1105,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#criterionForPerformanceParameter" title="https://w3id.org/eudpp/textile-assessment#criterionForPerformanceParameter">criterion for performance parameter</a></li>
   <li><a href="#definesEndpoint" title="https://w3id.org/eudpp/textile-assessment#definesEndpoint">defines endpoint</a></li>
   <li><a href="#definesMethod" title="https://w3id.org/eudpp/textile-assessment#definesMethod">defines method</a></li>
+  <li><a href="#hasAssessmentOutcome" title="https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome">has assessment outcome</a></li>
   <li><a href="#hasComparisonOperator" title="https://w3id.org/eudpp/textile-assessment#hasComparisonOperator">has comparison operator</a></li>
   <li><a href="#hasCondition" title="https://w3id.org/eudpp/textile-assessment#hasCondition">has condition</a></li>
   <li><a href="#hasMeasuredValue" title="https://w3id.org/eudpp/textile-assessment#hasMeasuredValue">has measured value</a></li>
@@ -1434,6 +1435,37 @@ This section provides details for each class and property defined by EU DPP Text
     </dt>
     <dd>
      <a href="#isDefinedByStandard" title="https://w3id.org/eudpp/textile-assessment#isDefinedByStandard">is defined by standard</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAssessmentOutcome">
+  <h3>has assessment outcome<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome</p>
+  <div class="comment">
+   <span class="markdown">Links an assessment result to a controlled concept expressing its conclusion under the applicable method and context. For recyclability assessments, the intended use is the overall conclusion on the aggregate assessment result under the stated method and recycling route, distinct from hasCriterionOutcome on individual criterion results. Criterion-level outcome concepts do not express an overall product-level recyclability verdict. This relation does not infer a decision or establish a universal recyclability classification.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-assessment">https://w3id.org/eudpp/textile-assessment</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AssessmentResult" title="https://w3id.org/eudpp/textile-assessment#AssessmentResult">Assessment result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

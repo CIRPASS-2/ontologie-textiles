@@ -329,3 +329,30 @@ asserted. Application-specific method compliance remains outside this correction
 RDFS range typing is classification, not proof of correct data or scoring.
 See [TXT-DEC-014](decisions/TXT-DEC-014.md) and
 [example 15](../examples/example-15-awarded-points-v2.1.0-dev.ttl).
+
+## Controlled assessment conclusions (issue #20 point 5)
+
+Use `txtass:hasAssessmentOutcome` on an AssessmentResult to report a controlled
+conclusion under its applied method and context. For recyclability, attach it to
+the aggregate result with resultOfAssessment, the execution's appliesMethod and
+assessesProduct, and resultForRecyclingRoute. Existing individual criterion
+results keep hasCriterionOutcome. Criterion satisfaction, score, label, technology
+level and overall verdict are distinct; none automatically determines the verdict.
+Do not use criterionSatisfied or other criterion-level codes as overall outcomes.
+
+Application-defined SKOS concepts need definitions expressing the overall
+method- and route-specific conclusion. The synthetic positive, negative and
+inconclusive concepts in example 16 are illustrative and establish no regulatory
+classification or universal recyclability claim. Absence means no explicit
+verdict was supplied; it does not mean negative or inconclusive. No code list,
+concept class, scheme, inverse, property alignment or cardinality is introduced.
+
+All production SHACL profiles remain unchanged. No suitable existing development
+profile covers general assessment conclusions, so the supplied-value guard is
+only a focused test fixture in memory. RDFS can infer Concept typing from the
+property's range. Neither type checking nor baseline validation verifies approved
+vocabulary membership, aggregate scope or a method's actual decision correctness.
+The broad AssessmentResult domain also includes criterion results; intended use
+on the aggregate result is a semantic convention documented here, not a new class
+restriction. See [TXT-DEC-015](decisions/TXT-DEC-015.md) and
+[example 16](../examples/example-16-assessment-outcomes-v2.1.0-dev.ttl).

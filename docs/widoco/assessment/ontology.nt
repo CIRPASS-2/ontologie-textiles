@@ -278,6 +278,14 @@
 <https://w3id.org/eudpp/textile-assessment#definesMethod> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp/textile-assessment#isDefinedByStandard> .
 <https://w3id.org/eudpp/textile-assessment#definesMethod> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.4, Table 124, printed pages 362-367; table caption at line 9698."@en .
 <https://w3id.org/eudpp/textile-assessment#definesMethod> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assessment result to a controlled concept expressing its conclusion under the applicable method and context. For recyclability assessments, the intended use is the overall conclusion on the aggregate assessment result under the stated method and recycling route, distinct from hasCriterionOutcome on individual criterion results. Criterion-level outcome concepts do not express an overall product-level recyclability verdict. This relation does not infer a decision or establish a universal recyclability classification."@en .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-assessment#AssessmentResult> .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-assessment> .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "has assessment outcome"@en .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <https://w3id.org/eudpp/textile-connector#sourceLocator> "docs/decisions/TXT-DEC-015.md"@en .
+<https://w3id.org/eudpp/textile-assessment#hasAssessmentOutcome> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-assessment#hasComparisonOperator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-assessment#hasComparisonOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-assessment#hasComparisonOperator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a performance threshold to the controlled comparison operator applied to its threshold value."@en .
