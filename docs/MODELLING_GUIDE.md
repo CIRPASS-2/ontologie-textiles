@@ -356,3 +356,72 @@ The broad AssessmentResult domain also includes criterion results; intended use
 on the aggregate result is a semantic convention documented here, not a new class
 restriction. See [TXT-DEC-015](decisions/TXT-DEC-015.md) and
 [example 16](../examples/example-16-assessment-outcomes-v2.1.0-dev.ttl).
+
+## Assessment execution times (issue #20 point 6)
+
+Use `prov:startedAtTime` for the beginning of an AssessmentExecution and
+`prov:endedAtTime` for its completion. Explicitly type examples using this pattern
+as both `txtass:AssessmentExecution` and `prov:Activity`. Values use `xsd:dateTime`;
+a known timezone may be supplied, but a timezone is not required or invented.
+Missing start, completion or both is permitted. Multiple supplied values are not
+prohibited by this pattern; reconciling conflicting source statements is an
+application responsibility. No temporal cardinalities or chronology rules are
+added. Completion of a long-running execution is its end, not a claim that the
+entire execution occurred at an instant or that a result was generated then.
+
+When only a calendar date is known, use `dcterms:date "2026-11-14"^^xsd:date` on
+the execution. This is a coarse associated date. DCMI Date does not intrinsically
+mean start or completion, and this convention does not redefine it. Date-only
+values do not contain the same temporal information as PROV timestamps. Do not
+infer either PROV timestamp or manufacture midnight, a timezone or other absent
+precision. This convention does not prohibit using richer DCMI date expressions
+outside this limited assessment pattern.
+
+Results can query execution completion using
+`txtass:resultOfAssessment/prov:endedAtTime`, and similarly for start. This path
+can return multiple values and does not copy timestamps onto results. Execution
+completion, result generation or validation, EPCIS event occurrence and repository
+recording are different notions. The point-2 ProductEvent relation does not equate
+those times. EVENT's actual carrier is `epcis:EPCISEvent` (including ObjectEvent),
+not a declared `dpp:EPCISCarrier` class. OBSERVE / inspecting alone does not prove
+that a technical event qualifies as a product-facing ProductEvent.
+
+The [synthetic example](../examples/example-17-assessment-times-v2.1.0-dev.ttl)
+contains a completion without ProductEvent, a two-day execution, distinct
+execution/occurrence/recording times, a coarse date, an undated execution and a
+result linked to its execution. These are isolated example identifiers, not a
+complete EPCIS payload or evidence of a real inspection.
+
+No local temporal property, global subclass alignment, PROV import or copied
+PROV declaration is added to any ontology. With authoritative PROV axioms loaded,
+its start/end property domains infer Activity. Without those axioms the current
+runtime does not gain that inference merely by referencing PROV terms; explicit
+Activity typing makes the examples clear in either case. PROV Activity is disjoint
+with Entity, so dual use of the same individual as an activity and a PROV entity
+can cause inconsistency. The existing execution/result separation is preserved.
+
+All production SHACL files retain their bytes and version identities. Tests alone
+construct an optional guard scoped to AssessmentExecution: every supplied PROV
+start/end value must have datatype xsd:dateTime, and a supplied coarse dcterms:date
+must have datatype xsd:date. A small test-only lexical check also requires an actual time component: the
+pinned RDFLib converter can otherwise accept a date-only lexical form typed as
+dateTime. Negative lexical tests preserve the original literal spelling;
+normalization before validation can erase evidence of a malformed source value,
+so the guard cannot recover precision already lost by an upstream converter.
+The guard imposes no presence or count constraints
+and does not validate unrelated PROV activities. A passing public validator does
+not mean these temporal values were checked by this guard.
+
+In the pinned RDFLib/pySHACL stack, explicitly typed xsd:dateTimeStamp literals
+are not accepted by sh:datatype xsd:dateTime. Use xsd:dateTime for this PROV pattern;
+EPCIS carrier timestamps retain the full EVENT vocabulary's xsd:dateTimeStamp.
+A bare dateTimeStamp datatype guard is not sufficient evidence of valid lexical
+forms or required timezones in this stack. Tests check the chosen date/dateTime
+forms and negative cases; neither validation nor OWL-RL proves that a reported
+time is factually correct or constitutes complete OWL DL consistency checking.
+
+Normative references: [PROV-O](https://www.w3.org/TR/prov-o/),
+[DCMI Date](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/date/)
+and [XML Schema datatypes](https://www.w3.org/TR/xmlschema11-2/).
+See the [implementation evidence](ISSUE20_POINT6_IMPLEMENTATION.md) for the
+separate authoritative-axiom check and remaining validation limits.

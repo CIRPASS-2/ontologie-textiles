@@ -95,7 +95,8 @@ def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
                  'examples/example-13-assessment-product-event-v2.1.0-dev.ttl',
                  'examples/example-14-parameter-values-v2.1.0-dev.ttl',
                  'examples/example-15-awarded-points-v2.1.0-dev.ttl',
-                 'examples/example-16-assessment-outcomes-v2.1.0-dev.ttl'}
+                 'examples/example-16-assessment-outcomes-v2.1.0-dev.ttl',
+                 'examples/example-17-assessment-times-v2.1.0-dev.ttl'}
     active = {name for name in v.package_files(m.ROOT)
               if any(name == area or name.startswith(area + '/') for area in areas)}
     assert active == set(names) | additions

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 point 6 - 2026-11-15
+
+Document optional PROV start/completion timestamps and coarse dcterms:date values
+on assessment executions. Add an isolated synthetic example and focused tests
+for precision, result lookup and EPCIS independence. Keep ontology schemas,
+imports, versions, production SHACL and all earlier corrections unchanged.
+
 ## 2.1.0-dev - issue #20 point 5 - 2026-11-12
 
 Add the optional independent hasAssessmentOutcome relation for controlled result
