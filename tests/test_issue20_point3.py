@@ -9,6 +9,7 @@ from rdflib.compare import isomorphic
 from rdflib.namespace import SH, SKOS, XSD
 
 from scripts import validate_public as v
+from issue20_support import apply_review_annotations
 from issue20_support import (
     POINT3_TURTLE, POINT3_SETTING_SHAPE, apply_point3,
     expected_quantitative_shapes, published_contract_graph, POINT4_TURTLE, POINT4_SHAPE, POINT5_TURTLE,
@@ -44,6 +45,7 @@ def test_exact_ontology_delta_preserves_points1_and2_and_all_imports():
             assert len(set(before) - set(expected)) == 1  # Header guidance only.
             expected.parse(data=POINT4_TURTLE, format='turtle')
             expected.parse(data=POINT5_TURTLE, format='turtle')
+            apply_review_annotations(expected)
             assert set(expected.triples((None, OWL.imports, None))) == set(before.triples((None, OWL.imports, None)))
         else:
             assert (ROOT / name).read_bytes() == old, name

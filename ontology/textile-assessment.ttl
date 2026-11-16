@@ -615,6 +615,9 @@ txtass:AssessmentExecution a owl:Class ;
     rdfs:label "Assessment execution"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Concrete performance of an assessment method on a specified product under stated conditions and parameter settings."@en ;
+    rdfs:comment "Execution timing may be stated directly on an instance using prov:startedAtTime and prov:endedAtTime, with explicit prov:Activity typing. These optional timestamps describe execution start and completion, not result generation or EPCIS occurrence or recording time. A date-only dcterms:date is merely a coarse associated date and does not determine either timestamp. No PROV import, class alignment or timestamp inference is asserted by this guidance."@en ;
+    rdfs:seeAlso <http://www.w3.org/ns/prov#startedAtTime>,
+        <http://www.w3.org/ns/prov#endedAtTime> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
     rdfs:subClassOf txtass:AssessmentElement ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
@@ -656,7 +659,7 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
     dcterms:description "Ontology module for textile assessment methods, standards, executions, conditions, parameter settings, results, interpretation scales, endpoints and performance thresholds."@en ;
     dcterms:issued "2026-03-06"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-11-09"^^xsd:date ;
+    dcterms:modified "2026-11-16"^^xsd:date ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     dcterms:title "EU DPP Textile Assessment Ontology"@en ;
     vann:preferredNamespacePrefix "txtass" ;

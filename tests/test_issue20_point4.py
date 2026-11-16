@@ -9,6 +9,7 @@ from rdflib.compare import isomorphic
 from rdflib.namespace import SH, XSD
 
 from scripts import validate_public as v
+from issue20_support import apply_review_annotations
 from issue20_support import POINT4_TURTLE, POINT4_SHAPE, POINT5_TURTLE, published_contract_graph
 
 ROOT = v.ROOT
@@ -42,6 +43,7 @@ def test_exact_additive_source_delta_preserves_all_prior_axioms():
             expected += addition
             assert len(expected) - len(before) == 8
             expected.parse(data=POINT5_TURTLE, format='turtle')
+            apply_review_annotations(expected)
         else:
             assert (ROOT / name).read_bytes() == old, name
         assert isomorphic(Graph().parse(ROOT / name), expected), name

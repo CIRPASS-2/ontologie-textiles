@@ -1,5 +1,6 @@
 """Instance-level temporal reuse: precision, optionality and unchanged schema."""
 import subprocess
+import hashlib
 from datetime import datetime
 
 import pytest
@@ -9,6 +10,8 @@ from rdflib import Graph, Namespace, RDF, RDFS, OWL, Literal, URIRef
 from rdflib.namespace import DCTERMS, XSD, SH
 
 from scripts import validate_public as v
+from issue20_support import apply_review_annotations
+from rdflib.compare import isomorphic
 
 ROOT = v.ROOT
 BASELINE = '5a0e76a39b543ef09f52d915e6215bd98bc6ea8e'
@@ -38,7 +41,25 @@ prov:Activity owl:disjointWith prov:Entity .
 '''
 
 
-def test_all_schema_profiles_dependencies_and_prior_evidence_are_byte_preserved():
+# Exact reviewed documentation/test outputs; no wildcard preservation exemptions.
+REVIEW_OUTPUT_SHA256 = {
+    'docs/widoco/assessment/index-en.html': '1be31e0d50d2580829ef99ca7e115ee5aa5086266fc91120a51d1531d0681650',
+    'docs/widoco/assessment/ontology.jsonld': '12fa45281497d9d5f74069cbf4ec59d44ef2641ea0d4220dba9e264c00f892e3',
+    'docs/widoco/assessment/ontology.nt': '9a4df7341db4fbc2bf53e6b4e5d5e7aa380ee62cd5ed6eb0d199d1f1f3e0e97a',
+    'docs/widoco/assessment/ontology.owl': '2083acbad33be2b37ddc0d1ae122b5cb8a32816d6fbc479f8bce069db58c459a',
+    'docs/widoco/assessment/ontology.ttl': 'fb6612d8feb3f73aa1a0642edbdbf02a72919b8f6f8a7bc6b4670f78902093bd',
+    'docs/widoco/assessment/sections/description-en.html': '711339790a4c3cf557a65f2e6e78444c9d126a0dc7b584c654bbe091b2d1e089',
+    'docs/widoco/assessment/webvowl/data/ontology.json': '0574a352e08bb5aad79d405db6dedba0eeff315d30886e1bb2419653a6e076cb',
+    'tests/issue20_support.py': '99c7e1089c809cc0f18495c1d52bc300ef2b702d70e6ebac5a3a07d53778f7ac',
+    'tests/test_issue20_point2.py': '344064949abd2dfeaa4805c519998ac71bbbf050a967239be59cef89f8f863cd',
+    'tests/test_issue20_point3.py': 'e3391d3db7cd71f1b4fd4bc6a2c4e53ab3eefc42708f4bb8068582d927d449b5',
+    'tests/test_issue20_point4.py': '1171a15757b2ee34ea696104a9c5f60135285553ee08deb629b320e5fd108583',
+    'tests/test_issue20_point5.py': 'be15c2c24bdcbc8fa1cb2a5c0ec7d82662baf495aed157fa09590a7c3b14e564',
+    'widoco/sections/assessment/description-en.html': '711339790a4c3cf557a65f2e6e78444c9d126a0dc7b584c654bbe091b2d1e089',
+}
+
+
+def test_all_schema_profiles_dependencies_and_prior_evidence_are_preserved():
     paths = subprocess.check_output([
         'git', 'ls-tree', '-r', '--name-only', BASELINE, '--',
         'ontology', 'mireot', 'dependencies', 'shacl', 'catalog-v001.xml', 'VERSION',
@@ -54,7 +75,12 @@ def test_all_schema_profiles_dependencies_and_prior_evidence_are_byte_preserved(
         # These three reference files are outside the byte-owned package and
         # already have mixed checkout EOLs. Preserve their full text; every
         # owned source/profile/dependency retains a strict byte comparison.
-        if path in v.PRESERVED_REFERENCE_MATERIAL:
+        if path == 'ontology/textile-assessment.ttl':
+            expected = apply_review_annotations(Graph().parse(data=before, format='turtle'))
+            assert isomorphic(Graph().parse(data=current, format='turtle'), expected), path
+        elif path in REVIEW_OUTPUT_SHA256:
+            assert hashlib.sha256(current).hexdigest() == REVIEW_OUTPUT_SHA256[path], path
+        elif path in v.PRESERVED_REFERENCE_MATERIAL:
             assert current.replace(b'\r\n', b'\n') == before.replace(b'\r\n', b'\n'), path
         else:
             assert current == before, path
@@ -214,3 +240,20 @@ def test_optional_prov_axioms_and_event_mapping_preserve_roles(runtime, example,
     graph += Graph().parse(data=PROV_TIME_AXIOMS, format='turtle')
     DeductiveClosure(semantics).expand(graph)
     assert_temporal_roles(graph)
+
+
+def test_review_adds_only_three_discovery_annotations_and_one_date_replacement():
+    before = Graph().parse(data=subprocess.check_output([
+        'git', 'show', '9bb6143dd0713fe3ab3c078254557d905e8453de:ontology/textile-assessment.ttl'
+    ], cwd=ROOT), format='turtle')
+    expected = before + Graph()
+    apply_review_annotations(expected)
+    assert len(set(expected) - set(before)) == 4
+    assert len(set(before) - set(expected)) == 1
+    for subject, predicate, value in set(expected) - set(before):
+        assert predicate in {RDFS.comment, RDFS.seeAlso, DCTERMS.modified}
+    actual = Graph().parse(ROOT / 'ontology/textile-assessment.ttl')
+    assert isomorphic(actual, expected)
+    assert set(actual.objects(A.AssessmentExecution, RDFS.seeAlso)) == {
+        P.startedAtTime, P.endedAtTime}
+    assert set(actual.triples((None, OWL.imports, None))) == set(before.triples((None, OWL.imports, None)))

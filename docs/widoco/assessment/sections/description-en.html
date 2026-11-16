@@ -51,4 +51,26 @@ Production SHACL profiles are unchanged; supplied-value type checks exist only
 in focused tests and do not verify vocabulary membership or verdict correctness.
 See TXT-DEC-015.
 </p>
+<p>
+A reusable method's performance parameter and a product-specific assessed aspect
+may be distinct individuals. Sharing an individual is appropriate only when the
+statements concern the same aspect; no identity between method, execution,
+criterion and result targets is required. Protocol MeasurementParameters are
+separate controls. A fabric-category setting records a protocol input, not the
+specimen's intrinsic classification or a threshold-selection rule; a PROCESS
+method concept is not automatically a fabric classification.
+</p>
+<p>
+Execution timing reuses <code>prov:startedAtTime</code> and
+<code>prov:endedAtTime</code> directly on AssessmentExecution instances explicitly
+typed as <code>prov:Activity</code>. Both are optional and independent of EPCIS.
+A date-only <code>dcterms:date</code> is a coarse associated date, not a start/end
+timestamp; do not invent midnight or a timezone. Results can query execution
+time through <code>resultOfAssessment</code>. Completion, result generation,
+EPCIS occurrence and repository recording are distinct. ReferencePeriod qualifies the interval of an observation, indicator or other
+time-bound statement; it does not itself identify execution start or completion. No PROV
+import, subclass alignment, timestamp inference or production temporal SHACL
+validation is added. See the modelling guide (<code>docs/MODELLING_GUIDE.md</code>)
+for temporal precision, parameter identity and the six-gap traceability table.
+</p>
 </span>

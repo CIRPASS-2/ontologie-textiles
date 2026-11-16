@@ -9,6 +9,7 @@ from owlrl import DeductiveClosure, OWLRL_Semantics
 from pyshacl import validate
 
 from scripts import validate_public as v
+from issue20_support import apply_review_annotations
 from issue20_support import (POINT2_TURTLE, published_contract_graph, apply_point3,
                              expected_quantitative_shapes, POINT5_SHACL_README_SHA256, POINT4_TURTLE, POINT5_TURTLE)
 
@@ -40,6 +41,7 @@ def test_exact_delta_preserves_point1_and_all_other_modules():
             apply_point3(expected)  # Check the exact separately approved later delta.
             expected.parse(data=POINT4_TURTLE, format='turtle')
             expected.parse(data=POINT5_TURTLE, format='turtle')
+            apply_review_annotations(expected)
         else:
             assert (ROOT / name).read_bytes() == before, name
         assert isomorphic(Graph().parse(ROOT / name), expected), name

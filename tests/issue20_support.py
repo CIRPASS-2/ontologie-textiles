@@ -180,6 +180,22 @@ txtass:hasAssessmentOutcome a owl:ObjectProperty ;
 '''
 
 
+
+REVIEW_TEMPORAL_COMMENT = 'Execution timing may be stated directly on an instance using prov:startedAtTime and prov:endedAtTime, with explicit prov:Activity typing. These optional timestamps describe execution start and completion, not result generation or EPCIS occurrence or recording time. A date-only dcterms:date is merely a coarse associated date and does not determine either timestamp. No PROV import, class alignment or timestamp inference is asserted by this guidance.'
+
+
+def apply_review_annotations(graph):
+    """Only the approved 2026-11-16 discovery annotations and modification date."""
+    ontology = URIRef('https://w3id.org/eudpp/textile-assessment')
+    execution = URIRef(str(ontology) + '#AssessmentExecution')
+    assert (ontology, DCTERMS.modified, Literal('2026-11-09', datatype=XSD.date)) in graph
+    graph.set((ontology, DCTERMS.modified, Literal('2026-11-16', datatype=XSD.date)))
+    graph.add((execution, RDFS.comment, Literal(REVIEW_TEMPORAL_COMMENT, lang='en')))
+    for local in ('startedAtTime', 'endedAtTime'):
+        graph.add((execution, RDFS.seeAlso, URIRef('http://www.w3.org/ns/prov#' + local)))
+    return graph
+
+
 def current_version(filename):
     return '2.1.0-dev' if filename in CHANGED_MODULES else '2.0.0'
 
@@ -206,6 +222,7 @@ def expected_graph(relative):
         apply_point3(graph)
         graph.parse(data=POINT4_TURTLE, format='turtle')
         graph.parse(data=POINT5_TURTLE, format='turtle')
+        apply_review_annotations(graph)
     return graph
 
 

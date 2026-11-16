@@ -21,6 +21,24 @@ Do not point directly to an OWL class IRI: class/individual punning does not
 inherit class membership. Protocol controls remain MeasurementParameterSettings
 with settingForParameter and hasParameterValue or hasParameterConcept.
 
+A reusable method's `measuresPerformanceParameter` identifies a performance
+parameter within the method's scope; it does not require a product-specific
+occurrence of that parameter. A result's `resultForAssessedAspect` instead
+identifies the particular aspect evaluated. `MeasurementParameter` is a separate
+role for protocol controls, assigned through `settingForParameter`.
+
+Sharing a target individual between execution and result is appropriate when
+both statements concern exactly the same product-specific aspect. Example 12
+also shares it with a synthetic method whose scope is that particular aspect;
+this is not a rule for reusable standards. A reusable method can refer to a
+separate parameter individual of the appropriate performance-parameter class,
+while a product and its result refer to their own aspect instance. A criterion's
+parameter target likewise reflects the criterion's scope. Being instances of
+the same class does not make these resources identical. No equality, automatic
+mapping or requirement that method, execution, criterion and result share one
+individual is asserted. Applications must retain enough method/scale context
+to interpret distinct parameter and aspect resources.
+
 The target is the direct subject, not necessarily the scalar quantity or grade
 dimension. Pilling and PillingResistance remain different categories. A numeric
 pilling result needs an adequate method/interpretation scale; an aspect link alone
@@ -59,6 +77,19 @@ or AssessmentCondition can own the setting through hasParameterSetting. The code
 is a SKOS concept supplied by the application; no code list is introduced here.
 A setting is distinct from an intrinsic specimen/product characteristic and
 from a rule selecting an applicable threshold. Neither role is added by point 3.
+
+For the reporter's fabric-type case, distinguish the specimen's actual
+construction characteristic from the protocol's selected fabric category.
+For example, an application may record that a specimen is knitted in its product
+classification data, while a separate MeasurementParameterSetting supplies an
+application-defined SKOS code for the protocol's knitted-specimen conditions or
+threshold-table category. `hasParameterConcept` records that protocol input;
+it does not assert the specimen classification, establish the selection rule,
+or prove that the selected table is appropriate. The classification and setting
+may use an agreed code only when its definition fits both roles; they are not
+inherently the same assertion. A PROCESS method concept denotes a process method,
+not a fabric classification, and no equivalence is implied. Example 14's synthetic
+cycle-mode code remains a protocol example rather than a fabric-type vocabulary.
 
 The baseline setting shape requires at least one value form. Both may be present;
 all numerical values remain checked, with a maximum of one, and all code targets
@@ -392,6 +423,16 @@ execution/occurrence/recording times, a coarse date, an undated execution and a
 result linked to its execution. These are isolated example identifiers, not a
 complete EPCIS payload or evidence of a real inspection.
 
+`txtcon:ReferencePeriod` qualifies the interval of an observation, indicator or
+other time-bound textile statement (for example, a reporting period). That is
+not necessarily when an assessment was executed. Treating that reference
+context as an execution timestamp would blur these roles and would still require
+an agreed execution-to-period relation. Direct PROV reuse supplies start/end
+semantics without adding such a local relation. An execution interval and a
+statement's reference period may coincide in a particular dataset; no equality
+or synchronization follows. The AssessmentExecution documentation links to both
+PROV properties for discovery; these annotation links do not import their axioms.
+
 No local temporal property, global subclass alignment, PROV import or copied
 PROV declaration is added to any ontology. With authoritative PROV axioms loaded,
 its start/end property domains infer Activity. Without those axioms the current
@@ -425,3 +466,23 @@ Normative references: [PROV-O](https://www.w3.org/TR/prov-o/),
 and [XML Schema datatypes](https://www.w3.org/TR/xmlschema11-2/).
 See the [implementation evidence](ISSUE20_POINT6_IMPLEMENTATION.md) for the
 separate authoritative-axiom check and remaining validation limits.
+
+## Issue #20 exchange-gap traceability
+
+The following paraphrases the reporter's six gaps and preserves the named
+workarounds from [issue #20](https://github.com/CIRPASS-2/ontologie-textiles/issues/20),
+verified on 2026-11-16. Point 6 describes proposals rather than a stated workaround.
+
+| Point / exchange gap | Reporter workaround | Implemented representation |
+|---|---|---|
+| 1. Result-to-parameter association | `dcterms:subject` on the result | `resultForAssessedAspect` on each MeasurementResult; method/scale context retains grading meaning. |
+| 2. Execution-to-product-event link | `dcterms:relation` to ProductEvent | Independent ASSESSMENT `isRepresentedByProductEvent`; conceptual event and EPCIS carrier stay distinct. |
+| 3. Coded condition value | `dcterms:type` and `rdfs:comment` on the condition | `hasParameterConcept` on MeasurementParameterSetting; not specimen classification or threshold-selection logic. |
+| 4. Points earned by a result | Derived indicator marked with `dcterms:type` | `awardedScoreValue`; separate from measured values, prescribed rule points and indicators. |
+| 5. Overall verdict | Information lost | `hasAssessmentOutcome` with application-defined overall concepts; criterion codes are not overall verdicts. |
+| 6. Assessment timing without EPCIS | None stated; event-time reuse or an execution-date property proposed | Optional PROV start/end; coarse `dcterms:date` when only a date is known. |
+
+These patterns address representation, not demonstrated compatibility with the
+reporter's unavailable converter fixtures. The external outcome vocabulary,
+parameter/aspect correspondence and method-specific interpretation still require
+agreement between exchange partners.

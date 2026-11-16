@@ -9,6 +9,7 @@ from rdflib.compare import isomorphic
 from rdflib.namespace import SH, SKOS
 
 from scripts import validate_public as v
+from issue20_support import apply_review_annotations
 from issue20_support import POINT5_TURTLE, published_contract_graph
 
 ROOT = v.ROOT
@@ -51,6 +52,7 @@ def test_only_eight_property_triples_are_added_to_ontology_sources():
         if filename == 'textile-assessment.ttl':
             assert not set(addition) & set(expected)
             expected += addition
+            apply_review_annotations(expected)
         else:
             assert (ROOT / name).read_bytes() == old, name
         assert isomorphic(Graph().parse(ROOT / name), expected), name

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 review clarifications - 2026-11-16
+
+Clarify reusable method parameters versus product-specific aspects and categorical
+fabric protocol inputs. Add the six-gap exchange traceability table and PROV
+discovery annotations on AssessmentExecution. Refresh ASSESSMENT modification
+metadata and affected documentation; logical axioms and production SHACL stay unchanged.
+
 ## 2.1.0-dev - issue #20 point 6 - 2026-11-15
 
 Document optional PROV start/completion timestamps and coarse dcterms:date values

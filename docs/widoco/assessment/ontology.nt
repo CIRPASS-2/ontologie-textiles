@@ -32,8 +32,11 @@
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Concrete performance of an assessment method on a specified product under stated conditions and parameter settings."@en .
+<https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Execution timing may be stated directly on an instance using prov:startedAtTime and prov:endedAtTime, with explicit prov:Activity typing. These optional timestamps describe execution start and completion, not result generation or EPCIS occurrence or recording time. A date-only dcterms:date is merely a coarse associated date and does not determine either timestamp. No PROV import, class alignment or timestamp inference is asserted by this guidance."@en .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-assessment> .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment execution"@en .
+<https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/ns/prov#endedAtTime> .
+<https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/ns/prov#startedAtTime> .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-assessment#AssessmentElement> .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
 <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
@@ -571,7 +574,7 @@
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/description> "Ontology module for textile assessment methods, standards, executions, conditions, parameter settings, results, interpretation scales, endpoints and performance thresholds."@en .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/modified> "2026-11-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/modified> "2026-11-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/title> "EU DPP Textile Assessment Ontology"@en .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtass" .
