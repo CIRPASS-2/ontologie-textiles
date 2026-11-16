@@ -1,6 +1,14 @@
-# Publication scope and historical preservation
+# Development scope and published preservation
 
-This local 2.0.0 candidate comprises 13 Textile modules and seven bounded MIREOT
+The working package is an unpublished 2.1.0-dev implementation of issue #20
+points 1-6. Point 6 adds only instance-level temporal reuse and documentation,
+with no schema or production-profile changes. ASSESSMENT and the network entry point advance; all other modules and
+MIREOTs retain their prior bytes. The complete 2.0.0 baseline remains in Git at
+`40b08bff9316ba47b0b8b0c2b5265ef2ddbdfe6b`; use a separate checkout and its original
+catalogue to load it. No duplicate package archive is added. The development
+catalogue does not redirect changed 2.0.0 version IRIs to new source graphs.
+
+The published 2.0.0 baseline comprises 13 Textile modules and seven bounded MIREOT
 graphs. Only that 20-graph import closure is used for current runtime validation.
 Full current CORE snapshots and historical RDF are reference inputs, not runtime
 imports. No release approval or publication is claimed.

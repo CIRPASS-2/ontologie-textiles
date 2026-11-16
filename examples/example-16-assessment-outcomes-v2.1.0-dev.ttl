@@ -1,0 +1,34 @@
+# SYNTHETIC, NON-NORMATIVE issue #20 point-5 example.
+# The unchanged V06 route-specific fixture supplies the reference assessment,
+# method, product, route and criterion outcomes below. No method correctness,
+# regulatory classification or universal recyclability claim is asserted.
+@prefix app: <https://example.org/application/recyclability-outcomes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <https://example.org/textile-recyclability/issue20-point5/> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtrec: <https://w3id.org/eudpp/textile-recyclability#> .
+
+ex:mechanicalRouteAssessment a txtrec:RecyclabilityAssessment ; txtass:assessesProduct ex:product ; txtass:appliesMethod ex:method ; txtrec:assessesRecyclingRoute ex:route ; txtass:producesResult ex:mechanicalRouteResult .
+ex:mechanicalRouteResult txtass:resultOfAssessment ex:mechanicalRouteAssessment ; txtrec:resultForRecyclingRoute ex:route ; txtrec:hasCriterionResult ex:collectionCriterionResult, ex:sortabilityCriterionResult, ex:preparationCriterionResult, ex:feedstockCriterionResult, ex:disruptiveElementsCriterionResult, ex:monoMaterialCriterionResult, ex:componentCriterionResult .
+ex:collectionCriterionResult txtrec:evaluatesCriterion txtrec:effectiveCollectionCriterion ; txtrec:hasCriterionOutcome txtrec:criterionSatisfied ; txtrec:resultForRecyclingRoute ex:route .
+ex:sortabilityCriterionResult txtrec:evaluatesCriterion txtrec:sortabilityCriterion ; txtrec:hasCriterionOutcome txtrec:criterionSatisfied ; txtrec:resultForRecyclingRoute ex:route .
+ex:preparationCriterionResult txtrec:evaluatesCriterion txtrec:preparationForRecyclingCriterion ; txtrec:hasCriterionOutcome txtrec:criterionSatisfied ; txtrec:resultForRecyclingRoute ex:route .
+ex:feedstockCriterionResult txtrec:evaluatesCriterion txtrec:fibreFeedstockUseCriterion ; txtrec:hasCriterionOutcome txtrec:criterionPartlySatisfied ; txtrec:resultForRecyclingRoute ex:route .
+ex:disruptiveElementsCriterionResult txtrec:evaluatesCriterion txtrec:disruptiveElementAbsenceCriterion ; txtrec:hasCriterionOutcome txtrec:criterionNotSatisfied ; txtrec:resultForRecyclingRoute ex:route .
+ex:monoMaterialCriterionResult txtrec:evaluatesCriterion txtrec:monoMaterialCriterion ; txtrec:hasCriterionOutcome txtrec:criterionNotSatisfied ; txtrec:resultForRecyclingRoute ex:route .
+ex:componentCriterionResult txtrec:evaluatesCriterion txtrec:materialSeparabilityCriterion ; txtrec:hasCriterionOutcome txtrec:criterionPartlySatisfied ; txtrec:resultForRecyclingRoute ex:route .
+
+# Overall conclusion on the aggregate result; criterion outcomes above remain
+# distinct. Tests substitute the positive and negative concepts or omit this link.
+ex:mechanicalRouteResult txtass:hasAssessmentOutcome app:inconclusiveUnderMethod .
+
+# Application-defined example data, not an ontology-owned code list or scheme.
+app:recyclableUnderMethod a skos:Concept ;
+    skos:prefLabel "Overall recyclable conclusion under the applied method and route"@en ;
+    skos:definition "Overall conclusion that the assessed product is considered recyclable under the method applied by the assessment and the recycling route stated on its aggregate result. This synthetic application concept establishes no regulatory or universal classification."@en .
+app:notRecyclableUnderMethod a skos:Concept ;
+    skos:prefLabel "Overall non-recyclable conclusion under the applied method and route"@en ;
+    skos:definition "Overall conclusion that the assessed product is not considered recyclable under the method applied by the assessment and the recycling route stated on its aggregate result. This synthetic application concept establishes no regulatory or universal classification."@en .
+app:inconclusiveUnderMethod a skos:Concept ;
+    skos:prefLabel "Overall inconclusive conclusion under the applied method and route"@en ;
+    skos:definition "Overall conclusion that the assessment does not establish whether the product is recyclable under its applied method and the recycling route stated on its aggregate result. This synthetic application concept expresses neither a positive nor a negative verdict and establishes no regulatory or universal classification."@en .

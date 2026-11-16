@@ -1,5 +1,61 @@
 # Changelog
 
+## 2.1.0-dev - issue #20 review clarifications - 2026-11-16
+
+Clarify reusable method parameters versus product-specific aspects and categorical
+fabric protocol inputs. Add the six-gap exchange traceability table and PROV
+discovery annotations on AssessmentExecution. Refresh ASSESSMENT modification
+metadata and affected documentation; logical axioms and production SHACL stay unchanged.
+
+## 2.1.0-dev - issue #20 point 6 - 2026-11-15
+
+Document optional PROV start/completion timestamps and coarse dcterms:date values
+on assessment executions. Add an isolated synthetic example and focused tests
+for precision, result lookup and EPCIS independence. Keep ontology schemas,
+imports, versions, production SHACL and all earlier corrections unchanged.
+
+## 2.1.0-dev - issue #20 point 5 - 2026-11-12
+
+Add the optional independent hasAssessmentOutcome relation for controlled result
+conclusions under the applied method and context. Keep aggregate recyclability
+verdicts separate from criterion outcomes and use only synthetic application
+concepts in the example. Preserve all production SHACL profiles; exercise the
+optional supplied-value guard in tests. No new vocabulary class, code list or
+decision rule is added. See TXT-DEC-015.
+
+## 2.1.0-dev - issue #20 point 4 - 2026-11-10
+
+Add awardedScoreValue for points actually awarded to individual assessment
+results, distinct from measurements, prescribed rule points and indicators.
+Validate only supplied award values as decimal, dimensionless QuantitativeValues.
+No mandatory awards, score bounds or calculation are introduced. Preserve points
+1-3, other ontology sources and existing shapes. See TXT-DEC-014.
+
+## 2.1.0-dev - issue #20 point 3 - 2026-11-09
+
+Add hasParameterConcept for categorical protocol-setting values. Change only the
+measurement-parameter setting shape to inclusive numerical/categorical presence,
+keeping numerical checks unconditional and allowing multiple concepts. Advance
+only the changed quantitative profile version IRI to 2.1.0-dev with explicit
+maintainer approval. Points 1 and 2 and other shapes are preserved. See TXT-DEC-013.
+
+## 2.1.0-dev - issue #20 point 2 - 2026-11-09
+
+Add the optional ASSESSMENT isRepresentedByProductEvent bridge and a direct
+import of the existing bounded EVENT MIREOT. Keep assessment executions,
+conceptual ProductEvents and technical EPCIS carriers distinct. Preserve the
+point-1 correction and existing PROCESS/EVENT definitions. See TXT-DEC-012.
+
+## 2.1.0-dev - issue #20 point 1 - 2026-11-09
+
+Add resultForAssessedAspect to ASSESSMENT, linking a MeasurementResult to its
+individual assessed subject. Provide opt-in target checking without cardinality constraints;
+the baseline remains compatible. Add
+multi-result, degradation and structural examples and negative/inference tests.
+Preserve the 2.0.0 baseline in existing Git history. Only ASSESSMENT
+and the network advance version identity. No other issue point is implemented,
+and no release is published. See TXT-DEC-011.
+
 ## CORE MAT classification alignment - 2026-11-02
 
 Addressed Nader Jelassi's source PR #19 review: FibreTypeConcept now subclasses

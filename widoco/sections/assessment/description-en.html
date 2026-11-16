@@ -8,4 +8,69 @@ Assessment methods describe reusable procedures or standards, while assessment e
 <p>
 The separation between methods, executions and results enables the same method to be reused across products and contexts while preserving the provenance and conditions of individual assessment activities.
 </p>
+<p>
+The unpublished 2.1.0-dev extension adds <code>resultForAssessedAspect</code> to bind
+an individual result to its individual product property, degradation phenomenon,
+failure mode or external damage. The subject is distinct from the measured
+quantity or grading dimension and from protocol controls. No global cardinality
+is imposed. Explicit-target SHACL validation is optional and has no cardinality
+constraint.
+</p>
+<p>
+The optional <code>isRepresentedByProductEvent</code> relation links an assessment
+execution to its conceptual, product-facing ProductEvent, distinct from an EPCIS
+technical carrier. The existing PROCESS bridge is independent. ASSESSMENT imports
+the bounded EVENT MIREOT; carrier mapping axioms remain outside that subset.
+Neither the relation nor OBSERVE / inspecting establishes that every assessment
+or observation qualifies as a ProductEvent. See TXT-DEC-012 and example 13.
+</p>
+<p>
+The <code>hasParameterConcept</code> relation supplies categorical protocol values
+on a MeasurementParameterSetting. Inclusive SHACL alternatives allow numerical,
+categorical or both forms; numerical checks remain unconditional and concepts
+have no maximum count. RDFS range inference is not vocabulary-membership
+validation. Settings, assessed product characteristics and threshold-selection
+rules remain separate roles. See TXT-DEC-013 and example 14.
+</p>
+<p>
+The optional <code>awardedScoreValue</code> relation records points actually awarded
+to an individual assessment result, distinct from its measured value, prescribed
+rule points and a derived indicator. Supplied values must be scalar decimal
+QuantitativeValues with units:one. Multiple awards and unscored results are
+permitted; no calculation, non-negativity or score maximum is added. See
+TXT-DEC-014 and example 15.
+</p>
+<p>
+The optional <code>hasAssessmentOutcome</code> relation records a controlled
+conclusion under the applicable method and context. For recyclability, attach
+it to the aggregate result under the stated route; keep individual criterion
+outcomes separate and do not reuse criterion-level concepts as overall verdicts.
+Example 16 supplies synthetic application concepts for positive, negative and
+inconclusive conclusions. No ontology code list or decision rule is added.
+Production SHACL profiles are unchanged; supplied-value type checks exist only
+in focused tests and do not verify vocabulary membership or verdict correctness.
+See TXT-DEC-015.
+</p>
+<p>
+A reusable method's performance parameter and a product-specific assessed aspect
+may be distinct individuals. Sharing an individual is appropriate only when the
+statements concern the same aspect; no identity between method, execution,
+criterion and result targets is required. Protocol MeasurementParameters are
+separate controls. A fabric-category setting records a protocol input, not the
+specimen's intrinsic classification or a threshold-selection rule; a PROCESS
+method concept is not automatically a fabric classification.
+</p>
+<p>
+Execution timing reuses <code>prov:startedAtTime</code> and
+<code>prov:endedAtTime</code> directly on AssessmentExecution instances explicitly
+typed as <code>prov:Activity</code>. Both are optional and independent of EPCIS.
+A date-only <code>dcterms:date</code> is a coarse associated date, not a start/end
+timestamp; do not invent midnight or a timezone. Results can query execution
+time through <code>resultOfAssessment</code>. Completion, result generation,
+EPCIS occurrence and repository recording are distinct. ReferencePeriod qualifies the interval of an observation, indicator or other
+time-bound statement; it does not itself identify execution start or completion. No PROV
+import, subclass alignment, timestamp inference or production temporal SHACL
+validation is added. See the modelling guide (<code>docs/MODELLING_GUIDE.md</code>)
+for temporal precision, parameter identity and the six-gap traceability table.
+</p>
 </span>

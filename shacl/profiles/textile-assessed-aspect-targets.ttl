@@ -1,0 +1,33 @@
+# CIRPASS-2 Textile Ontology issue #20, point 1 - target profile
+# OPTIONAL TARGET VALIDATION: never add as mandatory baseline SHACL
+# without an explicit compatibility decision. Execute with the relevant
+# ontology/instance typing available to SHACL.
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix txtdur: <https://w3id.org/eudpp/textile-durability#> .
+@prefix txtind: <https://w3id.org/eudpp/textile-indicator#> .
+@prefix tshp1: <https://example.org/eu-dpp-textile/issue20-point1/shapes#> .
+
+tshp1:ExplicitAssessedAspectShape a sh:NodeShape ;
+    sh:targetSubjectsOf txtass:resultForAssessedAspect ;
+    sh:property [
+        sh:path txtass:resultForAssessedAspect ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:or (
+            [ sh:class dpp:Property ]
+            [ sh:class txtdur:ObservedDegradationPhenomenon ]
+            [ sh:class txtdur:FailureMode ]
+            [ sh:class txtdur:ExternalDamage ]
+        ) ;
+        sh:not [ sh:or (
+            [ sh:class txtass:AssessmentElement ]
+            [ sh:class txtind:Indicator ]
+            [ sh:class txtcon:QuantitativeValue ]
+            [ sh:class owl:Class ]
+            [ sh:class rdfs:Class ]
+        ) ]
+    ] .

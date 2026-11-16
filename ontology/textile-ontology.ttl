@@ -14,7 +14,7 @@
     dcterms:description "Modular ontology network for textile product information in Digital Product Passports, covering product structure, processes, durability, assessment, indicators, context, repairability, recyclability, associated materials and substances of concern."@en ;
     dcterms:issued "2026-07-16"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-10-27"^^xsd:date ;
+    dcterms:modified "2026-11-09"^^xsd:date ;
     dcterms:title "CIRPASS Textile Ontology"@en ;
     owl:imports <https://w3id.org/eudpp/textile-assessment>,
         <https://w3id.org/eudpp/textile-associated-materials>,
@@ -28,5 +28,6 @@
         <https://w3id.org/eudpp/textile-repairability>,
         <https://w3id.org/eudpp/textile-soc>,
         <https://w3id.org/eudpp/textile-structure> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-ontology/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-ontology/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-ontology/2.1.0-dev> ;
+    owl:versionInfo "Version 2.1.0-dev" .

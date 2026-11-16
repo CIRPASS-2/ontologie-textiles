@@ -27,3 +27,59 @@ message/source-constraint identity one-to-one. Forty-one migration scenarios ret
 exact result multisets. Every targeted SoC shape has positive focus coverage
 and discriminating negative coverage. The existing sixteen SHACL regression
 scenarios and recyclability inference control remain unchanged in purpose.
+
+## Optional assessed-aspect target validation (issue #20 point 1)
+
+Select `profiles/textile-assessed-aspect-targets.ttl` to check explicit bindings.
+Merge the relevant ontology and instance typing with the data: an untyped target
+fails. The profile rejects protocol controls, values, criteria, indicators and
+class IRIs used as individuals. It neither requires a binding on legacy results
+nor restricts the number of bindings. The default loader does not select it.
+Use it as pySHACL's `shacl_graph` with the same offline ontology/data merge and
+`do_owl_imports=False` as the baseline. The regression tests cover valid and
+invalid targets, missing/multiple links and existing examples 06/07.
+
+## Parameter-setting values (issue #20 point 3)
+
+MeasurementParameterSettingShape accepts a quantitative value, one or more SKOS
+concepts, or both. It retains the numerical maximum of one and validates every
+supplied value outside the inclusive alternatives. Units, decimal datatypes and
+quantity-kind checks are unchanged. No coded maximum or exclusive xone is added.
+A setting with neither form now produces a node-level OrConstraintComponent,
+rather than a hasParameterValue MinCountConstraintComponent.
+
+For a concept-typing check on supplied data, validate before RDFS materialisation
+with the relevant code declarations available. The standard RDFS run can infer
+Concept typing from hasParameterConcept itself; passing is not authoritative
+vocabulary-membership verification. Literal code targets fail either mode.
+The changed quantitative profile has version IRI ending 2.1.0-dev, approved as a
+single-IRI metadata correction; its original 2.0.0 graph remains in Git history.
+
+## Awarded points (issue #20 point 4)
+
+AwardedScoreValueShape targets only supplied awardedScoreValue objects. Each must
+be a QuantitativeValue with an actual decimal numericValue and units:one, reusing
+the existing unit, quantity-kind and scalar checks. The numeric minimum excludes
+threshold expressions that deliberately omit numericValue. No award is required,
+and multiple links remain permitted. Negative values are not prohibited; no
+method-specific maximum or calculation is imposed. A second unit still fails the
+existing quantitative maximum. RDFS can infer value typing from the property's
+range; pre-inference sh:class checks explicit or subclass typing instead.
+
+## Assessment conclusions (issue #20 point 5)
+
+The optional hasAssessmentOutcome relation has no production SHACL guard here.
+No suitable general assessment-conclusion development profile exists: the current
+quantitative profile covers quantities and associated parameter settings; the
+assessed-aspect profile checks MeasurementResult subjects. The recyclability and
+SoC profiles retain their published 2.0.0 identities and constraints. No new
+profile, constraint or profile-version change is introduced for this correction.
+
+Focused tests construct a supplied-value guard in memory using targetObjectsOf
+hasAssessmentOutcome and class skos:Concept, with no minimum or maximum count.
+It rejects literal targets and untyped concepts before inference. RDFS range
+inference can supply Concept typing; neither it nor sh:class establishes
+vocabulary membership, aggregate scope or method-specific verdict correctness.
+Criterion-level concepts also pass this generic type check but must not be used
+as overall verdicts. The existing public validator does not add this guard;
+passing baseline validation does not validate supplied assessment-outcome values.
