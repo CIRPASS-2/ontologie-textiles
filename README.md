@@ -15,6 +15,30 @@ The **current CIRPASS Textile Ontology** is the JRC-grounded community review ca
 
 [Earlier Graphwise ontology work](ontology/graphwise-ontology/README.md) is preserved for reference and project continuity. It predates the current JRC-grounded modelling approach and is separate from the current package. Its graphs are not loaded by the current catalogue or validator and are outside the package checksum contract. Load the two models separately. See [publication scope](docs/PUBLICATION_SCOPE.md).
 
+## Issue #9 development scope
+
+Issue #9 specifies approved documentation and annotation clarifications to
+the merged 2.0.0 baseline. These clarifications are prepared for review. Existing ontology version identities, imports and logical axioms are
+preserved; no new development version identifier is needed for these edits.
+See [the approved issue #9 decisions](docs/decisions/TXT-DEC-016.md).
+
+## Selected CORE sources
+
+| CORE module | Selected upstream version |
+|---|---|
+| ACTOR | 2.2.0 |
+| CON | 2.4.0 |
+| EVENT | 1.0.0 |
+| MAT | 1.1.0 |
+| P_DPP | 2.2.0 |
+| SOC | 2.2.0 |
+
+These versions are verified from the local source snapshots, not inferred from
+the local MIREOT version. Textile retains bounded extracts using original CORE
+term IRIs and an offline-resolvable closure. [Dependencies](docs/DEPENDENCIES.md)
+identifies snapshot files, hashes, extraction scopes and update responsibilities;
+no upstream commit identifier is asserted without evidence.
+
 ## Versions and entry point
 
 The proposed breaking-change candidate is **2.0.0**. All thirteen current Textile

@@ -55,3 +55,14 @@ descriptions identify the adopted MAT 1.1.0 and EVENT 1.0.0 subsets. The seven
 earlier locator supplements remain historical evidence statements; the migration
 does not claim fresh documentary verification. The presence locator names the
 current SubstancePresence pivot while retaining its ESPR source relationship.
+
+## Issue #9 definition clarification
+
+The current `txtdur:Durability` definition is a project-specific textile-context
+refinement informed by JRC, not a quotation. Its modelling note records the
+additional context in Sections 9.2.1.1, 9.2.1.3 and 13.10.1.1; the original
+general-definition locator and source association are preserved. The CSV schema
+does not project definition/comment text or modelling notes, so the unchanged
+projection is intentional. [TXT-DEC-016](decisions/TXT-DEC-016.md) records
+the clarification. Historical SOC statement attribution remains unchanged in
+`migration/legacy-soc-attribution.json` even where current annotations are clarified.

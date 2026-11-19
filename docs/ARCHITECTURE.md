@@ -13,6 +13,22 @@ The umbrella ontology `textile-ontology.ttl` is the recommended import for appli
 - Substance identity is separated from product-specific presence and regulatory qualification.
 - Product events are aligned with the EU DPP Event ontology through a MIREOT subset.
 
+## Bounded CORE reuse retained for issue #9
+
+Textile reuses original CORE IRIs; an extracted CORE subject is not a duplicate
+Textile term. Bounded MIREOT graphs select CORE axioms and their associated
+semantic commitments from identifiable local upstream snapshots. This limits
+exposure to unrelated upstream axioms compared with importing entire modules,
+while keeping the selected closure reproducible and resolvable offline through
+`catalog-v001.xml`.
+
+The approved architecture retains these extracts and their existing imports.
+Selection does not guarantee full compatibility or isolate consumers that also
+load other CORE axioms. It creates a maintenance responsibility: monitor upstream
+evolution, compare the full candidate source, and assess changed commitments at
+the actual Textile reuse boundary before adopting an update. See the
+[dependency review workflow](governance/upstream-dependency-governance.md).
+
 ## October 2026 CORE boundary
 
 The runtime has 20 graphs: 13 Textile modules and seven bounded subsets. SOC

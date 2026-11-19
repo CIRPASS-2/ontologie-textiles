@@ -8,6 +8,29 @@ from scripts import validate_public as v
 
 ROOT=v.ROOT
 
+# Issue #9 fragments are inline because their links resolve from the generated document.
+README_CREATORS = 'The Textile ontology network and its twelve modules identify **Elio Hbeich,\nBOUGACHA Racem, Ivo Ladenius, Andreas Schneider, Jan Merckx and Piero de Sabbata**\nas `dcterms:creator`. The owner-approved creator update preserves the established\nEnglish language-tagged literal representation and all existing creators.\n\n'
+README_ISSUE9 = '## Issue #9 development scope\n\nIssue #9 specifies approved documentation and annotation clarifications to\nthe merged 2.0.0 baseline. These clarifications are prepared for review. Existing ontology version identities, imports and logical axioms are\npreserved; no new development version identifier is needed for these edits.\nSee [the approved issue #9 decisions](docs/decisions/TXT-DEC-016.md).\n\n## Selected CORE sources\n\n| CORE module | Selected upstream version |\n|---|---|\n| ACTOR | 2.2.0 |\n| CON | 2.4.0 |\n| EVENT | 1.0.0 |\n| MAT | 1.1.0 |\n| P_DPP | 2.2.0 |\n| SOC | 2.2.0 |\n\nThese versions are verified from the local source snapshots, not inferred from\nthe local MIREOT version. Textile retains bounded extracts using original CORE\nterm IRIs and an offline-resolvable closure. [Dependencies](docs/DEPENDENCIES.md)\nidentifies snapshot files, hashes, extraction scopes and update responsibilities;\nno upstream commit identifier is asserted without evidence.\n\n'
+GUIDE_ISSUE9 = '## Approved issue #9 clarifications\n\n[TXT-DEC-016](decisions/TXT-DEC-016.md) records the retained CORE extraction\narchitecture, the textile-context durability definition, the interpretive\nindicator distinction and the two role-specific concernsProduct properties.\nThese are annotation and documentation changes with no new logical commitments.\nThe existing quantity, SOC, assessment and composition models remain governed by\ntheir own decisions.\n'
+ARCHITECTURE_ISSUE9 = '## Bounded CORE reuse retained for issue #9\n\nTextile reuses original CORE IRIs; an extracted CORE subject is not a duplicate\nTextile term. Bounded MIREOT graphs select CORE axioms and their associated\nsemantic commitments from identifiable local upstream snapshots. This limits\nexposure to unrelated upstream axioms compared with importing entire modules,\nwhile keeping the selected closure reproducible and resolvable offline through\n`catalog-v001.xml`.\n\nThe approved architecture retains these extracts and their existing imports.\nSelection does not guarantee full compatibility or isolate consumers that also\nload other CORE axioms. It creates a maintenance responsibility: monitor upstream\nevolution, compare the full candidate source, and assess changed commitments at\nthe actual Textile reuse boundary before adopting an update. See the\n[dependency review workflow](governance/upstream-dependency-governance.md).\n\n'
+DEPENDENCIES_ISSUE9 = '## Snapshot identity and maintenance\n\nAn upstream module version, a local source snapshot and a local extraction\nversion identify different things. The source files above are the accepted local\nsnapshots; their byte identities are recorded in\n[SHA256SUMS](../dependencies/current-core/SHA256SUMS). The local rebuilt MIREOT\nversion is 2.0.0 and is not an upstream CORE version. No upstream Git commit is\nasserted here: the accepted evidence identifies supplied snapshot bytes and\nembedded module metadata.\n\nThe full upstream candidate sources must be compared for evolution, including\nchanges outside the selected subjects that could affect them. Inference,\nvalidation and exchange impact is assessed against actually reused terms and\naxioms. Adoption and any re-extraction require a separate approved dependency\nupdate; these issue #9 clarifications change neither source bytes nor extracts.\nSee [governance](governance/upstream-dependency-governance.md).\n\n'
+TRACEABILITY_ISSUE9 = '## Issue #9 definition clarification\n\nThe current `txtdur:Durability` definition is a project-specific textile-context\nrefinement informed by JRC, not a quotation. Its modelling note records the\nadditional context in Sections 9.2.1.1, 9.2.1.3 and 13.10.1.1; the original\ngeneral-definition locator and source association are preserved. The CSV schema\ndoes not project definition/comment text or modelling notes, so the unchanged\nprojection is intentional. [TXT-DEC-016](decisions/TXT-DEC-016.md) records\nthe clarification. Historical SOC statement attribution remains unchanged in\n`migration/legacy-soc-attribution.json` even where current annotations are clarified.\n'
+GOVERNANCE_19 = '## 19. Accepted current sources and historical examples\n\nThe merged Textile 2.0.0 baseline selects EVENT 1.0.0 and SOC 2.2.0. Both\nrebuilt local MIREOTs have 2.0.0 identities. Their module versions and local\nsnapshot hashes are distinct evidence; see [dependencies](../DEPENDENCIES.md).\nThe SOC migration is implemented, not a pending dependency upgrade.\n\n### Historical pre-migration examples\n\nThe preserved earlier runtime used EVENT `Version 0.1.0 DRAFT` and SOC\n`Version 0.1.2 DRAFT`, with local EVENT MIREOT 1.1.2 and SOC MIREOT 1.1.3.\nThese historical facts remain relevant to migration provenance; they do not\ndescribe the current dependency selection. A draft label alone did not prove\nreuse invalid or require adoption of another version.\n\n'
+GOVERNANCE_21 = '## 21. Review workflow and separately approved updates\n\n1. Identify the accepted versioned CORE snapshots by file, embedded module\n   metadata, recorded hash and demonstrably known upstream identifier, if any.\n2. Obtain an identifiable new upstream candidate and compare the full sources.\n3. Identify definition, axiom and relationship changes relevant to Textile,\n   including effects on selected terms from other changed upstream axioms.\n4. Evaluate inferred types, domain/range propagation, restrictions, validation,\n   examples and data-exchange consequences at the actual reuse boundary.\n5. Record an explicit adoption decision by the authorized owner, obtaining CORE\n   maintainer confirmation where intended semantics or compatibility is unclear.\n6. Only through an independently approved update, change the relevant MIREOTs,\n   provenance, migration guidance and tests, then run the affected checks.\n\nMonitoring upstream drift does not itself authorize adoption. Reviewing the full\nCORE candidate does not mean loading it wholesale into the Textile runtime.\n\n'
+
+def replace_once(text, anchor, replacement, document):
+    count = text.count(anchor)
+    if count != 1:
+        raise ValueError(f'{document}: expected exactly one anchor {anchor!r}; found {count}')
+    return text.replace(anchor, replacement, 1)
+
+
+def insert_before(text, anchor, fragment, document):
+    if fragment in text:
+        raise ValueError(f'{document}: issue #9 fragment is already present')
+    return replace_once(text, anchor, fragment + anchor, document)
+
+
 
 def write(path,text):
     (ROOT/path).write_text(text.replace('\r\n','\n').rstrip('\r\n')+'\n',encoding='utf8',newline='\n')
@@ -59,6 +82,8 @@ See the [migration guide](docs/CORE_2026_MIGRATION.md).
                       'the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios,')
     text=text.replace('Supply the ontology graph when executing SHACL.',
                       'The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL.')
+    text=insert_before(text, '## Two bodies of ontology work\n', README_CREATORS, 'README.md')
+    text=insert_before(text, '## Versions and entry point\n', README_ISSUE9, 'README.md')
     write('README.md',text)
     write('CHANGELOG.md','''# Changelog
 
@@ -123,11 +148,14 @@ its original changelog, manifest, catalogue, sources and generated documentation
             'are deliberately absent from the active catalogue. No equivalence or',
             'redirect bridges the legacy `soc#` vocabulary to the migrated runtime.',
             'See [migration guidance](CORE_2026_MIGRATION.md).','']
-    write('docs/DEPENDENCIES.md','\n'.join(lines))
-    text=baseline_text('docs/MODELLING_GUIDE.md')
-    text=text.replace('For the supplied SoC dependency, exact, maximum and range quantitative expressions use the source ontology classes.',
-       'Positive reports use CORE SubstancePresence and concernsSubstance, which entails SubstanceOfConcern typing. Applicable qualifications remain presence-scoped and must qualify that same substance. Concentrations use CORE scalar/range carriers directly; threshold expressions retain Textile roles beneath the shared QuantitativeValue. See [the migration patterns](CORE_2026_MIGRATION.md).')
-    text=text.replace('../dependencies/p_dpp.owl','../dependencies/current-core/p_dpp.owl').replace('../dependencies/mat.owl','../dependencies/current-core/mat.owl')
+    text=insert_before('\n'.join(lines), '## Source attribution\n', DEPENDENCIES_ISSUE9, 'docs/DEPENDENCIES.md')
+    write('docs/DEPENDENCIES.md',text)
+    # This maintained guide contains later MAT and diagnostic sections absent from
+    # the historical archive. Preserve them while refreshing the issue #9 section.
+    text=(ROOT/'docs/MODELLING_GUIDE.md').read_text('utf8')
+    heading='## Approved issue #9 clarifications\n'
+    if text.count(heading) != 1 or text.count(GUIDE_ISSUE9) != 1:
+        raise ValueError('docs/MODELLING_GUIDE.md: expected exactly one approved issue #9 section')
     write('docs/MODELLING_GUIDE.md',text)
     text=baseline_text('docs/ARCHITECTURE.md')
     text+='''
@@ -142,6 +170,7 @@ evaluation, source references and free-text instructions. Generic chemicals and
 process executions keep their existing independent types. No general IDENT,
 COMP or LCA integration is added. See [migration guidance](CORE_2026_MIGRATION.md).
 '''
+    text=insert_before(text, '## October 2026 CORE boundary\n', ARCHITECTURE_ISSUE9, 'docs/ARCHITECTURE.md')
     write('docs/ARCHITECTURE.md',text)
     write('docs/PUBLICATION_SCOPE.md','''# Publication scope and historical preservation
 
@@ -182,6 +211,10 @@ earlier locator supplements remain historical evidence statements; the migration
 does not claim fresh documentary verification. The presence locator names the
 current SubstancePresence pivot while retaining its ESPR source relationship.
 '''
+    anchor='current SubstancePresence pivot while retaining its ESPR source relationship.\n'
+    if TRACEABILITY_ISSUE9 in text:
+        raise ValueError('docs/SOURCE_TRACEABILITY.md: issue #9 fragment is already present')
+    text=replace_once(text, anchor, anchor+'\n'+TRACEABILITY_ISSUE9, 'docs/SOURCE_TRACEABILITY.md')
     write('docs/SOURCE_TRACEABILITY.md',text)
     text=baseline_text('traceability/README.md').replace('838 resources',f"{stats['resource_count']} resources").replace('282 resources have no external',f"{stats['zero_evidence']} resources have no external")
     text=text.replace('904 evidence relationships and 5 source documents',f'{len(evidence)} evidence relationships and {len(sources)} source documents')
@@ -192,6 +225,17 @@ current SubstancePresence pivot while retaining its ESPR source relationship.
         text=baseline_text(path.relative_to(ROOT))
         banner='> Historical baseline examples below describe 1.1.2. The October 2026\n> adoption is implemented by [TXT-DEC-010](../decisions/TXT-DEC-010.md)\n> and the [migration guide](../CORE_2026_MIGRATION.md); policy rules remain in force.\n\n'
         if banner not in text:text=banner+text
+        if name == 'upstream-dependency-governance.md':
+            if GOVERNANCE_19 in text or GOVERNANCE_21 in text:
+                raise ValueError(f'{path}: issue #9 fragment is already present')
+            start='## 19. Current EVENT/SoC status as repository examples\n'
+            end='## 20. Relationship to current MIREOT strategy\n'
+            if text.count(start) != 1 or text.count(end) != 1 or text.index(start) >= text.index(end):
+                raise ValueError(f'{path}: expected unique ordered section 19 anchors')
+            old_section=text[text.index(start):text.index(end)]
+            text=replace_once(text, old_section, GOVERNANCE_19, str(path))
+            heading='## 21. Relationship to future dependency-update tasks\n'
+            text=replace_once(text, heading, GOVERNANCE_21+'## 22. Relationship to future dependency-update tasks\n', str(path))
         write(path.relative_to(ROOT),text)
     write('shacl/README.md','''# SHACL application profiles
 

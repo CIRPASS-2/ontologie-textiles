@@ -136,13 +136,20 @@ This policy does not define upstream SemVer, require adoption of a newer version
 create equivalence mappings, update a dependency, or declare draft ontologies
 unusable. It does not reopen prior modelling decisions.
 
-## 19. Current EVENT/SoC status as repository examples
+## 19. Accepted current sources and historical examples
 
-The current local EVENT dependency declares `Version 0.1.0 DRAFT` and its
-Textile MIREOT record cites that source; the local SoC dependency declares
-`Version 0.1.2 DRAFT` and its MIREOT record cites it. The EVENT MIREOT declares version `1.1.2`; the SoC MIREOT declares `1.1.3`. These are current repository facts and
-governance inputs only: draft labels/version metadata do not alone prove present
-Textile reuse invalid, and neither dependency is required to be upgraded.
+The merged Textile 2.0.0 baseline selects EVENT 1.0.0 and SOC 2.2.0. Both
+rebuilt local MIREOTs have 2.0.0 identities. Their module versions and local
+snapshot hashes are distinct evidence; see [dependencies](../DEPENDENCIES.md).
+The SOC migration is implemented, not a pending dependency upgrade.
+
+### Historical pre-migration examples
+
+The preserved earlier runtime used EVENT `Version 0.1.0 DRAFT` and SOC
+`Version 0.1.2 DRAFT`, with local EVENT MIREOT 1.1.2 and SOC MIREOT 1.1.3.
+These historical facts remain relevant to migration provenance; they do not
+describe the current dependency selection. A draft label alone did not prove
+reuse invalid or require adoption of another version.
 
 ## 20. Relationship to current MIREOT strategy
 
@@ -150,7 +157,24 @@ MIREOT makes the local reproduced subset auditable and bounds the initial reuse
 inventory. It does not isolate Textile from every upstream semantic change: an
 upstream change affecting a reproduced/reused term still needs this assessment.
 
-## 21. Relationship to future dependency-update tasks
+## 21. Review workflow and separately approved updates
+
+1. Identify the accepted versioned CORE snapshots by file, embedded module
+   metadata, recorded hash and demonstrably known upstream identifier, if any.
+2. Obtain an identifiable new upstream candidate and compare the full sources.
+3. Identify definition, axiom and relationship changes relevant to Textile,
+   including effects on selected terms from other changed upstream axioms.
+4. Evaluate inferred types, domain/range propagation, restrictions, validation,
+   examples and data-exchange consequences at the actual reuse boundary.
+5. Record an explicit adoption decision by the authorized owner, obtaining CORE
+   maintainer confirmation where intended semantics or compatibility is unclear.
+6. Only through an independently approved update, change the relevant MIREOTs,
+   provenance, migration guidance and tests, then run the affected checks.
+
+Monitoring upstream drift does not itself authorize adoption. Reviewing the full
+CORE candidate does not mean loading it wholesale into the Textile runtime.
+
+## 22. Relationship to future dependency-update tasks
 
 A future task must supply the candidate evidence, populate the impact record,
 obtain required confirmation and owner decision, then implement any authorised

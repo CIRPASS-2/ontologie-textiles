@@ -12,4 +12,7 @@ Target specifications describe intended characteristics of process outputs and r
 <p>
 The module also provides the textile-process layer used by repair, recyclability and lifecycle-event representations.
 </p>
+<p>
+<code>txtind:concernsProduct</code> has domain <code>txtind:Indicator</code> and range <code>dpp:Product</code>; <code>txtind:isIndicatorOf</code> is its subproperty and has inverse <code>txtind:hasIndicator</code>. No inverse is asserted for <code>txtind:concernsProduct</code>. <code>txtprc:concernsProduct</code> has domain <code>txtprc:TextileProcessExecution</code> and range <code>txt:TextileProduct</code>, and is inverse to <code>txtprc:hasProcessExecution</code>. The CORE CON 2.4.0 source snapshot defines <code>dpp:concernsProduct</code> with domain <code>dpp:ProductEvent</code> and range <code>dpp:Product</code>; it is excluded from the selected CON MIREOT and the Textile runtime closure. No local-to-CORE OWL alignment is asserted. If either local property were declared its subproperty and the relevant full CORE axioms were loaded, its indicator or process execution subject would be inferred to be a <code>dpp:ProductEvent</code>.
+</p>
 </span>

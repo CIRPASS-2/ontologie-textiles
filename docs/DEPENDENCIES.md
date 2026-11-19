@@ -21,6 +21,23 @@ Exact subject selections are in [extraction scopes](../migration/extraction-scop
 Tests compare their complete copied subgraphs, including anonymous axioms,
 against the supplied sources. New Textile definitions are outside MIREOT.
 
+## Snapshot identity and maintenance
+
+An upstream module version, a local source snapshot and a local extraction
+version identify different things. The source files above are the accepted local
+snapshots; their byte identities are recorded in
+[SHA256SUMS](../dependencies/current-core/SHA256SUMS). The local rebuilt MIREOT
+version is 2.0.0 and is not an upstream CORE version. No upstream Git commit is
+asserted here: the accepted evidence identifies supplied snapshot bytes and
+embedded module metadata.
+
+The full upstream candidate sources must be compared for evolution, including
+changes outside the selected subjects that could affect them. Inference,
+validation and exchange impact is assessed against actually reused terms and
+axioms. Adoption and any re-extraction require a separate approved dependency
+update; these issue #9 clarifications change neither source bytes nor extracts.
+See [governance](governance/upstream-dependency-governance.md).
+
 ## Source attribution
 
 Authoritative RDF and its embedded attribution/licence metadata are copied

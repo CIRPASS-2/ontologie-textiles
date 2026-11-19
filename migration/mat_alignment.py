@@ -58,6 +58,8 @@ def restore_frozen_graph(graph, relative):
     Older creator/header proofs can retain their original digests. This is
     deliberately not a projection that discards all notes or modified dates.
     """
+    from migration.issue9_annotations import restore_issue9_graph
+    graph = restore_issue9_graph(graph, relative)
     baseline = Graph().parse(data=baseline_bytes(relative), format='turtle')
     added, removed = expected_delta(relative)
     assert removed <= set(baseline), relative
@@ -99,12 +101,13 @@ def canonical_differences():
         name = path.relative_to(ROOT).as_posix()
         raw = baseline_bytes(name)
         before = Graph().parse(data=raw, format='turtle')
-        after = Graph().parse(path)
+        from migration.issue9_annotations import restore_issue9_graph
+        after = restore_issue9_graph(Graph().parse(path), name)
         _, added, removed = graph_diff(to_isomorphic(after), to_isomorphic(before))
         want_added, want_removed = expected_delta(name)
         assert set(added) == want_added, 'Unauthorized additions: ' + name
         assert set(removed) == want_removed, 'Unauthorized removals: ' + name
-        restore_frozen_graph(after, name)
+        restore_frozen_graph(Graph().parse(path), name)
         rows.append(dict(file=name, baseline_sha256=hashlib.sha256(raw).hexdigest(),
                          candidate_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                          added=statements(added), removed=statements(removed)))

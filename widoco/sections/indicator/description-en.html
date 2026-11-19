@@ -6,6 +6,9 @@ An indicator is not used as a generic container for every numerical or assessmen
 </p>
 
 <p>
-The module deliberately does not subclass the current DPP <code>QualityIndicator</code> class because that class is modelled as a quantitative property in the inspected DPP Core. Reusing it here would conflate the interpretive indicator layer with the quantitative-value model used by the textile ontology network.
+<code>dpp:QualityIndicator</code> represents a product quality characteristic in CORE. <code>txtind:DurabilityIndicator</code> represents derived information used to interpret or communicate durability-related evidence. An indicator concerning a characteristic is not necessarily an instance of that characteristic. Durability constructs, derived indicators, assessment results and quantitative values remain distinct. The existing subclass of <code>txtind:Indicator</code> and non-logical <code>dcterms:relation</code> to CORE are retained; no subclass relationship to <code>dpp:QualityIndicator</code> is asserted.
+</p>
+<p>
+<code>txtind:concernsProduct</code> has domain <code>txtind:Indicator</code> and range <code>dpp:Product</code>; <code>txtind:isIndicatorOf</code> is its subproperty and has inverse <code>txtind:hasIndicator</code>. No inverse is asserted for <code>txtind:concernsProduct</code>. <code>txtprc:concernsProduct</code> has domain <code>txtprc:TextileProcessExecution</code> and range <code>txt:TextileProduct</code>, and is inverse to <code>txtprc:hasProcessExecution</code>. The CORE CON 2.4.0 source snapshot defines <code>dpp:concernsProduct</code> with domain <code>dpp:ProductEvent</code> and range <code>dpp:Product</code>; it is excluded from the selected CON MIREOT and the Textile runtime closure. No local-to-CORE OWL alignment is asserted. If either local property were declared its subproperty and the relevant full CORE axioms were loaded, its indicator or process execution subject would be inferred to be a <code>dpp:ProductEvent</code>.
 </p>
 </span>

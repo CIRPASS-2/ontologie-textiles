@@ -85,6 +85,9 @@ def test_inverse_and_component_inference_preserves_structural_types(semantics,mo
 
 def test_42_copied_external_definitions_have_exact_source_attribution():
     graph=m.parse(m.ROOT/'ontology/textile-soc.ttl');old=m.parse(m.HISTORY/'dependencies/soc.ttl')
+    # Verify the exact current transition before checking the preserved historical excerpts.
+    from migration.issue9_annotations import restore_issue9_graph
+    graph=restore_issue9_graph(graph,'ontology/textile-soc.ttl')
     expected={}
     for s in set(graph.subjects()):
         if isinstance(s,URIRef) and str(s).startswith(str(m.T)):

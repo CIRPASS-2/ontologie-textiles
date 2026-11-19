@@ -253,3 +253,12 @@ baselines are documented in the
 See its linked machine-readable delta and final validation results for the
 current publication candidate. The earlier MAT-only evidence remains an
 unchanged historical proof of that narrower transition.
+
+## Approved issue #9 clarifications
+
+[TXT-DEC-016](decisions/TXT-DEC-016.md) records the retained CORE extraction
+architecture, the textile-context durability definition, the interpretive
+indicator distinction and the two role-specific concernsProduct properties.
+These are annotation and documentation changes with no new logical commitments.
+The existing quantity, SOC, assessment and composition models remain governed by
+their own decisions.

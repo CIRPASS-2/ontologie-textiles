@@ -61,8 +61,11 @@ are tested. Criterion D likewise remains explicit for RDFS validation.
 
 The public txtsoc:appliesToProduct IRI is retained and labelled "qualification
 applies to product". Its domain is SoCQualificationAssertion; the homonymous
-CORE property has DigitalProductPassport as domain. They are distinct properties,
-without a bridge. Examples and shapes consistently use the txtsoc property.
+CORE `dpp:appliesToProduct` property has `dpp:DPP` as its domain and
+`dpp:Product` as its range in the selected P_DPP 2.2.0 snapshot. The local
+`txtsoc:appliesToProduct` has `dpp:SoCQualificationAssertion` as its domain.
+They are distinct properties without a bridge: aligning the local property as a
+CORE subproperty would classify a qualification assertion as a DPP. Examples and shapes consistently use the txtsoc property.
 
 The CON selection excludes unused concernsProduct (and its ProductEvent support),
 and includes SubstanceManagementInstruction with its complete source superclass
