@@ -567,7 +567,7 @@
 <https://w3id.org/eudpp/textile-core#Fabric> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."@en .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A fibre material constituent considered within the composition of a specific textile product, characterised by its fibre type and quantitative mass fraction. It does not necessarily represent an individually identifiable physical fibre batch or a separate composition declaration."@en .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre composition component"@en .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MaterialOfComposition> .
@@ -801,7 +801,7 @@
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version 2.0.0 candidate."@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version integration-2026-11.1."@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -827,9 +827,9 @@
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-mat-mireot> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-core/1.1.2> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/2.0.0> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-core/2.0.0> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.1> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.1" .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/textile-core#hasFibreMassFraction> .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .

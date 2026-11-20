@@ -16,14 +16,15 @@ DUR = 'ontology/textile-durability.ttl'
 def approved():
     baseline = contract.baseline_graphs()
     entries = contract.issue9_transitions()
-    actual = {p: contract.parse_turtle((contract.ROOT / p).read_text(encoding='utf8'), p) for p in baseline}
+    # Exercise original Phase 1 negative controls on its reconstructed graph.
+    actual = contract.build_expected(baseline, entries)
     return baseline, entries, actual
 
 
 def test_exact_issue9_transition(approved, monkeypatch):
     baseline, entries, actual = approved
     monkeypatch.setattr(contract, 'baseline_graphs', lambda: baseline)
-    report = contract.validate(actual, entries)
+    report = contract._validate_phase1_fixture(actual, entries)
     assert (report['canonical_graphs'], report['annotation_added'],
             report['annotation_removed']) == (13, 14, 14)
     assert all(report[name] == 0 for name in
@@ -62,14 +63,14 @@ def test_unauthorized_graph_mutations_rejected(approved, monkeypatch, fault):
         graph.remove((node, RDF.first, old))
         graph.add((node, RDF.first, EX.unapproved))
     with pytest.raises(contract.ContractError, match='Unauthorized canonical RDF difference'):
-        contract.validate(mutated, entries)
+        contract._validate_phase1_fixture(mutated, entries)
 
 
 def test_incomplete_transition_does_not_accept_full_candidate(approved, monkeypatch):
     baseline, entries, actual = approved
     monkeypatch.setattr(contract, 'baseline_graphs', lambda: baseline)
     with pytest.raises(contract.ContractError, match='Unapproved transition sequence'):
-        contract.validate(actual, entries[:1])
+        contract._validate_phase1_fixture(actual, entries[:1])
 
 
 def test_unmet_precondition_rejected(approved):
@@ -154,7 +155,7 @@ def test_validator_rejects_changed_protected_catalogue(monkeypatch):
         data = original(path)
         return data + b' ' if path == target else data
     monkeypatch.setattr(Path, 'read_bytes', altered)
-    with pytest.raises(AssertionError):
+    with pytest.raises(contract.ContractError, match='Catalogue transition mismatch'):
         contract.validate()
 
 
@@ -162,7 +163,8 @@ def test_validator_rejects_changed_protected_catalogue(monkeypatch):
 def test_production_validate_current_worktree():
     report = contract.validate()
     assert report['canonical_graphs'] == 13
-    assert report['annotation_added'] == report['annotation_removed'] == 14
+    assert report['issue9_annotation_added'] == report['issue9_annotation_removed'] == 14
+    assert report['issue12_logical_removed'] == 1
 
 
 @pytest.mark.parametrize('relative', ['VERSION', 'migration/legacy-soc-attribution.json'])
@@ -174,7 +176,7 @@ def test_production_validate_rejects_mutated_protected_bytes(monkeypatch, relati
         data = original(path)
         return data + b' ' if path == target else data
     monkeypatch.setattr(Path, 'read_bytes', altered)
-    with pytest.raises(contract.ContractError, match='Protected file changed'):
+    with pytest.raises(contract.ContractError, match='Protected file changed|Package version changed'):
         contract.validate()
 
 

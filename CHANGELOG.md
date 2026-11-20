@@ -1,5 +1,10 @@
 # Changelog
 
+## integration-2026-11.1 (unpublished)
+
+Retain issue #9 clarifications and integrate the issue #12 fibre and packaging decisions.
+The active catalogue uses separate development version IRIs.
+
 ## CORE MAT classification alignment - 2026-11-02
 
 Addressed Nader Jelassi's source PR #19 review: FibreTypeConcept now subclasses

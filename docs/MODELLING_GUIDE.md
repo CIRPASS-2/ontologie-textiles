@@ -262,3 +262,23 @@ indicator distinction and the two role-specific concernsProduct properties.
 These are annotation and documentation changes with no new logical commitments.
 The existing quantity, SOC, assessment and composition models remain governed by
 their own decisions.
+
+## Issue #12: fibre composition and packaging
+
+
+A FibreCompositionComponent denotes a fibre material constituent in the composition of a particular textile product, characterised by fibre type and mass fraction. It need not identify an individual physical fibre batch or a separate declaration. It is distinct from a physical garment part such as a sleeve or lining. The retained subclass of CORE MaterialOfComposition expresses this contextual material interpretation. The JRC Preparatory Study remains the primary recorded modelling source; this clarification is a project decision, not an assertion that JRC defines these OWL axioms.
+
+The product-to-constituent hasFibreCompositionComponent remains independent of CORE hasMaterial until CORE maintainers confirm the intended contextual-material semantics. hasFibreType remains a subproperty of CORE hasMaterialType and fibre type concepts remain MaterialType individuals; inference-aware consumers can discover those classification edges. hasFibreComponent remains available for presence without an explicitly represented share. It targets a fibre type, not a material node.
+
+The Textile fraction is a QuantitativeValue object with a dimensionless 0?1 scalar; CORE MAT 1.1.0 materialPercentage is a decimal datatype property. There is no direct property alignment. Conversion is meaningful only when material, mass basis, denominator, unit and scale agree. Where a receiving CORE profile uses a 0?100 percentage, 0.95 corresponds to 95%; the snapshot does not settle that scale as a universal contract.
+
+Regulation (EU) No 1007/2011 provides relevant context and possible validation use cases: Article 5 and Annex I address fibre names, Article 9 addresses composition and percentages by weight, and Article 11 addresses textile products with components of different fibre contents. This is not a claim of original source derivation, and this ontology does not provide a comprehensive legal compliance validator. See https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011R1007.
+
+A NonTextileComponent remains a TextileProductPart and is not universally a CORE Product. hasNonTextileComponent is not aligned to the transitive, product-to-product CORE isComponentOf. PackagingMaterial denotes material used in packaging associated with a textile product; it is not automatically a material of that textile product. It may independently be a material of composition of a separately modelled packaging product. No disjointness is asserted.
+
+The RDFS and OWL-RL inference tests cover selected positive and negative entailments; absence of entailment is not logical impossibility, and these tests do not establish complete OWL DL consistency.
+
+The existing mass-fraction SHACL profile is unchanged. A fraction node typed as
+txtsoc:RangeThresholdValue can conform without a scalar numericValue because
+the quantitative-value shape permits threshold roles. Review this existing
+limitation separately during the future quantitative validation work.

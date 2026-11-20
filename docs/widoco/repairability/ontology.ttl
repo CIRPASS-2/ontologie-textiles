@@ -1021,7 +1021,7 @@ txtrep:RepairabilityAssessment a owl:Class ;
 
 <https://w3id.org/eudpp/textile-repairability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Repairability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Repairability Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Repairability Ontology. Version integration-2026-11.1."@en ;
     dcterms:created "2026-07-01"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -1049,9 +1049,9 @@ txtrep:RepairabilityAssessment a owl:Class ;
         <https://w3id.org/eudpp/textile-durability>,
         <https://w3id.org/eudpp/textile-event-mireot>,
         <https://w3id.org/eudpp/textile-process> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-repairability/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-repairability/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-repairability/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-repairability/dev/integration-2026-11.1> ;
+    owl:versionInfo "Version integration-2026-11.1" .
 
 _:n45f5a72c52284881be6ba2bc8d1da5cab12 rdf:first txtrep:RepairRelatedProcess ;
     rdf:rest () .

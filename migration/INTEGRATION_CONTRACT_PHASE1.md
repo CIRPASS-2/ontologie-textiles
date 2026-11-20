@@ -1,5 +1,9 @@
 # Phase 1 cumulative validation contract
 
+> Historical Phase 1 record. The active cumulative contract is described in
+> [Phase 2B](PHASE2B_IMPLEMENTATION.md); the Phase 1 text below records its
+> original scope and is retained for traceability.
+
 Run `python -B -m migration.integration_contract`. The production entry
 point accepts only the exact approved issue #9 annotation transition. It
 constructs expected graphs from the frozen 2.0.0 Git objects and the committed

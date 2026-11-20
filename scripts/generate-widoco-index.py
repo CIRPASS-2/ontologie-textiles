@@ -122,7 +122,7 @@ def ontology_version(graph: Graph, subject: URIRef) -> str:
         if match:
             return match.group(1)
 
-        return version_info
+        return re.sub(r"^Version\s+", "", version_info, flags=re.IGNORECASE).strip()
 
     version_iris = list(
         graph.objects(subject, OWL.versionIRI)

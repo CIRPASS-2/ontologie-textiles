@@ -327,13 +327,13 @@ def structural_checks(root):
    require(str(uri) in selected and (base/selected[str(uri)]).is_file(),'Unmapped ontology import: '+str(uri))
   for uri in gg.objects(None,OWL.versionIRI):
    # The unchanged SI MIREOT retains its historical identity and exact bytes.
-   # All current Textile modules have distinct 2.0.0 version identities.
+   # Current Textile modules use the approved unpublished development identity.
    available=hcat if str(uri).endswith(('/1.1.2','/1.1.3')) else selected
    require(str(uri) in available,'Unmapped declared ontology version: '+str(uri))
   if p.parent==root/'ontology':
    ontology=URIRef('https://w3id.org/eudpp/'+p.stem)
    require(set(gg.subjects(RDF.type,OWL.Ontology))=={ontology},'Unexpected Textile ontology identity: '+p.name)
-   require(set(gg.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/2.0.0')},'Current Textile version must be 2.0.0: '+p.name)
+   require(set(gg.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.1')},'Current Textile development version mismatch: '+p.name)
  for rel in package_files(root):
   p=root/rel
   if p.is_file() and p.suffix in ('.md','.csv','.ttl','.owl','.xml','.json','.txt'):

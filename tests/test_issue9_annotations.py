@@ -42,7 +42,14 @@ def test_all_non_annotation_runtime_inputs_and_traceability_stay_byte_identical(
                                     cwd=m.ROOT, text=True).splitlines()
     for relative in paths:
         raw = subprocess.check_output(['git', 'show', m.BASELINE + ':' + relative], cwd=m.ROOT)
-        assert (m.ROOT / relative).read_bytes() == raw, relative
+        actual = (m.ROOT / relative).read_bytes()
+        if relative == 'catalog-v001.xml':
+            from migration.phase2b_contract import expected_catalogue
+            assert actual == expected_catalogue(), relative
+        elif relative == 'VERSION':
+            assert actual == b'integration-2026-11.1\n', relative
+        else:
+            assert actual == raw, relative
 
 
 def test_documentation_generation_preserves_content_and_tracks_inputs(monkeypatch):

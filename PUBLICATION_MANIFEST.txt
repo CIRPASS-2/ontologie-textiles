@@ -49,6 +49,7 @@ diagrams/textile-structure.svg
 docs/ARCHITECTURE.md
 docs/CORE_2026_MIGRATION.md
 docs/DEPENDENCIES.md
+docs/ISSUE12_MATERIAL_COMPOSITION.md
 docs/MODELLING_GUIDE.md
 docs/PUBLICATION_SCOPE.md
 docs/SOURCE_TRACEABILITY.md
@@ -553,6 +554,7 @@ migration/FINAL_PRE_PUSH_CORRECTIONS.md
 migration/INTEGRATION_CONTRACT_PHASE1.md
 migration/ISSUE_9_IMPLEMENTATION_REPORT.md
 migration/MAT_ALIGNMENT.md
+migration/PHASE2B_IMPLEMENTATION.md
 migration/PUBLICATION_BLOCKER_REMEDIATION.md
 migration/PUBLICATION_CANDIDATE_FINALIZATION.md
 migration/README.md
@@ -627,10 +629,12 @@ migration/mat-alignment-results.json
 migration/mat-alignment-validation.json
 migration/mat_alignment.py
 migration/node-correspondence.json
+migration/phase2b_contract.py
 migration/prepare_inputs.py
 migration/publication-blocker-results.json
 migration/publication-candidate-validation.json
 migration/publication-failure-reconciliation.json
+migration/reconstruct_frozen_2_0_0.py
 migration/refresh_publication.py
 migration/resolver-http-observations.json
 migration/retained-version-identities.json
@@ -748,9 +752,11 @@ tests/test_audit_corrections.py
 tests/test_core_migration.py
 tests/test_creator_metadata.py
 tests/test_integration_contract.py
+tests/test_issue12_composition.py
 tests/test_issue9_annotations.py
 tests/test_mat_alignment.py
 tests/test_migration_publication.py
+tests/test_phase2b_contract.py
 tests/test_public_package.py
 tests/test_shacl_result_matching.py
 tests/test_version_identities.py

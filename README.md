@@ -18,8 +18,8 @@ The **current CIRPASS Textile Ontology** is the JRC-grounded community review ca
 ## Issue #9 development scope
 
 Issue #9 specifies approved documentation and annotation clarifications to
-the merged 2.0.0 baseline. These clarifications are prepared for review. Existing ontology version identities, imports and logical axioms are
-preserved; no new development version identifier is needed for these edits.
+the merged 2.0.0 baseline. These clarifications are prepared for review. Issue #9 alone preserves imports and logical axioms. The combined integration
+uses a separate development version identity.
 See [the approved issue #9 decisions](docs/decisions/TXT-DEC-016.md).
 
 ## Selected CORE sources
@@ -41,19 +41,25 @@ no upstream commit identifier is asserted without evidence.
 
 ## Versions and entry point
 
-The proposed breaking-change candidate is **2.0.0**. All thirteen current Textile
-ontology graphs declare distinct 2.0.0 version identities. The nine modules
-updated under owner-approved Option B cite their historical 1.1.2 prior versions.
-The unchanged SI MIREOT retains its 1.1.2 identity and exact bytes.
-Six rebuilt CORE subsets declare 2.0.0 candidate identities; together with SI
-they form seven MIREOT graphs and a 20-graph runtime closure.
+This unpublished integration package uses **integration-2026-11.1**. The thirteen
+Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.1`
+and cite the corresponding Textile 2.0.0 version as prior. Six CORE subsets
+retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
+closure contains 20 graphs.
 
-Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the local
-[catalogue](catalog-v001.xml). Historical version IRIs and lowercase SOC are
-intentionally absent from this active catalogue. Load historical versions with
-the standalone `migration/historical/1.1.2/catalog-v001.xml` for the entire
-session, with network fallback disabled; never combine these catalogues.
-See the [migration guide](docs/CORE_2026_MIGRATION.md).
+Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the
+active [catalogue](catalog-v001.xml). Frozen Textile 2.0.0 is an independently
+verified sibling package named `dpp-textiles-frozen-2.0.0`, with its own
+catalogue and original bytes. Load its versioned entry and all imports using
+that catalogue only, with network fallback disabled. The preserved 1.1.2
+catalogue serves its own historical closure. Never mix historical and
+development catalogues. Historical bytes are preserved in Git and the frozen
+local package; historical resolution is established only with the deliberately
+selected historical catalogue. Public HTTP dereferencing is outside this evidence.
+See the [issue #12 decision](docs/ISSUE12_MATERIAL_COMPOSITION.md),
+[CORE migration guide](docs/CORE_2026_MIGRATION.md),
+[1.1.2 catalogue](migration/historical/1.1.2/catalog-v001.xml), and
+[Phase 2B record](migration/PHASE2B_IMPLEMENTATION.md).
 
 ## Package contents
 
@@ -125,7 +131,7 @@ The December 2025 JRC Textile Preparatory Study is a broad technical source for 
 
 See [LICENSE.md](LICENSE.md) and the dependency notices in [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md). Upstream snapshot annotations retain their own terms; the candidate does not relabel them under the Textile licence. MAT redistribution evidence is recorded in the dependency documentation, with the applicable Apache 2.0 licence supplied under `LICENSES/`.
 
-Propose issues and changes through the official [CIRPASS-2/dpp-textiles repository](https://github.com/CIRPASS-2/dpp-textiles). Include resource IRIs, applicable examples and source references. This branch prepares a local 2.0.0 migration candidate; publication still requires owner approval. The current JRC-grounded ontology is available directly under `ontology/`; earlier Graphwise work is preserved separately under `ontology/graphwise-ontology/`. The two earlier Textile draft files, `ontology/textile materials.ttl` and `ontology/textile product data.ttl`, were removed from the current tree and remain available through Git history. This candidate is not a final official release.
+Propose issues and changes through the official [CIRPASS-2/dpp-textiles repository](https://github.com/CIRPASS-2/dpp-textiles). Include resource IRIs, applicable examples and source references. This branch prepares an unpublished integration candidate; publication still requires owner approval. The current JRC-grounded ontology is available directly under `ontology/`; earlier Graphwise work is preserved separately under `ontology/graphwise-ontology/`. The two earlier Textile draft files, `ontology/textile materials.ttl` and `ontology/textile product data.ttl`, were removed from the current tree and remain available through Git history. This candidate is not a final official release.
 
 `PUBLICATION_MANIFEST.txt` lists every candidate file, including itself and `SHA256SUMS`. `SHA256SUMS` hashes every manifest member except itself. Verify these before distributing a candidate.
 

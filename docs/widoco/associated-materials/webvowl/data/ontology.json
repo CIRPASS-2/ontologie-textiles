@@ -7,8 +7,8 @@
       "en" : "EU DPP Textile Associated Materials Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-associated-materials",
-    "version" : "Version 2.0.0 candidate",
-    "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
+    "version" : "Version integration-2026-11.1",
+    "author" : [ "Jan Merckx", "Andreas Schneider", "Piero de Sabbata", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for non-textile components, packaging materials, textile chemical substances and controlled chemical classifications associated with textile products. Fibre composition remains in Textile Core, while regulatory qualification and occurrence of substances of concern belong to the Textile SoC module."
     },
@@ -19,15 +19,16 @@
       "en" : "The module reuses dpp:Substance for substance identity and the MAT MaterialOfComposition pattern where material occurrences are needed. It does not classify a substance as a substance of concern."
     },
     "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-associated-materials/2.0.0",
+        "type" : "iri"
+      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Piero de Sabbata",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Elio Hbeich",
+        "value" : "Andreas Schneider",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -37,17 +38,22 @@
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "BOUGACHA Racem",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
         "value" : "Ivo Ladenius",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Andreas Schneider",
+        "value" : "BOUGACHA Racem",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Piero de Sabbata",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Elio Hbeich",
         "type" : "label"
       } ],
       "created" : [ {
@@ -59,7 +65,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version 2.0.0 candidate",
+        "value" : "Version integration-2026-11.1",
         "type" : "label"
       } ],
       "source" : [ {
@@ -80,17 +86,17 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#ontologyModule",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Textile Preparatory Study, Section 3.3.1, pages 27-29, lines 536-547; Section 3.3.2, pages 29-30, lines 575-593; Section 12.3, page 226, lines 6424-6455; Annex 13.8.3, Table 168, page 459, from line 10991.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#ontologyModule",
+        "type" : "iri"
       } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
@@ -107,7 +113,7 @@
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Associated Materials Ontology. Version 2.0.0 candidate.",
+        "value" : "EU DPP Textile Associated Materials Ontology. Version integration-2026-11.1.",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -132,7 +138,7 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "6",
@@ -147,19 +153,19 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "2",
@@ -176,17 +182,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -215,17 +221,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 226, lines 6447-6452.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -346,27 +352,27 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 226, lines 6442-6446.",
           "type" : "label"
         } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "CHEM_USE_PERFORMANCE",
+          "value" : "CHEM_ROLE_PERFORMANCE",
           "type" : "label"
         }, {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "CHEM_ROLE_PERFORMANCE",
+          "value" : "CHEM_USE_PERFORMANCE",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -424,16 +430,22 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials",
           "type" : "iri"
         } ],
+        "related" : [ {
+          "identifier" : "related",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
+          "type" : "iri"
+        } ],
         "inScheme" : [ {
           "identifier" : "inScheme",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "related" : [ {
-          "identifier" : "related",
+        "sourceType" : [ {
+          "identifier" : "sourceType",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
         } ],
         "sourceLocator" : [ {
@@ -441,12 +453,6 @@
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 223, lines 6325-6334; Section 12.3.16, printed page 254, lines 7150-7157.",
           "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -496,17 +502,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 223 and 226, lines 6337-6342 and 6442-6445.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 223 and 226, lines 6337-6342 and 6442-6445.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -627,17 +633,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3.12, printed page 246, lines 6855-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3.12, printed page 246, lines 6855-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -714,7 +720,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -724,7 +730,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -768,17 +774,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -792,16 +798,16 @@
           "value" : "Polyethylene terephthalate packaging material",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -828,17 +834,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -888,17 +894,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 226, lines 6440-6445 and 6470.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 226, lines 6440-6445 and 6470.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1008,17 +1014,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6438-6442.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6438-6442.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1068,17 +1074,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 13.11.9, printed page 512, lines 12384-12387.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 13.11.9, printed page 512, lines 12384-12387.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1095,12 +1101,12 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1133,27 +1139,27 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 226, lines 6442-6446.",
           "type" : "label"
         } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "CHEM_USE_PERFORMANCE",
+          "value" : "CHEM_ROLE_PERFORMANCE",
           "type" : "label"
         }, {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "CHEM_ROLE_PERFORMANCE",
+          "value" : "CHEM_USE_PERFORMANCE",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -1329,17 +1335,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 226, lines 6447-6452.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1509,17 +1515,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30, 226 and 228, lines 584-593, 6438-6442 and 6535.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30, 226 and 228, lines 584-593, 6438-6442 and 6535.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1575,17 +1581,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed pages 226-227, lines 6438-6445, 6470 and 6518.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1618,6 +1624,66 @@
       "labels" : {
         "IRI-based" : "softener",
         "en" : "Softener"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 226-227, lines 6442-6445 and 6520.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_WATER_REPELLENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Water repellent",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Chemical function intended to confer water repellency to a textile material."
+      },
+      "labels" : {
+        "IRI-based" : "waterRepellent",
+        "en" : "Water repellent"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical",
@@ -1691,66 +1757,6 @@
         "en" : "Process chemical"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 226-227, lines 6442-6445 and 6520.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_WATER_REPELLENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Water repellent",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Chemical function intended to confer water repellency to a textile material."
-      },
-      "labels" : {
-        "IRI-based" : "waterRepellent",
-        "en" : "Water repellent"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
@@ -1766,17 +1772,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1796,16 +1802,16 @@
           "value" : "Acid dyes",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
           "type" : "iri"
         } ]
       },
@@ -1832,17 +1838,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 226-228, lines 6440-6449, 6466-6470 and 6536-6537.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 226-228, lines 6440-6449, 6466-6470 and 6536-6537.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1898,17 +1904,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1990,12 +1996,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -2094,17 +2100,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2154,17 +2160,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3.12, printed page 246, lines 6855-6863.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2199,6 +2205,72 @@
         "en" : "Zipper"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_DISPERSE_DYE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Disperse dye",
+          "type" : "label"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Disperse dyes",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Dye function corresponding to disperse dyes used for compatible synthetic fibres."
+      },
+      "labels" : {
+        "IRI-based" : "disperseDye",
+        "en" : "Disperse dye"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
@@ -2214,17 +2286,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2238,16 +2310,16 @@
           "value" : "Polyvinyl chloride packaging material",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -2257,66 +2329,6 @@
       "labels" : {
         "IRI-based" : "polyvinylChloridePackagingMaterial",
         "en" : "Polyvinyl chloride packaging material"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "PACK_MAT_POLYPROPYLENE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Polypropylene packaging material",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Plastic packaging material made from polypropylene."
-      },
-      "labels" : {
-        "IRI-based" : "polypropylenePackagingMaterial",
-        "en" : "Polypropylene packaging material"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial",
@@ -2384,7 +2396,7 @@
         "en" : "Cardboard packaging material"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye",
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -2396,13 +2408,13 @@
         "inScheme" : [ {
           "identifier" : "inScheme",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
+          "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
           "type" : "label"
         } ],
         "sourceType" : [ {
@@ -2414,40 +2426,34 @@
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "CHEM_ROLE_DISPERSE_DYE",
+          "value" : "PACK_MAT_POLYPROPYLENE",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Disperse dye",
+          "value" : "Polypropylene packaging material",
           "type" : "label"
         } ],
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Disperse dyes",
-          "type" : "label"
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
+          "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
-          "type" : "iri"
         } ]
       },
       "comment" : {
-        "en" : "Dye function corresponding to disperse dyes used for compatible synthetic fibres."
+        "en" : "Plastic packaging material made from polypropylene."
       },
       "labels" : {
-        "IRI-based" : "disperseDye",
-        "en" : "Disperse dye"
+        "IRI-based" : "polypropylenePackagingMaterial",
+        "en" : "Polypropylene packaging material"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent",
@@ -2465,17 +2471,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1 and Annex 13.3.4, printed pages 27-29 and 354-355, lines 536-547 and 9563-9581.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1 and Annex 13.3.4, printed pages 27-29 and 354-355, lines 536-547 and 9563-9581.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2531,17 +2537,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 5.4.2 and 12.3, printed pages 64 and 228, lines 1450-1451 and 6528.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Sections 5.4.2 and 12.3, printed pages 64 and 228, lines 1450-1451 and 6528.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2591,17 +2597,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2657,17 +2663,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6444-6445.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2777,17 +2783,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2827,7 +2833,7 @@
         "en" : "Fixing agent"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -2845,7 +2851,7 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 227-228, lines 6517-6522.",
+          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
           "type" : "label"
         } ],
         "sourceType" : [ {
@@ -2853,6 +2859,136 @@
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_WETTING_AGENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Wetting agent",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Surfactant function intended to improve wetting or liquid penetration of textile fibres, yarns or fabrics during wet processing."
+      },
+      "labels" : {
+        "IRI-based" : "wettingAgent",
+        "en" : "Wetting agent"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_LEVELLING_AGENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Levelling agent",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Chemical function involving promotion of uniform dye uptake or colour distribution during dyeing."
+      },
+      "labels" : {
+        "IRI-based" : "levellingAgent",
+        "en" : "Levelling agent"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 227-228, lines 6517-6522.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2885,136 +3021,6 @@
       "labels" : {
         "IRI-based" : "uvProtectant",
         "en" : "UV protectant"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_WETTING_AGENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Wetting agent",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Surfactant function intended to improve wetting or liquid penetration of textile fibres, yarns or fabrics during wet processing."
-      },
-      "labels" : {
-        "IRI-based" : "wettingAgent",
-        "en" : "Wetting agent"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_LEVELLING_AGENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Levelling agent",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Chemical function involving promotion of uniform dye uptake or colour distribution during dyeing."
-      },
-      "labels" : {
-        "IRI-based" : "levellingAgent",
-        "en" : "Levelling agent"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
@@ -3088,7 +3094,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.",
+        "value" : "Packaging material is not automatically classified as a material of composition of the textile product. It may be a material of composition of a separately modelled packaging product; no disjointness is asserted.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -3097,17 +3103,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3121,10 +3127,9 @@
       "en" : "Packaging material"
     },
     "comment" : {
-      "en" : "A material occurrence used for the packaging, transport, storage or delivery of a textile product."
+      "en" : "A material used in packaging associated with a textile product, including packaging used for its protection, handling, storage or delivery. This classification does not imply that the material forms part of the textile product itself."
     },
-    "id" : "15",
-    "superClasses" : [ "16" ]
+    "id" : "16"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -3142,17 +3147,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed pages 225-226, lines 6424-6455.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3169,7 +3174,7 @@
       "en" : "A substance used or occurring in a textile manufacturing, treatment, finishing, coating or related textile-production context."
     },
     "id" : "6",
-    "superClasses" : [ "18" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -3181,17 +3186,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3220,17 +3225,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 223 and 226, lines 6337-6342 and 6442-6445.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 223 and 226, lines 6337-6342 and 6442-6445.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3280,16 +3285,22 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials",
           "type" : "iri"
         } ],
+        "related" : [ {
+          "identifier" : "related",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
+          "type" : "iri"
+        } ],
         "inScheme" : [ {
           "identifier" : "inScheme",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "related" : [ {
-          "identifier" : "related",
+        "sourceType" : [ {
+          "identifier" : "sourceType",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
         } ],
         "sourceLocator" : [ {
@@ -3297,12 +3308,6 @@
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 223, lines 6325-6334; Section 12.3.16, printed page 254, lines 7150-7157.",
           "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3352,17 +3357,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 226-228, lines 6440-6449, 6466-6470 and 6536-6537.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 226-228, lines 6440-6449, 6466-6470 and 6536-6537.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3401,82 +3406,6 @@
       "labels" : {
         "IRI-based" : "acidOrAlkali",
         "en" : "Acid or alkali"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226-227, lines 584-593, 6444-6445 and 6506-6516.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_DYE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Dye",
-          "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Chemical function involving imparting colour to textile fibres, yarns, fabrics or finished textile products."
-      },
-      "labels" : {
-        "IRI-based" : "dye",
-        "en" : "Dye"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#pigment",
@@ -3539,6 +3468,82 @@
         "en" : "Pigment"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226-227, lines 584-593, 6444-6445 and 6506-6516.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_DYE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Dye",
+          "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Chemical function involving imparting colour to textile fibres, yarns, fabrics or finished textile products."
+      },
+      "labels" : {
+        "IRI-based" : "dye",
+        "en" : "Dye"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#biocide",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
@@ -3554,17 +3559,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 226, lines 6440-6445 and 6470.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 226, lines 6440-6445 and 6470.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3597,6 +3602,66 @@
       "labels" : {
         "IRI-based" : "biocide",
         "en" : "Biocide"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#solvent",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6438-6442.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_SOLVENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Solvent",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Chemical function involving dissolution or carrying of other substances in textile processing."
+      },
+      "labels" : {
+        "IRI-based" : "solvent",
+        "en" : "Solvent"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent",
@@ -3657,66 +3722,6 @@
       "labels" : {
         "IRI-based" : "stainRepellent",
         "en" : "Stain repellent"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#solvent",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6438-6442.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_SOLVENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Solvent",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Chemical function involving dissolution or carrying of other substances in textile processing."
-      },
-      "labels" : {
-        "IRI-based" : "solvent",
-        "en" : "Solvent"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent",
@@ -3799,17 +3804,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3829,16 +3834,16 @@
           "value" : "Disperse dyes",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -3865,17 +3870,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1 and Annex 13.3.4, printed pages 27-29 and 354-355, lines 536-547 and 9563-9581.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1 and Annex 13.3.4, printed pages 27-29 and 354-355, lines 536-547 and 9563-9581.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3931,17 +3936,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 5.4.2 and 12.3, printed pages 64 and 228, lines 1450-1451 and 6528.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Sections 5.4.2 and 12.3, printed pages 64 and 228, lines 1450-1451 and 6528.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3991,17 +3996,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4057,17 +4062,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6444-6445.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4100,72 +4105,6 @@
       "labels" : {
         "IRI-based" : "flameRetardant",
         "en" : "Flame retardant"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30, 226 and 228, lines 584-593, 6438-6442 and 6535.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_SURFACTANT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Surfactant",
-          "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Chemical function involving reduction of surface tension in a textile-processing operation."
-      },
-      "labels" : {
-        "IRI-based" : "surfactant",
-        "en" : "Surfactant"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent",
@@ -4228,7 +4167,7 @@
         "en" : "Sizing agent"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#softener",
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -4252,20 +4191,26 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 226-227, lines 6438-6445, 6470 and 6518.",
+          "value" : "JRC Sections 3.3.2 and 12.3, printed pages 29-30, 226 and 228, lines 584-593, 6438-6442 and 6535.",
           "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "CHEM_ROLE_SOFTENER",
+          "value" : "CHEM_ROLE_SURFACTANT",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Softener",
+          "value" : "Surfactant",
           "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent",
+          "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
@@ -4273,19 +4218,19 @@
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ]
       },
       "comment" : {
-        "en" : "Chemical function involving improvement of textile handle or drape. A softener may be used as an auxiliary or may remain as a finishing chemical, depending on the process."
+        "en" : "Chemical function involving reduction of surface tension in a textile-processing operation."
       },
       "labels" : {
-        "IRI-based" : "softener",
-        "en" : "Softener"
+        "IRI-based" : "surfactant",
+        "en" : "Surfactant"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent",
@@ -4303,17 +4248,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4351,6 +4296,66 @@
       "labels" : {
         "IRI-based" : "fixingAgent",
         "en" : "Fixing agent"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#softener",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 226-227, lines 6438-6445, 6470 and 6518.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_SOFTENER",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Softener",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Chemical function involving improvement of textile handle or drape. A softener may be used as an auxiliary or may remain as a finishing chemical, depending on the process."
+      },
+      "labels" : {
+        "IRI-based" : "softener",
+        "en" : "Softener"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent",
@@ -4413,136 +4418,6 @@
         "en" : "Water repellent"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_LEVELLING_AGENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Levelling agent",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Chemical function involving promotion of uniform dye uptake or colour distribution during dyeing."
-      },
-      "labels" : {
-        "IRI-based" : "levellingAgent",
-        "en" : "Levelling agent"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "CHEM_ROLE_WETTING_AGENT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Wetting agent",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Surfactant function intended to improve wetting or liquid penetration of textile fibres, yarns or fabrics during wet processing."
-      },
-      "labels" : {
-        "IRI-based" : "wettingAgent",
-        "en" : "Wetting agent"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
@@ -4558,17 +4433,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 227-228, lines 6517-6522.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 227-228, lines 6517-6522.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4603,7 +4478,72 @@
         "en" : "UV protectant"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_WETTING_AGENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Wetting agent",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Surfactant function intended to improve wetting or liquid penetration of textile fibres, yarns or fabrics during wet processing."
+      },
+      "labels" : {
+        "IRI-based" : "wettingAgent",
+        "en" : "Wetting agent"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent",
       "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -4627,8 +4567,73 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
+          "value" : "JRC Section 12.3, printed page 228, lines 6524-6527.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "CHEM_ROLE_LEVELLING_AGENT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Levelling agent",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Chemical function involving promotion of uniform dye uptake or colour distribution during dyeing."
+      },
+      "labels" : {
+        "IRI-based" : "levellingAgent",
+        "en" : "Levelling agent"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
           "value" : "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4648,16 +4653,16 @@
           "value" : "Acid dyes",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
           "type" : "iri"
         } ]
       },
@@ -4742,17 +4747,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -4800,17 +4805,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1, printed pages 27-29, lines 536-547; Section 12.3.12, printed page 246, lines 6847-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1, printed pages 27-29, lines 536-547; Section 12.3.12, printed page 246, lines 6847-6863.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -4821,17 +4826,17 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#sequin",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#buckle",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -4841,17 +4846,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#buckle",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -4861,7 +4861,12 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -4909,7 +4914,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -4919,7 +4924,7 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -4946,17 +4951,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3, printed pages 225-228, lines 6424-6455 and 6466-6537.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3, printed pages 225-228, lines 6424-6455 and 6466-6537.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -4967,62 +4972,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#solvent",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#biocide",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -5032,7 +4982,22 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -5042,7 +5007,22 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -5052,7 +5032,32 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#solvent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#biocide",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -5071,7 +5076,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "23"
+    "id" : "21"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -5214,7 +5219,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -5224,7 +5229,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -5268,17 +5273,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5292,16 +5297,16 @@
           "value" : "Polyethylene terephthalate packaging material",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -5328,17 +5333,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 13.11.9, printed page 512, lines 12384-12387.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 13.11.9, printed page 512, lines 12384-12387.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5355,12 +5360,12 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -5393,17 +5398,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5436,66 +5441,6 @@
       "labels" : {
         "IRI-based" : "polypropylenePackagingMaterial",
         "en" : "Polypropylene packaging material"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
-      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "PACK_MAT_POLYVINYL_CHLORIDE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Polyvinyl chloride packaging material",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Plastic packaging material made from polyvinyl chloride. The vocabulary term does not imply that this material satisfies an applicable packaging requirement."
-      },
-      "labels" : {
-        "IRI-based" : "polyvinylChloridePackagingMaterial",
-        "en" : "Polyvinyl chloride packaging material"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial",
@@ -5562,6 +5507,66 @@
         "IRI-based" : "cardboardPackagingMaterial",
         "en" : "Cardboard packaging material"
       }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial",
+      "baseIri" : "https://w3id.org/eudpp/textile-associated-materials-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "PACK_MAT_POLYVINYL_CHLORIDE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Polyvinyl chloride packaging material",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Plastic packaging material made from polyvinyl chloride. The vocabulary term does not imply that this material satisfies an applicable packaging requirement."
+      },
+      "labels" : {
+        "IRI-based" : "polyvinylChloridePackagingMaterial",
+        "en" : "Polyvinyl chloride packaging material"
+      }
     } ],
     "comment" : {
       "en" : "A controlled SKOS concept used to classify a packaging material occurrence."
@@ -5575,9 +5580,8 @@
     "label" : {
       "IRI-based" : "MaterialOfComposition"
     },
-    "subClasses" : [ "15" ],
     "attributes" : [ "external" ],
-    "id" : "16"
+    "id" : "22"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -5589,17 +5593,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6855-6861.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6855-6861.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5688,17 +5692,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 12.3.12, printed page 246, lines 6855-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 12.3.12, printed page 246, lines 6855-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5868,17 +5872,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5928,17 +5932,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5988,17 +5992,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -6048,17 +6052,17 @@
           "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 12.3.12, printed page 246, lines 6855-6863.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -6167,7 +6171,7 @@
     },
     "subClasses" : [ "6" ],
     "attributes" : [ "external" ],
-    "id" : "18"
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -6185,17 +6189,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6855-6861; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6855-6861; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6234,27 +6238,24 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "17",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "19",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "21",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "22",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "24",
     "type" : "owl:objectProperty"
   }, {
     "id" : "25",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "26",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -6319,17 +6320,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6351,32 +6352,27 @@
   }, {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "10"
   }, {
     "range" : "4",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "11"
   }, {
     "range" : "13",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "12"
   }, {
-    "range" : "16",
-    "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "14"
-  }, {
-    "range" : "18",
+    "range" : "15",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "17"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
-    "range" : "15",
+    "range" : "16",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -6423,7 +6419,7 @@
       "en" : "Relates a textile product to a packaging-material occurrence used for its packaging, transport, storage or delivery."
     },
     "attributes" : [ "object" ],
-    "id" : "19"
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -6463,21 +6459,21 @@
       "en" : "Relates a textile chemical substance to a controlled concept describing its function in textile manufacturing, treatment, finishing or functionalisation."
     },
     "attributes" : [ "object" ],
-    "id" : "20"
+    "id" : "18"
   }, {
     "range" : "4",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "21"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
   }, {
     "range" : "4",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
-    "range" : "16",
+    "range" : "22",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6513,7 +6509,7 @@
       "en" : "Relates a non-textile component to a material occurrence from which the component is made."
     },
     "attributes" : [ "object" ],
-    "id" : "24"
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -6525,17 +6521,17 @@
         "value" : "https://w3id.org/eudpp/textile-associated-materials",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6548,12 +6544,12 @@
       "IRI-based" : "hasPackagingMaterialType",
       "en" : "has packaging material type"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "Relates a packaging material occurrence to a controlled concept describing the material type."
     },
     "attributes" : [ "object" ],
-    "id" : "25"
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -6593,6 +6589,6 @@
       "en" : "Relates a non-textile component to a controlled concept describing its component type."
     },
     "attributes" : [ "object" ],
-    "id" : "26"
+    "id" : "25"
   } ]
 }

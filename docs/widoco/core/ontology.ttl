@@ -685,7 +685,7 @@ txtcs:naturalOriginFibre a skos:Concept,
 txt:FibreCompositionComponent a owl:Class ;
     rdfs:label "Fibre composition component"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."@en ;
+    rdfs:comment "A fibre material constituent considered within the composition of a specific textile product, characterised by its fibre type and quantitative mass fraction. It does not necessarily represent an individually identifiable physical fibre batch or a separate composition declaration."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-core> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty txt:hasFibreType ;
@@ -888,7 +888,7 @@ txtcs:TextileApparelProductTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-core> a owl:Ontology ;
     rdfs:label "EU DPP Textile Core Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Core Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Core Ontology. Version integration-2026-11.1."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -912,7 +912,7 @@ txtcs:TextileApparelProductTypeScheme a skos:ConceptScheme ;
     owl:imports <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-mat-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-core/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-core/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-core/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.1> ;
+    owl:versionInfo "Version integration-2026-11.1" .
 

@@ -474,7 +474,7 @@ txtcon:projectDecision a skos:Concept ;
 
 <https://w3id.org/eudpp/textile-connector> a owl:Ontology ;
     rdfs:label "EU DPP Textile Connector Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Connector Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Connector Ontology. Version integration-2026-11.1."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -500,9 +500,9 @@ txtcon:projectDecision a skos:Concept ;
         "The typical relation properties are annotation properties for contextual class-level or concept-level statements. They do not assert deterministic causal axioms."@en,
         "Working extraction identifiers are maintained in the crosswalk documentation rather than stabilised as ontology annotations."@en ;
     owl:imports <https://w3id.org/eudpp/textile-si-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-connector/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-connector/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-connector/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-connector/dev/integration-2026-11.1> ;
+    owl:versionInfo "Version integration-2026-11.1" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:ontologyModule .
 

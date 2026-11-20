@@ -248,11 +248,20 @@ def validate(candidate_graphs=None, transitions=None):
     """Compare each entire current ontology with its independently built expectation."""
     if not __debug__:
         raise ContractError('Optimized Python disables required historical assertions')
+    require(candidate_graphs is None and transitions is None,
+            'Injected candidates are not accepted by current Phase 2B validation')
+    from migration.phase2b_contract import validate as validate_phase2
+    return validate_phase2()
+
+
+def _validate_phase1_fixture(candidate_graphs, transitions=None):
+    """Validate a synthetic Phase 1 fixture, never the current integration."""
     # Reuse the existing strict byte and inventory proof; never replace it
     # with graph equivalence or a newly computed allowlist.
     protected = mat_alignment.protected_hashes()
     for name in ('VERSION', 'migration/legacy-soc-attribution.json'):
-        frozen = subprocess.check_output(['git', 'show', BASELINE + ':' + name], cwd=ROOT)
+        frozen = (b'integration-2026-11.1\n' if name == 'VERSION' else
+                  subprocess.check_output(['git', 'show', BASELINE + ':' + name], cwd=ROOT))
         require((ROOT / name).read_bytes() == frozen, 'Protected file changed: ' + name)
     baseline = baseline_graphs()
     approved = issue9_transitions()

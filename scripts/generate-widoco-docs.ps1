@@ -1,10 +1,10 @@
-param([string[]]$OnlyModules = @())
+param([string[]]$OnlyModules = @(),
+      [string]$Widoco = "tools\widoco-1.4.25_JDK-17.jar",
+      [string]$Jaxb = "tools\jaxb-api-2.3.1.jar")
 $ErrorActionPreference = "Stop"
 $GenerationWorkspace = (Get-Location).Path
 $InitialWidocoTemps = @(Get-ChildItem -Directory -Filter "tmp*" | Select-Object -ExpandProperty FullName)
 
-$Widoco        = "tools\widoco-1.4.25_JDK-17.jar"
-$Jaxb          = "tools\jaxb-api-2.3.1.jar"
 $OutputRoot    = "docs\widoco"
 $EditorialRoot = "widoco\sections"
 $LandingGenerator = "scripts\generate-widoco-index.py"

@@ -10,7 +10,7 @@ ROOT=v.ROOT
 
 # Issue #9 fragments are inline because their links resolve from the generated document.
 README_CREATORS = 'The Textile ontology network and its twelve modules identify **Elio Hbeich,\nBOUGACHA Racem, Ivo Ladenius, Andreas Schneider, Jan Merckx and Piero de Sabbata**\nas `dcterms:creator`. The owner-approved creator update preserves the established\nEnglish language-tagged literal representation and all existing creators.\n\n'
-README_ISSUE9 = '## Issue #9 development scope\n\nIssue #9 specifies approved documentation and annotation clarifications to\nthe merged 2.0.0 baseline. These clarifications are prepared for review. Existing ontology version identities, imports and logical axioms are\npreserved; no new development version identifier is needed for these edits.\nSee [the approved issue #9 decisions](docs/decisions/TXT-DEC-016.md).\n\n## Selected CORE sources\n\n| CORE module | Selected upstream version |\n|---|---|\n| ACTOR | 2.2.0 |\n| CON | 2.4.0 |\n| EVENT | 1.0.0 |\n| MAT | 1.1.0 |\n| P_DPP | 2.2.0 |\n| SOC | 2.2.0 |\n\nThese versions are verified from the local source snapshots, not inferred from\nthe local MIREOT version. Textile retains bounded extracts using original CORE\nterm IRIs and an offline-resolvable closure. [Dependencies](docs/DEPENDENCIES.md)\nidentifies snapshot files, hashes, extraction scopes and update responsibilities;\nno upstream commit identifier is asserted without evidence.\n\n'
+README_ISSUE9 = '## Issue #9 development scope\n\nIssue #9 specifies approved documentation and annotation clarifications to\nthe merged 2.0.0 baseline. These clarifications are prepared for review. Issue #9 alone preserves imports and logical axioms. The combined integration\nuses a separate development version identity.\nSee [the approved issue #9 decisions](docs/decisions/TXT-DEC-016.md).\n\n## Selected CORE sources\n\n| CORE module | Selected upstream version |\n|---|---|\n| ACTOR | 2.2.0 |\n| CON | 2.4.0 |\n| EVENT | 1.0.0 |\n| MAT | 1.1.0 |\n| P_DPP | 2.2.0 |\n| SOC | 2.2.0 |\n\nThese versions are verified from the local source snapshots, not inferred from\nthe local MIREOT version. Textile retains bounded extracts using original CORE\nterm IRIs and an offline-resolvable closure. [Dependencies](docs/DEPENDENCIES.md)\nidentifies snapshot files, hashes, extraction scopes and update responsibilities;\nno upstream commit identifier is asserted without evidence.\n\n'
 GUIDE_ISSUE9 = '## Approved issue #9 clarifications\n\n[TXT-DEC-016](decisions/TXT-DEC-016.md) records the retained CORE extraction\narchitecture, the textile-context durability definition, the interpretive\nindicator distinction and the two role-specific concernsProduct properties.\nThese are annotation and documentation changes with no new logical commitments.\nThe existing quantity, SOC, assessment and composition models remain governed by\ntheir own decisions.\n'
 ARCHITECTURE_ISSUE9 = '## Bounded CORE reuse retained for issue #9\n\nTextile reuses original CORE IRIs; an extracted CORE subject is not a duplicate\nTextile term. Bounded MIREOT graphs select CORE axioms and their associated\nsemantic commitments from identifiable local upstream snapshots. This limits\nexposure to unrelated upstream axioms compared with importing entire modules,\nwhile keeping the selected closure reproducible and resolvable offline through\n`catalog-v001.xml`.\n\nThe approved architecture retains these extracts and their existing imports.\nSelection does not guarantee full compatibility or isolate consumers that also\nload other CORE axioms. It creates a maintenance responsibility: monitor upstream\nevolution, compare the full candidate source, and assess changed commitments at\nthe actual Textile reuse boundary before adopting an update. See the\n[dependency review workflow](governance/upstream-dependency-governance.md).\n\n'
 DEPENDENCIES_ISSUE9 = '## Snapshot identity and maintenance\n\nAn upstream module version, a local source snapshot and a local extraction\nversion identify different things. The source files above are the accepted local\nsnapshots; their byte identities are recorded in\n[SHA256SUMS](../dependencies/current-core/SHA256SUMS). The local rebuilt MIREOT\nversion is 2.0.0 and is not an upstream CORE version. No upstream Git commit is\nasserted here: the accepted evidence identifies supplied snapshot bytes and\nembedded module metadata.\n\nThe full upstream candidate sources must be compared for evolution, including\nchanges outside the selected subjects that could affect them. Inference,\nvalidation and exchange impact is assessed against actually reused terms and\naxioms. Adoption and any re-extraction require a separate approved dependency\nupdate; these issue #9 clarifications change neither source bytes nor extracts.\nSee [governance](governance/upstream-dependency-governance.md).\n\n'
@@ -49,19 +49,25 @@ def documentation():
     text=baseline_text('README.md')
     start=text.index('The 13 Textile ontology graphs declare version')
     end=text.index('## Package contents',start)
-    text=text[:start]+'''The proposed breaking-change candidate is **2.0.0**. All thirteen current Textile
-ontology graphs declare distinct 2.0.0 version identities. The nine modules
-updated under owner-approved Option B cite their historical 1.1.2 prior versions.
-The unchanged SI MIREOT retains its 1.1.2 identity and exact bytes.
-Six rebuilt CORE subsets declare 2.0.0 candidate identities; together with SI
-they form seven MIREOT graphs and a 20-graph runtime closure.
+    text=text[:start]+'''This unpublished integration package uses **integration-2026-11.1**. The thirteen
+Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.1`
+and cite the corresponding Textile 2.0.0 version as prior. Six CORE subsets
+retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
+closure contains 20 graphs.
 
-Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the local
-[catalogue](catalog-v001.xml). Historical version IRIs and lowercase SOC are
-intentionally absent from this active catalogue. Load historical versions with
-the standalone `migration/historical/1.1.2/catalog-v001.xml` for the entire
-session, with network fallback disabled; never combine these catalogues.
-See the [migration guide](docs/CORE_2026_MIGRATION.md).
+Load [ontology/textile-ontology.ttl](ontology/textile-ontology.ttl) with the
+active [catalogue](catalog-v001.xml). Frozen Textile 2.0.0 is an independently
+verified sibling package named `dpp-textiles-frozen-2.0.0`, with its own
+catalogue and original bytes. Load its versioned entry and all imports using
+that catalogue only, with network fallback disabled. The preserved 1.1.2
+catalogue serves its own historical closure. Never mix historical and
+development catalogues. Historical bytes are preserved in Git and the frozen
+local package; historical resolution is established only with the deliberately
+selected historical catalogue. Public HTTP dereferencing is outside this evidence.
+See the [issue #12 decision](docs/ISSUE12_MATERIAL_COMPOSITION.md),
+[CORE migration guide](docs/CORE_2026_MIGRATION.md),
+[1.1.2 catalogue](migration/historical/1.1.2/catalog-v001.xml), and
+[Phase 2B record](migration/PHASE2B_IMPLEMENTATION.md).
 
 '''+text[end:]
     text=text.replace('python -B -m pytest -p no:cacheprovider tests/test_public_package.py -q','python -B -m pytest -p no:cacheprovider tests -q\npython -B scripts/validate_public.py --full --complete-report')
@@ -77,7 +83,7 @@ See the [migration guide](docs/CORE_2026_MIGRATION.md).
         import re
         text=re.sub(r'\| '+module+r' \| \d+ \|',f"| {module} | {stats['modules'][module]} |",text)
     text=text.replace('This branch prepares the CIRPASS Textile Ontology Community Review Candidate 1.1.2 for publication in this repository.',
-                      'This branch prepares a local 2.0.0 migration candidate; publication still requires owner approval.')
+                      'This branch prepares an unpublished integration candidate; publication still requires owner approval.')
     text=text.replace('eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios,',
                       'the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios,')
     text=text.replace('Supply the ontology graph when executing SHACL.',
@@ -172,28 +178,7 @@ COMP or LCA integration is added. See [migration guidance](CORE_2026_MIGRATION.m
 '''
     text=insert_before(text, '## October 2026 CORE boundary\n', ARCHITECTURE_ISSUE9, 'docs/ARCHITECTURE.md')
     write('docs/ARCHITECTURE.md',text)
-    write('docs/PUBLICATION_SCOPE.md','''# Publication scope and historical preservation
-
-This local 2.0.0 candidate comprises 13 Textile modules and seven bounded MIREOT
-graphs. Only that 20-graph import closure is used for current runtime validation.
-Full current CORE snapshots and historical RDF are reference inputs, not runtime
-imports. No release approval or publication is claimed.
-
-`CURRENT_PACKAGE` in `PUBLICATION_MANIFEST.txt` enumerates owned package areas,
-including the migration specification, reproducibility scripts, historical archive
-and extracted historical runtime. SHA256SUMS covers every member except itself.
-The archive has its own immutable per-member inventory and digest. Previous
-version identities resolve to original bytes, and its standalone catalogue
-reproduces the historical closure. Never mix historical and current runtimes.
-
-`PRESERVED_REFERENCE_MATERIAL` lists the three earlier Graphwise reference files.
-They remain outside current runtime and the direct checksum contract. Their
-historical archive copies are preserved as ZIP members; unpacked Graphwise
-copies are excluded from the current package inventory. No current catalogue
-entry points to a Graphwise graph. The two earlier root Textile drafts remain
-in Git history. See [dependencies](DEPENDENCIES.md) and
-[migration treatment](CORE_2026_MIGRATION.md).
-''')
+    write('docs/PUBLICATION_SCOPE.md','# Publication scope and historical preservation\n\nThis unpublished integration candidate comprises 13 Textile modules and seven\nbounded MIREOT graphs. The package uses integration-2026-11.1 and each Textile\nmodule declares a distinct development version IRI. Only that 20-graph import closure is used for current runtime validation.\nFull current CORE snapshots and historical RDF are reference inputs, not runtime\nimports. No release approval or publication is claimed.\n\n`CURRENT_PACKAGE` in `PUBLICATION_MANIFEST.txt` enumerates owned package areas,\nincluding the migration specification, reproducibility scripts, historical archive\nand extracted historical runtime. SHA256SUMS covers every member except itself.\nThe 1.1.2 archive has its own immutable inventory and catalogue. Textile 2.0.0\nis separately frozen from the approved Git baseline in the sibling package\n`dpp-textiles-frozen-2.0.0`, whose own catalogue and 799 checksums are verified.\nUse one selected catalogue per load and disable network fallback.\n\n`PRESERVED_REFERENCE_MATERIAL` lists the three earlier Graphwise reference files.\nThey remain outside current runtime and the direct checksum contract. Their\nhistorical archive copies are preserved as ZIP members; unpacked Graphwise\ncopies are excluded from the current package inventory. No current catalogue\nentry points to a Graphwise graph. The two earlier root Textile drafts remain\nin Git history. See [dependencies](DEPENDENCIES.md) and\n[migration treatment](CORE_2026_MIGRATION.md).\n\nHistorical 2.0.0 bytes are preserved in Git and in the frozen local package.\nA deliberately selected historical catalogue resolves its offline closure; this\ndoes not verify public HTTP dereferencing or deployment. See the\n[issue #12 decision](ISSUE12_MATERIAL_COMPOSITION.md),\n[CORE migration guide](CORE_2026_MIGRATION.md), and the\n[1.1.2 historical catalogue](../migration/historical/1.1.2/catalog-v001.xml).\n')
     text=baseline_text('docs/SOURCE_TRACEABILITY.md')
     text=text.replace('902 PRESENT_NOT_REVERIFIED',f"{stats['locator_statuses']['PRESENT_NOT_REVERIFIED']} PRESENT_NOT_REVERIFIED")
     text+=f'''

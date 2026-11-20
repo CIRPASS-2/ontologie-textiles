@@ -623,7 +623,7 @@ txtdur:FailureMode a owl:Class ;
 
 <https://w3id.org/eudpp/textile-durability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Durability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Durability Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Durability Ontology. Version integration-2026-11.1."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -648,9 +648,9 @@ txtdur:FailureMode a owl:Class ;
         "This module represents durability constructs, observed performance parameter types and failure mode types as OWL classes. It intentionally does not introduce SKOS codelists for these concepts in the core ontology."@en ;
     owl:imports <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-durability/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-durability/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-durability/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.1> ;
+    owl:versionInfo "Version integration-2026-11.1" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
 

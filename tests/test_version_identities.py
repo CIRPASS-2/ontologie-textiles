@@ -17,7 +17,7 @@ REPORT=json.loads((ROOT/'migration/version-identity-results.json').read_text('ut
 def test_exact_header_revision_and_catalogue_identity(row):
     graph=Graph().parse(ROOT/row['file']);ontology=URIRef(row['ontology_iri'])
     assert set(graph.subjects(RDF.type,OWL.Ontology))=={ontology}
-    assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/2.0.0')}
+    assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.1')}
     from migration.mat_alignment import restore_frozen_graph
     frozen=restore_frozen_graph(graph,row['file'])
     assert semantic_digest(project(frozen,ontology))==row['non_metadata_graph_sha256']
@@ -27,12 +27,12 @@ def test_exact_header_revision_and_catalogue_identity(row):
             assert subject==ontology and predicate in PREDICATES
     changed=row['file'].removeprefix('ontology/textile-').removesuffix('.ttl') in MODULES
     if changed:
-        assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/1.1.2')}
+        assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/2.0.0')}
         # The exact current date replacement is checked before restoring the
         # frozen header proof; keep its historical date and digest unchanged.
         assert set(frozen.objects(ontology,DCTERMS.modified))=={Literal(REVISION_DATE,datatype=XSD.date)}
-        assert str(graph.value(ontology,OWL.versionInfo))=='Version 2.0.0 candidate'
-        assert 'Version 2.0.0 candidate' in str(graph.value(ontology,DCTERMS.bibliographicCitation))
+        assert str(graph.value(ontology,OWL.versionInfo))=='Version integration-2026-11.1'
+        assert 'Version integration-2026-11.1' in str(graph.value(ontology,DCTERMS.bibliographicCitation))
         old_catalog=ROOT/'migration/historical/1.1.2/catalog-v001.xml'
         old={entry.attrib['name']:entry.attrib['uri'] for entry in ET.parse(old_catalog).getroot()}
         rel=old[str(ontology)+'/1.1.2']
@@ -41,7 +41,8 @@ def test_exact_header_revision_and_catalogue_identity(row):
     else:
         assert not row['added'] and not row['removed']
     catalog={entry.attrib['name']:entry.attrib['uri'] for entry in ET.parse(ROOT/'catalog-v001.xml').getroot()}
-    assert catalog[str(ontology)+'/2.0.0']==row['file']
+    assert catalog[str(ontology)+'/dev/integration-2026-11.1']==row['file']
+    assert str(ontology)+'/2.0.0' not in catalog
     assert str(ontology)+'/1.1.2' not in catalog
     assert catalog[str(ontology)]==row['file']
 
@@ -64,6 +65,6 @@ def test_all_runtime_version_iris_have_unique_catalogue_targets():
             assert ontology not in identities and version not in versions
             identities[ontology]=path;versions[version]=path
             if path.name!='si-textile-mireot.ttl':
-                assert str(version)==str(ontology)+'/2.0.0'
+                assert str(version)==str(ontology)+('/dev/integration-2026-11.1' if area=='ontology' else '/2.0.0')
                 assert catalog[str(version)]==path.relative_to(ROOT).as_posix()
     assert len(identities)==len(versions)==20

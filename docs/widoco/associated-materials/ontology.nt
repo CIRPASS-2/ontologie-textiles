@@ -17,11 +17,10 @@
 <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "A material occurrence used for the packaging, transport, storage or delivery of a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "A material used in packaging associated with a textile product, including packaging used for its protection, handling, storage or delivery. This classification does not imply that the material forms part of the textile product itself."@en .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Packaging material"@en .
-<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MaterialOfComposition> .
-<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> "PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> "Packaging material is not automatically classified as a material of composition of the textile product. It may be a material of composition of a separately modelled packaging product; no disjointness is asserted."@en .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
 <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
@@ -726,7 +725,7 @@
 <https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
 <https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3.12, printed page 246, lines 6855-6863."@en .
 <https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
-<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Associated Materials Ontology. Version 2.0.0 candidate."@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Associated Materials Ontology. Version integration-2026-11.1."@en .
 <https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -750,7 +749,8 @@
 <https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-mat-mireot> .
 <https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-soc-mireot> .
-<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-associated-materials/2.0.0> .
-<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-associated-materials/2.0.0> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-associated-materials/dev/integration-2026-11.1> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.1" .
 <https://w3id.org/eudpp/textile-associated-materials> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Textile Preparatory Study, Section 3.3.1, pages 27-29, lines 536-547; Section 3.3.2, pages 29-30, lines 575-593; Section 12.3, page 226, lines 6424-6455; Annex 13.8.3, Table 168, page 459, from line 10991."@en .
 <https://w3id.org/eudpp/textile-associated-materials> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#ontologyModule> .

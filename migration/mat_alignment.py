@@ -134,14 +134,18 @@ def protected_hashes():
         assert header[1] == b'blob'
         size = int(header[2]); data = raw[end + 1:end + 1 + size]
         position = end + size + 2
-        assert (ROOT / name).read_bytes() == data, name
+        if name == 'catalog-v001.xml' and (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
+            from migration.phase2b_contract import expected_catalogue
+            assert (ROOT/name).read_bytes() == expected_catalogue(), name
+        else:
+            assert (ROOT / name).read_bytes() == data, name
         hashes[name] = hashlib.sha256(data).hexdigest()
     return hashes
 
 
 def closure():
     return sum((Graph().parse(path) for path in v.catalogue_import_closure(
-        ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology/2.0.0')), Graph())
+        ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology/dev/integration-2026-11.1')), Graph())
 
 
 def record():

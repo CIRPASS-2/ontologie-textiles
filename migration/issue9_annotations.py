@@ -37,8 +37,14 @@ def expected_delta(relative, parser=None):
     return added, removed
 
 
-def restore_issue9_graph(graph, relative):
-    """Check the entire candidate against its frozen baseline before reversing edits."""
+def restore_issue9_graph(graph, relative, already_phase1=False):
+    """Check cumulative graph before reversing the original issue 9 edits."""
+    if not already_phase1 and (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
+        from migration.phase2b_contract import restore_phase1
+        try:
+            graph = restore_phase1(graph, relative)
+        except ValueError as exc:
+            raise AssertionError('Unauthorized canonical RDF difference: ' + relative) from exc
     baseline = baseline_graph(relative)
     added, removed = expected_delta(relative)
     assert removed <= set(baseline) and not (added & set(baseline)), relative
@@ -56,7 +62,10 @@ def canonical_differences():
     for path in sorted((ROOT / 'ontology').glob('*.ttl')):
         relative = path.relative_to(ROOT).as_posix()
         graph = Graph().parse(path)
-        baseline = restore_issue9_graph(graph, relative)
+        if (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
+            from migration.phase2b_contract import restore_phase1
+            graph = restore_phase1(graph, relative)
+        baseline = restore_issue9_graph(graph, relative, already_phase1=True)
         _, added, removed = graph_diff(to_isomorphic(graph), to_isomorphic(baseline))
         assert set(added) == expected_delta(relative)[0]
         assert set(removed) == expected_delta(relative)[1]

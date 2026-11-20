@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Process Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-process",
-    "version" : "Version 2.0.0 candidate",
+    "version" : "Version integration-2026-11.1",
     "author" : [ "Jan Merckx", "Andreas Schneider", "Piero de Sabbata", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for textile process types, concrete process executions, process parameters, target specifications and parameter settings across manufacturing, care, repair and end-of-life stages."
@@ -22,28 +22,13 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-process/1.1.2",
+        "value" : "https://w3id.org/eudpp/textile-process/2.0.0",
         "type" : "iri"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Jan Merckx",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Andreas Schneider",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
         "value" : "BOUGACHA Racem",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Elio Hbeich",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -53,7 +38,22 @@
       }, {
         "identifier" : "creator",
         "language" : "en",
+        "value" : "Andreas Schneider",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Elio Hbeich",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
         "value" : "Piero de Sabbata",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Jan Merckx",
         "type" : "label"
       } ],
       "created" : [ {
@@ -65,7 +65,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version 2.0.0 candidate",
+        "value" : "Version integration-2026-11.1",
         "type" : "label"
       } ],
       "source" : [ {
@@ -115,16 +115,16 @@
         "value" : "2026-10-27",
         "type" : "label"
       } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "EU DPP Textile Process Ontology. Version 2.0.0 candidate.",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-process#",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "EU DPP Textile Process Ontology. Version integration-2026-11.1.",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -206,7 +206,7 @@
     "id" : "104",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "73",
     "type" : "owl:Class"
   }, {
     "id" : "108",
@@ -227,7 +227,7 @@
     "id" : "113",
     "type" : "owl:Class"
   }, {
-    "id" : "73",
+    "id" : "81",
     "type" : "owl:Class"
   }, {
     "id" : "43",
@@ -284,10 +284,10 @@
     "id" : "101",
     "type" : "owl:Class"
   }, {
-    "id" : "99",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "99",
     "type" : "owl:Class"
   }, {
     "id" : "50",
@@ -317,7 +317,7 @@
     "id" : "130",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "83",
     "type" : "owl:Class"
   }, {
     "id" : "87",
@@ -374,7 +374,7 @@
     "id" : "90",
     "type" : "owl:unionOf"
   }, {
-    "id" : "137",
+    "id" : "135",
     "type" : "owl:unionOf"
   }, {
     "id" : "129",
@@ -401,13 +401,13 @@
     "id" : "168",
     "type" : "owl:Class"
   }, {
-    "id" : "83",
+    "id" : "38",
     "type" : "owl:Class"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "41",
     "type" : "owl:Class"
   }, {
     "id" : "47",
@@ -428,28 +428,28 @@
     "id" : "122",
     "type" : "owl:Class"
   }, {
-    "id" : "143",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
     "id" : "92",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "143",
     "type" : "owl:Class"
   }, {
     "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "138",
+    "id" : "136",
     "type" : "owl:Class"
   }, {
     "id" : "85",
     "type" : "owl:Class"
   }, {
-    "id" : "119",
+    "id" : "93",
     "type" : "owl:Class"
   }, {
-    "id" : "93",
+    "id" : "119",
     "type" : "owl:Class"
   }, {
     "id" : "66",
@@ -624,12 +624,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       } ]
     },
@@ -653,17 +653,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -744,17 +744,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -765,12 +765,12 @@
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
         "type" : "iri"
       } ],
       "evidenceStatus" : [ {
@@ -797,12 +797,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Knitting pattern is kept as a process-side construction parameter. Its relation to fabric elasticity and drape depends on the knitting structure and yarn choice.",
+        "value" : "The process-side target remains distinct from the resulting characteristic represented in Textile Structure.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "The process-side target remains distinct from the resulting characteristic represented in Textile Structure.",
+        "value" : "Knitting pattern is kept as a process-side construction parameter. Its relation to fabric elasticity and drape depends on the knitting structure and yarn choice.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -811,17 +811,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -832,12 +832,12 @@
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricElasticity",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricElasticity",
         "type" : "iri"
       } ]
     },
@@ -861,17 +861,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -900,17 +900,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1022,17 +1022,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Annex 13.10.2, Table 179, printed page 489; table caption at line 11877.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Annex 13.10.2, Table 179, printed page 489; table caption at line 11877.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1073,17 +1073,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2173; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1168,17 +1168,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -1200,7 +1200,7 @@
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnElasticity",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
@@ -1210,7 +1210,7 @@
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnElasticity",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
         "type" : "iri"
       } ],
       "evidenceStatus" : [ {
@@ -1240,17 +1240,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1279,17 +1279,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "docs/decisions/TXT-DEC-008.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "docs/decisions/TXT-DEC-008.md",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1377,17 +1377,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1437,12 +1437,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       } ]
     },
@@ -1453,7 +1453,7 @@
     "comment" : {
       "en" : "The binder substance or chemical role should be represented in TEXTILE_ASSOCIATED_MATERIALS. This parameter only records the process-use aspect."
     },
-    "id" : "41",
+    "id" : "73",
     "superClasses" : [ "21" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#CuttingParameter",
@@ -1466,17 +1466,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1505,17 +1505,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1551,17 +1551,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1572,12 +1572,12 @@
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
         "type" : "iri"
       } ],
       "evidenceStatus" : [ {
@@ -1683,12 +1683,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       } ]
     },
@@ -1738,7 +1738,7 @@
     "comment" : {
       "en" : "Chemical recycling process for synthetic textile feedstock such as polyester or polyamide 6, producing recovered monomers, oligomers or polymers."
     },
-    "id" : "73",
+    "id" : "81",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#ThermoMechanicalRecyclingProcess",
@@ -1846,17 +1846,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "typicallyUsesChemicalUseCategory" : [ {
         "identifier" : "typicallyUsesChemicalUseCategory",
@@ -1876,16 +1876,16 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
-        "type" : "iri"
-      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-durability#ColourFastness",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -1906,22 +1906,22 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fabric weight is represented here as a process-side target or parameter. The influence annotations point to structure-side fabric characteristics rather than merging both concepts.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "This class is not declared equivalent to txtstr:FabricMassPerUnitArea, because this module represents the process-side parameter or target setting, whereas TEXTILE_STRUCTURE represents the resulting fabric characteristic.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
         "value" : "The process-side target remains distinct from the resulting characteristic represented in Textile Structure.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
         "value" : "Expected SI quantity kind: quantities:SUDE (surface density).",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Fabric weight is represented here as a process-side target or parameter. The influence annotations point to structure-side fabric characteristics rather than merging both concepts.",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "This class is not declared equivalent to txtstr:FabricMassPerUnitArea, because this module represents the process-side parameter or target setting, whereas TEXTILE_STRUCTURE represents the resulting fabric characteristic.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1956,12 +1956,12 @@
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricInsulation",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricInsulation",
         "type" : "iri"
       } ]
     },
@@ -2037,17 +2037,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2104,12 +2104,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -2180,17 +2180,17 @@
           "value" : "https://w3id.org/eudpp/textile-process",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2201,12 +2201,12 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#ringSpinning",
+          "value" : "https://w3id.org/eudpp/textile-process#rotorOpenEndSpinning",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-process#rotorOpenEndSpinning",
+          "value" : "https://w3id.org/eudpp/textile-process#ringSpinning",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -2306,17 +2306,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2333,12 +2333,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
         "type" : "iri"
       } ]
     },
@@ -2378,17 +2378,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2399,17 +2399,17 @@
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricBreathability",
-        "type" : "iri"
-      }, {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-structure#FabricHandle",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
+        "type" : "iri"
+      }, {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricBreathability",
         "type" : "iri"
       } ]
     },
@@ -2485,17 +2485,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2557,12 +2557,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
         "type" : "iri"
       } ]
     },
@@ -2593,17 +2593,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2616,7 +2616,7 @@
       "IRI-based" : "ChemicalRecyclingProcess",
       "en" : "Chemical recycling process"
     },
-    "subClasses" : [ "73", "81", "83", "38" ],
+    "subClasses" : [ "81", "83", "38", "41" ],
     "comment" : {
       "en" : "Recycling process using chemical transformation to recover material from textile products or textile waste."
     },
@@ -2697,21 +2697,21 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#CutPrecision",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#CutPrecision",
         "type" : "iri"
       } ]
     },
@@ -2762,12 +2762,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
         "type" : "iri"
       } ]
     },
@@ -2779,56 +2779,6 @@
       "en" : "Dyeing parameter describing the duration of a dyeing process or dyeing step."
     },
     "id" : "101",
-    "superClasses" : [ "22" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-process#DyeConcentration",
-    "baseIri" : "https://w3id.org/eudpp/textile-process",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-process",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 12.3, printed page 227, lines 6506-6516.",
-        "type" : "label"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
-        "type" : "iri"
-      }, {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "DyeConcentration",
-      "en" : "Dye concentration"
-    },
-    "comment" : {
-      "en" : "Dyeing parameter describing the concentration of dye or colourant used in a dyeing process."
-    },
-    "id" : "99",
     "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#DefectControl",
@@ -2893,6 +2843,56 @@
     },
     "id" : "17",
     "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-process#DyeConcentration",
+    "baseIri" : "https://w3id.org/eudpp/textile-process",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-process",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 12.3, printed page 227, lines 6506-6516.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "type" : "iri"
+      }, {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DyeConcentration",
+      "en" : "Dye concentration"
+    },
+    "comment" : {
+      "en" : "Dyeing parameter describing the concentration of dye or colourant used in a dyeing process."
+    },
+    "id" : "99",
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#ConfectioningProcess",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
@@ -3009,12 +3009,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
         "type" : "iri"
       } ]
     },
@@ -3065,7 +3065,7 @@
       "en" : "SKOS concept used as a controlled value for a textile care method."
     },
     "id" : "150",
-    "superClasses" : [ "138" ]
+    "superClasses" : [ "136" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#SpinningMethodConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
@@ -3116,17 +3116,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#SpinningMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3182,17 +3182,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#SpinningMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3242,17 +3242,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#SpinningMethodScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3291,7 +3291,7 @@
       "en" : "SKOS concept used as a controlled value for a spinning method."
     },
     "id" : "134",
-    "superClasses" : [ "138" ]
+    "superClasses" : [ "136" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#SpinningSpeed",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
@@ -3372,17 +3372,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#SpinningMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3438,17 +3438,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3498,17 +3498,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3558,17 +3558,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, Table 8, printed pages 27-29; table caption line 546.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, Table 8, printed pages 27-29; table caption line 546.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3618,17 +3618,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#SpinningMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3678,17 +3678,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#SpinningMethodScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3723,7 +3723,7 @@
         "en" : "Air-jet spinning"
       }
     } ],
-    "subClasses" : [ "138" ],
+    "subClasses" : [ "136" ],
     "attributes" : [ "external" ],
     "id" : "140"
   }, {
@@ -3821,17 +3821,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3881,17 +3881,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3941,17 +3941,17 @@
           "value" : "https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, Table 8, printed pages 27-29; table caption line 546.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#directExtraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, Table 8, printed pages 27-29; table caption line 546.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3990,7 +3990,7 @@
       "en" : "SKOS concept used as a controlled value for a fabric manufacturing method."
     },
     "id" : "130",
-    "superClasses" : [ "138" ]
+    "superClasses" : [ "136" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#CellulosicChemicalRecyclingProcess",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
@@ -4028,7 +4028,7 @@
     "comment" : {
       "en" : "Chemical recycling process for cellulosic textile feedstock, producing cellulosic pulp or another recovered cellulosic feedstock."
     },
-    "id" : "81",
+    "id" : "83",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#DryingProcess",
@@ -4047,17 +4047,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4103,17 +4103,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4177,12 +4177,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf",
         "type" : "iri"
       } ]
     },
@@ -4206,17 +4206,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4285,17 +4285,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.1.14, printed pages 481-482, lines 11685-11730; JRC Preparatory Study, Section 3.3.1, printed page 29, lines 547-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.1.14, printed pages 481-482, lines 11685-11730; JRC Preparatory Study, Section 3.3.1, printed page 29, lines 547-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4328,12 +4328,12 @@
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "171"
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "165"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#NonwovenManufacturingProcess",
@@ -4346,17 +4346,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4388,12 +4388,12 @@
   }, {
     "instances" : 0,
     "union" : [ "103", "173", "112", "30", "76" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "172"
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "29"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent",
@@ -4407,32 +4407,32 @@
   }, {
     "instances" : 0,
     "union" : [ "26", "125" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "133"
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "75"
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "174"
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "90"
   }, {
     "instances" : 0,
     "union" : [ "26", "27" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "137"
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "135"
   }, {
     "instances" : 0,
     "union" : [ "26", "127" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "129"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#UseWearProcess",
@@ -4445,17 +4445,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4501,17 +4501,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4546,17 +4546,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Annex 13.10.2, Table 179, printed page 489; table caption at line 11877.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Annex 13.10.2, Table 179, printed page 489; table caption at line 11877.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4659,17 +4659,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4709,17 +4709,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4765,17 +4765,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4830,7 +4830,7 @@
     "comment" : {
       "en" : "Thermo-chemical process producing syngas or pyrolysis oil that may be used as feedstock for material production. Use of the output as fuel is energy recovery and is not represented as recycling."
     },
-    "id" : "83",
+    "id" : "38",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#CoatingParameter",
@@ -4843,17 +4843,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4909,7 +4909,7 @@
     "comment" : {
       "en" : "Chemical or thermo-chemical recycling process for polycotton blends, producing cellulosic pulp, polyester fibres, polymers or monomers depending on the applied technique."
     },
-    "id" : "38",
+    "id" : "41",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#MechanicalRecyclingProcess",
@@ -5030,6 +5030,12 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
@@ -5039,12 +5045,6 @@
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-durability#ColourFastness",
-        "type" : "iri"
-      } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -5065,17 +5065,17 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Yarn count is identified by the JRC as a fabric manufacturing parameter affecting fabric characteristics. A broad weak influence target is used here because the specific effect depends on yarn type, fabric construction and end use.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
         "value" : "The process-side target remains distinct from the resulting characteristic represented in Textile Structure.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
         "value" : "The JRC identifies yarn count as one of the weaving parameters affecting fabric characteristics. The exact target characteristic depends on fabric construction, yarn type and end use; therefore only weak influence annotations are used.",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Yarn count is identified by the JRC as a fabric manufacturing parameter affecting fabric characteristics. A broad weak influence target is used here because the specific effect depends on yarn type, fabric construction and end use.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -5084,17 +5084,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5214,86 +5214,6 @@
     "id" : "122",
     "superClasses" : [ "19" ]
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-process#SewingParameter",
-    "baseIri" : "https://w3id.org/eudpp/textile-process",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-process",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SewingParameter",
-      "en" : "Sewing parameter"
-    },
-    "subClasses" : [ "203" ],
-    "comment" : {
-      "en" : "Confectioning parameter relevant to sewing operations and seam formation."
-    },
-    "id" : "143",
-    "superClasses" : [ "15" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-process#TextileManufacturingProcess",
-    "baseIri" : "https://w3id.org/eudpp/textile-process",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-process",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
-        "type" : "label"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "TextileManufacturingProcess",
-      "en" : "Textile manufacturing process"
-    },
-    "subClasses" : [ "50", "124", "91", "188", "127", "114" ],
-    "comment" : {
-      "en" : "Textile process involved in the manufacturing or transformation of textile fibres, yarns, fabrics, assemblies or finished textile products."
-    },
-    "id" : "92",
-    "superClasses" : [ "27" ]
-  }, {
     "iri" : "https://w3id.org/eudpp/textile-process#TextileProcess",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
     "instances" : 0,
@@ -5338,6 +5258,86 @@
       "en" : "A type of process involved in manufacturing, transforming, using, caring for, repairing, reusing, recycling or treating a textile product, including a product used as a component of another product."
     },
     "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-process#TextileManufacturingProcess",
+    "baseIri" : "https://w3id.org/eudpp/textile-process",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-process",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TextileManufacturingProcess",
+      "en" : "Textile manufacturing process"
+    },
+    "subClasses" : [ "50", "124", "91", "188", "127", "114" ],
+    "comment" : {
+      "en" : "Textile process involved in the manufacturing or transformation of textile fibres, yarns, fabrics, assemblies or finished textile products."
+    },
+    "id" : "92",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-process#SewingParameter",
+    "baseIri" : "https://w3id.org/eudpp/textile-process",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-process",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SewingParameter",
+      "en" : "Sewing parameter"
+    },
+    "subClasses" : [ "203" ],
+    "comment" : {
+      "en" : "Confectioning parameter relevant to sewing operations and seam formation."
+    },
+    "id" : "143",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -5385,7 +5385,7 @@
     "comment" : {
       "en" : "SKOS concept used as a controlled value for a textile process method or technique."
     },
-    "id" : "138",
+    "id" : "136",
     "superClasses" : [ "140" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#StorageProcess",
@@ -5422,6 +5422,17 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      }, {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "type" : "iri"
+      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
@@ -5431,17 +5442,6 @@
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-durability#ColourFastness",
-        "type" : "iri"
-      } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
-        "type" : "iri"
-      }, {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -5454,82 +5454,6 @@
     },
     "id" : "85",
     "superClasses" : [ "69" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-process#WeavePatternSpecification",
-    "baseIri" : "https://w3id.org/eudpp/textile-process",
-    "instances" : 0,
-    "annotations" : {
-      "modellingNote" : [ {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "The process-side target remains distinct from the resulting characteristic represented in Textile Structure.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "Weave pattern is a fabric construction parameter that may affect visual appearance, permeability, drape and handle. The relation is represented as weak influence because the direction depends on the specific weave and yarns.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "The JRC identifies weave pattern as one of the weaving parameters affecting fabric characteristics. The relation is represented as weak influence annotations rather than as deterministic OWL axioms.",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-process",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricHandle",
-        "type" : "iri"
-      }, {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
-        "type" : "iri"
-      }, {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
-        "type" : "iri"
-      }, {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricBreathability",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "WeavePatternSpecification",
-      "en" : "Weave pattern specification"
-    },
-    "comment" : {
-      "en" : "A process target specification stating the weave pattern to be produced."
-    },
-    "id" : "119",
-    "superClasses" : [ "71" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#DyeingProcess",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
@@ -5547,28 +5471,28 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
         "type" : "label"
       } ],
-      "typicallyUsesChemicalFunction" : [ {
-        "identifier" : "typicallyUsesChemicalFunction",
+      "sourceType" : [ {
+        "identifier" : "sourceType",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
       "typicallyUsesChemicalUseCategory" : [ {
         "identifier" : "typicallyUsesChemicalUseCategory",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical",
+        "type" : "iri"
+      } ],
+      "typicallyUsesChemicalFunction" : [ {
+        "identifier" : "typicallyUsesChemicalFunction",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-associated-materials-codelists#dye",
         "type" : "iri"
       } ],
       "source" : [ {
@@ -5600,6 +5524,82 @@
     "id" : "93",
     "superClasses" : [ "91" ]
   }, {
+    "iri" : "https://w3id.org/eudpp/textile-process#WeavePatternSpecification",
+    "baseIri" : "https://w3id.org/eudpp/textile-process",
+    "instances" : 0,
+    "annotations" : {
+      "modellingNote" : [ {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "The JRC identifies weave pattern as one of the weaving parameters affecting fabric characteristics. The relation is represented as weak influence annotations rather than as deterministic OWL axioms.",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Weave pattern is a fabric construction parameter that may affect visual appearance, permeability, drape and handle. The relation is represented as weak influence because the direction depends on the specific weave and yarns.",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "The process-side target remains distinct from the resulting characteristic represented in Textile Structure.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-process",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricHandle",
+        "type" : "iri"
+      }, {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricBreathability",
+        "type" : "iri"
+      }, {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
+        "type" : "iri"
+      }, {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "WeavePatternSpecification",
+      "en" : "Weave pattern specification"
+    },
+    "comment" : {
+      "en" : "A process target specification stating the weave pattern to be produced."
+    },
+    "id" : "119",
+    "superClasses" : [ "71" ]
+  }, {
     "iri" : "https://w3id.org/eudpp/textile-process#SpinningTension",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
     "instances" : 0,
@@ -5616,17 +5616,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5835,12 +5835,6 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
-        "type" : "iri"
-      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
@@ -5850,6 +5844,12 @@
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-structure#FabricRigidity",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -5896,7 +5896,7 @@
       "IRI-based" : "PrintingParameter",
       "en" : "Printing parameter"
     },
-    "subClasses" : [ "41" ],
+    "subClasses" : [ "73" ],
     "comment" : {
       "en" : "Process parameter relevant to textile printing."
     },
@@ -5952,12 +5952,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#supportingEvidence",
         "type" : "iri"
       } ]
     },
@@ -6035,22 +6035,28 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ],
       "typicalInfluenceOn" : [ {
@@ -6062,12 +6068,6 @@
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-structure#SeamStrength",
-        "type" : "iri"
-      } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -6091,17 +6091,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6199,12 +6199,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Temperature control is modelled as a process parameter influencing yarn processing quality and mechanical-related characteristics.",
+        "value" : "Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.",
+        "value" : "Temperature control is modelled as a process parameter influencing yarn processing quality and mechanical-related characteristics.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -6213,17 +6213,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6231,21 +6231,21 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
-        "type" : "iri"
-      }, {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
+        "type" : "iri"
+      }, {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
         "type" : "iri"
       } ]
     },
@@ -6269,17 +6269,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "domain motivation from JRC Annex 13.10.2, pages 492-493, Table 181, lines 11889-11901. JRC Annex 13.10.2, pages 493-495, Table 182, lines 11902-11920. JRC Section 9.2.2.2, pages 125-126, lines 3296-3327; Annex 13.7.2, pages 394-395, lines 10227-10248.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "domain motivation from JRC Annex 13.10.2, pages 492-493, Table 181, lines 11889-11901. JRC Annex 13.10.2, pages 493-495, Table 182, lines 11902-11920. JRC Section 9.2.2.2, pages 125-126, lines 3296-3327; Annex 13.7.2, pages 394-395, lines 10227-10248.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6354,17 +6354,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6487,10 +6487,10 @@
     "id" : "132",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "135",
+    "id" : "131",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "131",
+    "id" : "137",
     "type" : "owl:objectProperty"
   }, {
     "id" : "139",
@@ -6502,7 +6502,7 @@
     "id" : "142",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "136",
+    "id" : "138",
     "type" : "owl:objectProperty"
   }, {
     "id" : "147",
@@ -6847,17 +6847,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "docs/decisions/TXT-DEC-007.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "docs/decisions/TXT-DEC-007.md",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6932,7 +6932,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "37"
   }, {
-    "range" : "21",
+    "range" : "39",
     "domain" : "41",
     "attributes" : [ "object", "anonymous" ],
     "id" : "40"
@@ -7029,17 +7029,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Textile Process execution pattern; domain motivation from JRC Section 3.3.1, Table 8",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Textile Process execution pattern; domain motivation from JRC Section 3.3.1, Table 8",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7059,7 +7059,7 @@
     "attributes" : [ "object" ],
     "id" : "59"
   }, {
-    "range" : "39",
+    "range" : "21",
     "domain" : "73",
     "attributes" : [ "object", "anonymous" ],
     "id" : "72"
@@ -7074,17 +7074,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7330,17 +7330,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Textile Process parameter/method modelling pattern; domain motivation from JRC Table 8 and Table 181",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7361,50 +7361,9 @@
     "attributes" : [ "object" ],
     "id" : "132"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-process#hasCareInstruction",
-    "baseIri" : "https://w3id.org/eudpp/textile-process",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-process",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2173; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasCareInstruction",
-      "en" : "has care instruction"
-    },
-    "superproperty" : [ "136" ],
-    "domain" : "30",
-    "comment" : {
-      "en" : "Relates a textile product to product-specific care instructions."
-    },
-    "attributes" : [ "object" ],
-    "id" : "135"
-  }, {
     "iri" : "https://w3id.org/eudpp/textile-process#hasProcessMethod",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
-    "range" : "138",
+    "range" : "136",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -7435,13 +7394,54 @@
       "IRI-based" : "hasProcessMethod",
       "en" : "has process method"
     },
-    "domain" : "137",
+    "domain" : "135",
     "subproperty" : [ "128", "132" ],
     "comment" : {
       "en" : "Relates a textile process type or concrete execution to a controlled SKOS concept identifying the selected process method."
     },
     "attributes" : [ "object" ],
     "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-process#hasCareInstruction",
+    "baseIri" : "https://w3id.org/eudpp/textile-process",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-process",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2173; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458.",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCareInstruction",
+      "en" : "has care instruction"
+    },
+    "superproperty" : [ "138" ],
+    "domain" : "30",
+    "comment" : {
+      "en" : "Relates a textile product to product-specific care instructions."
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-process#hasCategoricalValue",
     "baseIri" : "https://w3id.org/eudpp/textile-process",
@@ -7453,17 +7453,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Textile Process value pattern: controlled categorical values are represented as SKOS concepts rather than free text",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Textile Process value pattern: controlled categorical values are represented as SKOS concepts rather than free text",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7500,9 +7500,9 @@
       "IRI-based" : "hasProperty"
     },
     "domain" : "144",
-    "subproperty" : [ "135", "145" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "136"
+    "subproperty" : [ "137", "145" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "138"
   }, {
     "range" : "127",
     "domain" : "148",
@@ -7565,7 +7565,7 @@
     "id" : "154"
   }, {
     "range" : "140",
-    "domain" : "138",
+    "domain" : "136",
     "attributes" : [ "object", "anonymous" ],
     "id" : "156"
   }, {
@@ -7614,17 +7614,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7660,17 +7660,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7801,22 +7801,22 @@
     "id" : "197"
   }, {
     "range" : "92",
-    "domain" : "127",
+    "domain" : "124",
     "attributes" : [ "object", "anonymous" ],
     "id" : "198"
   }, {
     "range" : "92",
-    "domain" : "188",
+    "domain" : "50",
     "attributes" : [ "object", "anonymous" ],
     "id" : "199"
   }, {
-    "range" : "27",
-    "domain" : "69",
+    "range" : "92",
+    "domain" : "188",
     "attributes" : [ "object", "anonymous" ],
     "id" : "200"
   }, {
     "range" : "92",
-    "domain" : "114",
+    "domain" : "91",
     "attributes" : [ "object", "anonymous" ],
     "id" : "201"
   }, {
@@ -7860,8 +7860,8 @@
     "attributes" : [ "object" ],
     "id" : "202"
   }, {
-    "range" : "92",
-    "domain" : "91",
+    "range" : "27",
+    "domain" : "105",
     "attributes" : [ "object", "anonymous" ],
     "id" : "204"
   }, {
@@ -7906,13 +7906,13 @@
     "attributes" : [ "object" ],
     "id" : "205"
   }, {
-    "range" : "92",
-    "domain" : "124",
+    "range" : "27",
+    "domain" : "92",
     "attributes" : [ "object", "anonymous" ],
     "id" : "206"
   }, {
-    "range" : "92",
-    "domain" : "50",
+    "range" : "27",
+    "domain" : "146",
     "attributes" : [ "object", "anonymous" ],
     "id" : "207"
   }, {
@@ -7926,8 +7926,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "209"
   }, {
-    "range" : "143",
-    "domain" : "203",
+    "range" : "27",
+    "domain" : "69",
     "attributes" : [ "object", "anonymous" ],
     "id" : "210"
   }, {
@@ -7941,17 +7941,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 13.3.8, printed page 359, lines 9662-9688; JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2183-2192; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546; JRC DPP Study, Section 7.3, printed page 49, end-of-life treatment information data point.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 13.3.8, printed page 359, lines 9662-9688; JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2183-2192; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546; JRC DPP Study, Section 7.3, printed page 49, end-of-life treatment information data point.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -7969,7 +7969,7 @@
       "IRI-based" : "hasEndOfLifeInstruction",
       "en" : "has end-of-life instruction"
     },
-    "superproperty" : [ "136" ],
+    "superproperty" : [ "138" ],
     "domain" : "30",
     "comment" : {
       "en" : "Relates a textile product to product-specific instructions for its end-of-life handling."
@@ -8073,12 +8073,12 @@
     "id" : "229"
   }, {
     "range" : "27",
-    "domain" : "138",
+    "domain" : "136",
     "attributes" : [ "object", "anonymous" ],
     "id" : "230"
   }, {
     "range" : "26",
-    "domain" : "138",
+    "domain" : "136",
     "attributes" : [ "object", "anonymous" ],
     "id" : "231"
   }, {
@@ -8123,17 +8123,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "clearer replacement for the ambiguous local name concerns.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "clearer replacement for the ambiguous local name concerns.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -8163,17 +8163,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -8194,12 +8194,12 @@
     "id" : "240"
   }, {
     "range" : "5",
-    "domain" : "138",
+    "domain" : "136",
     "attributes" : [ "object", "anonymous" ],
     "id" : "241"
   }, {
     "range" : "107",
-    "domain" : "138",
+    "domain" : "136",
     "attributes" : [ "object", "anonymous" ],
     "id" : "242"
   }, {
@@ -8233,17 +8233,17 @@
         "value" : "https://w3id.org/eudpp/textile-process",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -8283,28 +8283,28 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "251"
   }, {
-    "range" : "138",
+    "range" : "136",
     "domain" : "150",
     "attributes" : [ "object", "anonymous" ],
     "id" : "252"
   }, {
-    "range" : "138",
+    "range" : "136",
     "domain" : "130",
     "attributes" : [ "object", "anonymous" ],
     "id" : "253"
   }, {
-    "range" : "138",
+    "range" : "136",
     "domain" : "134",
     "attributes" : [ "object", "anonymous" ],
     "id" : "254"
   }, {
-    "range" : "27",
-    "domain" : "92",
+    "range" : "92",
+    "domain" : "114",
     "attributes" : [ "object", "anonymous" ],
     "id" : "255"
   }, {
-    "range" : "27",
-    "domain" : "146",
+    "range" : "92",
+    "domain" : "127",
     "attributes" : [ "object", "anonymous" ],
     "id" : "256"
   }, {
@@ -8313,8 +8313,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "257"
   }, {
-    "range" : "27",
-    "domain" : "105",
+    "range" : "143",
+    "domain" : "203",
     "attributes" : [ "object", "anonymous" ],
     "id" : "258"
   } ]

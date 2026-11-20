@@ -598,7 +598,7 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-assessment> a owl:Ontology ;
     rdfs:label "EU DPP Textile Assessment Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Assessment Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Assessment Ontology. Version integration-2026-11.1."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -619,9 +619,9 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
     owl:imports <https://w3id.org/eudpp/textile-connector>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-assessment/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-assessment/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-assessment/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.1> ;
+    owl:versionInfo "Version integration-2026-11.1" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
 
