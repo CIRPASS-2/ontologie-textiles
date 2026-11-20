@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "baseline_commit": "40b08bff9316ba47b0b8b0c2b5265ef2ddbdfe6b",
+  "starting_commit": "384d3dece18c9804839d47c0a21aec545f17d47c",
+  "phase": 1,
+  "evidence": "migration/issue9-annotation-delta.json",
+  "entries": [
+    {
+      "id": "issue9-durability",
+      "issue": "#9",
+      "source_commit": "384d3dece18c9804839d47c0a21aec545f17d47c",
+      "graph": "ontology/textile-durability.ttl",
+      "category": "annotation",
+      "decisions": [
+        "docs/decisions/TXT-DEC-016.md",
+        "migration/ISSUE_9_IMPLEMENTATION_REPORT.md"
+      ],
+      "rationale": "Clarify textile-context durability without changing logical commitments.",
+      "precondition": "All recorded removals exist and additions are absent in the frozen graph."
+    },
+    {
+      "id": "issue9-soc",
+      "issue": "#9",
+      "source_commit": "384d3dece18c9804839d47c0a21aec545f17d47c",
+      "graph": "ontology/textile-soc.ttl",
+      "category": "annotation",
+      "decisions": [
+        "docs/decisions/TXT-DEC-016.md",
+        "migration/ISSUE_9_IMPLEMENTATION_REPORT.md"
+      ],
+      "rationale": "Clarify SoC thresholds, material groups and property scope without changing logical commitments.",
+      "precondition": "All recorded removals exist and additions are absent in the frozen graph."
+    }
+  ]
+}

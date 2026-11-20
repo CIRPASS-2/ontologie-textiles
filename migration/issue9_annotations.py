@@ -12,12 +12,14 @@ ANNOTATIONS = {RDFS.comment, SKOS.definition,
                Namespace('https://w3id.org/eudpp/textile-connector#').modellingNote}
 
 
-def baseline_graph(relative):
+def baseline_graph(relative, parser=None):
     raw = subprocess.check_output(['git', 'show', BASELINE + ':' + relative], cwd=ROOT)
+    if parser is not None:
+        return parser(raw.decode('utf8'), relative)
     return Graph().parse(data=raw.decode('utf8'), format='turtle')
 
 
-def expected_delta(relative):
+def expected_delta(relative, parser=None):
     record = json.loads(MANIFEST.read_text('utf8'))
     assert record['baseline_commit'] == BASELINE
     assert record['metadata_changes'] == []
@@ -26,7 +28,7 @@ def expected_delta(relative):
     assert {r['file'] for r in record['modules']} == {
         'ontology/textile-durability.ttl', 'ontology/textile-soc.ttl'}
     row = next((r for r in record['modules'] if r['file'] == relative), None)
-    parse = lambda field: set(Graph().parse(data='\n'.join(row[field]), format='turtle')) if row else set()
+    parse = lambda field: set(parser('\n'.join(row[field]), relative) if parser else Graph().parse(data='\n'.join(row[field]), format='turtle')) if row else set()
     added, removed = parse('added'), parse('removed')
     assert len(added) == len(removed)
     assert {(s, p) for s, p, o in added} == {(s, p) for s, p, o in removed}
