@@ -2,6 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tsh: <https://w3id.org/eudpp/textile-shacl#> .
 @prefix txt: <https://w3id.org/eudpp/textile-core#> .
 @prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
@@ -33,9 +34,14 @@ tsh:MassFractionValueShape a sh:NodeShape ;
 tsh:MeasurementParameterSettingShape a sh:NodeShape ;
     sh:property [ sh:class txtcon:QuantitativeValue ;
             sh:maxCount 1 ;
-            sh:message "A quantitative measurement-parameter setting must have exactly one quantitative value."@en ;
-            sh:minCount 1 ;
-            sh:path txtass:hasParameterValue ] ;
+            sh:message "A supplied quantitative parameter value must be a QuantitativeValue, with at most one per setting."@en ;
+            sh:path txtass:hasParameterValue ],
+        [ sh:class skos:Concept ;
+            sh:path txtass:hasParameterConcept ] ;
+    sh:or ( [ sh:property [ sh:minCount 1 ;
+                        sh:path txtass:hasParameterValue ] ]
+            [ sh:property [ sh:minCount 1 ;
+                        sh:path txtass:hasParameterConcept ] ] ) ;
     sh:targetClass txtass:MeasurementParameterSetting .
 
 tsh:NoQuantitativeValueSubclassShape a sh:NodeShape ;
@@ -164,11 +170,20 @@ tsh:ReferencePeriodShape a sh:NodeShape ;
         """ ] ;
     sh:targetClass txtcon:ReferencePeriod .
 
+tsh:AwardedScoreValueShape a sh:NodeShape ;
+    sh:targetObjectsOf txtass:awardedScoreValue ;
+    sh:class txtcon:QuantitativeValue ;
+    sh:node tsh:QuantitativeValueShape ;
+    sh:property [ sh:path txtcon:numericValue ;
+            sh:minCount 1 ],
+        [ sh:path txtcon:hasMeasurementUnit ;
+            sh:hasValue units:one ] .
+
 <https://w3id.org/eudpp/textile-shacl/quantitative> a owl:Ontology ;
     rdfs:label "Textile quantitative SHACL profile"@en ;
     rdfs:comment "Validation constraints for the shared quantitative-value pattern and common quantitative roles."@en ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-shacl/quantitative/dev/integration-2026-11.2> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-shacl/quantitative/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-shacl/quantitative/dev/integration-2026-11.3> ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-shacl/quantitative/dev/integration-2026-11.2> ;
     sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
         [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;

@@ -52,6 +52,12 @@ docs/CORE_2026_MIGRATION.md
 docs/DEPENDENCIES.md
 docs/ISSUE12_MATERIAL_COMPOSITION.md
 docs/ISSUE16_COMMON_MIGRATION.md
+docs/ISSUE20_POINT1_IMPLEMENTATION.md
+docs/ISSUE20_POINT2_IMPLEMENTATION.md
+docs/ISSUE20_POINT3_IMPLEMENTATION.md
+docs/ISSUE20_POINT4_IMPLEMENTATION.md
+docs/ISSUE20_POINT5_IMPLEMENTATION.md
+docs/ISSUE20_POINT6_IMPLEMENTATION.md
 docs/MODELLING_GUIDE.md
 docs/PUBLICATION_SCOPE.md
 docs/SOURCE_TRACEABILITY.md
@@ -66,6 +72,11 @@ docs/decisions/TXT-DEC-007.md
 docs/decisions/TXT-DEC-008.md
 docs/decisions/TXT-DEC-009.md
 docs/decisions/TXT-DEC-010.md
+docs/decisions/TXT-DEC-011.md
+docs/decisions/TXT-DEC-012.md
+docs/decisions/TXT-DEC-013.md
+docs/decisions/TXT-DEC-014.md
+docs/decisions/TXT-DEC-015.md
 docs/decisions/TXT-DEC-016.md
 docs/governance/nader-review.md
 docs/governance/skos-vocabulary-governance.md
@@ -589,6 +600,12 @@ examples/example-08-context-v1.1.2.ttl
 examples/example-09-repairability-v1.1.2.ttl
 examples/example-10-textile-soc-v2.0.0.ttl
 examples/example-11-textile-recyclability-v1.1.2.ttl
+examples/example-12-assessed-aspects-v2.1.0-dev.ttl
+examples/example-13-assessment-product-event-v2.1.0-dev.ttl
+examples/example-14-parameter-values-v2.1.0-dev.ttl
+examples/example-15-awarded-points-v2.1.0-dev.ttl
+examples/example-16-assessment-outcomes-v2.1.0-dev.ttl
+examples/example-17-assessment-times-v2.1.0-dev.ttl
 migration/AUDIT_CORRECTIONS.md
 migration/CREATOR_UPDATE.md
 migration/FINAL_PRE_PUSH_CORRECTIONS.md
@@ -597,6 +614,7 @@ migration/ISSUE_9_IMPLEMENTATION_REPORT.md
 migration/MAT_ALIGNMENT.md
 migration/PHASE2B_IMPLEMENTATION.md
 migration/PHASE3_IMPLEMENTATION.md
+migration/PHASE4_IMPLEMENTATION.md
 migration/PUBLICATION_BLOCKER_REMEDIATION.md
 migration/PUBLICATION_CANDIDATE_FINALIZATION.md
 migration/README.md
@@ -673,6 +691,7 @@ migration/mat_alignment.py
 migration/node-correspondence.json
 migration/phase2b_contract.py
 migration/phase3_preflight.py
+migration/phase4_contract.py
 migration/prepare_inputs.py
 migration/publication-blocker-results.json
 migration/publication-candidate-validation.json
@@ -719,10 +738,12 @@ scripts/generate-widoco-index.py
 scripts/generate_common_connector.py
 scripts/observe_textile_resolvers.py
 scripts/reconstruct_phase2b.py
+scripts/reconstruct_phase3.py
 scripts/sync-widoco-rdf.py
 scripts/validate_public.py
 scripts/widoco_annotations.py
 shacl/README.md
+shacl/profiles/textile-assessed-aspect-targets.ttl
 shacl/profiles/textile-soc-complete-report.ttl
 shacl/textile-quantitative-shapes.ttl
 shacl/textile-recyclability-shapes.ttl
@@ -807,6 +828,8 @@ tests/test_migration_publication.py
 tests/test_phase2b_contract.py
 tests/test_phase3_audit_corrections.py
 tests/test_phase3_preflight.py
+tests/test_phase4_audit_mutations.py
+tests/test_phase4_contract.py
 tests/test_public_package.py
 tests/test_reconstruct_phase2b.py
 tests/test_shacl_result_matching.py

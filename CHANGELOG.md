@@ -59,3 +59,10 @@ See [correction evidence](migration/AUDIT_CORRECTIONS.md).
 
 Accepted baseline `1ca2aa89241785dedeab430247bc9947daf69881` is preserved with
 its original changelog, manifest, catalogue, sources and generated documentation.
+
+## Unpublished integration-2026-11.3
+
+Integrate the five approved Assessment interoperability properties and the
+separate temporal guidance, retaining Common and complete Connector compatibility.
+The assessed-aspect profile remains optional and unversioned. This internal
+identity is not a public release number.

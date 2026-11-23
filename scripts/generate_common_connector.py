@@ -15,7 +15,7 @@ COMMON = URIRef('https://w3id.org/eudpp/textile-common')
 CONNECTOR = URIRef('https://w3id.org/eudpp/textile-connector')
 SI = URIRef('https://w3id.org/eudpp/textile-si-mireot')
 NS = Namespace('https://w3id.org/eudpp/textile-connector#')
-VERSION = 'integration-2026-11.2'
+VERSION = 'integration-2026-11.3'
 OUTPUT = ROOT / 'compat/textile-connector.ttl'
 
 
@@ -43,7 +43,7 @@ def compatibility(common):
         (CONNECTOR, RDFS.comment, Literal('Complete compatibility representation of Textile Common using the retained Connector term IRIs.', lang='en')),
         (CONNECTOR, OWL.versionIRI, URIRef(str(CONNECTOR) + '/dev/' + VERSION)),
         (CONNECTOR, OWL.versionInfo, Literal('Version ' + VERSION)),
-        (CONNECTOR, OWL.priorVersion, URIRef(str(CONNECTOR) + '/dev/integration-2026-11.1')),
+        (CONNECTOR, OWL.priorVersion, URIRef(str(CONNECTOR) + '/dev/integration-2026-11.2')),
         (CONNECTOR, OWL.imports, SI),
         (CONNECTOR, DCTERMS.source, COMMON),
     )

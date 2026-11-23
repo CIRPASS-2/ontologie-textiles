@@ -342,7 +342,7 @@ def structural_checks(root):
   if p.parent==root/'ontology':
    ontology=URIRef('https://w3id.org/eudpp/'+p.stem)
    require(set(gg.subjects(RDF.type,OWL.Ontology))=={ontology},'Unexpected Textile ontology identity: '+p.name)
-   require(set(gg.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.2')},'Current Textile development version mismatch: '+p.name)
+   require(set(gg.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.3')},'Current Textile development version mismatch: '+p.name)
  for rel in package_files(root):
   p=root/rel
   if p.is_file() and p.suffix in ('.md','.csv','.ttl','.owl','.xml','.json','.txt'):

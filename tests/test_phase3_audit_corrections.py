@@ -10,11 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_common_replacement_provenance_is_not_a_prior_version():
     text = (ROOT/'docs/widoco/common/index-en.html').read_text(encoding='utf8')
     assert '<dt>Replaces ontology:</dt>' in text
-    assert '<dt>Previous version:</dt>' not in text
+    assert '<dt>Previous version:</dt>' in text
+    assert fix.PREVIOUS in text
     provenance = Graph().parse(ROOT/'docs/widoco/common/provenance/provenance-en.ttl')
     prov = Namespace('http://www.w3.org/ns/prov#')
-    assert not list(provenance.objects(URIRef(fix.CURRENT), prov.wasRevisionOf))
-    assert 'replaces the former Connector ontology' in (ROOT/'docs/widoco/common/provenance/provenance-en.html').read_text(encoding='utf8')
+    assert set(provenance.objects(URIRef(fix.CURRENT), prov.wasRevisionOf)) == {URIRef(fix.PREVIOUS)}
+    assert fix.OLD not in set(map(str,provenance.objects(URIRef(fix.CURRENT), prov.wasRevisionOf)))
     assert '<dt>Previous version:</dt>' in (ROOT/'docs/widoco/connector/index-en.html').read_text(encoding='utf8')
 
 

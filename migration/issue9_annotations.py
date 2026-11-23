@@ -44,7 +44,14 @@ def restore_issue9_graph(graph, relative, already_phase1=False):
     if not already_phase1:
         version = (ROOT/'VERSION').read_text(encoding='utf8').strip()
         try:
-            if version == 'integration-2026-11.2':
+            if version == 'integration-2026-11.3':
+                from migration.phase4_contract import restore_phase3
+                graph = restore_phase3(graph, relative)
+                from migration.phase3_preflight import restore_phase2
+                graph, prior_path = restore_phase2(graph, relative)
+                from migration.phase2b_contract import restore_phase1
+                graph = restore_phase1(graph, prior_path)
+            elif version == 'integration-2026-11.2':
                 from migration.phase3_preflight import restore_phase2
                 graph, prior_path = restore_phase2(graph, relative)
                 from migration.phase2b_contract import restore_phase1
@@ -72,7 +79,14 @@ def canonical_differences():
         relative = path.relative_to(ROOT).as_posix()
         graph = Graph().parse(path)
         version = (ROOT/'VERSION').read_text(encoding='utf8').strip()
-        if version == 'integration-2026-11.2':
+        if version == 'integration-2026-11.3':
+            from migration.phase4_contract import restore_phase3
+            graph = restore_phase3(graph, relative)
+            from migration.phase3_preflight import restore_phase2
+            graph, prior_path = restore_phase2(graph, relative)
+            from migration.phase2b_contract import restore_phase1
+            graph = restore_phase1(graph, prior_path)
+        elif version == 'integration-2026-11.2':
             from migration.phase3_preflight import restore_phase2
             graph, prior_path = restore_phase2(graph, relative)
             from migration.phase2b_contract import restore_phase1

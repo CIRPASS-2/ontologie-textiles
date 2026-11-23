@@ -1,0 +1,99 @@
+# CIRPASS-2 Textile Ontology issue #20, point 1
+# SYNTHETIC, NON-NORMATIVE example. Values and procedures are illustrative;
+# no ISO/JRC method conformity or product performance claim is implied.
+# Demonstrates 2 results in one execution and 2 additional assessed categories.
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/eu-dpp-textile/issue20-point1/> .
+@prefix si: <https://si-digital-framework.org/SI#> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix txtdur: <https://w3id.org/eudpp/textile-durability#> .
+@prefix txtstr: <https://w3id.org/eudpp/textile-structure#> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Fabric and individual aspects: not OWL class IRIs used as instance values.
+ex:fabric-001 a txt:Fabric ;
+    txtdur:hasObservedPerformanceParameter
+        ex:colour-fastness-001, ex:dimensional-stability-001 ;
+    txtdur:hasObservedDegradationPhenomenon ex:pilling-001 ;
+    txtstr:hasStructuralCharacteristic ex:surface-density-001 .
+
+ex:colour-fastness-001 a txtdur:ColourFastness .
+ex:dimensional-stability-001 a txtdur:DimensionalStability .
+ex:pilling-001 a txtdur:Pilling .
+ex:surface-density-001 a txtstr:FabricMassPerUnitArea .
+
+# One synthetic wash/inspection execution produces two separately identified
+# performance-related results, sharing one protocol cycle-count setting.
+ex:combined-wash-method a txtass:TestMethod ;
+    dcterms:description "Synthetic combined washing and inspection procedure; not a claim of conformance to a standard."@en ;
+    txtass:measuresPerformanceParameter
+        ex:colour-fastness-001, ex:dimensional-stability-001 .
+
+ex:cycle-count-parameter a txtass:NumberOfCycles .
+ex:five-cycles-setting a txtass:MeasurementParameterSetting ;
+    txtass:settingForParameter ex:cycle-count-parameter ;
+    txtass:hasParameterValue ex:five-cycles-value .
+ex:five-cycles-value a txtcon:QuantitativeValue ;
+    txtcon:numericValue "5"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit units:one .
+
+ex:wash-test-001 a txtass:TestExecution ;
+    txtass:assessesProduct ex:fabric-001 ;
+    txtass:appliesMethod ex:combined-wash-method ;
+    txtass:assessesPerformanceParameter
+        ex:colour-fastness-001, ex:dimensional-stability-001 ;
+    txtass:hasParameterSetting ex:five-cycles-setting ;
+    txtass:producesResult ex:colour-result-001, ex:dimension-result-001 .
+
+ex:colour-result-001 a txtass:MeasurementResult ;
+    txtass:resultOfAssessment ex:wash-test-001 ;
+    txtass:resultForAssessedAspect ex:colour-fastness-001 ;
+    txtass:hasTextualValue "Illustrative colour-change observation after five cycles; no controlled grade is asserted." .
+
+ex:dimension-result-001 a txtass:MeasurementResult ;
+    txtass:resultOfAssessment ex:wash-test-001 ;
+    txtass:resultForAssessedAspect ex:dimensional-stability-001 ;
+    txtass:hasMeasuredValue ex:relative-dimension-change-001 .
+ex:relative-dimension-change-001 a txtcon:QuantitativeValue ;
+    dcterms:description "Illustrative absolute relative dimensional change: 0.02 = 2%; method-dependent interpretation."@en ;
+    txtcon:numericValue "0.02"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit units:one .
+
+# Observed degradation phenomenon, kept distinct from a resistance property.
+ex:pilling-inspection-method a txtass:AssessmentMethod ;
+    dcterms:description "Synthetic qualitative inspection test of pilling after an exposure procedure."@en .
+ex:pilling-inspection-001 a txtass:AssessmentExecution ;
+    txtass:assessesProduct ex:fabric-001 ;
+    txtass:appliesMethod ex:pilling-inspection-method ;
+    txtass:producesResult ex:pilling-result-001 .
+ex:pilling-result-001 a txtass:MeasurementResult ;
+    txtass:resultOfAssessment ex:pilling-inspection-001 ;
+    txtass:resultForAssessedAspect ex:pilling-001 ;
+    txtass:hasTextualValue "Visible surface pills observed; no severity scale is asserted." .
+
+# Structural characteristic; no inference that it is an ObservedPerformanceParameter.
+ex:surface-density-method a txtass:AssessmentMethod ;
+    dcterms:description "Synthetic measurement of fabric mass per surface area."@en .
+ex:surface-density-assessment-001 a txtass:AssessmentExecution ;
+    txtass:assessesProduct ex:fabric-001 ;
+    txtass:appliesMethod ex:surface-density-method ;
+    txtass:producesResult ex:surface-density-result-001 .
+ex:surface-density-result-001 a txtass:MeasurementResult ;
+    txtass:resultOfAssessment ex:surface-density-assessment-001 ;
+    txtass:resultForAssessedAspect ex:surface-density-001 ;
+    txtass:hasMeasuredValue ex:surface-density-value-001 .
+ex:surface-density-value-001 a txtcon:QuantitativeValue ;
+    dcterms:description "0.145 kg/m² is equivalent to 145 g/m². Synthetic value."@en ;
+    txtcon:numericValue "0.145"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit [
+        a si:UnitProduct ;
+        si:hasLeftUnitTerm units:kilogram ;
+        si:hasRightUnitTerm [
+            a si:UnitPower ;
+            si:hasUnitBase units:metre ;
+            si:hasNumericExponent "-2"^^xsd:short
+        ]
+    ] .

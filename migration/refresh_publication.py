@@ -49,9 +49,9 @@ def documentation():
     text=baseline_text('README.md')
     start=text.index('The 13 Textile ontology graphs declare version')
     end=text.index('## Package contents',start)
-    text=text[:start]+'''This unpublished integration package uses **integration-2026-11.2**. The thirteen
-Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.2`
-and retained module identities cite the corresponding `.1` version as prior. Common is a new identity. Six CORE subsets
+    text=text[:start]+'''This unpublished integration package uses **integration-2026-11.3**. The thirteen
+Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.3`
+and retained module identities cite the corresponding `.2` version as prior. Common retains its migration provenance. Six CORE subsets
 retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
 closure contains 20 graphs.
 
@@ -92,6 +92,7 @@ See the [issue #12 decision](docs/ISSUE12_MATERIAL_COMPOSITION.md),
     text=insert_before(text, '## Versions and entry point\n', README_ISSUE9, 'README.md')
     text=text.replace('| textile-connector | 37 |','| textile-common | 37 |')
     text+='\n## Common and Connector compatibility\n\n[Textile Common](ontology/textile-common.ttl) is the canonical shared ontology.\nThe separately generated [Connector compatibility representation](compat/textile-connector.ttl)\ncontains the complete Common non-header graph with the original `txtcon:` term\nIRIs; it imports the SI MIREOT and does not import Common. Load one representation\nfor a given purpose with the active catalogue. See the [issue 16 integration\nrecord](docs/ISSUE16_COMMON_MIGRATION.md) for version and historical resolution.\n'
+    text+='\n## Cumulative issue #20 integration\n'+'\nThe internal unpublished integration identity is `integration-2026-11.3`.\nAssessment supports explicit assessed aspects, product-facing event links,\ncategorical settings, awarded scores and controlled assessment outcomes.\nExecution-time guidance reuses optional PROV timestamps without importing PROV.\nSee the modelling guide and decisions TXT-DEC-011 through TXT-DEC-015. The\nassessed-aspect SHACL profile is optional; published 2.0.0 and the committed\n`.1` and `.2` integration states retain their own isolated catalogues.\n'
     write('README.md',text)
     write('CHANGELOG.md','''# Changelog
 

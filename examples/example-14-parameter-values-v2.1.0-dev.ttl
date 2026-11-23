@@ -1,0 +1,31 @@
+# Synthetic protocol illustration, not a standard or authoritative code list.
+# The single example concept is application-supplied, not a new ontology class.
+@prefix ex: <https://example.org/eu-dpp-textile/issue20-point3/> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:protocol a txtass:AssessmentMethod ;
+    txtass:hasMeasurementParameter ex:cycleCount, ex:cycleType ;
+    txtass:specifiesCondition ex:condition .
+
+ex:condition a txtass:AssessmentCondition ;
+    txtass:hasParameterSetting ex:numericalSetting, ex:categoricalSetting .
+
+ex:cycleCount a txtass:NumberOfCycles .
+ex:cycleType a txtass:MeasurementParameter .
+
+ex:numericalSetting a txtass:MeasurementParameterSetting ;
+    txtass:settingForParameter ex:cycleCount ;
+    txtass:hasParameterValue ex:fiveCycles .
+ex:fiveCycles a txtcon:QuantitativeValue ;
+    txtcon:numericValue "5"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit units:one .
+
+ex:categoricalSetting a txtass:MeasurementParameterSetting ;
+    txtass:settingForParameter ex:cycleType ;
+    txtass:hasParameterConcept ex:illustrativeCycleMode .
+ex:illustrativeCycleMode a skos:Concept ;
+    skos:prefLabel "Illustrative protocol cycle mode"@en .

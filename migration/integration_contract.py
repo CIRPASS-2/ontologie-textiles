@@ -250,6 +250,9 @@ def validate(candidate_graphs=None, transitions=None):
         raise ContractError('Optimized Python disables required historical assertions')
     require(candidate_graphs is None and transitions is None,
             'Injected candidates are not accepted by current Phase 2B validation')
+    if (ROOT / 'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.3':
+        from migration.phase4_contract import validate as validate_phase4
+        return validate_phase4()
     if (ROOT / 'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.2':
         from migration.phase3_preflight import validate as validate_phase3
         return validate_phase3()
@@ -263,7 +266,7 @@ def _validate_phase1_fixture(candidate_graphs, transitions=None):
     # with graph equivalence or a newly computed allowlist.
     protected = mat_alignment.protected_hashes()
     for name in ('VERSION', 'migration/legacy-soc-attribution.json'):
-        frozen = (b'integration-2026-11.2\n' if name == 'VERSION' else
+        frozen = (b'integration-2026-11.3\n' if name == 'VERSION' else
                   subprocess.check_output(['git', 'show', BASELINE + ':' + name], cwd=ROOT))
         require((ROOT / name).read_bytes() == frozen, 'Protected file changed: ' + name)
     baseline = baseline_graphs()

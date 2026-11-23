@@ -69,10 +69,10 @@ def test_textile_ontology_headers_cannot_self_define_and_context_metadata_is_sta
  context_graph=v.parse(ROOT/'ontology/textile-context.ttl')
  assert (context,v.RDF.type,v.OWL.Ontology) in context_graph
  assert set(context_graph.objects(context,v.OWL.versionIRI))=={
-  v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.2')
+  v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.3')
  }
- assert {str(value) for value in context_graph.objects(context,v.OWL.versionInfo)}=={'Version integration-2026-11.2'}
- assert set(context_graph.objects(context,v.OWL.priorVersion))=={v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.1')}
+ assert {str(value) for value in context_graph.objects(context,v.OWL.versionInfo)}=={'Version integration-2026-11.3'}
+ assert set(context_graph.objects(context,v.OWL.priorVersion))=={v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.2')}
  assert set(context_graph.objects(context,v.OWL.imports))==expected_imports
 
 def test_missing_external_locator_stays_unresolved(tables):

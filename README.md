@@ -41,9 +41,9 @@ no upstream commit identifier is asserted without evidence.
 
 ## Versions and entry point
 
-This unpublished integration package uses **integration-2026-11.2**. The thirteen
-Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.2`
-and retained module identities cite the corresponding `.1` version as prior. Common is a new identity. Six CORE subsets
+This unpublished integration package uses **integration-2026-11.3**. The thirteen
+Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.3`
+and retained module identities cite the corresponding `.2` version as prior. Common retains its migration provenance. Six CORE subsets
 retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
 closure contains 20 graphs.
 
@@ -96,7 +96,7 @@ The CIRPASS Textile Ontology is grounded in the JRC textile studies while explic
 - [Traceability guide](traceability/README.md)
 - [Source methodology](docs/SOURCE_TRACEABILITY.md)
 
-The following counts are generated from the public CSV: **899 resources**, **946 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
+The following counts are generated from the public CSV: **904 resources**, **946 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
 
 | Provenance category | Resource count |
 |---|---:|
@@ -104,7 +104,7 @@ The following counts are generated from the public CSV: **899 resources**, **946
 | adaptedRelation | 27 |
 | directExtraction | 16 |
 | externalReuse | 1 |
-| modellingAbstraction | 378 |
+| modellingAbstraction | 383 |
 | projectDecision | 74 |
 
 | Defining module | Resource count |
@@ -168,3 +168,13 @@ contains the complete Common non-header graph with the original `txtcon:` term
 IRIs; it imports the SI MIREOT and does not import Common. Load one representation
 for a given purpose with the active catalogue. See the [issue 16 integration
 record](docs/ISSUE16_COMMON_MIGRATION.md) for version and historical resolution.
+
+## Cumulative issue #20 integration
+
+The internal unpublished integration identity is `integration-2026-11.3`.
+Assessment supports explicit assessed aspects, product-facing event links,
+categorical settings, awarded scores and controlled assessment outcomes.
+Execution-time guidance reuses optional PROV timestamps without importing PROV.
+See the modelling guide and decisions TXT-DEC-011 through TXT-DEC-015. The
+assessed-aspect SHACL profile is optional; published 2.0.0 and the committed
+`.1` and `.2` integration states retain their own isolated catalogues.

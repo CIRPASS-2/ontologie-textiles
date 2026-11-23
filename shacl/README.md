@@ -58,3 +58,42 @@ profile requires the SI Reference Point time quantity kind
 `https://si-digital-framework.org/quantities/TIME`. It remains optional. A
 different quantity kind, including length, is rejected even if the unit is a
 time unit. The TIME individual is already present in the selected SI MIREOT.
+
+## Issue #20 Assessment profiles
+
+### Optional assessed-aspect target validation
+
+Select `profiles/textile-assessed-aspect-targets.ttl` explicitly as an
+additional pySHACL `shacl_graph`; it is excluded from the default top-level
+loader so existing results are not required to use this optional validation.
+Merge the relevant offline ontology closure and instance typing with the data,
+and set `do_owl_imports=False` to prevent remote ontology loading. Supply the
+appropriate class typing for assessed-aspect individuals: an untyped target
+fails when the relevant type is not available or inferred. The profile rejects
+protocol controls, values, criteria, indicators and class IRIs used as
+individuals. It does not require a binding or restrict the number of bindings.
+It has no ontology or version declaration and retains its source shape IRI.
+
+### Quantitative and categorical parameter settings
+
+A MeasurementParameterSetting may have a quantitative value, one or more SKOS
+concepts, or both. The alternatives use inclusive `sh:or`; a setting with
+neither form fails with `OrConstraintComponent`. The numerical maximum of one
+and all supplied-value type checks apply outside the alternatives. Units,
+decimal datatypes and quantity-kind constraints remain in force; multiple
+concepts are permitted.
+
+Before RDFS inference, `sh:class` requires available explicit or subclass
+Concept typing. After RDFS inference, the range of `hasParameterConcept` can
+supply `skos:Concept` typing for a resource. A passing `sh:class` check does not
+establish membership in the intended authoritative vocabulary or equivalence
+between a code and a supplied number. Literal concept targets fail either way.
+
+### Awarded scores and conclusions
+
+Supplied `awardedScoreValue` objects require an actual decimal scalar and unit
+`units:one`; the shared quantitative checks still apply. The relation is
+optional and can occur multiple times. No universal score bound, calculation
+or positivity rule is introduced. No production outcome or execution-time
+guard is added. The existing RangeThresholdValue scalar-presence limitation
+remains deferred.

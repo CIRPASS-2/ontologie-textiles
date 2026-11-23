@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#Discolouration",
+    "@id": "https://w3id.org/eudpp/textile-durability#SeamFailure",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -12,7 +12,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Kept distinct from colour fading because discolouration may be localised, irregular or caused by specific use or exposure conditions."
+        "@value": "Structural or assembly-related failure mode involving loss of seam integrity or seam functionality."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -23,12 +23,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Discolouration"
+        "@value": "Seam failure"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode"
+        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -39,7 +39,7 @@
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11092-11093."
+        "@value": "JRC Annex 13.10.1, printed page 469, lines 11089-11094."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#FabricStrength",
+    "@id": "https://w3id.org/eudpp/textile-durability#ProductAgeing",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -61,7 +61,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Aggregated observed mechanical performance parameter describing the strength of a fabric, potentially covering tensile strength, tear strength or bursting strength depending on the test context."
+        "@value": "Progressive change or degradation of textile product performance over time under repeated use, care, environmental exposure or stress."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -72,27 +72,67 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fabric strength"
+        "@value": "Product ageing"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter"
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#IntrinsicDurability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Durability construct based on the physical and measurable ability of a textile product to maintain relevant performance characteristics over time under specified use, maintenance or test conditions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Intrinsic durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Durability"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Physical durability"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Fabric strength contributes to the interpretation of intrinsic durability as an aggregated mechanical performance parameter."
-      },
-      {
-        "@language": "en",
-        "@value": "Fabric strength is modelled as reducing the likelihood of tear or rip under comparable conditions, rather than as negatively affecting tear or rip."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -105,64 +145,10 @@
       {
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
       }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#TearOrRip"
-      }
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#TrimFailure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Component failure mode involving failure of trims or auxiliary components associated with a textile product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Trim failure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ComponentFailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11092-11094."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#MechanicalFailureMode",
+    "@id": "https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -174,7 +160,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Category of failure modes primarily involving rupture, tearing or mechanical damage."
+        "@value": "Category of observed performance parameters related to mechanical resistance or strength."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -185,12 +171,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Mechanical failure mode"
+        "@value": "Mechanical performance parameter"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -264,752 +250,23 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#IntrinsicDurability",
+    "@id": "_:cbb56c7c9b0751963ca43928a539dec044fa3caa55bb3ec2d9c3943b52cc4ce3a3",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
     ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Durability construct based on the physical and measurable ability of a textile product to maintain relevant performance characteristics over time under specified use, maintenance or test conditions."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Intrinsic durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#Durability"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Physical durability"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#FabricBreakdown",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Aggregated failure mode. It may be decomposed later into more specific phenomena such as fraying, thinning, localised wear or hole formation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric breakdown"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser",
-    "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#ElasticityLoss",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Structural failure mode corresponding to loss of elasticity, elastic recovery or stretch-related functionality of a textile product or fabric."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Elasticity loss"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Loss of elasticity"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Elasticity loss is kept distinct from loss of dimensional stability. A product may lose elastic recovery without necessarily being described primarily as dimensionally unstable."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#LossOfComfort"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#FuzzingOrMatting",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Observed surface degradation phenomenon involving fuzzing or matting of the fabric surface. The term follows the JRC and ISO wording 'fuzzing or matting', not 'melting'."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fuzzing or matting"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Fabric fuzzing"
-      },
-      {
-        "@language": "en",
-        "@value": "Fabric matting"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "FuzzingOrMatting is not made a subclass of FailureMode because it is modelled following the existing pilling pattern as an observed degradation phenomenon used in performance inspection."
-      },
-      {
-        "@language": "en",
-        "@value": "The research gap used the wording 'fuzzing/melting', but the JRC and referenced ISO standards use fuzzing/matting. This ontology therefore introduces FuzzingOrMatting and avoids the unsupported term melting."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-durability#typicalProgressionTo": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FabricBreakdown"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#RoughOrStiffFabric",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Failure mode in which a fabric becomes or is perceived as rough, stiff or unpleasant to touch, affecting user acceptance and comfort-related use."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Rough or stiff fabric"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#TactileFailureMode"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Fabric roughness"
-      },
-      {
-        "@language": "en",
-        "@value": "Fabric stiffness"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "The concept is modelled as a tactile failure mode rather than as a structural characteristic. The corresponding structural or tactile fabric property remains outside this module."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#LossOfComfort"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#hasObservedPerformanceParameter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile product to an observed performance parameter relevant to its durability assessment."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp#Product"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has observed performance parameter"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#SeamFailure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Structural or assembly-related failure mode involving loss of seam integrity or seam functionality."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Seam failure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.1, printed page 469, lines 11089-11094."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#FunctionalFailureMode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of failure modes primarily involving loss of intended use, comfort or functional suitability of a textile product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Functional failure mode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Introduced to represent failure modes that are not adequately captured by visual, structural, mechanical or component failure categories alone."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#Pilling",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Observed surface degradation phenomenon involving the formation of small balls or pills of entangled fibres on a textile surface during wear, friction, use or testing."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Pilling"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Observed pilling may contribute to fabric breakdown as part of a progressive surface degradation process, but it should not be treated as the sole necessary cause of fabric breakdown."
-      },
-      {
-        "@language": "en",
-        "@value": "Observed pilling negatively affects the interpretation of intrinsic durability; pilling resistance, if modelled separately, should be represented as a protective characteristic."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-durability#typicalProgressionTo": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FabricBreakdown"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#ProductAgeing",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Progressive change or degradation of textile product performance over time under repeated use, care, environmental exposure or stress."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Product ageing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#negativelyAffects",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Indicates that a failure mode, degradation phenomenon or damage negatively affects a durability-related aspect."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:cb68067f2b743e19efb21ee5d853c3161b0666d622a2f0455c63f429b69f182231"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "negatively affects"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#Durability"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb68067f2b743e19efb21ee5d853c3161b0666d622a2f0455c63f429b69f182231",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#members": [
       {
         "@list": [
           {
+            "@id": "https://w3id.org/eudpp/textile-durability#Durability"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+          },
+          {
             "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-          },
-          {
-            "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
-          },
-          {
-            "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Degradation of textile material or product properties associated with ultraviolet or other relevant radiation exposure."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Radiation-induced degradation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ProductAgeing"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Section 12.3.16, printed page 254, lines 7150-7157."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of failure modes primarily affecting visible appearance."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Visual failure mode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
       }
     ]
   },
@@ -1021,7 +278,7 @@
     "http://purl.org/dc/terms/bibliographicCitation": [
       {
         "@language": "en",
-        "@value": "EU DPP Textile Durability Ontology. Version integration-2026-11.2."
+        "@value": "EU DPP Textile Durability Ontology. Version integration-2026-11.3."
       }
     ],
     "http://purl.org/dc/terms/created": [
@@ -1146,17 +403,17 @@
     ],
     "http://www.w3.org/2002/07/owl#priorVersion": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.1"
+        "@id": "https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.2"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionIRI": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.2"
+        "@id": "https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.3"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
-        "@value": "Version integration-2026-11.2"
+        "@value": "Version integration-2026-11.3"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1172,9 +429,9 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage",
+    "@id": "https://w3id.org/eudpp/textile-durability#typicalFailureExpression",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -1184,7 +441,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Damage caused by external or accidental events during product use, not necessarily resulting from intrinsic lack of durability."
+        "@value": "Annotation used at class level to document the usual failure expression of an observed performance parameter without imposing an OWL existential restriction."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1195,65 +452,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "External damage"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#LossOfComfort",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Functional failure mode corresponding to loss of comfort or comfort-related suitability during use, maintenance or ageing."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Loss of comfort"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FunctionalFailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Loss of comfort is kept as a functional failure mode. Specific causes may include roughness, stiffness, loss of elasticity, poor breathability, poor insulation or other context-dependent phenomena."
+        "@value": "typical failure expression"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1320,415 +519,6 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#ColourFastness",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Observed performance parameter describing the resistance of a textile colour to fading, running or alteration under conditions such as washing, rubbing, perspiration or light exposure."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Colour fastness"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Colour fastness is the resistance parameter; colour fading is a typical visual failure expression of its degradation."
-      },
-      {
-        "@language": "en",
-        "@value": "Observed colour fastness contributes to the interpretation of intrinsic durability, while colour fading is a failure expression."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-durability#typicalFailureExpression": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ColourFading"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#SurfaceFailureMode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of failure modes primarily affecting the textile surface. Borderline surface phenomena that are also assessed as performance parameters should remain under ObservedDegradationPhenomenon to preserve the module disjointness pattern."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Surface failure mode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This class is available for strict failure modes. Pilling and fuzzing/matting are intentionally kept as observed degradation phenomena when they are used as inspection parameters."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#typicalDegradationExpression",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Annotation used at class level to document a usual degradation expression of a durability-related performance characteristic without imposing a necessary OWL restriction."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "typical degradation expression"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#hasExternalDamage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile product or product observation to external damage occurring during use."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp#Product"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has external damage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#hasFailureMode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile product to a failure mode observed, expected or considered relevant for that product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp#Product"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has failure mode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#LogoFailure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Logo failure may also be interpreted as a component-related failure depending on whether the logo is printed, embroidered or applied as a separate component. It is kept under visual failure mode in this module."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Logo failure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11091-11092."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of observed performance parameters related to mechanical resistance or strength."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Mechanical performance parameter"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#AccidentalDamage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "External damage occurring during use, such as accidental tearing, ripping or staining, which may lead to product rejection or disposal."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Accidental damage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Accidental damage may result in tear or rip, but this is not a necessary relation in every case."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11090-11091."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-durability#typicalProgressionTo": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#TearOrRip"
       }
     ]
   },
@@ -1802,9 +592,9 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#ComponentFailureMode",
+    "@id": "https://w3id.org/eudpp/textile-durability#hasFailureExpression",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -1814,7 +604,12 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Category of failure modes affecting components or trims."
+        "@value": "Relates an observed performance parameter to a failure mode that expresses degradation or loss of that parameter."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1825,10 +620,10 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Component failure mode"
+        "@value": "has failure expression"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
       }
@@ -1842,6 +637,187 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Category of observed performance parameters related to visual appearance or colour behaviour."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Visual performance parameter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Durability-related product characteristic that can be observed, assessed or measured to evaluate physical durability. It denotes the characteristic type, not a test, observation, result or quantitative value."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Observed performance parameter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#Property"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#hasDurabilityAspect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile product to a durability aspect relevant to its assessment or declaration."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has durability aspect"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Durability"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Degradation of textile material or product properties associated with ultraviolet or other relevant radiation exposure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Radiation-induced degradation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ProductAgeing"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 12.3.16, printed page 254, lines 7150-7157."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
       }
     ]
   },
@@ -1885,7 +861,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#ColourDepthEvenness",
+    "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1897,7 +873,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Observed visual performance parameter describing the depth and evenness of colour in a textile product or fabric, especially in relation to dyeing and finishing quality."
+        "@value": "Category of failure modes primarily affecting visible appearance."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1908,33 +884,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Colour depth and evenness"
+        "@value": "Visual failure mode"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Colour depth"
-      },
-      {
-        "@language": "en",
-        "@value": "Colour evenness"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Colour depth and evenness is distinct from colour fastness. Colour fastness concerns resistance to fading, running or alteration, whereas colour depth/evenness concerns the achieved visual colour quality."
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1947,27 +902,22 @@
       {
         "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
       }
-    ],
-    "https://w3id.org/eudpp/textile-durability#typicalFailureExpression": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#Discolouration"
-      }
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability",
+    "@id": "https://w3id.org/eudpp/textile-durability#TactileFailureMode",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+        "@id": "https://w3id.org/eudpp/textile-ontology"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Failure expression corresponding to loss of the ability of a textile product or fabric to retain its dimensions after use, laundering or treatment cycles."
+        "@value": "Category of failure modes primarily affecting tactile perception, hand feel or comfort-related touch properties of a textile product or fabric."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1978,33 +928,39 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Loss of dimensional stability"
+        "@value": "Tactile failure mode"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Introduced to avoid forcing tactile failures such as rough or stiff fabric into purely visual or purely structural categories."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11091-11092."
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#PillingResistance",
+    "@id": "https://w3id.org/eudpp/textile-durability#Pilling",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2016,7 +972,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Durability-related performance characteristic describing the ability of a textile material, fabric or product to resist the formation of pills under friction, wear or use conditions."
+        "@value": "Observed surface degradation phenomenon involving the formation of small balls or pills of entangled fibres on a textile surface during wear, friction, use or testing."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2027,12 +983,15 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Pilling resistance"
+        "@value": "Pilling"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter"
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -2043,7 +1002,11 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Pilling resistance is separated from Pilling."
+        "@value": "Observed pilling may contribute to fabric breakdown as part of a progressive surface degradation process, but it should not be treated as the sole necessary cause of fabric breakdown."
+      },
+      {
+        "@language": "en",
+        "@value": "Observed pilling negatively affects the interpretation of intrinsic durability; pilling resistance, if modelled separately, should be represented as a protective characteristic."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2057,30 +1020,212 @@
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
       }
     ],
-    "https://w3id.org/eudpp/textile-durability#typicalDegradationExpression": [
+    "https://w3id.org/eudpp/textile-durability#typicalProgressionTo": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#Pilling"
+        "@id": "https://w3id.org/eudpp/textile-durability#FabricBreakdown"
       }
     ]
   },
   {
-    "@id": "_:cbb56c7c9b0751963ca43928a539dec044fa3caa55bb3ec2d9c3943b52cc4ce3a3",
+    "@id": "https://w3id.org/eudpp/textile-durability#negativelyAffects",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2002/07/owl#members": [
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates that a failure mode, degradation phenomenon or damage negatively affects a durability-related aspect."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:cb68067f2b743e19efb21ee5d853c3161b0666d622a2f0455c63f429b69f182231"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "negatively affects"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Durability"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb68067f2b743e19efb21ee5d853c3161b0666d622a2f0455c63f429b69f182231",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
       {
         "@list": [
           {
-            "@id": "https://w3id.org/eudpp/textile-durability#Durability"
-          },
-          {
-            "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
-          },
-          {
             "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#AccidentalDamage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "External damage occurring during use, such as accidental tearing, ripping or staining, which may lead to product rejection or disposal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Accidental damage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Accidental damage may result in tear or rip, but this is not a necessary relation in every case."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11090-11091."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-durability#typicalProgressionTo": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#TearOrRip"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#RoughOrStiffFabric",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Failure mode in which a fabric becomes or is perceived as rough, stiff or unpleasant to touch, affecting user acceptance and comfort-related use."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rough or stiff fabric"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#TactileFailureMode"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Fabric roughness"
+      },
+      {
+        "@language": "en",
+        "@value": "Fabric stiffness"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "The concept is modelled as a tactile failure mode rather than as a structural characteristic. The corresponding structural or tactile fabric property remains outside this module."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#LossOfComfort"
       }
     ]
   },
@@ -2140,7 +1285,15 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#hasDegradationExpression",
+    "@id": "https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser",
+    "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#hasExternalDamage",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2152,12 +1305,12 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a durability-related performance characteristic to a degradation phenomenon that expresses deterioration of that characteristic. This is an instance-level relation and is not a deterministic causal axiom."
+        "@value": "Relates a textile product or product observation to external damage occurring during use."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        "@id": "https://w3id.org/eudpp#Product"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2168,12 +1321,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has degradation expression"
+        "@value": "has external damage"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+        "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2189,7 +1342,56 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#TearOrRip",
+    "@id": "https://w3id.org/eudpp/textile-durability#hasObservedPerformanceParameter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile product to an observed performance parameter relevant to its durability assessment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has observed performance parameter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#FabricStrength",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2201,7 +1403,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Mechanical failure mode involving rupture, tearing or ripping of textile material under stress, snagging or damage."
+        "@value": "Aggregated observed mechanical performance parameter describing the strength of a fabric, potentially covering tensile strength, tear strength or bursting strength depending on the test context."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2212,12 +1414,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Tear or rip"
+        "@value": "Fabric strength"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#MechanicalFailureMode"
+        "@id": "https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -2225,15 +1427,30 @@
         "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
       }
     ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Fabric strength contributes to the interpretation of intrinsic durability as an aggregated mechanical performance parameter."
+      },
+      {
+        "@language": "en",
+        "@value": "Fabric strength is modelled as reducing the likelihood of tear or rip under comparable conditions, rather than as negatively affecting tear or rip."
+      }
+    ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "JRC Preparatory Study, Annex 13.10.1.1, printed page 469, lines 11090-11091."
+        "@value": "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#TearOrRip"
       }
     ]
   },
@@ -2272,6 +1489,119 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ColourFastness",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Observed performance parameter describing the resistance of a textile colour to fading, running or alteration under conditions such as washing, rubbing, perspiration or light exposure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Colour fastness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Colour fastness is the resistance parameter; colour fading is a typical visual failure expression of its degradation."
+      },
+      {
+        "@language": "en",
+        "@value": "Observed colour fastness contributes to the interpretation of intrinsic durability, while colour fading is a failure expression."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-durability#typicalFailureExpression": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ColourFading"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#mayResultIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates that external damage may result in a failure mode."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "may result in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2381,6 +1711,320 @@
     ]
   },
   {
+    "@id": "https://w3id.org/eudpp/textile-durability#LogoFailure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Logo failure may also be interpreted as a component-related failure depending on whether the logo is printed, embroidered or applied as a separate component. It is kept under visual failure mode in this module."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Logo failure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11091-11092."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Category of observed performance parameters related to surface behaviour or surface degradation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Surface performance parameter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ColourFading",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Visual failure mode corresponding to progressive loss of colour intensity during use, washing, ageing or exposure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Colour fading"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2276-2279."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#FuzzingOrMatting",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Observed surface degradation phenomenon involving fuzzing or matting of the fabric surface. The term follows the JRC and ISO wording 'fuzzing or matting', not 'melting'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fuzzing or matting"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Fabric fuzzing"
+      },
+      {
+        "@language": "en",
+        "@value": "Fabric matting"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "FuzzingOrMatting is not made a subclass of FailureMode because it is modelled following the existing pilling pattern as an observed degradation phenomenon used in performance inspection."
+      },
+      {
+        "@language": "en",
+        "@value": "The research gap used the wording 'fuzzing/melting', but the JRC and referenced ISO standards use fuzzing/matting. This ontology therefore introduces FuzzingOrMatting and avoids the unsupported term melting."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-durability#typicalProgressionTo": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FabricBreakdown"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#hasFailureMode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile product to a failure mode observed, expected or considered relevant for that product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has failure mode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#Discolouration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Kept distinct from colour fading because discolouration may be localised, irregular or caused by specific use or exposure conditions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Discolouration"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11092-11093."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/eudpp/textile-durability#DimensionalStability",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -2445,6 +2089,138 @@
     ]
   },
   {
+    "@id": "https://w3id.org/eudpp/textile-durability#typicalDegradationExpression",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Annotation used at class level to document a usual degradation expression of a durability-related performance characteristic without imposing a necessary OWL restriction."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "typical degradation expression"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#hasDegradationExpression",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a durability-related performance characteristic to a degradation phenomenon that expresses deterioration of that characteristic. This is an instance-level relation and is not a deterministic causal axiom."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has degradation expression"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#MechanicalFailureMode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Category of failure modes primarily involving rupture, tearing or mechanical damage."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Mechanical failure mode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -2484,7 +2260,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter",
+    "@id": "https://w3id.org/eudpp/textile-durability#FunctionalFailureMode",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2496,7 +2272,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Durability-related product characteristic that can be observed, assessed or measured to evaluate physical durability. It denotes the characteristic type, not a test, observation, result or quantitative value."
+        "@value": "Category of failure modes primarily involving loss of intended use, comfort or functional suitability of a textile product."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2507,12 +2283,196 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Observed performance parameter"
+        "@value": "Functional failure mode"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp#Property"
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Introduced to represent failure modes that are not adequately captured by visual, structural, mechanical or component failure categories alone."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#FabricBreakdown",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Aggregated failure mode. It may be decomposed later into more specific phenomena such as fraying, thinning, localised wear or hole formation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric breakdown"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ElasticityLoss",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Structural failure mode corresponding to loss of elasticity, elastic recovery or stretch-related functionality of a textile product or fabric."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Elasticity loss"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Loss of elasticity"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Elasticity loss is kept distinct from loss of dimensional stability. A product may lose elastic recovery without necessarily being described primarily as dimensionally unstable."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#LossOfComfort"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#SurfaceFailureMode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Category of failure modes primarily affecting the textile surface. Borderline surface phenomena that are also assessed as performance parameters should remain under ObservedDegradationPhenomenon to preserve the module disjointness pattern."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Surface failure mode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This class is available for strict failure modes. Pilling and fuzzing/matting are intentionally kept as observed degradation phenomena when they are used as inspection parameters."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2580,50 +2540,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of observed performance parameters related to deformation, shape retention or dimensional behaviour."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Deformation performance parameter"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/eudpp/textile-durability#AssemblyPerformanceParameter",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -2653,6 +2569,64 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#LossOfComfort",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Functional failure mode corresponding to loss of comfort or comfort-related suitability during use, maintenance or ageing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Loss of comfort"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FunctionalFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Loss of comfort is kept as a functional failure mode. Specific causes may include roughness, stiffness, loss of elasticity, poor breathability, poor insulation or other context-dependent phenomena."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2723,9 +2697,9 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#typicalFailureExpression",
+    "@id": "https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -2735,7 +2709,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Annotation used at class level to document the usual failure expression of an observed performance parameter without imposing an OWL existential restriction."
+        "@value": "Category of observed performance parameters related to deformation, shape retention or dimensional behaviour."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2746,42 +2720,42 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "typical failure expression"
+        "@value": "Deformation performance parameter"
       }
     ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#hasFailureExpression",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates an observed performance parameter to a failure mode that expresses degradation or loss of that parameter."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
       }
     ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#TrimFailure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Component failure mode involving failure of trims or auxiliary components associated with a textile product."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/eudpp/textile-durability"
@@ -2790,12 +2764,56 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has failure expression"
+        "@value": "Trim failure"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+        "@id": "https://w3id.org/eudpp/textile-durability#ComponentFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11092-11094."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Damage caused by external or accidental events during product use, not necessarily resulting from intrinsic lack of durability."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "External damage"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2811,24 +2829,19 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#mayResultIn",
+    "@id": "https://w3id.org/eudpp/textile-durability#PillingResistance",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Indicates that external damage may result in a failure mode."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ExternalDamage"
+        "@value": "Durability-related performance characteristic describing the ability of a textile material, fabric or product to resist the formation of pills under friction, wear or use conditions."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2839,10 +2852,70 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "may result in"
+        "@value": "Pilling resistance"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Pilling resistance is separated from Pilling."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-durability#typicalDegradationExpression": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Pilling"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ComponentFailureMode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Category of failure modes affecting components or trims."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Component failure mode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
       }
@@ -2915,155 +2988,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of observed performance parameters related to surface behaviour or surface degradation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Surface performance parameter"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#TactileFailureMode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Category of failure modes primarily affecting tactile perception, hand feel or comfort-related touch properties of a textile product or fabric."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Tactile failure mode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Introduced to avoid forcing tactile failures such as rough or stiff fabric into purely visual or purely structural categories."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#hasDurabilityAspect",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile product to a durability aspect relevant to its assessment or declaration."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp#Product"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has durability aspect"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#Durability"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-durability#ColourFading",
+    "@id": "https://w3id.org/eudpp/textile-durability#TearOrRip",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3075,7 +3000,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Visual failure mode corresponding to progressive loss of colour intensity during use, washing, ageing or exposure."
+        "@value": "Mechanical failure mode involving rupture, tearing or ripping of textile material under stress, snagging or damage."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3086,12 +3011,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Colour fading"
+        "@value": "Tear or rip"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#VisualFailureMode"
+        "@id": "https://w3id.org/eudpp/textile-durability#MechanicalFailureMode"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -3102,12 +3027,82 @@
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2276-2279."
+        "@value": "JRC Preparatory Study, Annex 13.10.1.1, printed page 469, lines 11090-11091."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-durability#ColourDepthEvenness",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Observed visual performance parameter describing the depth and evenness of colour in a textile product or fabric, especially in relation to dyeing and finishing quality."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Colour depth and evenness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Colour depth"
+      },
+      {
+        "@language": "en",
+        "@value": "Colour evenness"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Colour depth and evenness is distinct from colour fastness. Colour fastness concerns resistance to fading, running or alteration, whereas colour depth/evenness concerns the achieved visual colour quality."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-durability#typicalFailureExpression": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Discolouration"
       }
     ]
   },
@@ -3156,19 +3151,19 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter",
+    "@id": "https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Category of observed performance parameters related to visual appearance or colour behaviour."
+        "@value": "Failure expression corresponding to loss of the ability of a textile product or fabric to retain its dimensions after use, laundering or treatment cycles."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3179,23 +3174,28 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Visual performance parameter"
+        "@value": "Loss of dimensional stability"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        "@id": "https://w3id.org/eudpp/textile-durability#StructuralFailureMode"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "CIRPASS Textile Ontology modelling specification, version 1.1.0."
+        "@value": "JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279; JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11091-11092."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
       }
     ]
   }

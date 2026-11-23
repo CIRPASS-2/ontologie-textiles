@@ -14,7 +14,12 @@ def test_all_canonical_graphs_have_only_the_exact_approved_annotation_delta():
     assert sum(len(r['removed']) for r in rows) == 14
     for row in rows:
         before = m.baseline_graph(row['file'])
-        after = Graph().parse(m.ROOT / row['file'])
+        from migration.phase4_contract import restore_phase3
+        from migration.phase3_preflight import restore_phase2
+        from migration.phase2b_contract import restore_phase1
+        after = restore_phase3(Graph().parse(m.ROOT / row['file']), row['file'])
+        after, prior_path = restore_phase2(after, row['file'])
+        after = restore_phase1(after, prior_path)
         # Entity declarations are compared, not filtered as annotations.
         declarations = [OWL.Class, OWL.ObjectProperty, OWL.DatatypeProperty, OWL.AnnotationProperty]
         for kind in declarations:
@@ -44,19 +49,21 @@ def test_all_non_annotation_runtime_inputs_and_traceability_stay_byte_identical(
         raw = subprocess.check_output(['git', 'show', m.BASELINE + ':' + relative], cwd=m.ROOT)
         actual = (m.ROOT / relative).read_bytes()
         if relative == 'catalog-v001.xml':
-            from migration.phase3_preflight import expected_catalogue
+            from migration.phase4_contract import expected_catalogue
             assert actual == expected_catalogue(), relative
         elif relative == 'VERSION':
-            assert actual == b'integration-2026-11.2\n', relative
+            assert actual == b'integration-2026-11.3\n', relative
         elif relative == 'shacl/textile-quantitative-shapes.ttl':
-            from migration.phase3_preflight import expected_shapes_bytes
-            assert actual == expected_shapes_bytes(), relative
+            from migration.phase4_contract import expected_shapes
+            from rdflib.compare import isomorphic
+            assert isomorphic(Graph().parse(data=actual.decode(),format="turtle"), expected_shapes()), relative
         elif relative == 'shacl/README.md':
             from migration.phase3_preflight import source_blob, SHACL_README_SHA256
-            assert actual == source_blob(relative, SHACL_README_SHA256), relative
+            assert actual.startswith(source_blob(relative, SHACL_README_SHA256).rstrip()+b"\n\n## Issue #20 Assessment profiles\n"), relative
         elif relative == 'traceability/textile-resource-traceability.csv':
-            assert raw.count(b',textile-connector,') == 37
-            assert actual == raw.replace(b',textile-connector,', b',textile-common,'), relative
+            from scripts import validate_public as v
+            resources,_,_,_=v.derive(v.ontology_graph(m.ROOT),m.ROOT)
+            assert actual == v.csv_bytes(v.RESOURCE_FIELDS,resources), relative
         else:
             assert actual == raw, relative
 

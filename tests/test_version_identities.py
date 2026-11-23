@@ -22,7 +22,7 @@ def test_exact_header_revision_and_catalogue_identity(row):
     graph=Graph().parse(ROOT/current_file)
     ontology=URIRef('https://w3id.org/eudpp/'+Path(current_file).stem)
     assert set(graph.subjects(RDF.type,OWL.Ontology))=={ontology}
-    assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.2')}
+    assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.3')}
     frozen=restore_frozen_graph(graph,current_file)
     assert semantic_digest(project(frozen,original_ontology))==row['non_metadata_graph_sha256']
     assert set(REPORT['allowed_predicates'])==set(map(str,PREDICATES))
@@ -39,14 +39,11 @@ def test_exact_header_revision_and_catalogue_identity(row):
         assert hashlib.sha256((old_catalog.parent/rel).read_bytes()).hexdigest()==expected
     else:
         assert not row['added'] and not row['removed']
-    if current_file.endswith('textile-common.ttl'):
-        assert not list(graph.objects(ontology,OWL.priorVersion))
-    else:
-        assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/dev/integration-2026-11.1')}
+    assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/dev/integration-2026-11.2')}
     catalog={entry.attrib['name']:entry.attrib['uri'] for entry in ET.parse(ROOT/'catalog-v001.xml').getroot()}
-    assert catalog[str(ontology)+'/dev/integration-2026-11.2']==current_file
+    assert catalog[str(ontology)+'/dev/integration-2026-11.3']==current_file
     assert str(ontology)+'/2.0.0' not in catalog
-    assert str(ontology)+'/dev/integration-2026-11.1' not in catalog
+    assert str(ontology)+'/dev/integration-2026-11.2' not in catalog
     assert catalog[str(ontology)]==current_file
 
 
@@ -68,6 +65,6 @@ def test_all_runtime_version_iris_have_unique_catalogue_targets():
             assert ontology not in identities and version not in versions
             identities[ontology]=path;versions[version]=path
             if path.name!='si-textile-mireot.ttl':
-                assert str(version)==str(ontology)+('/dev/integration-2026-11.2' if area=='ontology' else '/2.0.0')
+                assert str(version)==str(ontology)+('/dev/integration-2026-11.3' if area=='ontology' else '/2.0.0')
                 assert catalog[str(version)]==path.relative_to(ROOT).as_posix()
     assert len(identities)==len(versions)==20

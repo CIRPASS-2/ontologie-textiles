@@ -4,6 +4,21 @@ from migration import phase3_preflight as phase3
 from scripts import generate_common_connector as compat
 
 
+@__import__('pytest').fixture(autouse=True)
+def historical_connector_generator(monkeypatch):
+    """Exercise the committed .2 generator semantics for Phase 3 fixtures."""
+    from rdflib import Literal, OWL, URIRef
+    original=compat.compatibility
+    def historical(common):
+        graph, terms=original(common)
+        subject=compat.CONNECTOR
+        graph.set((subject,OWL.versionIRI,URIRef(str(subject)+'/dev/integration-2026-11.2')))
+        graph.set((subject,OWL.versionInfo,Literal('Version integration-2026-11.2')))
+        graph.set((subject,OWL.priorVersion,URIRef(str(subject)+'/dev/integration-2026-11.1')))
+        return graph,terms
+    monkeypatch.setattr(compat,'compatibility',historical)
+
+
 def test_issue16_source_payload_matches_approved_phase2b():
     assert phase3.check_source_payload() == (37, 395)
 
