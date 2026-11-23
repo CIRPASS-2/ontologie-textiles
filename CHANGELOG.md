@@ -1,5 +1,11 @@
 # Changelog
 
+## integration-2026-11.2
+
+Canonical Textile Common replaces the active Connector document, while a complete
+generated Connector representation preserves all existing term IRIs. The approved
+reference-duration SHACL profile and isolated catalogue routes are integrated.
+
 ## integration-2026-11.1 (unpublished)
 
 Retain issue #9 clarifications and integrate the issue #12 fibre and packaging decisions.

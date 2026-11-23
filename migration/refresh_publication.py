@@ -49,9 +49,9 @@ def documentation():
     text=baseline_text('README.md')
     start=text.index('The 13 Textile ontology graphs declare version')
     end=text.index('## Package contents',start)
-    text=text[:start]+'''This unpublished integration package uses **integration-2026-11.1**. The thirteen
-Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.1`
-and cite the corresponding Textile 2.0.0 version as prior. Six CORE subsets
+    text=text[:start]+'''This unpublished integration package uses **integration-2026-11.2**. The thirteen
+Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.2`
+and retained module identities cite the corresponding `.1` version as prior. Common is a new identity. Six CORE subsets
 retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
 closure contains 20 graphs.
 
@@ -90,6 +90,8 @@ See the [issue #12 decision](docs/ISSUE12_MATERIAL_COMPOSITION.md),
                       'The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL.')
     text=insert_before(text, '## Two bodies of ontology work\n', README_CREATORS, 'README.md')
     text=insert_before(text, '## Versions and entry point\n', README_ISSUE9, 'README.md')
+    text=text.replace('| textile-connector | 37 |','| textile-common | 37 |')
+    text+='\n## Common and Connector compatibility\n\n[Textile Common](ontology/textile-common.ttl) is the canonical shared ontology.\nThe separately generated [Connector compatibility representation](compat/textile-connector.ttl)\ncontains the complete Common non-header graph with the original `txtcon:` term\nIRIs; it imports the SI MIREOT and does not import Common. Load one representation\nfor a given purpose with the active catalogue. See the [issue 16 integration\nrecord](docs/ISSUE16_COMMON_MIGRATION.md) for version and historical resolution.\n'
     write('README.md',text)
     write('CHANGELOG.md','''# Changelog
 
@@ -155,6 +157,7 @@ its original changelog, manifest, catalogue, sources and generated documentation
             'redirect bridges the legacy `soc#` vocabulary to the migrated runtime.',
             'See [migration guidance](CORE_2026_MIGRATION.md).','']
     text=insert_before('\n'.join(lines), '## Source attribution\n', DEPENDENCIES_ISSUE9, 'docs/DEPENDENCIES.md')
+    text+='\n## Phase 3 Common and Connector\n\nCanonical Common and the complete Connector compatibility representation both\nuse the approved unchanged SI MIREOT. CORE and all MIREOT snapshots remain\nbyte-protected; no unconditional quantitative CORE alignment is introduced.\nThe [integration record](ISSUE16_COMMON_MIGRATION.md) describes offline routing.\n'
     write('docs/DEPENDENCIES.md',text)
     # This maintained guide contains later MAT and diagnostic sections absent from
     # the historical archive. Preserve them while refreshing the issue #9 section.
@@ -177,8 +180,10 @@ process executions keep their existing independent types. No general IDENT,
 COMP or LCA integration is added. See [migration guidance](CORE_2026_MIGRATION.md).
 '''
     text=insert_before(text, '## October 2026 CORE boundary\n', ARCHITECTURE_ISSUE9, 'docs/ARCHITECTURE.md')
+    text=text.replace('Connector contains patterns that are intentionally shared across modules.','Common contains patterns that are intentionally shared across modules; the complete Connector compatibility graph preserves the original term IRIs.')
+    text+='\n## Common identity and legacy Connector\n\nCommon is the canonical shared ontology. The Connector document is a separate\ncomplete compatibility representation, not a Common import shim. Both use the\nexisting `txtcon:` namespace and import the approved SI MIREOT. A consumer\nshould select the appropriate document and catalogue for its purpose.\n'
     write('docs/ARCHITECTURE.md',text)
-    write('docs/PUBLICATION_SCOPE.md','# Publication scope and historical preservation\n\nThis unpublished integration candidate comprises 13 Textile modules and seven\nbounded MIREOT graphs. The package uses integration-2026-11.1 and each Textile\nmodule declares a distinct development version IRI. Only that 20-graph import closure is used for current runtime validation.\nFull current CORE snapshots and historical RDF are reference inputs, not runtime\nimports. No release approval or publication is claimed.\n\n`CURRENT_PACKAGE` in `PUBLICATION_MANIFEST.txt` enumerates owned package areas,\nincluding the migration specification, reproducibility scripts, historical archive\nand extracted historical runtime. SHA256SUMS covers every member except itself.\nThe 1.1.2 archive has its own immutable inventory and catalogue. Textile 2.0.0\nis separately frozen from the approved Git baseline in the sibling package\n`dpp-textiles-frozen-2.0.0`, whose own catalogue and 799 checksums are verified.\nUse one selected catalogue per load and disable network fallback.\n\n`PRESERVED_REFERENCE_MATERIAL` lists the three earlier Graphwise reference files.\nThey remain outside current runtime and the direct checksum contract. Their\nhistorical archive copies are preserved as ZIP members; unpacked Graphwise\ncopies are excluded from the current package inventory. No current catalogue\nentry points to a Graphwise graph. The two earlier root Textile drafts remain\nin Git history. See [dependencies](DEPENDENCIES.md) and\n[migration treatment](CORE_2026_MIGRATION.md).\n\nHistorical 2.0.0 bytes are preserved in Git and in the frozen local package.\nA deliberately selected historical catalogue resolves its offline closure; this\ndoes not verify public HTTP dereferencing or deployment. See the\n[issue #12 decision](ISSUE12_MATERIAL_COMPOSITION.md),\n[CORE migration guide](CORE_2026_MIGRATION.md), and the\n[1.1.2 historical catalogue](../migration/historical/1.1.2/catalog-v001.xml).\n')
+    write('docs/PUBLICATION_SCOPE.md',(ROOT/'docs/PUBLICATION_SCOPE.md').read_text('utf8'))
     text=baseline_text('docs/SOURCE_TRACEABILITY.md')
     text=text.replace('902 PRESENT_NOT_REVERIFIED',f"{stats['locator_statuses']['PRESENT_NOT_REVERIFIED']} PRESENT_NOT_REVERIFIED")
     text+=f'''

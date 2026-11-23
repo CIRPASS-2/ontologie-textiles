@@ -41,9 +41,9 @@ no upstream commit identifier is asserted without evidence.
 
 ## Versions and entry point
 
-This unpublished integration package uses **integration-2026-11.1**. The thirteen
-Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.1`
-and cite the corresponding Textile 2.0.0 version as prior. Six CORE subsets
+This unpublished integration package uses **integration-2026-11.2**. The thirteen
+Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.2`
+and retained module identities cite the corresponding `.1` version as prior. Common is a new identity. Six CORE subsets
 retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
 closure contains 20 graphs.
 
@@ -111,7 +111,7 @@ The following counts are generated from the public CSV: **899 resources**, **946
 |---|---:|
 | textile-assessment | 59 |
 | textile-associated-materials | 61 |
-| textile-connector | 37 |
+| textile-common | 37 |
 | textile-context | 42 |
 | textile-core | 70 |
 | textile-durability | 58 |
@@ -159,3 +159,12 @@ Then use commit and push as for normal files.
 ## Publication boundary and evidence supplements
 
 See [publication scope](docs/PUBLICATION_SCOPE.md) for the current package manifest and the separate preserved-reference inventory. Public validation excludes Graphwise material and existing reference-data collections. Seven [documentary locator supplements](traceability/evidence-locator-resolutions.csv) resolve previously missing locations without changing RDF: 944 evidence rows have recorded locators and two remain transparently unresolved. No row claims full substantive verification.
+
+## Common and Connector compatibility
+
+[Textile Common](ontology/textile-common.ttl) is the canonical shared ontology.
+The separately generated [Connector compatibility representation](compat/textile-connector.ttl)
+contains the complete Common non-header graph with the original `txtcon:` term
+IRIs; it imports the SI MIREOT and does not import Common. Load one representation
+for a given purpose with the active catalogue. See the [issue 16 integration
+record](docs/ISSUE16_COMMON_MIGRATION.md) for version and historical resolution.

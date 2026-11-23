@@ -888,7 +888,7 @@ txtcs:TextileApparelProductTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-core> a owl:Ontology ;
     rdfs:label "EU DPP Textile Core Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Core Ontology. Version integration-2026-11.1."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Core Ontology. Version integration-2026-11.2."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -909,10 +909,10 @@ txtcs:TextileApparelProductTypeScheme a skos:ConceptScheme ;
         "Named fibre types and textile apparel product categories are represented as SKOS concepts because they are controlled classification values rather than product subclasses."@en,
         "Product types such as medical-device, PPE or toy textile apparel remain textile apparel by product nature but are annotated as excluded from the JRC preparatory study scope where appropriate."@en,
         "These notations are stable local identifiers intended to support data exchange, mapping and validation."@en ;
-    owl:imports <https://w3id.org/eudpp/textile-connector>,
+    owl:imports <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-mat-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-core/2.0.0> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.1> ;
-    owl:versionInfo "Version integration-2026-11.1" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.1> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.2> ;
+    owl:versionInfo "Version integration-2026-11.2" .
 

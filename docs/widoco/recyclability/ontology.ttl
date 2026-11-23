@@ -288,7 +288,7 @@ txtrec:hasRecyclabilityScore a owl:ObjectProperty ;
 txtrec:hasRecyclabilityTechnologyLevel a owl:ObjectProperty ;
     rdfs:label "has recyclability technology level"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Connector."@en ;
+    rdfs:comment "Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Common."@en ;
     rdfs:domain txtrec:RecyclabilityAssessmentResult ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtcon:ProductTechnologyLevelConcept ;
@@ -360,7 +360,7 @@ txtrec:hasRecycledContentSource a owl:ObjectProperty ;
 txtrec:hasRecycledContentTechnologyLevel a owl:ObjectProperty ;
     rdfs:label "has recycled content technology level"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Connector."@en ;
+    rdfs:comment "Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Common."@en ;
     rdfs:domain txtrec:RecycledContentAssessmentResult ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtcon:ProductTechnologyLevelConcept ;
@@ -2033,7 +2033,7 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-recyclability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Recyclability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Recyclability Ontology. Version integration-2026-11.1."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Recyclability Ontology. Version integration-2026-11.2."@en ;
     dcterms:created "2026-07-09"^^xsd:date ;
     dcterms:creator "BOUGACHA Racem"@en,
         "Elio Hbeich"@en,
@@ -2056,16 +2056,16 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
         "Scores and labels are method-specific and do not constitute adopted regulatory classifications unless a future delegated act or standard defines them."@en ;
     owl:imports <https://w3id.org/eudpp/textile-assessment>,
         <https://w3id.org/eudpp/textile-associated-materials>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-event-mireot>,
         <https://w3id.org/eudpp/textile-indicator>,
         <https://w3id.org/eudpp/textile-process>,
         <https://w3id.org/eudpp/textile-soc> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-recyclability/2.0.0> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.1> ;
-    owl:versionInfo "Version integration-2026-11.1" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.1> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.2> ;
+    owl:versionInfo "Version integration-2026-11.2" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
 

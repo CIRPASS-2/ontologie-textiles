@@ -27,7 +27,7 @@ def render(graph, text):
     """
     text=re.sub(re.escape(START)+r'.*?'+re.escape(END)+r'\n?', '',text,flags=re.S)
     ontology=next(graph.subjects(RDF.type,OWL.Ontology))
-    namespace=str(ontology)+'#'
+    namespace=('https://w3id.org/eudpp/textile-connector#' if str(ontology)=='https://w3id.org/eudpp/textile-common' else str(ontology)+'#')
     properties=sorted(s for s in graph.subjects(RDF.type,OWL.AnnotationProperty)
                       if isinstance(s,URIRef) and str(s).startswith(namespace))
     anchors=Anchors();anchors.feed(text)
@@ -69,7 +69,7 @@ def render(graph, text):
 
 
 def regenerate(module):
-    source=ROOT/f'ontology/textile-{module}.ttl'
+    source=(ROOT/'compat/textile-connector.ttl' if module=='connector' else ROOT/f'ontology/textile-{module}.ttl')
     if not source.is_file():raise ValueError('Unknown module: '+module)
     path=ROOT/f'docs/widoco/{module}/sections/crossref-en.html'
     text=render(Graph().parse(source,format='turtle'),path.read_text('utf8'))

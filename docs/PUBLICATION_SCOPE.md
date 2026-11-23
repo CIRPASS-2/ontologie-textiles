@@ -1,7 +1,7 @@
 # Publication scope and historical preservation
 
 This unpublished integration candidate comprises 13 Textile modules and seven
-bounded MIREOT graphs. The package uses integration-2026-11.1 and each Textile
+bounded MIREOT graphs. The package uses integration-2026-11.2 and each Textile
 module declares a distinct development version IRI. Only that 20-graph import closure is used for current runtime validation.
 Full current CORE snapshots and historical RDF are reference inputs, not runtime
 imports. No release approval or publication is claimed.
@@ -28,3 +28,9 @@ does not verify public HTTP dereferencing or deployment. See the
 [issue #12 decision](ISSUE12_MATERIAL_COMPOSITION.md),
 [CORE migration guide](CORE_2026_MIGRATION.md), and the
 [1.1.2 historical catalogue](../migration/historical/1.1.2/catalog-v001.xml).
+
+The committed `.1` package is reproducible from its pinned Git snapshot with
+`python -B -m scripts.reconstruct_phase2b` and an absent destination. Its
+catalogue must be selected independently of `.2`; public HTTP resolution is
+not established by these local checks. Common and Connector are separate
+ontology identities, with the latter generated as a complete compatibility graph.

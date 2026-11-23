@@ -71,3 +71,10 @@ The extracted historical runtime and its own catalogue are under
 are deliberately absent from the active catalogue. No equivalence or
 redirect bridges the legacy `soc#` vocabulary to the migrated runtime.
 See [migration guidance](CORE_2026_MIGRATION.md).
+
+## Phase 3 Common and Connector
+
+Canonical Common and the complete Connector compatibility representation both
+use the approved unchanged SI MIREOT. CORE and all MIREOT snapshots remain
+byte-protected; no unconditional quantitative CORE alignment is introduced.
+The [integration record](ISSUE16_COMMON_MIGRATION.md) describes offline routing.

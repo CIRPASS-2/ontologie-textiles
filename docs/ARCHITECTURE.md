@@ -1,6 +1,6 @@
 # Ontology architecture
 
-The ontology is organised as a network of focused modules. Textile Core provides the central product hierarchy. Structure, Process, Durability, Assessment, Indicator and Context provide reusable domain layers. Associated Materials, Repairability, Recyclability and Textile Substances of Concern extend the core with specialised information. Connector contains patterns that are intentionally shared across modules.
+The ontology is organised as a network of focused modules. Textile Core provides the central product hierarchy. Structure, Process, Durability, Assessment, Indicator and Context provide reusable domain layers. Associated Materials, Repairability, Recyclability and Textile Substances of Concern extend the core with specialised information. Common contains patterns that are intentionally shared across modules; the complete Connector compatibility graph preserves the original term IRIs.
 
 The umbrella ontology `textile-ontology.ttl` is the recommended import for applications that require the complete network. Applications with a narrower scope may import individual modules and their declared dependencies.
 
@@ -39,3 +39,10 @@ Textile owns structured parts/material groups, scopes, threshold value roles,
 evaluation, source references and free-text instructions. Generic chemicals and
 process executions keep their existing independent types. No general IDENT,
 COMP or LCA integration is added. See [migration guidance](CORE_2026_MIGRATION.md).
+
+## Common identity and legacy Connector
+
+Common is the canonical shared ontology. The Connector document is a separate
+complete compatibility representation, not a Common import shim. Both use the
+existing `txtcon:` namespace and import the approved SI MIREOT. A consumer
+should select the appropriate document and catalogue for its purpose.

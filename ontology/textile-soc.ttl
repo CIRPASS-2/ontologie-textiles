@@ -1112,7 +1112,7 @@ txtsoc:TextileSoCLocationTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-soc> a owl:Ontology ;
     rdfs:label "Textile substances of concern ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Ontology - Textile Substances of Concern Module. Version integration-2026-11.1."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Ontology - Textile Substances of Concern Module. Version integration-2026-11.2."@en ;
     dcterms:created "2026-07-09"^^xsd:date ;
     dcterms:creator "BOUGACHA Racem"@en,
         "Elio Hbeich"@en,
@@ -1133,13 +1133,13 @@ txtsoc:TextileSoCLocationTypeScheme a skos:ConceptScheme ;
     rdfs:comment "This module does not classify every textile chemical as a substance of concern. It specialises the generic SoC presence-context model for textile products and attaches textile-specific information to the occurrence, not globally to the chemical identity."@en ;
     owl:imports <https://w3id.org/eudpp/textile-associated-materials>,
         <https://w3id.org/eudpp/textile-con-mireot>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-process>,
         <https://w3id.org/eudpp/textile-soc-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-soc/2.0.0> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-soc/dev/integration-2026-11.1> ;
-    owl:versionInfo "Version integration-2026-11.1" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-soc/dev/integration-2026-11.1> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-soc/dev/integration-2026-11.2> ;
+    owl:versionInfo "Version integration-2026-11.2" .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( txtsoc:TextileSubstanceOfConcernPresenceContext txtsoc:TextileConcentrationInformation txtsoc:TextileProductGroupSoCReference txtsoc:TextileSoCHandlingInformation ) .

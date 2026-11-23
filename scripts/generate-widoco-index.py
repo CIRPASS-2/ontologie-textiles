@@ -16,6 +16,7 @@ OUTPUT = ROOT / "docs" / "widoco" / "index.html"
 
 MODULES = (
     "core",
+    "common",
     "connector",
     "associated-materials",
     "structure",
@@ -34,9 +35,11 @@ SHORT_DESCRIPTIONS = {
         "Core textile product concepts, fibre composition "
         "and controlled textile vocabularies."
     ),
+    "common": (
+        "Canonical shared quantitative values, provenance and cross-module patterns."
+    ),
     "connector": (
-        "Shared modelling infrastructure for quantitative values, "
-        "provenance and cross-module patterns."
+        "Complete compatibility representation of the Common vocabulary."
     ),
     "associated-materials": (
         "Non-textile components, packaging materials "
@@ -193,7 +196,7 @@ def entity_counts(graph: Graph) -> tuple[int, int, int, int]:
 
 
 def module_row(slug: str) -> tuple[str, dict]:
-    path = ONTOLOGY_DIR / f"textile-{slug}.ttl"
+    path = ROOT / "compat" / "textile-connector.ttl" if slug == "connector" else ONTOLOGY_DIR / f"textile-{slug}.ttl"
 
     if not path.is_file():
         raise FileNotFoundError(path)

@@ -13,6 +13,8 @@ ANNOTATIONS = {RDFS.comment, SKOS.definition,
 
 
 def baseline_graph(relative, parser=None):
+    if relative == 'ontology/textile-common.ttl':
+        relative = 'ontology/textile-connector.ttl'
     raw = subprocess.check_output(['git', 'show', BASELINE + ':' + relative], cwd=ROOT)
     if parser is not None:
         return parser(raw.decode('utf8'), relative)
@@ -39,10 +41,17 @@ def expected_delta(relative, parser=None):
 
 def restore_issue9_graph(graph, relative, already_phase1=False):
     """Check cumulative graph before reversing the original issue 9 edits."""
-    if not already_phase1 and (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
-        from migration.phase2b_contract import restore_phase1
+    if not already_phase1:
+        version = (ROOT/'VERSION').read_text(encoding='utf8').strip()
         try:
-            graph = restore_phase1(graph, relative)
+            if version == 'integration-2026-11.2':
+                from migration.phase3_preflight import restore_phase2
+                graph, prior_path = restore_phase2(graph, relative)
+                from migration.phase2b_contract import restore_phase1
+                graph = restore_phase1(graph, prior_path)
+            elif version == 'integration-2026-11.1':
+                from migration.phase2b_contract import restore_phase1
+                graph = restore_phase1(graph, relative)
         except ValueError as exc:
             raise AssertionError('Unauthorized canonical RDF difference: ' + relative) from exc
     baseline = baseline_graph(relative)
@@ -62,7 +71,13 @@ def canonical_differences():
     for path in sorted((ROOT / 'ontology').glob('*.ttl')):
         relative = path.relative_to(ROOT).as_posix()
         graph = Graph().parse(path)
-        if (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
+        version = (ROOT/'VERSION').read_text(encoding='utf8').strip()
+        if version == 'integration-2026-11.2':
+            from migration.phase3_preflight import restore_phase2
+            graph, prior_path = restore_phase2(graph, relative)
+            from migration.phase2b_contract import restore_phase1
+            graph = restore_phase1(graph, prior_path)
+        elif version == 'integration-2026-11.1':
             from migration.phase2b_contract import restore_phase1
             graph = restore_phase1(graph, relative)
         baseline = restore_issue9_graph(graph, relative, already_phase1=True)

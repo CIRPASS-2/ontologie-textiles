@@ -44,12 +44,12 @@ PRIVATE_PATH = re.compile(
 
 # The current package owns these areas. Other repository content is out of scope.
 PACKAGE_ROOT_FILES = ('CHANGELOG.md','LICENSE.md','PUBLICATION_MANIFEST.txt','README.md','SHA256SUMS','VERSION','catalog-v001.xml','requirements-validation.txt')
-PACKAGE_AREAS = ('ontology','mireot','dependencies','shacl','examples','docs','diagrams','scripts','tests','traceability','LICENSES','migration','widoco')
+PACKAGE_AREAS = ('compat','ontology','mireot','dependencies','shacl','examples','docs','diagrams','scripts','tests','traceability','LICENSES','migration','widoco')
 # Owner-reviewed working plan remains untracked and outside the release contract.
 NON_RELEASE_PLANNING_FILES = ('migration/PUBLICATION_PLAN_2.0.0.md',)
 PRESERVED_REFERENCE_MATERIAL = ('ontology/graphwise-ontology/README.md','ontology/graphwise-ontology/SHACL textile product data.ttl','ontology/graphwise-ontology/ontology.ttl')
 RESOLUTION_FIELDS = 'previous_evidence_id resource_iri source_document_id source_section source_page source_locator verification_basis notes'.split()
-CURRENT_MODULES = ('textile-assessment.ttl', 'textile-associated-materials.ttl', 'textile-connector.ttl', 'textile-context.ttl', 'textile-core.ttl', 'textile-durability.ttl', 'textile-indicator.ttl', 'textile-ontology.ttl', 'textile-process.ttl', 'textile-recyclability.ttl', 'textile-repairability.ttl', 'textile-soc.ttl', 'textile-structure.ttl')
+CURRENT_MODULES = ('textile-assessment.ttl', 'textile-associated-materials.ttl', 'textile-common.ttl', 'textile-context.ttl', 'textile-core.ttl', 'textile-durability.ttl', 'textile-indicator.ttl', 'textile-ontology.ttl', 'textile-process.ttl', 'textile-recyclability.ttl', 'textile-repairability.ttl', 'textile-soc.ttl', 'textile-structure.ttl')
 
 def package_files(root):
  paths=set(PACKAGE_ROOT_FILES)
@@ -298,6 +298,15 @@ def summary(resources,evidence,sources):
 
 def structural_checks(root):
  try:
+  from scripts import generate_common_connector as compatibility
+ except ImportError:
+  import generate_common_connector as compatibility
+ common=compatibility.parse_turtle((root/'ontology/textile-common.ttl').read_text('utf8'),'ontology/textile-common.ttl')
+ connector_path=root/'compat/textile-connector.ttl'
+ require(connector_path.read_text('utf8')==compatibility.render(common),'Compatibility generation mismatch')
+ connector=compatibility.parse_turtle(connector_path.read_text('utf8'),'compat/textile-connector.ttl')
+ require(compatibility.verify(common,connector)==(37,395),'Compatibility graph mismatch')
+ try:
   from scripts.check_widoco_links import audit_tree
  except ImportError:
   from check_widoco_links import audit_tree
@@ -333,7 +342,7 @@ def structural_checks(root):
   if p.parent==root/'ontology':
    ontology=URIRef('https://w3id.org/eudpp/'+p.stem)
    require(set(gg.subjects(RDF.type,OWL.Ontology))=={ontology},'Unexpected Textile ontology identity: '+p.name)
-   require(set(gg.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.1')},'Current Textile development version mismatch: '+p.name)
+   require(set(gg.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.2')},'Current Textile development version mismatch: '+p.name)
  for rel in package_files(root):
   p=root/rel
   if p.is_file() and p.suffix in ('.md','.csv','.ttl','.owl','.xml','.json','.txt'):

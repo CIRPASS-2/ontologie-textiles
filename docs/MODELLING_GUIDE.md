@@ -282,3 +282,18 @@ The existing mass-fraction SHACL profile is unchanged. A fraction node typed as
 txtsoc:RangeThresholdValue can conform without a scalar numericValue because
 the quantitative-value shape permits threshold roles. Review this existing
 limitation separately during the future quantitative validation work.
+
+## Common, compatibility and reference periods
+
+Shared quantitative, provenance and weak-influence vocabulary is owned by
+Textile Common; existing `txtcon:` term IRIs remain unchanged. The Connector
+compatibility graph contains the complete Common payload. Quantitative-value
+nodes are distinct from CORE product-property individuals; transfer of values
+requires compatible meaning, scale, unit, scope and method. No unconditional
+class or property equivalence is asserted.
+
+Reference periods may use two boundaries, one boundary with a duration, or a
+duration alone. Durations must be positive with an approved SI time unit; the
+profile checks boundary order and compatible timezone representation, but does
+not perform calendar arithmetic or prove boundary-duration consistency. The
+previously documented fraction scalar-presence limitation remains deferred.

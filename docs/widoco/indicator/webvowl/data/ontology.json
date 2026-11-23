@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Indicator Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-indicator",
-    "version" : "Version integration-2026-11.1",
+    "version" : "Version integration-2026-11.2",
     "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for derived textile durability and use-related indicators. It separates indicators from assessment results, product characteristics, thresholds and quantitative values."
@@ -22,7 +22,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-indicator/2.0.0",
+        "value" : "https://w3id.org/eudpp/textile-indicator/dev/integration-2026-11.1",
         "type" : "iri"
       } ],
       "license" : [ {
@@ -83,13 +83,13 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version integration-2026-11.1",
+        "value" : "Version integration-2026-11.2",
         "type" : "label"
       } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Indicator Ontology. Version integration-2026-11.1.",
+        "value" : "EU DPP Textile Indicator Ontology. Version integration-2026-11.2.",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -114,13 +114,13 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "0",
+    "id" : "3",
     "type" : "owl:Class"
   }, {
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "24",
@@ -132,7 +132,7 @@
     "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -147,7 +147,7 @@
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -156,10 +156,10 @@
     "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
+    "id" : "41",
     "type" : "owl:unionOf"
   }, {
-    "id" : "28",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "64",
@@ -174,7 +174,7 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "74",
@@ -183,7 +183,7 @@
     "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "43",
     "type" : "owl:Class"
   }, {
     "id" : "31",
@@ -195,10 +195,10 @@
     "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "55",
@@ -218,27 +218,27 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 5.8, printed page 73, lines 1695-1710; JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3168-3181; JRC Preparatory Study, Section 5.8, Table 32, printed page 73; caption line 1703.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -246,12 +246,12 @@
       "IRI-based" : "LifetimeOfProduct",
       "en" : "Lifetime of product"
     },
-    "subClasses" : [ "2" ],
+    "subClasses" : [ "5" ],
     "comment" : {
       "en" : "Indicator expressing a stated, observed or inferred lifespan of a textile product using a specified lifespan descriptor and stated assumptions."
     },
-    "id" : "0",
-    "superClasses" : [ "1" ]
+    "id" : "3",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -269,7 +269,7 @@
       "IRI-based" : "MeasurementParameter"
     },
     "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "16"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
@@ -296,12 +296,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -325,17 +325,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5238.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -369,27 +369,27 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5238.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -410,7 +410,7 @@
       "IRI-based" : "ReferencePeriod"
     },
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#DurabilityIndicator",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
@@ -422,17 +422,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -451,12 +451,12 @@
       "IRI-based" : "DurabilityIndicator",
       "en" : "Durability indicator"
     },
-    "subClasses" : [ "19", "1" ],
+    "subClasses" : [ "19", "4" ],
     "comment" : {
       "en" : "Indicator used to express or interpret durability-related evidence about a textile product."
     },
     "id" : "12",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -497,12 +497,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -515,7 +515,7 @@
       "en" : "Indicator concerning actual or expected product use, use-cycle count or replacement behaviour."
     },
     "id" : "7",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#EstimatedLifetime",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
@@ -542,12 +542,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -558,8 +558,8 @@
     "comment" : {
       "en" : "An estimated lifetime is not a directly measured property and must identify its evidence, method and assumptions."
     },
-    "id" : "2",
-    "superClasses" : [ "0" ]
+    "id" : "5",
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -578,17 +578,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5228-5246; JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5251-5286; JRC Preparatory Study, Section 11.1.1.1, Table 71, printed page 186; caption line 5284.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -614,9 +614,9 @@
     "superClasses" : [ "19" ]
   }, {
     "instances" : 0,
-    "union" : [ "4", "53" ],
+    "union" : [ "1", "53" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "43"
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter",
     "baseIri" : "https://w3id.org/eudpp/textile-durability",
@@ -625,7 +625,7 @@
       "IRI-based" : "ObservedPerformanceParameter"
     },
     "attributes" : [ "external" ],
-    "id" : "28"
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#QuantitativeValue",
     "baseIri" : "https://w3id.org/eudpp/textile-connector",
@@ -695,17 +695,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 11.1.1, printed page 185, lines 5231-5243.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 11.1.1, printed page 185, lines 5231-5243.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -739,17 +739,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -766,7 +766,7 @@
     "comment" : {
       "en" : "Derived information object used to calculate, interpret, aggregate, compare or communicate evidence about a textile product. An indicator is not the underlying assessment result, characteristic, threshold or quantitative value."
     },
-    "id" : "4"
+    "id" : "1"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#AssessmentMethod",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
@@ -793,7 +793,7 @@
       "IRI-based" : "ObservedDegradationPhenomenon"
     },
     "attributes" : [ "external" ],
-    "id" : "41"
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
@@ -805,17 +805,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5243.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5243.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -858,17 +858,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 5.8, printed page 73, lines 1695-1710; JRC Preparatory Study, Section 6.4.1, printed pages 88-89, lines 2281-2294.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 5.8, printed page 73, lines 1695-1710; JRC Preparatory Study, Section 6.4.1, printed pages 88-89, lines 2281-2294.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -902,17 +902,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 5.8, printed page 73, lines 1695-1715; Section 9.2.1.5, printed page 121, lines 3168-3179.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 5.8, printed page 73, lines 1695-1715; Section 9.2.1.5, printed page 121, lines 3168-3179.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -930,11 +930,11 @@
       "IRI-based" : "LifetimeIndicator",
       "en" : "Lifetime indicator"
     },
-    "subClasses" : [ "0" ],
+    "subClasses" : [ "3" ],
     "comment" : {
       "en" : "Durability indicator expressing, estimating or interpreting a product lifespan or duration of service."
     },
-    "id" : "1",
+    "id" : "4",
     "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/eudpp#Product",
@@ -944,7 +944,7 @@
       "IRI-based" : "Product"
     },
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "14"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-durability#FailureMode",
     "baseIri" : "https://w3id.org/eudpp/textile-durability",
@@ -965,7 +965,7 @@
     "id" : "78"
   } ],
   "property" : [ {
-    "id" : "3",
+    "id" : "0",
     "type" : "owl:objectProperty"
   }, {
     "id" : "6",
@@ -977,7 +977,7 @@
     "id" : "11",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "14",
+    "id" : "13",
     "type" : "owl:objectProperty"
   }, {
     "id" : "17",
@@ -998,7 +998,7 @@
     "id" : "27",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
+    "id" : "28",
     "type" : "owl:objectProperty"
   }, {
     "id" : "30",
@@ -1022,7 +1022,7 @@
     "id" : "39",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "16",
+    "id" : "15",
     "type" : "owl:objectProperty"
   }, {
     "id" : "40",
@@ -1118,7 +1118,7 @@
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/eudpp/textile-indicator#hasReferencePeriod",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "5",
+    "range" : "2",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1149,14 +1149,14 @@
       "IRI-based" : "hasReferencePeriod",
       "en" : "has reference period"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the structured temporal interval to which it applies."
     },
     "attributes" : [ "object" ],
-    "id" : "3"
+    "id" : "0"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "6"
@@ -1171,17 +1171,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1194,22 +1194,22 @@
       "IRI-based" : "calculationDescription",
       "en" : "calculation description"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Textual description of the calculation, aggregation or interpretation procedure used for an indicator."
     },
     "attributes" : [ "datatype" ],
     "id" : "9"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "11"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#hasIndicator",
-    "inverse" : "16",
+    "inverse" : "15",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "4",
+    "range" : "1",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1240,12 +1240,12 @@
       "IRI-based" : "hasIndicator",
       "en" : "has indicator"
     },
-    "domain" : "15",
+    "domain" : "14",
     "comment" : {
       "en" : "Relates a product to an indicator that describes or interprets it."
     },
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "13"
   }, {
     "range" : "19",
     "domain" : "18",
@@ -1259,7 +1259,58 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#concernsProduct",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "15",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-indicator",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "concernsProduct",
+      "en" : "concerns product"
+    },
+    "domain" : "1",
+    "subproperty" : [ "15" ],
+    "comment" : {
+      "en" : "Relates an indicator to the product that it describes or interprets."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "range" : "19",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "19",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter",
+    "baseIri" : "https://w3id.org/eudpp/textile-indicator",
+    "range" : "16",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1287,30 +1338,19 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "concernsProduct",
-      "en" : "concerns product"
+      "IRI-based" : "isStructuredByMeasurementParameter",
+      "en" : "is structured by measurement parameter"
     },
-    "domain" : "4",
-    "subproperty" : [ "16" ],
+    "domain" : "1",
     "comment" : {
-      "en" : "Relates an indicator to the product that it describes or interprets."
+      "en" : "Relates a series or trajectory indicator to the measurement parameter used as its organising axis."
     },
     "attributes" : [ "object" ],
-    "id" : "22"
-  }, {
-    "range" : "19",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "23"
-  }, {
-    "range" : "19",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "25"
+    "id" : "27"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "28",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1341,52 +1381,12 @@
       "IRI-based" : "concernsPerformanceParameter",
       "en" : "concerns performance parameter"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the durability-related performance parameter that it interprets."
     },
     "attributes" : [ "object" ],
-    "id" : "27"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter",
-    "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "13",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-indicator",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isStructuredByMeasurementParameter",
-      "en" : "is structured by measurement parameter"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Relates a series or trajectory indicator to the measurement parameter used as its organising axis."
-    },
-    "attributes" : [ "object" ],
-    "id" : "29"
+    "id" : "28"
   }, {
     "range" : "19",
     "domain" : "31",
@@ -1394,7 +1394,7 @@
     "id" : "30"
   }, {
     "range" : "12",
-    "domain" : "1",
+    "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
@@ -1405,18 +1405,12 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#informsEstimateOf",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "0",
+    "range" : "3",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-indicator",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
       "sourceLocator" : [ {
@@ -1425,15 +1419,21 @@
         "value" : "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3168-3181.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -1441,7 +1441,7 @@
       "IRI-based" : "informsEstimateOf",
       "en" : "informs estimate of"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates supporting indicator evidence to a lifetime-of-product indicator whose value is inferred from that evidence."
     },
@@ -1468,17 +1468,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1491,7 +1491,7 @@
       "IRI-based" : "hasCategoricalValue",
       "en" : "has categorical value"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to a controlled categorical, ordinal or rating value represented as a SKOS concept."
     },
@@ -1500,7 +1500,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#isIndicatorOf",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "15",
+    "range" : "14",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1508,17 +1508,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1532,56 +1532,16 @@
       "en" : "is indicator of"
     },
     "superproperty" : [ "22" ],
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the product that it describes or interprets."
     },
     "attributes" : [ "object" ],
-    "id" : "16"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon",
-    "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "41",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-indicator",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "concernsDegradationPhenomenon",
-      "en" : "concerns degradation phenomenon"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Relates an indicator to an observed textile degradation phenomenon that it interprets."
-    },
-    "attributes" : [ "object" ],
-    "id" : "40"
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#derivedFrom",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "43",
+    "range" : "41",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1612,9 +1572,49 @@
       "IRI-based" : "derivedFrom",
       "en" : "derived from"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to an assessment result or another indicator used as evidence in its calculation, aggregation or interpretation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon",
+    "baseIri" : "https://w3id.org/eudpp/textile-indicator",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-indicator",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "concernsDegradationPhenomenon",
+      "en" : "concerns degradation phenomenon"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates an indicator to an observed textile degradation phenomenon that it interprets."
     },
     "attributes" : [ "object" ],
     "id" : "42"
@@ -1629,17 +1629,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 11.1.1, printed page 185, lines 5239-5243.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 11.1.1, printed page 185, lines 5239-5243.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1657,7 +1657,7 @@
       "IRI-based" : "calculationAssumption",
       "en" : "calculation assumption"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Textual statement of an assumption used in calculating, estimating or interpreting an indicator."
     },
@@ -1674,17 +1674,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1697,31 +1697,31 @@
       "IRI-based" : "evaluatedAgainstThreshold",
       "en" : "evaluated against threshold"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to a performance threshold used to interpret or classify its value."
     },
     "attributes" : [ "object" ],
     "id" : "46"
   }, {
-    "range" : "0",
-    "domain" : "2",
+    "range" : "3",
+    "domain" : "5",
     "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
-    "range" : "4",
-    "domain" : "28",
+    "range" : "1",
+    "domain" : "29",
     "attributes" : [ "object", "anonymous" ],
     "id" : "50"
   }, {
-    "range" : "4",
-    "domain" : "41",
+    "range" : "1",
+    "domain" : "43",
     "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-indicator#contributesToIndicator",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "4",
+    "range" : "1",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1752,20 +1752,20 @@
       "IRI-based" : "contributesToIndicator",
       "en" : "contributes to indicator"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to a broader indicator to which it contributes."
     },
     "attributes" : [ "object" ],
     "id" : "52"
   }, {
-    "range" : "28",
+    "range" : "29",
     "domain" : "55",
     "attributes" : [ "object", "anonymous" ],
     "id" : "54"
   }, {
-    "range" : "28",
-    "domain" : "41",
+    "range" : "29",
+    "domain" : "43",
     "attributes" : [ "object", "anonymous" ],
     "id" : "56"
   }, {
@@ -1802,29 +1802,29 @@
       "IRI-based" : "concernsDurabilityAspect",
       "en" : "concerns durability aspect"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the durability concept whose interpretation it supports."
     },
     "attributes" : [ "object" ],
     "id" : "57"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "55",
     "attributes" : [ "object", "anonymous" ],
     "id" : "59"
   }, {
-    "range" : "41",
+    "range" : "43",
     "domain" : "53",
     "attributes" : [ "object", "anonymous" ],
     "id" : "60"
   }, {
-    "range" : "28",
+    "range" : "29",
     "domain" : "53",
     "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "53",
     "attributes" : [ "object", "anonymous" ],
     "id" : "62"
@@ -1834,7 +1834,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "63"
   }, {
-    "range" : "41",
+    "range" : "43",
     "domain" : "64",
     "attributes" : [ "object", "anonymous" ],
     "id" : "65"
@@ -1849,17 +1849,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1872,24 +1872,24 @@
       "IRI-based" : "hasTextualValue",
       "en" : "has textual value"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to a free-text value when no controlled categorical value is available."
     },
     "attributes" : [ "datatype" ],
     "id" : "66"
   }, {
-    "range" : "28",
+    "range" : "29",
     "domain" : "64",
     "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "64",
     "attributes" : [ "object", "anonymous" ],
     "id" : "68"
   }, {
-    "range" : "41",
+    "range" : "43",
     "domain" : "55",
     "attributes" : [ "object", "anonymous" ],
     "id" : "69"
@@ -1904,17 +1904,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3177-3180.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3177-3180.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1932,7 +1932,7 @@
       "IRI-based" : "concernsFailureMode",
       "en" : "concerns failure mode"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to a textile failure mode that it interprets or uses in its derivation."
     },
@@ -1952,7 +1952,7 @@
     "iri" : "https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator",
     "inverse" : "52",
     "baseIri" : "https://w3id.org/eudpp/textile-indicator",
-    "range" : "4",
+    "range" : "1",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1960,17 +1960,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1983,7 +1983,7 @@
       "IRI-based" : "hasConstituentIndicator",
       "en" : "has constituent indicator"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an aggregate or trajectory indicator to a more specific indicator included in its derivation."
     },
@@ -2023,7 +2023,7 @@
       "IRI-based" : "supportsAssessmentOf",
       "en" : "supports assessment of"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to a durability concept whose assessment it supports without asserting equivalence."
     },
@@ -2040,17 +2040,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2063,7 +2063,7 @@
       "IRI-based" : "hasQuantitativeValue",
       "en" : "has quantitative value"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the quantitative value that expresses its reported or calculated value."
     },
@@ -2080,17 +2080,17 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2103,7 +2103,7 @@
       "IRI-based" : "isQualifiedByParameterSetting",
       "en" : "is qualified by parameter setting"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the concrete measurement-parameter setting that qualifies its meaning, such as a number and type of cycles."
     },
@@ -2120,27 +2120,27 @@
         "value" : "https://w3id.org/eudpp/textile-indicator",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 11.1.1.1, printed pages 185-186, lines 5251-5284.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -2148,15 +2148,15 @@
       "IRI-based" : "derivedUsingMethod",
       "en" : "derived using method"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates an indicator to the assessment, scoring or interpretive method used to derive it."
     },
     "attributes" : [ "object" ],
     "id" : "79"
   }, {
-    "range" : "1",
-    "domain" : "0",
+    "range" : "4",
+    "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "80"
   } ]

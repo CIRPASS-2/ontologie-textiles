@@ -55,7 +55,7 @@ def test_ontology_headers_and_external_subjects_are_excluded(tables):
 def test_textile_ontology_headers_cannot_self_define_and_context_metadata_is_stable():
  context=v.URIRef('https://w3id.org/eudpp/textile-context')
  expected_imports={
-  v.URIRef('https://w3id.org/eudpp/textile-connector'),
+  v.URIRef('https://w3id.org/eudpp/textile-common'),
   v.URIRef('https://w3id.org/eudpp/textile-dpp-mireot'),
   v.URIRef('https://w3id.org/eudpp/textile-durability'),
   v.URIRef('https://w3id.org/eudpp/textile-process'),
@@ -69,10 +69,10 @@ def test_textile_ontology_headers_cannot_self_define_and_context_metadata_is_sta
  context_graph=v.parse(ROOT/'ontology/textile-context.ttl')
  assert (context,v.RDF.type,v.OWL.Ontology) in context_graph
  assert set(context_graph.objects(context,v.OWL.versionIRI))=={
-  v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.1')
+  v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.2')
  }
- assert {str(value) for value in context_graph.objects(context,v.OWL.versionInfo)}=={'Version integration-2026-11.1'}
- assert set(context_graph.objects(context,v.OWL.priorVersion))=={v.URIRef('https://w3id.org/eudpp/textile-context/2.0.0')}
+ assert {str(value) for value in context_graph.objects(context,v.OWL.versionInfo)}=={'Version integration-2026-11.2'}
+ assert set(context_graph.objects(context,v.OWL.priorVersion))=={v.URIRef('https://w3id.org/eudpp/textile-context/dev/integration-2026-11.1')}
  assert set(context_graph.objects(context,v.OWL.imports))==expected_imports
 
 def test_missing_external_locator_stays_unresolved(tables):

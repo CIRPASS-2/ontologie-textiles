@@ -8,7 +8,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -55,7 +55,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -102,7 +102,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -149,7 +149,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -179,10 +179,10 @@
         {
           "focus_node": "https://example.org/textile/year2025",
           "source_shape": "https://w3id.org/eudpp/textile-shacl#ReferencePeriodShape",
-          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
-          "result_path": null,
+          "constraint_component": "http://www.w3.org/ns/shacl#LessThanConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-connector#periodStart",
           "severity": "http://www.w3.org/ns/shacl#Violation",
-          "source_constraint_message_sha256": "ca89043164ab3794d8bfc44121b44faa9743a7eee46f35bef135e1346719aa7e"
+          "source_constraint_message_sha256": "415879c279bc37ad650fc13f5956ae8fb846ee577d026a35255033ab6b0d218c"
         }
       ],
       "allowed_additional_results": false,
@@ -196,7 +196,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -251,7 +251,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -306,7 +306,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -353,7 +353,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -400,7 +400,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -438,7 +438,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -476,7 +476,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -514,7 +514,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -552,7 +552,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -590,7 +590,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -628,7 +628,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",
@@ -666,7 +666,7 @@
       "ontology_modules": [
         "ontology/textile-assessment.ttl",
         "ontology/textile-associated-materials.ttl",
-        "ontology/textile-connector.ttl",
+        "ontology/textile-common.ttl",
         "ontology/textile-context.ttl",
         "ontology/textile-core.ttl",
         "ontology/textile-durability.ttl",

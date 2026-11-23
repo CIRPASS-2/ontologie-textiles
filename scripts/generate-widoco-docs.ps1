@@ -12,6 +12,7 @@ $LandingGenerator = "scripts\generate-widoco-index.py"
 $modules = @(
     "assessment",
     "associated-materials",
+    "common",
     "connector",
     "context",
     "core",
@@ -254,7 +255,7 @@ function Repair-WidocoRelativeLinks {
 
 foreach ($module in $modules) {
 
-    $ontology = "ontology\textile-$module.ttl"
+    $ontology = if ($module -eq "connector") { "compat\textile-connector.ttl" } else { "ontology\textile-$module.ttl" }
     $output   = Join-Path $OutputRoot $module
     $sections = Join-Path $EditorialRoot $module
 
@@ -353,6 +354,11 @@ foreach ($module in $modules) {
 
         python scripts/widoco_annotations.py $module
         if ($LASTEXITCODE -ne 0) { throw "Annotation-property documentation failed for $module" }
+
+        if ($module -eq "common") {
+            python scripts/fix_widoco_common_provenance.py
+            if ($LASTEXITCODE -ne 0) { throw "Common migration provenance correction failed" }
+        }
 
         Write-Host "Canonical TTL restored: $module"
 

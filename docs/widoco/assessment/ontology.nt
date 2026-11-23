@@ -520,7 +520,7 @@
 <https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> .
 <https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en .
 <https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Assessment Ontology. Version integration-2026-11.1."@en .
+<https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Assessment Ontology. Version integration-2026-11.2."@en .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -537,15 +537,15 @@
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtass" .
 <https://w3id.org/eudpp/textile-assessment> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-assessment#" .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern."@en .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Common pattern."@en .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "The module separates reusable methods and standards, concrete assessment executions, and the results produced by those executions."@en .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Assessment Ontology"@en .
-<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-common> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
-<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-assessment/2.0.0> .
-<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.1> .
-<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.1" .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.1> .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.2> .
+<https://w3id.org/eudpp/textile-assessment> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.2" .
 <https://w3id.org/eudpp/textile-assessment> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
 <https://w3id.org/eudpp/textile-assessment> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 _:cb12626e0c80269efb87198f409d3d0c9c66ec69a9b0bd03643890a254a4f4b3905 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .

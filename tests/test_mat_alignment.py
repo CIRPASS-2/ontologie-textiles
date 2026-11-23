@@ -31,7 +31,7 @@ def test_exact_approved_delta_and_no_other_canonical_changes():
     'creator-change', 'restore-closeMatch',
 ])
 def test_exact_delta_rejects_unauthorized_changes(fault):
-    module = 'connector' if fault == 'restore-closeMatch' else 'core'
+    module = 'common' if fault == 'restore-closeMatch' else 'core'
     relative = f'ontology/textile-{module}.ttl'
     graph = Graph().parse(m.ROOT / relative)
     m.restore_frozen_graph(graph, relative)  # The unmodified candidate is accepted.

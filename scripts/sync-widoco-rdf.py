@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def sync(module):
-    path=ROOT/f'ontology/textile-{module}.ttl'
+    path=(ROOT/'compat/textile-connector.ttl' if module=='connector' else ROOT/f'ontology/textile-{module}.ttl')
     source=Graph().parse(path,format='turtle')
     canonical=Graph()
     for prefix,namespace in source.namespaces():canonical.bind(prefix,namespace)

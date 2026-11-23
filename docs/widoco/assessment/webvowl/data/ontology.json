@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Assessment Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-assessment",
-    "version" : "Version integration-2026-11.1",
+    "version" : "Version integration-2026-11.2",
     "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for textile assessment methods, standards, executions, conditions, parameter settings, results, interpretation scales, endpoints and performance thresholds."
@@ -16,19 +16,19 @@
       "en" : "EU DPP Textile Assessment Ontology"
     },
     "comments" : {
-      "en" : "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern."
+      "en" : "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Common pattern."
     },
     "other" : {
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-assessment/2.0.0",
+        "value" : "https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.1",
         "type" : "iri"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Piero de Sabbata",
+        "value" : "Elio Hbeich",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -38,12 +38,7 @@
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Jan Merckx",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Elio Hbeich",
+        "value" : "Piero de Sabbata",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -54,6 +49,11 @@
         "identifier" : "creator",
         "language" : "en",
         "value" : "Ivo Ladenius",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Jan Merckx",
         "type" : "label"
       } ],
       "created" : [ {
@@ -71,7 +71,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version integration-2026-11.1",
+        "value" : "Version integration-2026-11.2",
         "type" : "label"
       } ],
       "title" : [ {
@@ -86,17 +86,17 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
@@ -110,16 +110,16 @@
         "value" : "2026-10-27",
         "type" : "label"
       } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "EU DPP Textile Assessment Ontology. Version integration-2026-11.2.",
+        "type" : "label"
+      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-assessment#",
-        "type" : "label"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "EU DPP Textile Assessment Ontology. Version integration-2026-11.1.",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -201,10 +201,10 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "24",
@@ -465,17 +465,17 @@
           "value" : "https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -519,17 +519,17 @@
           "value" : "https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -611,17 +611,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5255-5279.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -695,17 +695,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -765,17 +765,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -891,17 +891,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1089,17 +1089,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5260-5279.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5260-5279.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1129,17 +1129,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1158,6 +1158,84 @@
     },
     "id" : "4",
     "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme",
+      "baseIri" : "https://w3id.org/eudpp/textile-assessment-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-assessment",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Threshold comparison operator scheme",
+          "type" : "label"
+        } ],
+        "hasTopConcept" : [ {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#greaterThanOrEqualTo",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#equalTo",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#greaterThan",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#lessThan",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Controlled vocabulary of comparison operators used by performance thresholds."
+      },
+      "labels" : {
+        "IRI-based" : "ThresholdComparisonOperatorScheme",
+        "en" : "Threshold comparison operator scheme"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "79"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#AssessmentExecution",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
@@ -1198,84 +1276,6 @@
     },
     "id" : "18",
     "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-    "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ConceptScheme"
-    },
-    "individuals" : [ {
-      "iri" : "https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme",
-      "baseIri" : "https://w3id.org/eudpp/textile-assessment-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-assessment",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Threshold comparison operator scheme",
-          "type" : "label"
-        } ],
-        "hasTopConcept" : [ {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#lessThan",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#greaterThanOrEqualTo",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#equalTo",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-assessment-codelists#greaterThan",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Controlled vocabulary of comparison operators used by performance thresholds."
-      },
-      "labels" : {
-        "IRI-based" : "ThresholdComparisonOperatorScheme",
-        "en" : "Threshold comparison operator scheme"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "79"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#InterpretationScale",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
@@ -1366,17 +1366,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1567,17 +1567,17 @@
           "value" : "https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1621,17 +1621,17 @@
           "value" : "https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1842,17 +1842,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5279; Table 71, printed page 186.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1921,17 +1921,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2032,10 +2032,10 @@
     "id" : "60",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "62",
+    "id" : "61",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "63",
+    "id" : "62",
     "type" : "owl:objectProperty"
   }, {
     "id" : "64",
@@ -2080,7 +2080,7 @@
     "id" : "78",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "61",
+    "id" : "63",
     "type" : "owl:objectProperty"
   }, {
     "id" : "80",
@@ -2143,7 +2143,7 @@
   "propertyAttribute" : [ {
     "range" : "1",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#inScale",
@@ -2156,17 +2156,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2196,17 +2196,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5255-5279.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5255-5279.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2236,17 +2236,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2268,32 +2268,32 @@
   }, {
     "range" : "1",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "22",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "20"
   }, {
     "range" : "24",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "23"
   }, {
     "range" : "1",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
     "range" : "1",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "27"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#criterionForPerformanceParameter",
@@ -2306,17 +2306,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2338,22 +2338,22 @@
   }, {
     "range" : "4",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
     "range" : "32",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
     "range" : "18",
     "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
   }, {
     "range" : "18",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#hasParameterSetting",
@@ -2366,17 +2366,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2438,27 +2438,27 @@
   }, {
     "range" : "8",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
     "range" : "8",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "45"
   }, {
     "range" : "48",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
     "range" : "0",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
     "range" : "30",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "52"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#hasTextualValue",
@@ -2471,17 +2471,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2503,7 +2503,7 @@
   }, {
     "range" : "28",
     "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "56"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#hasComparisonOperator",
@@ -2516,17 +2516,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "domain motivation from JRC Annex 13.8.3, pages 451-452.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "domain motivation from JRC Annex 13.8.3, pages 451-452.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2586,10 +2586,9 @@
     "attributes" : [ "object" ],
     "id" : "59"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-assessment#producesResult",
-    "inverse" : "61",
+    "iri" : "https://w3id.org/eudpp/textile-assessment#isInterpretedBy",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
-    "range" : "39",
+    "range" : "24",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2597,17 +2596,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5284; Table 71, printed page 186.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2617,12 +2616,12 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "producesResult",
-      "en" : "produces result"
+      "IRI-based" : "isInterpretedBy",
+      "en" : "is interpreted by"
     },
-    "domain" : "18",
+    "domain" : "13",
     "comment" : {
-      "en" : "Relates an assessment execution to a result produced by that execution."
+      "en" : "Relates a measurement result to the scale used to interpret it."
     },
     "attributes" : [ "object" ],
     "id" : "60"
@@ -2665,11 +2664,12 @@
       "en" : "Relates a performance threshold to its quantitative comparison value."
     },
     "attributes" : [ "object" ],
-    "id" : "62"
+    "id" : "61"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-assessment#isInterpretedBy",
+    "iri" : "https://w3id.org/eudpp/textile-assessment#producesResult",
+    "inverse" : "63",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
-    "range" : "24",
+    "range" : "39",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2680,7 +2680,7 @@
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
-        "value" : "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5284; Table 71, printed page 186.",
+        "value" : "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010.",
         "type" : "label"
       } ],
       "sourceType" : [ {
@@ -2697,59 +2697,59 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "isInterpretedBy",
-      "en" : "is interpreted by"
+      "IRI-based" : "producesResult",
+      "en" : "produces result"
     },
-    "domain" : "13",
+    "domain" : "18",
     "comment" : {
-      "en" : "Relates a measurement result to the scale used to interpret it."
+      "en" : "Relates an assessment execution to a result produced by that execution."
     },
     "attributes" : [ "object" ],
-    "id" : "63"
+    "id" : "62"
   }, {
     "range" : "11",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "64"
   }, {
     "range" : "26",
     "domain" : "48",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "65"
   }, {
     "range" : "39",
     "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "66"
   }, {
     "range" : "11",
     "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "67"
   }, {
     "range" : "26",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "68"
   }, {
     "range" : "1",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "69"
   }, {
     "range" : "1",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "70"
   }, {
     "range" : "1",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   }, {
     "range" : "1",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#hasMeasurementParameter",
@@ -2803,17 +2803,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.4, Table 124, printed pages 362-367; table caption at line 9698.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2832,6 +2832,46 @@
     },
     "attributes" : [ "object" ],
     "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-assessment#settingForParameter",
+    "baseIri" : "https://w3id.org/eudpp/textile-assessment",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-assessment",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "settingForParameter",
+      "en" : "setting for parameter"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Relates a concrete parameter setting to the measurement parameter that it sets."
+    },
+    "attributes" : [ "object" ],
+    "id" : "76"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#isEvaluatedAgainst",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
@@ -2869,46 +2909,6 @@
     "domain" : "39",
     "comment" : {
       "en" : "Relates an assessment result to a decision criterion against which it is evaluated."
-    },
-    "attributes" : [ "object" ],
-    "id" : "76"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-assessment#settingForParameter",
-    "baseIri" : "https://w3id.org/eudpp/textile-assessment",
-    "range" : "32",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-assessment",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "settingForParameter",
-      "en" : "setting for parameter"
-    },
-    "domain" : "15",
-    "comment" : {
-      "en" : "Relates a concrete parameter setting to the measurement parameter that it sets."
     },
     "attributes" : [ "object" ],
     "id" : "77"
@@ -2963,17 +2963,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2991,7 +2991,7 @@
       "en" : "Relates an assessment result to the assessment execution that produced it."
     },
     "attributes" : [ "object" ],
-    "id" : "61"
+    "id" : "63"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#assessesPerformanceParameter",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
@@ -3033,46 +3033,6 @@
     "attributes" : [ "object" ],
     "id" : "80"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-assessment#hasCondition",
-    "baseIri" : "https://w3id.org/eudpp/textile-assessment",
-    "range" : "28",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-assessment",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5279; Table 71, printed page 186.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasCondition",
-      "en" : "has condition"
-    },
-    "domain" : "18",
-    "comment" : {
-      "en" : "Relates an assessment execution to a condition under which it is performed."
-    },
-    "attributes" : [ "object" ],
-    "id" : "81"
-  }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#hasMeasuredValue",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
     "range" : "16",
@@ -3111,11 +3071,11 @@
       "en" : "Relates a measurement result to its quantitative measured value."
     },
     "attributes" : [ "object" ],
-    "id" : "82"
+    "id" : "81"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-assessment#hasThresholdRatingValue",
+    "iri" : "https://w3id.org/eudpp/textile-assessment#hasCondition",
     "baseIri" : "https://w3id.org/eudpp/textile-assessment",
-    "range" : "6",
+    "range" : "28",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3132,8 +3092,48 @@
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
+        "value" : "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5279; Table 71, printed page 186.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCondition",
+      "en" : "has condition"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "Relates an assessment execution to a condition under which it is performed."
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-assessment#hasThresholdRatingValue",
+    "baseIri" : "https://w3id.org/eudpp/textile-assessment",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-assessment",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
         "value" : "JRC Annex 13.8.3, Table 165, printed pages 447-452; table caption at line 10985.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3155,52 +3155,52 @@
   }, {
     "range" : "26",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "84"
   }, {
     "range" : "39",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "85"
   }, {
     "range" : "18",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "86"
   }, {
     "range" : "26",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "87"
   }, {
     "range" : "39",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "88"
   }, {
     "range" : "26",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "89"
   }, {
     "range" : "39",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
     "range" : "39",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "91"
   }, {
     "range" : "11",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "92"
   }, {
     "range" : "18",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "93"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-assessment#isDefinedByStandard",
@@ -3253,17 +3253,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3333,17 +3333,17 @@
         "value" : "https://w3id.org/eudpp/textile-assessment",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.8.3, Table 165, printed pages 447-452; table caption at line 10985.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedRelation",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",

@@ -999,7 +999,7 @@
 <https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityScore> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Connector."@en .
+<https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Common."@en .
 <https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-recyclability#RecyclabilityAssessmentResult> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-recyclability> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has recyclability technology level"@en .
@@ -1064,7 +1064,7 @@
 <https://w3id.org/eudpp/textile-recyclability#hasRecycledContentSource> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Connector."@en .
+<https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Common."@en .
 <https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-recyclability#RecycledContentAssessmentResult> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-recyclability> .
 <https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has recycled content technology level"@en .
@@ -1828,7 +1828,7 @@
 <https://w3id.org/eudpp/textile-recyclability#verifiesRecycledContentDeclaration> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-recyclability#RecycledContentDeclaration> .
 <https://w3id.org/eudpp/textile-recyclability#verifiesRecycledContentDeclaration> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
 <https://w3id.org/eudpp/textile-recyclability#verifiesRecycledContentDeclaration> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-recyclability> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Recyclability Ontology. Version integration-2026-11.1."@en .
+<https://w3id.org/eudpp/textile-recyclability> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Recyclability Ontology. Version integration-2026-11.2."@en .
 <https://w3id.org/eudpp/textile-recyclability> <http://purl.org/dc/terms/created> "2026-07-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-recyclability> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-recyclability> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -1853,16 +1853,16 @@
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Recyclability Ontology"@en .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-assessment> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-associated-materials> .
-<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-common> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-event-mireot> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-indicator> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-process> .
 <https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-soc> .
-<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-recyclability/2.0.0> .
-<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.1> .
-<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.1" .
+<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.1> .
+<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.2> .
+<https://w3id.org/eudpp/textile-recyclability> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.2" .
 <https://w3id.org/eudpp/textile-recyclability> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
 <https://w3id.org/eudpp/textile-recyclability> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 _:cb12cdfc16ebfe93bd49151589d2853ff168f8281ff38763009ed6ee081ab70cb09 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-recyclability#Recyclability> .

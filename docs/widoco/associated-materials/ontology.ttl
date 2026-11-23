@@ -800,7 +800,7 @@ txtamcs:TextileChemicalFunctionScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-associated-materials> a owl:Ontology ;
     rdfs:label "EU DPP Textile Associated Materials Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Associated Materials Ontology. Version integration-2026-11.1."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Associated Materials Ontology. Version integration-2026-11.2."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "BOUGACHA Racem"@en,
         "Elio Hbeich"@en,
@@ -818,12 +818,12 @@ txtamcs:TextileChemicalFunctionScheme a skos:ConceptScheme ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-associated-materials#" ;
     rdfs:comment "Chemical use category and chemical function are modelled as separate SKOS classification axes. This avoids treating a chemical function such as dye, biocide or softener as equivalent to whether the substance is intended to remain in the final article."@en,
         "The module reuses dpp:Substance for substance identity and the MAT MaterialOfComposition pattern where material occurrences are needed. It does not classify a substance as a substance of concern."@en ;
-    owl:imports <https://w3id.org/eudpp/textile-connector>,
+    owl:imports <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-mat-mireot>,
         <https://w3id.org/eudpp/textile-soc-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-associated-materials/2.0.0> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-associated-materials/dev/integration-2026-11.1> ;
-    owl:versionInfo "Version integration-2026-11.1" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-associated-materials/dev/integration-2026-11.1> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-associated-materials/dev/integration-2026-11.2> ;
+    owl:versionInfo "Version integration-2026-11.2" ;
     txtcon:sourceLocator "JRC Textile Preparatory Study, Section 3.3.1, pages 27-29, lines 536-547; Section 3.3.2, pages 29-30, lines 575-593; Section 12.3, page 226, lines 6424-6455; Annex 13.8.3, Table 168, page 459, from line 10991."@en ;
     txtcon:sourceType txtcon:ontologyModule .

@@ -21,7 +21,7 @@ CASES=json.loads((ROOT/'tests/abox_corpus/expectations/migration-shacl-expectati
 @pytest.fixture(scope='module')
 def ontology():
     graph=Graph()
-    for name in ('textile-core','textile-connector','textile-associated-materials','textile-soc'):
+    for name in ('textile-core','textile-common','textile-associated-materials','textile-soc'):
         graph+=m.parse(ROOT/f'ontology/{name}.ttl')
     for path in (ROOT/'mireot').glob('*.ttl'):graph+=m.parse(path)
     return graph
@@ -192,11 +192,14 @@ def test_legacy_data_is_rejected_before_inference():
 
 def test_existing_creators_are_preserved_with_owner_approved_additions():
     for name in v.CURRENT_MODULES:
-        before=m.parse(m.HISTORY/'ontology'/name)
+        historical_name='textile-connector.ttl' if name=='textile-common.ttl' else name
+        before=m.parse(m.HISTORY/'ontology'/historical_name)
         after=m.parse(ROOT/'ontology'/name)
         ontology=next(after.subjects(RDF.type,OWL.Ontology))
+        earlier=next(before.subjects(RDF.type,OWL.Ontology))
+        inherited={(ontology,creator) for creator in before.objects(earlier,m.DC.creator)}
         additions={(ontology,m.Literal(person,lang='en')) for person in ('Ivo Ladenius','Andreas Schneider','Jan Merckx','Piero de Sabbata')}
-        assert set(after.subject_objects(m.DC.creator))==set(before.subject_objects(m.DC.creator))|additions,name
+        assert set(after.subject_objects(m.DC.creator))==inherited|additions,name
 
 
 def test_product_event_has_no_obsolete_minimum_product_restriction():

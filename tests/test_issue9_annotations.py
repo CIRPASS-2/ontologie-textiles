@@ -44,10 +44,19 @@ def test_all_non_annotation_runtime_inputs_and_traceability_stay_byte_identical(
         raw = subprocess.check_output(['git', 'show', m.BASELINE + ':' + relative], cwd=m.ROOT)
         actual = (m.ROOT / relative).read_bytes()
         if relative == 'catalog-v001.xml':
-            from migration.phase2b_contract import expected_catalogue
+            from migration.phase3_preflight import expected_catalogue
             assert actual == expected_catalogue(), relative
         elif relative == 'VERSION':
-            assert actual == b'integration-2026-11.1\n', relative
+            assert actual == b'integration-2026-11.2\n', relative
+        elif relative == 'shacl/textile-quantitative-shapes.ttl':
+            from migration.phase3_preflight import expected_shapes_bytes
+            assert actual == expected_shapes_bytes(), relative
+        elif relative == 'shacl/README.md':
+            from migration.phase3_preflight import source_blob, SHACL_README_SHA256
+            assert actual == source_blob(relative, SHACL_README_SHA256), relative
+        elif relative == 'traceability/textile-resource-traceability.csv':
+            assert raw.count(b',textile-connector,') == 37
+            assert actual == raw.replace(b',textile-connector,', b',textile-common,'), relative
         else:
             assert actual == raw, relative
 

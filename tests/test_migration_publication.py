@@ -8,9 +8,9 @@ from rdflib.compare import isomorphic
 ROOT=Path(__file__).resolve().parents[1]
 
 
-@pytest.mark.parametrize('module',['assessment','associated-materials','connector','context','core','durability','indicator','process','recyclability','repairability','soc','structure'])
+@pytest.mark.parametrize('module',['assessment','associated-materials','common','connector','context','core','durability','indicator','process','recyclability','repairability','soc','structure'])
 def test_widoco_downloads_match_canonical_graph(module):
-    path=ROOT/f'ontology/textile-{module}.ttl'
+    path=(ROOT/'compat/textile-connector.ttl' if module=='connector' else ROOT/f'ontology/textile-{module}.ttl')
     folder=ROOT/'docs/widoco'/module
     assert path.read_bytes()==(folder/'ontology.ttl').read_bytes()
     source=Graph().parse(path,format='turtle')
@@ -32,4 +32,4 @@ def test_diagrams_and_landing_page_show_migrated_candidate():
         assert 'https://w3id.org/eudpp/soc#' not in svg
         assert (ROOT/f'diagrams/{name}.png').read_bytes().startswith(b'\x89PNG\r\n\x1a\n')
     landing=(ROOT/'docs/widoco/index.html').read_text('utf8')
-    assert 'integration-2026-11.1' in landing and '/1.1.2' not in landing
+    assert 'integration-2026-11.2' in landing and '/1.1.2' not in landing

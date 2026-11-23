@@ -1453,7 +1453,7 @@ txtprc:TextileProcessExecution a owl:Class ;
 
 <https://w3id.org/eudpp/textile-process> a owl:Ontology ;
     rdfs:label "EU DPP Textile Process Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Process Ontology. Version integration-2026-11.1."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Process Ontology. Version integration-2026-11.2."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -1472,15 +1472,15 @@ txtprc:TextileProcessExecution a owl:Class ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-process#" ;
     rdfs:comment "The module separates process types from concrete executions, parameter types from concrete settings, and process controls from target product specifications. Product characteristics and assessment results remain in their dedicated modules."@en ;
     owl:imports <https://w3id.org/eudpp/textile-associated-materials>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability>,
         <https://w3id.org/eudpp/textile-event-mireot>,
         <https://w3id.org/eudpp/textile-structure> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-process/2.0.0> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-process/dev/integration-2026-11.1> ;
-    owl:versionInfo "Version integration-2026-11.1" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-process/dev/integration-2026-11.1> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-process/dev/integration-2026-11.2> ;
+    owl:versionInfo "Version integration-2026-11.2" ;
     txtcon:sourceLocator "JRC Section 3.3.1, pages 27-29, Table 8, lines 536-547. JRC Section 9.2.1.1, pages 110-111, lines 2889-2910, Figure 22. JRC Annex 13.10.2, pages 492-493, Table 181, lines 11889-11901. JRC Annex 13.10.2, pages 493-495, Table 182, lines 11902-11920. JRC Section 9.2.2.2, pages 125-126, lines 3296-3327; Annex 13.7.2, pages 394-395, lines 10227-10248. JRC Section 9.2.3.2-9.2.3.3, pages 129-130, lines 3466-3483; Annex 13.10.1.5, pages 473-474, lines 11273-11326. JRC Section 3.3.1, page 29, Table 8, line 547; Annex 13.10.1, pages 481-482, lines 11685-11730."@en ;
     txtcon:sourceType txtcon:ontologyModule .
 

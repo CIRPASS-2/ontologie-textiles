@@ -3,7 +3,10 @@
 SOC, Associated Materials, Recyclability and the network overview are regenerated
 for the 2.0.0 candidate. The Core diagram is regenerated for the approved
 MAT classification alignment. Other diagrams retain their accepted baseline bytes.
-Views are illustrative; Turtle remains the axiom authority.
+Views are illustrative; Turtle remains the axiom authority. The historical Connector
+diagram depicts the retained `txtcon:` namespace; Textile Common is now canonical,
+and Connector remains a complete compatibility representation. See
+[the migration guidance](../docs/ISSUE16_COMMON_MIGRATION.md).
 
 | Module | Classes | Object properties | Datatype properties | SKOS concepts | SKOS schemes |
 |---|---:|---:|---:|---:|---:|

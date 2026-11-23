@@ -116,6 +116,21 @@ tsh:QuantitativeValueShape a sh:NodeShape ;
             sh:path txtcon:hasQuantityKind ] ;
     sh:targetClass txtcon:QuantitativeValue .
 
+# SI Reference Point time units accepted by the offline Textile profile.
+# Extension requires reviewed authoritative dimensional evidence; see shacl/README.md.
+tsh:ReferenceDurationShape a sh:NodeShape ;
+    sh:targetObjectsOf txtcon:hasReferenceDuration ;
+    sh:property [ sh:path txtcon:numericValue ;
+        sh:minCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A reference duration must have a decimal numeric value."@en ],
+      [ sh:path txtcon:hasMeasurementUnit ;
+        sh:in ( units:second units:minute units:hour units:day ) ;
+        sh:message "A reference duration must use an approved SI Reference Point time unit."@en ],
+      [ sh:path txtcon:hasQuantityKind ;
+        sh:in ( <https://si-digital-framework.org/quantities/TIME> ) ;
+        sh:message "When supplied, a reference duration quantity kind must be time."@en ] .
+
 tsh:ReferencePeriodShape a sh:NodeShape ;
     sh:or ( [ sh:property [ sh:maxCount 1 ;
                         sh:minCount 1 ;
@@ -134,21 +149,26 @@ tsh:ReferencePeriodShape a sh:NodeShape ;
         [ sh:class txtcon:QuantitativeValue ;
             sh:maxCount 1 ;
             sh:path txtcon:hasReferenceDuration ] ;
+    sh:property [ sh:path txtcon:periodStart ;
+            sh:lessThan txtcon:periodEnd ;
+            sh:message "When both boundaries are supplied, start must be comparable to and strictly before end."@en ] ;
     sh:sparql [ a sh:SPARQLConstraint ;
-            sh:message "When a reference period has start and end datetimes, start must precede end."@en ;
-            sh:prefixes <https://w3id.org/eudpp/textile-shacl/quantitative> ;
-            sh:select """
-            SELECT $this WHERE {
-              $this txtcon:periodStart ?start ; txtcon:periodEnd ?end .
-              FILTER (?start >= ?end)
-            }
+        sh:message "Both supplied period boundaries must either have timezone offsets or both omit them."@en ;
+        sh:prefixes <https://w3id.org/eudpp/textile-shacl/quantitative> ;
+        sh:select """
+          SELECT $this WHERE {
+            $this txtcon:periodStart ?start ; txtcon:periodEnd ?end .
+            FILTER (REGEX(STR(?start), "(Z|[+-][0-9]{2}:[0-9]{2})$") !=
+                    REGEX(STR(?end), "(Z|[+-][0-9]{2}:[0-9]{2})$"))
+          }
         """ ] ;
     sh:targetClass txtcon:ReferencePeriod .
 
 <https://w3id.org/eudpp/textile-shacl/quantitative> a owl:Ontology ;
     rdfs:label "Textile quantitative SHACL profile"@en ;
     rdfs:comment "Validation constraints for the shared quantitative-value pattern and common quantitative roles."@en ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-shacl/quantitative/2.0.0> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-shacl/quantitative/dev/integration-2026-11.2> ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-shacl/quantitative/2.0.0> ;
     sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
         [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;

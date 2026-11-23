@@ -34,8 +34,8 @@ NOTE_CORRECTIONS = {
 
 def expected_delta(relative):
     """Return only the seven additions and six removals approved by the owner."""
-    assert relative in {'ontology/' + name for name in v.CURRENT_MODULES}, relative
-    filename = Path(relative).name
+    assert relative in {'ontology/' + name for name in v.CURRENT_MODULES} | {'ontology/textile-connector.ttl'}, relative
+    filename = 'textile-connector.ttl' if relative == 'ontology/textile-common.ttl' else Path(relative).name
     added = set(AXIOMS) if filename == 'textile-core.ttl' else set()
     removed = set()
     if filename in ('textile-core.ttl', 'textile-connector.ttl', 'textile-associated-materials.ttl'):
@@ -88,6 +88,8 @@ def without_alignment(graph):
 
 
 def baseline_bytes(name):
+    if name == 'ontology/textile-common.ttl':
+        name = 'ontology/textile-connector.ttl'
     return subprocess.check_output(['git', 'show', BASELINE + ':' + name], cwd=ROOT)
 
 
@@ -134,7 +136,19 @@ def protected_hashes():
         assert header[1] == b'blob'
         size = int(header[2]); data = raw[end + 1:end + 1 + size]
         position = end + size + 2
-        if name == 'catalog-v001.xml' and (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
+        if (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.2' and name in ('catalog-v001.xml', 'shacl/textile-quantitative-shapes.ttl', 'shacl/README.md', 'traceability/textile-resource-traceability.csv'):
+            from migration import phase3_preflight as phase3
+            if name == 'catalog-v001.xml':
+                expected = phase3.expected_catalogue()
+            elif name == 'shacl/textile-quantitative-shapes.ttl':
+                expected = phase3.expected_shapes_bytes()
+            elif name == 'shacl/README.md':
+                expected = phase3.source_blob(name, phase3.SHACL_README_SHA256)
+            else:
+                assert data.count(b',textile-connector,') == 37
+                expected = data.replace(b',textile-connector,', b',textile-common,')
+            assert (ROOT/name).read_bytes() == expected, name
+        elif name == 'catalog-v001.xml' and (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
             from migration.phase2b_contract import expected_catalogue
             assert (ROOT/name).read_bytes() == expected_catalogue(), name
         else:
@@ -145,7 +159,7 @@ def protected_hashes():
 
 def closure():
     return sum((Graph().parse(path) for path in v.catalogue_import_closure(
-        ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology/dev/integration-2026-11.1')), Graph())
+        ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology/dev/' + (ROOT/'VERSION').read_text(encoding='utf8').strip())), Graph())
 
 
 def record():
