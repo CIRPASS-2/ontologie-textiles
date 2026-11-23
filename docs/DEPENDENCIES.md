@@ -2,8 +2,8 @@
 
 The active closure contains 13 Textile graphs and seven MIREOT graphs.
 Full unchanged owner-designated sources in `dependencies/current-core/` are
-reference snapshots; they are not imported as full ontologies. IDENT, COMP
-and LCA are outside this migration.
+reference snapshots; they are not imported as full ontologies. IDENT and COMP are outside this migration. LCA 3.1 is provided separately as
+a reference snapshot; it is not part of the active closure or an extracted subset.
 
 | Subset | Source file | Source ontology | Selected source triples |
 |---|---|---|---:|
@@ -78,3 +78,14 @@ Canonical Common and the complete Connector compatibility representation both
 use the approved unchanged SI MIREOT. CORE and all MIREOT snapshots remain
 byte-protected; no unconditional quantitative CORE alignment is introduced.
 The [integration record](ISSUE16_COMMON_MIGRATION.md) describes offline routing.
+
+## CORE LCA reference (issue #10)
+
+The owner supplied `lca.owl` as a download from the CIRPASS-2 CORE ontology
+repository. Its declared ontology IRI is `https://w3id.org/eudpp/LCA` and
+version IRI is `https://w3id.org/eudpp/LCA/3.1`. The supplied bytes have
+SHA-256 `39a523d6ef6202a1247359a4cf4c151e4b0aee42046c1b5c3b6bcef7a2b3c71b`.
+No upstream commit or independently verified download URL is asserted. Its
+embedded licence is CC BY 4.0. The catalogue resolves both identifiers to
+this snapshot for explicit offline use; catalogue mappings do not import it.
+See [issue #10 reuse notes](ISSUE10_LCA_REUSE.md).

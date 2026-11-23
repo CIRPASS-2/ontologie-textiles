@@ -126,7 +126,12 @@ def expected_shapes():
     return g
 
 def expected_catalogue():
-    return blob(BASE,'catalog-v001.xml').replace(('/dev/'+OLD).encode(),('/dev/'+VERSION).encode())
+    original=blob(BASE,'catalog-v001.xml').replace(('/dev/'+OLD).encode(),('/dev/'+VERSION).encode())
+    anchor=b'  <uri name="https://w3id.org/eudpp/MAT"'
+    routes=(b'  <uri name="https://w3id.org/eudpp/LCA" uri="dependencies/current-core/lca.owl" />\n'
+            b'  <uri name="https://w3id.org/eudpp/LCA/3.1" uri="dependencies/current-core/lca.owl" />\n')
+    p1.require(original.count(anchor)==1,'Unexpected catalogue anchor')
+    return original.replace(anchor,routes+anchor,1)
 
 @lru_cache(maxsize=1)
 def verify_phase3_snapshot():
@@ -208,9 +213,16 @@ def validate():
     expected_names=set(subprocess.check_output(['git','ls-tree','-r','--name-only',BASE,'--',*protected],cwd=ROOT,text=True).splitlines())
     expected_names={name for name in expected_names if '/graphwise-ontology/' not in name}
     actual_names={name for name in package if any(name==area or name.startswith(area+'/') for area in protected)}
-    p1.require(actual_names==expected_names,'Protected source inventory changed')
+    lca='dependencies/current-core/lca.owl'
+    lca_hash='39a523d6ef6202a1247359a4cf4c151e4b0aee42046c1b5c3b6bcef7a2b3c71b'
+    p1.require(actual_names==expected_names | {lca},'Protected source inventory changed')
+    p1.require(hashlib.sha256((ROOT/lca).read_bytes()).hexdigest()==lca_hash,'LCA source bytes changed')
+    sums='dependencies/current-core/SHA256SUMS'
+    base_lines=blob(BASE,sums).decode('utf8').splitlines()
+    expected_sums=sorted(base_lines+[lca_hash+'  lca.owl'],key=lambda line:line.split('  ',1)[1])
     for name in names:
-        p1.require((ROOT/name).read_bytes()==blob(BASE,name),'Protected file changed: '+name)
+        expected_bytes=('\n'.join(expected_sums)+'\n').encode() if name==sums else blob(BASE,name)
+        p1.require((ROOT/name).read_bytes()==expected_bytes,'Protected file changed: '+name)
     legacy='migration/legacy-soc-attribution.json'
     p1.require((ROOT/legacy).read_bytes()==blob(BASE,legacy),'Protected file changed: '+legacy)
     for iri,n in [('https://w3id.org/eudpp/textile-assessment',6),('https://w3id.org/eudpp/textile-ontology',20),('https://w3id.org/eudpp/textile-common',2),('https://w3id.org/eudpp/textile-connector',2)]:
