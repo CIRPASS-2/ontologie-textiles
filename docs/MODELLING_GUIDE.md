@@ -536,3 +536,9 @@ These patterns address representation, not demonstrated compatibility with the
 reporter's unavailable converter fixtures. The external outcome vocabulary,
 parameter/aspect correspondence and method-specific interpretation still require
 agreement between exchange partners.
+
+## Commodity classification and study context
+
+For complementary commodity-code values, CN edition selection, JRC category
+candidates and the limits of study-scope and technology status, see the
+[issue 15 classification record](ISSUE15_PRODUCT_CLASSIFICATION.md).

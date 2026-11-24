@@ -47,7 +47,7 @@ def test_prior_cumulative_graph_can_be_restored():
 
 
 def test_other_ontologies_and_shapes_are_unchanged():
-    for name in ('ontology/textile-recyclability.ttl', 'ontology/textile-repairability.ttl', 'ontology/textile-core.ttl', 'shacl/textile-recyclability-shapes.ttl', 'shacl/textile-quantitative-shapes.ttl'):
+    for name in ('ontology/textile-recyclability.ttl', 'ontology/textile-repairability.ttl', 'shacl/textile-recyclability-shapes.ttl', 'shacl/textile-quantitative-shapes.ttl'):
         assert (ROOT / name).read_bytes() == subprocess.check_output(['git', 'show', BASE + ':' + name], cwd=ROOT)
     assert (R.TextileWaste, RDFS.subClassOf, T.TextileProduct) in Graph().parse(ROOT / 'ontology/textile-recyclability.ttl')
 

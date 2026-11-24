@@ -9,7 +9,7 @@ a reference snapshot; it is not part of the active closure or an extracted subse
 |---|---|---|---:|
 | SOC | `soc.owl` | `https://w3id.org/eudpp/SOC` | 371 |
 | CON | `connector.owl` | `https://w3id.org/eudpp/CON` | 32 |
-| DPP | `p_dpp.owl` | `https://w3id.org/eudpp/P_DPP` | 89 |
+| DPP | `p_dpp.owl` | `https://w3id.org/eudpp/P_DPP` | 96 |
 | EVENT | `event.owl` | `https://w3id.org/eudpp/EVENT` | 33 |
 | ACTOR | `actor.owl` | `https://w3id.org/eudpp/ACTOR` | 15 |
 | MAT | `mat.owl` | `https://w3id.org/eudpp/MAT` | 11 |
@@ -89,3 +89,10 @@ No upstream commit or independently verified download URL is asserted. Its
 embedded licence is CC BY 4.0. The catalogue resolves both identifiers to
 this snapshot for explicit offline use; catalogue mappings do not import it.
 See [issue #10 reuse notes](ISSUE10_LCA_REUSE.md).
+
+## CORE commodity code (issue #15)
+
+The DPP extract additionally copies the complete seven-triple source declaration
+for `dpp:commodityCode` from the unchanged P_DPP 2.2.0 snapshot. It retains its
+original IRI, Product domain, string range and upstream annotations. See
+[the classification implementation record](ISSUE15_PRODUCT_CLASSIFICATION.md).

@@ -168,6 +168,8 @@ def restore_phase3(graph,path):
         target=issue13_expected_graph(target)
     if path == 'ontology/textile-process.ttl':
         target=issue14_expected_graph(target)
+    if path == 'ontology/textile-core.ttl':
+        target=issue15_expected_graph(target)
     p1.require(isomorphic(graph,target),'Unauthorized Phase 4 graph: '+path)
     return old_graph(path)
 
@@ -249,6 +251,16 @@ def issue14_expected_graph(base):
     return g
 
 
+def issue15_expected_graph(base):
+    """Apply only the four approved study-scope comment replacements."""
+    g = base + Graph()
+    ns = "https://w3id.org/eudpp/textile-core#"
+    changes = {'ReusableTextileAbsorbentHygieneProduct': ('Reusable textile absorbent hygiene product considered a technical textile and excluded from scope.', 'Reusable textile absorbent hygiene product considered a technical textile and excluded from the JRC Textile Preparatory Study scope.'), 'TextileCleaningProduct': ('Textile cleaning product considered a technical textile and excluded from scope because its function differs from apparel.', 'Textile cleaning product considered a technical textile and excluded from the JRC Textile Preparatory Study scope because its function differs from apparel.'), 'defaultStudyScopeStatus': ('Annotation property used on product-type classes to document their default status with respect to a study or regulatory modelling scope.', 'Annotation property used on product-type classes to document their default status with respect to the JRC Textile Preparatory Study scope; it does not determine the legal DPP scope of an individual product.'), 'StudyScopeStatusConcept': ('SKOS concept used to indicate whether a textile product type is included in, excluded from, or otherwise qualified with respect to a study or regulatory modelling scope.', 'SKOS concept used to indicate whether a textile product type is included in or excluded from the JRC Textile Preparatory Study scope; it does not establish legal DPP scope.')}
+    for term, (old, new) in changes.items():
+        replace(g, URIRef(ns + term), RDFS.comment, Literal(old, lang="en"), Literal(new, lang="en"))
+    return g
+
+
 def validate():
     if not __debug__:raise p1.ContractError('Optimized Python disables required assertions')
     from scripts import generate_common_connector as compat
@@ -263,6 +275,8 @@ def validate():
             g = issue13_expected_graph(g)
         if path == 'ontology/textile-process.ttl':
             g = issue14_expected_graph(g)
+        if path == 'ontology/textile-core.ttl':
+            g = issue15_expected_graph(g)
         actual=p1.parse_turtle((ROOT/path).read_text(encoding='utf8'),path)
         p1.require(isomorphic(actual,g),'Unauthorized canonical RDF difference (Phase 4): '+path)
     actual_shacl={path.relative_to(ROOT).as_posix()
@@ -313,7 +327,17 @@ def validate():
     expected_sums=sorted(base_lines+[lca_hash+'  lca.owl'],key=lambda line:line.split('  ',1)[1])
     for name in names:
         expected_bytes=('\n'.join(expected_sums)+'\n').encode() if name==sums else blob(BASE,name)
-        p1.require((ROOT/name).read_bytes()==expected_bytes,'Protected file changed: '+name)
+        if name == 'mireot/dpp-textile-mireot.ttl':
+            old = p1.parse_turtle(expected_bytes.decode('utf8'), name)
+            source = Graph().parse(ROOT/'dependencies/current-core/p_dpp.owl')
+            prop = URIRef('https://w3id.org/eudpp#commodityCode')
+            source_triples = set(source.triples((prop, None, None)))
+            p1.require(len(source_triples) == 7 and not list(old.triples((prop, None, None))), 'Issue 15 MIREOT precondition')
+            for triple in source_triples: old.add(triple)
+            actual = p1.parse_turtle((ROOT/name).read_text(encoding='utf8'), name)
+            p1.require(isomorphic(actual, old), 'Protected DPP MIREOT graph changed beyond issue 15')
+        else:
+            p1.require((ROOT/name).read_bytes()==expected_bytes,'Protected file changed: '+name)
     legacy='migration/legacy-soc-attribution.json'
     p1.require((ROOT/legacy).read_bytes()==blob(BASE,legacy),'Protected file changed: '+legacy)
     for iri,n in [('https://w3id.org/eudpp/textile-assessment',6),('https://w3id.org/eudpp/textile-ontology',20),('https://w3id.org/eudpp/textile-common',2),('https://w3id.org/eudpp/textile-connector',2)]:
