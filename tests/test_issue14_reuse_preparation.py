@@ -20,7 +20,7 @@ ROOT = m.ROOT
 
 def test_exact_approved_change_and_class_definitions():
     g = Graph().parse(ROOT / 'ontology/textile-process.ttl')
-    assert isomorphic(g, p4.issue14_expected_graph(p4.expected_graphs()['ontology/textile-process.ttl']))
+    assert isomorphic(g, p4.issue17_expected_graph(p4.issue14_expected_graph(p4.expected_graphs()['ontology/textile-process.ttl'])))
     for t in (P.ReuseProcess, P.PreparingForReuseProcess):
         assert (t, RDF.type, OWL.Class) in g
         assert (t, RDFS.subClassOf, P.EndOfLifeProcess) in g

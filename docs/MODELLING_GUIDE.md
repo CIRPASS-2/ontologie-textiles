@@ -542,3 +542,9 @@ agreement between exchange partners.
 For complementary commodity-code values, CN edition selection, JRC category
 candidates and the limits of study-scope and technology status, see the
 [issue 15 classification record](ISSUE15_PRODUCT_CLASSIFICATION.md).
+
+## Care symbols
+
+Care instructions may refer to controlled care-symbol concepts without asserting
+a care execution. See [issue 17](ISSUE17_CARE_SYMBOLS.md) for pilot references,
+source limitations and the future CORE labelling boundary.

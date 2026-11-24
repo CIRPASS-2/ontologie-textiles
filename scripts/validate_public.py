@@ -228,6 +228,8 @@ def derive(g, root=ROOT):
   if not external:
    if adr: state='NO_EXTERNAL_SOURCE_REQUIRED'
    elif raw.startswith('CIRPASS Textile Ontology') and 'JRC' not in raw: state='NO_EXTERNAL_SOURCE_REQUIRED'
+   elif iri in {'https://w3id.org/eudpp/textile-process#'+name for name in ('CareSymbolConcept','CareSymbolScheme','hasCareSymbol','normalWashMaximum70C','flatDripDrying')}:
+    state='PARTIAL';notes.append('Issue 17 project modelling decision; ISO references are retained in ontology annotations and are not projected as external source evidence.')
    else: state='PARTIAL';notes.append('Historical modelling or domain-motivation reference remains in the ontology; no independently identified external source relationship is inferred.')
   else: state='PARTIAL' if partial else 'COMPLETE'
   if PROJECT in sources and external:notes.append('Project modelling rationale is also identified in the ontology; it is not counted as external source evidence.')

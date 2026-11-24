@@ -14,6 +14,61 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+txtprc:CareSymbolConcept a owl:Class ;
+    rdfs:label "Care symbol concept"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Controlled concept representing a textile care-labelling symbol for a prescribed care treatment or condition, rather than a care method or executed operation."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    rdfs:subClassOf skos:Concept ;
+    txtcon:sourceLocator "Issue 17; ISO 3758:2023, care labelling code."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:hasCareSymbol a owl:ObjectProperty ;
+    rdfs:label "has care symbol"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:comment "Relates a textile care instruction to a care symbol concept representing one of its prescribed treatments or conditions."@en ;
+    rdfs:domain txtprc:TextileCareInstruction ;
+    rdfs:range txtprc:CareSymbolConcept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    txtcon:sourceLocator "Issue 17, instruction-to-symbol modelling extension."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:CareSymbolScheme a skos:ConceptScheme ;
+    rdfs:label "Care symbol scheme"@en ;
+    skos:prefLabel "Care symbol scheme"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Pilot controlled vocabulary of selected care-symbol concepts informed by ISO 3758:2023; it does not cover the complete standard."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    skos:hasTopConcept txtprc:normalWashMaximum70C, txtprc:flatDripDrying ;
+    txtcon:sourceLocator "Issue 17; ISO 3758:2023, care labelling code."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:normalWashMaximum70C a skos:Concept, txtprc:CareSymbolConcept ;
+    rdfs:label "Normal wash at maximum 70 degrees Celsius"@en ;
+    skos:prefLabel "Normal wash at maximum 70 degrees Celsius"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3096>, <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Care-symbol concept representing a normal washing treatment with a maximum temperature of 70 degrees Celsius; informed by ISO 7000 registration 3096."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    skos:inScheme txtprc:CareSymbolScheme ;
+    skos:topConceptOf txtprc:CareSymbolScheme ;
+    txtcon:sourceLocator "Issue 17; ISO 7000 registration 3096, registered 2011-10-16; ISO 3758:2023."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:flatDripDrying a skos:Concept, txtprc:CareSymbolConcept ;
+    rdfs:label "Flat drip drying"@en ;
+    skos:prefLabel "Flat drip drying"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3101>, <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Care-symbol concept representing flat drip drying in a natural drying process; informed by ISO 7000 registration 3101."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    skos:inScheme txtprc:CareSymbolScheme ;
+    skos:topConceptOf txtprc:CareSymbolScheme ;
+    txtcon:sourceLocator "Issue 17; ISO 7000 registration 3101, registered 2011-10-16; ISO 3758:2023."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
 txtprc:CareMethodConcept a owl:Class ;
     rdfs:label "Care method concept"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;

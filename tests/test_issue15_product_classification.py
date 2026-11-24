@@ -56,5 +56,5 @@ def test_synthetic_commodity_code_inferences(semantics):
 def test_unrelated_graphs_and_examples_unchanged():
     for directory in ('ontology', 'shacl', 'examples'):
         for path in (ROOT / directory).glob('*.ttl'):
-            if path.name == 'textile-core.ttl': continue
+            if path.name in ('textile-core.ttl', 'textile-process.ttl', 'example-20-care-symbols.ttl'): continue
             assert path.read_bytes() == baseline(path.relative_to(ROOT).as_posix())

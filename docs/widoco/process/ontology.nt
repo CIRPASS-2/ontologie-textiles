@@ -15,6 +15,26 @@
 <https://w3id.org/eudpp/textile-process#CareParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-process#ProcessParameter> .
 <https://w3id.org/eudpp/textile-process#CareParameter> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248."@en .
 <https://w3id.org/eudpp/textile-process#CareParameter> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://purl.org/dc/terms/references> <https://www.iso.org/standard/74401.html> .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled concept representing a textile care-labelling symbol for a prescribed care treatment or condition, rather than a care method or executed operation."@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Care symbol concept"@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Issue 17; ISO 3758:2023, care labelling code."@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://purl.org/dc/terms/references> <https://www.iso.org/standard/74401.html> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Pilot controlled vocabulary of selected care-symbol concepts informed by ISO 3758:2023; it does not cover the complete standard."@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Care symbol scheme"@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-process#flatDripDrying> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-process#normalWashMaximum70C> .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Care symbol scheme"@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Issue 17; ISO 3758:2023, care labelling code."@en .
+<https://w3id.org/eudpp/textile-process#CareSymbolScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 <https://w3id.org/eudpp/textile-process#CellulosicChemicalRecyclingProcess> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-process#CellulosicChemicalRecyclingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp/textile-process#CellulosicChemicalRecyclingProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical recycling process for cellulosic textile feedstock, producing cellulosic pulp or another recovered cellulosic feedstock."@en .
@@ -1039,6 +1059,19 @@
 <https://w3id.org/eudpp/textile-process#executesProcessType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-process#TextileProcess> .
 <https://w3id.org/eudpp/textile-process#executesProcessType> <https://w3id.org/eudpp/textile-connector#sourceLocator> "docs/decisions/TXT-DEC-007.md"@en .
 <https://w3id.org/eudpp/textile-process#executesProcessType> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://purl.org/dc/terms/references> <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3101> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://purl.org/dc/terms/references> <https://www.iso.org/standard/74401.html> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-process#CareSymbolConcept> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/2000/01/rdf-schema#comment> "Care-symbol concept representing flat drip drying in a natural drying process; informed by ISO 7000 registration 3101."@en .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/2000/01/rdf-schema#label> "Flat drip drying"@en .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-process#CareSymbolScheme> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/2004/02/skos/core#prefLabel> "Flat drip drying"@en .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-process#CareSymbolScheme> .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Issue 17; ISO 7000 registration 3101, registered 2011-10-16; ISO 3758:2023."@en .
+<https://w3id.org/eudpp/textile-process#flatDripDrying> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 <https://w3id.org/eudpp/textile-process#hasCareInstruction> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-process#hasCareInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-process#hasCareInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product to product-specific care instructions."@en .
@@ -1049,6 +1082,15 @@
 <https://w3id.org/eudpp/textile-process#hasCareInstruction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#hasProperty> .
 <https://w3id.org/eudpp/textile-process#hasCareInstruction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2173; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458."@en .
 <https://w3id.org/eudpp/textile-process#hasCareInstruction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile care instruction to a care symbol concept representing one of its prescribed treatments or conditions."@en .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-process#TextileCareInstruction> .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://www.w3.org/2000/01/rdf-schema#label> "has care symbol"@en .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-process#CareSymbolConcept> .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Issue 17, instruction-to-symbol modelling extension."@en .
+<https://w3id.org/eudpp/textile-process#hasCareSymbol> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 <https://w3id.org/eudpp/textile-process#hasCategoricalValue> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-process#hasCategoricalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-process#hasCategoricalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process parameter setting to a controlled SKOS concept used as its categorical value."@en .
@@ -1177,6 +1219,19 @@
 <https://w3id.org/eudpp/textile-process#nonwovenMethod> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme> .
 <https://w3id.org/eudpp/textile-process#nonwovenMethod> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, Table 8, printed pages 27-29; table caption line 546."@en .
 <https://w3id.org/eudpp/textile-process#nonwovenMethod> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://purl.org/dc/terms/references> <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3096> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://purl.org/dc/terms/references> <https://www.iso.org/standard/74401.html> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-process#CareSymbolConcept> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/2000/01/rdf-schema#comment> "Care-symbol concept representing a normal washing treatment with a maximum temperature of 70 degrees Celsius; informed by ISO 7000 registration 3096."@en .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/2000/01/rdf-schema#label> "Normal wash at maximum 70 degrees Celsius"@en .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-process#CareSymbolScheme> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/2004/02/skos/core#prefLabel> "Normal wash at maximum 70 degrees Celsius"@en .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-process#CareSymbolScheme> .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Issue 17; ISO 7000 registration 3096, registered 2011-10-16; ISO 3758:2023."@en .
+<https://w3id.org/eudpp/textile-process#normalWashMaximum70C> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 <https://w3id.org/eudpp/textile-process#parameterOfProcess> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
 <https://w3id.org/eudpp/textile-process#parameterOfProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp/textile-process#parameterOfProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a process parameter or target specification to the textile process type that it configures or specifies."@en .

@@ -82,7 +82,7 @@ python -B -m pytest -p no:cacheprovider tests -q
 python -B scripts/validate_public.py --full --complete-report
 ```
 
-Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks eleven examples, the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
+Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks twenty-one examples, the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
 
 The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL. Recyclability requires explicit RDFS inference; an entailment declaration does not itself load the ontology. The three structural profiles and optional complete-report profile are selective application constraints, not complete ontology conformance. The supplied reasoning checks do not establish complete OWL DL consistency or satisfiability.
 
@@ -96,7 +96,7 @@ The CIRPASS Textile Ontology is grounded in the JRC textile studies while explic
 - [Traceability guide](traceability/README.md)
 - [Source methodology](docs/SOURCE_TRACEABILITY.md)
 
-The following counts are generated from the public CSV: **906 resources**, **947 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
+The following counts are generated from the public CSV: **911 resources**, **947 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
 
 | Provenance category | Resource count |
 |---|---:|
@@ -105,18 +105,18 @@ The following counts are generated from the public CSV: **906 resources**, **947
 | directExtraction | 16 |
 | externalReuse | 1 |
 | modellingAbstraction | 383 |
-| projectDecision | 76 |
+| projectDecision | 81 |
 
 | Defining module | Resource count |
 |---|---:|
-| textile-assessment | 59 |
+| textile-assessment | 64 |
 | textile-associated-materials | 61 |
 | textile-common | 37 |
 | textile-context | 42 |
 | textile-core | 70 |
 | textile-durability | 58 |
 | textile-indicator | 36 |
-| textile-process | 131 |
+| textile-process | 136 |
 | textile-recyclability | 177 |
 | textile-repairability | 92 |
 | textile-soc | 85 |
@@ -158,7 +158,7 @@ Then use commit and push as for normal files.
 
 ## Publication boundary and evidence supplements
 
-See [publication scope](docs/PUBLICATION_SCOPE.md) for the current package manifest and the separate preserved-reference inventory. Public validation excludes Graphwise material and existing reference-data collections. Seven [documentary locator supplements](traceability/evidence-locator-resolutions.csv) resolve previously missing locations without changing RDF: 944 evidence rows have recorded locators and two remain transparently unresolved. No row claims full substantive verification.
+See [publication scope](docs/PUBLICATION_SCOPE.md) for the current package manifest and the separate preserved-reference inventory. Public validation excludes Graphwise material and existing reference-data collections. Seven [documentary locator supplements](traceability/evidence-locator-resolutions.csv) resolve previously missing locations without changing RDF: 945 evidence rows have recorded locators and two remain transparently unresolved. No row claims full substantive verification.
 
 ## Common and Connector compatibility
 

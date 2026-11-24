@@ -167,7 +167,7 @@ def restore_phase3(graph,path):
     if path == 'ontology/textile-recyclability.ttl':
         target=issue13_expected_graph(target)
     if path == 'ontology/textile-process.ttl':
-        target=issue14_expected_graph(target)
+        target=issue17_expected_graph(issue14_expected_graph(target))
     if path == 'ontology/textile-core.ttl':
         target=issue15_expected_graph(target)
     p1.require(isomorphic(graph,target),'Unauthorized Phase 4 graph: '+path)
@@ -261,6 +261,16 @@ def issue15_expected_graph(base):
     return g
 
 
+def issue17_expected_graph(base):
+    """Add only the approved issue 17 care-symbol resources."""
+    delta = Graph().parse(data='@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix txtprc: <https://w3id.org/eudpp/textile-process#> .\n@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .\ntxtprc:CareSymbolConcept a owl:Class ;\n    rdfs:label "Care symbol concept"@en ;\n    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;\n    dcterms:references <https://www.iso.org/standard/74401.html> ;\n    rdfs:comment "Controlled concept representing a textile care-labelling symbol for a prescribed care treatment or condition, rather than a care method or executed operation."@en ;\n    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;\n    rdfs:subClassOf skos:Concept ;\n    txtcon:sourceLocator "Issue 17; ISO 3758:2023, care labelling code."@en ;\n    txtcon:sourceType txtcon:projectDecision .\n\ntxtprc:hasCareSymbol a owl:ObjectProperty ;\n    rdfs:label "has care symbol"@en ;\n    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;\n    rdfs:comment "Relates a textile care instruction to a care symbol concept representing one of its prescribed treatments or conditions."@en ;\n    rdfs:domain txtprc:TextileCareInstruction ;\n    rdfs:range txtprc:CareSymbolConcept ;\n    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;\n    txtcon:sourceLocator "Issue 17, instruction-to-symbol modelling extension."@en ;\n    txtcon:sourceType txtcon:projectDecision .\n\ntxtprc:CareSymbolScheme a skos:ConceptScheme ;\n    rdfs:label "Care symbol scheme"@en ;\n    skos:prefLabel "Care symbol scheme"@en ;\n    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;\n    dcterms:references <https://www.iso.org/standard/74401.html> ;\n    rdfs:comment "Pilot controlled vocabulary of selected care-symbol concepts informed by ISO 3758:2023; it does not cover the complete standard."@en ;\n    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;\n    skos:hasTopConcept txtprc:normalWashMaximum70C, txtprc:flatDripDrying ;\n    txtcon:sourceLocator "Issue 17; ISO 3758:2023, care labelling code."@en ;\n    txtcon:sourceType txtcon:projectDecision .\n\ntxtprc:normalWashMaximum70C a skos:Concept, txtprc:CareSymbolConcept ;\n    rdfs:label "Normal wash at maximum 70 degrees Celsius"@en ;\n    skos:prefLabel "Normal wash at maximum 70 degrees Celsius"@en ;\n    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;\n    dcterms:references <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3096>, <https://www.iso.org/standard/74401.html> ;\n    rdfs:comment "Care-symbol concept representing a normal washing treatment with a maximum temperature of 70 degrees Celsius; informed by ISO 7000 registration 3096."@en ;\n    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;\n    skos:inScheme txtprc:CareSymbolScheme ;\n    skos:topConceptOf txtprc:CareSymbolScheme ;\n    txtcon:sourceLocator "Issue 17; ISO 7000 registration 3096, registered 2011-10-16; ISO 3758:2023."@en ;\n    txtcon:sourceType txtcon:projectDecision .\n\ntxtprc:flatDripDrying a skos:Concept, txtprc:CareSymbolConcept ;\n    rdfs:label "Flat drip drying"@en ;\n    skos:prefLabel "Flat drip drying"@en ;\n    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;\n    dcterms:references <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3101>, <https://www.iso.org/standard/74401.html> ;\n    rdfs:comment "Care-symbol concept representing flat drip drying in a natural drying process; informed by ISO 7000 registration 3101."@en ;\n    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;\n    skos:inScheme txtprc:CareSymbolScheme ;\n    skos:topConceptOf txtprc:CareSymbolScheme ;\n    txtcon:sourceLocator "Issue 17; ISO 7000 registration 3101, registered 2011-10-16; ISO 3758:2023."@en ;\n    txtcon:sourceType txtcon:projectDecision .\n\n', format="turtle")
+    g = base + Graph()
+    for triple in delta:
+        p1.require(triple not in g, "Issue 17 precondition")
+        g.add(triple)
+    return g
+
+
 def validate():
     if not __debug__:raise p1.ContractError('Optimized Python disables required assertions')
     from scripts import generate_common_connector as compat
@@ -274,7 +284,7 @@ def validate():
         if path == 'ontology/textile-recyclability.ttl':
             g = issue13_expected_graph(g)
         if path == 'ontology/textile-process.ttl':
-            g = issue14_expected_graph(g)
+            g = issue17_expected_graph(issue14_expected_graph(g))
         if path == 'ontology/textile-core.ttl':
             g = issue15_expected_graph(g)
         actual=p1.parse_turtle((ROOT/path).read_text(encoding='utf8'),path)
@@ -296,6 +306,10 @@ def validate():
     p1.require((ROOT/PROFILE).read_bytes()==blob(SOURCE,PROFILE),'Optional profile changed')
     public_script='scripts/validate_public.py'
     expected_loader=blob(BASE,public_script).replace(('/dev/'+OLD).encode(),('/dev/'+VERSION).encode())
+    old_note = b"   else: state='PARTIAL';notes.append('Historical modelling or domain-motivation reference remains in the ontology; no independently identified external source relationship is inferred.')"
+    new_note = b"   elif iri in {'https://w3id.org/eudpp/textile-process#'+name for name in ('CareSymbolConcept','CareSymbolScheme','hasCareSymbol','normalWashMaximum70C','flatDripDrying')}:\n    state='PARTIAL';notes.append('Issue 17 project modelling decision; ISO references are retained in ontology annotations and are not projected as external source evidence.')\n   else: state='PARTIAL';notes.append('Historical modelling or domain-motivation reference remains in the ontology; no independently identified external source relationship is inferred.')"
+    p1.require(expected_loader.count(old_note) == 1, 'Issue 17 traceability generator precondition')
+    expected_loader = expected_loader.replace(old_note, new_note)
     p1.require((ROOT/public_script).read_bytes()==expected_loader,'Public profile selection changed')
     common=p1.parse_turtle((ROOT/p3.COMMON_PATH).read_text(encoding='utf8'),p3.COMMON_PATH)
     connector=p1.parse_turtle((ROOT/'compat/textile-connector.ttl').read_text(encoding='utf8'),'compat/textile-connector.ttl')

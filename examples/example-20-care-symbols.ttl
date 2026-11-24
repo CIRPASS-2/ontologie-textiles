@@ -1,0 +1,13 @@
+@prefix ex: <https://example.org/issue17/> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+@prefix txtprc: <https://w3id.org/eudpp/textile-process#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Illustrative instruction only; no real product is being classified.
+ex:product a txt:TextileApparel ;
+    txtprc:hasCareInstruction ex:instruction .
+
+ex:instruction a txtprc:DigitalTextileCareInstruction ;
+    dpp:webLink "https://example.org/care/instruction"^^xsd:anyURI ;
+    txtprc:hasCareSymbol txtprc:normalWashMaximum70C, txtprc:flatDripDrying .
