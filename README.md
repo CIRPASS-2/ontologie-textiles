@@ -96,7 +96,7 @@ The CIRPASS Textile Ontology is grounded in the JRC textile studies while explic
 - [Traceability guide](traceability/README.md)
 - [Source methodology](docs/SOURCE_TRACEABILITY.md)
 
-The following counts are generated from the public CSV: **905 resources**, **946 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
+The following counts are generated from the public CSV: **906 resources**, **947 evidence rows**, **6 source documents**, and **248 resources with multiple evidence records**.
 
 | Provenance category | Resource count |
 |---|---:|
@@ -105,7 +105,7 @@ The following counts are generated from the public CSV: **905 resources**, **946
 | directExtraction | 16 |
 | externalReuse | 1 |
 | modellingAbstraction | 383 |
-| projectDecision | 75 |
+| projectDecision | 76 |
 
 | Defining module | Resource count |
 |---|---:|
@@ -116,7 +116,7 @@ The following counts are generated from the public CSV: **905 resources**, **946
 | textile-core | 70 |
 | textile-durability | 58 |
 | textile-indicator | 36 |
-| textile-process | 130 |
+| textile-process | 131 |
 | textile-recyclability | 177 |
 | textile-repairability | 92 |
 | textile-soc | 85 |

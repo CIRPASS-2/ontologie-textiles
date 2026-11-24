@@ -501,6 +501,17 @@
 <https://w3id.org/eudpp/textile-process#PolycottonThermoChemicalRecyclingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess> .
 <https://w3id.org/eudpp/textile-process#PolycottonThermoChemicalRecyclingProcess> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.5.1, Table 50, printed pages 137-138; table caption at line 3774; supporting discussion on printed page 139, lines 3782-3804."@en .
 <https://w3id.org/eudpp/textile-process#PolycottonThermoChemicalRecyclingProcess> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://purl.org/dc/terms/references> <https://eur-lex.europa.eu/eli/dir/2008/98/oj> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Recovery process consisting of checking, cleaning or repairing a textile product or component that has become waste so that it can be reused without any other pre-processing."@en .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Preparing for reuse process"@en .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-process#EndOfLifeProcess> .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <https://w3id.org/eudpp/textile-connector#modellingNote> "Directive 2008/98/EC Article 3(16) supplies the legal distinction. The JRC discusses preparing for reuse as a textile waste-management pathway. Representing it as a dedicated Textile process class is a project modelling decision, not an enacted ESPR DPP requirement."@en .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.6.1, printed page 145, lines 4049-4053."@en .
+<https://w3id.org/eudpp/textile-process#PreparingForReuseProcess> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
 <https://w3id.org/eudpp/textile-process#PrintingBinderUse> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-process#PrintingBinderUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp/textile-process#PrintingBinderUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The binder substance or chemical role should be represented in TEXTILE_ASSOCIATED_MATERIALS. This parameter only records the process-use aspect."@en .
@@ -600,12 +611,15 @@
 <https://w3id.org/eudpp/textile-process#RepairProcess> <https://w3id.org/eudpp/textile-connector#modellingNote> "This class represents a repair activity or process type. Repairability capability, repair service information and repairability assessment belong to Textile Repairability."@en .
 <https://w3id.org/eudpp/textile-process#RepairProcess> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3484; JRC Preparatory Study, Section 13.10.1.5, printed pages 473-474, lines 11273-11326."@en .
 <https://w3id.org/eudpp/textile-process#RepairProcess> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-process#ReuseProcess> <http://purl.org/dc/terms/bibliographicCitation> "Directive 2008/98/EC, Article 3(13), definition of reuse."@en .
+<https://w3id.org/eudpp/textile-process#ReuseProcess> <http://purl.org/dc/terms/references> <https://eur-lex.europa.eu/eli/dir/2008/98/oj> .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-process#ReuseProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "End-of-life or post-use process enabling a textile product to be used again without major material transformation."@en .
+<https://w3id.org/eudpp/textile-process#ReuseProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Process in which a textile product or component that is not waste is used again for the same purpose for which it was conceived."@en .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-process> .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Reuse process"@en .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-process#EndOfLifeProcess> .
+<https://w3id.org/eudpp/textile-process#ReuseProcess> <https://w3id.org/eudpp/textile-connector#modellingNote> "The legal definition follows Directive 2008/98/EC Article 3(13); the cited JRC Preparatory Study supplies textile-domain context. This local adaptation may affect interpretation of existing instances; no instances are automatically reclassified."@en .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546."@en .
 <https://w3id.org/eudpp/textile-process#ReuseProcess> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
 <https://w3id.org/eudpp/textile-process#SeamConstructionParameter> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .

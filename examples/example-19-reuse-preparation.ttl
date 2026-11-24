@@ -1,0 +1,22 @@
+@prefix ex: <https://example.org/issue14/> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+@prefix txtprc: <https://w3id.org/eudpp/textile-process#> .
+@prefix txtrec: <https://w3id.org/eudpp/textile-recyclability#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# This product is not waste and is used again for its original purpose.
+# The non-waste circumstance is illustrative context, not an OWL negative assertion.
+ex:reusedShirt a txt:TextileProduct ;
+    rdfs:comment "A non-waste shirt used again as a shirt."@en ;
+    txtprc:hasProcessExecution ex:reuseExecution .
+ex:reuseExecution a txtprc:TextileProcessExecution ;
+    txtprc:executesProcessType ex:reuseType .
+ex:reuseType a txtprc:ReuseProcess .
+
+# The holder has discarded this product; checking prepares it for reuse.
+ex:discardedJacket a txtrec:TextileWaste ;
+    rdfs:comment "A discarded jacket is checked so it can be reused without other pre-processing."@en ;
+    txtprc:hasProcessExecution ex:preparationExecution .
+ex:preparationExecution a txtprc:TextileProcessExecution ;
+    txtprc:executesProcessType ex:preparationType .
+ex:preparationType a txtprc:PreparingForReuseProcess .

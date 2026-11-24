@@ -162,7 +162,13 @@ def verify_phase3_snapshot():
 
 def restore_phase3(graph,path):
     expected=expected_graphs()
-    p1.require(path in expected and isomorphic(graph,expected[path]),'Unauthorized Phase 4 graph: '+path)
+    p1.require(path in expected, 'Unauthorized Phase 4 graph: '+path)
+    target=expected[path]
+    if path == 'ontology/textile-recyclability.ttl':
+        target=issue13_expected_graph(target)
+    if path == 'ontology/textile-process.ttl':
+        target=issue14_expected_graph(target)
+    p1.require(isomorphic(graph,target),'Unauthorized Phase 4 graph: '+path)
     return old_graph(path)
 
 def issue13_expected_graph(base):
@@ -210,6 +216,39 @@ def issue13_expected_graph(base):
     return g
 
 
+def issue14_expected_graph(base):
+    """Apply the owner-approved issue 14 process changes to Phase 4."""
+    g = base + Graph()
+    ns = 'https://w3id.org/eudpp/textile-process#'
+    common = 'https://w3id.org/eudpp/textile-connector#'
+    reuse = URIRef(ns + 'ReuseProcess')
+    note = URIRef(common + 'modellingNote')
+    directive = URIRef('https://eur-lex.europa.eu/eli/dir/2008/98/oj')
+    replace(g, reuse, RDFS.comment,
+        Literal('End-of-life or post-use process enabling a textile product to be used again without major material transformation.', lang='en'),
+        Literal('Process in which a textile product or component that is not waste is used again for the same purpose for which it was conceived.', lang='en'))
+    g.add((reuse, DCTERMS.references, directive))
+    g.add((reuse, DCTERMS.bibliographicCitation, Literal('Directive 2008/98/EC, Article 3(13), definition of reuse.', lang='en')))
+    g.add((reuse, note, Literal('The legal definition follows Directive 2008/98/EC Article 3(13); the cited JRC Preparatory Study supplies textile-domain context. This local adaptation may affect interpretation of existing instances; no instances are automatically reclassified.', lang='en')))
+    prep = URIRef(ns + 'PreparingForReuseProcess')
+    p1.require(not list(g.triples((prep, None, None))), 'Issue 14 class precondition')
+    for predicate, value in (
+        (RDF.type, OWL.Class),
+        (RDFS.label, Literal('Preparing for reuse process', lang='en')),
+        (DCTERMS.source, URIRef('https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf')),
+        (DCTERMS.source, URIRef('https://w3id.org/eudpp/textile-ontology')),
+        (DCTERMS.references, directive),
+        (RDFS.comment, Literal('Recovery process consisting of checking, cleaning or repairing a textile product or component that has become waste so that it can be reused without any other pre-processing.', lang='en')),
+        (RDFS.isDefinedBy, URIRef('https://w3id.org/eudpp/textile-process')),
+        (RDFS.subClassOf, URIRef(ns + 'EndOfLifeProcess')),
+        (note, Literal('Directive 2008/98/EC Article 3(16) supplies the legal distinction. The JRC discusses preparing for reuse as a textile waste-management pathway. Representing it as a dedicated Textile process class is a project modelling decision, not an enacted ESPR DPP requirement.', lang='en')),
+        (URIRef(common + 'sourceLocator'), Literal('JRC Preparatory Study, Section 9.2.6.1, printed page 145, lines 4049-4053.', lang='en')),
+        (URIRef(common + 'sourceType'), URIRef(common + 'projectDecision')),
+    ):
+        g.add((prep, predicate, value))
+    return g
+
+
 def validate():
     if not __debug__:raise p1.ContractError('Optimized Python disables required assertions')
     from scripts import generate_common_connector as compat
@@ -222,6 +261,8 @@ def validate():
     for path,g in expected.items():
         if path == 'ontology/textile-recyclability.ttl':
             g = issue13_expected_graph(g)
+        if path == 'ontology/textile-process.ttl':
+            g = issue14_expected_graph(g)
         actual=p1.parse_turtle((ROOT/path).read_text(encoding='utf8'),path)
         p1.require(isomorphic(actual,g),'Unauthorized canonical RDF difference (Phase 4): '+path)
     actual_shacl={path.relative_to(ROOT).as_posix()

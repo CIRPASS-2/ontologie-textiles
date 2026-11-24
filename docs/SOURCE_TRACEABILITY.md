@@ -40,7 +40,7 @@ The [locator-resolution table](../traceability/evidence-locator-resolutions.csv)
 
 The supplements provide attributable locations; they do not claim full semantic re-verification. Their status is PRESENT_NOT_REVERIFIED and their verification basis records the public-locator check on 2026-09-11. EVENT locations name classes in the public upstream EVENT 0.1.0 DRAFT graph, connected through the source registry's upstream reference. The local Textile EVENT MIREOT IRI is not represented as a confirmed dereferencing endpoint. Regulatory locators support only the cited regulatory aspect of the Textile adaptation.
 
-Exactly two relationships remain UNRESOLVED: `textile-soc#fibreCompositionLocation` and `textile-soc#nonTextileComponentLocation` against EU-2024-1781. Article 7(5)(b) addresses location generally and is not substituted as category-specific evidence. There are 944 PRESENT_NOT_REVERIFIED rows, two UNRESOLVED rows and zero VERIFIED rows. Resource-level PARTIAL states are conservatively retained from the original annotation projection; locator supplements do not erase its recorded limitations.
+Exactly two relationships remain UNRESOLVED: `textile-soc#fibreCompositionLocation` and `textile-soc#nonTextileComponentLocation` against EU-2024-1781. Article 7(5)(b) addresses location generally and is not substituted as category-specific evidence. There are 945 PRESENT_NOT_REVERIFIED rows, two UNRESOLVED rows and zero VERIFIED rows. Resource-level PARTIAL states are conservatively retained from the original annotation projection; locator supplements do not erase its recorded limitations.
 
 ## October 2026 migration
 
@@ -48,8 +48,8 @@ Local modelling decisions are documented in [TXT-DEC-010](decisions/TXT-DEC-010.
 Forty-two resources with copied historical SOC definitions/comments are classified
 as adaptedDefinition and attributed to SOC 0.1.2 DRAFT and their exact source
 resources. Local scope/alignment decisions remain separately annotated.
-The projection contains 905 resources and 946 evidence rows:
-the original 904 relationships plus 42 historical SOC citations, all remaining
+The projection contains 906 resources and 947 evidence rows:
+the original 904 relationships, 42 historical SOC citations and one issue 14 JRC relationship, all remaining
 PRESENT_NOT_REVERIFIED except the two unchanged UNRESOLVED relationships. Source registry
 descriptions identify the adopted MAT 1.1.0 and EVENT 1.0.0 subsets. The seven
 earlier locator supplements remain historical evidence statements; the migration

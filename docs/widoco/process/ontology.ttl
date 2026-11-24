@@ -461,10 +461,25 @@ txtprc:RepairProcess a owl:Class ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3484; JRC Preparatory Study, Section 13.10.1.5, printed pages 473-474, lines 11273-11326."@en ;
     txtcon:sourceType txtcon:adaptedDefinition .
 
+txtprc:PreparingForReuseProcess a owl:Class ;
+    rdfs:label "Preparing for reuse process"@en ;
+    dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf>,
+        <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://eur-lex.europa.eu/eli/dir/2008/98/oj> ;
+    rdfs:comment "Recovery process consisting of checking, cleaning or repairing a textile product or component that has become waste so that it can be reused without any other pre-processing."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    rdfs:subClassOf txtprc:EndOfLifeProcess ;
+    txtcon:modellingNote "Directive 2008/98/EC Article 3(16) supplies the legal distinction. The JRC discusses preparing for reuse as a textile waste-management pathway. Representing it as a dedicated Textile process class is a project modelling decision, not an enacted ESPR DPP requirement."@en ;
+    txtcon:sourceLocator "JRC Preparatory Study, Section 9.2.6.1, printed page 145, lines 4049-4053."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
 txtprc:ReuseProcess a owl:Class ;
     rdfs:label "Reuse process"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "End-of-life or post-use process enabling a textile product to be used again without major material transformation."@en ;
+    rdfs:comment "Process in which a textile product or component that is not waste is used again for the same purpose for which it was conceived."@en ;
+    dcterms:references <https://eur-lex.europa.eu/eli/dir/2008/98/oj> ;
+    dcterms:bibliographicCitation "Directive 2008/98/EC, Article 3(13), definition of reuse."@en ;
+    txtcon:modellingNote "The legal definition follows Directive 2008/98/EC Article 3(13); the cited JRC Preparatory Study supplies textile-domain context. This local adaptation may affect interpretation of existing instances; no instances are automatically reclassified."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
     rdfs:subClassOf txtprc:EndOfLifeProcess ;
     txtcon:sourceLocator "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546."@en ;
