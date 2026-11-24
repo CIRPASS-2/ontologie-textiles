@@ -152,17 +152,37 @@ tsh:RecycledContentDeclarationShape a sh:NodeShape ;
             sh:path txtrec:hasReferenceProductMassValue ],
         [ sh:class txtcon:QuantitativeValue ;
             sh:maxCount 1 ;
+            sh:path txtrec:hasReferenceMaterialMassValue ],
+        [ sh:class txtcon:QuantitativeValue ;
+            sh:maxCount 1 ;
             sh:path txtrec:hasRecycledMaterialMassValue ] ;
     sh:sparql [ a sh:SPARQLConstraint ;
-            sh:message "Reference-product mass and recycled-material mass must either both be present or both be absent."@en ;
+            sh:message "Reference mass and recycled-material mass must either both be present or both be absent."@en ;
             sh:prefixes <https://w3id.org/eudpp/textile-shacl/recyclability> ;
             sh:select """
           SELECT $this WHERE {
             FILTER (
-              (EXISTS { $this txtrec:hasReferenceProductMassValue ?referenceMass } &&
+              (EXISTS { $this (txtrec:hasReferenceProductMassValue|txtrec:hasReferenceMaterialMassValue) ?referenceMass } &&
                NOT EXISTS { $this txtrec:hasRecycledMaterialMassValue ?recycledMass }) ||
               (EXISTS { $this txtrec:hasRecycledMaterialMassValue ?recycledMass2 } &&
-               NOT EXISTS { $this txtrec:hasReferenceProductMassValue ?referenceMass2 })
+               NOT EXISTS { $this (txtrec:hasReferenceProductMassValue|txtrec:hasReferenceMaterialMassValue) ?referenceMass2 })
+            )
+          }
+        """ ],
+        [ a sh:SPARQLConstraint ;
+            sh:message "Use only one reference mass property and match it to an unambiguously typed declaration subject."@en ;
+            sh:prefixes <https://w3id.org/eudpp/textile-shacl/recyclability> ;
+            sh:select """
+          SELECT $this WHERE {
+            FILTER (
+              (EXISTS { $this txtrec:hasReferenceProductMassValue ?productRef } && EXISTS { $this txtrec:hasReferenceMaterialMassValue ?materialRef }) ||
+              (NOT EXISTS { ?unknown txtrec:hasRecycledContentDeclaration $this .
+                            FILTER NOT EXISTS { ?unknown rdf:type/rdfs:subClassOf* <https://w3id.org/eudpp#Product> }
+                            FILTER NOT EXISTS { ?unknown rdf:type/rdfs:subClassOf* <https://w3id.org/eudpp#MaterialOfComposition> } } &&
+              ((EXISTS { $this txtrec:hasReferenceMaterialMassValue ?v . ?owner txtrec:hasRecycledContentDeclaration $this ; rdf:type/rdfs:subClassOf* <https://w3id.org/eudpp#Product> . } &&
+               NOT EXISTS { ?any txtrec:hasRecycledContentDeclaration $this ; rdf:type/rdfs:subClassOf* <https://w3id.org/eudpp#MaterialOfComposition> . }) ||
+              (EXISTS { $this txtrec:hasReferenceProductMassValue ?v2 . ?owner2 txtrec:hasRecycledContentDeclaration $this ; rdf:type/rdfs:subClassOf* <https://w3id.org/eudpp#MaterialOfComposition> . } &&
+               NOT EXISTS { ?any2 txtrec:hasRecycledContentDeclaration $this ; rdf:type/rdfs:subClassOf* <https://w3id.org/eudpp#Product> . })))
             )
           }
         """ ],
@@ -171,7 +191,7 @@ tsh:RecycledContentDeclarationShape a sh:NodeShape ;
             sh:prefixes <https://w3id.org/eudpp/textile-shacl/recyclability> ;
             sh:select """
           SELECT $this WHERE {
-            $this txtrec:hasReferenceProductMassValue ?referenceNode ;
+            $this (txtrec:hasReferenceProductMassValue|txtrec:hasReferenceMaterialMassValue) ?referenceNode ;
                   txtrec:hasRecycledMaterialMassValue ?recycledNode .
             ?referenceNode txtcon:numericValue ?reference ; txtcon:hasMeasurementUnit ?referenceUnit .
             ?recycledNode txtcon:numericValue ?recycled ; txtcon:hasMeasurementUnit ?recycledUnit .
@@ -184,8 +204,8 @@ tsh:RecycledContentDeclarationShape a sh:NodeShape ;
             sh:select """
           SELECT $this WHERE {
             $this txtrec:hasRecycledContentMassFractionValue ?fractionNode ;
-                  txtrec:hasReferenceProductMassValue ?referenceNode ;
                   txtrec:hasRecycledMaterialMassValue ?recycledNode .
+            $this (txtrec:hasReferenceProductMassValue|txtrec:hasReferenceMaterialMassValue) ?referenceNode .
             ?fractionNode txtcon:numericValue ?fraction .
             ?referenceNode txtcon:numericValue ?reference .
             ?recycledNode txtcon:numericValue ?recycled .

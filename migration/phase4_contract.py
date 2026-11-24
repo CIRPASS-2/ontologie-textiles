@@ -9,6 +9,7 @@ from xml.etree import ElementTree as ET
 from rdflib import Graph, BNode, URIRef, Literal, RDF, RDFS, OWL
 from rdflib.compare import isomorphic
 from rdflib.namespace import DCTERMS, SH, XSD
+from rdflib.collection import Collection
 from migration import integration_contract as p1
 from migration import phase3_preflight as p3
 
@@ -30,11 +31,11 @@ EVENT=URIRef('https://w3id.org/eudpp/textile-event-mireot')
 
 # This authorization is independent of the candidate manifest and checksums.
 UNCHANGED_SHACL = (
-    'shacl/textile-recyclability-shapes.ttl',
     'shacl/textile-soc-shapes.ttl',
     'shacl/profiles/textile-soc-complete-report.ttl',
 )
-APPROVED_SHACL = frozenset((SHAPES, PROFILE, *UNCHANGED_SHACL))
+REC_SHAPES = 'shacl/textile-recyclability-shapes.ttl'
+APPROVED_SHACL = frozenset((SHAPES, PROFILE, REC_SHAPES, *UNCHANGED_SHACL))
 ISSUE20_RECORDS = (
     *(f'docs/decisions/TXT-DEC-{n:03}.md' for n in range(11, 16)),
     *(f'docs/ISSUE20_POINT{n}_IMPLEMENTATION.md' for n in range(1, 7)),
@@ -123,6 +124,7 @@ def expected_shapes():
     iri=URIRef('https://w3id.org/eudpp/textile-shacl/quantitative')
     replace(g,iri,OWL.versionIRI,URIRef(str(iri)+'/dev/'+OLD),URIRef(str(iri)+'/dev/'+VERSION))
     replace(g,iri,OWL.priorVersion,URIRef(str(iri)+'/2.0.0'),URIRef(str(iri)+'/dev/'+OLD))
+    g.add((URIRef('https://w3id.org/eudpp/textile-shacl#PositiveValueShape'), SH.targetObjectsOf, URIRef('https://w3id.org/eudpp/textile-recyclability#hasReferenceMaterialMassValue')))
     return g
 
 def expected_catalogue():
@@ -163,6 +165,51 @@ def restore_phase3(graph,path):
     p1.require(path in expected and isomorphic(graph,expected[path]),'Unauthorized Phase 4 graph: '+path)
     return old_graph(path)
 
+def issue13_expected_graph(base):
+    """Apply the owner-approved issue 13 delta to the Phase 4 expectation."""
+    g = base + Graph()
+    ns = 'https://w3id.org/eudpp/textile-recyclability#'
+    note = URIRef('https://w3id.org/eudpp/textile-connector#modellingNote')
+    declaration = URIRef(ns + 'hasRecycledContentDeclaration')
+    product = URIRef('https://w3id.org/eudpp#Product')
+    material = URIRef('https://w3id.org/eudpp#MaterialOfComposition')
+    p1.require((declaration, RDFS.domain, product) in g, 'Issue 13 domain precondition')
+    g.remove((declaration, RDFS.domain, product))
+    union, members = BNode(), BNode()
+    g.add((declaration, RDFS.domain, union)); g.add((union, RDF.type, OWL.Class))
+    g.add((union, OWL.unionOf, members)); Collection(g, members, [product, material])
+    comments = {
+      'hasRecycledContentDeclaration': ('Relates a product to a recycled-content declaration.', 'Relates a product or a material constituent to a recycled-content declaration concerning that subject.'),
+      'hasRecycledContentMassFractionValue': ('Relates a recycled-content declaration to a quantitative mass fraction expressed using the shared textile value pattern.', 'Relates a recycled-content declaration to the recycled mass fraction relative to the declared product or material constituent reference mass, according to the applicable methodology, using the shared textile value pattern.'),
+      'hasRecycledMaterialMassValue': ('Relates a recycled-content declaration to the absolute mass of recycled material included in the product.', 'Relates a recycled-content declaration to the absolute mass of recycled material included in the declared product or material constituent, according to the applicable methodology.'),
+      'preConsumerRecycledContent': ('Recycled material recovered from waste generated before a product reaches the consumer.', 'Recycled material originating from pre-consumer textile waste generated at the retailer stage by discarding unsold textile products, as distinguished from industrial production waste in the JRC textile terminology.'),
+    }
+    for term, (old, new) in comments.items():
+        replace(g, URIRef(ns + term), RDFS.comment, Literal(old, lang='en'), Literal(new, lang='en'))
+    notes = {
+      'preConsumerRecycledContent': 'This source category uses the JRC textile waste terminology; it must not be equated automatically with pre-consumer terminology in other methodologies. It identifies recycled-input origin, whereas the textile waste source scheme identifies the stage at which waste is generated.',
+    }
+    material_property = URIRef(ns + 'hasReferenceMaterialMassValue')
+    p1.require(not list(g.triples((material_property, None, None))), 'Issue 13 material property precondition')
+    for predicate, value in (
+        (RDF.type, OWL.ObjectProperty),
+        (RDFS.label, Literal('has reference material mass value', lang='en')),
+        (DCTERMS.source, URIRef('https://w3id.org/eudpp/textile-ontology')),
+        (RDFS.comment, Literal('Relates a recycled-content declaration to the reference mass of the material constituent to which the declaration applies, according to the applicable methodology.', lang='en')),
+        (RDFS.domain, URIRef(ns + 'RecycledContentDeclaration')),
+        (RDFS.isDefinedBy, URIRef('https://w3id.org/eudpp/textile-recyclability')),
+        (RDFS.range, URIRef('https://w3id.org/eudpp/textile-connector#QuantitativeValue')),
+        (URIRef('https://w3id.org/eudpp/textile-connector#sourceLocator'), Literal('Issue 13, project-approved material-level declaration extension.', lang='en')),
+        (URIRef('https://w3id.org/eudpp/textile-connector#sourceType'), URIRef('https://w3id.org/eudpp/textile-connector#projectDecision')),
+    ):
+        g.add((material_property, predicate, value))
+    for term, value in notes.items():
+        triple = (URIRef(ns + term), note, Literal(value, lang='en'))
+        p1.require(triple not in g, 'Issue 13 note precondition')
+        g.add(triple)
+    return g
+
+
 def validate():
     if not __debug__:raise p1.ContractError('Optimized Python disables required assertions')
     from scripts import generate_common_connector as compat
@@ -173,12 +220,15 @@ def validate():
     expected=expected_graphs()
     p1.require({p.relative_to(ROOT).as_posix() for p in (ROOT/'ontology').glob('textile-*.ttl')}==set(expected),'Canonical document inventory changed')
     for path,g in expected.items():
+        if path == 'ontology/textile-recyclability.ttl':
+            g = issue13_expected_graph(g)
         actual=p1.parse_turtle((ROOT/path).read_text(encoding='utf8'),path)
         p1.require(isomorphic(actual,g),'Unauthorized canonical RDF difference (Phase 4): '+path)
     actual_shacl={path.relative_to(ROOT).as_posix()
                   for path in (ROOT/'shacl').rglob('*.ttl') if path.is_file()}
     p1.require(actual_shacl==APPROVED_SHACL,
                'Unauthorized SHACL document inventory: '+repr(sorted(actual_shacl ^ APPROVED_SHACL)))
+    p1.require(hashlib.sha256((ROOT/REC_SHAPES).read_bytes()).hexdigest() == 'ef0e012ed597614185b0b60a74f67b020214dc656d4ed8a0e33c811aaef4b49c', 'Unauthorized recyclability SHACL bytes')
     for path in UNCHANGED_SHACL:
         p1.require((ROOT/path).read_bytes()==blob(BASE,path),
                    'Protected SHACL bytes changed: '+path)

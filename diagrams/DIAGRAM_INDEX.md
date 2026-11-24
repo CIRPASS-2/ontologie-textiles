@@ -18,7 +18,7 @@ and Connector remains a complete compatibility representation. See
 | textile-durability | 47 | 9 | 0 | 0 | 0 |
 | textile-indicator | 15 | 19 | 3 | 0 | 0 |
 | textile-process | 105 | 22 | 1 | 6 | 2 |
-| textile-recyclability | 44 | 47 | 0 | 76 | 11 |
+| textile-recyclability | 44 | 48 | 0 | 76 | 11 |
 | textile-repairability | 38 | 31 | 3 | 18 | 5 |
 | textile-soc | 28 | 27 | 14 | 7 | 1 |
 | textile-structure | 49 | 3 | 1 | 0 | 0 |

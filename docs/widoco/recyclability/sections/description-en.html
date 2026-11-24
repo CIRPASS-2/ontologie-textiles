@@ -10,6 +10,19 @@ Recycled content is modelled independently from recyclability. A textile product
 </p>
 
 <p>
+A recycled-content declaration can concern a product or a material constituent. Its fraction and reference mass use the declared subject as their basis under the applicable methodology. Use hasReferenceProductMassValue for product mass and hasReferenceMaterialMassValue for constituent mass. The material reference property is a project modelling extension. Use one declaration per source and fraction. The material-level extension is a project decision; the JRC study addresses product-level information.
+</p>
+<p>
+The JRC textile pre-consumer origin denotes retail-stage discarded unsold textiles, distinct from industrial production waste. Other methodologies use different terminology. Recycled-input origin and the stage at which waste is generated use separate vocabularies.
+</p>
+<p>
+SHACL checks reference-property choice when all linked subjects have an unambiguous product-only or material-only type. If a subject is dual-typed, untyped, or the declaration has mixed or missing subjects, subject-based selection cannot be established automatically. Only one reference property may be present in any declaration.
+</p>
+<p>
+Do not map declarations automatically to CORE material recycled-content properties without checking denominator, percentage convention, origin categories and source-value associations. Verification results can link to a declaration; existing assessment properties assess products, and do not provide full material-targeted assessment semantics.
+</p>
+
+<p>
 Actual recycling executions and recovered outputs are represented separately from the prospective assessment of recyclability.
 </p>
 </span>

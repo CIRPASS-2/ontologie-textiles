@@ -1,0 +1,33 @@
+@prefix ex: <https://example.org/issue13/> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix txtrec: <https://w3id.org/eudpp/textile-recyclability#> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Product mass is 1 kg. Composition and recycled fractions use different bases.
+ex:shirt a txt:TextileProduct ; txt:hasFibreCompositionComponent ex:cotton, ex:polyester .
+ex:cotton a txt:FibreCompositionComponent ; txt:hasFibreType ex:cottonType ; txt:hasFibreMassFraction ex:cottonFraction .
+ex:polyester a txt:FibreCompositionComponent, dpp:MaterialOfComposition ;
+    txt:hasFibreType ex:polyesterType ; txt:hasFibreMassFraction ex:polyesterFraction ;
+    txtrec:hasRecycledContentDeclaration ex:preDeclaration, ex:postDeclaration .
+ex:cottonFraction a txtcon:QuantitativeValue ; txtcon:numericValue "0.60"^^xsd:decimal ; txtcon:hasMeasurementUnit units:one .
+ex:polyesterFraction a txtcon:QuantitativeValue ; txtcon:numericValue "0.40"^^xsd:decimal ; txtcon:hasMeasurementUnit units:one .
+
+# Both fractions use the 0.4 kg polyester constituent, not the 1 kg product.
+ex:preDeclaration a txtrec:RecycledContentDeclaration ;
+    txtrec:hasRecycledContentSource txtrec:preConsumerRecycledContent ;
+    txtrec:hasRecycledContentMassFractionValue ex:preFraction ;
+    txtrec:hasRecycledMaterialMassValue ex:preMass ;
+    txtrec:hasReferenceMaterialMassValue ex:polyesterMass .
+ex:postDeclaration a txtrec:RecycledContentDeclaration ;
+    txtrec:hasRecycledContentSource txtrec:postConsumerRecycledContent ;
+    txtrec:hasRecycledContentMassFractionValue ex:postFraction ;
+    txtrec:hasRecycledMaterialMassValue ex:postMass ;
+    txtrec:hasReferenceMaterialMassValue ex:polyesterMass .
+ex:preFraction a txtcon:QuantitativeValue ; txtcon:numericValue "0.20"^^xsd:decimal ; txtcon:hasMeasurementUnit units:one .
+ex:postFraction a txtcon:QuantitativeValue ; txtcon:numericValue "0.30"^^xsd:decimal ; txtcon:hasMeasurementUnit units:one .
+ex:polyesterMass a txtcon:QuantitativeValue ; txtcon:numericValue "0.40"^^xsd:decimal ; txtcon:hasMeasurementUnit units:kilogram .
+ex:preMass a txtcon:QuantitativeValue ; txtcon:numericValue "0.08"^^xsd:decimal ; txtcon:hasMeasurementUnit units:kilogram .
+ex:postMass a txtcon:QuantitativeValue ; txtcon:numericValue "0.12"^^xsd:decimal ; txtcon:hasMeasurementUnit units:kilogram .

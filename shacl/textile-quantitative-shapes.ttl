@@ -85,6 +85,7 @@ tsh:PositiveValueShape a sh:NodeShape ;
             sh:minExclusive 0 ;
             sh:path txtcon:numericValue ] ;
     sh:targetObjectsOf txtcon:hasReferenceDuration,
+        txtrec:hasReferenceMaterialMassValue,
         txtrec:hasReferenceProductMassValue,
         txtrep:hasRepairResponseTimeValue .
 

@@ -48,7 +48,7 @@ Local modelling decisions are documented in [TXT-DEC-010](decisions/TXT-DEC-010.
 Forty-two resources with copied historical SOC definitions/comments are classified
 as adaptedDefinition and attributed to SOC 0.1.2 DRAFT and their exact source
 resources. Local scope/alignment decisions remain separately annotated.
-The projection contains 904 resources and 946 evidence rows:
+The projection contains 905 resources and 946 evidence rows:
 the original 904 relationships plus 42 historical SOC citations, all remaining
 PRESENT_NOT_REVERIFIED except the two unchanged UNRESOLVED relationships. Source registry
 descriptions identify the adopted MAT 1.1.0 and EVENT 1.0.0 subsets. The seven
