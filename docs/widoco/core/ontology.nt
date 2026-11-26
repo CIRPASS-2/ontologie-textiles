@@ -567,7 +567,7 @@
 <https://w3id.org/eudpp/textile-core#Fabric> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."@en .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A fibre material constituent considered within the composition of a specific textile product, characterised by its fibre type and quantitative mass fraction. It does not necessarily represent an individually identifiable physical fibre batch or a separate composition declaration."@en .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre composition component"@en .
 <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MaterialOfComposition> .
@@ -607,7 +607,7 @@
 <https://w3id.org/eudpp/textile-core#PPETextileApparel> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because textile apparel identified as personal protective equipment is outside the selected scope."@en .
 <https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Reusable textile absorbent hygiene product considered a technical textile and excluded from scope."@en .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Reusable textile absorbent hygiene product considered a technical textile and excluded from the JRC Textile Preparatory Study scope."@en .
 <https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Reusable textile absorbent hygiene product"@en .
 <https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
@@ -627,7 +627,7 @@
 <https://w3id.org/eudpp/textile-core#SmartTextile> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because smart textiles are very different from textile apparel in terms of function and physical characteristics."@en .
 <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "SKOS concept used to indicate whether a textile product type is included in, excluded from, or otherwise qualified with respect to a study or regulatory modelling scope."@en .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "SKOS concept used to indicate whether a textile product type is included in or excluded from the JRC Textile Preparatory Study scope; it does not establish legal DPP scope."@en .
 <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Study scope status concept"@en .
 <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -653,7 +653,7 @@
 <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile cleaning product considered a technical textile and excluded from scope because its function differs from apparel."@en .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile cleaning product considered a technical textile and excluded from the JRC Textile Preparatory Study scope because its function differs from apparel."@en .
 <https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Textile cleaning product"@en .
 <https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
@@ -700,7 +700,7 @@
 <https://w3id.org/eudpp/textile-core#Yarn> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
 <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
 <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property used on product-type classes to document their default status with respect to a study or regulatory modelling scope."@en .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property used on product-type classes to document their default status with respect to the JRC Textile Preparatory Study scope; it does not determine the legal DPP scope of an individual product."@en .
 <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
 <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#label> "default study scope status"@en .
 <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-connector#modellingNote> "This is an annotation-level modelling aid for product types. Instance-level scope status, if needed, should be represented with a data validation pattern or a dedicated object property in a context module."@en .
@@ -801,7 +801,7 @@
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
 <https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
-<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version 2.0.0 candidate."@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version integration-2026-11.3."@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "Andreas Schneider"@en .
 <https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "BOUGACHA Racem"@en .
@@ -824,12 +824,12 @@
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#comment> "Product types such as medical-device, PPE or toy textile apparel remain textile apparel by product nature but are annotated as excluded from the JRC preparatory study scope where appropriate."@en .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#comment> "These notations are stable local identifiers intended to support data exchange, mapping and validation."@en .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Core Ontology"@en .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-common> .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
 <https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-mat-mireot> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-core/1.1.2> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/2.0.0> .
-<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0.0 candidate" .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.2> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.3> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version integration-2026-11.3" .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/textile-core#hasFibreMassFraction> .
 _:cb12b1837253a7676b64d03c5d2abbafb79bf23628bc6a91581172c9c9c390c7dd0 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .

@@ -13,11 +13,13 @@ def test_all_thirteen_graphs_preserve_every_non_creator_triple():
     revision=json.loads((m.ROOT/'migration/version-identity-results.json').read_text('utf8'))
     revisions={row['file']:row for row in revision['modules']}
     for row in report['modules']:
-        path=m.ROOT/row['file'];graph=m.parse(path);ontology=URIRef(row['ontology_iri'])
-        assert set(graph.objects(ontology,m.DC.creator))=={Literal(name,lang='en') for name in row['creators_after']}
+        current_file='ontology/textile-common.ttl' if row['file']=='ontology/textile-connector.ttl' else row['file']
+        path=m.ROOT/current_file;graph=m.parse(path);ontology=URIRef(row['ontology_iri'])
+        current_ontology=URIRef('https://w3id.org/eudpp/'+path.stem)
+        assert set(graph.objects(current_ontology,m.DC.creator))=={Literal(name,lang='en') for name in row['creators_after']}
         assert set(row['creators_before'])=={'Elio Hbeich','BOUGACHA Racem'}
         from migration.mat_alignment import restore_frozen_graph
-        graph=restore_frozen_graph(graph,row['file'])
+        graph=restore_frozen_graph(graph,current_file)
         # Retain the original frozen creator proof by reversing only the exact
         # subsequent owner-approved header changes (independently checked below).
         change=revisions[row['file']]

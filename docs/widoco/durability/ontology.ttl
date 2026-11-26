@@ -571,11 +571,11 @@ txtdur:VisualPerformanceParameter a owl:Class ;
 txtdur:Durability a owl:Class ;
     rdfs:label "Durability"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "Ability of a product to maintain over time its function and performance under specified conditions of use, maintenance and repair."@en ;
+    rdfs:comment "Ability of a textile product to maintain over time its function and performance under specified conditions of use, maintenance and repair, with regard to the material, construction and appearance characteristics relevant to its intended use."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-durability> ;
     rdfs:subClassOf dpp:Durability ;
     txtcon:evidenceStatus txtcon:explicitEvidence ;
-    txtcon:modellingNote "Through the alignment txtdur:Durability rdfs:subClassOf dpp:Durability, this class inherits dpp:QualityIndicator and dpp:QuantitativeProperty. This is an inherited EU DPP Core commitment: it does not make a durability instance a numeric value. Numerical observations and results remain represented through Textile Assessment and txtcon:QuantitativeValue."@en ;
+    txtcon:modellingNote "Through the alignment txtdur:Durability rdfs:subClassOf dpp:Durability, this class inherits dpp:QualityIndicator and dpp:QuantitativeProperty. This is an inherited EU DPP Core commitment: it does not make a durability instance a numeric value. Numerical observations and results remain represented through Textile Assessment and txtcon:QuantitativeValue. This is a project-specific textile-context refinement informed by the JRC Textile Preparatory Study, not a verbatim JRC or regulatory definition. Appearance means retention of observable product characteristics, not aesthetic preference or emotional attachment. Relevant characteristics depend on the textile product and its intended use; examples include strength, abrasion resistance, pilling behaviour, colour fastness, dimensional stability and seam performance. These characteristics and their assessment results provide evidence for interpreting durability; an individual test result or robustness score does not automatically establish overall durability or service lifetime. IntrinsicDurability represents the physical and measurable dimension of textile durability. Durability remains distinct from observed performance parameters, failure modes and assessment results. Supporting context: JRC Section 9.2.1.1, printed page 110, lines 2890-2911; Section 9.2.1.3, printed pages 112-115, lines 2968-3055; Section 13.10.1.1, printed pages 468-469, lines 11065-11094. The detailed JRC discussion concerns apparel; applying this general interpretation to other textile products is a project modelling generalization."@en ;
     txtcon:sourceLocator "JRC Annex 13.10.1, printed page 468, lines 11065-11067."@en ;
     txtcon:sourceType txtcon:adaptedDefinition .
 
@@ -623,7 +623,7 @@ txtdur:FailureMode a owl:Class ;
 
 <https://w3id.org/eudpp/textile-durability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Durability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Durability Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Durability Ontology. Version integration-2026-11.3."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -646,11 +646,11 @@ txtdur:FailureMode a owl:Class ;
         "The module covers tactile, functional, structural, visual and surface degradation concepts such as RoughOrStiffFabric, LossOfComfort, ElasticityLoss, FuzzingOrMatting, ColourDepthEvenness and FabricSmoothness."@en,
         "The module keeps Durability and IntrinsicDurability as explicit OWL classes and represents observed performance parameters and failure modes as OWL classes rather than SKOS concepts."@en,
         "This module represents durability constructs, observed performance parameter types and failure mode types as OWL classes. It intentionally does not introduce SKOS codelists for these concepts in the core ontology."@en ;
-    owl:imports <https://w3id.org/eudpp/textile-connector>,
+    owl:imports <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-dpp-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-durability/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-durability/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
 

@@ -34,8 +34,8 @@ NOTE_CORRECTIONS = {
 
 def expected_delta(relative):
     """Return only the seven additions and six removals approved by the owner."""
-    assert relative in {'ontology/' + name for name in v.CURRENT_MODULES}, relative
-    filename = Path(relative).name
+    assert relative in {'ontology/' + name for name in v.CURRENT_MODULES} | {'ontology/textile-connector.ttl'}, relative
+    filename = 'textile-connector.ttl' if relative == 'ontology/textile-common.ttl' else Path(relative).name
     added = set(AXIOMS) if filename == 'textile-core.ttl' else set()
     removed = set()
     if filename in ('textile-core.ttl', 'textile-connector.ttl', 'textile-associated-materials.ttl'):
@@ -58,6 +58,8 @@ def restore_frozen_graph(graph, relative):
     Older creator/header proofs can retain their original digests. This is
     deliberately not a projection that discards all notes or modified dates.
     """
+    from migration.issue9_annotations import restore_issue9_graph
+    graph = restore_issue9_graph(graph, relative)
     baseline = Graph().parse(data=baseline_bytes(relative), format='turtle')
     added, removed = expected_delta(relative)
     assert removed <= set(baseline), relative
@@ -86,6 +88,8 @@ def without_alignment(graph):
 
 
 def baseline_bytes(name):
+    if name == 'ontology/textile-common.ttl':
+        name = 'ontology/textile-connector.ttl'
     return subprocess.check_output(['git', 'show', BASELINE + ':' + name], cwd=ROOT)
 
 
@@ -99,16 +103,50 @@ def canonical_differences():
         name = path.relative_to(ROOT).as_posix()
         raw = baseline_bytes(name)
         before = Graph().parse(data=raw, format='turtle')
-        after = Graph().parse(path)
+        from migration.issue9_annotations import restore_issue9_graph
+        after = restore_issue9_graph(Graph().parse(path), name)
         _, added, removed = graph_diff(to_isomorphic(after), to_isomorphic(before))
         want_added, want_removed = expected_delta(name)
         assert set(added) == want_added, 'Unauthorized additions: ' + name
         assert set(removed) == want_removed, 'Unauthorized removals: ' + name
-        restore_frozen_graph(after, name)
+        restore_frozen_graph(Graph().parse(path), name)
         rows.append(dict(file=name, baseline_sha256=hashlib.sha256(raw).hexdigest(),
                          candidate_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                          added=statements(added), removed=statements(removed)))
     return rows
+
+
+CUMULATIVE_BASELINE = 'cd57c4e47662cbc58c1d1146af9c32cba0fe81e5'
+
+
+def git_blobs(commit, names):
+    request=''.join(commit+':'+name+'\n' for name in names).encode()
+    raw=subprocess.check_output(['git','cat-file','--batch'],cwd=ROOT,input=request)
+    result={};position=0
+    for name in names:
+        end=raw.index(b'\n',position);header=raw[position:end].split()
+        assert len(header)==3 and header[1]==b'blob', name
+        size=int(header[2]);result[name]=raw[end+1:end+1+size];position=end+size+2
+    return result
+
+
+def cumulative_protected_hashes(original_names, packaged, areas):
+    # The user-approved cumulative baseline includes #10 LCA, #13 declarations,
+    # #14 reuse, #15 commodity code and #17 care symbols. Pin its entire protected
+    # inventory and bytes; never derive an allowlist from the candidate itself.
+    names=subprocess.check_output(['git','ls-tree','-r','--name-only',CUMULATIVE_BASELINE,'--',*areas],cwd=ROOT,text=True).splitlines()
+    assert packaged==set(names)|{'examples/README.md'}, 'Protected file inventory changed'
+    for name,data in git_blobs(CUMULATIVE_BASELINE,names).items():
+        if name=='shacl/README.md':
+            from migration.refresh_publication import check_shacl_guide
+            check_shacl_guide((ROOT/name).read_text('utf8'))
+        else:
+            assert (ROOT/name).read_bytes()==data, name
+    import re
+    guide=(ROOT/'examples/README.md').read_text('utf8')
+    assert sorted(re.findall(r'\]\(([^/()]+\.ttl)\)',guide))==sorted(path.name for path in (ROOT/'examples').glob('*.ttl')), 'Example guide inventory mismatch'
+    # Preserve the original immutable evidence anchors returned to Phase 1.
+    return {name:hashlib.sha256(data).hexdigest() for name,data in git_blobs(BASELINE,original_names).items()}
 
 
 def protected_hashes():
@@ -119,7 +157,11 @@ def protected_hashes():
         cwd=ROOT, text=True).splitlines()
     packaged = {name for name in v.package_files(ROOT)
                 if any(name == area or name.startswith(area + '/') for area in areas)}
-    assert packaged == set(names), 'Protected file inventory changed'
+    version=(ROOT/'VERSION').read_text(encoding='utf8').strip()
+    if version == 'integration-2026-11.3':
+        return cumulative_protected_hashes(names, packaged, areas)
+    extras=set()
+    assert packaged == set(names) | extras, 'Protected file inventory changed'
     batch = ''.join(BASELINE + ':' + name + '\n' for name in names).encode()
     raw = subprocess.run(['git', 'cat-file', '--batch'], cwd=ROOT,
                          input=batch, capture_output=True, check=True).stdout
@@ -131,14 +173,30 @@ def protected_hashes():
         assert header[1] == b'blob'
         size = int(header[2]); data = raw[end + 1:end + 1 + size]
         position = end + size + 2
-        assert (ROOT / name).read_bytes() == data, name
+        if (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.2' and name in ('catalog-v001.xml', 'shacl/textile-quantitative-shapes.ttl', 'shacl/README.md', 'traceability/textile-resource-traceability.csv'):
+            from migration import phase3_preflight as phase3
+            if name == 'catalog-v001.xml':
+                expected = phase3.expected_catalogue()
+            elif name == 'shacl/textile-quantitative-shapes.ttl':
+                expected = phase3.expected_shapes_bytes()
+            elif name == 'shacl/README.md':
+                expected = phase3.source_blob(name, phase3.SHACL_README_SHA256)
+            else:
+                assert data.count(b',textile-connector,') == 37
+                expected = data.replace(b',textile-connector,', b',textile-common,')
+            assert (ROOT/name).read_bytes() == expected, name
+        elif name == 'catalog-v001.xml' and (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.1':
+            from migration.phase2b_contract import expected_catalogue
+            assert (ROOT/name).read_bytes() == expected_catalogue(), name
+        else:
+            assert (ROOT / name).read_bytes() == data, name
         hashes[name] = hashlib.sha256(data).hexdigest()
     return hashes
 
 
 def closure():
     return sum((Graph().parse(path) for path in v.catalogue_import_closure(
-        ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology/2.0.0')), Graph())
+        ROOT / 'catalog-v001.xml', 'https://w3id.org/eudpp/textile-ontology/dev/' + (ROOT/'VERSION').read_text(encoding='utf8').strip())), Graph())
 
 
 def record():

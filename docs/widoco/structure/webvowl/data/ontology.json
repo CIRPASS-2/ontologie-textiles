@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Structure Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-structure",
-    "version" : "Version 2.0.0 candidate",
+    "version" : "Version integration-2026-11.3",
     "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for characteristics of textile fibres, yarns, fabrics and assemblies. It separates characteristic types from quantitative or qualitative values and does not represent process settings, assessment results or observed degradation phenomena."
@@ -22,7 +22,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure/1.1.2",
+        "value" : "https://w3id.org/eudpp/textile-structure/dev/integration-2026-11.2",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -71,7 +71,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version 2.0.0 candidate",
+        "value" : "Version integration-2026-11.3",
         "type" : "label"
       } ],
       "title" : [ {
@@ -119,7 +119,7 @@
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Structure Ontology. Version 2.0.0 candidate.",
+        "value" : "EU DPP Textile Structure Ontology. Version integration-2026-11.3.",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -165,13 +165,13 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
     "id" : "71",
     "type" : "owl:Class"
   }, {
     "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
     "type" : "owl:Class"
   }, {
     "id" : "79",
@@ -201,22 +201,22 @@
     "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
     "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "54",
     "type" : "owl:Class"
   }, {
     "id" : "90",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "87",
@@ -311,12 +311,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Resistance characteristics are distinct from the observed degradation phenomena themselves. For example, pilling resistance is not the same as observed pilling.",
+        "value" : "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term.",
+        "value" : "Resistance characteristics are distinct from the observed degradation phenomena themselves. For example, pilling resistance is not the same as observed pilling.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -471,12 +471,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Reconstructed concept added to support relations between fabric manufacturing methods and fabric behaviour.",
+        "value" : "Fabric rigidity may influence wrinkling and deformation behaviour, but the direction and acceptability depend on product type and fabric construction.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fabric rigidity may influence wrinkling and deformation behaviour, but the direction and acceptability depend on product type and fabric construction.",
+        "value" : "Reconstructed concept added to support relations between fabric manufacturing methods and fabric behaviour.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -506,12 +506,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       } ],
       "typicalInfluenceOn" : [ {
@@ -547,17 +547,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -618,17 +618,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -868,6 +868,15 @@
     "id" : "2",
     "superClasses" : [ "33" ]
   }, {
+    "iri" : "https://w3id.org/eudpp/textile-connector#QuantitativeValue",
+    "baseIri" : "https://w3id.org/eudpp/textile-connector",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeValue"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59"
+  }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
     "instances" : 0,
@@ -960,15 +969,6 @@
     "id" : "45",
     "superClasses" : [ "29" ]
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-connector#QuantitativeValue",
-    "baseIri" : "https://w3id.org/eudpp/textile-connector",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "QuantitativeValue"
-    },
-    "attributes" : [ "external" ],
-    "id" : "59"
-  }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
     "instances" : 0,
@@ -985,17 +985,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1138,12 +1138,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fibre strength typically contributes to yarn strength as a mechanical input.",
+        "value" : "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value.",
+        "value" : "Fibre strength typically contributes to yarn strength as a mechanical input.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1152,17 +1152,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1170,21 +1170,21 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
-        "type" : "iri"
-      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnHairiness",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnHairiness",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnStrength",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -1205,12 +1205,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fabric elasticity may influence dimensional stability and wrinkle recovery; the relation depends on fibre composition, yarn structure and fabric construction.",
+        "value" : "Reconstructed concept added to support relations between fabric manufacturing methods, fabric structure and deformation performance.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Reconstructed concept added to support relations between fabric manufacturing methods, fabric structure and deformation performance.",
+        "value" : "Fabric elasticity may influence dimensional stability and wrinkle recovery; the relation depends on fibre composition, yarn structure and fabric construction.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1237,17 +1237,6 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability#Wrinkling",
-        "type" : "iri"
-      }, {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability#DimensionalStability",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
@@ -1257,6 +1246,17 @@
         "identifier" : "evidenceStatus",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability#Wrinkling",
+        "type" : "iri"
+      }, {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability#DimensionalStability",
         "type" : "iri"
       } ]
     },
@@ -1291,17 +1291,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1322,12 +1322,12 @@
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnHairiness",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricLustre",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricLustre",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnHairiness",
         "type" : "iri"
       } ],
       "evidenceStatus" : [ {
@@ -1399,6 +1399,73 @@
     "id" : "33",
     "superClasses" : [ "29" ]
   }, {
+    "iri" : "https://w3id.org/eudpp/textile-structure#YarnElasticity",
+    "baseIri" : "https://w3id.org/eudpp/textile-structure",
+    "instances" : 0,
+    "annotations" : {
+      "modellingNote" : [ {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Reconstructed concept added to support process-related relations such as the effect of twist level on yarn elasticity.",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Yarn elasticity may influence wrinkling and recovery behaviour, but the relation is mediated by fabric structure and garment construction.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "type" : "iri"
+      }, {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability#Wrinkling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "YarnElasticity",
+      "en" : "Yarn elasticity"
+    },
+    "comment" : {
+      "en" : "Yarn mechanical characteristic concerning the ability of yarn to deform and recover."
+    },
+    "id" : "21",
+    "superClasses" : [ "13" ]
+  }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
     "instances" : 0,
@@ -1451,19 +1518,19 @@
     "id" : "54",
     "superClasses" : [ "29" ]
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-structure#YarnElasticity",
+    "iri" : "https://w3id.org/eudpp/textile-structure#CutPrecision",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
     "instances" : 0,
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Yarn elasticity may influence wrinkling and recovery behaviour, but the relation is mediated by fabric structure and garment construction.",
+        "value" : "Cut precision may influence assembly quality and seam performance, but it is reconstructed here mainly to prepare links with the future confectioning process model.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Reconstructed concept added to support process-related relations such as the effect of twist level on yarn elasticity.",
+        "value" : "Reconstructed concept added to support future links with confectioning process and final product quality.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1475,13 +1542,13 @@
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.",
+        "value" : "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932.",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1490,33 +1557,33 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability#Wrinkling",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
-        "type" : "iri"
-      }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
+      }, {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#SeamStrength",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "YarnElasticity",
-      "en" : "Yarn elasticity"
+      "IRI-based" : "CutPrecision",
+      "en" : "Cut precision"
     },
     "comment" : {
-      "en" : "Yarn mechanical characteristic concerning the ability of yarn to deform and recover."
+      "en" : "Assembly characteristic concerning precision of cutting or pattern construction."
     },
-    "id" : "21",
-    "superClasses" : [ "13" ]
+    "id" : "90",
+    "superClasses" : [ "27" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#YarnAppearance",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
@@ -1557,16 +1624,16 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
         "type" : "iri"
       } ]
     },
@@ -1580,26 +1647,21 @@
     "id" : "15",
     "superClasses" : [ "16" ]
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-structure#CutPrecision",
+    "iri" : "https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
     "instances" : 0,
     "annotations" : {
-      "modellingNote" : [ {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "Cut precision may influence assembly quality and seam performance, but it is reconstructed here mainly to prepare links with the future confectioning process model.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "Reconstructed concept added to support future links with confectioning process and final product quality.",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
+        "type" : "label"
       } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
@@ -1607,45 +1669,23 @@
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932.",
-        "type" : "label"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#SeamStrength",
-        "type" : "iri"
-      } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
-        "type" : "iri"
-      }, {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "CutPrecision",
-      "en" : "Cut precision"
+      "IRI-based" : "MechanicalFibreCharacteristic",
+      "en" : "Mechanical fibre characteristic"
     },
+    "subClasses" : [ "43", "40" ],
     "comment" : {
-      "en" : "Assembly characteristic concerning precision of cutting or pattern construction."
+      "en" : "Fibre characteristic concerning mechanical behaviour such as strength or elasticity."
     },
-    "id" : "90",
-    "superClasses" : [ "27" ]
+    "id" : "41",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
@@ -1678,12 +1718,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Drapeability",
+        "value" : "Drape",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Drape",
+        "value" : "Drapeability",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1708,46 +1748,6 @@
     },
     "id" : "31",
     "superClasses" : [ "30" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic",
-    "baseIri" : "https://w3id.org/eudpp/textile-structure",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "MechanicalFibreCharacteristic",
-      "en" : "Mechanical fibre characteristic"
-    },
-    "subClasses" : [ "43", "40" ],
-    "comment" : {
-      "en" : "Fibre characteristic concerning mechanical behaviour such as strength or elasticity."
-    },
-    "id" : "41",
-    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#YarnHairiness",
     "baseIri" : "https://w3id.org/eudpp/textile-structure",
@@ -1864,12 +1864,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Table 180 relates fabric softness or handle to fibre characteristics. The influence links are represented as weak annotation-level relations, not as deterministic OWL causal axioms.",
+        "value" : "Fabric handle is modelled as a fabric tactile characteristic, not as a simple fabric structural characteristic and not as an assessment result. Quantitative or qualitative measurements of softness, handle or touch should be represented through the assessment module when a concrete method or result is recorded.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fabric handle is modelled as a fabric tactile characteristic, not as a simple fabric structural characteristic and not as an assessment result. Quantitative or qualitative measurements of softness, handle or touch should be represented through the assessment module when a concrete method or result is recorded.",
+        "value" : "Table 180 relates fabric softness or handle to fibre characteristics. The influence links are represented as weak annotation-level relations, not as deterministic OWL causal axioms.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1878,17 +1878,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109.",
+        "type" : "label"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -1936,12 +1936,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Table 180 reports that fabric shininess increases with the increase of fibre length and fibre fineness. Fabric lustre is modelled as a fabric visual characteristic, not as a structural dimension and not as an assessment result.",
+        "value" : "Concrete observations or measurements of lustre, shininess or appearance should be represented through the assessment module when a test method, visual inspection protocol or measured value is recorded.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Concrete observations or measurements of lustre, shininess or appearance should be represented through the assessment module when a test method, visual inspection protocol or measured value is recorded.",
+        "value" : "Table 180 reports that fabric shininess increases with the increase of fibre length and fibre fineness. Fabric lustre is modelled as a fabric visual characteristic, not as a structural dimension and not as an assessment result.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1950,24 +1950,19 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
       "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "Fabric sheen",
-        "type" : "label"
-      }, {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "Fabric luster",
@@ -1976,6 +1971,11 @@
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "Fabric shininess",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Fabric sheen",
         "type" : "label"
       } ],
       "source" : [ {
@@ -2170,17 +2170,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2212,17 +2212,17 @@
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term.",
-        "type" : "label"
-      }, {
-        "identifier" : "modellingNote",
-        "language" : "en",
         "value" : "Modelled as a subclass of dpp:Property because instances are linked from products through a subproperty of dpp:hasProperty.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
         "value" : "This is the top-level class for structural characteristics in the textile structure module. It should not be used for observed durability performance parameters themselves.",
+        "type" : "label"
+      }, {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -2231,17 +2231,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2363,12 +2363,6 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability#SeamSlippage",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
@@ -2378,6 +2372,12 @@
         "identifier" : "evidenceStatus",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability#SeamSlippage",
         "type" : "iri"
       } ]
     },
@@ -2497,27 +2497,27 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Insulation",
+        "value" : "Thermal insulation",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Thermal insulation",
+        "value" : "Insulation",
         "type" : "label"
       } ],
       "source" : [ {
@@ -2559,17 +2559,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2577,16 +2577,10 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
-        "type" : "iri"
-      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricLustre",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
@@ -2596,7 +2590,7 @@
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricDrape",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricLustre",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
@@ -2607,6 +2601,12 @@
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-structure#YarnUniformity",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -2641,12 +2641,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Yarn strength typically contributes to fabric strength, but the relation is mediated by fabric construction and processing.",
+        "value" : "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value.",
+        "value" : "Yarn strength typically contributes to fabric strength, but the relation is mediated by fabric construction and processing.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -2655,17 +2655,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -2679,21 +2679,21 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability#FabricStrength",
-        "type" : "iri"
-      } ],
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability#FabricStrength",
         "type" : "iri"
       } ]
     },
@@ -2741,21 +2741,21 @@
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
-        "type" : "iri"
-      }, {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
-        "type" : "iri"
-      } ],
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-durability#FabricStrength",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "type" : "iri"
+      }, {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
         "type" : "iri"
       } ]
     },
@@ -2790,17 +2790,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2959,12 +2959,12 @@
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricBreathability",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricInsulation",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricInsulation",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricBreathability",
         "type" : "iri"
       } ]
     },
@@ -2999,28 +2999,22 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
-      "typicalInfluenceOn" : [ {
-        "identifier" : "typicalInfluenceOn",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#SeamStrength",
         "type" : "iri"
       } ],
       "evidenceStatus" : [ {
@@ -3032,6 +3026,12 @@
         "identifier" : "evidenceStatus",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence",
+        "type" : "iri"
+      } ],
+      "typicalInfluenceOn" : [ {
+        "identifier" : "typicalInfluenceOn",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-structure#SeamStrength",
         "type" : "iri"
       } ]
     },
@@ -3061,17 +3061,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3164,12 +3164,12 @@
       "typicalInfluenceOn" : [ {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
+        "value" : "https://w3id.org/eudpp/textile-structure#YarnAppearance",
         "type" : "iri"
       }, {
         "identifier" : "typicalInfluenceOn",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-structure#YarnAppearance",
+        "value" : "https://w3id.org/eudpp/textile-structure#FabricAppearance",
         "type" : "iri"
       } ],
       "evidenceStatus" : [ {
@@ -3413,7 +3413,7 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#characteristicOf",
@@ -3433,17 +3433,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3471,62 +3471,62 @@
   }, {
     "range" : "4",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "7"
   }, {
     "range" : "4",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "9"
   }, {
     "range" : "13",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "11"
   }, {
     "range" : "16",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "range" : "19",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "13",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "20"
   }, {
     "range" : "10",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "range" : "10",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "range" : "10",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
     "range" : "10",
     "domain" : "29",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "23",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "23",
     "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic",
@@ -3545,17 +3545,17 @@
         "value" : "https://w3id.org/eudpp/textile-structure",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3584,47 +3584,47 @@
   }, {
     "range" : "30",
     "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "range" : "41",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "41",
     "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "range" : "23",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "range" : "23",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "47"
   }, {
     "range" : "33",
     "domain" : "51",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "50"
   }, {
     "range" : "54",
     "domain" : "53",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "52"
   }, {
     "range" : "54",
     "domain" : "56",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "55"
   }, {
     "range" : "29",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#hasCharacteristicValue",
@@ -3681,12 +3681,12 @@
   }, {
     "range" : "27",
     "domain" : "61",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "60"
   }, {
     "range" : "27",
     "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "62"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-structure#hasTextualValue",
@@ -3748,157 +3748,157 @@
   }, {
     "range" : "29",
     "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "76"
   }, {
     "range" : "29",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "77"
   }, {
     "range" : "29",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "78"
   }, {
     "range" : "29",
     "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "80"
   }, {
     "range" : "48",
     "domain" : "82",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "81"
   }, {
     "range" : "8",
     "domain" : "69",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "84"
   }, {
     "range" : "65",
     "domain" : "64",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "85"
   }, {
     "range" : "48",
     "domain" : "87",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "86"
   }, {
     "range" : "8",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
     "range" : "8",
     "domain" : "71",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "89"
   }, {
     "range" : "8",
     "domain" : "41",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
     "range" : "45",
     "domain" : "75",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "94"
   }, {
     "range" : "45",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "95"
   }, {
     "range" : "8",
     "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "96"
   }, {
     "range" : "79",
     "domain" : "83",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
     "range" : "71",
     "domain" : "72",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "98"
   }, {
     "range" : "2",
     "domain" : "70",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "99"
   }, {
     "range" : "71",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "100"
   }, {
     "range" : "71",
     "domain" : "73",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "101"
   }, {
     "range" : "36",
     "domain" : "92",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "102"
   }, {
     "range" : "27",
     "domain" : "90",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "103"
   }, {
     "range" : "69",
     "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "105"
   }, {
     "range" : "104",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "106"
   }, {
     "range" : "4",
     "domain" : "108",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "107"
   }, {
     "range" : "49",
     "domain" : "91",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "109"
   }, {
     "range" : "4",
     "domain" : "91",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "110"
   }, {
     "range" : "4",
     "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "111"
   }, {
     "range" : "33",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "113"
   }, {
     "range" : "33",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "114"
   }, {
     "range" : "91",
     "domain" : "108",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
     "range" : "49",
     "domain" : "108",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "iri" : "https://w3id.org/eudpp#hasProperty",
@@ -3909,7 +3909,7 @@
     },
     "domain" : "112",
     "subproperty" : [ "6" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "37"
   } ]
 }

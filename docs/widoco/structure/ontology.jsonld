@@ -1,131 +1,6 @@
 [
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile product, including a product used as a component of another product, to a textile structure characteristic occurrence."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-core#TextileProduct"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has structural characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/eudpp#hasProperty"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#characteristicOf"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fibre characteristic concerning fibre quality conditions that are not purely structural, mechanical, physical or visual."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fibre quality characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This superclass was introduced to avoid forcing fibre cleanliness under a purely structural or visual fibre characteristic. It organises G-002 without changing the semantics of existing fibre characteristic subclasses."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricInsulation",
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreElasticity",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -137,7 +12,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Fabric functional characteristic concerning the retention of heat and reduction of heat transfer."
+        "@value": "Mechanical fibre characteristic concerning deformation and recovery after removal of a load."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -148,247 +23,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fabric insulation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Insulation"
-      },
-      {
-        "@language": "en",
-        "@value": "Thermal insulation"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Fabric insulation is represented as a fabric-level functional characteristic. Concrete insulation values or standard test results should be represented in TEXTILE_ASSESSMENT."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric-level characteristic concerning touch, hand-feel or perceived tactile behaviour."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric tactile characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This superclass organises G-006 Fabric handle / fabric softness without treating it as a purely structural dimension or as an assessment result."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricDrape",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric behavioural characteristic concerning how a fabric hangs in three dimensions and adapts to contours."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric drape"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Drape"
-      },
-      {
-        "@language": "en",
-        "@value": "Drapeability"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Fabric drape is modelled as a fabric behavioural characteristic. Concrete drape measurements, test methods or performance levels should be represented in TEXTILE_ASSESSMENT."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric structural characteristic concerning fabric construction, density, mass per area or arrangement of yarns/threads."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric construction characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This superclass distinguishes structural fabric characteristics from process parameters in TEXTILE_PROCESS. The same real-world quantity may be represented as a process target/parameter in TEXTILE_PROCESS and as a product/fabric characteristic in TEXTILE_STRUCTURE, but these roles should be kept explicit."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreStrength",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Mechanical fibre characteristic expressing resistance of fibres to tensile stress or breakage."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fibre strength"
+        "@value": "Fibre elasticity"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -404,11 +39,7 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Fibre strength typically contributes to yarn strength as a mechanical input."
-      },
-      {
-        "@language": "en",
-        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
+        "@value": "Fibre elasticity may influence wrinkling behaviour through recovery behaviour. The relation is context-dependent and mediated by fabric and garment structure."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -424,266 +55,7 @@
     ],
     "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnStrength"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#MoistureRetention",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Physical fibre characteristic concerning the capacity of fibres to absorb or retain moisture."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Moisture retention"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, Tables 178-179, printed pages 488-490; captions at lines 11875 and 11877."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://purl.org/dc/terms/bibliographicCitation": [
-      {
-        "@language": "en",
-        "@value": "EU DPP Textile Structure Ontology. Version 2.0.0 candidate."
-      }
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-03-06"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@language": "en",
-        "@value": "Andreas Schneider"
-      },
-      {
-        "@language": "en",
-        "@value": "BOUGACHA Racem"
-      },
-      {
-        "@language": "en",
-        "@value": "Elio Hbeich"
-      },
-      {
-        "@language": "en",
-        "@value": "Ivo Ladenius"
-      },
-      {
-        "@language": "en",
-        "@value": "Jan Merckx"
-      },
-      {
-        "@language": "en",
-        "@value": "Piero de Sabbata"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Ontology module for characteristics of textile fibres, yarns, fabrics and assemblies. It separates characteristic types from quantitative or qualitative values and does not represent process settings, assessment results or observed degradation phenomena."
-      }
-    ],
-    "http://purl.org/dc/terms/issued": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-03-06"
-      }
-    ],
-    "http://purl.org/dc/terms/license": [
-      {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-10-27"
-      }
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "EU DPP Textile Structure Ontology"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
-      {
-        "@value": "txtstr"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespaceUri": [
-      {
-        "@value": "https://w3id.org/eudpp/textile-structure#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Characteristic classes describe what is observed or declared about a fibre, yarn, fabric or assembly. Concrete numerical values are represented as txtcon:QuantitativeValue instances, while methods and results belong to Textile Assessment and process settings belong to Textile Process."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "EU DPP Textile Structure Ontology"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-core"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-dpp-mireot"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#priorVersion": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure/1.1.2"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionIRI": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure/2.0.0"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
-      {
-        "@value": "Version 2.0.0 candidate"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, pages 484-495, Tables 177-182, lines ending at 11874 and lines 11875-11920; Section 4.5, page 41, lines 1001-1037."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#ontologyModule"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricAppearance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric visual characteristic concerning the overall visible appearance or visual quality of a fabric."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric appearance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Fabric visual appearance"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Fabric appearance is represented as a fabric visual characteristic in TEXTILE_STRUCTURE. Observed changes in fabric appearance after use or cleaning cycles should be represented in TEXTILE_DURABILITY or TEXTILE_ASSESSMENT, not as the structural characteristic itself."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+        "@id": "https://w3id.org/eudpp/textile-durability#Wrinkling"
       }
     ]
   },
@@ -787,7 +159,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreElasticity",
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreFineness",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -799,7 +171,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Mechanical fibre characteristic concerning deformation and recovery after removal of a load."
+        "@value": "Structural fibre characteristic expressing fibre fineness or linear density."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -810,12 +182,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fibre elasticity"
+        "@value": "Fibre fineness"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -826,7 +198,7 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Fibre elasticity may influence wrinkling behaviour through recovery behaviour. The relation is context-dependent and mediated by fabric and garment structure."
+        "@value": "Fibre fineness typically affects yarn uniformity and regularity, but the direction and magnitude depend on fibre type and process conditions."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -842,12 +214,91 @@
     ],
     "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
       {
-        "@id": "https://w3id.org/eudpp/textile-durability#Wrinkling"
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricDrape"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricHandle"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricLustre"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnUniformity"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure#SewingCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Assembly characteristic concerning sewing quality or sewing-related construction."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Sewing characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Reconstructed concept added to support future links with confectioning process and seam-related durability."
+      },
+      {
+        "@language": "en",
+        "@value": "Sewing characteristics may influence seam strength and final product durability. Detailed process parameters should be represented in TEXTILE_PROCESS."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#SeamStrength"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -859,7 +310,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Yarn characteristic concerning tactile or hand-feel behaviour."
+        "@value": "Yarn characteristic concerning mechanical behaviour such as yarn strength or elasticity."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -870,7 +321,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Yarn tactile characteristic"
+        "@value": "Yarn mechanical characteristic"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -891,177 +342,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Characteristic of garment or textile assembly, including seams, sewing and cutting quality."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Assembly characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#hasCharacteristicValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile structure characteristic occurrence to a quantitative value containing a number and a measurement unit."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has characteristic value"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-002.md"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric-level characteristic concerning visible appearance, lustre, shininess, sheen or other visual qualities."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric visual characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This superclass organises G-007 Fabric lustre / fabric shininess without treating it as a purely structural dimension or as an assessment result."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnElasticity",
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreColour",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1073,7 +354,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Yarn mechanical characteristic concerning the ability of yarn to deform and recover."
+        "@value": "Visual fibre characteristic concerning the colour of a fibre and its influence on dyeing or bleaching behaviour."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1084,17 +365,69 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Yarn elasticity"
+        "@value": "Fibre colour"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
       {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
         "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnUniformity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Yarn structural characteristic expressing uniformity in thickness and mass along the yarn length."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yarn uniformity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
       },
       {
         "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
@@ -1103,11 +436,64 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Reconstructed concept added to support process-related relations such as the effect of twist level on yarn elasticity."
-      },
+        "@value": "Yarn uniformity may contribute to fabric strength and regularity, but the relation depends on fabric structure and process conditions."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "Yarn elasticity may influence wrinkling and recovery behaviour, but the relation is mediated by fabric structure and garment construction."
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FabricStrength"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnSoftness",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Yarn tactile characteristic concerning perceived softness or smoothness."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yarn softness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1119,11 +505,6 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#Wrinkling"
       }
     ]
   },
@@ -1179,6 +560,135 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricElasticity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric structural characteristic denoting elastic behaviour of the fabric."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric elasticity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Fabric elasticity may influence dimensional stability and wrinkle recovery; the relation depends on fibre composition, yarn structure and fabric construction."
+      },
+      {
+        "@language": "en",
+        "@value": "Reconstructed concept added to support relations between fabric manufacturing methods, fabric structure and deformation performance."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.2, Tables 178-179, printed pages 488-490; captions at lines 11875 and 11877."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#DimensionalStability"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Wrinkling"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Yarn structural characteristic concerning fibre ends and loops protruding from the yarn body."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yarn hairiness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Table 180 identifies yarn hairiness as an unwanted yarn characteristic. It reports that hairiness decreases with increasing fibre length and fibre strength, while it may increase with fibre fineness after the optimal working range."
+      },
+      {
+        "@language": "en",
+        "@value": "Yarn hairiness is modelled as a yarn structural characteristic rather than as an assessment result. Quantitative hairiness values, test methods or thresholds should be represented in the assessment module."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
       }
     ]
   },
@@ -1250,71 +760,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#characteristicOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Relates a textile structure characteristic occurrence to the textile product that it describes, including a product used as a component of another product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "characteristic of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-core#TextileProduct"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/eudpp/textile-structure#ResistanceCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -1374,68 +819,9 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A characteristic of a textile fibre that can influence yarn manufacture, fabric behaviour and durability-related performance."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fibre characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This class corresponds to the aggregated MAT-001 concept. MAT-004 Fibre type is represented in TEXTILE_CORE through txt:FibreTypeConcept and txtcs:FibreTypeScheme, and used through txt:hasFibreType on txt:FibreCompositionComponent. It is therefore not duplicated as a textile structure class in this module."
-      },
-      {
-        "@language": "en",
-        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#hasTextualValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://purl.org/dc/terms/source": [
       {
@@ -1445,12 +831,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Relates a textile structure characteristic occurrence to a free-text value when no controlled value list is available."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+        "@value": "Fibre characteristic concerning fibre quality conditions that are not purely structural, mechanical, physical or visual."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1461,12 +842,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has textual value"
+        "@value": "Fibre quality characteristic"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -1477,17 +858,13 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Controlled qualitative characteristic values may later be represented as SKOS concepts if required."
-      },
-      {
-        "@language": "en",
-        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
+        "@value": "This superclass was introduced to avoid forcing fibre cleanliness under a purely structural or visual fibre characteristic. It organises G-002 without changing the semantics of existing fibre characteristic subclasses."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "docs/decisions/TXT-DEC-005.md"
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
@@ -1497,7 +874,117 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreSectionShape",
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric-level characteristic concerning the physical behaviour of a fabric under use, gravity, movement, care or stress conditions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric behavioural characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This superclass organises fabric drape without reducing it either to a purely structural dimension or to an assessment result."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Characteristic of fabric structure or fabric-level physical behaviour."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric structural characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Specific fabric structural characteristics are included as reconstructed or strongly implied concepts where needed to represent relations extracted from the JRC study."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricBreathability",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1509,7 +996,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Structural fibre characteristic expressing the cross-sectional shape of textile fibres."
+        "@value": "Fabric functional characteristic concerning the passage of water vapour through the fabric and evaporative cooling."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1520,37 +1007,68 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fibre section shape"
+        "@value": "Fabric breathability"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#altLabel": [
       {
         "@language": "en",
-        "@value": "Fibre cross-section shape"
+        "@value": "Air permeability"
+      },
+      {
+        "@language": "en",
+        "@value": "Breathability"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+        "@language": "en",
+        "@value": "Fabric breathability is represented in TEXTILE_STRUCTURE as a fabric-level functional characteristic, not as a TEXTILE_CORE product class and not as an assessment result."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbb56c7c9b0751963ca43928a539dec044fa3caa55bb3ec2d9c3943b52cc4ce3a3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
+          }
+        ]
       }
     ]
   },
@@ -1692,7 +1210,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness",
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricAppearance",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1704,7 +1222,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Yarn structural characteristic concerning fibre ends and loops protruding from the yarn body."
+        "@value": "Fabric visual characteristic concerning the overall visible appearance or visual quality of a fabric."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1715,191 +1233,32 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Yarn hairiness"
+        "@value": "Fabric appearance"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Table 180 identifies yarn hairiness as an unwanted yarn characteristic. It reports that hairiness decreases with increasing fibre length and fibre strength, while it may increase with fibre fineness after the optimal working range."
-      },
-      {
-        "@language": "en",
-        "@value": "Yarn hairiness is modelled as a yarn structural characteristic rather than as an assessment result. Quantitative hairiness values, test methods or thresholds should be represented in the assessment module."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fibre characteristic concerning mechanical behaviour such as strength or elasticity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Mechanical fibre characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric-level characteristic relevant to durability, comfort, appearance or functional performance."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This superclass avoids forcing tactile fabric properties such as fabric handle under a purely structural fabric category."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricBreathability",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric functional characteristic concerning the passage of water vapour through the fabric and evaporative cooling."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric breathability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#altLabel": [
       {
         "@language": "en",
-        "@value": "Air permeability"
-      },
-      {
-        "@language": "en",
-        "@value": "Breathability"
+        "@value": "Fabric visual appearance"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Fabric breathability is represented in TEXTILE_STRUCTURE as a fabric-level functional characteristic, not as a TEXTILE_CORE product class and not as an assessment result."
+        "@value": "Fabric appearance is represented as a fabric visual characteristic in TEXTILE_STRUCTURE. Observed changes in fabric appearance after use or cleaning cycles should be represented in TEXTILE_DURABILITY or TEXTILE_ASSESSMENT, not as the structural characteristic itself."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -1915,19 +1274,19 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreColour",
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+        "@id": "https://w3id.org/eudpp/textile-ontology"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Visual fibre characteristic concerning the colour of a fibre and its influence on dyeing or bleaching behaviour."
+        "@value": "Fabric-level characteristic concerning functional performance relevant to use, comfort or intended application."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1938,31 +1297,34 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fibre colour"
+        "@value": "Fabric functional characteristic"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
         "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This superclass keeps functional fabric characteristics out of TEXTILE_CORE and separate from observed durability parameters."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
       }
     ]
   },
@@ -2038,167 +1400,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreLength",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Structural fibre characteristic expressing the length of textile fibres."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fibre length"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Fibre length is modelled as typically influencing yarn strength through yarn structure. The relation should not be interpreted as a deterministic rule."
-      },
-      {
-        "@language": "en",
-        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricHandle"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricLustre"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnStrength"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#ThreadCount",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric construction characteristic expressing the number of threads per specified unit length in a woven fabric."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Thread count"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-process#TargetFabricDensity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Number of threads"
-      },
-      {
-        "@language": "en",
-        "@value": "Thread density"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#relatedMatch": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-process#TargetFabricDensity"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Although the JRC uses the term thread count, its definition is a density per unit length. A quantitative value should therefore include a reciprocal-length unit rather than a dimensionless count."
-      },
-      {
-        "@language": "en",
-        "@value": "Thread count is represented in TEXTILE_STRUCTURE as a fabric construction characteristic. The related process-side concept txtprc:TargetFabricDensity remains a fabric manufacturing parameter. The two concepts should not be merged automatically; one describes a product/fabric characteristic, the other a process parameter or target."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 493-494, lines 11902-11907; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricBreathability"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricHandle"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2210,7 +1412,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Fabric-level characteristic concerning functional performance relevant to use, comfort or intended application."
+        "@value": "Fabric structural characteristic concerning fabric construction, density, mass per area or arrangement of yarns/threads."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2221,12 +1423,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fabric functional characteristic"
+        "@value": "Fabric construction characteristic"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
@@ -2237,7 +1439,7 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "This superclass keeps functional fabric characteristics out of TEXTILE_CORE and separate from observed durability parameters."
+        "@value": "This superclass distinguishes structural fabric characteristics from process parameters in TEXTILE_PROCESS. The same real-world quantity may be represented as a process target/parameter in TEXTILE_PROCESS and as a product/fabric characteristic in TEXTILE_STRUCTURE, but these roles should be kept explicit."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2249,277 +1451,6 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnStrength",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Yarn mechanical characteristic expressing the ability of a yarn to withstand tensile force without breaking."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Yarn strength"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "Yarn tenacity"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
-      },
-      {
-        "@language": "en",
-        "@value": "Yarn strength typically contributes to fabric strength, but the relation is mediated by fabric construction and processing."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FabricStrength"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fibre characteristic concerning fibre structure, morphology or geometry."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Structural fibre characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnUniformity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Yarn structural characteristic expressing uniformity in thickness and mass along the yarn length."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Yarn uniformity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Yarn uniformity may contribute to fabric strength and regularity, but the relation depends on fabric structure and process conditions."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#FabricStrength"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#CutPrecision",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Assembly characteristic concerning precision of cutting or pattern construction."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Cut precision"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Cut precision may influence assembly quality and seam performance, but it is reconstructed here mainly to prepare links with the future confectioning process model."
-      },
-      {
-        "@language": "en",
-        "@value": "Reconstructed concept added to support future links with confectioning process and final product quality."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#SeamStrength"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbb56c7c9b0751963ca43928a539dec044fa3caa55bb3ec2d9c3943b52cc4ce3a3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
-          },
-          {
-            "@id": "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
-          },
-          {
-            "@id": "https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon"
-          },
-          {
-            "@id": "https://w3id.org/eudpp/textile-durability#FailureMode"
-          }
-        ]
       }
     ]
   },
@@ -2597,7 +1528,71 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FibreFineness",
+    "@id": "https://w3id.org/eudpp/textile-structure#hasTextualValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile structure characteristic occurrence to a free-text value when no controlled value list is available."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has textual value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Controlled qualitative characteristic values may later be represented as SKOS concepts if required."
+      },
+      {
+        "@language": "en",
+        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-005.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreLength",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2609,7 +1604,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Structural fibre characteristic expressing fibre fineness or linear density."
+        "@value": "Structural fibre characteristic expressing the length of textile fibres."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2620,7 +1615,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fibre fineness"
+        "@value": "Fibre length"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -2636,7 +1631,11 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Fibre fineness typically affects yarn uniformity and regularity, but the direction and magnitude depend on fibre type and process conditions."
+        "@value": "Fibre length is modelled as typically influencing yarn strength through yarn structure. The relation should not be interpreted as a deterministic rule."
+      },
+      {
+        "@language": "en",
+        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2652,9 +1651,6 @@
     ],
     "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricDrape"
-      },
-      {
         "@id": "https://w3id.org/eudpp/textile-structure#FabricHandle"
       },
       {
@@ -2664,24 +1660,29 @@
         "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness"
       },
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnUniformity"
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnStrength"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Yarn characteristic concerning structural regularity or configuration."
+        "@value": "Relates a textile product, including a product used as a component of another product, to a textile structure characteristic occurrence."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-core#TextileProduct"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2692,18 +1693,39 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Yarn structural characteristic"
+        "@value": "has structural characteristic"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnCharacteristic"
+        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp#hasProperty"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#characteristicOf"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
       {
         "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+        "@value": "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceType": [
@@ -2713,7 +1735,207 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#SewingCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/bibliographicCitation": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Structure Ontology. Version integration-2026-11.3."
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-03-06"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@language": "en",
+        "@value": "Andreas Schneider"
+      },
+      {
+        "@language": "en",
+        "@value": "BOUGACHA Racem"
+      },
+      {
+        "@language": "en",
+        "@value": "Elio Hbeich"
+      },
+      {
+        "@language": "en",
+        "@value": "Ivo Ladenius"
+      },
+      {
+        "@language": "en",
+        "@value": "Jan Merckx"
+      },
+      {
+        "@language": "en",
+        "@value": "Piero de Sabbata"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Ontology module for characteristics of textile fibres, yarns, fabrics and assemblies. It separates characteristic types from quantitative or qualitative values and does not represent process settings, assessment results or observed degradation phenomena."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-03-06"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-10-27"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Structure Ontology"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "txtstr"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "https://w3id.org/eudpp/textile-structure#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Characteristic classes describe what is observed or declared about a fibre, yarn, fabric or assembly. Concrete numerical values are represented as txtcon:QuantitativeValue instances, while methods and results belong to Textile Assessment and process settings belong to Textile Process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Structure Ontology"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-common"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-core"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-dpp-mireot"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#priorVersion": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure/dev/integration-2026-11.2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure/dev/integration-2026-11.3"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "Version integration-2026-11.3"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.2, pages 484-495, Tables 177-182, lines ending at 11874 and lines 11875-11920; Section 4.5, page 41, lines 1001-1037."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#ontologyModule"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#hasCharacteristicValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile structure characteristic occurrence to a quantitative value containing a number and a measurement unit."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has characteristic value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-002.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#CutPrecision",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2725,7 +1947,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Assembly characteristic concerning sewing quality or sewing-related construction."
+        "@value": "Assembly characteristic concerning precision of cutting or pattern construction."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -2736,7 +1958,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Sewing characteristic"
+        "@value": "Cut precision"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -2755,11 +1977,11 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Reconstructed concept added to support future links with confectioning process and seam-related durability."
+        "@value": "Cut precision may influence assembly quality and seam performance, but it is reconstructed here mainly to prepare links with the future confectioning process model."
       },
       {
         "@language": "en",
-        "@value": "Sewing characteristics may influence seam strength and final product durability. Detailed process parameters should be represented in TEXTILE_PROCESS."
+        "@value": "Reconstructed concept added to support future links with confectioning process and final product quality."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -2776,105 +1998,6 @@
     "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
       {
         "@id": "https://w3id.org/eudpp/textile-structure#SeamStrength"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Yarn characteristic concerning mechanical behaviour such as yarn strength or elasticity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Yarn mechanical characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Characteristic of an intermediate textile structure such as yarn, fabric, resistance property or assembly."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Intermediate textile characteristic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
       }
     ]
   },
@@ -2996,7 +2119,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3008,7 +2131,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Characteristic of fabric structure or fabric-level physical behaviour."
+        "@value": "Characteristic of an intermediate textile structure such as yarn, fabric, resistance property or assembly."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3019,7 +2142,358 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fabric structural characteristic"
+        "@value": "Intermediate textile characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric-level characteristic relevant to durability, comfort, appearance or functional performance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This superclass avoids forcing tactile fabric properties such as fabric handle under a purely structural fabric category."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnElasticity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Yarn mechanical characteristic concerning the ability of yarn to deform and recover."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yarn elasticity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Reconstructed concept added to support process-related relations such as the effect of twist level on yarn elasticity."
+      },
+      {
+        "@language": "en",
+        "@value": "Yarn elasticity may influence wrinkling and recovery behaviour, but the relation is mediated by fabric structure and garment construction."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#Wrinkling"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricDrape",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric behavioural characteristic concerning how a fabric hangs in three dimensions and adapts to contours."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric drape"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Drape"
+      },
+      {
+        "@language": "en",
+        "@value": "Drapeability"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Fabric drape is modelled as a fabric behavioural characteristic. Concrete drape measurements, test methods or performance levels should be represented in TEXTILE_ASSESSMENT."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#characteristicOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile structure characteristic occurrence to the textile product that it describes, including a product used as a component of another product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "characteristic of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-core#TextileProduct"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This property structures textile structure data in RDF/OWL; it is not claimed as a verbatim JRC relation."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.2, Tables 177-182, printed pages 486-495; captions at lines 11873-11907."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fibre characteristic concerning fibre structure, morphology or geometry."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Structural fibre characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric-level characteristic concerning visible appearance, lustre, shininess, sheen or other visual qualities."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric visual characteristic"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
@@ -3035,7 +2509,7 @@
     "https://w3id.org/eudpp/textile-connector#modellingNote": [
       {
         "@language": "en",
-        "@value": "Specific fabric structural characteristics are included as reconstructed or strongly implied concepts where needed to represent relations extracted from the JRC study."
+        "@value": "This superclass organises G-007 Fabric lustre / fabric shininess without treating it as a purely structural dimension or as an assessment result."
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -3047,6 +2521,733 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricInsulation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric functional characteristic concerning the retention of heat and reduction of heat transfer."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric insulation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Insulation"
+      },
+      {
+        "@language": "en",
+        "@value": "Thermal insulation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Fabric insulation is represented as a fabric-level functional characteristic. Concrete insulation values or standard test results should be represented in TEXTILE_ASSESSMENT."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric-level characteristic concerning touch, hand-feel or perceived tactile behaviour."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fabric tactile characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This superclass organises G-006 Fabric handle / fabric softness without treating it as a purely structural dimension or as an assessment result."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Characteristic of garment or textile assembly, including seams, sewing and cutting quality."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Assembly characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Structural superclass introduced to organise the module; not necessarily a verbatim JRC term."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Yarn characteristic concerning tactile or hand-feel behaviour."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yarn tactile characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnStrength",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Yarn mechanical characteristic expressing the ability of a yarn to withstand tensile force without breaking."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Yarn strength"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Yarn tenacity"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
+      },
+      {
+        "@language": "en",
+        "@value": "Yarn strength typically contributes to fabric strength, but the relation is mediated by fabric construction and processing."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 488-491, lines 11875-11888; JRC Preparatory Study, relevant section, Table 178, printed page 302; caption line 9109."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#FabricStrength"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreSectionShape",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Structural fibre characteristic expressing the cross-sectional shape of textile fibres."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fibre section shape"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Fibre cross-section shape"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#SeamStrength",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Assembly characteristic expressing the mechanical strength or integrity of a seam."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Seam strength"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Seam strength typically reduces the likelihood of seam-related failure modes and influences seam slippage behaviour."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#SeamSlippage"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-durability#SeamFailure"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#MoistureRetention",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Physical fibre characteristic concerning the capacity of fibres to absorb or retain moisture."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Moisture retention"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Annex 13.10.2, Tables 178-179, printed pages 488-490; captions at lines 11875 and 11877."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A characteristic of a textile fibre that can influence yarn manufacture, fabric behaviour and durability-related performance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fibre characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This class corresponds to the aggregated MAT-001 concept. MAT-004 Fibre type is represented in TEXTILE_CORE through txt:FibreTypeConcept and txtcs:FibreTypeScheme, and used through txt:hasFibreType on txt:FibreCompositionComponent. It is therefore not duplicated as a textile structure class in this module."
+      },
+      {
+        "@language": "en",
+        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fibre characteristic concerning mechanical behaviour such as strength or elasticity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Mechanical fibre characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FibreCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Textile Structure modelling hierarchy, version 1.1.0; motivated by JRC Annex 13.10.2, Tables 177-182."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#FibreStrength",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Mechanical fibre characteristic expressing resistance of fibres to tensile stress or breakage."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fibre strength"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Fibre strength typically contributes to yarn strength as a mechanical input."
+      },
+      {
+        "@language": "en",
+        "@value": "This is modelled as an OWL class because it is a semantic category and potential target of assessment/indicator relations, not merely a codelist value."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 9.2.1, printed page 110, lines 2895-2900; Annex 13.10.2, Tables 177 and 180, printed pages 486-491; captions at lines 11873 and 11879; supporting text on printed page 484, lines 11853-11859."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnHairiness"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnStrength"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-structure#ThreadCount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Fabric construction characteristic expressing the number of threads per specified unit length in a woven fabric."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Thread count"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-process#TargetFabricDensity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "Number of threads"
+      },
+      {
+        "@language": "en",
+        "@value": "Thread density"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#relatedMatch": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-process#TargetFabricDensity"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Although the JRC uses the term thread count, its definition is a density per unit length. A quantitative value should therefore include a reciprocal-length unit rather than a dimensionless count."
+      },
+      {
+        "@language": "en",
+        "@value": "Thread count is represented in TEXTILE_STRUCTURE as a fabric construction characteristic. The related process-side concept txtprc:TargetFabricDensity remains a fabric manufacturing parameter. The two concepts should not be merged automatically; one describes a product/fabric characteristic, the other a process parameter or target."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 493-494, lines 11902-11907; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricBreathability"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-structure#FabricHandle"
       }
     ]
   },
@@ -3118,129 +3319,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricElasticity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Fabric structural characteristic denoting elastic behaviour of the fabric."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Fabric elasticity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Fabric elasticity may influence dimensional stability and wrinkle recovery; the relation depends on fibre composition, yarn structure and fabric construction."
-      },
-      {
-        "@language": "en",
-        "@value": "Reconstructed concept added to support relations between fabric manufacturing methods, fabric structure and deformation performance."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, Tables 178-179, printed pages 488-490; captions at lines 11875 and 11877."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#DimensionalStability"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#Wrinkling"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#YarnSoftness",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Yarn tactile characteristic concerning perceived softness or smoothness."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Yarn softness"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic",
+    "@id": "https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3252,7 +3331,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Fabric-level characteristic concerning the physical behaviour of a fabric under use, gravity, movement, care or stress conditions."
+        "@value": "Yarn characteristic concerning structural regularity or configuration."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -3263,23 +3342,12 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Fabric behavioural characteristic"
+        "@value": "Yarn structural characteristic"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/eudpp/textile-structure#FabricCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#reconstructedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "This superclass organises fabric drape without reducing it either to a purely structural dimension or to an assessment result."
+        "@id": "https://w3id.org/eudpp/textile-structure#YarnCharacteristic"
       }
     ],
     "https://w3id.org/eudpp/textile-connector#sourceLocator": [
@@ -3291,74 +3359,6 @@
     "https://w3id.org/eudpp/textile-connector#sourceType": [
       {
         "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/eudpp/textile-structure#SeamStrength",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Assembly characteristic expressing the mechanical strength or integrity of a seam."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Seam strength"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#evidenceStatus": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#explicitEvidence"
-      },
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#modellingNote": [
-      {
-        "@language": "en",
-        "@value": "Seam strength typically reduces the likelihood of seam-related failure modes and influences seam slippage behaviour."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
-      {
-        "@language": "en",
-        "@value": "JRC Annex 13.10.2, Table 182, printed pages 494-495; table caption at line 11907; supporting text on printed page 495, lines 11927-11932."
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#sourceType": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicalInfluenceOn": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#SeamSlippage"
-      }
-    ],
-    "https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf": [
-      {
-        "@id": "https://w3id.org/eudpp/textile-durability#SeamFailure"
       }
     ]
   }

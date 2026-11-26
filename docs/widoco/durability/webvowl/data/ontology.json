@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Durability Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-durability",
-    "version" : "Version 2.0.0 candidate",
+    "version" : "Version integration-2026-11.3",
     "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for textile durability constructs, durability-related performance characteristics, degradation phenomena, external damage and failure modes. Test methods, observations, measurement results, thresholds and values remain in the textile assessment module."
@@ -22,7 +22,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability/1.1.2",
+        "value" : "https://w3id.org/eudpp/textile-durability/dev/integration-2026-11.2",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -71,7 +71,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version 2.0.0 candidate",
+        "value" : "Version integration-2026-11.3",
         "type" : "label"
       } ],
       "title" : [ {
@@ -119,7 +119,7 @@
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Durability Ontology. Version 2.0.0 candidate.",
+        "value" : "EU DPP Textile Durability Ontology. Version integration-2026-11.3.",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -246,10 +246,10 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "57",
     "type" : "owl:Class"
   }, {
-    "id" : "57",
+    "id" : "41",
     "type" : "owl:Class"
   }, {
     "id" : "95",
@@ -267,10 +267,10 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
-    "id" : "78",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "55",
@@ -520,12 +520,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -546,12 +546,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fabric strength is modelled as reducing the likelihood of tear or rip under comparable conditions, rather than as negatively affecting tear or rip.",
+        "value" : "Fabric strength contributes to the interpretation of intrinsic durability as an aggregated mechanical performance parameter.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Fabric strength contributes to the interpretation of intrinsic durability as an aggregated mechanical performance parameter.",
+        "value" : "Fabric strength is modelled as reducing the likelihood of tear or rip under comparable conditions, rather than as negatively affecting tear or rip.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -560,17 +560,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "typicallyReducesLikelihoodOf" : [ {
         "identifier" : "typicallyReducesLikelihoodOf",
@@ -651,17 +651,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -708,17 +708,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -729,12 +729,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -808,17 +808,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -854,29 +854,29 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
-      "typicallyIncreasesLikelihoodOf" : [ {
-        "identifier" : "typicallyIncreasesLikelihoodOf",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability#LossOfComfort",
-        "type" : "iri"
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "Loss of elasticity",
         "type" : "label"
+      } ],
+      "typicallyIncreasesLikelihoodOf" : [ {
+        "identifier" : "typicallyIncreasesLikelihoodOf",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability#LossOfComfort",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -887,12 +887,12 @@
       "evidenceStatus" : [ {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
         "type" : "iri"
       }, {
         "identifier" : "evidenceStatus",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "value" : "https://w3id.org/eudpp/textile-connector#explicitEvidence",
         "type" : "iri"
       } ]
     },
@@ -962,17 +962,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1007,17 +1007,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2277-2279.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1103,17 +1103,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1230,7 +1230,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Through the alignment txtdur:Durability rdfs:subClassOf dpp:Durability, this class inherits dpp:QualityIndicator and dpp:QuantitativeProperty. This is an inherited EU DPP Core commitment: it does not make a durability instance a numeric value. Numerical observations and results remain represented through Textile Assessment and txtcon:QuantitativeValue.",
+        "value" : "Through the alignment txtdur:Durability rdfs:subClassOf dpp:Durability, this class inherits dpp:QualityIndicator and dpp:QuantitativeProperty. This is an inherited EU DPP Core commitment: it does not make a durability instance a numeric value. Numerical observations and results remain represented through Textile Assessment and txtcon:QuantitativeValue. This is a project-specific textile-context refinement informed by the JRC Textile Preparatory Study, not a verbatim JRC or regulatory definition. Appearance means retention of observable product characteristics, not aesthetic preference or emotional attachment. Relevant characteristics depend on the textile product and its intended use; examples include strength, abrasion resistance, pilling behaviour, colour fastness, dimensional stability and seam performance. These characteristics and their assessment results provide evidence for interpreting durability; an individual test result or robustness score does not automatically establish overall durability or service lifetime. IntrinsicDurability represents the physical and measurable dimension of textile durability. Durability remains distinct from observed performance parameters, failure modes and assessment results. Supporting context: JRC Section 9.2.1.1, printed page 110, lines 2890-2911; Section 9.2.1.3, printed pages 112-115, lines 2968-3055; Section 13.10.1.1, printed pages 468-469, lines 11065-11094. The detailed JRC discussion concerns apparel; applying this general interpretation to other textile products is a project modelling generalization.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1270,7 +1270,7 @@
     },
     "subClasses" : [ "32" ],
     "comment" : {
-      "en" : "Ability of a product to maintain over time its function and performance under specified conditions of use, maintenance and repair."
+      "en" : "Ability of a textile product to maintain over time its function and performance under specified conditions of use, maintenance and repair, with regard to the material, construction and appearance characteristics relevant to its intended use."
     },
     "id" : "33",
     "superClasses" : [ "78" ]
@@ -1291,17 +1291,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1336,17 +1336,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1461,27 +1461,27 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Fabric roughness",
+        "value" : "Fabric stiffness",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Fabric stiffness",
+        "value" : "Fabric roughness",
         "type" : "label"
       } ],
       "typicallyIncreasesLikelihoodOf" : [ {
@@ -1711,17 +1711,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Annex 13.10.1, printed page 469, lines 11089-11094.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -1878,24 +1878,24 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Observed colour fastness contributes to the interpretation of intrinsic durability, while colour fading is a failure expression.",
+        "value" : "Colour fastness is the resistance parameter; colour fading is a typical visual failure expression of its degradation.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Colour fastness is the resistance parameter; colour fading is a typical visual failure expression of its degradation.",
+        "value" : "Observed colour fastness contributes to the interpretation of intrinsic durability, while colour fading is a failure expression.",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability",
-        "type" : "iri"
       } ],
       "typicalFailureExpression" : [ {
         "identifier" : "typicalFailureExpression",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-durability#ColourFading",
+        "type" : "iri"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
       "sourceType" : [ {
@@ -1940,24 +1940,24 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Dimensional stability contributes to the interpretation of intrinsic durability; loss of dimensional stability is the corresponding failure expression.",
+        "value" : "Dimensional stability is the performance parameter; loss of dimensional stability is the corresponding failure expression.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Dimensional stability is the performance parameter; loss of dimensional stability is the corresponding failure expression.",
+        "value" : "Dimensional stability contributes to the interpretation of intrinsic durability; loss of dimensional stability is the corresponding failure expression.",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability",
-        "type" : "iri"
       } ],
       "typicalFailureExpression" : [ {
         "identifier" : "typicalFailureExpression",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability",
+        "type" : "iri"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
       "sourceLocator" : [ {
@@ -2042,12 +2042,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "The research gap used the wording 'fuzzing/melting', but the JRC and referenced ISO standards use fuzzing/matting. This ontology therefore introduces FuzzingOrMatting and avoids the unsupported term melting.",
+        "value" : "FuzzingOrMatting is not made a subclass of FailureMode because it is modelled following the existing pilling pattern as an observed degradation phenomenon used in performance inspection.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "FuzzingOrMatting is not made a subclass of FailureMode because it is modelled following the existing pilling pattern as an observed degradation phenomenon used in performance inspection.",
+        "value" : "The research gap used the wording 'fuzzing/melting', but the JRC and referenced ISO standards use fuzzing/matting. This ontology therefore introduces FuzzingOrMatting and avoids the unsupported term melting.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -2062,17 +2062,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability#FabricBreakdown",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -2118,17 +2118,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2146,58 +2146,6 @@
       "en" : "Category of failure modes primarily affecting visible appearance."
     },
     "id" : "4",
-    "superClasses" : [ "38" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-durability#FunctionalFailureMode",
-    "baseIri" : "https://w3id.org/eudpp/textile-durability",
-    "instances" : 0,
-    "annotations" : {
-      "modellingNote" : [ {
-        "identifier" : "modellingNote",
-        "language" : "en",
-        "value" : "Introduced to represent failure modes that are not adequately captured by visual, structural, mechanical or component failure categories alone.",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-durability",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ],
-      "evidenceStatus" : [ {
-        "identifier" : "evidenceStatus",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "FunctionalFailureMode",
-      "en" : "Functional failure mode"
-    },
-    "subClasses" : [ "40" ],
-    "comment" : {
-      "en" : "Category of failure modes primarily involving loss of intended use, comfort or functional suitability of a textile product."
-    },
-    "id" : "41",
     "superClasses" : [ "38" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-durability#ColourDepthEvenness",
@@ -2267,6 +2215,58 @@
     },
     "id" : "57",
     "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-durability#FunctionalFailureMode",
+    "baseIri" : "https://w3id.org/eudpp/textile-durability",
+    "instances" : 0,
+    "annotations" : {
+      "modellingNote" : [ {
+        "identifier" : "modellingNote",
+        "language" : "en",
+        "value" : "Introduced to represent failure modes that are not adequately captured by visual, structural, mechanical or component failure categories alone.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-durability",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      } ],
+      "evidenceStatus" : [ {
+        "identifier" : "evidenceStatus",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#reconstructedEvidence",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FunctionalFailureMode",
+      "en" : "Functional failure mode"
+    },
+    "subClasses" : [ "40" ],
+    "comment" : {
+      "en" : "Category of failure modes primarily involving loss of intended use, comfort or functional suitability of a textile product."
+    },
+    "id" : "41",
+    "superClasses" : [ "38" ]
   }, {
     "instances" : 0,
     "union" : [ "38", "47", "71" ],
@@ -2340,17 +2340,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2276-2279.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 13.10.1.1, printed page 469, lines 11089-11093; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2276-2279.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2402,17 +2402,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability#FabricBreakdown",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Annex 13.10.1, printed page 468, lines 11065-11071; Annex 13.4, Table 124, printed pages 362-367 where applicable.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2482,15 +2482,6 @@
     "id" : "3",
     "superClasses" : [ "4" ]
   }, {
-    "iri" : "https://w3id.org/eudpp#Product",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Product"
-    },
-    "attributes" : [ "external" ],
-    "id" : "37"
-  }, {
     "iri" : "https://w3id.org/eudpp#Durability",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
@@ -2500,6 +2491,15 @@
     "subClasses" : [ "33" ],
     "attributes" : [ "external" ],
     "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/eudpp#Product",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
   }, {
     "iri" : "https://w3id.org/eudpp#Property",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2578,17 +2578,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2845,17 +2845,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2885,17 +2885,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3105,17 +3105,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3145,17 +3145,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3185,17 +3185,17 @@
         "value" : "https://w3id.org/eudpp/textile-durability",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "CIRPASS Textile Ontology modelling specification, version 1.1.0.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",

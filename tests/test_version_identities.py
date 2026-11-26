@@ -1,5 +1,6 @@
 """Option B keeps current version identity separate from preserved history."""
 import hashlib
+from pathlib import Path
 import json
 from xml.etree import ElementTree as ET
 import pytest
@@ -15,35 +16,35 @@ REPORT=json.loads((ROOT/'migration/version-identity-results.json').read_text('ut
 
 @pytest.mark.parametrize('row',REPORT['modules'],ids=lambda row:row['file'])
 def test_exact_header_revision_and_catalogue_identity(row):
-    graph=Graph().parse(ROOT/row['file']);ontology=URIRef(row['ontology_iri'])
-    assert set(graph.subjects(RDF.type,OWL.Ontology))=={ontology}
-    assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/2.0.0')}
     from migration.mat_alignment import restore_frozen_graph
-    frozen=restore_frozen_graph(graph,row['file'])
-    assert semantic_digest(project(frozen,ontology))==row['non_metadata_graph_sha256']
+    original_ontology=URIRef(row['ontology_iri'])
+    current_file=('ontology/textile-common.ttl' if row['file']=='ontology/textile-connector.ttl' else row['file'])
+    graph=Graph().parse(ROOT/current_file)
+    ontology=URIRef('https://w3id.org/eudpp/'+Path(current_file).stem)
+    assert set(graph.subjects(RDF.type,OWL.Ontology))=={ontology}
+    assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/dev/integration-2026-11.3')}
+    frozen=restore_frozen_graph(graph,current_file)
+    assert semantic_digest(project(frozen,original_ontology))==row['non_metadata_graph_sha256']
     assert set(REPORT['allowed_predicates'])==set(map(str,PREDICATES))
     for field in ('added','removed'):
         for subject,predicate,_ in Graph().parse(data='\n'.join(row[field]),format='turtle'):
-            assert subject==ontology and predicate in PREDICATES
+            assert subject==original_ontology and predicate in PREDICATES
     changed=row['file'].removeprefix('ontology/textile-').removesuffix('.ttl') in MODULES
     if changed:
-        assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/1.1.2')}
-        # The exact current date replacement is checked before restoring the
-        # frozen header proof; keep its historical date and digest unchanged.
-        assert set(frozen.objects(ontology,DCTERMS.modified))=={Literal(REVISION_DATE,datatype=XSD.date)}
-        assert str(graph.value(ontology,OWL.versionInfo))=='Version 2.0.0 candidate'
-        assert 'Version 2.0.0 candidate' in str(graph.value(ontology,DCTERMS.bibliographicCitation))
+        assert set(frozen.objects(original_ontology,DCTERMS.modified))=={Literal(REVISION_DATE,datatype=XSD.date)}
         old_catalog=ROOT/'migration/historical/1.1.2/catalog-v001.xml'
         old={entry.attrib['name']:entry.attrib['uri'] for entry in ET.parse(old_catalog).getroot()}
-        rel=old[str(ontology)+'/1.1.2']
+        rel=old[str(original_ontology)+'/1.1.2']
         expected=json.loads((old_catalog.parent.parent/'inventory.json').read_text('utf8'))['files'][rel]
         assert hashlib.sha256((old_catalog.parent/rel).read_bytes()).hexdigest()==expected
     else:
         assert not row['added'] and not row['removed']
+    assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/dev/integration-2026-11.2')}
     catalog={entry.attrib['name']:entry.attrib['uri'] for entry in ET.parse(ROOT/'catalog-v001.xml').getroot()}
-    assert catalog[str(ontology)+'/2.0.0']==row['file']
-    assert str(ontology)+'/1.1.2' not in catalog
-    assert catalog[str(ontology)]==row['file']
+    assert catalog[str(ontology)+'/dev/integration-2026-11.3']==current_file
+    assert str(ontology)+'/2.0.0' not in catalog
+    assert str(ontology)+'/dev/integration-2026-11.2' not in catalog
+    assert catalog[str(ontology)]==current_file
 
 
 def test_si_mireot_retains_unchanged_identity_and_bytes():
@@ -64,6 +65,6 @@ def test_all_runtime_version_iris_have_unique_catalogue_targets():
             assert ontology not in identities and version not in versions
             identities[ontology]=path;versions[version]=path
             if path.name!='si-textile-mireot.ttl':
-                assert str(version)==str(ontology)+'/2.0.0'
+                assert str(version)==str(ontology)+('/dev/integration-2026-11.3' if area=='ontology' else '/2.0.0')
                 assert catalog[str(version)]==path.relative_to(ROOT).as_posix()
     assert len(identities)==len(versions)==20

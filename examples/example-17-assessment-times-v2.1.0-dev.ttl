@@ -1,0 +1,60 @@
+# Synthetic temporal-reuse examples; not a complete EPCIS payload.
+# Instance identifiers are isolated from every other public example.
+@prefix ex: <https://example.org/textile-assessment/issue20-point6/> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix epcis: <https://ref.gs1.org/epcis/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:product a dpp:Product .
+ex:method a txtass:AssessmentMethod .
+
+# Completion is known; no ProductEvent or start time is asserted.
+ex:completed a txtass:AssessmentExecution, prov:Activity ;
+    txtass:assessesProduct ex:product ;
+    txtass:appliesMethod ex:method ;
+    prov:endedAtTime "2026-11-10T14:30:00+01:00"^^xsd:dateTime .
+
+# A two-day execution. Completion does not identify result-generation time.
+ex:longRunning a txtass:AssessmentExecution, prov:Activity ;
+    txtass:assessesProduct ex:product ;
+    txtass:appliesMethod ex:method ;
+    prov:startedAtTime "2026-11-10T09:00:00+01:00"^^xsd:dateTime ;
+    prov:endedAtTime "2026-11-12T16:30:00+01:00"^^xsd:dateTime .
+
+ex:result a txtass:AssessmentResult ;
+    txtass:resultOfAssessment ex:longRunning .
+
+# This qualifying product-facing inspection spans an observation at 10:05 and
+# completes at 10:15. The repository records that observation the following day.
+# The point-2 bridge does not equate these three instants or infer any timestamp.
+ex:eventLinked a txtass:AssessmentExecution, prov:Activity ;
+    txtass:assessesProduct ex:product ;
+    txtass:appliesMethod ex:method ;
+    prov:startedAtTime "2026-11-13T10:00:00Z"^^xsd:dateTime ;
+    prov:endedAtTime "2026-11-13T10:15:00Z"^^xsd:dateTime ;
+    txtass:isRepresentedByProductEvent ex:productEvent .
+
+ex:productEvent a dpp:ProductEvent ;
+    dpp:isRepresentedByCarrier ex:observation .
+
+# The carrier mapping belongs to full EVENT, not the bounded runtime MIREOT.
+# OBSERVE / inspecting alone does not establish ProductEvent qualification.
+ex:observation a epcis:ObjectEvent ;
+    epcis:action "OBSERVE" ;
+    epcis:bizStep <https://ref.gs1.org/cbv/BizStep-inspecting> ;
+    epcis:eventTime "2026-11-13T10:05:00Z"^^xsd:dateTimeStamp ;
+    epcis:recordTime "2026-11-14T08:00:00Z"^^xsd:dateTimeStamp .
+
+# A coarse associated calendar date; neither start nor completion is specified.
+# No midnight, timezone or clock time is manufactured from this source value.
+ex:dateOnly a txtass:AssessmentExecution, prov:Activity ;
+    txtass:assessesProduct ex:product ;
+    txtass:appliesMethod ex:method ;
+    dcterms:date "2026-11-14"^^xsd:date .
+
+ex:undated a txtass:AssessmentExecution, prov:Activity ;
+    txtass:assessesProduct ex:product ;
+    txtass:appliesMethod ex:method .

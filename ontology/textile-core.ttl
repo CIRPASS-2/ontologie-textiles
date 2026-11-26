@@ -57,7 +57,7 @@ txt:PPETextileApparel a owl:Class ;
 txt:ReusableTextileAbsorbentHygieneProduct a owl:Class ;
     rdfs:label "Reusable textile absorbent hygiene product"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "Reusable textile absorbent hygiene product considered a technical textile and excluded from scope."@en ;
+    rdfs:comment "Reusable textile absorbent hygiene product considered a technical textile and excluded from the JRC Textile Preparatory Study scope."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-core> ;
     rdfs:subClassOf txt:TextileProduct ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 495-506; JRC Preparatory Study, relevant section, printed page 19, lines 275-279; JRC Preparatory Study, relevant section, Table 3, printed page 19; caption line 275."@en ;
@@ -79,7 +79,7 @@ txt:SmartTextile a owl:Class ;
 txt:TextileCleaningProduct a owl:Class ;
     rdfs:label "Textile cleaning product"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "Textile cleaning product considered a technical textile and excluded from scope because its function differs from apparel."@en ;
+    rdfs:comment "Textile cleaning product considered a technical textile and excluded from the JRC Textile Preparatory Study scope because its function differs from apparel."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-core> ;
     rdfs:subClassOf txt:TextileProduct ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 495-505; JRC Preparatory Study, relevant section, printed page 19, lines 275-279; JRC Preparatory Study, relevant section, Table 3, printed page 19; caption line 275."@en ;
@@ -121,7 +121,7 @@ txt:Yarn a owl:Class ;
 txt:defaultStudyScopeStatus a owl:AnnotationProperty ;
     rdfs:label "default study scope status"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "Annotation property used on product-type classes to document their default status with respect to a study or regulatory modelling scope."@en ;
+    rdfs:comment "Annotation property used on product-type classes to document their default status with respect to the JRC Textile Preparatory Study scope; it does not determine the legal DPP scope of an individual product."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-core> ;
     txtcon:modellingNote "This is an annotation-level modelling aid for product types. Instance-level scope status, if needed, should be represented with a data validation pattern or a dedicated object property in a context module."@en ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en ;
@@ -685,7 +685,7 @@ txtcs:naturalOriginFibre a skos:Concept,
 txt:FibreCompositionComponent a owl:Class ;
     rdfs:label "Fibre composition component"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."@en ;
+    rdfs:comment "A fibre material constituent considered within the composition of a specific textile product, characterised by its fibre type and quantitative mass fraction. It does not necessarily represent an individually identifiable physical fibre batch or a separate composition declaration."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-core> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty txt:hasFibreType ;
@@ -700,7 +700,7 @@ txt:FibreCompositionComponent a owl:Class ;
 txt:StudyScopeStatusConcept a owl:Class ;
     rdfs:label "Study scope status concept"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "SKOS concept used to indicate whether a textile product type is included in, excluded from, or otherwise qualified with respect to a study or regulatory modelling scope."@en ;
+    rdfs:comment "SKOS concept used to indicate whether a textile product type is included in or excluded from the JRC Textile Preparatory Study scope; it does not establish legal DPP scope."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-core> ;
     rdfs:subClassOf skos:Concept ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en ;
@@ -888,7 +888,7 @@ txtcs:TextileApparelProductTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-core> a owl:Ontology ;
     rdfs:label "EU DPP Textile Core Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Core Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Core Ontology. Version integration-2026-11.3."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -909,10 +909,10 @@ txtcs:TextileApparelProductTypeScheme a skos:ConceptScheme ;
         "Named fibre types and textile apparel product categories are represented as SKOS concepts because they are controlled classification values rather than product subclasses."@en,
         "Product types such as medical-device, PPE or toy textile apparel remain textile apparel by product nature but are annotated as excluded from the JRC preparatory study scope where appropriate."@en,
         "These notations are stable local identifiers intended to support data exchange, mapping and validation."@en ;
-    owl:imports <https://w3id.org/eudpp/textile-connector>,
+    owl:imports <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-mat-mireot> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-core/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-core/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-core/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" .
 

@@ -7,8 +7,8 @@
       "en" : "EU DPP Textile Ontology - Textile Substances of Concern Module"
     },
     "iri" : "https://w3id.org/eudpp/textile-soc",
-    "version" : "Version 2.0.0 candidate",
-    "author" : [ "Jan Merckx", "Andreas Schneider", "Piero de Sabbata", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
+    "version" : "Version integration-2026-11.3",
+    "author" : [ "Jan Merckx", "Piero de Sabbata", "Andreas Schneider", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Textile-sector specialisation of the EU DPP Substances of Concern ontology. It specialises substance presence, product location, concentration reporting, product-group qualification, thresholds and lifecycle handling for textile products."
     },
@@ -25,20 +25,16 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-soc/dev/integration-2026-11.2",
+        "type" : "iri"
+      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Andreas Schneider",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Piero de Sabbata",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Jan Merckx",
+        "value" : "BOUGACHA Racem",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -48,7 +44,17 @@
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "BOUGACHA Racem",
+        "value" : "Jan Merckx",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Piero de Sabbata",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Andreas Schneider",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -74,12 +80,6 @@
         "value" : "2026-10-27",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "Version 2.0.0 candidate",
-        "type" : "label"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
@@ -88,18 +88,24 @@
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Ontology - Textile Substances of Concern Module. Version 2.0.0 candidate.",
+        "value" : "EU DPP Textile Ontology - Textile Substances of Concern Module. Version integration-2026-11.3.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "Version integration-2026-11.3",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -127,13 +133,13 @@
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
+    "id" : "41",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -142,19 +148,19 @@
     "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "50",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "51",
+    "id" : "52",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "59",
@@ -172,7 +178,7 @@
     "id" : "77",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
     "id" : "71",
@@ -199,16 +205,16 @@
     "id" : "88",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "11",
+    "id" : "12",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "2",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "90",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "28",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
     "id" : "93",
@@ -217,7 +223,7 @@
     "id" : "92",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "42",
+    "id" : "43",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "96",
@@ -226,7 +232,7 @@
     "id" : "5",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "19",
+    "id" : "20",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "106",
@@ -256,13 +262,13 @@
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "126",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "39",
     "type" : "owl:Class"
   }, {
     "id" : "78",
@@ -271,13 +277,13 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "49",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -286,16 +292,16 @@
     "id" : "140",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "148",
+    "id" : "147",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "64",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
     "id" : "76",
@@ -307,22 +313,22 @@
     "id" : "74",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "137",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "55",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -333,6 +339,76 @@
       "IRI-based" : "Concept"
     },
     "individuals" : [ {
+      "iri" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
+      "baseIri" : "https://w3id.org/eudpp/textile-soc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "LOC_ADHESIVE_BONDING",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Adhesive or bonding layer location",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance is located in an adhesive, laminate, bonding film or other joining layer."
+      },
+      "labels" : {
+        "IRI-based" : "adhesiveOrBondingLayerLocation",
+        "en" : "Adhesive or bonding layer location"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
@@ -375,17 +451,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -403,7 +479,7 @@
         "en" : "Fibre composition location"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
+      "iri" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -418,34 +494,34 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
         } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "LOC_ADHESIVE_BONDING",
+          "value" : "LOC_COATING_FINISH",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Adhesive or bonding layer location",
+          "value" : "Coating or finish location",
           "type" : "label"
         } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
@@ -455,7 +531,7 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -466,11 +542,11 @@
         } ]
       },
       "comment" : {
-        "en" : "The substance is located in an adhesive, laminate, bonding film or other joining layer."
+        "en" : "The substance is located in a coating, finish or functional surface treatment applied to the textile product."
       },
       "labels" : {
-        "IRI-based" : "adhesiveOrBondingLayerLocation",
-        "en" : "Adhesive or bonding layer location"
+        "IRI-based" : "coatingOrFinishLocation",
+        "en" : "Coating or finish location"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
@@ -488,17 +564,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -515,17 +591,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -541,76 +617,6 @@
       "labels" : {
         "IRI-based" : "printedOrDyedRegionLocation",
         "en" : "Printed or dyed region location"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
-      "baseIri" : "https://w3id.org/eudpp/textile-soc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "LOC_COATING_FINISH",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Coating or finish location",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The substance is located in a coating, finish or functional surface treatment applied to the textile product."
-      },
-      "labels" : {
-        "IRI-based" : "coatingOrFinishLocation",
-        "en" : "Coating or finish location"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
@@ -655,7 +661,7 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
@@ -665,7 +671,7 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -725,17 +731,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -795,7 +801,7 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
@@ -805,7 +811,7 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -837,27 +843,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Regulation (EU) 2024/1781, Article 2(27) and Article 7(5); CORE SOC 2.2.0 SubstancePresence.",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       } ]
     },
@@ -868,8 +874,8 @@
     "comment" : {
       "en" : "A substance-of-concern presence context specialised for a textile product, textile material group or non-textile component."
     },
-    "id" : "12",
-    "superClasses" : [ "13" ]
+    "id" : "13",
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart",
     "baseIri" : "https://w3id.org/eudpp/textile-associated-materials",
@@ -879,7 +885,7 @@
     },
     "subClasses" : [ "34" ],
     "attributes" : [ "external" ],
-    "id" : "16"
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/eudpp#SubstanceManagementInstruction",
     "baseIri" : "https://w3id.org/eudpp",
@@ -887,9 +893,9 @@
     "label" : {
       "IRI-based" : "SubstanceManagementInstruction"
     },
-    "subClasses" : [ "37" ],
+    "subClasses" : [ "29" ],
     "attributes" : [ "external" ],
-    "id" : "43"
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -916,17 +922,17 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
         "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      }, {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -935,76 +941,6 @@
       "en" : "Textile SoC location type concept"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
-      "baseIri" : "https://w3id.org/eudpp/textile-soc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "LOC_ADHESIVE_BONDING",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Adhesive or bonding layer location",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The substance is located in an adhesive, laminate, bonding film or other joining layer."
-      },
-      "labels" : {
-        "IRI-based" : "adhesiveOrBondingLayerLocation",
-        "en" : "Adhesive or bonding layer location"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
@@ -1047,17 +983,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1075,7 +1011,7 @@
         "en" : "Fibre composition location"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
+      "iri" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
       "baseIri" : "https://w3id.org/eudpp/textile-soc",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -1090,36 +1026,31 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
         } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "LOC_PRINT_DYE",
+          "value" : "LOC_ADHESIVE_BONDING",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Printed or dyed region location",
+          "value" : "Adhesive or bonding layer location",
           "type" : "label"
         } ],
         "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
@@ -1128,6 +1059,11 @@
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1138,11 +1074,11 @@
         } ]
       },
       "comment" : {
-        "en" : "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
+        "en" : "The substance is located in an adhesive, laminate, bonding film or other joining layer."
       },
       "labels" : {
-        "IRI-based" : "printedOrDyedRegionLocation",
-        "en" : "Printed or dyed region location"
+        "IRI-based" : "adhesiveOrBondingLayerLocation",
+        "en" : "Adhesive or bonding layer location"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
@@ -1160,17 +1096,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1182,6 +1118,76 @@
           "identifier" : "prefLabel",
           "language" : "en",
           "value" : "Coating or finish location",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance is located in a coating, finish or functional surface treatment applied to the textile product."
+      },
+      "labels" : {
+        "IRI-based" : "coatingOrFinishLocation",
+        "en" : "Coating or finish location"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
+      "baseIri" : "https://w3id.org/eudpp/textile-soc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "LOC_PRINT_DYE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Printed or dyed region location",
           "type" : "label"
         } ],
         "source" : [ {
@@ -1208,11 +1214,11 @@
         } ]
       },
       "comment" : {
-        "en" : "The substance is located in a coating, finish or functional surface treatment applied to the textile product."
+        "en" : "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
       },
       "labels" : {
-        "IRI-based" : "coatingOrFinishLocation",
-        "en" : "Coating or finish location"
+        "IRI-based" : "printedOrDyedRegionLocation",
+        "en" : "Printed or dyed region location"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
@@ -1257,7 +1263,7 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
@@ -1267,7 +1273,7 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1327,17 +1333,17 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1397,7 +1403,7 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "value" : "https://w3id.org/eudpp/textile-ontology",
           "type" : "iri"
         }, {
           "identifier" : "source",
@@ -1407,7 +1413,7 @@
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-ontology",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -1447,22 +1453,16 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
+      "sourceType" : [ {
+        "identifier" : "sourceType",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
       "definition" : [ {
@@ -1471,15 +1471,21 @@
         "value" : "List of substances hindering reuse or recycling for a given product group.",
         "type" : "label"
       } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       } ]
     },
@@ -1487,7 +1493,7 @@
       "IRI-based" : "ProductGroupSpecificSoCList",
       "en" : "Product-group specific SoC list"
     },
-    "subClasses" : [ "36" ],
+    "subClasses" : [ "39" ],
     "comment" : {
       "en" : "External regulatory specification used to determine SoC type (d) qualification. This reference may be documented with identifiers, source, version, date, and product-category applicability information."
     },
@@ -1504,27 +1510,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 12.1, printed page 220, lines 6213-6220; Section 12.3.12, printed page 246, lines 6823-6863.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 12.1, printed page 220, lines 6213-6220; Section 12.3.12, printed page 246, lines 6823-6863.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -1535,7 +1541,7 @@
     "comment" : {
       "en" : "A tracking or disclosure threshold applicable to a substance occurrence in a textile product or textile product group."
     },
-    "id" : "21",
+    "id" : "22",
     "superClasses" : [ "46" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation",
@@ -1548,22 +1554,22 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Section 12.1, printed pages 219-220, lines 6205-6220.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Section 12.1, printed pages 219-220, lines 6205-6220.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
@@ -1573,7 +1579,7 @@
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       } ]
     },
@@ -1584,8 +1590,8 @@
     "comment" : {
       "en" : "Textile-specific instruction information concerning safe use and lifecycle handling in the presence of a substance of concern, including disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management; repair guidance may be added as a textile/JRC extension."
     },
-    "id" : "37",
-    "superClasses" : [ "43" ]
+    "id" : "29",
+    "superClasses" : [ "41" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#SVHCCandidateList",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -1603,17 +1609,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SVHCCandidateList; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SVHCCandidateList; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -1630,12 +1636,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -1651,14 +1657,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "49",
+    "id" : "50",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "51",
+    "id" : "52",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -1684,7 +1690,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted.",
+        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted. Issue #9 clarifies the current wording; the historical source statements remain recorded unchanged in migration/legacy-soc-attribution.json.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -1693,17 +1699,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#MaterialGroup; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -1735,10 +1741,10 @@
     },
     "subClasses" : [ "73", "74" ],
     "comment" : {
-      "en" : "This class remains product-sector neutral. Sector-specific material group subclasses, such as textile material groups or hard component material groups, should be defined in product-specific modules."
+      "en" : "In the Textile model, a material reporting or concentration-calculation group is a structural part of a textile product. It may include textile or non-textile material groupings and is not thereby classified as a standalone product or a CORE material occurrence."
     },
     "id" : "34",
-    "superClasses" : [ "16" ]
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "https://w3id.org/eudpp#SubstanceOfConcern",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1780,12 +1786,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -1805,9 +1811,9 @@
     "label" : {
       "IRI-based" : "QuantitativeValue"
     },
-    "subClasses" : [ "18", "4", "81" ],
+    "subClasses" : [ "19", "4", "81" ],
     "attributes" : [ "external" ],
-    "id" : "22"
+    "id" : "23"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -1840,17 +1846,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -1870,7 +1876,7 @@
       "en" : "ExactThresholdValue"
     },
     "id" : "81",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "84",
@@ -1902,7 +1908,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "11",
+    "id" : "12",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1913,9 +1919,9 @@
     "label" : {
       "IRI-based" : "ConcentrationOfSubstanceOfConcern"
     },
-    "subClasses" : [ "28" ],
+    "subClasses" : [ "36" ],
     "attributes" : [ "external" ],
-    "id" : "2"
+    "id" : "9"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#date",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1949,12 +1955,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       } ]
     },
@@ -1965,8 +1971,8 @@
     "comment" : {
       "en" : "Concentration information for a substance present in a textile product, expressed at product, component, material-group or spare-part level as an exact value, maximum value or range."
     },
-    "id" : "28",
-    "superClasses" : [ "2" ]
+    "id" : "36",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1984,7 +1990,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "42",
+    "id" : "43",
     "label" : {
       "IRI-based" : "string"
     }
@@ -2005,7 +2011,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "19",
+    "id" : "20",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -2062,27 +2068,27 @@
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#ConcentrationReferenceBasis",
-        "type" : "iri"
-      } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
         "value" : "Reference basis against which a substance concentration is calculated or reported.",
         "type" : "label"
       } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#ConcentrationReferenceBasis",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       } ]
     },
@@ -2151,7 +2157,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted.",
+        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted. Issue #9 clarifies the current wording; the historical source statements remain recorded unchanged in migration/legacy-soc-attribution.json.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -2160,29 +2166,29 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#AlertConcentrationThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#AlertConcentrationThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A threshold used to identify a substance concentration for alert-based handling under the applicable operational or regulatory rules.",
+        "type" : "label"
+      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#AlertConcentrationThreshold",
         "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A threshold value above which a substance should trigger alert-based handling, such as disposal instead of recycling.",
-        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2200,9 +2206,9 @@
       "IRI-based" : "AlertConcentrationThreshold",
       "en" : "Alert concentration threshold"
     },
-    "subClasses" : [ "26" ],
+    "subClasses" : [ "27" ],
     "comment" : {
-      "en" : "This class represents circularity-driven threshold values such as c_alert for SoC type (d)."
+      "en" : "A circularity-related threshold, such as c_alert for SoC type (d), whose handling consequences depend on the applicable rule and context; a comparison alone does not determine disposal or recycling obligations."
     },
     "id" : "107",
     "superClasses" : [ "99" ]
@@ -2214,7 +2220,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted.",
+        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted. Issue #9 clarifies the current wording; the historical source statements remain recorded unchanged in migration/legacy-soc-attribution.json.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -2223,29 +2229,29 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#NonExemptionThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A threshold value above which an information element may not be exempted.",
-        "type" : "label"
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#NonExemptionThreshold",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A threshold used when assessing whether an information exemption is available under the applicable rules and context.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2264,7 +2270,7 @@
       "en" : "Non-exemption threshold"
     },
     "comment" : {
-      "en" : "This class represents thresholds used to determine when exemptions are not allowed, such as the 0.1% w/w threshold for certain substances."
+      "en" : "This class represents thresholds relevant to information-exemption rules, such as a specified 0.1% w/w threshold where applicable. A threshold comparison alone does not determine exemption eligibility or legal compliance."
     },
     "id" : "62",
     "superClasses" : [ "99" ]
@@ -2338,7 +2344,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted.",
+        "value" : "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted. Issue #9 clarifies the current wording; the historical source statements remain recorded unchanged in migration/legacy-soc-attribution.json.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -2359,27 +2365,27 @@
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A threshold value above which a substance of concern must be tracked or reported.",
-        "type" : "label"
-      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#TrackingThreshold",
         "type" : "iri"
       } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A threshold used when assessing whether substance tracking or reporting is required under the applicable rules and context.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -2387,9 +2393,9 @@
       "IRI-based" : "TrackingThreshold",
       "en" : "Tracking threshold"
     },
-    "subClasses" : [ "21" ],
+    "subClasses" : [ "22" ],
     "comment" : {
-      "en" : "This class represents thresholds used to determine whether a substance of concern must be tracked or reported in the DPP context."
+      "en" : "This threshold supports a contextual tracking or reporting decision; exceeding it does not by itself establish a mandatory DPP reporting obligation or legal non-compliance."
     },
     "id" : "46",
     "superClasses" : [ "99" ]
@@ -2437,12 +2443,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -2453,7 +2459,7 @@
     "comment" : {
       "en" : "Information object attached to a SubstancePresenceContext in order to describe the reported location of the substance within the product. This class does not imply a formal spatial model."
     },
-    "id" : "15"
+    "id" : "16"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -2471,17 +2477,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2492,7 +2498,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
+          "value" : "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -2502,12 +2508,7 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
+          "value" : "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -2522,10 +2523,20 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation",
           "type" : "iri"
         } ],
         "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        }, {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
@@ -2534,11 +2545,6 @@
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-ontology",
-          "type" : "iri"
-        }, {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -2578,12 +2584,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       } ]
     },
@@ -2594,7 +2600,7 @@
     "comment" : {
       "en" : "A versioned reference identifying the textile-product-group source that qualifies a substance under the product-group-specific type (d) criterion."
     },
-    "id" : "36",
+    "id" : "39",
     "superClasses" : [ "44" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-core#FibreCompositionComponent",
@@ -2635,17 +2641,17 @@
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ThresholdEvaluation; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A contextual regulatory evaluation in which a reported concentration is compared with an applicable regulatory threshold.",
-        "type" : "label"
-      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#ThresholdEvaluation",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A contextual regulatory evaluation in which a reported concentration is compared with an applicable regulatory threshold.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -2676,7 +2682,7 @@
       "IRI-based" : "Substance"
     },
     "attributes" : [ "external" ],
-    "id" : "10"
+    "id" : "11"
   }, {
     "iri" : "https://w3id.org/eudpp#SubstancePresence",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2684,9 +2690,9 @@
     "label" : {
       "IRI-based" : "SubstancePresence"
     },
-    "subClasses" : [ "12" ],
+    "subClasses" : [ "13" ],
     "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "14"
   }, {
     "iri" : "https://si-digital-framework.org/SI#MeasurementUnit",
     "baseIri" : "https://si-digital-framework.org/SI",
@@ -2695,7 +2701,7 @@
       "IRI-based" : "MeasurementUnit"
     },
     "attributes" : [ "external" ],
-    "id" : "29"
+    "id" : "49"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -2713,17 +2719,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ExternalRegulatoryReference; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ExternalRegulatoryReference; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -2809,12 +2815,12 @@
     "comment" : {
       "en" : "A textile-sector alert concentration used to inform sorting, recycling or environmentally sound end-of-life handling when the substance may hinder circular treatment."
     },
-    "id" : "26",
+    "id" : "27",
     "superClasses" : [ "107" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "148",
+    "id" : "147",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -2990,17 +2996,17 @@
           "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#BelowThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
           "type" : "label"
         } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Evaluation result indicating that the reported concentration is below the applicable threshold.",
-          "type" : "label"
-        } ],
         "wasDerivedFrom" : [ {
           "identifier" : "wasDerivedFrom",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/soc#BelowThreshold",
           "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Evaluation result indicating that the reported concentration is below the applicable threshold.",
+          "type" : "label"
         } ],
         "source" : [ {
           "identifier" : "source",
@@ -3061,7 +3067,7 @@
     "comment" : {
       "en" : "This class is used as a controlled vocabulary for the outcome of threshold evaluation."
     },
-    "id" : "64"
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#InstructionType",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -3079,17 +3085,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#InstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#InstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -3106,12 +3112,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       } ]
     },
@@ -3135,17 +3141,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SafeUseInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SafeUseInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
+          "type" : "label"
         } ],
         "wasDerivedFrom" : [ {
           "identifier" : "wasDerivedFrom",
@@ -3188,17 +3194,17 @@
           "value" : "https://w3id.org/eudpp/textile-soc",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#RecyclingInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#RecyclingInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
+          "type" : "label"
         } ],
         "wasDerivedFrom" : [ {
           "identifier" : "wasDerivedFrom",
@@ -3271,7 +3277,7 @@
       "en" : "MaximumThresholdValue"
     },
     "id" : "4",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#TextileMaterialGroup",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -3283,27 +3289,27 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -3324,9 +3330,18 @@
     "label" : {
       "IRI-based" : "SoCQualificationAssertion"
     },
-    "subClasses" : [ "54" ],
+    "subClasses" : [ "55" ],
     "attributes" : [ "external" ],
-    "id" : "24"
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/eudpp#Product",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "31"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#ReportingLevel",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -3356,27 +3371,27 @@
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ReportingLevel; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Declared level of granularity at which a substance-related information item is reported.",
-        "type" : "label"
-      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#ReportingLevel",
         "type" : "iri"
       } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Declared level of granularity at which a substance-related information item is reported.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -3412,17 +3427,17 @@
           "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#MaterialLevel; local adaptation: docs/decisions/TXT-DEC-010.md",
           "type" : "label"
         } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Reporting level corresponding to a material or material group within a product structure.",
-          "type" : "label"
-        } ],
         "wasDerivedFrom" : [ {
           "identifier" : "wasDerivedFrom",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/soc#MaterialLevel",
           "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Reporting level corresponding to a material or material group within a product structure.",
+          "type" : "label"
         } ],
         "source" : [ {
           "identifier" : "source",
@@ -3446,15 +3461,6 @@
     },
     "id" : "137"
   }, {
-    "iri" : "https://w3id.org/eudpp#Product",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Product"
-    },
-    "attributes" : [ "external" ],
-    "id" : "31"
-  }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#RangeThresholdValue",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
     "instances" : 0,
@@ -3465,17 +3471,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -3494,8 +3500,8 @@
       "IRI-based" : "RangeThresholdValue",
       "en" : "RangeThresholdValue"
     },
-    "id" : "18",
-    "superClasses" : [ "22" ]
+    "id" : "19",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -3566,17 +3572,17 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "iri"
-      }, {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -3587,8 +3593,8 @@
     "comment" : {
       "en" : "A product-group-specific type (d) qualification indicating that a substance hinders the reuse or recycling of a textile product or textile material stream."
     },
-    "id" : "54",
-    "superClasses" : [ "24" ]
+    "id" : "55",
+    "superClasses" : [ "25" ]
   } ],
   "property" : [ {
     "id" : "0",
@@ -3600,26 +3606,26 @@
     "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "9",
+    "id" : "10",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "14",
+    "id" : "15",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "17",
+    "id" : "18",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "20",
+    "id" : "21",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "23",
+    "id" : "24",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "25",
+    "id" : "26",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "27",
-    "type" : "owl:someValuesFrom"
+    "id" : "28",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "30",
     "type" : "owl:someValuesFrom"
@@ -3630,32 +3636,29 @@
     "id" : "35",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "38",
+    "id" : "37",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "39",
+    "id" : "38",
     "type" : "owl:disjointWith"
   }, {
     "id" : "40",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "41",
+    "id" : "42",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "48",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "50",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "52",
     "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "53",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "56",
     "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "57",
     "type" : "owl:someValuesFrom"
@@ -3671,6 +3674,9 @@
   }, {
     "id" : "63",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "66",
     "type" : "rdfs:SubClassOf"
@@ -3741,7 +3747,7 @@
     "id" : "112",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "55",
+    "id" : "56",
     "type" : "owl:objectProperty"
   }, {
     "id" : "114",
@@ -3834,7 +3840,7 @@
     "id" : "146",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "147",
+    "id" : "148",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "149",
@@ -3880,7 +3886,7 @@
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation",
+    "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
     "range" : "2",
     "annotations" : {
@@ -3896,29 +3902,29 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesConcentrationInformation; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#evaluatesConcentrationInformation",
-        "type" : "iri"
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Links a threshold evaluation to the concentration information being evaluated.",
+        "value" : "Links a threshold evaluation to its result.",
         "type" : "label"
+      } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#hasThresholdEvaluationResult",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3933,8 +3939,8 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "evaluatesConcentrationInformation",
-      "en" : "evaluates concentration information"
+      "IRI-based" : "hasThresholdEvaluationResult",
+      "en" : "has threshold evaluation result"
     },
     "domain" : "1",
     "attributes" : [ "object", "someValues" ],
@@ -3985,7 +3991,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "2",
+    "range" : "9",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -3999,17 +4005,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesConcentrationInformation; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesConcentrationInformation; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -4026,12 +4032,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -4045,7 +4051,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#substanceIdentifier",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "11",
+    "range" : "12",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4057,6 +4063,12 @@
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-soc",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
       "sourceLocator" : [ {
@@ -4065,10 +4077,10 @@
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#substanceIdentifier; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "value" : "https://w3id.org/eudpp/soc#substanceIdentifier",
         "type" : "iri"
       } ],
       "definition" : [ {
@@ -4077,21 +4089,15 @@
         "value" : "Identifier used to match a substance against regulatory lists.",
         "type" : "label"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#substanceIdentifier",
-        "type" : "iri"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       } ]
     },
@@ -4099,16 +4105,16 @@
       "IRI-based" : "substanceIdentifier",
       "en" : "substance identifier"
     },
-    "domain" : "10",
+    "domain" : "11",
     "comment" : {
       "en" : "Functional interoperability property used for cross-checking against SVHC, CLP, POPs or other external references."
     },
     "attributes" : [ "datatype" ],
-    "id" : "9"
+    "id" : "10"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#refersToProductPartForLocation",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "16",
+    "range" : "17",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4122,22 +4128,16 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#refersToProductPartForLocation; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
+      "sourceType" : [ {
+        "identifier" : "sourceType",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#refersToProductPartForLocation",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
       "definition" : [ {
@@ -4145,6 +4145,12 @@
         "language" : "en",
         "value" : "Links a location information object to the product part to which the reported location refers.",
         "type" : "label"
+      } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#refersToProductPartForLocation",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4162,16 +4168,16 @@
       "IRI-based" : "refersToProductPartForLocation",
       "en" : "refers to product part for location"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "Optional property used when the reported location refers to a specific part of the product rather than to the whole product."
     },
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#lowerBound",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "19",
+    "range" : "20",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4179,17 +4185,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -4208,13 +4214,13 @@
       "IRI-based" : "lowerBound",
       "en" : "lowerBound"
     },
-    "domain" : "18",
+    "domain" : "19",
     "attributes" : [ "datatype" ],
-    "id" : "17"
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "22",
+    "range" : "23",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4268,26 +4274,26 @@
       "IRI-based" : "hasThresholdQuantitativeValue",
       "en" : "has threshold quantitative value"
     },
-    "domain" : "21",
+    "domain" : "22",
     "comment" : {
       "en" : "This property links a regulatory threshold to an exact, maximum, or range quantitative value."
     },
     "attributes" : [ "object", "someValues" ],
-    "id" : "20"
+    "id" : "21"
   }, {
     "iri" : "https://w3id.org/eudpp#hasApplicableQualification",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "24",
+    "range" : "25",
     "label" : {
       "IRI-based" : "hasApplicableQualification"
     },
-    "domain" : "12",
+    "domain" : "13",
     "attributes" : [ "object", "external", "someValues" ],
-    "id" : "23"
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "22",
+    "range" : "23",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4341,22 +4347,17 @@
       "IRI-based" : "hasThresholdQuantitativeValue",
       "en" : "has threshold quantitative value"
     },
-    "domain" : "26",
+    "domain" : "27",
     "comment" : {
       "en" : "This property links a regulatory threshold to an exact, maximum, or range quantitative value."
     },
     "attributes" : [ "object", "someValues" ],
-    "id" : "25"
+    "id" : "26"
   }, {
-    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "29",
-    "label" : {
-      "IRI-based" : "hasMeasurementUnit"
-    },
-    "domain" : "28",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "27"
+    "range" : "13",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
   }, {
     "iri" : "https://w3id.org/eudpp#isSubstancePresenceOf",
     "baseIri" : "https://w3id.org/eudpp",
@@ -4364,7 +4365,7 @@
     "label" : {
       "IRI-based" : "isSubstancePresenceOf"
     },
-    "domain" : "12",
+    "domain" : "13",
     "attributes" : [ "object", "external", "someValues" ],
     "id" : "30"
   }, {
@@ -4374,33 +4375,33 @@
     "label" : {
       "IRI-based" : "concernsSubstance"
     },
-    "domain" : "12",
+    "domain" : "13",
     "attributes" : [ "object", "external", "someValues" ],
     "id" : "32"
   }, {
-    "range" : "37",
+    "range" : "13",
     "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
-    "range" : "12",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "29",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "13",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
-    "range" : "12",
-    "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "39"
-  }, {
-    "range" : "12",
-    "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "29",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#locationDescriptor",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "42",
+    "range" : "43",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4414,17 +4415,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#locationDescriptor; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#locationDescriptor; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -4454,37 +4455,36 @@
       "IRI-based" : "locationDescriptor",
       "en" : "location descriptor"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "Free-text description used because the JRC and ESPR do not define a controlled vocabulary or formal spatial model for location. This textual description may complement a structured reference to a product part."
     },
     "attributes" : [ "datatype" ],
-    "id" : "41"
+    "id" : "42"
   }, {
-    "range" : "36",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "external", "someValues" ],
     "id" : "48"
   }, {
-    "range" : "37",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "50"
+    "range" : "39",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-soc#upperBound",
+    "iri" : "https://w3id.org/eudpp/textile-soc#lowerBound",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "51",
+    "range" : "52",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-soc",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
         "type" : "iri"
       } ],
       "sourceLocator" : [ {
@@ -4493,10 +4493,16 @@
         "value" : "docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
+      } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "The upper bound of a Textile range threshold expression.",
+        "value" : "The lower bound of a Textile range threshold expression.",
         "type" : "label"
       } ],
       "source" : [ {
@@ -4507,12 +4513,12 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "upperBound",
-      "en" : "upperBound"
+      "IRI-based" : "lowerBound",
+      "en" : "lowerBound"
     },
-    "domain" : "18",
+    "domain" : "19",
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "52"
+    "id" : "53"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#isQualifiedByProductGroupList",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -4564,17 +4570,17 @@
       "IRI-based" : "isQualifiedByProductGroupList",
       "en" : "is qualified by product-group list"
     },
-    "superproperty" : [ "55" ],
-    "domain" : "54",
+    "superproperty" : [ "56" ],
+    "domain" : "55",
     "comment" : {
       "en" : "Links a SoC type (d) qualification to the product-group-specific external list or delegated act used as qualification basis."
     },
     "attributes" : [ "object" ],
-    "id" : "53"
+    "id" : "54"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-soc#lowerBound",
+    "iri" : "https://w3id.org/eudpp/textile-soc#upperBound",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "49",
+    "range" : "50",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4597,7 +4603,7 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "The lower bound of a Textile range threshold expression.",
+        "value" : "The upper bound of a Textile range threshold expression.",
         "type" : "label"
       } ],
       "source" : [ {
@@ -4608,69 +4614,26 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "lowerBound",
-      "en" : "lowerBound"
+      "IRI-based" : "upperBound",
+      "en" : "upperBound"
     },
-    "domain" : "18",
+    "domain" : "19",
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "56"
+    "id" : "57"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit",
     "baseIri" : "https://w3id.org/eudpp/textile-connector",
-    "range" : "29",
+    "range" : "49",
     "label" : {
       "IRI-based" : "hasMeasurementUnit"
     },
-    "domain" : "18",
+    "domain" : "19",
     "attributes" : [ "object", "external", "someValues" ],
-    "id" : "57"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-soc#maximumValue",
-    "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "59",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-soc",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The upper bound of a Textile maximum threshold expression.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "maximumValue",
-      "en" : "maximumValue"
-    },
-    "domain" : "4",
-    "attributes" : [ "datatype", "someValues" ],
     "id" : "58"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#refersToProductPartForConcentration",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "16",
+    "range" : "17",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4684,22 +4647,16 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#refersToProductPartForConcentration; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
+      "sourceType" : [ {
+        "identifier" : "sourceType",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#refersToProductPartForConcentration",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
       "definition" : [ {
@@ -4708,15 +4665,21 @@
         "value" : "Links a concentration information object to the product part to which the reported concentration refers.",
         "type" : "label"
       } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#refersToProductPartForConcentration",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -4724,7 +4687,7 @@
       "IRI-based" : "refersToProductPartForConcentration",
       "en" : "refers to product part for concentration"
     },
-    "domain" : "2",
+    "domain" : "9",
     "comment" : {
       "en" : "Optional property used when the reported concentration refers to a specific part of the product rather than to the whole product."
     },
@@ -4733,7 +4696,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "22",
+    "range" : "23",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4796,7 +4759,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "64",
+    "range" : "2",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4810,23 +4773,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#hasThresholdEvaluationResult",
-        "type" : "iri"
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -4834,15 +4791,21 @@
         "value" : "Links a threshold evaluation to its result.",
         "type" : "label"
       } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#hasThresholdEvaluationResult",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       } ]
     },
@@ -4854,9 +4817,19 @@
     "attributes" : [ "object" ],
     "id" : "63"
   }, {
-    "range" : "16",
+    "iri" : "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/eudpp/textile-connector",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "64"
+  }, {
+    "range" : "17",
     "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "66"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#relevantToTextileProcess",
@@ -4884,12 +4857,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -4897,7 +4870,7 @@
       "IRI-based" : "relevantToTextileProcess",
       "en" : "relevant to textile process"
     },
-    "domain" : "12",
+    "domain" : "13",
     "comment" : {
       "en" : "Relates a textile substance occurrence to a textile process type that introduced, used, transformed or is affected by the substance."
     },
@@ -4906,7 +4879,7 @@
   }, {
     "range" : "6",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "69"
   }, {
     "iri" : "https://w3id.org/eudpp#hasSoCCriterion",
@@ -4921,7 +4894,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasLocationInformation",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "15",
+    "range" : "16",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -4935,17 +4908,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasLocationInformation; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasLocationInformation; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -4975,7 +4948,7 @@
       "IRI-based" : "hasLocationInformation",
       "en" : "has location information"
     },
-    "domain" : "13",
+    "domain" : "14",
     "comment" : {
       "en" : "This property attaches contextual location information to a substance presence context."
     },
@@ -5010,17 +4983,17 @@
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Indicates the declared type of instruction represented by an instruction information object.",
-        "type" : "label"
-      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#hasInstructionType",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Indicates the declared type of instruction represented by an instruction information object.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5038,7 +5011,7 @@
       "IRI-based" : "hasInstructionType",
       "en" : "has instruction type"
     },
-    "domain" : "43",
+    "domain" : "41",
     "comment" : {
       "en" : "This property expresses whether the instruction concerns safe use, repair, reuse, disassembly, or recycling."
     },
@@ -5055,17 +5028,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5083,7 +5056,7 @@
       "IRI-based" : "hasPresenceChemicalFunction",
       "en" : "has presence chemical function"
     },
-    "domain" : "12",
+    "domain" : "13",
     "comment" : {
       "en" : "Relates a textile substance occurrence to the chemical function performed in that textile context."
     },
@@ -5092,7 +5065,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasPart",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "16",
+    "range" : "17",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -5133,12 +5106,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -5192,7 +5165,7 @@
       "IRI-based" : "upperBound",
       "en" : "upperBound"
     },
-    "domain" : "18",
+    "domain" : "19",
     "attributes" : [ "datatype" ],
     "id" : "89"
   }, {
@@ -5246,7 +5219,7 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Qualification applicability in the Textile SoC profile. This differs from dpp:appliesToProduct, whose domain is DigitalProductPassport. Always use the txtsoc prefix for qualification scope.",
+        "value" : "Qualification applicability in the Textile SoC profile. This differs from dpp:appliesToProduct, whose domain is dpp:DPP. Always use the txtsoc prefix for qualification scope.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -5255,17 +5228,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -5284,7 +5257,7 @@
       "IRI-based" : "appliesToProduct",
       "en" : "qualification applies to product"
     },
-    "domain" : "24",
+    "domain" : "25",
     "attributes" : [ "object" ],
     "id" : "94"
   }, {
@@ -5304,23 +5277,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#instructionContent; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#instructionContent",
-        "type" : "iri"
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#instructionContent; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -5328,15 +5295,21 @@
         "value" : "Textual content of an instruction related to a substance present in a product.",
         "type" : "label"
       } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#instructionContent",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -5344,7 +5317,7 @@
       "IRI-based" : "instructionContent",
       "en" : "instruction content"
     },
-    "domain" : "43",
+    "domain" : "41",
     "comment" : {
       "en" : "Free-text guidance attached to a substance presence context. The ESPR does not define a controlled vocabulary or formal structure for instruction content."
     },
@@ -5376,12 +5349,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -5389,7 +5362,7 @@
       "IRI-based" : "hasTextileLocationType",
       "en" : "has textile location type"
     },
-    "domain" : "15",
+    "domain" : "16",
     "comment" : {
       "en" : "Relates a location information object to a controlled textile-specific location type."
     },
@@ -5398,7 +5371,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#refersToProductPartForThreshold",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "16",
+    "range" : "17",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5441,12 +5414,18 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "36",
+    "range" : "39",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-soc",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
       } ],
       "sourceLocator" : [ {
@@ -5455,21 +5434,15 @@
         "value" : "Regulation (EU) 2024/1781, Article 2(27)(d).",
         "type" : "label"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -5477,8 +5450,8 @@
       "IRI-based" : "hasTextileProductGroupReference",
       "en" : "has textile product-group reference"
     },
-    "superproperty" : [ "55" ],
-    "domain" : "54",
+    "superproperty" : [ "56" ],
+    "domain" : "55",
     "comment" : {
       "en" : "Relates a textile type (d) qualification to the versioned textile product-group reference supporting that qualification."
     },
@@ -5541,16 +5514,16 @@
       "IRI-based" : "hasConcentrationReferenceBasis",
       "en" : "has concentration reference basis"
     },
-    "domain" : "2",
+    "domain" : "9",
     "comment" : {
       "en" : "This property clarifies the denominator or reference scope of the reported concentration. It is important because the regulatory interpretation of a concentration may differ depending on whether it is calculated against the final product, an article, a product part, or a material group."
     },
     "attributes" : [ "object" ],
     "id" : "101"
   }, {
-    "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult",
+    "iri" : "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "64",
+    "range" : "9",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -5564,28 +5537,28 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesConcentrationInformation; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
+      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#hasThresholdEvaluationResult",
+        "value" : "https://w3id.org/eudpp/soc#evaluatesConcentrationInformation",
         "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Links a threshold evaluation to its result.",
+        "value" : "Links a threshold evaluation to the concentration information being evaluated.",
         "type" : "label"
       } ],
       "source" : [ {
@@ -5601,8 +5574,8 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "hasThresholdEvaluationResult",
-      "en" : "has threshold evaluation result"
+      "IRI-based" : "evaluatesConcentrationInformation",
+      "en" : "evaluates concentration information"
     },
     "domain" : "1",
     "attributes" : [ "object", "someValues" ],
@@ -5624,22 +5597,16 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesAgainstThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
         "language" : "en",
-        "value" : "Links a threshold evaluation to the regulatory threshold used for the comparison.",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesAgainstThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
       "wasDerivedFrom" : [ {
@@ -5647,6 +5614,12 @@
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#evaluatesAgainstThreshold",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a threshold evaluation to the regulatory threshold used for the comparison.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5728,19 +5701,19 @@
     "attributes" : [ "datatype" ],
     "id" : "105"
   }, {
-    "range" : "24",
-    "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "25",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "109"
   }, {
     "range" : "74",
     "domain" : "77",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "110"
   }, {
     "range" : "45",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "111"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#referenceIdentifier",
@@ -5802,23 +5775,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasRegulatoryBasis; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "wasDerivedFrom" : [ {
-        "identifier" : "wasDerivedFrom",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc#hasRegulatoryBasis",
-        "type" : "iri"
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasRegulatoryBasis; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -5826,15 +5793,21 @@
         "value" : "Links a regulatory qualification to the external regulatory reference on which it is based.",
         "type" : "label"
       } ],
+      "wasDerivedFrom" : [ {
+        "identifier" : "wasDerivedFrom",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/soc#hasRegulatoryBasis",
+        "type" : "iri"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -5842,13 +5815,13 @@
       "IRI-based" : "hasRegulatoryBasis",
       "en" : "has regulatory basis"
     },
-    "domain" : "24",
-    "subproperty" : [ "100", "53", "113" ],
+    "domain" : "25",
+    "subproperty" : [ "100", "54", "113" ],
     "comment" : {
       "en" : "Generic property linking a qualification to its supporting external legal or classificatory basis."
     },
     "attributes" : [ "object" ],
-    "id" : "55"
+    "id" : "56"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluation",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -5866,29 +5839,29 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluation; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Links a substance presence context to a threshold evaluation associated with it.",
-        "type" : "label"
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#hasThresholdEvaluation",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a substance presence context to a threshold evaluation associated with it.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -5906,58 +5879,58 @@
       "IRI-based" : "hasThresholdEvaluation",
       "en" : "has threshold evaluation"
     },
-    "domain" : "13",
+    "domain" : "14",
     "attributes" : [ "object" ],
     "id" : "114"
   }, {
     "range" : "45",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
-    "range" : "13",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "range" : "117",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "118"
   }, {
     "range" : "107",
-    "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "119"
   }, {
     "range" : "78",
     "domain" : "77",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "120"
   }, {
     "range" : "46",
-    "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "121"
   }, {
     "range" : "99",
     "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "122"
   }, {
-    "range" : "2",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "9",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "123"
   }, {
     "range" : "99",
     "domain" : "46",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "124"
   }, {
     "range" : "99",
     "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "125"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#qualificationSource",
@@ -5988,17 +5961,17 @@
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Textual reference to the legal or regulatory source on which a qualification is based.",
-        "type" : "label"
-      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#qualificationSource",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Textual reference to the legal or regulatory source on which a qualification is based.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6016,7 +5989,7 @@
       "IRI-based" : "qualificationSource",
       "en" : "qualification source"
     },
-    "domain" : "24",
+    "domain" : "25",
     "attributes" : [ "datatype" ],
     "id" : "127"
   }, {
@@ -6048,27 +6021,27 @@
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#analyticalMethod; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Textual description of the analytical method used to determine or verify the concentration.",
-        "type" : "label"
-      } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#analyticalMethod",
         "type" : "iri"
       } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Textual description of the analytical method used to determine or verify the concentration.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       } ]
     },
@@ -6076,7 +6049,7 @@
       "IRI-based" : "analyticalMethod",
       "en" : "analytical method"
     },
-    "domain" : "2",
+    "domain" : "9",
     "attributes" : [ "datatype" ],
     "id" : "128"
   }, {
@@ -6096,23 +6069,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Links a concentration information object to a regulatory threshold that is applicable for its interpretation.",
-        "type" : "label"
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -6120,15 +6087,21 @@
         "value" : "https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold",
         "type" : "iri"
       } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a concentration information object to a regulatory threshold that is applicable for its interpretation.",
+        "type" : "label"
+      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -6136,21 +6109,21 @@
       "IRI-based" : "hasApplicableRegulatoryThreshold",
       "en" : "has applicable regulatory threshold"
     },
-    "domain" : "2",
+    "domain" : "9",
     "comment" : {
       "en" : "This property indicates which regulatory thresholds are relevant for interpreting a reported concentration. It does not by itself express whether the threshold is met, exceeded, or violated."
     },
     "attributes" : [ "object" ],
     "id" : "129"
   }, {
-    "range" : "22",
+    "range" : "23",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "130"
   }, {
-    "range" : "22",
-    "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "23",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "131"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#evaluationNote",
@@ -6169,17 +6142,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluationNote; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluationNote; local adaptation: docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -6196,12 +6169,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://w3id.org/eudpp/soc",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/soc",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       } ]
     },
@@ -6213,19 +6186,19 @@
     "attributes" : [ "datatype" ],
     "id" : "132"
   }, {
-    "range" : "22",
+    "range" : "23",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "133"
   }, {
     "range" : "44",
-    "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "134"
   }, {
-    "range" : "43",
-    "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "41",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdReportingLevel",
@@ -6238,17 +6211,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -6273,12 +6246,12 @@
   }, {
     "range" : "34",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "138"
   }, {
     "range" : "34",
     "domain" : "73",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "139"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasConcentrationReportingLevel",
@@ -6297,17 +6270,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasConcentrationReportingLevel; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -6337,21 +6310,21 @@
       "IRI-based" : "hasConcentrationReportingLevel",
       "en" : "has concentration reporting level"
     },
-    "domain" : "2",
+    "domain" : "9",
     "comment" : {
       "en" : "This property expresses whether the concentration is reported at product, component, material, or spare-part level."
     },
     "attributes" : [ "object" ],
     "id" : "141"
   }, {
-    "range" : "18",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "22",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "142"
   }, {
-    "range" : "81",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "4",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "143"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#isQualifiedBySVHCList",
@@ -6370,17 +6343,17 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isQualifiedBySVHCList; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "wasDerivedFrom" : [ {
         "identifier" : "wasDerivedFrom",
@@ -6404,8 +6377,8 @@
       "IRI-based" : "isQualifiedBySVHCList",
       "en" : "is qualified by SVHC list"
     },
-    "superproperty" : [ "55" ],
-    "domain" : "24",
+    "superproperty" : [ "56" ],
+    "domain" : "25",
     "comment" : {
       "en" : "Links a SoC type (a) qualification to the external SVHC Candidate List used as qualification basis."
     },
@@ -6413,44 +6386,87 @@
     "id" : "113"
   }, {
     "range" : "62",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "144"
   }, {
-    "range" : "26",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "27",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "145"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit",
-    "baseIri" : "https://w3id.org/eudpp/textile-connector",
-    "range" : "29",
-    "label" : {
-      "IRI-based" : "hasMeasurementUnit"
-    },
-    "domain" : "81",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "146"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#numericValue",
     "baseIri" : "https://w3id.org/eudpp/textile-connector",
-    "range" : "148",
+    "range" : "147",
     "label" : {
       "IRI-based" : "numericValue"
     },
     "domain" : "81",
     "attributes" : [ "datatype", "external", "someValues" ],
-    "id" : "147"
+    "id" : "146"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit",
     "baseIri" : "https://w3id.org/eudpp/textile-connector",
-    "range" : "29",
+    "range" : "49",
     "label" : {
       "IRI-based" : "hasMeasurementUnit"
     },
-    "domain" : "4",
+    "domain" : "81",
     "attributes" : [ "object", "external", "someValues" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-soc#maximumValue",
+    "baseIri" : "https://w3id.org/eudpp/textile-soc",
+    "range" : "59",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-soc",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The upper bound of a Textile maximum threshold expression.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "maximumValue",
+      "en" : "maximumValue"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "someValues" ],
     "id" : "149"
+  }, {
+    "iri" : "https://w3id.org/eudpp#maximumNumericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "maximumNumericalValue"
+    },
+    "domain" : "71",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "150"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#referenceVersion",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
@@ -6493,16 +6509,6 @@
     },
     "domain" : "45",
     "attributes" : [ "datatype" ],
-    "id" : "150"
-  }, {
-    "iri" : "https://w3id.org/eudpp#maximumNumericalValue",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "84",
-    "label" : {
-      "IRI-based" : "maximumNumericalValue"
-    },
-    "domain" : "71",
-    "attributes" : [ "datatype", "external" ],
     "id" : "151"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#referenceDate",
@@ -6548,58 +6554,15 @@
     "attributes" : [ "datatype" ],
     "id" : "152"
   }, {
-    "range" : "21",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "19",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "153"
   }, {
-    "range" : "4",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "81",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "154"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdReferenceBasis",
-    "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "102",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-soc",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Records the reference basis applicable to a regulatory threshold comparison.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasThresholdReferenceBasis",
-      "en" : "hasThresholdReferenceBasis"
-    },
-    "domain" : "99",
-    "attributes" : [ "object" ],
-    "id" : "155"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#isPartOfProduct",
     "inverse" : "87",
@@ -6658,16 +6621,59 @@
       "IRI-based" : "isPartOfProduct",
       "en" : "is part of product"
     },
-    "domain" : "16",
+    "domain" : "17",
     "comment" : {
       "en" : "This property expresses structural inclusion of a part within a product."
     },
+    "attributes" : [ "object" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdReferenceBasis",
+    "baseIri" : "https://w3id.org/eudpp/textile-soc",
+    "range" : "102",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-soc",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "docs/decisions/TXT-DEC-010.md",
+        "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#projectDecision",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Records the reference basis applicable to a regulatory threshold comparison.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasThresholdReferenceBasis",
+      "en" : "hasThresholdReferenceBasis"
+    },
+    "domain" : "99",
     "attributes" : [ "object" ],
     "id" : "156"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "22",
+    "range" : "23",
     "annotations" : {
       "modellingNote" : [ {
         "identifier" : "modellingNote",
@@ -6740,7 +6746,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation",
     "baseIri" : "https://w3id.org/eudpp/textile-soc",
-    "range" : "37",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6776,7 +6782,7 @@
       "IRI-based" : "hasTextileHandlingInformation",
       "en" : "has textile handling information"
     },
-    "domain" : "12",
+    "domain" : "13",
     "comment" : {
       "en" : "Relates a textile substance-of-concern presence context to textile-specific safe-use or lifecycle-handling information."
     },
@@ -6799,22 +6805,16 @@
         "value" : "https://w3id.org/eudpp/textile-soc",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesAgainstThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
       } ],
-      "definition" : [ {
-        "identifier" : "definition",
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
         "language" : "en",
-        "value" : "Links a threshold evaluation to the regulatory threshold used for the comparison.",
+        "value" : "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesAgainstThreshold; local adaptation: docs/decisions/TXT-DEC-010.md",
         "type" : "label"
       } ],
       "wasDerivedFrom" : [ {
@@ -6822,6 +6822,12 @@
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/soc#evaluatesAgainstThreshold",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a threshold evaluation to the regulatory threshold used for the comparison.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6878,12 +6884,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "value" : "https://w3id.org/eudpp/textile-ontology",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-ontology",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
       } ]
     },
@@ -6891,7 +6897,7 @@
       "IRI-based" : "hasPresenceUseCategory",
       "en" : "has presence use category"
     },
-    "domain" : "12",
+    "domain" : "13",
     "comment" : {
       "en" : "Classifies the textile chemical occurrence by whether it is associated with process use, intended performance use or unintended presence. The classification is attached to the occurrence rather than globally to the substance identity."
     },

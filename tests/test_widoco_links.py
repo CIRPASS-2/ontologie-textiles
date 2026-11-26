@@ -9,15 +9,15 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 @pytest.mark.parametrize('module',[
-    'assessment','associated-materials','connector','context','core','durability',
+    'assessment','associated-materials','common','connector','context','core','durability',
     'indicator','process','recyclability','repairability','soc','structure',
 ])
 def test_canonical_annotation_rendering_is_idempotent(module):
-    graph=Graph().parse(ROOT/f'ontology/textile-{module}.ttl')
+    graph=Graph().parse(ROOT/'compat/textile-connector.ttl' if module=='connector' else ROOT/f'ontology/textile-{module}.ttl')
     text=(ROOT/f'docs/widoco/{module}/sections/crossref-en.html').read_text('utf8')
     assert render(graph,text)==text
     anchors=Anchors();anchors.feed(text)
-    namespace='https://w3id.org/eudpp/textile-'+module+'#'
+    namespace='https://w3id.org/eudpp/textile-'+('connector' if module=='common' else module)+'#'
     names=[str(subject)[len(namespace):] for subject in graph.subjects(RDF.type,OWL.AnnotationProperty)
            if str(subject).startswith(namespace)]
     for name in names:
@@ -28,9 +28,9 @@ def test_canonical_annotation_rendering_is_idempotent(module):
 def test_complete_widoco_inventory():
     report=audit_tree(ROOT/'docs/widoco')
     assert not report['errors']
-    assert report['html_files']==121
-    assert report['ajax_sections']==84
-    assert report['statuses']['application_route']==12
+    assert report['html_files']==131
+    assert report['ajax_sections']==91
+    assert report['statuses']['application_route']==13
 
 
 def test_ajax_links_use_parent_document_base(tmp_path):

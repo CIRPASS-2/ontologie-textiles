@@ -1,0 +1,18 @@
+# Optional reference data. Load explicitly alongside the relevant CORE and Textile graphs.
+@prefix ex: <https://example.org/textile/issue10#> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+ex:PEFCRApparelFootwearV31 a dpp:PEFCR ;
+    rdfs:label "PEFCR Apparel and Footwear v3.1"@en ;
+    dcterms:source <https://environment.ec.europa.eu/news/new-eu-rules-measuring-environmental-impact-clothes-and-shoes-2025-06-25_en> .
+
+ex:ISO4484Part1_2023 a txtass:TestingStandard ;
+    rdfs:label "ISO 4484-1:2023" ;
+    dcterms:source <https://www.iso.org/standard/82238.html> .
+
+ex:ISO4484Part3_2023 a txtass:TestingStandard ;
+    rdfs:label "ISO 4484-3:2023" ;
+    dcterms:source <https://www.iso.org/standard/81035.html> .

@@ -10,6 +10,12 @@ Target specifications describe intended characteristics of process outputs and r
 </p>
 
 <p>
+Reuse concerns a textile product or component that is not waste and is used again for its original purpose. Preparing for reuse concerns checking, cleaning or repairing a product or component that has become waste so it can be reused without other pre-processing. The distinction follows Directive 2008/98/EC Article 3(13) and (16). The end of a use phase can mean the end of use by a particular holder; a later holder may reuse the product for its original purpose without it becoming waste. Membership in EndOfLifeProcess does not itself imply that the product has legally become waste. The legal conditions are stated in the class definitions, but the current OWL and SHACL profiles do not automatically establish or verify the legal waste status of each product involved. Data producers are responsible for selecting the correct process type and supporting that classification. The JRC discusses preparation for reuse as a waste-management pathway, while the separate process class is a project modelling decision, not an enacted ESPR DPP requirement. Existing reuse instances are not automatically reclassified; consumers should review their intended meaning.
+</p>
+<p>
 The module also provides the textile-process layer used by repair, recyclability and lifecycle-event representations.
+</p>
+<p>
+<code>txtind:concernsProduct</code> has domain <code>txtind:Indicator</code> and range <code>dpp:Product</code>; <code>txtind:isIndicatorOf</code> is its subproperty and has inverse <code>txtind:hasIndicator</code>. No inverse is asserted for <code>txtind:concernsProduct</code>. <code>txtprc:concernsProduct</code> has domain <code>txtprc:TextileProcessExecution</code> and range <code>txt:TextileProduct</code>, and is inverse to <code>txtprc:hasProcessExecution</code>. The CORE CON 2.4.0 source snapshot defines <code>dpp:concernsProduct</code> with domain <code>dpp:ProductEvent</code> and range <code>dpp:Product</code>; it is excluded from the selected CON MIREOT and the Textile runtime closure. No local-to-CORE OWL alignment is asserted. If either local property were declared its subproperty and the relevant full CORE axioms were loaded, its indicator or process execution subject would be inferred to be a <code>dpp:ProductEvent</code>.
 </p>
 </span>

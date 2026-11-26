@@ -378,7 +378,7 @@ txtind:Indicator a owl:Class ;
 
 <https://w3id.org/eudpp/textile-indicator> a owl:Ontology ;
     rdfs:label "EU DPP Textile Indicator Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Indicator Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Indicator Ontology. Version integration-2026-11.3."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -396,12 +396,12 @@ txtind:Indicator a owl:Class ;
     rdfs:comment "This module does not assert a subclass alignment to dpp:QualityIndicator. CORE dpp:QuantitativeProperty, a superclass of dpp:QualityIndicator, represents a quantitative property or measurand of a product. Textile txtcon:QuantitativeValue represents a structured numerical value with a measurement unit and, optionally, a quantity kind. These roles are distinct; the CORE hierarchy alone does not establish their equivalence or justify an Indicator alignment."@en,
         "This module models interpretive or calculated indicators. It does not treat a raw assessment result, a durability characteristic, a threshold or a quantitative value as an indicator."@en ;
     owl:imports <https://w3id.org/eudpp/textile-assessment>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-indicator/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-indicator/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-indicator/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-indicator/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( txtind:Indicator txtass:AssessmentResult txtdur:ObservedPerformanceParameter txtdur:ObservedDegradationPhenomenon txtdur:FailureMode txtcon:QuantitativeValue ) .

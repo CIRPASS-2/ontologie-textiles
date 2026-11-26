@@ -42,6 +42,14 @@ dpp:ThresholdOfSubstanceOfConcern a owl:Class ;
 By default, information on all substances of concern present in a product, above the  relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]"""@en ;
     rdfs:subClassOf dpp:QuantitativeProperty .
 
+dpp:commodityCode a owl:DatatypeProperty ;
+    rdfs:label "commodity code"@en ;
+    dcterms:references "ESPR Annex III (d)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment "Relevant commodity codes, such as a TARIC code as defined in Council Regulation (EEC) No 2658/87.[ESPR Annex III (d)]"@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:range xsd:string .
+
 dpp:hasMeasurementUnit a owl:ObjectProperty ;
     rdfs:label "has measurement unit"@en ;
     rdfs:comment "Linking quantitative property to the unit of measurement."@en ;

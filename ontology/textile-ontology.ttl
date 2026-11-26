@@ -18,7 +18,7 @@
     dcterms:title "CIRPASS Textile Ontology"@en ;
     owl:imports <https://w3id.org/eudpp/textile-assessment>,
         <https://w3id.org/eudpp/textile-associated-materials>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-context>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-durability>,
@@ -28,5 +28,6 @@
         <https://w3id.org/eudpp/textile-repairability>,
         <https://w3id.org/eudpp/textile-soc>,
         <https://w3id.org/eudpp/textile-structure> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-ontology/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" .
+    owl:priorVersion <https://w3id.org/eudpp/textile-ontology/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-ontology/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" .

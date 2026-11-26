@@ -1149,7 +1149,7 @@ This section provides details for each class and property defined by EU DPP Text
     is in domain of
    </dt>
    <dd>
-    <a href="#hasRecycledContentMassFractionValue" title="https://w3id.org/eudpp/textile-recyclability#hasRecycledContentMassFractionValue">has recycled content mass fraction value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRecycledContentSource" title="https://w3id.org/eudpp/textile-recyclability#hasRecycledContentSource">has recycled content source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRecycledMaterialMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasRecycledMaterialMassValue">has recycled material mass value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReferenceProductMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasReferenceProductMassValue">has reference product mass value</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasRecycledContentMassFractionValue" title="https://w3id.org/eudpp/textile-recyclability#hasRecycledContentMassFractionValue">has recycled content mass fraction value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRecycledContentSource" title="https://w3id.org/eudpp/textile-recyclability#hasRecycledContentSource">has recycled content source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRecycledMaterialMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasRecycledMaterialMassValue">has recycled material mass value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReferenceMaterialMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasReferenceMaterialMassValue">has reference material mass value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReferenceProductMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasReferenceProductMassValue">has reference product mass value</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -1787,6 +1787,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#hasRecyclingLoop" title="https://w3id.org/eudpp/textile-recyclability#hasRecyclingLoop">has recycling loop</a></li>
   <li><a href="#hasRecyclingYieldResult" title="https://w3id.org/eudpp/textile-recyclability#hasRecyclingYieldResult">has recycling yield result</a></li>
   <li><a href="#hasRecyclingYieldValue" title="https://w3id.org/eudpp/textile-recyclability#hasRecyclingYieldValue">has recycling yield value</a></li>
+  <li><a href="#hasReferenceMaterialMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasReferenceMaterialMassValue">has reference material mass value</a></li>
   <li><a href="#hasReferenceProductMassValue" title="https://w3id.org/eudpp/textile-recyclability#hasReferenceProductMassValue">has reference product mass value</a></li>
   <li><a href="#hasScoringRule" title="https://w3id.org/eudpp/textile-recyclability#hasScoringRule">has scoring rule</a></li>
   <li><a href="#hasWasteSourceType" title="https://w3id.org/eudpp/textile-recyclability#hasWasteSourceType">has waste source type</a></li>
@@ -2597,7 +2598,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>has recyclability technology level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#hasRecyclabilityTechnologyLevel</p>
   <div class="comment">
-   <span class="markdown">Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Connector.</span>
+   <span class="markdown">Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Common.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2753,7 +2754,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>has recycled content declaration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#hasRecycledContentDeclaration</p>
   <div class="comment">
-   <span class="markdown">Relates a product to a recycled-content declaration.</span>
+   <span class="markdown">Relates a product or a material constituent to a recycled-content declaration concerning that subject.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2780,7 +2781,7 @@ This section provides details for each class and property defined by EU DPP Text
      has domain
     </dt>
     <dd>
-     <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="https://w3id.org/eudpp#MaterialOfComposition" target="_blank" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2795,7 +2796,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>has recycled content mass fraction value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#hasRecycledContentMassFractionValue</p>
   <div class="comment">
-   <span class="markdown">Relates a recycled-content declaration to a quantitative mass fraction expressed using the shared textile value pattern.</span>
+   <span class="markdown">Relates a recycled-content declaration to the recycled mass fraction relative to the declared product or material constituent reference mass, according to the applicable methodology, using the shared textile value pattern.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2876,7 +2877,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>has recycled content technology level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#hasRecycledContentTechnologyLevel</p>
   <div class="comment">
-   <span class="markdown">Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Connector.</span>
+   <span class="markdown">Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Common.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2915,7 +2916,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>has recycled material mass value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#hasRecycledMaterialMassValue</p>
   <div class="comment">
-   <span class="markdown">Relates a recycled-content declaration to the absolute mass of recycled material included in the product.</span>
+   <span class="markdown">Relates a recycled-content declaration to the absolute mass of recycled material included in the declared product or material constituent, according to the applicable methodology.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -3060,6 +3061,45 @@ This section provides details for each class and property defined by EU DPP Text
     </dt>
     <dd>
      <a href="#RecyclingYieldResult" title="https://w3id.org/eudpp/textile-recyclability#RecyclingYieldResult">Recycling yield result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-connector#QuantitativeValue" target="_blank" title="https://w3id.org/eudpp/textile-connector#QuantitativeValue">Quantitative Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasReferenceMaterialMassValue">
+  <h3>has reference material mass value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#hasReferenceMaterialMassValue</p>
+  <div class="comment">
+   <span class="markdown">Relates a recycled-content declaration to the reference mass of the material constituent to which the declaration applies, according to the applicable methodology.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-recyclability">https://w3id.org/eudpp/textile-recyclability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RecycledContentDeclaration" title="https://w3id.org/eudpp/textile-recyclability#RecycledContentDeclaration">Recycled content declaration</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -7040,7 +7080,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>Pre-consumer recycled content<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-recyclability#preConsumerRecycledContent</p>
   <div class="comment">
-   <span class="markdown">Recycled material recovered from waste generated before a product reaches the consumer.</span>
+   <span class="markdown">Recycled material originating from pre-consumer textile waste generated at the retailer stage by discarding unsold textile products, as distinguished from industrial production waste in the JRC textile terminology.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -7088,6 +7128,9 @@ This section provides details for each class and property defined by EU DPP Text
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#RecycledContentSourceScheme" title="https://w3id.org/eudpp/textile-recyclability#RecycledContentSourceScheme">Recycled content source scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#modellingNote" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingNote">modelling Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This source category uses the JRC textile waste terminology; it must not be equated automatically with pre-consumer terminology in other methodologies. It identifies recycled-input origin, whereas the textile waste source scheme identifies the stage at which waste is generated."@en</span>
    </dd>
    <dd>
     <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"JRC DPP Study, Section 7.3, printed page 50, pre-consumer recycled-content origin."@en</span>

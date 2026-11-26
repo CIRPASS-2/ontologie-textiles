@@ -288,7 +288,7 @@ txtrec:hasRecyclabilityScore a owl:ObjectProperty ;
 txtrec:hasRecyclabilityTechnologyLevel a owl:ObjectProperty ;
     rdfs:label "has recyclability technology level"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Connector."@en ;
+    rdfs:comment "Classifies a recyclability assessment result using the shared product-technology-level vocabulary defined in Textile Common."@en ;
     rdfs:domain txtrec:RecyclabilityAssessmentResult ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtcon:ProductTechnologyLevelConcept ;
@@ -329,8 +329,9 @@ txtrec:hasRecycledContentDeclaration a owl:ObjectProperty ;
     rdfs:label "has recycled content declaration"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf>,
         <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Relates a product to a recycled-content declaration."@en ;
-    rdfs:domain dpp:Product ;
+    rdfs:comment "Relates a product or a material constituent to a recycled-content declaration concerning that subject."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( dpp:Product dpp:MaterialOfComposition ) ] ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtrec:RecycledContentDeclaration ;
     txtcon:sourceLocator "JRC DPP Study, Section 7.3, printed page 50, data point “Recycled content”."@en ;
@@ -339,7 +340,7 @@ txtrec:hasRecycledContentDeclaration a owl:ObjectProperty ;
 txtrec:hasRecycledContentMassFractionValue a owl:ObjectProperty ;
     rdfs:label "has recycled content mass fraction value"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Relates a recycled-content declaration to a quantitative mass fraction expressed using the shared textile value pattern."@en ;
+    rdfs:comment "Relates a recycled-content declaration to the recycled mass fraction relative to the declared product or material constituent reference mass, according to the applicable methodology, using the shared textile value pattern."@en ;
     rdfs:domain txtrec:RecycledContentDeclaration ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtcon:QuantitativeValue ;
@@ -360,7 +361,7 @@ txtrec:hasRecycledContentSource a owl:ObjectProperty ;
 txtrec:hasRecycledContentTechnologyLevel a owl:ObjectProperty ;
     rdfs:label "has recycled content technology level"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Connector."@en ;
+    rdfs:comment "Classifies a recycled-content assessment result using the shared product-technology-level vocabulary defined in Textile Common."@en ;
     rdfs:domain txtrec:RecycledContentAssessmentResult ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtcon:ProductTechnologyLevelConcept ;
@@ -370,7 +371,7 @@ txtrec:hasRecycledContentTechnologyLevel a owl:ObjectProperty ;
 txtrec:hasRecycledMaterialMassValue a owl:ObjectProperty ;
     rdfs:label "has recycled material mass value"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf> ;
-    rdfs:comment "Relates a recycled-content declaration to the absolute mass of recycled material included in the product."@en ;
+    rdfs:comment "Relates a recycled-content declaration to the absolute mass of recycled material included in the declared product or material constituent, according to the applicable methodology."@en ;
     rdfs:domain txtrec:RecycledContentDeclaration ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     rdfs:range txtcon:QuantitativeValue ;
@@ -408,6 +409,16 @@ txtrec:hasRecyclingYieldValue a owl:ObjectProperty ;
     rdfs:range txtcon:QuantitativeValue ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:modellingAbstraction .
+
+txtrec:hasReferenceMaterialMassValue a owl:ObjectProperty ;
+    rdfs:label "has reference material mass value"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:comment "Relates a recycled-content declaration to the reference mass of the material constituent to which the declaration applies, according to the applicable methodology."@en ;
+    rdfs:domain txtrec:RecycledContentDeclaration ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
+    rdfs:range txtcon:QuantitativeValue ;
+    txtcon:sourceLocator "Issue 13, project-approved material-level declaration extension."@en ;
+    txtcon:sourceType txtcon:projectDecision .
 
 txtrec:hasReferenceProductMassValue a owl:ObjectProperty ;
     rdfs:label "has reference product mass value"@en ;
@@ -1254,7 +1265,8 @@ txtrec:preConsumerRecycledContent a skos:Concept,
     rdfs:label "Pre-consumer recycled content"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf>,
         <https://w3id.org/eudpp/textile-ontology> ;
-    rdfs:comment "Recycled material recovered from waste generated before a product reaches the consumer."@en ;
+    rdfs:comment "Recycled material originating from pre-consumer textile waste generated at the retailer stage by discarding unsold textile products, as distinguished from industrial production waste in the JRC textile terminology."@en ;
+    txtcon:modellingNote "This source category uses the JRC textile waste terminology; it must not be equated automatically with pre-consumer terminology in other methodologies. It identifies recycled-input origin, whereas the textile waste source scheme identifies the stage at which waste is generated."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-recyclability> ;
     skos:inScheme txtrec:RecycledContentSourceScheme ;
     skos:prefLabel "Pre-consumer recycled content"@en ;
@@ -2033,7 +2045,7 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-recyclability> a owl:Ontology ;
     rdfs:label "EU DPP Textile Recyclability Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Recyclability Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Recyclability Ontology. Version integration-2026-11.3."@en ;
     dcterms:created "2026-07-09"^^xsd:date ;
     dcterms:creator "BOUGACHA Racem"@en,
         "Elio Hbeich"@en,
@@ -2056,15 +2068,16 @@ txtrec:RecyclabilityBarrierTypeScheme a skos:ConceptScheme ;
         "Scores and labels are method-specific and do not constitute adopted regulatory classifications unless a future delegated act or standard defines them."@en ;
     owl:imports <https://w3id.org/eudpp/textile-assessment>,
         <https://w3id.org/eudpp/textile-associated-materials>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-event-mireot>,
         <https://w3id.org/eudpp/textile-indicator>,
         <https://w3id.org/eudpp/textile-process>,
         <https://w3id.org/eudpp/textile-soc> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-recyclability/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-recyclability/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
 

@@ -568,6 +568,9 @@ txtass:AssessmentExecution a owl:Class ;
     rdfs:label "Assessment execution"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     rdfs:comment "Concrete performance of an assessment method on a specified product under stated conditions and parameter settings."@en ;
+    rdfs:comment "Execution timing may be stated directly on an instance using prov:startedAtTime and prov:endedAtTime, with explicit prov:Activity typing. These optional timestamps describe execution start and completion, not result generation or EPCIS occurrence or recording time. A date-only dcterms:date is merely a coarse associated date and does not determine either timestamp. No PROV import, class alignment or timestamp inference is asserted by this guidance."@en ;
+    rdfs:seeAlso <http://www.w3.org/ns/prov#startedAtTime>,
+        <http://www.w3.org/ns/prov#endedAtTime> ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
     rdfs:subClassOf txtass:AssessmentElement ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
@@ -598,7 +601,7 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
 
 <https://w3id.org/eudpp/textile-assessment> a owl:Ontology ;
     rdfs:label "EU DPP Textile Assessment Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Assessment Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Assessment Ontology. Version integration-2026-11.3."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -609,21 +612,69 @@ txtasscs:ThresholdComparisonOperatorScheme a skos:ConceptScheme ;
     dcterms:description "Ontology module for textile assessment methods, standards, executions, conditions, parameter settings, results, interpretation scales, endpoints and performance thresholds."@en ;
     dcterms:issued "2026-03-06"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-10-27"^^xsd:date ;
+    dcterms:modified "2026-11-16"^^xsd:date ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
     dcterms:title "EU DPP Textile Assessment Ontology"@en ;
     vann:preferredNamespacePrefix "txtass" ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-assessment#" ;
-    rdfs:comment "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern."@en,
+    rdfs:comment "Quantitative results, quantitative parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Common pattern; categorical parameter settings use SKOS concepts."@en,
         "The module separates reusable methods and standards, concrete assessment executions, and the results produced by those executions."@en ;
-    owl:imports <https://w3id.org/eudpp/textile-connector>,
+    owl:imports <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
-        <https://w3id.org/eudpp/textile-durability> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-assessment/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-assessment/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+        <https://w3id.org/eudpp/textile-durability>,
+        <https://w3id.org/eudpp/textile-event-mireot> ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-assessment/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" ;
     txtcon:sourceLocator "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
     txtcon:sourceType txtcon:projectDecision .
+
+txtass:resultForAssessedAspect a owl:ObjectProperty ;
+    rdfs:label "result for assessed aspect"@en ;
+    rdfs:comment "Relates an individual measurement or test result to the individual product property, observed degradation phenomenon, failure mode, or external damage that the result directly concerns. This relation identifies the subject of the result, not necessarily the specific quantity, degree, or grading dimension measured. Its intended object is not a test-protocol parameter, result value, assessment criterion, derived indicator, or OWL class used as an individual. A result's method and interpretation scale, when relevant, determine how the reported value is to be interpreted."@en ;
+    rdfs:domain txtass:MeasurementResult ;
+    rdfs:range [ a owl:Class ; owl:unionOf (
+        dpp:Property txtdur:ObservedDegradationPhenomenon
+        txtdur:FailureMode txtdur:ExternalDamage ) ] ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-011.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
+txtass:isRepresentedByProductEvent a owl:ObjectProperty ;
+    rdfs:label "is represented by product event"@en ;
+    rdfs:comment "Links a concrete assessment execution to the conceptual, product-facing ProductEvent that represents it, distinct from any technical EPCIS carrier. The relation does not identify the execution with the event or its carrier and does not imply that every assessment execution or EPCIS observation qualifies as a ProductEvent."@en ;
+    rdfs:domain txtass:AssessmentExecution ;
+    rdfs:range dpp:ProductEvent ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-012.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
+txtass:hasParameterConcept a owl:ObjectProperty ;
+    rdfs:label "has parameter concept"@en ;
+    rdfs:comment "Links a measurement parameter setting to its categorical or coded protocol value, represented by a SKOS concept. The concept qualifies the protocol setting, not the assessed product characteristic or a rule for selecting an applicable threshold."@en ;
+    rdfs:domain txtass:MeasurementParameterSetting ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-013.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
+txtass:awardedScoreValue a owl:ObjectProperty ;
+    rdfs:label "awarded score value"@en ;
+    rdfs:comment "Links an assessment result to the number of points actually awarded to that individual result under the applicable scoring method. The awarded points are distinct from an underlying measured value, points prescribed by a scoring rule, and an aggregated indicator value. This relation does not calculate, aggregate or verify the award."@en ;
+    rdfs:domain txtass:AssessmentResult ;
+    rdfs:range txtcon:QuantitativeValue ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-014.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
+
+txtass:hasAssessmentOutcome a owl:ObjectProperty ;
+    rdfs:label "has assessment outcome"@en ;
+    rdfs:comment "Links an assessment result to a controlled concept expressing its conclusion under the applicable method and context. For recyclability assessments, the intended use is the overall conclusion on the aggregate assessment result under the stated method and recycling route, distinct from hasCriterionOutcome on individual criterion results. Criterion-level outcome concepts do not express an overall product-level recyclability verdict. This relation does not infer a decision or establish a universal recyclability classification."@en ;
+    rdfs:domain txtass:AssessmentResult ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+    txtcon:sourceLocator "docs/decisions/TXT-DEC-015.md"@en ;
+    txtcon:sourceType txtcon:modellingAbstraction .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( txtass:AssessmentMethod txtass:AssessmentExecution txtass:AssessmentResult txtass:AssessmentCondition txtass:AssessmentDecisionCriterion ) .

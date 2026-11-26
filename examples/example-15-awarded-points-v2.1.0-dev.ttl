@@ -1,0 +1,43 @@
+# SYNTHETIC, NON-NORMATIVE issue #20 point-4 example.
+# Values are illustrative; no standard or JRC scoring-method conformity is claimed.
+@prefix ex: <https://example.org/eu-dpp-textile/issue20-point4/> .
+@prefix txtass: <https://w3id.org/eudpp/textile-assessment#> .
+@prefix txtcon: <https://w3id.org/eudpp/textile-connector#> .
+@prefix txtrec: <https://w3id.org/eudpp/textile-recyclability#> .
+@prefix units: <https://si-digital-framework.org/SI/units/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# One robustness execution produces scored and unscored results.
+ex:robustMethod a txtass:RobustnessScoringMethod .
+ex:robustRun a txtass:AssessmentExecution ;
+    txtass:appliesMethod ex:robustMethod ;
+    txtass:producesResult ex:measurementResult, ex:unscoredResult .
+ex:measurementResult a txtass:MeasurementResult ;
+    txtass:resultOfAssessment ex:robustRun ;
+    txtass:hasMeasuredValue ex:measuredValue ;
+    txtass:awardedScoreValue ex:robustPoints .
+ex:measuredValue a txtcon:QuantitativeValue ;
+    txtcon:numericValue "0.02"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit units:one .
+ex:robustPoints a txtcon:QuantitativeValue ;
+    txtcon:numericValue "3"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit units:one .
+ex:unscoredResult a txtass:AssessmentResult ;
+    txtass:resultOfAssessment ex:robustRun .
+
+# A criterion's actual award is separate from any scoring rule or indicator.
+# A generic execution avoids claiming a complete route-wide recyclability report.
+ex:criterionMethod a txtass:AssessmentMethod .
+ex:criterionRun a txtass:AssessmentExecution ;
+    txtass:appliesMethod ex:criterionMethod ;
+    txtass:producesResult ex:criterionResult .
+ex:criterionResult a txtrec:RecyclabilityCriterionResult ;
+    txtass:resultOfAssessment ex:criterionRun ;
+    txtrec:evaluatesCriterion txtrec:monoMaterialCriterion ;
+    txtrec:hasCriterionOutcome txtrec:criterionSatisfied ;
+    txtrec:resultForRecyclingRoute ex:route ;
+    txtass:awardedScoreValue ex:criterionPoints .
+ex:route a txtrec:RecyclingRoute .
+ex:criterionPoints a txtcon:QuantitativeValue ;
+    txtcon:numericValue "2"^^xsd:decimal ;
+    txtcon:hasMeasurementUnit units:one .

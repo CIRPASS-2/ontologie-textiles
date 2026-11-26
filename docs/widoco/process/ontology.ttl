@@ -14,6 +14,61 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+txtprc:CareSymbolConcept a owl:Class ;
+    rdfs:label "Care symbol concept"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Controlled concept representing a textile care-labelling symbol for a prescribed care treatment or condition, rather than a care method or executed operation."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    rdfs:subClassOf skos:Concept ;
+    txtcon:sourceLocator "Issue 17; ISO 3758:2023, care labelling code."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:hasCareSymbol a owl:ObjectProperty ;
+    rdfs:label "has care symbol"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    rdfs:comment "Relates a textile care instruction to a care symbol concept representing one of its prescribed treatments or conditions."@en ;
+    rdfs:domain txtprc:TextileCareInstruction ;
+    rdfs:range txtprc:CareSymbolConcept ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    txtcon:sourceLocator "Issue 17, instruction-to-symbol modelling extension."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:CareSymbolScheme a skos:ConceptScheme ;
+    rdfs:label "Care symbol scheme"@en ;
+    skos:prefLabel "Care symbol scheme"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Pilot controlled vocabulary of selected care-symbol concepts informed by ISO 3758:2023; it does not cover the complete standard."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    skos:hasTopConcept txtprc:normalWashMaximum70C, txtprc:flatDripDrying ;
+    txtcon:sourceLocator "Issue 17; ISO 3758:2023, care labelling code."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:normalWashMaximum70C a skos:Concept, txtprc:CareSymbolConcept ;
+    rdfs:label "Normal wash at maximum 70 degrees Celsius"@en ;
+    skos:prefLabel "Normal wash at maximum 70 degrees Celsius"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3096>, <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Care-symbol concept representing a normal washing treatment with a maximum temperature of 70 degrees Celsius; informed by ISO 7000 registration 3096."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    skos:inScheme txtprc:CareSymbolScheme ;
+    skos:topConceptOf txtprc:CareSymbolScheme ;
+    txtcon:sourceLocator "Issue 17; ISO 7000 registration 3096, registered 2011-10-16; ISO 3758:2023."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
+txtprc:flatDripDrying a skos:Concept, txtprc:CareSymbolConcept ;
+    rdfs:label "Flat drip drying"@en ;
+    skos:prefLabel "Flat drip drying"@en ;
+    dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3101>, <https://www.iso.org/standard/74401.html> ;
+    rdfs:comment "Care-symbol concept representing flat drip drying in a natural drying process; informed by ISO 7000 registration 3101."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    skos:inScheme txtprc:CareSymbolScheme ;
+    skos:topConceptOf txtprc:CareSymbolScheme ;
+    txtcon:sourceLocator "Issue 17; ISO 7000 registration 3101, registered 2011-10-16; ISO 3758:2023."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
 txtprc:CareMethodConcept a owl:Class ;
     rdfs:label "Care method concept"@en ;
     dcterms:source <https://w3id.org/eudpp/textile-ontology> ;
@@ -461,10 +516,25 @@ txtprc:RepairProcess a owl:Class ;
     txtcon:sourceLocator "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3484; JRC Preparatory Study, Section 13.10.1.5, printed pages 473-474, lines 11273-11326."@en ;
     txtcon:sourceType txtcon:adaptedDefinition .
 
+txtprc:PreparingForReuseProcess a owl:Class ;
+    rdfs:label "Preparing for reuse process"@en ;
+    dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf>,
+        <https://w3id.org/eudpp/textile-ontology> ;
+    dcterms:references <https://eur-lex.europa.eu/eli/dir/2008/98/oj> ;
+    rdfs:comment "Recovery process consisting of checking, cleaning or repairing a textile product or component that has become waste so that it can be reused without any other pre-processing."@en ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
+    rdfs:subClassOf txtprc:EndOfLifeProcess ;
+    txtcon:modellingNote "Directive 2008/98/EC Article 3(16) supplies the legal distinction. The JRC discusses preparing for reuse as a textile waste-management pathway. Representing it as a dedicated Textile process class is a project modelling decision, not an enacted ESPR DPP requirement."@en ;
+    txtcon:sourceLocator "JRC Preparatory Study, Section 9.2.6.1, printed page 145, lines 4049-4053."@en ;
+    txtcon:sourceType txtcon:projectDecision .
+
 txtprc:ReuseProcess a owl:Class ;
     rdfs:label "Reuse process"@en ;
     dcterms:source <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
-    rdfs:comment "End-of-life or post-use process enabling a textile product to be used again without major material transformation."@en ;
+    rdfs:comment "Process in which a textile product or component that is not waste is used again for the same purpose for which it was conceived."@en ;
+    dcterms:references <https://eur-lex.europa.eu/eli/dir/2008/98/oj> ;
+    dcterms:bibliographicCitation "Directive 2008/98/EC, Article 3(13), definition of reuse."@en ;
+    txtcon:modellingNote "The legal definition follows Directive 2008/98/EC Article 3(13); the cited JRC Preparatory Study supplies textile-domain context. This local adaptation may affect interpretation of existing instances; no instances are automatically reclassified."@en ;
     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-process> ;
     rdfs:subClassOf txtprc:EndOfLifeProcess ;
     txtcon:sourceLocator "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546."@en ;
@@ -1453,7 +1523,7 @@ txtprc:TextileProcessExecution a owl:Class ;
 
 <https://w3id.org/eudpp/textile-process> a owl:Ontology ;
     rdfs:label "EU DPP Textile Process Ontology"@en ;
-    dcterms:bibliographicCitation "EU DPP Textile Process Ontology. Version 2.0.0 candidate."@en ;
+    dcterms:bibliographicCitation "EU DPP Textile Process Ontology. Version integration-2026-11.3."@en ;
     dcterms:created "2026-03-06"^^xsd:date ;
     dcterms:creator "Elio Hbeich"@en,
         "BOUGACHA Racem"@en,
@@ -1472,15 +1542,15 @@ txtprc:TextileProcessExecution a owl:Class ;
     vann:preferredNamespaceUri "https://w3id.org/eudpp/textile-process#" ;
     rdfs:comment "The module separates process types from concrete executions, parameter types from concrete settings, and process controls from target product specifications. Product characteristics and assessment results remain in their dedicated modules."@en ;
     owl:imports <https://w3id.org/eudpp/textile-associated-materials>,
-        <https://w3id.org/eudpp/textile-connector>,
+        <https://w3id.org/eudpp/textile-common>,
         <https://w3id.org/eudpp/textile-core>,
         <https://w3id.org/eudpp/textile-dpp-mireot>,
         <https://w3id.org/eudpp/textile-durability>,
         <https://w3id.org/eudpp/textile-event-mireot>,
         <https://w3id.org/eudpp/textile-structure> ;
-    owl:priorVersion <https://w3id.org/eudpp/textile-process/1.1.2> ;
-    owl:versionIRI <https://w3id.org/eudpp/textile-process/2.0.0> ;
-    owl:versionInfo "Version 2.0.0 candidate" ;
+    owl:priorVersion <https://w3id.org/eudpp/textile-process/dev/integration-2026-11.2> ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-process/dev/integration-2026-11.3> ;
+    owl:versionInfo "Version integration-2026-11.3" ;
     txtcon:sourceLocator "JRC Section 3.3.1, pages 27-29, Table 8, lines 536-547. JRC Section 9.2.1.1, pages 110-111, lines 2889-2910, Figure 22. JRC Annex 13.10.2, pages 492-493, Table 181, lines 11889-11901. JRC Annex 13.10.2, pages 493-495, Table 182, lines 11902-11920. JRC Section 9.2.2.2, pages 125-126, lines 3296-3327; Annex 13.7.2, pages 394-395, lines 10227-10248. JRC Section 9.2.3.2-9.2.3.3, pages 129-130, lines 3466-3483; Annex 13.10.1.5, pages 473-474, lines 11273-11326. JRC Section 3.3.1, page 29, Table 8, line 547; Annex 13.10.1, pages 481-482, lines 11685-11730."@en ;
     txtcon:sourceType txtcon:ontologyModule .
 

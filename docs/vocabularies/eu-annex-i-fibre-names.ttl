@@ -1,0 +1,454 @@
+@prefix annex: <https://w3id.org/eudpp/textile-fibre-annex-i#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+
+annex:abaca a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 10" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:altLabel "Manila hemp"@en ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "abaca"@en .
+
+annex:acetate a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 19" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "acetate"@en .
+
+annex:acrylic a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 26" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "acrylic"@en .
+
+annex:alfa a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 11" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "alfa"@en .
+
+annex:alginate a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 20" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "alginate"@en .
+
+annex:alpaca a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "alpaca"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:angora a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "angora"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:animal-or-horsehair a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 3" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "animal or horsehair"@en ;
+    skos:scopeNote "Covers hair of animals other than those in entries 1 and 2, with or without an indication of the kind of animal. The wording is not exhaustively enumerated here."@en .
+
+annex:aramid a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 31" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "aramid"@en .
+
+annex:beaver a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "beaver"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:broom a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 13" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "broom"@en .
+
+annex:camel a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "camel"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:cashgora a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "cashgora"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:cashmere a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "cashmere"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:chlorofibre a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 27" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "chlorofibre"@en .
+
+annex:coir a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 12" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "coir"@en ;
+    skos:scopeNote "Annex I entry 12 reads coir (coconut); the parenthetical identifies the source and is not asserted here as a separate preferred fibre name."@en .
+
+annex:cotton a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 5" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "cotton"@en .
+
+annex:cupro a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 21" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "cupro"@en .
+
+annex:elastane a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 43" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "elastane"@en .
+
+annex:elastodiene a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 42" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "elastodiene"@en .
+
+annex:elastolefin a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 46" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "elastolefin"@en .
+
+annex:elastomultiester a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 45" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "elastomultiester"@en .
+
+annex:flax a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 7" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:altLabel "linen"@en ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "flax"@en .
+
+annex:fluorofibre a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 28" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "fluorofibre"@en .
+
+annex:glass-fibre a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 44" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "glass fibre"@en .
+
+annex:guanaco a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "guanaco"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:henequen a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 17" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "henequen"@en .
+
+annex:jute a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 9" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "jute"@en .
+
+annex:kapok a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 6" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "kapok"@en .
+
+annex:llama a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "llama"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:lyocell a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 33" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "lyocell"@en .
+
+annex:maguey a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 18" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "maguey"@en .
+
+annex:melamine a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 47" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "melamine"@en .
+
+annex:modacrylic a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 29" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "modacrylic"@en .
+
+annex:modal a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 22" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "modal"@en .
+
+annex:mohair a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "mohair"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:other-material-rule a skos:Concept ;
+    dcterms:identifier "Annex I entry 48" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "Other material naming rule"@en ;
+    skos:scopeNote "Open-ended naming rule for fibres from miscellaneous or new materials not listed above: use the name corresponding to the fibre material. This category is not a fixed fibre name and membership does not validate a declaration."@en .
+
+annex:otter a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "otter"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:polyacrylate a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 50" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polyacrylate"@en .
+
+annex:polyamide a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 30" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:altLabel "nylon"@en ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polyamide"@en .
+
+annex:polycarbamide a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 38" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polycarbamide"@en .
+
+annex:polyester a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 35" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polyester"@en .
+
+annex:polyethylene a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 36" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polyethylene"@en .
+
+annex:polyimide a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 32" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polyimide"@en .
+
+annex:polylactide a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 34" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polylactide"@en .
+
+annex:polypropylene a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 37" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polypropylene"@en .
+
+annex:polypropylene-polyamide-bicomponent a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 49" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polypropylene/polyamide bicomponent"@en .
+
+annex:polyurethane a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 39" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "polyurethane"@en .
+
+annex:protein a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 23" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "protein"@en .
+
+annex:ramie a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 14" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "ramie"@en .
+
+annex:silk a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 4" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "silk"@en .
+
+annex:sisal a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 15" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "sisal"@en .
+
+annex:sunn a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 16" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "sunn"@en .
+
+annex:triacetate a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 24" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "triacetate"@en .
+
+annex:trivinyl a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 41" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "trivinyl"@en .
+
+annex:true-hemp a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 8" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "true hemp"@en .
+
+annex:vicuna a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "vicuna"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:vinylal a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 40" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "vinylal"@en .
+
+annex:viscose a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 25" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "viscose"@en .
+
+annex:wool a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 1" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "wool"@en .
+
+annex:yak a skos:Concept,
+        txt:FibreTypeConcept ;
+    dcterms:identifier "Annex I entry 2" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:inScheme annex:FibreNamesScheme ;
+    skos:prefLabel "yak"@en ;
+    skos:scopeNote "Animal-specific name; the legal entry allows this name followed or not by wool or hair."@en .
+
+annex:FibreNamesScheme a skos:ConceptScheme ;
+    dcterms:creator "CIRPASS-2 Textile Ontology project" ;
+    dcterms:source <https://eur-lex.europa.eu/eli/reg/2011/1007/2018-02-15/eng> ;
+    skos:note "Project-maintained reference derived from EU legislation; not an official European Commission vocabulary or a conformance profile."@en ;
+    skos:prefLabel "EU Annex I textile fibre names reference scheme"@en .

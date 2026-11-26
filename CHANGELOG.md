@@ -1,5 +1,16 @@
 # Changelog
 
+## integration-2026-11.2
+
+Canonical Textile Common replaces the active Connector document, while a complete
+generated Connector representation preserves all existing term IRIs. The approved
+reference-duration SHACL profile and isolated catalogue routes are integrated.
+
+## integration-2026-11.1 (unpublished)
+
+Retain issue #9 clarifications and integrate the issue #12 fibre and packaging decisions.
+The active catalogue uses separate development version IRIs.
+
 ## CORE MAT classification alignment - 2026-11-02
 
 Addressed Nader Jelassi's source PR #19 review: FibreTypeConcept now subclasses
@@ -48,3 +59,10 @@ See [correction evidence](migration/AUDIT_CORRECTIONS.md).
 
 Accepted baseline `1ca2aa89241785dedeab430247bc9947daf69881` is preserved with
 its original changelog, manifest, catalogue, sources and generated documentation.
+
+## Unpublished integration-2026-11.3
+
+Integrate the five approved Assessment interoperability properties and the
+separate temporal guidance, retaining Common and complete Connector compatibility.
+The assessed-aspect profile remains optional and unversioned. This internal
+identity is not a public release number.

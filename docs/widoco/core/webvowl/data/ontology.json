@@ -7,7 +7,7 @@
       "en" : "EU DPP Textile Core Ontology"
     },
     "iri" : "https://w3id.org/eudpp/textile-core",
-    "version" : "Version 2.0.0 candidate",
+    "version" : "Version integration-2026-11.3",
     "author" : [ "Jan Merckx", "Andreas Schneider", "Piero de Sabbata", "Ivo Ladenius", "Elio Hbeich", "BOUGACHA Racem" ],
     "description" : {
       "en" : "Ontology module for representing core textile product data relevant to EU Digital Product Passports, including textile product classes, textile apparel scope concepts, fibre composition structures, and controlled SKOS vocabularies for textile apparel product types and fibre types aligned with the JRC preparatory study on textiles."
@@ -28,7 +28,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-core/1.1.2",
+        "value" : "https://w3id.org/eudpp/textile-core/dev/integration-2026-11.2",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -100,13 +100,13 @@
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "en",
-        "value" : "EU DPP Textile Core Ontology. Version 2.0.0 candidate.",
+        "value" : "EU DPP Textile Core Ontology. Version integration-2026-11.3.",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "Version 2.0.0 candidate",
+        "value" : "Version integration-2026-11.3",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -143,7 +143,7 @@
     "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "24",
@@ -179,10 +179,10 @@
     "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "44",
@@ -244,17 +244,17 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#jute",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#flax",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#cotton",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#jute",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -293,17 +293,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -320,7 +320,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#hair",
+          "value" : "https://w3id.org/eudpp/textile-codelists#wool",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -330,7 +330,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#wool",
+          "value" : "https://w3id.org/eudpp/textile-codelists#hair",
           "type" : "iri"
         } ],
         "broader" : [ {
@@ -352,6 +352,77 @@
       "labels" : {
         "IRI-based" : "animalOriginFibre",
         "en" : "Animal origin fibre"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#naturalOriginFibre",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "FIBRE_NATURAL_ORIGIN",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Natural origin fibre",
+          "type" : "label"
+        } ],
+        "narrower" : [ {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#animalOriginFibre",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A textile fibre category of natural origin."
+      },
+      "labels" : {
+        "IRI-based" : "naturalOriginFibre",
+        "en" : "Natural origin fibre"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
@@ -401,12 +472,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#hat",
+          "value" : "https://w3id.org/eudpp/textile-codelists#belt",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#belt",
+          "value" : "https://w3id.org/eudpp/textile-codelists#hat",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -433,77 +504,6 @@
       "labels" : {
         "IRI-based" : "textileApparelAccessory",
         "en" : "Textile apparel accessory"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#naturalOriginFibre",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "FIBRE_NATURAL_ORIGIN",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Natural origin fibre",
-          "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#animalOriginFibre",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A textile fibre category of natural origin."
-      },
-      "labels" : {
-        "IRI-based" : "naturalOriginFibre",
-        "en" : "Natural origin fibre"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
@@ -553,7 +553,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#triacetate",
+          "value" : "https://w3id.org/eudpp/textile-codelists#acetate",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#lyocell",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -563,12 +568,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#acetate",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#lyocell",
+          "value" : "https://w3id.org/eudpp/textile-codelists#triacetate",
           "type" : "iri"
         } ],
         "broader" : [ {
@@ -691,16 +691,16 @@
           "value" : "Elastane",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
           "type" : "iri"
         } ]
       },
@@ -772,6 +772,66 @@
         "en" : "Pants and shorts"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#belt",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "ACCESSORY_BELT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Belt",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Flexible band or strap worn around the waist or over the shoulders, used to secure or hold up clothing such as pants."
+      },
+      "labels" : {
+        "IRI-based" : "belt",
+        "en" : "Belt"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#workwear",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -836,66 +896,6 @@
       "labels" : {
         "IRI-based" : "workwear",
         "en" : "Workwear"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#belt",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "ACCESSORY_BELT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Belt",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Flexible band or strap worn around the waist or over the shoulders, used to secure or hold up clothing such as pants."
-      },
-      "labels" : {
-        "IRI-based" : "belt",
-        "en" : "Belt"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer",
@@ -979,17 +979,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -1117,16 +1117,16 @@
           "value" : "Cotton",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
           "type" : "iri"
         } ]
       },
@@ -1153,17 +1153,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1213,17 +1213,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1258,66 +1258,6 @@
         "en" : "Shirts and blouses"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#flax",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "FIBRE_FLAX",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Flax",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."
-      },
-      "labels" : {
-        "IRI-based" : "flax",
-        "en" : "Flax"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#wool",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -1333,17 +1273,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1376,6 +1316,66 @@
       "labels" : {
         "IRI-based" : "wool",
         "en" : "Wool"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#flax",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "FIBRE_FLAX",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Flax",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."
+      },
+      "labels" : {
+        "IRI-based" : "flax",
+        "en" : "Flax"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#lyocell",
@@ -1477,16 +1477,16 @@
           "value" : "Viscose",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
           "type" : "iri"
         } ]
       },
@@ -1558,66 +1558,6 @@
         "en" : "Cupro"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "FIBRE_POLYPROPYLENE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Polypropylene",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."
-      },
-      "labels" : {
-        "IRI-based" : "polypropylene",
-        "en" : "Polypropylene"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#underwear",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -1676,66 +1616,6 @@
       "labels" : {
         "IRI-based" : "underwear",
         "en" : "Underwear"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#polyamide",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "FIBRE_POLYAMIDE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Polyamide",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."
-      },
-      "labels" : {
-        "IRI-based" : "polyamide",
-        "en" : "Polyamide"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#jacketOrCoat",
@@ -1798,7 +1678,7 @@
         "en" : "Jackets and coats"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#acrylic",
+      "iri" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -1824,6 +1704,126 @@
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "FIBRE_POLYPROPYLENE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Polypropylene",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."
+      },
+      "labels" : {
+        "IRI-based" : "polypropylene",
+        "en" : "Polypropylene"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#polyamide",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "FIBRE_POLYAMIDE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Polyamide",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."
+      },
+      "labels" : {
+        "IRI-based" : "polyamide",
+        "en" : "Polyamide"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#acrylic",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -1933,17 +1933,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2047,17 +2047,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2163,6 +2163,72 @@
         "en" : "Chemical fibre"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#scarfOrTie",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "ACCESSORY_SCARF_TIE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Scarf or tie",
+          "type" : "label"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Scarves and ties",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Textile apparel accessory worn around the neck for warmth or as a fashion item, including warm and light scarves, buffs, neckerchiefs, headscarves, shawls, bowties and ties."
+      },
+      "labels" : {
+        "IRI-based" : "scarfOrTie",
+        "en" : "Scarf or tie"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#tShirt",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -2229,72 +2295,6 @@
         "en" : "T-shirts and tops"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#scarfOrTie",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "ACCESSORY_SCARF_TIE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Scarf or tie",
-          "type" : "label"
-        } ],
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Scarves and ties",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Textile apparel accessory worn around the neck for warmth or as a fashion item, including warm and light scarves, buffs, neckerchiefs, headscarves, shawls, bowties and ties."
-      },
-      "labels" : {
-        "IRI-based" : "scarfOrTie",
-        "en" : "Scarf or tie"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#acetate",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -2310,17 +2310,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2334,16 +2334,16 @@
           "value" : "Acetate",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
           "type" : "iri"
         } ]
       },
@@ -2353,72 +2353,6 @@
       "labels" : {
         "IRI-based" : "acetate",
         "en" : "Acetate"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#gloveOrMitten",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "ACCESSORY_GLOVE_MITTEN",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Glove or mitten",
-          "type" : "label"
-        } ],
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Gloves and mittens",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Article of clothing used in pairs to protect hands and wrists from the elements or as a fashion item."
-      },
-      "labels" : {
-        "IRI-based" : "gloveOrMitten",
-        "en" : "Glove or mitten"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear",
@@ -2481,7 +2415,7 @@
         "en" : "Non-PPE workwear"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#hat",
+      "iri" : "https://w3id.org/eudpp/textile-codelists#gloveOrMitten",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -2499,7 +2433,7 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
           "type" : "label"
         } ],
         "sourceType" : [ {
@@ -2507,6 +2441,72 @@
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "ACCESSORY_GLOVE_MITTEN",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Glove or mitten",
+          "type" : "label"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Gloves and mittens",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Article of clothing used in pairs to protect hands and wrists from the elements or as a fashion item."
+      },
+      "labels" : {
+        "IRI-based" : "gloveOrMitten",
+        "en" : "Glove or mitten"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#hat",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2520,16 +2520,16 @@
           "value" : "Hat",
           "type" : "label"
         } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
         "broader" : [ {
           "identifier" : "broader",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ]
       },
@@ -2556,17 +2556,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -2643,12 +2643,12 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#polyamide",
+          "value" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#polyester",
+          "value" : "https://w3id.org/eudpp/textile-codelists#polyamide",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -2658,24 +2658,24 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#acrylic",
+          "value" : "https://w3id.org/eudpp/textile-codelists#polyester",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#chemicalFibre",
+          "value" : "https://w3id.org/eudpp/textile-codelists#acrylic",
           "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#chemicalFibre",
           "type" : "iri"
         } ]
       },
@@ -2849,7 +2849,7 @@
       "en" : "Textile cleaning product"
     },
     "comment" : {
-      "en" : "Textile cleaning product considered a technical textile and excluded from scope because its function differs from apparel."
+      "en" : "Textile cleaning product considered a technical textile and excluded from the JRC Textile Preparatory Study scope because its function differs from apparel."
     },
     "id" : "9",
     "superClasses" : [ "5" ]
@@ -2897,27 +2897,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#jacketOrCoat",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#workwear",
-          "type" : "iri"
-        }, {
-          "identifier" : "hasTopConcept",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -2927,12 +2907,22 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#underwear",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#pantsOrShorts",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -2942,12 +2932,22 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#pantsOrShorts",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer",
+          "type" : "iri"
+        }, {
+          "identifier" : "hasTopConcept",
+          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#swimwear",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock",
+          "value" : "https://w3id.org/eudpp/textile-codelists#jacketOrCoat",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -2974,17 +2974,17 @@
           "value" : "https://w3id.org/eudpp/textile-core",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -2995,12 +2995,12 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope",
+          "value" : "https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope",
+          "value" : "https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -3027,17 +3027,17 @@
           "value" : "https://w3id.org/eudpp/textile-core",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -3048,12 +3048,12 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#naturalOriginFibre",
+          "value" : "https://w3id.org/eudpp/textile-codelists#chemicalFibre",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#chemicalFibre",
+          "value" : "https://w3id.org/eudpp/textile-codelists#naturalOriginFibre",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -3084,17 +3084,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3108,7 +3108,7 @@
       "en" : "Fibre composition component"
     },
     "comment" : {
-      "en" : "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."
+      "en" : "A fibre material constituent considered within the composition of a specific textile product, characterised by its fibre type and quantitative mass fraction. It does not necessarily represent an individually identifiable physical fibre batch or a separate composition declaration."
     },
     "id" : "11",
     "superClasses" : [ "16" ]
@@ -3165,7 +3165,7 @@
     "comment" : {
       "en" : "Textile product consisting of fibres assembled into a continuous strand and intended to be incorporated into fabric or another textile product."
     },
-    "id" : "20",
+    "id" : "19",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-core#TextileFibre",
@@ -3184,17 +3184,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, relevant section, printed page 14, lines 154-160.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, relevant section, printed page 14, lines 154-160.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -3262,17 +3262,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -3354,12 +3354,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#hat",
+          "value" : "https://w3id.org/eudpp/textile-codelists#belt",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#belt",
+          "value" : "https://w3id.org/eudpp/textile-codelists#hat",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -3628,6 +3628,66 @@
         "en" : "Pants and shorts"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#belt",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "ACCESSORY_BELT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Belt",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Flexible band or strap worn around the waist or over the shoulders, used to secure or hold up clothing such as pants."
+      },
+      "labels" : {
+        "IRI-based" : "belt",
+        "en" : "Belt"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#workwear",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -3694,7 +3754,7 @@
         "en" : "Workwear"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#belt",
+      "iri" : "https://w3id.org/eudpp/textile-codelists#scarfOrTie",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -3709,28 +3769,34 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
         } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
+          "type" : "label"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "ACCESSORY_BELT",
+          "value" : "ACCESSORY_SCARF_TIE",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Belt",
+          "value" : "Scarf or tie",
+          "type" : "label"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Scarves and ties",
           "type" : "label"
         } ],
         "broader" : [ {
@@ -3747,11 +3813,11 @@
         } ]
       },
       "comment" : {
-        "en" : "Flexible band or strap worn around the waist or over the shoulders, used to secure or hold up clothing such as pants."
+        "en" : "Textile apparel accessory worn around the neck for warmth or as a fashion item, including warm and light scarves, buffs, neckerchiefs, headscarves, shawls, bowties and ties."
       },
       "labels" : {
-        "IRI-based" : "belt",
-        "en" : "Belt"
+        "IRI-based" : "scarfOrTie",
+        "en" : "Scarf or tie"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#tShirt",
@@ -3886,198 +3952,6 @@
         "en" : "Sweaters, pullovers and mid-layers"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#scarfOrTie",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "ACCESSORY_SCARF_TIE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Scarf or tie",
-          "type" : "label"
-        } ],
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Scarves and ties",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Textile apparel accessory worn around the neck for warmth or as a fashion item, including warm and light scarves, buffs, neckerchiefs, headscarves, shawls, bowties and ties."
-      },
-      "labels" : {
-        "IRI-based" : "scarfOrTie",
-        "en" : "Scarf or tie"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#gloveOrMitten",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "ACCESSORY_GLOVE_MITTEN",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Glove or mitten",
-          "type" : "label"
-        } ],
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Gloves and mittens",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Article of clothing used in pairs to protect hands and wrists from the elements or as a fashion item."
-      },
-      "labels" : {
-        "IRI-based" : "gloveOrMitten",
-        "en" : "Glove or mitten"
-      }
-    }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#hat",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "ACCESSORY_HAT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Hat",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Textile apparel accessory used to cover the head for warmth or as a fashion item, including caps, flat caps, woollen hats, beanies, fedoras, panamas, bowlers, newsboys and berets."
-      },
-      "labels" : {
-        "IRI-based" : "hat",
-        "en" : "Hat"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -4138,7 +4012,7 @@
         "en" : "Non-PPE workwear"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit",
+      "iri" : "https://w3id.org/eudpp/textile-codelists#gloveOrMitten",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -4156,7 +4030,7 @@
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+          "value" : "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455.",
           "type" : "label"
         } ],
         "sourceType" : [ {
@@ -4164,6 +4038,132 @@
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "ACCESSORY_GLOVE_MITTEN",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Glove or mitten",
+          "type" : "label"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Gloves and mittens",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Article of clothing used in pairs to protect hands and wrists from the elements or as a fashion item."
+      },
+      "labels" : {
+        "IRI-based" : "gloveOrMitten",
+        "en" : "Glove or mitten"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#hat",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "ACCESSORY_HAT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Hat",
+          "type" : "label"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#textileApparelAccessory",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Textile apparel accessory used to cover the head for warmth or as a fashion item, including caps, flat caps, woollen hats, beanies, fedoras, panamas, bowlers, newsboys and berets."
+      },
+      "labels" : {
+        "IRI-based" : "hat",
+        "en" : "Hat"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4274,17 +4274,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-481.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "defaultStudyScopeStatus" : [ {
         "identifier" : "defaultStudyScopeStatus",
@@ -4332,17 +4332,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -4458,17 +4458,17 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#jute",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#flax",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-codelists#cotton",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#jute",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -4531,16 +4531,16 @@
           "value" : "Cotton",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
           "type" : "iri"
         } ]
       },
@@ -4567,17 +4567,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4627,17 +4627,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4654,7 +4654,7 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#hair",
+          "value" : "https://w3id.org/eudpp/textile-codelists#wool",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -4664,7 +4664,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#wool",
+          "value" : "https://w3id.org/eudpp/textile-codelists#hair",
           "type" : "iri"
         } ],
         "broader" : [ {
@@ -4688,66 +4688,6 @@
         "en" : "Animal origin fibre"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#flax",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "FIBRE_FLAX",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Flax",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."
-      },
-      "labels" : {
-        "IRI-based" : "flax",
-        "en" : "Flax"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#wool",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -4763,17 +4703,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -4806,6 +4746,66 @@
       "labels" : {
         "IRI-based" : "wool",
         "en" : "Wool"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#flax",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "FIBRE_FLAX",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Flax",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."
+      },
+      "labels" : {
+        "IRI-based" : "flax",
+        "en" : "Flax"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#lyocell",
@@ -4868,7 +4868,7 @@
         "en" : "Lyocell"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#naturalOriginFibre",
+      "iri" : "https://w3id.org/eudpp/textile-codelists#viscose",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -4883,40 +4883,29 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
         } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "FIBRE_NATURAL_ORIGIN",
+          "value" : "FIBRE_VISCOSE",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Natural origin fibre",
+          "value" : "Viscose",
           "type" : "label"
-        } ],
-        "narrower" : [ {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#animalOriginFibre",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
-          "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
@@ -4924,19 +4913,19 @@
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
         } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
+        "broader" : [ {
+          "identifier" : "broader",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
           "type" : "iri"
         } ]
       },
       "comment" : {
-        "en" : "A textile fibre category of natural origin."
+        "en" : "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."
       },
       "labels" : {
-        "IRI-based" : "naturalOriginFibre",
-        "en" : "Natural origin fibre"
+        "IRI-based" : "viscose",
+        "en" : "Viscose"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
@@ -4986,7 +4975,12 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#triacetate",
+          "value" : "https://w3id.org/eudpp/textile-codelists#acetate",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#lyocell",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -4996,12 +4990,7 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#acetate",
-          "type" : "iri"
-        }, {
-          "identifier" : "narrower",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#lyocell",
+          "value" : "https://w3id.org/eudpp/textile-codelists#triacetate",
           "type" : "iri"
         } ],
         "broader" : [ {
@@ -5025,7 +5014,7 @@
         "en" : "Man-made cellulosic fibre"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#viscose",
+      "iri" : "https://w3id.org/eudpp/textile-codelists#naturalOriginFibre",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -5040,34 +5029,39 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
         } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
-          "value" : "FIBRE_VISCOSE",
+          "value" : "FIBRE_NATURAL_ORIGIN",
           "type" : "label"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
           "language" : "en",
-          "value" : "Viscose",
+          "value" : "Natural origin fibre",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
+        "narrower" : [ {
+          "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
+          "value" : "https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre",
+          "type" : "iri"
+        }, {
+          "identifier" : "narrower",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#animalOriginFibre",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -5075,14 +5069,20 @@
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
           "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
         } ]
       },
       "comment" : {
-        "en" : "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."
+        "en" : "A textile fibre category of natural origin."
       },
       "labels" : {
-        "IRI-based" : "viscose",
-        "en" : "Viscose"
+        "IRI-based" : "naturalOriginFibre",
+        "en" : "Natural origin fibre"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#silk",
@@ -5205,6 +5205,66 @@
         "en" : "Cupro"
       }
     }, {
+      "iri" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
+      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-core",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
+          "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "FIBRE_POLYPROPYLENE",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Polypropylene",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."
+      },
+      "labels" : {
+        "IRI-based" : "polypropylene",
+        "en" : "Polypropylene"
+      }
+    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#polyamide",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -5265,66 +5325,6 @@
         "en" : "Polyamide"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
-      "baseIri" : "https://w3id.org/eudpp/textile-codelists",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-core",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
-          "type" : "iri"
-        } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "FIBRE_POLYPROPYLENE",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Polypropylene",
-          "type" : "label"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
-          "type" : "iri"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."
-      },
-      "labels" : {
-        "IRI-based" : "polypropylene",
-        "en" : "Polypropylene"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp/textile-codelists#acrylic",
       "baseIri" : "https://w3id.org/eudpp/textile-codelists",
       "annotations" : {
@@ -5340,17 +5340,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceLocator" : [ {
-          "identifier" : "sourceLocator",
-          "language" : "en",
-          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
-          "type" : "label"
-        } ],
         "sourceType" : [ {
           "identifier" : "sourceType",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
           "type" : "iri"
+        } ],
+        "sourceLocator" : [ {
+          "identifier" : "sourceLocator",
+          "language" : "en",
+          "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5424,16 +5424,16 @@
           "value" : "Elastane",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre",
           "type" : "iri"
         } ]
       },
@@ -5460,17 +5460,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5520,17 +5520,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5651,17 +5651,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#FibreTypeScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+          "type" : "iri"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -5675,16 +5675,16 @@
           "value" : "Acetate",
           "type" : "label"
         } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
-          "type" : "iri"
-        } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre",
           "type" : "iri"
         } ]
       },
@@ -5738,12 +5738,12 @@
         "narrower" : [ {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#polyamide",
+          "value" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#polyester",
+          "value" : "https://w3id.org/eudpp/textile-codelists#polyamide",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
@@ -5753,24 +5753,24 @@
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#acrylic",
+          "value" : "https://w3id.org/eudpp/textile-codelists#polyester",
           "type" : "iri"
         }, {
           "identifier" : "narrower",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#polypropylene",
-          "type" : "iri"
-        } ],
-        "broader" : [ {
-          "identifier" : "broader",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-codelists#chemicalFibre",
+          "value" : "https://w3id.org/eudpp/textile-codelists#acrylic",
           "type" : "iri"
         } ],
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
           "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+          "type" : "iri"
+        } ],
+        "broader" : [ {
+          "identifier" : "broader",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-codelists#chemicalFibre",
           "type" : "iri"
         } ]
       },
@@ -5837,17 +5837,17 @@
           "value" : "https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme",
           "type" : "iri"
         } ],
-        "sourceType" : [ {
-          "identifier" : "sourceType",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-          "type" : "iri"
-        } ],
         "sourceLocator" : [ {
           "identifier" : "sourceLocator",
           "language" : "en",
           "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506.",
           "type" : "label"
+        } ],
+        "sourceType" : [ {
+          "identifier" : "sourceType",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+          "type" : "iri"
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
@@ -5931,7 +5931,7 @@
       }
     } ],
     "comment" : {
-      "en" : "SKOS concept used to indicate whether a textile product type is included in, excluded from, or otherwise qualified with respect to a study or regulatory modelling scope."
+      "en" : "SKOS concept used to indicate whether a textile product type is included in or excluded from the JRC Textile Preparatory Study scope; it does not establish legal DPP scope."
     },
     "id" : "1",
     "superClasses" : [ "0" ]
@@ -6030,17 +6030,17 @@
         "value" : "Personal protective equipment textile apparel",
         "type" : "label"
       } ],
-      "jrcExclusionReason" : [ {
-        "identifier" : "jrcExclusionReason",
-        "language" : "en",
-        "value" : "Excluded because textile apparel identified as personal protective equipment is outside the selected scope.",
-        "type" : "label"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
         "type" : "iri"
+      } ],
+      "jrcExclusionReason" : [ {
+        "identifier" : "jrcExclusionReason",
+        "language" : "en",
+        "value" : "Excluded because textile apparel identified as personal protective equipment is outside the selected scope.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -6069,17 +6069,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, relevant section, printed page 14, lines 161-166.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6092,12 +6092,12 @@
       "IRI-based" : "TextileProduct",
       "en" : "Textile product"
     },
-    "subClasses" : [ "44", "9", "36", "20", "26", "24", "30", "4" ],
+    "subClasses" : [ "44", "9", "36", "19", "26", "24", "30", "4" ],
     "comment" : {
       "en" : "Any raw, semi-worked, worked, semi-manufactured, manufactured, semi-made-up or made-up product which is exclusively composed of textile fibres, as well as a product containing at least 80% textile fibres by weight."
     },
     "id" : "5",
-    "superClasses" : [ "19" ]
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/eudpp/textile-core#Fabric",
     "baseIri" : "https://w3id.org/eudpp/textile-core",
@@ -6115,17 +6115,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 486-492; JRC Preparatory Study, Section 3.3.1, printed page 27, lines 536-546.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 486-492; JRC Preparatory Study, Section 3.3.1, printed page 27, lines 536-546.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6144,16 +6144,6 @@
     "id" : "26",
     "superClasses" : [ "5" ]
   }, {
-    "iri" : "https://w3id.org/eudpp#Product",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Product"
-    },
-    "subClasses" : [ "5" ],
-    "attributes" : [ "external" ],
-    "id" : "19"
-  }, {
     "iri" : "https://w3id.org/eudpp#MaterialOfComposition",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
@@ -6163,6 +6153,16 @@
     "subClasses" : [ "11" ],
     "attributes" : [ "external" ],
     "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/eudpp#Product",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "22"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct",
     "baseIri" : "https://w3id.org/eudpp/textile-core",
@@ -6174,17 +6174,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 495-506; JRC Preparatory Study, relevant section, printed page 19, lines 275-279; JRC Preparatory Study, relevant section, Table 3, printed page 19; caption line 275.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#adaptedDefinition",
+        "type" : "iri"
       } ],
       "defaultStudyScopeStatus" : [ {
         "identifier" : "defaultStudyScopeStatus",
@@ -6192,17 +6192,17 @@
         "value" : "https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope",
         "type" : "iri"
       } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
       "jrcExclusionReason" : [ {
         "identifier" : "jrcExclusionReason",
         "language" : "en",
         "value" : "Excluded because reusable textile absorbent hygiene products perform a different function from textile apparel and are considered technical textiles.",
         "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -6210,7 +6210,7 @@
       "en" : "Reusable textile absorbent hygiene product"
     },
     "comment" : {
-      "en" : "Reusable textile absorbent hygiene product considered a technical textile and excluded from scope."
+      "en" : "Reusable textile absorbent hygiene product considered a technical textile and excluded from the JRC Textile Preparatory Study scope."
     },
     "id" : "44",
     "superClasses" : [ "5" ]
@@ -6300,17 +6300,17 @@
         "value" : "https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope",
         "type" : "iri"
       } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ],
       "jrcExclusionReason" : [ {
         "identifier" : "jrcExclusionReason",
         "language" : "en",
         "value" : "Excluded because textile apparel identified as a toy is outside the selected scope.",
         "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -6336,10 +6336,10 @@
     "id" : "18",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "21",
+    "id" : "20",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "22",
+    "id" : "21",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "23",
@@ -6416,12 +6416,12 @@
       "modellingNote" : [ {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.",
+        "value" : "Preferred relation for representing the declared fibre composition of a textile product, including the fibre type and its quantitative share.",
         "type" : "label"
       }, {
         "identifier" : "modellingNote",
         "language" : "en",
-        "value" : "Preferred relation for representing the declared fibre composition of a textile product, including the fibre type and its quantitative share.",
+        "value" : "No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.",
         "type" : "label"
       } ],
       "isDefinedBy" : [ {
@@ -6430,17 +6430,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6509,23 +6509,23 @@
     },
     "domain" : "15",
     "subproperty" : [ "12" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "13"
   }, {
-    "range" : "19",
-    "domain" : "5",
+    "range" : "16",
+    "domain" : "11",
     "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
     "range" : "17",
     "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "21"
+    "id" : "20"
   }, {
-    "range" : "16",
-    "domain" : "11",
+    "range" : "22",
+    "domain" : "5",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
+    "id" : "21"
   }, {
     "range" : "5",
     "domain" : "24",
@@ -6547,17 +6547,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
-        "type" : "label"
-      } ],
       "sourceType" : [ {
         "identifier" : "sourceType",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
         "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450.",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -6593,7 +6593,7 @@
     "id" : "31"
   }, {
     "range" : "5",
-    "domain" : "20",
+    "domain" : "19",
     "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
@@ -6722,12 +6722,53 @@
       "IRI-based" : "hasTextileFibreMassFraction",
       "en" : "has textile fibre mass fraction"
     },
-    "domain" : "19",
+    "domain" : "22",
     "comment" : {
       "en" : "Relates a product to the total mass fraction represented by textile fibres."
     },
     "attributes" : [ "object" ],
     "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/eudpp/textile-core#hasFibreType",
+    "baseIri" : "https://w3id.org/eudpp/textile-core",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-core",
+        "type" : "iri"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
+      } ],
+      "sourceLocator" : [ {
+        "identifier" : "sourceLocator",
+        "language" : "en",
+        "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFibreType",
+      "en" : "has fibre type"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "Relates a fibre composition component to the textile fibre type concept it describes."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-core#hasFibreMassFraction",
     "baseIri" : "https://w3id.org/eudpp/textile-core",
@@ -6772,48 +6813,7 @@
     "comment" : {
       "en" : "Relates a fibre composition component to the mass fraction of that fibre in the textile product."
     },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "46"
-  }, {
-    "iri" : "https://w3id.org/eudpp/textile-core#hasFibreType",
-    "baseIri" : "https://w3id.org/eudpp/textile-core",
-    "range" : "3",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-core",
-        "type" : "iri"
-      } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
-      "sourceLocator" : [ {
-        "identifier" : "sourceLocator",
-        "language" : "en",
-        "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFibreType",
-      "en" : "has fibre type"
-    },
-    "superproperty" : [ "13" ],
-    "domain" : "11",
-    "comment" : {
-      "en" : "Relates a fibre composition component to the textile fibre type concept it describes."
-    },
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "47"
   }, {
     "iri" : "https://w3id.org/eudpp/textile-core#hasFibreComponent",
@@ -6832,17 +6832,17 @@
         "value" : "https://w3id.org/eudpp/textile-core",
         "type" : "iri"
       } ],
-      "sourceType" : [ {
-        "identifier" : "sourceType",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
-        "type" : "iri"
-      } ],
       "sourceLocator" : [ {
         "identifier" : "sourceLocator",
         "language" : "en",
         "value" : "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709.",
         "type" : "label"
+      } ],
+      "sourceType" : [ {
+        "identifier" : "sourceType",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/textile-connector#modellingAbstraction",
+        "type" : "iri"
       } ],
       "source" : [ {
         "identifier" : "source",

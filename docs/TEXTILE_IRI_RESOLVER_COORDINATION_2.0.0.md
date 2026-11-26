@@ -1,5 +1,9 @@
 # Textile 2.0.0 resolver coordination brief
 
+> Historical 2.0.0 coordination record. The current integration candidate uses
+> separate development identities; this document does not authorize routing or
+> describe the active development catalogue.
+
 Prepared locally on 2026-10-27. This is a routing proposal for review, not a
 deployment instruction. Owner-approved Option B corrects the nine module version
 identities locally. No redirects or remote resources were changed. Source push,

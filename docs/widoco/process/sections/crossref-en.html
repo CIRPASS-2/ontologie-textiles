@@ -5,6 +5,7 @@ This section provides details for each class and property defined by EU DPP Text
  <ul class="hlist">
   <li><a href="#CareMethodConcept" title="https://w3id.org/eudpp/textile-process#CareMethodConcept">Care method concept</a></li>
   <li><a href="#CareParameter" title="https://w3id.org/eudpp/textile-process#CareParameter">Care parameter</a></li>
+  <li><a href="#CareSymbolConcept" title="https://w3id.org/eudpp/textile-process#CareSymbolConcept">Care symbol concept</a></li>
   <li><a href="#CellulosicChemicalRecyclingProcess" title="https://w3id.org/eudpp/textile-process#CellulosicChemicalRecyclingProcess">Cellulosic chemical recycling process</a></li>
   <li><a href="#ChemicalFinishingProcess" title="https://w3id.org/eudpp/textile-process#ChemicalFinishingProcess">Chemical finishing process</a></li>
   <li><a href="#ChemicalRecyclingProcess" title="https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess">Chemical recycling process</a></li>
@@ -53,6 +54,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#NonwovenManufacturingProcess" title="https://w3id.org/eudpp/textile-process#NonwovenManufacturingProcess">Nonwoven manufacturing process</a></li>
   <li><a href="#PackagingProcess" title="https://w3id.org/eudpp/textile-process#PackagingProcess">Packaging process</a></li>
   <li><a href="#PolycottonThermoChemicalRecyclingProcess" title="https://w3id.org/eudpp/textile-process#PolycottonThermoChemicalRecyclingProcess">Polycotton thermo-chemical recycling process</a></li>
+  <li><a href="#PreparingForReuseProcess" title="https://w3id.org/eudpp/textile-process#PreparingForReuseProcess">Preparing for reuse process</a></li>
   <li><a href="#PrintingBinderUse" title="https://w3id.org/eudpp/textile-process#PrintingBinderUse">Printing binder use</a></li>
   <li><a href="#PrintingParameter" title="https://w3id.org/eudpp/textile-process#PrintingParameter">Printing parameter</a></li>
   <li><a href="#PrintingProcess" title="https://w3id.org/eudpp/textile-process#PrintingProcess">Printing process</a></li>
@@ -166,6 +168,49 @@ This section provides details for each class and property defined by EU DPP Text
    </dt>
    <dd>
     <a href="#DryingTemperature" title="https://w3id.org/eudpp/textile-process#DryingTemperature">Drying temperature</a> <sup class="type-c" title="class">c</sup>, <a href="#IroningTemperature" title="https://w3id.org/eudpp/textile-process#IroningTemperature">Ironing temperature</a> <sup class="type-c" title="class">c</sup>, <a href="#SpinSpeed" title="https://w3id.org/eudpp/textile-process#SpinSpeed">Spin speed</a> <sup class="type-c" title="class">c</sup>, <a href="#StorageConditionParameter" title="https://w3id.org/eudpp/textile-process#StorageConditionParameter">Storage condition parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#WashingTemperature" title="https://w3id.org/eudpp/textile-process#WashingTemperature">Washing temperature</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CareSymbolConcept">
+  <h3>Care symbol concept<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#CareSymbolConcept</p>
+  <div class="comment">
+   <span class="markdown">Controlled concept representing a textile care-labelling symbol for a prescribed care treatment or condition, rather than a care method or executed operation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-process">https://w3id.org/eudpp/textile-process</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCareSymbol" title="https://w3id.org/eudpp/textile-process#hasCareSymbol">has care symbol</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#flatDripDrying" title="https://w3id.org/eudpp/textile-process#flatDripDrying">Flat drip drying</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#normalWashMaximum70C" title="https://w3id.org/eudpp/textile-process#normalWashMaximum70C">Normal wash at maximum 70 degrees Celsius</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -886,7 +931,7 @@ This section provides details for each class and property defined by EU DPP Text
     has sub-classes
    </dt>
    <dd>
-    <a href="#IncinerationProcess" title="https://w3id.org/eudpp/textile-process#IncinerationProcess">Incineration process</a> <sup class="type-c" title="class">c</sup>, <a href="#LandfillingProcess" title="https://w3id.org/eudpp/textile-process#LandfillingProcess">Landfilling process</a> <sup class="type-c" title="class">c</sup>, <a href="#RecyclingProcess" title="https://w3id.org/eudpp/textile-process#RecyclingProcess">Recycling process</a> <sup class="type-c" title="class">c</sup>, <a href="#ReuseProcess" title="https://w3id.org/eudpp/textile-process#ReuseProcess">Reuse process</a> <sup class="type-c" title="class">c</sup>
+    <a href="#IncinerationProcess" title="https://w3id.org/eudpp/textile-process#IncinerationProcess">Incineration process</a> <sup class="type-c" title="class">c</sup>, <a href="#LandfillingProcess" title="https://w3id.org/eudpp/textile-process#LandfillingProcess">Landfilling process</a> <sup class="type-c" title="class">c</sup>, <a href="#PreparingForReuseProcess" title="https://w3id.org/eudpp/textile-process#PreparingForReuseProcess">Preparing for reuse process</a> <sup class="type-c" title="class">c</sup>, <a href="#RecyclingProcess" title="https://w3id.org/eudpp/textile-process#RecyclingProcess">Recycling process</a> <sup class="type-c" title="class">c</sup>, <a href="#ReuseProcess" title="https://w3id.org/eudpp/textile-process#ReuseProcess">Reuse process</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1750,6 +1795,40 @@ This section provides details for each class and property defined by EU DPP Text
    </dd>
   </dl>
  </div>
+ <div class="entity" id="PreparingForReuseProcess">
+  <h3>Preparing for reuse process<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#PreparingForReuseProcess</p>
+  <div class="comment">
+   <span class="markdown">Recovery process consisting of checking, cleaning or repairing a textile product or component that has become waste so that it can be reused without any other pre-processing.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-process">https://w3id.org/eudpp/textile-process</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#EndOfLifeProcess" title="https://w3id.org/eudpp/textile-process#EndOfLifeProcess">End-of-life process</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="PrintingBinderUse">
   <h3>Printing binder use<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#PrintingBinderUse</p>
@@ -2167,7 +2246,7 @@ This section provides details for each class and property defined by EU DPP Text
   <h3>Reuse process<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#ReuseProcess</p>
   <div class="comment">
-   <span class="markdown">End-of-life or post-use process enabling a textile product to be used again without major material transformation.</span>
+   <span class="markdown">Process in which a textile product or component that is not waste is used again for the same purpose for which it was conceived.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2818,6 +2897,12 @@ This section provides details for each class and property defined by EU DPP Text
     <a href="#DigitalTextileCareInstruction" title="https://w3id.org/eudpp/textile-process#DigitalTextileCareInstruction">Digital textile care instruction</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasCareSymbol" title="https://w3id.org/eudpp/textile-process#hasCareSymbol">has care symbol</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
@@ -3397,6 +3482,7 @@ This section provides details for each class and property defined by EU DPP Text
   <li><a href="#concernsProduct" title="https://w3id.org/eudpp/textile-process#concernsProduct">concerns product</a></li>
   <li><a href="#executesProcessType" title="https://w3id.org/eudpp/textile-process#executesProcessType">executes process type</a></li>
   <li><a href="#hasCareInstruction" title="https://w3id.org/eudpp/textile-process#hasCareInstruction">has care instruction</a></li>
+  <li><a href="#hasCareSymbol" title="https://w3id.org/eudpp/textile-process#hasCareSymbol">has care symbol</a></li>
   <li><a href="#hasCategoricalValue" title="https://w3id.org/eudpp/textile-process#hasCategoricalValue">has categorical value</a></li>
   <li><a href="#hasEndOfLifeInstruction" title="https://w3id.org/eudpp/textile-process#hasEndOfLifeInstruction">has end-of-life instruction</a></li>
   <li><a href="#hasFabricManufacturingMethod" title="https://w3id.org/eudpp/textile-process#hasFabricManufacturingMethod">has fabric manufacturing method</a></li>
@@ -3580,6 +3666,45 @@ This section provides details for each class and property defined by EU DPP Text
     </dt>
     <dd>
      <a href="#TextileCareInstruction" title="https://w3id.org/eudpp/textile-process#TextileCareInstruction">Textile care instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCareSymbol">
+  <h3>has care symbol<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#hasCareSymbol</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile care instruction to a care symbol concept representing one of its prescribed treatments or conditions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-process">https://w3id.org/eudpp/textile-process</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileCareInstruction" title="https://w3id.org/eudpp/textile-process#TextileCareInstruction">Textile care instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CareSymbolConcept" title="https://w3id.org/eudpp/textile-process#CareSymbolConcept">Care symbol concept</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -4391,9 +4516,12 @@ This section provides details for each class and property defined by EU DPP Text
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
   <li><a href="#airJetSpinning" title="https://w3id.org/eudpp/textile-process#airJetSpinning">Air-jet spinning</a></li>
+  <li><a href="#CareSymbolScheme" title="https://w3id.org/eudpp/textile-process#CareSymbolScheme">Care symbol scheme</a></li>
   <li><a href="#FabricManufacturingMethodScheme" title="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme">Fabric manufacturing method scheme</a></li>
+  <li><a href="#flatDripDrying" title="https://w3id.org/eudpp/textile-process#flatDripDrying">Flat drip drying</a></li>
   <li><a href="#knittingMethod" title="https://w3id.org/eudpp/textile-process#knittingMethod">Knitting</a></li>
   <li><a href="#nonwovenMethod" title="https://w3id.org/eudpp/textile-process#nonwovenMethod">Nonwoven manufacturing</a></li>
+  <li><a href="#normalWashMaximum70C" title="https://w3id.org/eudpp/textile-process#normalWashMaximum70C">Normal wash at maximum 70 degrees Celsius</a></li>
   <li><a href="#ringSpinning" title="https://w3id.org/eudpp/textile-process#ringSpinning">Ring spinning</a></li>
   <li><a href="#rotorOpenEndSpinning" title="https://w3id.org/eudpp/textile-process#rotorOpenEndSpinning">Rotor open-end spinning</a></li>
   <li><a href="#SpinningMethodScheme" title="https://w3id.org/eudpp/textile-process#SpinningMethodScheme">Spinning method scheme</a></li>
@@ -4457,6 +4585,61 @@ This section provides details for each class and property defined by EU DPP Text
    </dd>
   </dl>
  </div>
+ <div class="entity" id="CareSymbolScheme">
+  <h3>Care symbol scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#CareSymbolScheme</p>
+  <div class="comment">
+   <span class="markdown">Pilot controlled vocabulary of selected care-symbol concepts informed by ISO 3758:2023; it does not cover the complete standard.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-process">https://w3id.org/eudpp/textile-process</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://www.iso.org/standard/74401.html" target="_blank" title="https://www.iso.org/standard/74401.html">74401.html</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#flatDripDrying" title="https://w3id.org/eudpp/textile-process#flatDripDrying">Flat drip drying</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#normalWashMaximum70C" title="https://w3id.org/eudpp/textile-process#normalWashMaximum70C">Normal wash at maximum 70 degrees Celsius</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Care symbol scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Issue 17; ISO 3758:2023, care labelling code."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#projectDecision" target="_blank" title="https://w3id.org/eudpp/textile-connector#projectDecision">project Decision</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="FabricManufacturingMethodScheme">
   <h3>Fabric manufacturing method scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme</p>
@@ -4509,6 +4692,67 @@ This section provides details for each class and property defined by EU DPP Text
    </dd>
    <dd>
     <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="flatDripDrying">
+  <h3>Flat drip drying<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#flatDripDrying</p>
+  <div class="comment">
+   <span class="markdown">Care-symbol concept representing flat drip drying in a natural drying process; informed by ISO 7000 registration 3101.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-process">https://w3id.org/eudpp/textile-process</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#CareSymbolConcept" title="https://w3id.org/eudpp/textile-process#CareSymbolConcept">Care symbol concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3101" target="_blank" title="https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3101">ui? escaped fragment =iso%3 Agrs%3 A7000%3 A3101</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://www.iso.org/standard/74401.html" target="_blank" title="https://www.iso.org/standard/74401.html">74401.html</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#CareSymbolScheme" title="https://w3id.org/eudpp/textile-process#CareSymbolScheme">Care symbol scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Flat drip drying"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#CareSymbolScheme" title="https://w3id.org/eudpp/textile-process#CareSymbolScheme">Care symbol scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Issue 17; ISO 7000 registration 3101, registered 2011-10-16; ISO 3758:2023."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#projectDecision" target="_blank" title="https://w3id.org/eudpp/textile-connector#projectDecision">project Decision</a> <sup class="type-ep" title="external property">ep</sup>
    </dd>
   </dl>
  </div>
@@ -4625,6 +4869,67 @@ This section provides details for each class and property defined by EU DPP Text
    </dd>
    <dd>
     <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#directExtraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#directExtraction">direct Extraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="normalWashMaximum70C">
+  <h3>Normal wash at maximum 70 degrees Celsius<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-process#normalWashMaximum70C</p>
+  <div class="comment">
+   <span class="markdown">Care-symbol concept representing a normal washing treatment with a maximum temperature of 70 degrees Celsius; informed by ISO 7000 registration 3096.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-process">https://w3id.org/eudpp/textile-process</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#CareSymbolConcept" title="https://w3id.org/eudpp/textile-process#CareSymbolConcept">Care symbol concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3096" target="_blank" title="https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Agrs%3A7000%3A3096">ui? escaped fragment =iso%3 Agrs%3 A7000%3 A3096</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://www.iso.org/standard/74401.html" target="_blank" title="https://www.iso.org/standard/74401.html">74401.html</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#CareSymbolScheme" title="https://w3id.org/eudpp/textile-process#CareSymbolScheme">Care symbol scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Normal wash at maximum 70 degrees Celsius"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#CareSymbolScheme" title="https://w3id.org/eudpp/textile-process#CareSymbolScheme">Care symbol scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Issue 17; ISO 7000 registration 3096, registered 2011-10-16; ISO 3758:2023."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#projectDecision" target="_blank" title="https://w3id.org/eudpp/textile-connector#projectDecision">project Decision</a> <sup class="type-ep" title="external property">ep</sup>
    </dd>
   </dl>
  </div>
