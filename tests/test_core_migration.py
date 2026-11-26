@@ -43,7 +43,14 @@ def test_preservation_and_adopted_source_bytes():
     for line in (ROOT/'dependencies/current-core/SHA256SUMS').read_text().splitlines():
         expected,name=line.split('  ',1)
         assert hashlib.sha256((ROOT/'dependencies/current-core'/name).read_bytes()).hexdigest()==expected
-        assert (ROOT/'dependencies/current-core'/name).read_bytes()==(m.SOURCE/name).read_bytes()
+        if name == 'lca.owl':
+            # Issue #10 supplied a separate reference snapshot, not a seventh
+            # extraction input under migration/core-sources.
+            import subprocess
+            source=subprocess.check_output(['git','show','f161127a20e661eaf7add48754bc0e3174f12b3f:dependencies/current-core/lca.owl'],cwd=ROOT)
+        else:
+            source=(m.SOURCE/name).read_bytes()
+        assert (ROOT/'dependencies/current-core'/name).read_bytes()==source
 
 
 @pytest.mark.parametrize('subset', ['soc','con','dpp','event','actor','mat'])

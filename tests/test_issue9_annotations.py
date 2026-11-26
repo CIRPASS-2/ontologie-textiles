@@ -41,31 +41,12 @@ def test_unapproved_logical_and_annotation_changes_are_rejected(fault):
 
 
 def test_all_non_annotation_runtime_inputs_and_traceability_stay_byte_identical():
-    areas = ['catalog-v001.xml', 'VERSION', 'mireot', 'dependencies', 'shacl', 'examples',
-             'traceability', 'migration/historical', 'migration/legacy-soc-attribution.json']
-    paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', m.BASELINE, '--', *areas],
-                                    cwd=m.ROOT, text=True).splitlines()
-    for relative in paths:
-        raw = subprocess.check_output(['git', 'show', m.BASELINE + ':' + relative], cwd=m.ROOT)
-        actual = (m.ROOT / relative).read_bytes()
-        if relative == 'catalog-v001.xml':
-            from migration.phase4_contract import expected_catalogue
-            assert actual == expected_catalogue(), relative
-        elif relative == 'VERSION':
-            assert actual == b'integration-2026-11.3\n', relative
-        elif relative == 'shacl/textile-quantitative-shapes.ttl':
-            from migration.phase4_contract import expected_shapes
-            from rdflib.compare import isomorphic
-            assert isomorphic(Graph().parse(data=actual.decode(),format="turtle"), expected_shapes()), relative
-        elif relative == 'shacl/README.md':
-            from migration.phase3_preflight import source_blob, SHACL_README_SHA256
-            assert actual.startswith(source_blob(relative, SHACL_README_SHA256).rstrip()+b"\n\n## Issue #20 Assessment profiles\n"), relative
-        elif relative == 'traceability/textile-resource-traceability.csv':
-            from scripts import validate_public as v
-            resources,_,_,_=v.derive(v.ontology_graph(m.ROOT),m.ROOT)
-            assert actual == v.csv_bytes(v.RESOURCE_FIELDS,resources), relative
-        else:
-            assert actual == raw, relative
+    # The old assertion compared all dependencies with main before approved
+    # issues #10/#13/#15. Use the shared exact cumulative inventory/byte proof;
+    # its source is the pinned approved commit, never candidate checksums.
+    from migration import mat_alignment
+    assert len(mat_alignment.protected_hashes()) == 76
+    assert (m.ROOT/'VERSION').read_bytes() == b'integration-2026-11.3\n'
 
 
 def test_documentation_generation_preserves_content_and_tracks_inputs(monkeypatch):
@@ -78,6 +59,8 @@ def test_documentation_generation_preserves_content_and_tracks_inputs(monkeypatc
         'README.md', 'docs/MODELLING_GUIDE.md', 'docs/ARCHITECTURE.md',
         'docs/DEPENDENCIES.md', 'docs/SOURCE_TRACEABILITY.md',
         'docs/governance/upstream-dependency-governance.md',
+        'shacl/README.md', 'examples/README.md', 'CHANGELOG.md',
+        'traceability/README.md', 'docs/PUBLICATION_SCOPE.md',
     ]
     expected = {p: (m.ROOT / p).read_text(encoding='utf8') for p in paths}
     resources, evidence, sources, other = refresh.v.derive(refresh.v.ontology_graph(m.ROOT))
@@ -199,3 +182,39 @@ def test_core_con_property_boundary_and_local_relationships():
         hypothetical.add((EX.subject, local, EX.product))
         DeductiveClosure(RDFS_Semantics).expand(hypothetical)
         assert (EX.subject, RDF.type, dpp.ProductEvent) in hypothetical
+
+
+@pytest.mark.parametrize('relative', [
+    'dependencies/current-core/lca.owl', 'mireot/dpp-textile-mireot.ttl',
+    'shacl/textile-recyclability-shapes.ttl', 'migration/historical/inventory.json',
+])
+def test_cumulative_protection_rejects_changed_approved_bytes(monkeypatch, relative):
+    from pathlib import Path
+    from migration import mat_alignment
+    read=Path.read_bytes
+    def changed(path):
+        data=read(path)
+        return data+b'\n# unauthorized\n' if path==m.ROOT/relative else data
+    monkeypatch.setattr(Path,'read_bytes',changed)
+    with pytest.raises(AssertionError,match=relative.replace('.',r'\.')):
+        mat_alignment.protected_hashes()
+
+
+def test_cumulative_protection_rejects_unapproved_inventory(monkeypatch):
+    from migration import mat_alignment
+    packaged=mat_alignment.v.package_files
+    monkeypatch.setattr(mat_alignment.v,'package_files',lambda root:packaged(root)+['examples/unapproved.ttl'])
+    with pytest.raises(AssertionError,match='Protected file inventory changed'):
+        mat_alignment.protected_hashes()
+
+
+@pytest.mark.parametrize('fault', ['technical', 'profile_link'])
+def test_documentation_guide_checks_reject_lost_content(fault):
+    from migration.refresh_publication import check_shacl_guide
+    text=(m.ROOT/'shacl/README.md').read_text('utf8')
+    if fault=='technical':
+        text=text.replace('A MeasurementParameterSetting may have a quantitative value',
+                          'An unauthorized replacement',1)
+    else:
+        text=text.replace('](profiles/textile-soc-complete-report.ttl)','](missing.ttl)')
+    with pytest.raises(AssertionError):check_shacl_guide(text)

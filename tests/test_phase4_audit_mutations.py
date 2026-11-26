@@ -62,7 +62,7 @@ def refresh_integrity(root):
 @pytest.mark.parametrize('fault,message',[
     ('outcome','Unauthorized SHACL document inventory'),
     ('optional_copy','Unauthorized SHACL document inventory'),
-    ('recyclability','Protected SHACL bytes changed'),
+    ('recyclability','Unauthorized recyclability SHACL bytes'),
     ('soc','Protected SHACL bytes changed'),
     ('complete_report','Protected SHACL bytes changed'),
     ('decision','Approved issue 20 source record changed'),

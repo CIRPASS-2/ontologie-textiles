@@ -1,10 +1,64 @@
 # SHACL application profiles
 
-The three default structural profiles cover shared quantities, recyclability
-and Textile SoC. Merge the documented offline ontology closure with instance
-data, use RDFS inference and disable remote imports. The validator performs
-this merge explicitly. Recyclability retains its RDFS entailment declaration.
+The three default structural profiles implement selective application-level
+constraints on shared quantities, recyclability and Textile SoC information.
+They are project validation artefacts, not complete DPP exchange requirements,
+complete ontology conformance rules or normative regulatory requirements.
+
+| Default profile | Principal coverage | Limits |
+| --- | --- | --- |
+| [Quantitative](textile-quantitative-shapes.ttl) | Shared value nodes, decimals, units, fractions, parameter settings, supplied awards, thresholds and reference periods. | No general unit conversion, composition-total check or method-specific scoring calculation. |
+| [Recyclability](textile-recyclability-shapes.ttl) | Assessment/result and route structure, criterion coverage, scoring bounds, product/material recycled-content declarations and mass-ratio consistency. | Does not establish actual recyclability, method correctness or regulatory compliance. |
+| [Textile SoC](textile-soc-shapes.ttl) | Positive presences, qualifications, locations, concentrations, thresholds, evaluations and handling information. | Partial presences may omit concentration; source presence and structural checks do not verify legal applicability or authoritative substance-list membership. |
+
+OWL axioms describe semantics: subclass, domain and range assertions can infer
+types and relationships. SHACL checks the supplied validation graph against
+explicit targets, paths and constraints. An OWL existential restriction is not
+a requirement for an explicit field in a supplied graph. Conversely, passing
+these shapes does not establish complete OWL consistency or that unconstrained
+information is complete or correct.
+
+## Public validation and examples
+
+With `--full`, [the public validator](../scripts/validate_public.py) merges the
+13 canonical Textile graphs (including Common) and seven bounded MIREOT graphs
+with each `examples/*.ttl` file separately. It merges all three top-level
+`shacl/*.ttl` files into one shapes graph and calls pySHACL with
+`inference='rdfs'`, `advanced=True` and `do_owl_imports=False`. Full CORE snapshots,
+historical graphs and the Connector compatibility representation are not added
+to this active closure. Recyclability retains its RDFS entailment declaration;
+the declaration itself neither loads the ontology nor configures inference.
 No profile requires OWL entailment during validation.
+
+There is no one-to-one pairing of examples and profiles: several profiles can
+apply to one graph, while some have no instance targets in a given example.
+The quantitative profile also checks its schema-level
+`NoQuantitativeValueSubclassShape` on every merged graph. A passing example
+therefore does not prove coverage of all illustrated concepts. The
+[example inventory](../examples/README.md) distinguishes relevant coverage
+from illustration. Dedicated regression fixtures additionally test negative
+cases and selected entailments; they are distinct from the public examples.
+
+## Optional profiles and test-only guards
+
+The default loader does not recurse into `profiles/`. Two shipped add-ons are
+available; neither changes the scope into a complete DPP specification:
+
+| Optional profile | Exact additional constraint | Selection |
+| --- | --- | --- |
+| [SoC complete-report](profiles/textile-soc-complete-report.ttl) | `CompleteTextilePresenceShape` targets `txtsoc:TextileSubstanceOfConcernPresenceContext`; `CompletePresenceConcentration` adds `sh:minCount 1` on `dpp:hasConcentration`. It adds no maximum or requirement for every other possible report field. | Add to the default shapes; the public validator supports `--full --complete-report`. |
+| [Assessed-aspect targets](profiles/textile-assessed-aspect-targets.ttl) | `ExplicitAssessedAspectShape` targets subjects of `txtass:resultForAssessedAspect`. Each supplied object must be a blank node or IRI typed as `dpp:Property`, `ObservedDegradationPhenomenon`, `FailureMode` or `ExternalDamage`, and must not be an AssessmentElement, Indicator, QuantitativeValue, OWL Class or RDFS Class. No link or link cardinality is required. | Explicitly merge this file with the selected shapes and supply the relevant ontology/instance typing; the public validator has no selection flag for it. |
+
+Temporary guards constructed for focused tests are test code, not shipped
+application profiles or additional public-validator selections. In particular,
+the issue #20 source implementation records describe test-only guards for
+assessment outcomes and execution times; no production guard for those values
+is supplied here. Passing the default profiles does not validate those fields.
+See the [cumulative integration record](../migration/PHASE4_IMPLEMENTATION.md)
+and the [point-5](../docs/ISSUE20_POINT5_IMPLEMENTATION.md) and
+[point-6](../docs/ISSUE20_POINT6_IMPLEMENTATION.md) source records.
+
+## SoC reporting details
 
 The SoC profile targets positive presences, qualification identity/context/source,
 structured references, locations, denominator membership, concentration branches,

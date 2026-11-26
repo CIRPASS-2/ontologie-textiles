@@ -1,10 +1,16 @@
 # Publication scope and historical preservation
 
 This unpublished integration candidate comprises 13 Textile modules and seven
-bounded MIREOT graphs. The package uses integration-2026-11.2 and each Textile
+bounded MIREOT graphs. The package uses integration-2026-11.3 and each Textile
 module declares a distinct development version IRI. Only that 20-graph import closure is used for current runtime validation.
 Full current CORE snapshots and historical RDF are reference inputs, not runtime
 imports. No release approval or publication is claimed.
+
+The public instance-data area contains [20 numbered illustrative examples and
+one optional reference-individual dataset](../examples/README.md). All 21 Turtle
+files are positive inputs to the public runtime validator; dedicated positive,
+negative and reasoning fixtures remain under `tests/abox_corpus/`. These examples
+are neither complete production DPPs nor regulatory compliance evidence.
 
 `CURRENT_PACKAGE` in `PUBLICATION_MANIFEST.txt` enumerates owned package areas,
 including the migration specification, reproducibility scripts, historical archive
@@ -31,6 +37,6 @@ does not verify public HTTP dereferencing or deployment. See the
 
 The committed `.1` package is reproducible from its pinned Git snapshot with
 `python -B -m scripts.reconstruct_phase2b` and an absent destination. Its
-catalogue must be selected independently of `.2`; public HTTP resolution is
+catalogue must be selected independently of the historical `.2` and current `.3` catalogues; public HTTP resolution is
 not established by these local checks. Common and Connector are separate
 ontology identities, with the latter generated as a complete compatibility graph.

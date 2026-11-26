@@ -116,6 +116,39 @@ def canonical_differences():
     return rows
 
 
+CUMULATIVE_BASELINE = 'cd57c4e47662cbc58c1d1146af9c32cba0fe81e5'
+
+
+def git_blobs(commit, names):
+    request=''.join(commit+':'+name+'\n' for name in names).encode()
+    raw=subprocess.check_output(['git','cat-file','--batch'],cwd=ROOT,input=request)
+    result={};position=0
+    for name in names:
+        end=raw.index(b'\n',position);header=raw[position:end].split()
+        assert len(header)==3 and header[1]==b'blob', name
+        size=int(header[2]);result[name]=raw[end+1:end+1+size];position=end+size+2
+    return result
+
+
+def cumulative_protected_hashes(original_names, packaged, areas):
+    # The user-approved cumulative baseline includes #10 LCA, #13 declarations,
+    # #14 reuse, #15 commodity code and #17 care symbols. Pin its entire protected
+    # inventory and bytes; never derive an allowlist from the candidate itself.
+    names=subprocess.check_output(['git','ls-tree','-r','--name-only',CUMULATIVE_BASELINE,'--',*areas],cwd=ROOT,text=True).splitlines()
+    assert packaged==set(names)|{'examples/README.md'}, 'Protected file inventory changed'
+    for name,data in git_blobs(CUMULATIVE_BASELINE,names).items():
+        if name=='shacl/README.md':
+            from migration.refresh_publication import check_shacl_guide
+            check_shacl_guide((ROOT/name).read_text('utf8'))
+        else:
+            assert (ROOT/name).read_bytes()==data, name
+    import re
+    guide=(ROOT/'examples/README.md').read_text('utf8')
+    assert sorted(re.findall(r'\]\(([^/()]+\.ttl)\)',guide))==sorted(path.name for path in (ROOT/'examples').glob('*.ttl')), 'Example guide inventory mismatch'
+    # Preserve the original immutable evidence anchors returned to Phase 1.
+    return {name:hashlib.sha256(data).hexdigest() for name,data in git_blobs(BASELINE,original_names).items()}
+
+
 def protected_hashes():
     areas = ['catalog-v001.xml', 'dependencies', 'mireot', 'migration/core-sources',
              'migration/historical', 'shacl', 'examples', 'traceability']
@@ -125,16 +158,9 @@ def protected_hashes():
     packaged = {name for name in v.package_files(ROOT)
                 if any(name == area or name.startswith(area + '/') for area in areas)}
     version=(ROOT/'VERSION').read_text(encoding='utf8').strip()
-    extras=set()
     if version == 'integration-2026-11.3':
-        import re
-        source='ca4b58bb96bfa9e1854fc6d246f2ccd908c4f143'
-        candidates=subprocess.check_output(['git','ls-tree','-r','--name-only',source,'--','examples'],cwd=ROOT,text=True).splitlines()
-        extras={name for name in candidates if re.match(r'examples/example-1[2-7]-',name)}
-        extras.add('shacl/profiles/textile-assessed-aspect-targets.ttl')
-        assert len(extras)==7
-        for name in extras:
-            assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',source+':'+name],cwd=ROOT), name
+        return cumulative_protected_hashes(names, packaged, areas)
+    extras=set()
     assert packaged == set(names) | extras, 'Protected file inventory changed'
     batch = ''.join(BASELINE + ':' + name + '\n' for name in names).encode()
     raw = subprocess.run(['git', 'cat-file', '--batch'], cwd=ROOT,
@@ -147,20 +173,7 @@ def protected_hashes():
         assert header[1] == b'blob'
         size = int(header[2]); data = raw[end + 1:end + 1 + size]
         position = end + size + 2
-        if version == 'integration-2026-11.3' and name in ('catalog-v001.xml', 'shacl/textile-quantitative-shapes.ttl', 'shacl/README.md', 'traceability/textile-resource-traceability.csv'):
-            from migration import phase4_contract as phase4
-            from migration import phase3_preflight as phase3
-            if name == 'catalog-v001.xml':
-                assert (ROOT/name).read_bytes() == phase4.expected_catalogue(), name
-            elif name == 'shacl/textile-quantitative-shapes.ttl':
-                assert isomorphic(v.parse(ROOT/name),phase4.expected_shapes()), name
-            elif name == 'shacl/README.md':
-                original=phase3.source_blob(name,phase3.SHACL_README_SHA256)
-                assert (ROOT/name).read_bytes().startswith(original.rstrip()+b'\n\n## Issue #20 Assessment profiles\n'), name
-            else:
-                resources,_,_,_=v.derive(v.ontology_graph(ROOT),ROOT)
-                assert (ROOT/name).read_bytes()==v.csv_bytes(v.RESOURCE_FIELDS,resources), name
-        elif (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.2' and name in ('catalog-v001.xml', 'shacl/textile-quantitative-shapes.ttl', 'shacl/README.md', 'traceability/textile-resource-traceability.csv'):
+        if (ROOT/'VERSION').read_text(encoding='utf8').strip() == 'integration-2026-11.2' and name in ('catalog-v001.xml', 'shacl/textile-quantitative-shapes.ttl', 'shacl/README.md', 'traceability/textile-resource-traceability.csv'):
             from migration import phase3_preflight as phase3
             if name == 'catalog-v001.xml':
                 expected = phase3.expected_catalogue()

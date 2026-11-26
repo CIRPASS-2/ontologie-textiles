@@ -4,7 +4,8 @@ A modular OWL ontology network for textile Digital Product Passport information.
 
 This repository brings together Textile DPP work by GS1, Graphwise and CIRPASS-2 contributors.
 
-The Textile ontology network and its twelve modules identify **Elio Hbeich,
+The twelve domain/shared Textile modules and the network entry-point ontology
+(thirteen canonical Textile graphs in total) identify **Elio Hbeich,
 BOUGACHA Racem, Ivo Ladenius, Andreas Schneider, Jan Merckx and Piero de Sabbata**
 as `dcterms:creator`. The owner-approved creator update preserves the established
 English language-tagged literal representation and all existing creators.
@@ -41,8 +42,9 @@ no upstream commit identifier is asserted without evidence.
 
 ## Versions and entry point
 
-This unpublished integration package uses **integration-2026-11.3**. The thirteen
-Textile graphs declare distinct version IRIs under `/dev/integration-2026-11.3`
+This unpublished integration package uses **integration-2026-11.3**. Its twelve
+domain/shared modules and network entry-point ontology form thirteen canonical
+Textile graphs, which declare distinct version IRIs under `/dev/integration-2026-11.3`
 and retained module identities cite the corresponding `.2` version as prior. Common retains its migration provenance. Six CORE subsets
 retain their 2.0.0 identities and SI retains its 1.1.2 identity; the runtime
 closure contains 20 graphs.
@@ -66,7 +68,7 @@ See the [issue #12 decision](docs/ISSUE12_MATERIAL_COMPOSITION.md),
 - [Architecture](docs/ARCHITECTURE.md), [modelling guide](docs/MODELLING_GUIDE.md) and public modelling rationale under `docs/decisions/`.
 - `ontology/` and `mireot/`: the complete bounded Textile network.
 - [Dependencies](docs/DEPENDENCIES.md): relevant upstream snapshots for comparison and provenance.
-- [SHACL profiles](shacl/README.md) and eleven [examples](examples/).
+- [SHACL profiles](shacl/README.md) and [20 numbered illustrative examples plus one optional reference-individual dataset](examples/README.md).
 - [Diagrams](diagrams/DIAGRAM_INDEX.md): illustrative views with a recomputed inventory.
 - Positive, negative and reasoning fixtures under `tests/abox_corpus/`.
 
@@ -82,9 +84,9 @@ python -B -m pytest -p no:cacheprovider tests -q
 python -B scripts/validate_public.py --full --complete-report
 ```
 
-Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks twenty-one examples, the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
+Runtime validation uses only files inside this directory and makes no remote-import requests. The default command checks RDF parsing, all declared import/version mappings, traceability projection, CSV integrity, public ADR links, manifest membership and SHA-256. The full command additionally checks the 20 numbered illustrative examples and the optional reference-individual dataset (21 RDF files), the original eight positive and eight negative SHACL fixtures, six RDFS/OWL-RL inference scenarios, and a recyclability control without RDFS.
 
-The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL. Recyclability requires explicit RDFS inference; an entailment declaration does not itself load the ontology. The three structural profiles and optional complete-report profile are selective application constraints, not complete ontology conformance. The supplied reasoning checks do not establish complete OWL DL consistency or satisfiability.
+The pytest suite additionally verifies forty-one migration scenarios, source fidelity, historical bytes, positive shape coverage and forbidden entailments. Merge the offline ontology closure with data when executing SHACL. Recyclability requires explicit RDFS inference; an entailment declaration does not itself load the ontology. The three default structural profiles and two optional profiles are selective application constraints, not complete ontology conformance. The complete-report option adds concentration completeness; the assessed-aspect target profile must be selected separately. See the [example guide](examples/README.md) and [profile guide](shacl/README.md). The supplied reasoning checks do not establish complete OWL DL consistency or satisfiability.
 
 ## Source traceability
 

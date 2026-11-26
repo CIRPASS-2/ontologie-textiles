@@ -79,9 +79,11 @@ def test_dependencies_shapes_and_unrelated_modules_unchanged():
             if not path.is_file() or path.name=='textile-process.ttl': continue
             assert path.read_bytes() == base(path.relative_to(ROOT).as_posix())
     names = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BASE, '--', 'shacl/'], cwd=ROOT, text=True).splitlines()
-    expected = {name: base(name) for name in names}
-    actual = {path.relative_to(ROOT).as_posix(): path.read_bytes() for path in (ROOT/'shacl').rglob('*') if path.is_file()}
+    expected = {name: base(name) for name in names if name.endswith('.ttl')}
+    actual = {path.relative_to(ROOT).as_posix(): path.read_bytes() for path in (ROOT/'shacl').rglob('*.ttl') if path.is_file()}
     assert_shacl_snapshot(expected, actual)
+    from migration.refresh_publication import check_shacl_guide
+    check_shacl_guide((ROOT/'shacl/README.md').read_text('utf8'))
     assert 'shacl/profiles/textile-assessed-aspect-targets.ttl' in expected
 
 
